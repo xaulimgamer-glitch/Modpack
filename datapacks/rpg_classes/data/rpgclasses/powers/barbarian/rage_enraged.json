@@ -1,0 +1,30 @@
+{
+  "type": "origins:conditioned_attribute",
+
+  "modifiers": [
+    {
+      "attribute": "minecraft:generic.knockback_resistance",
+      "operation": "addition",
+      "value": 0.1,
+      "name": "Enraged Knockback Resistance"
+    },
+    {
+      "attribute": "puffish_attributes:melee_damage",
+      "operation": "multiply_base",
+      "value": 0.08,
+      "name": "Enraged Melee Damage"
+    }
+  ],
+
+
+  "tick_rate": 5,
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgclasses:barbarian/rage",
+    "comparison": ">=",
+    "compare_to": 50
+  },
+
+  "hidden": true
+}

@@ -1,0 +1,41 @@
+{
+  "type": "origins:conditioned_attribute",
+
+ "modifiers": [
+    {
+      "attribute": "minecraft:generic.knockback_resistance",
+      "operation": "addition",
+      "value": 0.1,
+      "name": "Frenzy Knockback Resistance"
+    },
+    {
+      "attribute": "puffish_attributes:melee_damage",
+      "operation": "multiply_base",
+      "value": 0.08,
+      "name": "Frenzy Melee Damage"
+    },
+    {
+      "attribute": "puffish_attributes:melee_resistance",
+      "operation": "multiply_base",
+      "value": 0.30,
+      "name": "Frenzy Melee Resistance"
+    },
+    {
+      "attribute": "puffish_attributes:ranged_resistance",
+      "operation": "multiply_base",
+      "value": 0.30,
+      "name": "Frenzy Ranged Resistance"
+    }
+  ],
+
+  "tick_rate": 5,
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgclasses:barbarian/rage",
+    "comparison": ">=",
+    "compare_to": 75
+  },
+
+  "hidden": true
+}

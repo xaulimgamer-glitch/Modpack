@@ -1,0 +1,21 @@
+{
+  "type": "origins:conditioned_attribute",
+
+  "modifier": {
+    "attribute": "minecraft:generic.knockback_resistance",
+    "operation": "addition",
+    "value": 0.1,
+    "name": "Barbarian Rage Resistance"
+  },
+
+  "tick_rate": 5,
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgclasses:barbarian/rage",
+    "comparison": ">=",
+    "compare_to": 25
+  },
+
+  "hidden": true
+}

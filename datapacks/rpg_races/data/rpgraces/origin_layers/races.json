@@ -1,0 +1,15 @@
+{
+  "order": 5,
+
+  "origins": [
+    "rpgraces:unawakened",
+    "rpgraces:human"
+  ],
+
+  "name": "Race",
+
+  "allow_random": false,
+  "auto_choose": false,
+
+  "replace": true
+}

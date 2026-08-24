@@ -1,0 +1,21 @@
+{
+  "order": 10,
+
+  "origins": [
+    "rpgclasses:barbarian",
+    "rpgclasses:wizard",
+    "rpgclasses:cleric",
+    "rpgclasses:warrior",
+    "rpgclasses:rogue",
+    "rpgclasses:paladin",
+    "rpgclasses:ranger",
+    "rpgclasses:untrained"
+  ],
+
+  "name": "Class",
+
+  "allow_random": false,
+  "auto_choose": false,
+
+  "replace": true
+}

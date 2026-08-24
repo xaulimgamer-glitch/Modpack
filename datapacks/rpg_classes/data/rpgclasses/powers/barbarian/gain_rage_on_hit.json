@@ -1,0 +1,12 @@
+{
+  "type": "origins:self_action_on_hit",
+
+  "entity_action": {
+    "type": "origins:change_resource",
+    "resource": "rpgclasses:barbarian/rage",
+    "change": 3
+  },
+
+  "cooldown": 10,
+  "hidden": true
+}

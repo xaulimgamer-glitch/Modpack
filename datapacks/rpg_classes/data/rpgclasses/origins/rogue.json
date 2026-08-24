@@ -1,0 +1,15 @@
+{
+  "powers": [
+
+  ],
+
+  "icon": {
+    "item": "minecraft:iron_sword"
+  },
+
+  "order": 1,
+  "impact": 1,
+
+  "name": "Rogue",
+  "description": "Lorem Ipsulum"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "origins:action_over_time",
+
+  "interval": 5,
+
+  "entity_action": {
+    "type": "origins:change_resource",
+    "resource": "rpgclasses:barbarian/rage",
+    "change": -3
+  },
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgclasses:barbarian/combat_timer",
+    "comparison": "==",
+    "compare_to": 0
+  },
+
+  "hidden": true
+}

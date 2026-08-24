@@ -1,0 +1,23 @@
+{
+  "powers": [
+    "rpgclasses:barbarian/rage",
+    "rpgclasses:barbarian/gain_rage_on_hit",
+    "rpgclasses:barbarian/gain_rage_when_hit",
+    "rpgclasses:barbarian/combat_timer",
+    "rpgclasses:barbarian/rage_decay",
+    "rpgclasses:barbarian/rage_heated",
+    "rpgclasses:barbarian/rage_enraged",
+    "rpgclasses:barbarian/rage_frenzy",
+    "rpgclasses:barbarian/refresh_combat_on_hit"
+  ],
+
+  "icon": {
+    "item": "minecraft:iron_axe"
+  },
+
+  "order": 0,
+  "impact": 1,
+
+  "name": "Barbarian",
+  "description": "A relentless warrior who builds Rage by dealing and taking damage."
+}
