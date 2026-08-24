@@ -1,0 +1,15 @@
+{
+  "powers": [
+
+  ],
+
+  "icon": {
+    "item": "minecraft:book"
+  },
+
+  "order": 1,
+  "impact": 1,
+
+  "name": "Warrior",
+  "description": "A fierce combatant who excels in close-quarters combat and physical prowess."
+}
