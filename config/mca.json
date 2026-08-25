@@ -140,9 +140,9 @@
     "minecraft:grass_block",
     "minecraft:dirt"
   ],
-  "launchIntoDestiny": true,
+  "launchIntoDestiny": false,
   "allowDestinyCommandOnce": true,
-  "allowDestinyCommandMoreThanOnce": false,
+  "allowDestinyCommandMoreThanOnce": true,
   "allowDestinyTeleportation": true,
   "enablePlayerShaders": true,
   "enableVillagerPlayerModel": true,
@@ -215,6 +215,7 @@
   "playerRendererBlacklist": {
     "firstperson": "arms",
     "firstpersonmod": "arms",
+    "punchy": "arms",
     "epicfight": "all",
     "morph": "arms"
   },
@@ -224,7 +225,7 @@
   "babyItemGrowUpTime": 24000,
   "villagerMaxAgeTime": 384000,
   "allowEveryoneToAddContentGlobally": false,
-  "allowPlayerSizeAdjustment": true,
+  "allowPlayerSizeAdjustment": false,
   "allowBodyCustomizationInDestiny": true,
   "allowTraitCustomizationInDestiny": true,
   "destinySpawnLocations": [
@@ -242,23 +243,23 @@
     "minecraft:shipwreck_beached": "destiny.story.sailing"
   },
   "enabledTraits": {
-    "SIRBEN": true,
+    "SIRBEN": false,
     "RAINBOW": true,
-    "DIABETES": true,
+    "DIABETES": false,
     "HOMOSEXUAL": true,
     "ALBINISM": true,
     "LEFT_HANDED": true,
-    "COLOR_BLIND": true,
-    "LACTOSE_INTOLERANCE": true,
+    "COLOR_BLIND": false,
+    "LACTOSE_INTOLERANCE": false,
     "BISEXUAL": true,
     "VEGETARIAN": true,
-    "WEAK": true,
-    "ASEXUAL": true,
+    "WEAK": false,
+    "ASEXUAL": false,
     "HETEROCHROMIA": true,
-    "ELECTRIFIED": true,
-    "COELIAC_DISEASE": true,
-    "UNKNOWN": true,
-    "DWARFISM": true,
-    "TOUGH": true
+    "ELECTRIFIED": false,
+    "COELIAC_DISEASE": false,
+    "UNKNOWN": false,
+    "DWARFISM": false,
+    "TOUGH": false
   }
 }
