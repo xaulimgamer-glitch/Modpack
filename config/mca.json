@@ -215,7 +215,6 @@
   "playerRendererBlacklist": {
     "firstperson": "arms",
     "firstpersonmod": "arms",
-    "punchy": "arms",
     "epicfight": "all",
     "morph": "arms"
   },
@@ -244,7 +243,7 @@
   },
   "enabledTraits": {
     "SIRBEN": false,
-    "RAINBOW": true,
+    "RAINBOW": false,
     "DIABETES": false,
     "HOMOSEXUAL": true,
     "ALBINISM": true,
