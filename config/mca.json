@@ -21,7 +21,7 @@
   "showNotificationsAsChat": false,
   "heartsToBeConsideredAsFriend": 40,
   "enableVillagerMailingPlayers": true,
-  "enableGenderCheckForPlayers": true,
+  "enableGenderCheckForPlayers": false,
   "zombieBiteInfectionChance": 0.05,
   "infectionChanceDecreasePerLevel": 0.25,
   "infectionTime": 72000,
@@ -141,15 +141,15 @@
     "minecraft:dirt"
   ],
   "launchIntoDestiny": false,
-  "allowDestinyCommandOnce": true,
-  "allowDestinyCommandMoreThanOnce": true,
-  "allowDestinyTeleportation": true,
-  "enablePlayerShaders": true,
-  "enableVillagerPlayerModel": true,
+  "allowDestinyCommandOnce": false,
+  "allowDestinyCommandMoreThanOnce": false,
+  "allowDestinyTeleportation": false,
+  "enablePlayerShaders": false,
+  "enableVillagerPlayerModel": false,
   "forceVillagerPlayerModel": false,
-  "allowLimitedPlayerEditor": true,
+  "allowLimitedPlayerEditor": false,
   "allowFullPlayerEditor": false,
-  "scaleEyeHeightWithPlayerHeight": true,
+  "scaleEyeHeightWithPlayerHeight": false,
   "useModernUSANamesOnly": false,
   "guardsTargetEntities": {
     "minecraft:creeper": -1,
@@ -225,8 +225,8 @@
   "villagerMaxAgeTime": 384000,
   "allowEveryoneToAddContentGlobally": false,
   "allowPlayerSizeAdjustment": false,
-  "allowBodyCustomizationInDestiny": true,
-  "allowTraitCustomizationInDestiny": true,
+  "allowBodyCustomizationInDestiny": false,
+  "allowTraitCustomizationInDestiny": false,
   "destinySpawnLocations": [
     "somewhere",
     "minecraft:shipwreck_beached",
@@ -252,13 +252,13 @@
     "LACTOSE_INTOLERANCE": false,
     "BISEXUAL": true,
     "VEGETARIAN": true,
-    "WEAK": false,
+    "WEAK": true,
     "ASEXUAL": false,
     "HETEROCHROMIA": true,
     "ELECTRIFIED": false,
     "COELIAC_DISEASE": false,
     "UNKNOWN": false,
     "DWARFISM": false,
-    "TOUGH": false
+    "TOUGH": true
   }
 }
