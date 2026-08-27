@@ -4,7 +4,8 @@
     "rpgraces:generic/health/p3h",
     "rpgraces:giantborn/change_size",
     "rpgraces:giantborn/size_lifecycles",
-    "rpgraces:giantborn/form_state"
+    "rpgraces:giantborn/form_state",
+    "rpgraces:giantborn/released_mechanics"
   ],
   "icon": "minecraft:stone",
   "impact": 3,

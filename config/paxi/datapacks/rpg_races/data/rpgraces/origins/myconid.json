@@ -4,6 +4,8 @@
     "rpgraces:myconid/shrink",
     "rpgraces:myconid/grow",
     "rpgraces:myconid/form_state",
+    "rpgraces:myconid/compact_mechanics",
+    "rpgraces:myconid/bloomed_mechanics",
     "rpgraces:myconid/size_lifecycles",
     "rpgraces:generic/health/m2h"
   ],

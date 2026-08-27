@@ -1,0 +1,37 @@
+{
+  "type": "origins:conditioned_attribute",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:giantborn/form_state",
+    "comparison": "==",
+    "compare_to": 1
+  },
+  "modifiers": [
+    {
+      "name": "Giantborn Released Block Reach",
+      "attribute": "forge:block_reach",
+      "operation": "addition",
+      "value": 2.0
+    },
+    {
+      "name": "Giantborn Released Entity Reach",
+      "attribute": "forge:entity_reach",
+      "operation": "addition",
+      "value": 2.0
+    },
+    {
+      "name": "Giant Natural Armor",
+      "attribute": "minecraft:generic.armor",
+      "operation": "addition",
+      "value": 2.0
+    },
+    {
+      "name": "Giant Bulk",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_total",
+      "value": -0.40
+    }
+  ],
+  "tick_rate": 5,
+  "hidden": true
+}

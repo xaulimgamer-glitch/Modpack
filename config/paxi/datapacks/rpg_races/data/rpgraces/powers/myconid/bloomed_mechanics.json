@@ -1,0 +1,25 @@
+{
+  "type": "origins:conditioned_attribute",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:myconid/form_state",
+    "comparison": "==",
+    "compare_to": 2
+  },
+  "modifiers": [
+    {
+      "name": "Myconid Bloomed Armor",
+      "attribute": "minecraft:generic.armor",
+      "operation": "addition",
+      "value": 2.0
+    },
+    {
+      "name": "Myconid Bloomed Bulk",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_total",
+      "value": -0.10
+    }
+  ],
+  "tick_rate": 5,
+  "hidden": true
+}
