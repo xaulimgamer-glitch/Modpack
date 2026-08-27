@@ -6,13 +6,13 @@
     "actions": [
       {
         "type": "origins:change_resource",
-        "resource": "rpgraces:myconid/form_state",
+        "resource": "rpgraces:giantborn/form_state",
         "operation": "set",
-        "change": 1
+        "change": 0
       },
       {
         "type": "origins:execute_command",
-        "command": "function rpgraces:myconid/natural"
+        "command": "function rpgraces:giantborn/suppress"
       }
     ]
   },
@@ -23,37 +23,25 @@
       {
         "condition": {
           "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
+          "resource": "rpgraces:giantborn/form_state",
           "comparison": "==",
           "compare_to": 0
         },
         "action": {
           "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/compact"
+          "command": "function rpgraces:giantborn/suppress"
         }
       },
       {
         "condition": {
           "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
+          "resource": "rpgraces:giantborn/form_state",
           "comparison": "==",
           "compare_to": 1
         },
         "action": {
           "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/natural"
-        }
-      },
-      {
-        "condition": {
-          "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
-          "comparison": "==",
-          "compare_to": 2
-        },
-        "action": {
-          "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/bloomed"
+          "command": "function rpgraces:giantborn/release"
         }
       }
     ]
@@ -65,37 +53,25 @@
       {
         "condition": {
           "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
+          "resource": "rpgraces:giantborn/form_state",
           "comparison": "==",
           "compare_to": 0
         },
         "action": {
           "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/compact"
+          "command": "function rpgraces:giantborn/suppress"
         }
       },
       {
         "condition": {
           "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
+          "resource": "rpgraces:giantborn/form_state",
           "comparison": "==",
           "compare_to": 1
         },
         "action": {
           "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/natural"
-        }
-      },
-      {
-        "condition": {
-          "type": "origins:resource",
-          "resource": "rpgraces:myconid/form_state",
-          "comparison": "==",
-          "compare_to": 2
-        },
-        "action": {
-          "type": "origins:execute_command",
-          "command": "function rpgraces:myconid/bloomed"
+          "command": "function rpgraces:giantborn/release"
         }
       }
     ]

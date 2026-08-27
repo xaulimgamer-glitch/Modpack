@@ -3,7 +3,7 @@
   "modifier": {
     "name": "Racial Max Health -2 Hearts",
     "attribute": "minecraft:generic.max_health",
-    "value": 4.0,
+    "value": -4.0,
     "operation": "addition"
   },
   "update_health": true,
