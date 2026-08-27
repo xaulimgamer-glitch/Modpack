@@ -1,7 +1,9 @@
 {
   "powers": [
     "rpgraces:feline/size",
-    "rpgraces:generic/health/m2h"
+    "rpgraces:generic/health/m2h",
+    "rpgraces:feline/move_speed",
+    "rpgraces:feline/increased_metabolism"
   ],
   "icon": "minecraft:rabbit_foot",
   "impact": 1,
