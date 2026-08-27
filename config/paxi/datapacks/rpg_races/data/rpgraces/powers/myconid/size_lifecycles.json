@@ -1,0 +1,110 @@
+{
+  "type": "origins:action_on_callback",
+
+  "entity_action_gained": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:change_resource",
+        "resource": "rpgraces:myconid/form_state",
+        "operation": "set",
+        "change": 1
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "function rpgraces:myconid/natural"
+      }
+    ]
+  },
+
+  "entity_action_added": {
+    "type": "origins:if_else_list",
+    "actions": [
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/compact"
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/natural"
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/bloomed"
+        }
+      }
+    ]
+  },
+
+  "entity_action_respawned": {
+    "type": "origins:if_else_list",
+    "actions": [
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/compact"
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/natural"
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        "action": {
+          "type": "origins:execute_command",
+          "command": "function rpgraces:myconid/bloomed"
+        }
+      }
+    ]
+  },
+
+  "entity_action_lost": {
+    "type": "origins:execute_command",
+    "command": "function rpgraces:myconid/clear"
+  },
+
+  "hidden": true
+}
