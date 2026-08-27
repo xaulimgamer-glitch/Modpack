@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "rpgraces:elf/drow_size"
+  ],
+  "icon": "minecraft:flint",
+  "impact": 1,
+  "order":2,
+  "name": "Drow",
+  "description": "Drow."
+}

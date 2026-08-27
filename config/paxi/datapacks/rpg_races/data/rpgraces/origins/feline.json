@@ -1,7 +1,10 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:feline/size"
+  ],
   "icon": "minecraft:rabbit_foot",
   "impact": 1,
+  "order": 5,
   "name": "Feline",
   "description": "Purrr."
 }

@@ -1,0 +1,47 @@
+        {
+        "replace": true,
+        "order": 1,
+        "name": "Lineage",
+        "allow_random": false,
+        "auto_choose": false,
+
+        "origins": [
+            {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "rpgraces:dragonborn",
+                "layer": "rpgraces:race"
+            },
+            "origins": [
+                "rpgraces:lineage/dragonborn/fire",
+                "rpgraces:lineage/dragonborn/ice",
+                "rpgraces:lineage/dragonborn/lightning"
+            ]
+            },
+
+            {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "rpgraces:dwarf",
+                "layer": "rpgraces:race"
+            },
+            "origins": [
+                "rpgraces:lineage/dwarf/hill",
+                "rpgraces:lineage/dwarf/mountain"
+            ]
+            },
+
+            {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "rpgraces:elf",
+                "layer": "rpgraces:race"
+            },
+            "origins": [
+                "rpgraces:lineage/elf/high",
+                "rpgraces:lineage/elf/wood",
+                "rpgraces:lineage/elf/drow"
+            ]
+            }
+        ]
+        }

@@ -1,9 +1,20 @@
 {
-  "order": 5,
+  "order": 0,
 
   "origins": [
     "rpgraces:unawakened",
     "rpgraces:human",
+    "rpgraces:elf",
+    "rpgraces:dwarf",
+    "rpgraces:dragonborn",
+    "rpgraces:orc",
+    "rpgraces:feline",
+    "rpgraces:frogfolk",
+    "rpgraces:ravenfolk",
+    "rpgraces:tortle",
+    "rpgraces:giantborn",
+    "rpgraces:myconid",
+    "rpgraces:woodwoad",
     "rpgraces:faerie"
   ],
 

@@ -1,7 +1,10 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:woodwoad/size"
+  ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,
+  "order": 11,
   "name": "Wood Woad",
   "description": "I speak for the trees, for the trees have no tongues."
 }

@@ -1,7 +1,10 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:frogfolk/size"
+  ],
   "icon": "minecraft:slime_ball",
   "impact": 1,
+  "order": 8,
   "name": "Frogfolk",
   "description": "Alex F."
 }

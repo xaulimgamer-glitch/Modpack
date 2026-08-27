@@ -1,5 +1,7 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:myconid/size"
+  ],
   "icon": "minecraft:red_mushroom",
   "impact": 1,
   "name": "Myconid",

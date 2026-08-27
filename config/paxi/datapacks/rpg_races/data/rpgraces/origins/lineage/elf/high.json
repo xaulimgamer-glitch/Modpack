@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "rpgraces:elf/high_size"
+  ],
+  "icon": "minecraft:flint",
+  "impact": 1,
+  "order":0,
+  "name": "High Elf",
+  "description": "These damn dwarves."
+}

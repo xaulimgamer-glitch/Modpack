@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "rpgraces:elf/wood_size"
+  ],
+  "icon": "minecraft:flint",
+  "impact": 1,
+  "order":1,
+  "name": "Wood Elf",
+  "description": "Marijuana."
+}
