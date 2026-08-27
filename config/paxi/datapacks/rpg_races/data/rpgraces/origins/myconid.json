@@ -1,5 +1,14 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:myconid/size",
+    "rpgraces:myconid/shrink",
+    "rpgraces:myconid/grow",
+    "rpgraces:myconid/form_state",
+    "rpgraces:myconid/compact_mechanics",
+    "rpgraces:myconid/bloomed_mechanics",
+    "rpgraces:myconid/size_lifecycles",
+    "rpgraces:generic/health/m2h"
+  ],
   "icon": "minecraft:red_mushroom",
   "impact": 1,
   "name": "Myconid",

@@ -1,0 +1,66 @@
+{
+  "type": "origins:active_self",
+  "name": "Size Release",
+  "description": "Grow to your full size.",
+  "cooldown": 10,
+
+  "hud_render": {
+    "should_render": false
+  },
+
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+
+  "entity_action": {
+    "type": "origins:if_else_list",
+    "actions": [
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:giantborn/form_state",
+          "comparison": "==",
+          "compare_to": 0
+        },
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:change_resource",
+              "resource": "rpgraces:giantborn/form_state",
+              "operation": "set",
+              "change": 1
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "function rpgraces:giantborn/release"
+            }
+          ]
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:giantborn/form_state",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:change_resource",
+              "resource": "rpgraces:giantborn/form_state",
+              "operation": "set",
+              "change": 0
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "function rpgraces:giantborn/suppress"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

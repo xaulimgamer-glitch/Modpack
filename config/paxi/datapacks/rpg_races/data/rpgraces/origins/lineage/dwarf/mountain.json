@@ -1,0 +1,10 @@
+{
+  "powers": [
+    
+  ],
+  "icon": "minecraft:iron_pickaxe",
+  "impact": 1,
+  "order":0,
+  "name": "Mountain Dwarf",
+  "description": "Diggin a hole."
+}

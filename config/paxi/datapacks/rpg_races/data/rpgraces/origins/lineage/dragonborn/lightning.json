@@ -1,0 +1,10 @@
+{
+  "powers": [
+    
+  ],
+  "icon": "minecraft:lightning_rod",
+  "impact": 1,
+  "order":2,
+  "name": "Lightning Dragonborn",
+  "description": "I am the storm that is approching."
+}

@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "rpgraces:elf/high_size"
+  ],
+  "icon": "minecraft:amethyst_shard",
+  "impact": 1,
+  "order":0,
+  "name": "High Elf",
+  "description": "These damn dwarves."
+}

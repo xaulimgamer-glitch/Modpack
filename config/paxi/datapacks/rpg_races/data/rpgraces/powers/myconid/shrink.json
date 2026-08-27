@@ -1,0 +1,66 @@
+{
+  "type": "origins:active_self",
+  "name": "Adaptive Growth: Shrink",
+  "description": "Shrink your fungal body by one stage.",
+  "cooldown": 10,
+
+  "hud_render": {
+    "should_render": false
+  },
+
+  "key": {
+    "key": "key.origins.secondary_active"
+  },
+
+  "entity_action": {
+    "type": "origins:if_else_list",
+    "actions": [
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 2
+        },
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:change_resource",
+              "resource": "rpgraces:myconid/form_state",
+              "operation": "set",
+              "change": 1
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "function rpgraces:myconid/natural"
+            }
+          ]
+        }
+      },
+      {
+        "condition": {
+          "type": "origins:resource",
+          "resource": "rpgraces:myconid/form_state",
+          "comparison": "==",
+          "compare_to": 1
+        },
+        "action": {
+          "type": "origins:and",
+          "actions": [
+            {
+              "type": "origins:change_resource",
+              "resource": "rpgraces:myconid/form_state",
+              "operation": "set",
+              "change": 0
+            },
+            {
+              "type": "origins:execute_command",
+              "command": "function rpgraces:myconid/compact"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

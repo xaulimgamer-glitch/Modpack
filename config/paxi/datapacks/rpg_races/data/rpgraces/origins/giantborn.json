@@ -1,7 +1,15 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:giantborn/size",
+    "rpgraces:generic/health/p3h",
+    "rpgraces:giantborn/change_size",
+    "rpgraces:giantborn/size_lifecycles",
+    "rpgraces:giantborn/form_state",
+    "rpgraces:giantborn/released_mechanics"
+  ],
   "icon": "minecraft:stone",
-  "impact": 1,
+  "impact": 3,
+  "order": 10,
   "name": "Giantborn",
-  "description": "Human."
+  "description": "Jack and the beanstalk."
 }

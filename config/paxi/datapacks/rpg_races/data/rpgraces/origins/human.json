@@ -1,7 +1,10 @@
 {
-  "powers": [],
+  "powers": [
+
+  ],
   "icon": "minecraft:player_head",
   "impact": 1,
+  "order": 0,
   "name": "Human",
   "description": "Human."
 }

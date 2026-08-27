@@ -1,7 +1,11 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:ravenfolk/size",
+    "rpgraces:generic/health/m2h"
+  ],
   "icon": "minecraft:feather",
   "impact": 1,
+  "order": 7,
   "name": "Ravenfolk",
   "description": "Caw."
 }

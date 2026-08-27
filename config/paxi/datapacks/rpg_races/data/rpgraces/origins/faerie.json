@@ -1,10 +1,12 @@
 {
   "powers": [
-    "rpgraces:faerie/set_scale",
-    "rpgraces:faerie/set_fly"
+    "rpgraces:faerie/size",
+    "rpgraces:faerie/set_fly",
+    "rpgraces:generic/health/m5h"
   ],
   "icon": "minecraft:glow_berries",
   "impact": 1,
+  "order": 9,
   "name": "Faerie",
   "description": "Where's my pix?."
 }
