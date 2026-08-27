@@ -2,23 +2,60 @@
   "type": "origins:action_on_callback",
 
   "entity_action_gained": {
-    "type": "origins:execute_command",
-    "command": "scale set pehkui:base 1.08 @s"
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 1.8 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 1.8 @s"
+      }
+    ]
   },
 
   "entity_action_added": {
-    "type": "origins:execute_command",
-    "command": "scale set pehkui:base 1.08 @s"
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 1.8 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 1.8 @s"
+      }
+    ]
   },
 
   "entity_action_respawned": {
-    "type": "origins:execute_command",
-    "command": "scale set pehkui:base 1.08 @s"
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:height 1.8 @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:width 1.8 @s"
+      }
+    ]
   },
 
   "entity_action_lost": {
-    "type": "origins:execute_command",
-    "command": "scale reset pehkui:base @s"
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "scale reset pehkui:height @s"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "scale reset pehkui:width @s"
+      }
+    ]
   },
+
   "hidden": true
 }
