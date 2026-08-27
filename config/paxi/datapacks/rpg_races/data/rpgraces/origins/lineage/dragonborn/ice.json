@@ -2,9 +2,9 @@
   "powers": [
     
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:blue_ice",
   "impact": 1,
   "order":1,
   "name": "Ice Dragonborn",
-  "description": "Drow."
+  "description": "Chill out!."
 }

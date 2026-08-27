@@ -2,7 +2,7 @@
   "powers": [
     "rpgraces:elf/wood_size"
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:oak_sapling",
   "impact": 1,
   "order":1,
   "name": "Wood Elf",

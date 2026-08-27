@@ -2,9 +2,9 @@
   "powers": [
     
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:iron_pickaxe",
   "impact": 1,
   "order":0,
   "name": "Mountain Dwarf",
-  "description": "."
+  "description": "Diggin a hole."
 }

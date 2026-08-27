@@ -2,9 +2,9 @@
   "powers": [
     "rpgraces:generic/health/p2h"
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:emerald",
   "impact": 1,
   "order":1,
   "name": "Hill Dwarf",
-  "description": "."
+  "description": "Dwarf Cozy Momments."
 }

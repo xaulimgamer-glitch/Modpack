@@ -2,9 +2,9 @@
   "powers": [
     
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:fire_charge",
   "impact": 1,
   "order":0,
   "name": "Fire Dragonborn",
-  "description": "."
+  "description": "Hellraiser."
 }

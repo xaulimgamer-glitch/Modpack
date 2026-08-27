@@ -2,9 +2,9 @@
   "powers": [
     "rpgraces:elf/drow_size"
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:spider_eye",
   "impact": 1,
   "order":2,
   "name": "Drow",
-  "description": "Drow."
+  "description": "Nelf."
 }

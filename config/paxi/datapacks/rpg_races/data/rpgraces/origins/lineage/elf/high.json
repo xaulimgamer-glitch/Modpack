@@ -2,7 +2,7 @@
   "powers": [
     "rpgraces:elf/high_size"
   ],
-  "icon": "minecraft:flint",
+  "icon": "minecraft:amethyst_shard",
   "impact": 1,
   "order":0,
   "name": "High Elf",
