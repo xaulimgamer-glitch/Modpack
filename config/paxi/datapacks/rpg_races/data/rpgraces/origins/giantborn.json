@@ -1,7 +1,7 @@
 {
   "powers": [],
-  "icon": "minecraft:player_head",
+  "icon": "minecraft:stone",
   "impact": 1,
-  "name": "Human",
+  "name": "Giantborn",
   "description": "Human."
 }
