@@ -1,5 +1,8 @@
 {
-  "powers": [],
+  "powers": [
+    "rpgraces:faerie/set_scale",
+    "rpgraces:faerie/set_fly"
+  ],
   "icon": "minecraft:glow_berries",
   "impact": 1,
   "name": "Faerie",
