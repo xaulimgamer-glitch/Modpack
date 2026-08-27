@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Racial Max Health +4 Hearts",
+    "attribute": "minecraft:generic.max_health",
+    "value": 8.0,
+    "operation": "addition"
+  },
+  "update_health": true,
+  "hidden": true
+}

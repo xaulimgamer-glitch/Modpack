@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:orc/size"
+    "rpgraces:orc/size",
+    "rpgraces:generic/health/p2h"
   ],
   "icon": "minecraft:piglin_head",
   "impact": 1,

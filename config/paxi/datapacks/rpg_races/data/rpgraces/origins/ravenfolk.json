@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:ravenfolk/size"
+    "rpgraces:ravenfolk/size",
+    "rpgraces:generic/health/m2h"
   ],
   "icon": "minecraft:feather",
   "impact": 1,

@@ -1,9 +1,10 @@
 {
   "powers": [
-    "rpgraces:giantborn/size"
+    "rpgraces:giantborn/size",
+    "rpgraces:generic/health/p3h"
   ],
   "icon": "minecraft:stone",
-  "impact": 1,
+  "impact": 3,
   "order": 10,
   "name": "Giantborn",
   "description": "Human."

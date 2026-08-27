@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:tortle/size"
+    "rpgraces:tortle/size",
+    "rpgraces:generic/health/p2h"
   ],
   "icon": "minecraft:turtle_helmet",
   "impact": 1,

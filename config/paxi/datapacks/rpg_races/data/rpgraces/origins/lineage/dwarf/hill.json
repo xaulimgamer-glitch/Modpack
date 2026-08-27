@@ -1,6 +1,6 @@
 {
   "powers": [
-    
+    "rpgraces:generic/health/p2h"
   ],
   "icon": "minecraft:flint",
   "impact": 1,

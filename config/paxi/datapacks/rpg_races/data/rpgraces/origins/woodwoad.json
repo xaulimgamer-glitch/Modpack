@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:woodwoad/size"
+    "rpgraces:woodwoad/size",
+    "rpgraces:generic/health/m4h"
   ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,
