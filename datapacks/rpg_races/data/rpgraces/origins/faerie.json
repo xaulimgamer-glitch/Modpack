@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "rpgraces:faerie/set_scale",
+    "rpgraces:faerie/set_fly"
+  ],
+  "icon": "minecraft:barrier",
+  "impact": 1,
+  "name": "Faerie",
+  "description": "A whimsical being from the realm of magic. Quick and nimble and a strong connection to the natural world. Faeries are known for their magical abilities and their mischievous nature."
+}

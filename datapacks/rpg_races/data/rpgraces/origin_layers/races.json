@@ -3,7 +3,8 @@
 
   "origins": [
     "rpgraces:unawakened",
-    "rpgraces:human"
+    "rpgraces:human",
+    "rpgraces:faerie"
   ],
 
   "name": "Race",

@@ -1,0 +1,18 @@
+{
+  "type": "origins:action_on_callback",
+  "gained_action": {
+    "type": "origins:execute_command",
+    "command": "execute as @s run scale set pehkui:base 0.5",
+    "permission_level": 4
+  },
+  "lost_action": {
+    "type": "origins:execute_command",
+    "command": "execute as @s run scale reset pehkui:base",
+    "permission_level": 4
+  },
+  "respawn_action": {
+    "type": "origins:execute_command",
+    "command": "execute as @s run scale set pehkui:base 0.5",
+    "permission_level": 4
+  }
+}
