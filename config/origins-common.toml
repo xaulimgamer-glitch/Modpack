@@ -169,6 +169,8 @@
 		"rpgclasses:ravenfolk/size" = true
 		"rpgraces:ravenfolk/size" = true
 		"rpgraces:generic/health/m2h" = true
+		"rpgraces:ravenfolk/wings" = true
+		"rpgraces:ravenfolk/flimsy" = true
 
 	[origins."rpgraces:frogfolk"]
 		enabled = true
@@ -215,6 +217,7 @@
 		"rpgraces:faerie/size" = true
 		"rpgraces:generic/health/m5h" = true
 		"rpgraces:generic/move_speed/p5p" = true
+		"rpgraces:faerie/wings" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true
