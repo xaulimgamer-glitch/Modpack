@@ -1,11 +1,11 @@
 {
   "powers": [
     "rpgraces:faerie/size",
-    "rpgraces:faerie/set_fly",
     "rpgraces:generic/health/m5h",
     "rpgraces:generic/move_speed/p5p",
     "rpgraces:faerie/wings",
-    "rpgraces:faerie/flimsy"
+    "rpgraces:faerie:flightless_wings",
+    "rpgraces:faerie/fly"
   ],
   "icon": "minecraft:glow_berries",
   "impact": 1,

@@ -218,6 +218,8 @@
 		"rpgraces:generic/health/m5h" = true
 		"rpgraces:generic/move_speed/p5p" = true
 		"rpgraces:faerie/wings" = true
+		"rpgraces:faerie/flimsy" = true
+		"rpgraces:faerie/fly" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true
