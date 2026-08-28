@@ -51,3 +51,9 @@ desktop.ini
 .curseforge/
 .prism/
 .modrinth/
+
+
+# Launcher specific & local
+.curseclient
+minecraftinstance.json
+local/
