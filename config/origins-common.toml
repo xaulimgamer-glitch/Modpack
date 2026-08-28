@@ -277,3 +277,12 @@
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true
 
+	[origins."icarae_origin:icarae"]
+		enabled = true
+		"icarae_origin:wings" = true
+		"origins:aerial_combatant" = true
+		"icarae_origin:icarus" = true
+		"icarae_origin:hollow_bones" = true
+		"icarae_origin:flimsy" = true
+		"origins:carnivore" = true
+
