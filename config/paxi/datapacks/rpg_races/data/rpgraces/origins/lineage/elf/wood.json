@@ -1,6 +1,6 @@
 {
   "powers": [
-    "rpgraces:elf/wood_size"
+    "rpgraces:generic/move_speed/m5p"
   ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,

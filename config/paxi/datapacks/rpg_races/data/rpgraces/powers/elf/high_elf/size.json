@@ -6,7 +6,7 @@
     "actions": [
       {
         "type": "origins:execute_command",
-        "command": "scale set pehkui:height 1.03 @s"
+        "command": "scale set pehkui:height 1.02 @s"
       },
       {
         "type": "origins:execute_command",
@@ -20,7 +20,7 @@
     "actions": [
       {
         "type": "origins:execute_command",
-        "command": "scale set pehkui:height 1.03 @s"
+        "command": "scale set pehkui:height 1.02 @s"
       },
       {
         "type": "origins:execute_command",
@@ -34,7 +34,7 @@
     "actions": [
       {
         "type": "origins:execute_command",
-        "command": "scale set pehkui:height 1.03 @s"
+        "command": "scale set pehkui:height 1.02 @s"
       },
       {
         "type": "origins:execute_command",

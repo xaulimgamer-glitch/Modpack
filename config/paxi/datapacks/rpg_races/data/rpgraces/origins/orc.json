@@ -1,7 +1,8 @@
 {
   "powers": [
     "rpgraces:orc/size",
-    "rpgraces:generic/health/p2h"
+    "rpgraces:generic/health/p2h",
+    "rpgraces:generic/move_speed/m5p"
   ],
   "icon": "minecraft:piglin_head",
   "impact": 1,
