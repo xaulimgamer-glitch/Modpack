@@ -4,7 +4,7 @@
     "name": "Minus 10 percentage Movement Speed",
     "attribute": "minecraft:generic.movement_speed",
     "operation": "multiply_base",
-    "value": 0.1
+    "value": -0.1
   },
   "hidden": true
 }

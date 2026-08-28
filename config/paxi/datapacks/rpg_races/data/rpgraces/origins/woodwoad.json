@@ -2,7 +2,7 @@
   "powers": [
     "rpgraces:woodwoad/size",
     "rpgraces:generic/health/p4h",
-    "rpgraces/generic/move_speed/m10p"
+    "rpgraces:generic/move_speed/m10p"
   ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,
