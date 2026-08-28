@@ -149,6 +149,8 @@
 		"rpgclasses:woodwoad/size" = true
 		"rpgraces:woodwoad/size" = true
 		"rpgraces:generic/health/m4h" = true
+		"rpgraces:generic/health/p4h" = true
+		"rpgraces:generic/move_speed/m10p" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true
@@ -160,6 +162,7 @@
 		"rpgraces:generic/health/m2h" = true
 		"rpgraces:myconid/compact_mechanics" = true
 		"rpgraces:myconid/bloomed_mechanics" = true
+		"rpgraces:generic/move_speed/m5p" = true
 
 	[origins."rpgraces:ravenfolk"]
 		enabled = true
@@ -181,6 +184,7 @@
 		"rpgraces:giantborn/size_lifecycles" = true
 		"rpgraces:giantborn/form_state" = true
 		"rpgraces:giantborn/released_mechanics" = true
+		"rpgraces:generic/move_speed/m5p" = true
 
 	[origins."rpgraces:feline"]
 		enabled = true
@@ -189,15 +193,20 @@
 		"rpgraces:generic/health/m2h" = true
 		"rpgraces:feline/move_speed" = true
 		"rpgraces:feline/increased_metabolism" = true
+		"rpgraces:generic/move_speed/p15p" = true
+		"rpgraces:generic/metabolism/p30p" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
+		"rpgraces:elf/size" = true
+		"rpgraces:generic/move_speed/p5p" = true
 
 	[origins."rpgraces:orc"]
 		enabled = true
 		"rpgclasses:orc/size" = true
 		"rpgraces:orc/size" = true
 		"rpgraces:generic/health/p2h" = true
+		"rpgraces:generic/metabolism/p20p" = true
 
 	[origins."rpgraces:faerie"]
 		enabled = true
@@ -205,16 +214,19 @@
 		"rpgraces:faerie/set_fly" = true
 		"rpgraces:faerie/size" = true
 		"rpgraces:generic/health/m5h" = true
+		"rpgraces:generic/move_speed/p5p" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true
 		"rpgraces:dwarf/size" = true
+		"rpgraces:generic/move_speed/m5p" = true
 
 	[origins."rpgraces:tortle"]
 		enabled = true
 		"rpgclasses:tortle/size" = true
 		"rpgraces:tortle/size" = true
 		"rpgraces:generic/health/p2h" = true
+		"rpgraces:generic/move_speed/m10p" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
@@ -252,6 +264,7 @@
 	[origins."rpgraces:lineage/elf/high"]
 		enabled = true
 		"rpgraces:elf/high_size" = true
+		"rpgraces:elf/high_elf/size" = true
 
 	[origins."rpgraces:lineage/dwarf/mountain"]
 		enabled = true
@@ -259,6 +272,7 @@
 	[origins."rpgraces:lineage/elf/wood"]
 		enabled = true
 		"rpgraces:elf/wood_size" = true
+		"rpgraces:elf/wood_elf/wood_elf_speed" = true
 
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true

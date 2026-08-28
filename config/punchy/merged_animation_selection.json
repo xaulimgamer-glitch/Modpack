@@ -4,10 +4,10 @@
       "kind": "item",
       "definition": "FULL_BLOCK",
       "animations": {
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip",
-        "inspect": "pack:file/hyperpunchy-v2.5+.zip",
+        "useitem": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy",
+        "inspect": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy",
         "attack": "pack:punchy:punchy"
       }
     },
@@ -15,18 +15,18 @@
       "kind": "item",
       "definition": "EMPTY_HAND",
       "animations": {
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
+        "mining": "pack:punchy:punchy",
         "interaction": "punchy_default",
-        "attack": "pack:file/hyperpunchy-v2.5+.zip"
+        "attack": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "SPEAR",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "hand_in": "pack:file/hyperpunchy-v2.5+.zip",
-        "spear_charge": "pack:file/hyperpunchy-v2.5+.zip",
+        "attack": "pack:punchy:punchy",
+        "hand_in": "pack:punchy:punchy",
+        "spear_charge": "pack:punchy:punchy",
         "mining": "pack:punchy:punchy"
       }
     },
@@ -34,23 +34,23 @@
       "kind": "item",
       "definition": "CROSSBOW",
       "animations": {
-        "use_crossbow": "pack:file/hyperpunchy-v2.5+.zip",
-        "use_crossbow_shot": "pack:file/hyperpunchy-v2.5+.zip"
+        "use_crossbow": "pack:punchy:punchy",
+        "use_crossbow_shot": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "BOW",
       "animations": {
-        "use_bow": "pack:file/hyperpunchy-v2.5+.zip"
+        "use_bow": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "FISHING_ROD",
       "animations": {
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip",
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
+        "useitem": "pack:punchy:punchy",
+        "attack": "pack:punchy:punchy",
         "fishingrod": "pack:punchy:punchy"
       }
     },
@@ -58,9 +58,9 @@
       "kind": "item",
       "definition": "AXE",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "inspect": "pack:file/hyperpunchy-v2.5+.zip",
+        "attack": "pack:punchy:punchy",
+        "inspect": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy",
         "useitem": "pack:punchy:punchy"
       }
     },
@@ -68,16 +68,16 @@
       "kind": "item",
       "definition": "FLINT",
       "animations": {
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip"
+        "useitem": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "PICKAXE",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip",
+        "attack": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy",
         "inspect": "pack:punchy:punchy"
       }
     },
@@ -85,31 +85,31 @@
       "kind": "item",
       "definition": "HOE",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip"
+        "attack": "pack:punchy:punchy",
+        "useitem": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "SHOVEL",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip"
+        "attack": "pack:punchy:punchy",
+        "useitem": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy"
       }
     },
     {
       "kind": "item",
       "definition": "SWORD",
       "animations": {
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "hand_in": "pack:file/hyperpunchy-v2.5+.zip",
-        "mining": "pack:file/hyperpunchy-v2.5+.zip",
-        "inspect": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip",
+        "attack": "pack:punchy:punchy",
+        "hand_in": "pack:punchy:punchy",
+        "inspect": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy",
+        "mining_v2": "pack:punchy:punchy",
         "triggerable": "pack:punchy:punchy"
       }
     },
@@ -133,9 +133,9 @@
       "kind": "itemSpecific",
       "definition": "minecraft:wind_charge",
       "animations": {
-        "useitem": "pack:file/hyperpunchy-v2.5+.zip",
-        "attack": "pack:file/hyperpunchy-v2.5+.zip",
-        "interaction": "pack:file/hyperpunchy-v2.5+.zip"
+        "useitem": "pack:punchy:punchy",
+        "attack": "pack:punchy:punchy",
+        "interaction": "pack:punchy:punchy"
       }
     }
   ]
