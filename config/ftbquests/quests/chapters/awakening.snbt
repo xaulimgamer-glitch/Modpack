@@ -1,0 +1,87 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "awakening"
+	group: ""
+	id: "5C1DC1774C977343"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			id: "19819845FEBD78EF"
+			rewards: [{
+				command: "/mca editor"
+				id: "0E0842A5D9667361"
+				title: "Aparencia"
+				type: "command"
+			}]
+			tasks: [{
+				id: "404FEA7BD8BB1E98"
+				type: "checkmark"
+			}]
+			title: "mca"
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			id: "7E3686EFDC4E8DD2"
+			rewards: [{
+				command: "/origin gui @s rpgraces:races"
+				id: "40FA202E0A6C2AAB"
+				title: "Raça"
+				type: "command"
+			}]
+			tasks: [{
+				id: "2D97B586F5746731"
+				type: "checkmark"
+			}]
+			title: "raça"
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			id: "0B790E82D7A4147A"
+			rewards: [{
+				command: "/origin gui @s rpgclasses:class"
+				id: "5092AB51EED84B2B"
+				title: "classe"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0831C5A1DD0C2EF3"
+				title: "classe"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			id: "3AB1B6B9E3813DAC"
+			rewards: [
+				{
+					command: "/function modpack:dev/reset_character"
+					id: "504BB1D13116E530"
+					type: "command"
+				}
+				{
+					command: "/function modpack:dev/reset_character"
+					id: "21EA3B42D6DC6D60"
+					title: "reset"
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "34906A648DB70ACC"
+				title: "reset"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -6.0d
+		}
+	]
+	title: "Awakening"
+}

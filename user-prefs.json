@@ -1,0 +1,1295 @@
+{
+  "install": {
+    "skipInstallProjectPrerequisite": true
+  },
+  "export": {
+    "filesSelection": [
+      {
+        "path": ".curseclient",
+        "isSelected": false
+      },
+      {
+        "path": ".mixin.out",
+        "isSelected": false
+      },
+      {
+        "path": "config",
+        "isSelected": true
+      },
+      {
+        "path": "config\\apoli-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\apoli-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\archbows-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\archbows-server.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\better_crossbows.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\bettercombat",
+        "isSelected": true
+      },
+      {
+        "path": "config\\bettercombat\\client.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\bettercombat\\fallback_compatibility.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\bettercombat\\server.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\calio-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\combatroll",
+        "isSelected": true
+      },
+      {
+        "path": "config\\combatroll\\client.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\combatroll\\enchantments.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\combatroll\\hud_config.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\combatroll\\server.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\connector.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\connectorextras_energy_bridge-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\create-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\create-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\curios-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\curios-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\dummmmmmy-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\dummmmmmy-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights\\armor.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights\\general.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights\\mobs_equipment.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights\\shields.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknights\\weapons.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknightsaddon",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknightsaddon\\armors.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknightsaddon\\shields.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\epicknightsaddon\\weapons.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fabric",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fabric\\indigo-renderer.properties",
+        "isSelected": true
+      },
+      {
+        "path": "config\\firstperson.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\flywheel-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fml.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\forge-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests\\quests",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\chapter_groups.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\chapters",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\chapters\\awakening.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\data.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ftbxmodcompat.snbt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fzzy_config",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fzzy_config\\keybinds.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\fzzy_config\\search.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\irons_spellbooks_spell_config",
+        "isSelected": true
+      },
+      {
+        "path": "config\\irons_spellbooks_spell_config\\global_config.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\irons_spellbooks_spell_config\\irons_spellbooks",
+        "isSelected": true
+      },
+      {
+        "path": "config\\irons_spellbooks_spell_config\\irons_spellbooks\\example.txt",
+        "isSelected": true
+      },
+      {
+        "path": "config\\irons_spellbooks-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\blacklist.cfg",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\ingredient-list-mod-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\ingredient-list-type-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-client.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-colors.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-debug.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\jei-mod-id-format.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\recipe-category-sort-order.ini",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\world",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\world\\local",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jei\\world\\local\\New_World",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jeresources-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\jeresources.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\knavesneeds",
+        "isSelected": true
+      },
+      {
+        "path": "config\\knavesneeds\\general.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mca.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\miapi.jsonc",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobbility",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobbility\\combat_roll.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobbility\\irons_spellbooks.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobbility\\mobbility.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobbility\\spellcategories.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobplayeranimator",
+        "isSelected": true
+      },
+      {
+        "path": "config\\mobplayeranimator\\client.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\moonlight-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\moonlight-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\notenoughanimations.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\nucleus",
+        "isSelected": true
+      },
+      {
+        "path": "config\\nucleus\\configs.jsonc",
+        "isSelected": true
+      },
+      {
+        "path": "config\\origins-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\overgeared-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\overgeared-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\pehkui-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\pehkui-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\ponder-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\puffish_skills",
+        "isSelected": true
+      },
+      {
+        "path": "config\\puffish_skills\\config.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\punchy",
+        "isSelected": true
+      },
+      {
+        "path": "config\\punchy\\merged_animation_selection.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\punchy\\punchy_config.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\punchy\\triggerable-keybindings.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\sidebar_buttons.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplybows",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplybows\\config.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\compatibility.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\gem_powers.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\general.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\gui.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\loot.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\status_effects.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\unique_effects.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords\\weapon_attributes.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_extra",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_extra\\backupconfig.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_extra\\loot_config.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\gem_effects.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\general.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\loot.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\runic_effects.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\status_effects.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\unique_effects.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplyswords_main\\weapon_attributes.json5",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplytooltips",
+        "isSelected": true
+      },
+      {
+        "path": "config\\simplytooltips\\config.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\spartanshields-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\spartanweaponry-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\spartanweaponry-common-1.toml.bak",
+        "isSelected": true
+      },
+      {
+        "path": "config\\spartanweaponry-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\swem",
+        "isSelected": true
+      },
+      {
+        "path": "config\\swem\\community-packs",
+        "isSelected": true
+      },
+      {
+        "path": "config\\swem\\swem-client.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\swem\\swem-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\swem\\swem-recipe-control.toml",
+        "isSelected": true
+      },
+      {
+        "path": "config\\too_many_bows.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\transition.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\trender.json",
+        "isSelected": true
+      },
+      {
+        "path": "config\\unified_combat-common.toml",
+        "isSelected": true
+      },
+      {
+        "path": "crash-reports",
+        "isSelected": false
+      },
+      {
+        "path": "crash-reports\\crash-2026-08-25_10.00.37-client.txt",
+        "isSelected": false
+      },
+      {
+        "path": "crash-reports\\crash-2026-08-25_10.03.17-client.txt",
+        "isSelected": false
+      },
+      {
+        "path": "data",
+        "isSelected": false
+      },
+      {
+        "path": "data\\fabricDefaultResourcePacks.dat",
+        "isSelected": false
+      },
+      {
+        "path": "datapacks",
+        "isSelected": true
+      },
+      {
+        "path": "defaultconfigs",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftblibrary",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftblibrary\\ftblibrary-client.snbt",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftbquests",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftbquests\\client-config.snbt",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftbxmodcompat",
+        "isSelected": false
+      },
+      {
+        "path": "defaultconfigs\\ftbxmodcompat\\ftbxmodcompat.snbt",
+        "isSelected": false
+      },
+      {
+        "path": "downloads",
+        "isSelected": false
+      },
+      {
+        "path": "kubejs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\block\\example_block.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\item",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\assets\\kubejs\\textures\\item\\crude_short_bow.png",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\client_scripts\\ranged_models.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config\\client.properties",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\config\\common.properties",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\data",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\README.txt",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\server_scripts\\metallurgy.js",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts",
+        "isSelected": true
+      },
+      {
+        "path": "kubejs\\startup_scripts\\ranged_weapons.js",
+        "isSelected": true
+      },
+      {
+        "path": "local",
+        "isSelected": false
+      },
+      {
+        "path": "local\\ftblibrary-client.snbt",
+        "isSelected": false
+      },
+      {
+        "path": "local\\ftbquests",
+        "isSelected": false
+      },
+      {
+        "path": "local\\ftbquests\\client-config.snbt",
+        "isSelected": false
+      },
+      {
+        "path": "local\\kubejs",
+        "isSelected": false
+      },
+      {
+        "path": "local\\kubejs\\cache",
+        "isSelected": false
+      },
+      {
+        "path": "local\\kubejs\\dev.properties",
+        "isSelected": false
+      },
+      {
+        "path": "local\\kubejs\\export",
+        "isSelected": false
+      },
+      {
+        "path": "local\\kubejs\\exported_packs",
+        "isSelected": false
+      },
+      {
+        "path": "logs",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-2.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-3.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-4.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-5.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-6.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-19-7.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-20-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-21-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-22-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-2.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-3.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-4.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-5.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-24-6.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-25-1.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-25-2.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-25-3.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\2026-08-25-4.log.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\cf-logs",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\cf-logs\\cf-logs-minecraft-2026-08-19_13-26-33.zip",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\instance_audit.txt",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\kubejs",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\kubejs\\client.log",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\kubejs\\server.log",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\kubejs\\startup.log",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\latest.log",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\MorePlayerModels-latest.log",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\stdout-logs.txt",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-1.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-10.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-11.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-12.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-13.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-14.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-15.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-16.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-17.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-18.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-19.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-2.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-3.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-4.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-5.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-6.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-7.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-8.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260819-9.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260821-1.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-1.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-2.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-3.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-4.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-5.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-6.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-7.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260824-8.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260825-1.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260825-2.json.gz",
+        "isSelected": false
+      },
+      {
+        "path": "logs\\telemetry\\20260825-3.json",
+        "isSelected": false
+      },
+      {
+        "path": "minecraftinstance.json",
+        "isSelected": false
+      },
+      {
+        "path": "mods",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\archbows-1.1.9-1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\architectury-9.2.14-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\bettercombat-forge-1.9.0+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\caelus-forge-3.2.0+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\cloth-config-11.1.136-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\combatroll-forge-1.3.3+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\create-1.20.1-6.0.8.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\curios-forge-5.14.1+1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\dummmmmmy-1.20-2.0.12-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\epic-knights-1.20.1-forge-10.11.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\epic-knights-addon-1.20.x-forge-2.6.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Epic-Knights-x-Better-Combat.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-filter-system-forge-20.0.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-library-forge-2001.2.13.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-quests-forge-2001.4.22.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-ranks-forge-2001.1.7.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-teams-forge-2001.3.2.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\ftb-xmod-compat-forge-2.1.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\fzzy_config-0.7.6+1.20.1+forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\geckolib-forge-1.20.1-4.8.4.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\irons_lib-1.20.1-2.1.0.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\irons_spellbooks-1.20.1-3.16.3.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\jei-1.20.1-forge-15.20.0.112.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\JustEnoughResources-1.20.1-1.4.0.247.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\kotlinforforge-4.12.0-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\kubejs-forge-2001.6.5-build.26.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\minecraft-comes-alive-7.6.26+1.20.1-universal.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\mobbility-addon-combat-roll-forge-1.0.0.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\mobbility-addon-irons-spellbooks-1.0.1.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\mobbility-forge-1.0.1.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\mobplayeranimator-forge-1.20.1-1.3.3-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\moonlight-1.20-2.16.34-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\origins-forge-1.20.1-1.10.0.9-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\overgeared_epic_knights-1.20.1-1.0.4.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\overgeared-1.20.1-1.6.32.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\overgearedspartan_shld-0.72.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\overgearedspartan-0.67.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\paladin_spells-1.20.1-1.1.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\Pehkui-3.8.2+1.20.1-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\player-animation-lib-forge-1.0.2-rc1+1.20.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\puffish_attributes-0.8.2-1.20-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\puffish_skills-0.18.3-1.20-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\punchy-2.7d-forge-1.20.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\rangedjs-1.2.5-forge.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\rhino-forge-2001.2.3-build.10.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\SpartanShields-1.20.1-forge-3.1.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\swem-1.20.1-1.6.6.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\too_many_bows-forge-4.1.1.jar.disabled",
+        "isSelected": true
+      },
+      {
+        "path": "mods\\unified_combat-1.20.1-1.0.1.jar",
+        "isSelected": true
+      },
+      {
+        "path": "moonlight-global-datapacks",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\3635b9c9-339f-4079-ada9-efb6300ca0da.dat",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\3635b9c9-339f-4079-ada9-efb6300ca0da.dat_old",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets\\moreplayermodels",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets\\moreplayermodels\\parts",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets\\moreplayermodels\\sounds",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets\\moreplayermodels\\sounds.json",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\assets\\moreplayermodels\\textures",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\config",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\config\\MorePlayerModels.cfg",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\pack.mcmeta",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\presets.dat",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\presets.dat_old",
+        "isSelected": false
+      },
+      {
+        "path": "moreplayermodels\\skincache",
+        "isSelected": false
+      },
+      {
+        "path": "options.txt",
+        "isSelected": false
+      },
+      {
+        "path": "resourcepacks",
+        "isSelected": true
+      },
+      {
+        "path": "rhino.local.properties",
+        "isSelected": false
+      },
+      {
+        "path": "schematics",
+        "isSelected": false
+      },
+      {
+        "path": "screenshots",
+        "isSelected": false
+      },
+      {
+        "path": "screenshots\\simplytooltips",
+        "isSelected": false
+      },
+      {
+        "path": "screenshots\\simplytooltips\\tooltip-20260824-155838.gif",
+        "isSelected": false
+      },
+      {
+        "path": "shaderpacks",
+        "isSelected": true
+      },
+      {
+        "path": "user-prefs.json",
+        "isSelected": false
+      },
+      {
+        "path": "usercache.json",
+        "isSelected": false
+      },
+      {
+        "path": "usernamecache.json",
+        "isSelected": false
+      }
+    ],
+    "recommendedRam": null,
+    "enableRecommendedRam": false
+  }
+}

@@ -1,0 +1,26 @@
+# Don't change this! Version used to track needed updates.
+version = 1
+
+# Combat Roll settings - mob dodge roll behavior
+
+[combatRoll]
+# Enable mob dodge rolls
+# When enabled, mobs can perform dodge rolls to evade attacks
+enabled = true
+# Chance for mob to dodge roll when attacked (0.0 - 1.0)
+# 0.0 = never dodge, 1.0 = always dodge
+mobRollChance = 0.3
+# Enable dodge rolls for ranged attacks
+# When enabled, mobs can dodge arrows, fireballs, etc.
+dodgeRangedAttacks = true
+# Enable dodge rolls for melee attacks
+# When enabled, mobs can dodge sword swings, punches, etc.
+dodgeMeleeAttacks = true
+# Cancel spell casts when dodging
+# When enabled, mobs will interrupt their spell casts to perform dodge rolls
+# When disabled, mobs cannot dodge while casting (except channeling spells are never interrupted)
+cancelCastOnDodge = true
+# Allow dodging during channeling spells
+# When disabled, mobs cannot dodge while channeling spells like whirlwind
+# Recommended: false (channeling spells should not be interrupted)
+allowDodgeDuringChanneling = false

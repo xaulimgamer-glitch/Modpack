@@ -1,0 +1,175 @@
+# Don't change this! Version used to track needed updates.
+version = 1
+# Attack spells - Direct damage and offensive abilities
+# Used by mobs for attacking enemies
+# Examples: firebolt, ice_spike, lightning_bolt, fireball
+# 
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+attack = [
+    "irons_spellbooks:acupuncture",
+    "irons_spellbooks:blood_needles",
+    "irons_spellbooks:blood_slash",
+    "irons_spellbooks:ray_of_siphoning",
+    "irons_spellbooks:wither_skull",
+    "irons_spellbooks:dragon_breath",
+    "irons_spellbooks:evasion",
+    "irons_spellbooks:magic_arrow",
+    "irons_spellbooks:magic_missile",
+    "irons_spellbooks:starfall",
+    "irons_spellbooks:echoing_strikes",
+    "irons_spellbooks:black_hole",
+    "irons_spellbooks:shadow_slash",
+    "irons_spellbooks:chain_creeper",
+    "irons_spellbooks:fang_strike",
+    "irons_spellbooks:firecracker",
+    "irons_spellbooks:gust",
+    "irons_spellbooks:lob_creeper",
+    "irons_spellbooks:spectral_hammer",
+    "irons_spellbooks:arrow_volley",
+    "irons_spellbooks:wololo",
+    "irons_spellbooks:throw",
+    "irons_spellbooks:fang_swirl",
+    "irons_spellbooks:blaze_storm",
+    "irons_spellbooks:fireball",
+    "irons_spellbooks:firebolt",
+    "irons_spellbooks:fire_breath",
+    "irons_spellbooks:magma_bomb",
+    "irons_spellbooks:wall_of_fire",
+    "irons_spellbooks:flaming_strike",
+    "irons_spellbooks:scorch",
+    "irons_spellbooks:flaming_barrage",
+    "irons_spellbooks:fire_arrow",
+    "irons_spellbooks:raise_hell",
+    "irons_spellbooks:guiding_bolt",
+    "irons_spellbooks:sunbeam",
+    "irons_spellbooks:divine_smite",
+    "irons_spellbooks:cleanse",
+    "irons_spellbooks:cone_of_cold",
+    "irons_spellbooks:icicle",
+    "irons_spellbooks:ray_of_frost",
+    "irons_spellbooks:ice_spikes",
+    "irons_spellbooks:frostbite",
+    "irons_spellbooks:ascension",
+    "irons_spellbooks:charge",
+    "irons_spellbooks:electrocute",
+    "irons_spellbooks:lightning_bolt",
+    "irons_spellbooks:lightning_lance",
+    "irons_spellbooks:shockwave",
+    "irons_spellbooks:thunderstorm",
+    "irons_spellbooks:ball_lightning",
+    "irons_spellbooks:volt_strike",
+    "irons_spellbooks:poison_arrow",
+    "irons_spellbooks:poison_breath",
+    "irons_spellbooks:poison_splash",
+    "irons_spellbooks:spider_aspect",
+    "irons_spellbooks:firefly_swarm",
+    "irons_spellbooks:oakskin",
+    "irons_spellbooks:earthquake",
+    "irons_spellbooks:stomp",
+    "irons_spellbooks:sculk_tentacles",
+    "irons_spellbooks:sonic_boom",
+    "irons_spellbooks:eldritch_blast",
+    "irons_spellbooks:pocket_dimension"
+]
+# Defense spells - Shields, wards, and protective abilities
+# Used by mobs for protection
+# Examples: shield, fang_ward, counterspell, fortify
+# 
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+defense = [
+    "irons_spellbooks:fang_ward",
+    "irons_spellbooks:shield",
+    "irons_spellbooks:fortify",
+    "irons_spellbooks:wisp",
+    "irons_spellbooks:ice_block",
+    "irons_spellbooks:chain_lightning"
+]
+# Movement spells - Mobility and repositioning abilities
+# Used ONLY for evasion when mob takes damage, NOT for attacking
+# Examples: teleport, burning_dash, blood_step, frost_step
+# 
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+movement = [
+    "irons_spellbooks:blood_step",
+    "irons_spellbooks:teleport",
+    "irons_spellbooks:burning_dash",
+    "irons_spellbooks:frost_step"
+]
+# Support spells - Buffs and utility abilities (NOT summons)
+# Used by mobs for various support purposes
+# Examples: invisibility, evasion, haste, heal, slow, root
+# 
+# NOTE: Summon spells are in separate 'summon' category
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+support = [
+    "irons_spellbooks:devour",
+    "irons_spellbooks:heartstop",
+    "irons_spellbooks:sacrifice",
+    "irons_spellbooks:arcane_shackle",
+    "irons_spellbooks:gravity_fissure",
+    "irons_spellbooks:invisibility",
+    "irons_spellbooks:slow",
+    "irons_spellbooks:scapegoat",
+    "irons_spellbooks:heat_surge",
+    "irons_spellbooks:angel_wing",
+    "irons_spellbooks:blessing_of_life",
+    "irons_spellbooks:cloud_of_regeneration",
+    "irons_spellbooks:greater_heal",
+    "irons_spellbooks:healing_circle",
+    "irons_spellbooks:heal",
+    "irons_spellbooks:haste",
+    "irons_spellbooks:frostwave",
+    "irons_spellbooks:ice_tomb",
+    "irons_spellbooks:snowball",
+    "irons_spellbooks:blizzard",
+    "irons_spellbooks:acid_orb",
+    "irons_spellbooks:blight",
+    "irons_spellbooks:root",
+    "irons_spellbooks:gluttony",
+    "irons_spellbooks:abyssal_shroud"
+]
+# Summon spells - Conjure/raise/summon minions
+# Used by mobs ONLY when all their summons are dead
+# This prevents infinite summon spam
+# Examples: summon_vex, raise_dead, summon_horse, summon_polar_bear, summon_swords
+# 
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+summon = [
+    "irons_spellbooks:raise_dead",
+    "irons_spellbooks:summon_ender_chest",
+    "irons_spellbooks:summon_swords",
+    "irons_spellbooks:summon_horse",
+    "irons_spellbooks:summon_vex",
+    "irons_spellbooks:summon_polar_bear"
+]
+# Blacklisted spells - Player-only mechanics, never used by mobs
+# These spells will be completely ignored by mob AI
+# Examples: recall, portal, angel_wings, touch_dig
+# 
+# NOTE: This list is AUTO-POPULATED on first load with detected spells.
+# After first load, this config is the SOURCE OF TRUTH.
+# You can add, remove, or move spells between categories manually.
+# Changes take effect after server restart or /reload.
+blacklist = [
+    "irons_spellbooks:counterspell",
+    "irons_spellbooks:recall",
+    "irons_spellbooks:portal",
+    "irons_spellbooks:touch_dig",
+    "irons_spellbooks:planar_sight",
+    "irons_spellbooks:telekinesis"
+]

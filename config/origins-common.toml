@@ -1,0 +1,265 @@
+
+[origins]
+
+	[origins."origins:enderian"]
+		enabled = true
+		"origins:throw_ender_pearl" = true
+		"origins:water_vulnerability" = true
+		"origins:pumpkin_hate" = true
+		"origins:extra_reach" = true
+		"origins:ender_particles" = true
+		"origins:damage_from_potions" = true
+
+	[origins."origins:arachnid"]
+		enabled = true
+		"origins:climbing" = true
+		"origins:master_of_webs" = true
+		"origins:carnivore" = true
+		"origins:fragile" = true
+		"origins:arthropod" = true
+
+	[origins."origins:human"]
+		enabled = true
+
+	[origins."origins:blazeborn"]
+		enabled = true
+		"origins:fire_immunity" = true
+		"origins:nether_spawn" = true
+		"origins:burning_wrath" = true
+		"origins:hotblooded" = true
+		"origins:water_vulnerability" = true
+		"origins:flame_particles" = true
+		"origins:damage_from_snowballs" = true
+		"origins:damage_from_potions" = true
+
+	[origins."origins:avian"]
+		enabled = true
+		"origins:slow_falling" = true
+		"origins:fresh_air" = true
+		"origins:like_air" = true
+		"origins:tailwind" = true
+		"origins:lay_eggs" = true
+		"origins:vegetarian" = true
+
+	[origins."origins:feline"]
+		enabled = true
+		"origins:fall_immunity" = true
+		"origins:sprint_jump" = true
+		"origins:velvet_paws" = true
+		"origins:nine_lives" = true
+		"origins:weak_arms" = true
+		"origins:scare_creepers" = true
+		"origins:cat_vision" = true
+
+	[origins."origins:elytrian"]
+		enabled = true
+		"origins:elytra" = true
+		"origins:launch_into_air" = true
+		"origins:aerial_combatant" = true
+		"origins:light_armor" = true
+		"origins:claustrophobia" = true
+		"origins:more_kinetic_damage" = true
+
+	[origins."origins:shulk"]
+		enabled = true
+		"origins:shulker_inventory" = true
+		"origins:natural_armor" = true
+		"origins:strong_arms" = true
+		"origins:strong_arms_break_speed" = true
+		"origins:no_shield" = true
+		"origins:more_exhaustion" = true
+
+	[origins."origins:merling"]
+		enabled = true
+		"origins:water_breathing" = true
+		"origins:water_vision" = true
+		"origins:aqua_affinity" = true
+		"origins:swim_speed" = true
+		"origins:like_water" = true
+		"origins:aquatic" = true
+		"origins:conduit_power_on_land" = true
+		"origins:air_from_potions" = true
+
+	[origins."origins:phantom"]
+		enabled = true
+		"origins:phantomize" = true
+		"origins:translucent" = true
+		"origins:phasing" = true
+		"origins:invisibility" = true
+		"origins:burn_in_daylight" = true
+		"origins:hunger_over_time" = true
+		"origins:fragile" = true
+		"origins:phantomize_overlay" = true
+
+	[origins."modpack_classes:barbarian"]
+		enabled = true
+		"modpack_classes:barbarian_rage" = true
+		"modpack_classes:barbarian_combat_timer" = true
+		"modpack_classes:barbarian_gain_rage_on_hit" = true
+		"modpack_classes:barbarian_refresh_combat_on_hit" = true
+		"modpack_classes:barbarian_gain_rage_when_hit" = true
+		"modpack_classes:barbarian_refresh_combat_when_hit" = true
+		"modpack_classes:barbarian_rage_decay" = true
+
+	[origins."modpack_classes:none"]
+		enabled = true
+
+	[origins."rpgclasses:barbarian"]
+		enabled = true
+		"rpgclasses:barbarian_rage" = true
+		"rpgclasses:barbarian_gain_rage_on_hit" = true
+		"rpgclasses:barbarian_gain_rage_when_hit" = true
+		"rpgclasses:barbarian/rage" = true
+		"rpgclasses:barbarian/gain_rage_on_hit" = true
+		"rpgclasses:barbarian/gain_rage_when_hit" = true
+		"rpgclasses:barbarian/combat_timer" = true
+		"rpgclasses:barbarian/rage_decay" = true
+		"rpgclasses:barbarian/rage_resistance" = true
+		"rpgclasses:barbarian/rage_heated" = true
+		"rpgclasses:barbarian/rage_enraged" = true
+		"rpgclasses:barbarian/rage_frenzy" = true
+		"rpgclasses:barbarian/refresh_combat_on_hit" = true
+
+	[origins."rpgclasses:rogue"]
+		enabled = true
+
+	[origins."rpgclasses:untrained"]
+		enabled = true
+
+	[origins."rpgraces:unawakened"]
+		enabled = true
+
+	[origins."rpgraces:human"]
+		enabled = true
+
+	[origins."rpgclasses:ranger"]
+		enabled = true
+
+	[origins."rpgclasses:warrior"]
+		enabled = true
+
+	[origins."rpgclasses:cleric"]
+		enabled = true
+
+	[origins."rpgclasses:wizard"]
+		enabled = true
+
+	[origins."rpgraces:woodwoad"]
+		enabled = true
+		"rpgclasses:woodwoad/size" = true
+		"rpgraces:woodwoad/size" = true
+		"rpgraces:generic/health/m4h" = true
+
+	[origins."rpgraces:myconid"]
+		enabled = true
+		"rpgraces:myconid/size" = true
+		"rpgraces:myconid/shrink" = true
+		"rpgraces:myconid/grow" = true
+		"rpgraces:myconid/form_state" = true
+		"rpgraces:myconid/size_lifecycles" = true
+		"rpgraces:generic/health/m2h" = true
+		"rpgraces:myconid/compact_mechanics" = true
+		"rpgraces:myconid/bloomed_mechanics" = true
+
+	[origins."rpgraces:ravenfolk"]
+		enabled = true
+		"rpgclasses:ravenfolk/size" = true
+		"rpgraces:ravenfolk/size" = true
+		"rpgraces:generic/health/m2h" = true
+
+	[origins."rpgraces:frogfolk"]
+		enabled = true
+		"rpgclasses:frogfolk/size" = true
+		"rpgraces:frogfolk/size" = true
+
+	[origins."rpgraces:giantborn"]
+		enabled = true
+		"rpgclasses:giantborn/size" = true
+		"rpgraces:giantborn/size" = true
+		"rpgraces:generic/health/p3h" = true
+		"rpgraces:giantborn/change_size" = true
+		"rpgraces:giantborn/size_lifecycles" = true
+		"rpgraces:giantborn/form_state" = true
+		"rpgraces:giantborn/released_mechanics" = true
+
+	[origins."rpgraces:feline"]
+		enabled = true
+		"rpgclasses:feline/size" = true
+		"rpgraces:feline/size" = true
+		"rpgraces:generic/health/m2h" = true
+		"rpgraces:feline/move_speed" = true
+		"rpgraces:feline/increased_metabolism" = true
+
+	[origins."rpgraces:elf"]
+		enabled = true
+
+	[origins."rpgraces:orc"]
+		enabled = true
+		"rpgclasses:orc/size" = true
+		"rpgraces:orc/size" = true
+		"rpgraces:generic/health/p2h" = true
+
+	[origins."rpgraces:faerie"]
+		enabled = true
+		"rpgraces:faerie/set_scale" = true
+		"rpgraces:faerie/set_fly" = true
+		"rpgraces:faerie/size" = true
+		"rpgraces:generic/health/m5h" = true
+
+	[origins."rpgraces:dwarf"]
+		enabled = true
+		"rpgraces:dwarf/size" = true
+
+	[origins."rpgraces:tortle"]
+		enabled = true
+		"rpgclasses:tortle/size" = true
+		"rpgraces:tortle/size" = true
+		"rpgraces:generic/health/p2h" = true
+
+	[origins."rpgraces:dragonborn"]
+		enabled = true
+		"rpgraces:dragonborn/size" = true
+
+	[origins."rpgraces:lineage/dragonborn/ice"]
+		enabled = true
+
+	[origins."rpgraces:lineage/elf/drow"]
+		enabled = true
+		"rpgraces:elf/drow_size" = true
+
+	[origins."rpgraces:lineage/elf/highelf"]
+		enabled = true
+
+	[origins."rpgraces:lineage/dragonborn/lighting"]
+		enabled = true
+
+	[origins."rpgraces:lineage/dragonborn/fire"]
+		enabled = true
+
+	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
+		enabled = true
+
+	[origins."rpgraces:lineage/elf/woodelf"]
+		enabled = true
+
+	[origins."rpgraces:lineage/dwarf/hilldwarf"]
+		enabled = true
+
+	[origins."rpgraces:lineage/dwarf/hill"]
+		enabled = true
+		"rpgraces:generic/health/p2h" = true
+
+	[origins."rpgraces:lineage/elf/high"]
+		enabled = true
+		"rpgraces:elf/high_size" = true
+
+	[origins."rpgraces:lineage/dwarf/mountain"]
+		enabled = true
+
+	[origins."rpgraces:lineage/elf/wood"]
+		enabled = true
+		"rpgraces:elf/wood_size" = true
+
+	[origins."rpgraces:lineage/dragonborn/lightning"]
+		enabled = true
+
