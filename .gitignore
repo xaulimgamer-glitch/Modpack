@@ -57,3 +57,7 @@ desktop.ini
 .curseclient
 minecraftinstance.json
 local/
+
+# Arquivos de backup e propriedades locais
+*.bak
+rhino.local.properties
