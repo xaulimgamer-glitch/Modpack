@@ -220,6 +220,7 @@
 		"rpgraces:faerie/wings" = true
 		"rpgraces:faerie/flimsy" = true
 		"rpgraces:faerie/fly" = true
+		"rpgraces:faerie/flightless_wings" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true

@@ -20,5 +20,6 @@
         "type": "icarae_origin:wet"
       }
     ]
-  }
+  },
+    "hidden": true
 }
