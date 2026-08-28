@@ -1,0 +1,53 @@
+# ==========================================
+# Saves, Mundos e Jogadores
+# ==========================================
+saves/
+world/
+backups/
+playerdata/
+stats/
+advancements/
+schematics/
+journeymap/data/
+xaeroworldmap/
+xaerominimap/
+
+# ==========================================
+# Logs, Caches e Arquivos Temporários
+# ==========================================
+logs/
+crash-reports/
+debug/
+.cache/
+shaderpacks-cache/
+memory-dumps/
+*.log
+*.log.gz
+hs_err_pid*.log
+
+# ==========================================
+# Preferências do Usuário e Hardware
+# ==========================================
+options.txt
+optionsof.txt
+optionsshaders.txt
+usercache.json
+usernamecache.json
+servers.dat
+servers.dat_old
+hotbar.nbt
+screenshots/
+server.properties
+
+# ==========================================
+# Launcher & IDE / SO
+# ==========================================
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+.curseforge/
+.prism/
+.modrinth/
