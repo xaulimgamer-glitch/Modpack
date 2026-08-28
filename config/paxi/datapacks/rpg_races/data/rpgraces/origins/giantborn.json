@@ -2,6 +2,7 @@
   "powers": [
     "rpgraces:giantborn/size",
     "rpgraces:generic/health/p3h",
+    "rpgraces:generic/move_speed/m5p",
     "rpgraces:giantborn/change_size",
     "rpgraces:giantborn/size_lifecycles",
     "rpgraces:giantborn/form_state",

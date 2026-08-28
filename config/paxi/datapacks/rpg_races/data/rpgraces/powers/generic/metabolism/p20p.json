@@ -1,0 +1,9 @@
+{
+  "type": "origins:modify_exhaustion",
+  "modifier": {
+    "name": "20 Percentage Increased Metabolism",
+    "operation": "multiply_base",
+    "value": 0.2
+  },
+  "hidden": true
+}
