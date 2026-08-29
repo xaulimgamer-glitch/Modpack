@@ -36,6 +36,12 @@ dependencies {
 }
 
 tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            'MixinConfigs': 'awakening_icarus_compat.mixins.json'
+        ])
+    }
+
     finalizedBy 'reobfJar'
 }
 

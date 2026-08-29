@@ -3,9 +3,15 @@
   "minVersion": "0.8",
   "package": "dev.xaulim.awakeningicaruscompat.mixin",
   "compatibilityLevel": "JAVA_17",
+
   "mixins": [
     "IcarusHelperMixin"
   ],
+
+  "client": [
+    "FixedWingEntityModelMixin"
+  ],
+
   "injectors": {
     "defaultRequire": 1
   }
