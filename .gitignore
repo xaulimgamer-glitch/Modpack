@@ -61,3 +61,11 @@ local/
 # Arquivos de backup e propriedades locais
 *.bak
 rhino.local.properties
+
+# ==========================================
+# Custom Forge Mods - arquivos de build
+# ==========================================
+custom_mods/*/.gradle/
+custom_mods/*/build/
+custom_mods/*/run/
+custom_mods/*/run-data/
