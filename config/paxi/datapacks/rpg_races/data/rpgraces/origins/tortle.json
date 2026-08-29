@@ -2,7 +2,8 @@
   "powers": [
     "rpgraces:tortle/size",
     "rpgraces:generic/health/p2h",
-    "rpgraces:generic/move_speed/m10p"
+    "rpgraces:generic/move_speed/m10p",
+    "rpgraces:generic/swim_speed/p50p"
   ],
   "icon": "minecraft:turtle_helmet",
   "impact": 1,

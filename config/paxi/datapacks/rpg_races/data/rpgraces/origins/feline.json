@@ -4,7 +4,8 @@
     "rpgraces:generic/health/m2h",
     "rpgraces:generic/move_speed/p15p",
     "rpgraces:generic/metabolism/p30p",
-    "rpgraces:generic/dark_vision/common"
+    "rpgraces:generic/dark_vision/common",
+    "rpgraces:generic/feather_fall/m75p"
   ],
   "icon": "minecraft:rabbit_foot",
   "impact": 1,

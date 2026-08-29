@@ -1,6 +1,10 @@
 {
   "powers": [
-    "rpgraces:frogfolk/size"
+    "rpgraces:frogfolk/size",
+    "rpgraces:frogfolk/froghop",
+    "rpgraces:frogfolk/softlanding",
+    "rpgraces:generic/feather_fall/m25p",
+    "rpgraces:generic/swim_speed/p50p"
   ],
   "icon": "minecraft:slime_ball",
   "impact": 1,

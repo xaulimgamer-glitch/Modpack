@@ -3,7 +3,8 @@
     "rpgraces:ravenfolk/size",
     "rpgraces:generic/health/m2h",
     "rpgraces:ravenfolk/wings",
-    "rpgraces:ravenfolk/flimsy"
+    "rpgraces:ravenfolk/flimsy",
+    "rpgraces:generic/feather_fall/m50p"
   ],
   "icon": "minecraft:feather",
   "impact": 1,

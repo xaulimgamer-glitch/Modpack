@@ -163,6 +163,8 @@
 		"rpgraces:myconid/compact_mechanics" = true
 		"rpgraces:myconid/bloomed_mechanics" = true
 		"rpgraces:generic/move_speed/m5p" = true
+		"rpgraces:generic/dark_vision/common" = true
+		"rpgraces:myconid/fungalbody" = true
 
 	[origins."rpgraces:ravenfolk"]
 		enabled = true
@@ -171,11 +173,16 @@
 		"rpgraces:generic/health/m2h" = true
 		"rpgraces:ravenfolk/wings" = true
 		"rpgraces:ravenfolk/flimsy" = true
+		"rpgraces:generic/feather_fall/m50p" = true
 
 	[origins."rpgraces:frogfolk"]
 		enabled = true
 		"rpgclasses:frogfolk/size" = true
 		"rpgraces:frogfolk/size" = true
+		"rpgraces:frogfolk/froghop" = true
+		"rpgraces:frogfolk/softlanding" = true
+		"rpgraces:generic/feather_fall/m25p" = true
+		"rpgraces:generic/swim_speed/p50p" = true
 
 	[origins."rpgraces:giantborn"]
 		enabled = true
@@ -198,11 +205,13 @@
 		"rpgraces:generic/move_speed/p15p" = true
 		"rpgraces:generic/metabolism/p30p" = true
 		"rpgraces:generic/dark_vision/common" = true
+		"rpgraces:generic/feather_fall/m75p" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
 		"rpgraces:elf/size" = true
 		"rpgraces:generic/move_speed/p5p" = true
+		"rpgraces:generic/feather_fall/m25p" = true
 
 	[origins."rpgraces:orc"]
 		enabled = true
@@ -227,6 +236,7 @@
 		enabled = true
 		"rpgraces:dwarf/size" = true
 		"rpgraces:generic/move_speed/m5p" = true
+		"rpgraces:generic/dark_vision/common" = true
 
 	[origins."rpgraces:tortle"]
 		enabled = true
@@ -234,6 +244,7 @@
 		"rpgraces:tortle/size" = true
 		"rpgraces:generic/health/p2h" = true
 		"rpgraces:generic/move_speed/m10p" = true
+		"origins:aquatic" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
@@ -273,6 +284,7 @@
 		enabled = true
 		"rpgraces:elf/high_size" = true
 		"rpgraces:elf/high_elf/size" = true
+		"rpgraces:generic/dark_vision/common" = true
 
 	[origins."rpgraces:lineage/dwarf/mountain"]
 		enabled = true
@@ -281,6 +293,7 @@
 		enabled = true
 		"rpgraces:elf/wood_size" = true
 		"rpgraces:elf/wood_elf/wood_elf_speed" = true
+		"rpgraces:generic/dark_vision/common" = true
 
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true

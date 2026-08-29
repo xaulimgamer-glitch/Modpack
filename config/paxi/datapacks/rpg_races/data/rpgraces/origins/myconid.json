@@ -9,7 +9,8 @@
     "rpgraces:myconid/size_lifecycles",
     "rpgraces:generic/health/m2h",
     "rpgraces:generic/move_speed/m5p",
-    "rpgraces:generic/dark_vision/common"
+    "rpgraces:generic/dark_vision/common",
+    "rpgraces:myconid/fungalbody"
   ],
   "icon": "minecraft:red_mushroom",
   "impact": 1,

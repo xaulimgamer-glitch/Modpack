@@ -1,7 +1,8 @@
 {
   "powers": [
     "rpgraces:elf/size",
-    "rpgraces:generic/move_speed/p5p"
+    "rpgraces:generic/move_speed/p5p",
+    "rpgraces:generic/feather_fall/m25p"
   ],
   "icon": "minecraft:amethyst_shard",
   "impact": 1,

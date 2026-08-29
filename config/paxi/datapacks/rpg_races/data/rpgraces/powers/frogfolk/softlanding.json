@@ -1,0 +1,12 @@
+{
+  "type": "origins:invulnerability",
+  "condition": {
+    "type": "origins:fall_distance",
+    "comparison": "<",
+    "compare_to": 5.0
+  },
+  "damage_condition": {
+    "type": "origins:name",
+    "name": "fall"
+  }
+}
