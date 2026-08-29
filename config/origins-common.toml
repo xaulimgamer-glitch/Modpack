@@ -197,6 +197,7 @@
 		"rpgraces:feline/increased_metabolism" = true
 		"rpgraces:generic/move_speed/p15p" = true
 		"rpgraces:generic/metabolism/p30p" = true
+		"rpgraces:generic/dark_vision/common" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
