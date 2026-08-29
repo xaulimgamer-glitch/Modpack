@@ -4,7 +4,9 @@
     "rpgraces:generic/health/m5h",
     "rpgraces:generic/move_speed/p5p",
     "rpgraces:faerie/wings",
-    "rpgraces:faerie/fly"
+    "rpgraces:faerie/fly",
+    "rpgraces:faerie/arcaneskin",
+    "rpgraces:faerie/faerieparticles"
   ],
   "icon": "minecraft:glow_berries",
   "impact": 1,

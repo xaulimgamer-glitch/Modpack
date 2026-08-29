@@ -5,7 +5,10 @@
     "rpgraces:generic/move_speed/p15p",
     "rpgraces:generic/metabolism/p30p",
     "rpgraces:generic/dark_vision/common",
-    "rpgraces:generic/feather_fall/m75p"
+    "rpgraces:generic/feather_fall/m75p",
+    "rpgraces:feline/catjump",
+    "rpgraces:feline/softlanding",
+    "rpgraces:feline/sprintjump"
   ],
   "icon": "minecraft:rabbit_foot",
   "impact": 1,

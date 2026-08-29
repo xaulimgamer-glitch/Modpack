@@ -206,6 +206,9 @@
 		"rpgraces:generic/metabolism/p30p" = true
 		"rpgraces:generic/dark_vision/common" = true
 		"rpgraces:generic/feather_fall/m75p" = true
+		"rpgraces:feline/catjump" = true
+		"rpgraces:feline/softlanding" = true
+		"rpgraces:feline/sprintjump" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
@@ -231,6 +234,9 @@
 		"rpgraces:faerie/flimsy" = true
 		"rpgraces:faerie/fly" = true
 		"rpgraces:faerie/flightless_wings" = true
+		"rpgraces:arcaneskin" = true
+		"rpgraces:faerie/faerieparticles" = true
+		"rpgraces:faerie/arcaneskin" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true
@@ -245,6 +251,7 @@
 		"rpgraces:generic/health/p2h" = true
 		"rpgraces:generic/move_speed/m10p" = true
 		"origins:aquatic" = true
+		"rpgraces:generic/swim_speed/p50p" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
