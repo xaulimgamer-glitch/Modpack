@@ -152,6 +152,7 @@
 		"rpgraces:generic/health/p4h" = true
 		"rpgraces:generic/move_speed/m10p" = true
 		"rpgraces:woodwoad/skin" = true
+		"rpgraces:generic/resistance/p2a" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true
@@ -211,6 +212,7 @@
 		"rpgraces:feline/catjump" = true
 		"rpgraces:feline/softlanding" = true
 		"rpgraces:feline/sprintjump" = true
+		"origins:scare_creepers" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
@@ -256,6 +258,11 @@
 		"origins:aquatic" = true
 		"rpgraces:generic/swim_speed/p50p" = true
 		"rpgraces:tortle/skin" = true
+		"origins:aqua_affinity" = true
+		"rpgraces:generic/resistance/p2a" = true
+		"rpgraces:generic/resistance/p4a" = true
+		"rpgraces:tortle/holdbreath" = true
+		"rpgraces:generic/swim_speed/p25p" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true

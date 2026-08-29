@@ -3,8 +3,11 @@
     "rpgraces:tortle/size",
     "rpgraces:generic/health/p2h",
     "rpgraces:generic/move_speed/m10p",
-    "rpgraces:generic/swim_speed/p50p",
-    "rpgraces:tortle/skin"
+    "rpgraces:generic/swim_speed/p25p",
+    "rpgraces:tortle/skin",
+    "origins:aqua_affinity",
+    "rpgraces:generic/resistance/p4a",
+    "rpgraces:tortle/holdbreath"
   ],
   "icon": "minecraft:turtle_helmet",
   "impact": 1,

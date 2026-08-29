@@ -8,7 +8,8 @@
     "rpgraces:generic/feather_fall/m75p",
     "rpgraces:feline/catjump",
     "rpgraces:feline/softlanding",
-    "rpgraces:feline/sprintjump"
+    "rpgraces:feline/sprintjump",
+    "origins:scare_creepers"
   ],
   "icon": "minecraft:rabbit_foot",
   "impact": 1,
