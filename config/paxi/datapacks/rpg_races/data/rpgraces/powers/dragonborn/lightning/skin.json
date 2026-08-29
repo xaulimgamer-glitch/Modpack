@@ -1,4 +1,5 @@
 {
   "type": "origins:model_color",
-  "green": 0.8
+  "green": 0.8,
+  "blue": 0.8
 }

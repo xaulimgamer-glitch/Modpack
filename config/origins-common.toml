@@ -273,6 +273,7 @@
 
 	[origins."rpgraces:lineage/dragonborn/fire"]
 		enabled = true
+		"rpgraces:dragonborn/fire/skin" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true

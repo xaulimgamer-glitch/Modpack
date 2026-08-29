@@ -2,5 +2,14 @@
   "type": "origins:particle",
   "particle": "minecraft:portal",
   "frequency": 4,
+
+  "spread": {
+    "x": 0.18,
+    "y": 0.0,
+    "z": 0.18
+  },
+
+  "offset_y": 0.0,
+
   "hidden": true
 }
