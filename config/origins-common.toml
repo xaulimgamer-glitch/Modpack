@@ -245,6 +245,7 @@
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
 		"rpgraces:elf/drow_size" = true
+		"rpgraces:generic/dark_vision/superior" = true
 
 	[origins."rpgraces:lineage/elf/highelf"]
 		enabled = true

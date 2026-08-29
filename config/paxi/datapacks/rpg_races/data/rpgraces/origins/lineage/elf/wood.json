@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:elf/wood_elf/wood_elf_speed"
+    "rpgraces:elf/wood_elf/wood_elf_speed",
+    "rpgraces:generic/dark_vision/common"
   ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,
