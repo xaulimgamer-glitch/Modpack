@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:generic/dark_vision/superior"
+    "rpgraces:generic/dark_vision/superior",
+    "rpgraces:elf/drow/skin"
   ],
   "icon": "minecraft:spider_eye",
   "impact": 1,

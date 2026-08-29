@@ -151,6 +151,7 @@
 		"rpgraces:generic/health/m4h" = true
 		"rpgraces:generic/health/p4h" = true
 		"rpgraces:generic/move_speed/m10p" = true
+		"rpgraces:woodwoad/skin" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true
@@ -183,6 +184,7 @@
 		"rpgraces:frogfolk/softlanding" = true
 		"rpgraces:generic/feather_fall/m25p" = true
 		"rpgraces:generic/swim_speed/p50p" = true
+		"rpgraces:frogfolk/skin" = true
 
 	[origins."rpgraces:giantborn"]
 		enabled = true
@@ -222,6 +224,7 @@
 		"rpgraces:orc/size" = true
 		"rpgraces:generic/health/p2h" = true
 		"rpgraces:generic/metabolism/p20p" = true
+		"rpgraces:orc/skin" = true
 
 	[origins."rpgraces:faerie"]
 		enabled = true
@@ -252,6 +255,7 @@
 		"rpgraces:generic/move_speed/m10p" = true
 		"origins:aquatic" = true
 		"rpgraces:generic/swim_speed/p50p" = true
+		"rpgraces:tortle/skin" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
@@ -259,11 +263,13 @@
 
 	[origins."rpgraces:lineage/dragonborn/ice"]
 		enabled = true
+		"rpgraces:dragonborn/ice/skin" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
 		"rpgraces:elf/drow_size" = true
 		"rpgraces:generic/dark_vision/superior" = true
+		"rpgraces:elf/drow/skin" = true
 
 	[origins."rpgraces:lineage/elf/highelf"]
 		enabled = true
@@ -305,6 +311,7 @@
 
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true
+		"rpgraces:dragonborn/lightning/skin" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true
