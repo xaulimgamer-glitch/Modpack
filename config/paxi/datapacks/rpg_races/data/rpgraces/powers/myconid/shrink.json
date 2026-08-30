@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Adaptive Growth: Shrink",
-  "description": "Shift toward a smaller form that increases movement speed by 50%.",
+  "description": "The Compact form increases movement speed by 50%.",
   "cooldown": 10,
 
   "hud_render": {

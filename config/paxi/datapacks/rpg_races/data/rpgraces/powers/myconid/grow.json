@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Adaptive Growth: Grow",
-  "description": "Shift toward a larger form that grants 2 armor but reduces movement speed by an additional 10%.",
+  "description": "The Bloomed form grants 2 armor but reduces movement speed by 10%.",
   "cooldown": 10,
 
   "hud_render": {
