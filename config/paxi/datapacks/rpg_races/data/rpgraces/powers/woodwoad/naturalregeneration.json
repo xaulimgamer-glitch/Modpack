@@ -1,7 +1,7 @@
 {
   "type": "apoli:multiple",
-  "name": "Natural Regeneration",
-  "description": "While remaining still in direct sunlight, you gradually regenerate health.",
+  "name": "Photosynthesis",
+  "description": "After standing still in direct sunlight for 3 seconds, you regenerate 1 heart per second. Moving or taking damage interrupts the effect, and fire blocks it for 5 seconds.",
 
   "stationary_time": {
     "type": "apoli:resource",

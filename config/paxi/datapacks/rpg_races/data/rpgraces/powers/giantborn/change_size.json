@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Size Release",
-  "description": "Grow to your full size.",
+  "description": "Toggle your true giant form. At full size you become twice as tall and broad, gain 2 blocks of reach and 2 armor, but suffer an additional 40% movement-speed penalty.",
   "cooldown": 10,
 
   "hud_render": {

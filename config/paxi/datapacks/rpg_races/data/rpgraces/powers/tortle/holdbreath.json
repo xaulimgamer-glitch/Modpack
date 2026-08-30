@@ -1,5 +1,7 @@
 {
   "type": "apoli:action_over_time",
+  "name": "Hold Breath",
+  "description": "Your adapted lungs allow you to remain underwater much longer than most.",
   "interval": 5,
 
   "entity_action": {
@@ -20,8 +22,5 @@
         "compare_to": 4
       }
     ]
-  },
-
-  "name": "Hold Breath",
-  "description": "Your adapted lungs allow you to remain underwater much longer than most."
+  }
 }

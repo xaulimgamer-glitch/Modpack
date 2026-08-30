@@ -1,5 +1,7 @@
 {
   "type": "origins:action_on_callback",
+  "name": "Giant Blood",
+  "description": "Even while suppressing your full stature, you are 20% larger, have 3 additional hearts, and move 5% slower.",
 
   "entity_action_gained": {
     "type": "origins:and",

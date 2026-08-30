@@ -1,4 +1,6 @@
 {
   "type": "icarae_origin:wings",
+  "name": "Raven Wings",
+  "description": "Your natural wings allow you to fly.",
   "wings_type": "icarus:black_feathered_wings"
 }

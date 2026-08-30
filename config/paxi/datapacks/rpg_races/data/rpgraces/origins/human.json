@@ -1,10 +1,10 @@
 {
   "powers": [
-
+    "rpgraces:human/adaptive_learning"
   ],
   "icon": "minecraft:player_head",
   "impact": 1,
   "order": 0,
   "name": "Human",
-  "description": "Human."
+  "description": "Adaptable and ambitious."
 }

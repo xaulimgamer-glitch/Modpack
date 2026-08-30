@@ -1,11 +1,11 @@
 {
   "type": "origins:attribute",
+  "name": "Shell Armor",
+  "description": "Your shell provides 4 points of natural armor.",
   "modifier": {
     "attribute": "minecraft:generic.armor",
     "operation": "addition",
     "value": 4,
     "name": "Shell Armor"
-  },
-  "name": "Shell Armor",
-  "description": "Your protective shell provides 4 points of natural armor."
+  }
 }

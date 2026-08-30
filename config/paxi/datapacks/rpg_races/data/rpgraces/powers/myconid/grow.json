@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Adaptive Growth: Grow",
-  "description": "Grow your fungal body by one stage.",
+  "description": "Shift toward a larger form that grants 2 armor but reduces movement speed by an additional 10%.",
   "cooldown": 10,
 
   "hud_render": {

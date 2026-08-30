@@ -1,4 +1,6 @@
 {
     "type": "origins:night_vision",
+    "name": "Superior Darkvision",
+    "description": "Your eyes are exceptionally adapted to darkness, allowing you to see clearly even in extremely low-light environments.",
     "strength": 1.0
 }

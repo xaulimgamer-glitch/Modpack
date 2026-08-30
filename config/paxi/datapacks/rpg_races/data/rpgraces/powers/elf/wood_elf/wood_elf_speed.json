@@ -1,5 +1,7 @@
 {
   "type": "origins:attribute",
+  "name": "Wood Elf Speed",
+  "description": "Your woodland heritage grants you swift and agile movement, allowing you to move faster than most.",
   "modifier": {
     "name": "Wood Elf Movement Speed",
     "attribute": "minecraft:generic.movement_speed",

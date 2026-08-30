@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Adaptive Growth: Shrink",
-  "description": "Shrink your fungal body by one stage.",
+  "description": "Shift toward a smaller form that increases movement speed by 50%.",
   "cooldown": 10,
 
   "hud_render": {
