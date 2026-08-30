@@ -1,4 +1,5 @@
 {
   "type": "icarae_origin:wings",
-  "wings_type": "icarusrewinged:zanzas_butterfly_purple_wings"
+  "wings_type": "icarusrewinged:zanzas_butterfly_purple_wings",
+  "hidden": true
 }

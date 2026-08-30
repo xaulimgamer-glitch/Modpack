@@ -21,7 +21,5 @@
   "entity_action_lost": {
     "type": "origins:execute_command",
     "command": "scale reset pehkui:width @s"
-  },
-
-  "hidden": true
+  }
 }

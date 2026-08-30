@@ -1,5 +1,7 @@
 {
   "type": "origins:action_on_callback",
+  "name": "Highborn Stature",
+  "description": "Your refined elven lineage makes you 2% taller than other elves.",
 
   "entity_action_gained": {
     "type": "origins:execute_command",

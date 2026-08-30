@@ -7,6 +7,5 @@
     "attribute": "minecraft:generic.movement_speed",
     "operation": "multiply_base",
     "value": 0.05
-  },
-  "hidden": true
+  }
 }

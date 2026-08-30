@@ -1,6 +1,6 @@
 {
   "powers": [
-    "rpgraces:human/adaptive_learning"
+    "rpgraces:human/adaptivelearning"
   ],
   "icon": "minecraft:player_head",
   "impact": 1,

@@ -57,7 +57,5 @@
         "command": "scale reset pehkui:width @s"
       }
     ]
-  },
-
-  "hidden": true
+  }
 }

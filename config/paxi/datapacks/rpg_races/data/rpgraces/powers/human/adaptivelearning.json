@@ -1,9 +1,9 @@
 {
     "type": "origins:modify_xp_gain",
-    "Name": "Adaptive Learning",
-    "description": "You gain 50% more experience from all sources.",
+    "name": "Adaptive Learning",
+    "description": "You gain 50% more experience from experience orbs.",
     "modifier": {
         "operation": "multiply_base",
-        "value": 1.5
+        "value": 0.5
     }
 }
