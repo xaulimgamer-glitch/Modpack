@@ -1,10 +1,11 @@
 {
   "powers": [
-    "rpgraces:dragonborn/ice/skin"
+    "rpgraces:dragonborn/ice/skin",
+    "rpgraces:dragonborn/ice/lineage_marker"
   ],
   "icon": "minecraft:blue_ice",
   "impact": 1,
-  "order":1,
+  "order": 1,
   "name": "Ice Dragonborn",
   "description": "Dragonborn whose lineage bears the mark of frost."
 }

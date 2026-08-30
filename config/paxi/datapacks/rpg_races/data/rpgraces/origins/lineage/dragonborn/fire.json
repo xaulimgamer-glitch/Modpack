@@ -1,10 +1,11 @@
 {
   "powers": [
-    "rpgraces:dragonborn/fire/skin"
+    "rpgraces:dragonborn/fire/skin",
+    "rpgraces:dragonborn/fire/lineage_marker"
   ],
   "icon": "minecraft:fire_charge",
   "impact": 1,
-  "order":0,
+  "order": 0,
   "name": "Fire Dragonborn",
   "description": "Dragonborn whose lineage bears the mark of fire."
 }

@@ -1,10 +1,11 @@
 {
   "powers": [
-    "rpgraces:dragonborn/lightning/skin"
+    "rpgraces:dragonborn/lightning/skin",
+    "rpgraces:dragonborn/lightning/lineage_marker"
   ],
   "icon": "minecraft:lightning_rod",
   "impact": 1,
-  "order":2,
+  "order": 2,
   "name": "Lightning Dragonborn",
   "description": "Dragonborn whose lineage bears the mark of storms."
 }
