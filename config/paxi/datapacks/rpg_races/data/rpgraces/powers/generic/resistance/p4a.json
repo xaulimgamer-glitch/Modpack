@@ -1,9 +1,0 @@
-{
-    "type": "origins:attribute",
-    "modifier": {
-    "name": "Plus 4 Armor",
-      "attribute": "minecraft:generic.armor",
-      "operation": "addition",
-      "value": 4.0
-    }
-  }

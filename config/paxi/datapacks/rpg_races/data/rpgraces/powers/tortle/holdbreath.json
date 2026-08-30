@@ -1,13 +1,27 @@
 {
-  "type": "apoli:modify_air_speed",
-  "modifier": {
-    "operation": "multiply_total",
-    "value": -0.90
+  "type": "apoli:action_over_time",
+  "interval": 5,
+
+  "entity_action": {
+    "type": "apoli:gain_air",
+    "value": 4
   },
+
   "condition": {
-    "type": "apoli:submerged_in",
-    "fluid": "minecraft:water"
+    "type": "apoli:and",
+    "conditions": [
+      {
+        "type": "apoli:submerged_in",
+        "fluid": "minecraft:water"
+      },
+      {
+        "type": "apoli:air",
+        "comparison": ">",
+        "compare_to": 4
+      }
+    ]
   },
-  "name": "Deep Breath",
+
+  "name": "Hold Breath",
   "description": "Your adapted lungs allow you to remain underwater much longer than most."
 }

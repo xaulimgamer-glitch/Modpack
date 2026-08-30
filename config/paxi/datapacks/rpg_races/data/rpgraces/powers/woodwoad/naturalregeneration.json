@@ -1,0 +1,116 @@
+{
+  "type": "apoli:multiple",
+  "name": "Natural Regeneration",
+  "description": "While remaining still in direct sunlight, you gradually regenerate health.",
+
+  "stationary_time": {
+    "type": "apoli:resource",
+    "min": 0,
+    "max": 60,
+    "start_value": 0
+  },
+
+  "fire_lock": {
+    "type": "apoli:resource",
+    "min": 0,
+    "max": 100,
+    "start_value": 0
+  },
+
+  "stationary_timer": {
+    "type": "apoli:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "apoli:change_resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "change": 1
+    },
+    "falling_action": {
+      "type": "apoli:set_resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "value": 0
+    },
+    "condition": {
+      "type": "apoli:and",
+      "conditions": [
+        {
+          "type": "apoli:exposed_to_sun"
+        },
+        {
+          "type": "apoli:moving",
+          "inverted": true
+        }
+      ]
+    }
+  },
+
+  "regeneration": {
+    "type": "apoli:action_over_time",
+    "interval": 20,
+    "entity_action": {
+      "type": "apoli:heal",
+      "amount": 1.0
+    },
+    "condition": {
+      "type": "apoli:and",
+      "conditions": [
+        {
+          "type": "apoli:exposed_to_sun"
+        },
+        {
+          "type": "apoli:moving",
+          "inverted": true
+        },
+        {
+          "type": "apoli:resource",
+          "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+          "comparison": ">=",
+          "compare_to": 60
+        },
+        {
+          "type": "apoli:resource",
+          "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+          "comparison": "==",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+
+  "damage_reset": {
+    "type": "apoli:action_when_damage_taken",
+    "entity_action": {
+      "type": "apoli:set_resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "value": 0
+    }
+  },
+
+  "fire_damage_lock": {
+    "type": "apoli:action_when_damage_taken",
+    "damage_condition": {
+      "type": "apoli:fire"
+    },
+    "entity_action": {
+      "type": "apoli:set_resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "value": 100
+    }
+  },
+
+  "fire_lock_timer": {
+    "type": "apoli:action_over_time",
+    "interval": 1,
+    "entity_action": {
+      "type": "apoli:change_resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "change": -1
+    },
+    "condition": {
+      "type": "apoli:resource",
+      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  }
+}
