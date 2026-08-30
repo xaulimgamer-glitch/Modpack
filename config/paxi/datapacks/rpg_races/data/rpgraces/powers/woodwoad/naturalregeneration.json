@@ -22,12 +22,12 @@
     "interval": 1,
     "entity_action": {
       "type": "apoli:change_resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "resource": "rpgraces:woodwoad/naturalregeneration_stationary_time",
       "change": 1
     },
     "falling_action": {
       "type": "apoli:set_resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "resource": "rpgraces:woodwoad/naturalregeneration_stationary_time",
       "value": 0
     },
     "condition": {
@@ -49,7 +49,7 @@
     "interval": 20,
     "entity_action": {
       "type": "apoli:heal",
-      "amount": 1.0
+      "amount": 2.0
     },
     "condition": {
       "type": "apoli:and",
@@ -63,13 +63,13 @@
         },
         {
           "type": "apoli:resource",
-          "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+          "resource": "rpgraces:woodwoad/naturalregeneration_stationary_time",
           "comparison": ">=",
           "compare_to": 60
         },
         {
           "type": "apoli:resource",
-          "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+          "resource": "rpgraces:woodwoad/naturalregeneration_fire_lock",
           "comparison": "==",
           "compare_to": 0
         }
@@ -81,7 +81,7 @@
     "type": "apoli:action_when_damage_taken",
     "entity_action": {
       "type": "apoli:set_resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_stationary_time",
+      "resource": "rpgraces:woodwoad/naturalregeneration_stationary_time",
       "value": 0
     }
   },
@@ -93,7 +93,7 @@
     },
     "entity_action": {
       "type": "apoli:set_resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "resource": "rpgraces:woodwoad/naturalregeneration_fire_lock",
       "value": 100
     }
   },
@@ -103,12 +103,12 @@
     "interval": 1,
     "entity_action": {
       "type": "apoli:change_resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "resource": "rpgraces:woodwoad/naturalregeneration_fire_lock",
       "change": -1
     },
     "condition": {
       "type": "apoli:resource",
-      "resource": "rpgraces:woodwoad/natural_regeneration_fire_lock",
+      "resource": "rpgraces:woodwoad/naturalregeneration_fire_lock",
       "comparison": ">",
       "compare_to": 0
     }

@@ -1,0 +1,9 @@
+
+#Adds seasonal and humidity rules for crops.
+#Snow-covered models for grass, bamboo, and leaves, with autumnal color adjustments for themed biomes.
+[es_x_ru]
+	#Enable compat package es_x_ru
+	Enable = true
+	#This package will be loaded first.
+	PriorityLoading = false
+
