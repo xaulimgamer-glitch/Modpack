@@ -1,5 +1,7 @@
 {
     "type": "origins:effect_immunity",
+    "name": "Fungal Body",
+    "description": "You are immune to poison.",
     "effects": [
         "minecraft:poison"
     ]

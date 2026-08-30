@@ -131,6 +131,7 @@
 
 	[origins."rpgraces:human"]
 		enabled = true
+		"rpgraces:human/adaptivelearning" = true
 
 	[origins."rpgclasses:ranger"]
 		enabled = true
@@ -275,6 +276,7 @@
 	[origins."rpgraces:lineage/dragonborn/ice"]
 		enabled = true
 		"rpgraces:dragonborn/ice/skin" = true
+		"rpgraces:dragonborn/ice/lineage_marker" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
@@ -291,6 +293,8 @@
 	[origins."rpgraces:lineage/dragonborn/fire"]
 		enabled = true
 		"rpgraces:dragonborn/fire/skin" = true
+		"rpgraces:dragonborn/fire/lineage_marker" = true
+		"rpgraces:dragonborn/fire/fireresistence" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true
@@ -323,6 +327,7 @@
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true
 		"rpgraces:dragonborn/lightning/skin" = true
+		"rpgraces:dragonborn/lightning/lineage_marker" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true

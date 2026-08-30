@@ -1,7 +1,8 @@
 {
   "powers": [
     "rpgraces:dragonborn/fire/skin",
-    "rpgraces:dragonborn/fire/lineage_marker"
+    "rpgraces:dragonborn/fire/lineage_marker",
+    "rpgraces:dragonborn/fire/fireresistence"
   ],
   "icon": "minecraft:fire_charge",
   "impact": 1,

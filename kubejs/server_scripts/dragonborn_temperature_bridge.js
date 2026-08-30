@@ -40,45 +40,57 @@
     return 'neutral'
   }
 
-  PlayerEvents.tick(event => {
-    const player = event.player
+PlayerEvents.tick(event => {
+  const player = event.player
 
-    if (player.tickCount % SAMPLE_INTERVAL_TICKS !== 0) return
+  const tags = player.getTags()
+  const isFireDragonborn = tags.contains(FIRE_TAG)
+  const isIceDragonborn = tags.contains(ICE_TAG)
+  const data = player.getPersistentData()
 
-    const tags = player.getTags()
-    const isFireDragonborn = tags.contains(FIRE_TAG)
-    const isIceDragonborn = tags.contains(ICE_TAG)
-    const data = player.getPersistentData()
-
-    if (!isFireDragonborn && !isIceDragonborn) {
-      if (data.contains(STATE_KEY)) data.remove(STATE_KEY)
-      if (data.contains(BODY_TEMP_KEY)) data.remove(BODY_TEMP_KEY)
-      return
+  if (!isFireDragonborn && !isIceDragonborn) {
+    if (data.contains(STATE_KEY)) data.remove(STATE_KEY)
+    if (data.contains(BODY_TEMP_KEY)) data.remove(BODY_TEMP_KEY)
+    if (data.contains('rpgraces_dragonborn_temperature_tick')) {
+      data.remove('rpgraces_dragonborn_temperature_tick')
     }
+    return
+  }
 
-    try {
-      const bodyTemperature = Number(
-        $Temperature.get(player, $TemperatureTrait.BODY)
-      )
+  var temperatureTick = data.getInt('rpgraces_dragonborn_temperature_tick') + 1
 
-      const previous = data.contains(STATE_KEY)
-        ? data.getString(STATE_KEY)
-        : 'neutral'
-      const next = resolveState(previous, bodyTemperature)
+  if (temperatureTick < SAMPLE_INTERVAL_TICKS) {
+    data.putInt('rpgraces_dragonborn_temperature_tick', temperatureTick)
+    return
+  }
 
-      data.putDouble(BODY_TEMP_KEY, bodyTemperature)
-      data.putString(STATE_KEY, next)
+  data.putInt('rpgraces_dragonborn_temperature_tick', 0)
 
-      if (next !== previous) {
-        const lineage = isFireDragonborn ? 'Fire' : 'Ice'
-        console.info(
-          `[RPG Races/Dragonborn] ${player.name.string} (${lineage}) BODY=${bodyTemperature.toFixed(2)}: ${previous} -> ${next}`
-        )
-      }
-    } catch (error) {
-      console.error(
-        `[RPG Races/Dragonborn] Cold Sweat temperature bridge failed for ${player.name.string}: ${error}`
-      )
-    }
+try {
+  var bodyTemperature = Number(
+    $Temperature.get(player, $TemperatureTrait.BODY)
+  )
+
+  var previous = data.contains(STATE_KEY)
+    ? data.getString(STATE_KEY)
+    : 'neutral'
+
+  var next = resolveState(previous, bodyTemperature)
+
+  data.putDouble(BODY_TEMP_KEY, bodyTemperature)
+  data.putString(STATE_KEY, next)
+
+  if (next !== previous) {
+    var lineage = isFireDragonborn ? 'Fire' : 'Ice'
+
+    console.info(
+      `[RPG Races/Dragonborn] ${player.name.string} (${lineage}) BODY=${bodyTemperature.toFixed(2)}: ${previous} -> ${next}`
+    )
+  }
+} catch (error) {
+  console.error(
+    `[RPG Races/Dragonborn] Cold Sweat temperature bridge failed for ${player.name.string}: ${error}`
+  )
+}
   })
 })()
