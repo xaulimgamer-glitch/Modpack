@@ -1,7 +1,7 @@
 {
   "type": "apoli:action_over_time",
-  "name": "Hold Breath",
-  "description": "Your adapted lungs allow you to remain underwater much longer than most.",
+  "name": "Aquatic",
+  "description": "You swim 25% faster and can remain underwater much longer before drowning.",
   "interval": 5,
 
   "entity_action": {

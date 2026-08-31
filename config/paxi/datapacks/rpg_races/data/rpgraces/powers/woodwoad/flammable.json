@@ -1,0 +1,13 @@
+{
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:in_tag",
+    "tag": "minecraft:is_fire"
+  },
+  "modifier": {
+    "operation": "multiply_total",
+    "value": 1.0
+  },
+  "name": "Flammable",
+  "description": "You take twice as much damage from fire."
+}
