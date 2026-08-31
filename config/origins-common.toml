@@ -156,6 +156,9 @@
 		"rpgraces:generic/resistance/p2a" = true
 		"rpgraces:generic/health/p5h" = true
 		"rpgraces:woodwoad/naturalregeneration" = true
+		"rpgraces:woodwoad/solar_nourishment" = true
+		"rpgraces:woodwoad/axe_nemesis" = true
+		"rpgraces:woodwoad/flammable" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true
@@ -200,6 +203,8 @@
 		"rpgraces:giantborn/form_state" = true
 		"rpgraces:giantborn/released_mechanics" = true
 		"rpgraces:generic/move_speed/m5p" = true
+		"rpgraces:generic/metabolism/p30p" = true
+		"rpgraces:generic/feather_fall/p10p" = true
 
 	[origins."rpgraces:feline"]
 		enabled = true
@@ -216,12 +221,14 @@
 		"rpgraces:feline/softlanding" = true
 		"rpgraces:feline/sprintjump" = true
 		"origins:scare_creepers" = true
+		"rpgraces:feline/velvet_paws" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
 		"rpgraces:elf/size" = true
 		"rpgraces:generic/move_speed/p5p" = true
 		"rpgraces:generic/feather_fall/m25p" = true
+		"rpgraces:elf/elf_finesse" = true
 
 	[origins."rpgraces:orc"]
 		enabled = true
@@ -251,6 +258,8 @@
 		"rpgraces:dwarf/size" = true
 		"rpgraces:generic/move_speed/m5p" = true
 		"rpgraces:generic/dark_vision/common" = true
+		"rpgraces:dwarf/dwarven_mining" = true
+		"rpgraces:generic/metabolism/p20p" = true
 
 	[origins."rpgraces:tortle"]
 		enabled = true
@@ -268,21 +277,27 @@
 		"rpgraces:generic/swim_speed/p25p" = true
 		"rpgraces:generic/move_speed/m15p" = true
 		"rpgraces:tortle/shellarmor" = true
+		"rpgraces:generic/feather_fall/p10p" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
 		"rpgraces:dragonborn/size" = true
+		"rpgraces:generic/metanbolism/p10p" = true
 
 	[origins."rpgraces:lineage/dragonborn/ice"]
 		enabled = true
 		"rpgraces:dragonborn/ice/skin" = true
 		"rpgraces:dragonborn/ice/lineage_marker" = true
+		"rpgraces:dragonborn/ice/glacier_skin" = true
+		"rpgraces:dragonborn/thermal_affinity" = true
+		"rpgraces:dragonborn/thermal_strain" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
 		"rpgraces:elf/drow_size" = true
 		"rpgraces:generic/dark_vision/superior" = true
 		"rpgraces:elf/drow/skin" = true
+		"rpgraces:elf/drow/sun_sensitivity" = true
 
 	[origins."rpgraces:lineage/elf/highelf"]
 		enabled = true
@@ -297,6 +312,9 @@
 		"rpgraces:dragonborn/fire/fireresistence" = true
 		"rpgraces:dragonborn/fire/thermal_affinity" = true
 		"rpgraces:dragonborn/fire/thermal_strain" = true
+		"rpgraces:dragonborn/fire/magma_walker" = true
+		"rpgraces:dragonborn/thermal_affinity" = true
+		"rpgraces:dragonborn/thermal_strain" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true
@@ -330,6 +348,9 @@
 		enabled = true
 		"rpgraces:dragonborn/lightning/skin" = true
 		"rpgraces:dragonborn/lightning/lineage_marker" = true
+		"rpgraces:dragonborn/lightning/galvanized" = true
+		"rpgraces:dragonborn/lightning/storm_sense" = true
+		"rpgraces:dragonborn/lightning/lightning_conductor" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true

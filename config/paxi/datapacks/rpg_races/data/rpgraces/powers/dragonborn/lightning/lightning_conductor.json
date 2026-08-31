@@ -1,0 +1,25 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 100,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:in_thunderstorm"
+      },
+      {
+        "type": "origins:exposed_to_sky"
+      }
+    ]
+  },
+  "entity_action": {
+    "type": "origins:chance",
+    "chance": 0.05,
+    "action": {
+      "type": "origins:spawn_entity",
+      "entity_type": "minecraft:lightning_bolt"
+    }
+  },
+  "name": "Lightning Conductor",
+  "description": "During thunderstorms, you naturally attract lightning."
+}

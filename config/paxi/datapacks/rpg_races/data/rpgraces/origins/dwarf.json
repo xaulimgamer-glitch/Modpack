@@ -3,6 +3,7 @@
     "rpgraces:dwarf/size",
     "rpgraces:generic/move_speed/m5p",
     "rpgraces:dwarf/dwarven_mining",
+    "rpgraces:generic/metabolism/p20p",
     "rpgraces:generic/dark_vision/common"
   ],
   "icon": "minecraft:stone_pickaxe",

@@ -1,0 +1,30 @@
+{
+  "type": "origins:conditioned_attribute",
+
+  "condition": {
+    "type": "origins:command",
+    "command": "execute if entity @s[tag=rpgraces_thermal_affinity]",
+    "comparison": "==",
+    "compare_to": 1
+  },
+
+  "modifiers": [
+    {
+      "name": "Thermal Affinity Movement Speed",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_base",
+      "value": 0.05
+    },
+    {
+      "name": "Thermal Affinity Attack Speed",
+      "attribute": "minecraft:generic.attack_speed",
+      "operation": "multiply_base",
+      "value": 0.05
+    }
+  ],
+
+  "tick_rate": 5,
+
+  "name": "Thermal Affinity",
+  "description": "When your body temperature aligns with your draconic lineage, your movement speed is increased by 5%."
+}

@@ -6,7 +6,7 @@
   "modifiers": [
     {
       "name": "Storm Sense Attack Damage",
-      "attribute": "minecraft:generic.attack_damage",
+      "attribute": "minecraft:generic.attack_speed",
       "operation": "multiply_base",
       "value": 0.15
     },

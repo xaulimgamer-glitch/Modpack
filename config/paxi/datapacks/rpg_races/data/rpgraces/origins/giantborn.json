@@ -6,6 +6,8 @@
     "rpgraces:giantborn/change_size",
     "rpgraces:giantborn/size_lifecycles",
     "rpgraces:giantborn/form_state",
+    "rpgraces:generic/metabolism/p30p",
+    "rpgraces:generic/feather_fall/p10p",
     "rpgraces:giantborn/released_mechanics"
   ],
   "icon": "minecraft:stone",
