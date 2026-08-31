@@ -1,7 +1,7 @@
 {
   "powers": [
     "rpgraces:dragonborn/size",
-    "rpgraces:generic/metanbolism/p10p"
+    "rpgraces:generic/metabolism/p10p"
   ],
   "icon": "minecraft:dragon_breath",
   "impact": 1,
