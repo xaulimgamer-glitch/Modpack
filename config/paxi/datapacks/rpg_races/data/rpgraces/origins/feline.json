@@ -9,6 +9,7 @@
     "rpgraces:feline/catjump",
     "rpgraces:feline/softlanding",
     "rpgraces:feline/sprintjump",
+    "rpgraces:feline/velvet_paws",
     "origins:scare_creepers"
   ],
   "icon": "minecraft:rabbit_foot",

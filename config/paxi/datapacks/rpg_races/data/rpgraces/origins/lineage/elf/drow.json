@@ -1,6 +1,7 @@
 {
   "powers": [
     "rpgraces:generic/dark_vision/superior",
+    "rpgraces:elf/drow/sun_sensitivity",
     "rpgraces:elf/drow/skin"
   ],
   "icon": "minecraft:spider_eye",

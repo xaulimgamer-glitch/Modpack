@@ -1,0 +1,9 @@
+{
+  "type": "origins:invulnerability",
+  "damage_condition": {
+    "type": "origins:type",
+    "damage_type": "minecraft:hot_floor"
+  },
+  "name": "Magma Walker",
+  "description": "Walking on magma blocks does not damage you."
+}

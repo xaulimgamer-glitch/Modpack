@@ -2,6 +2,7 @@
   "powers": [
     "rpgraces:elf/size",
     "rpgraces:generic/move_speed/p5p",
+    "rpgraces:elf/elf_finesse",
     "rpgraces:generic/feather_fall/m25p"
   ],
   "icon": "minecraft:amethyst_shard",

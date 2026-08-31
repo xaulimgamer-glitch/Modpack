@@ -1,7 +1,8 @@
 {
   "powers": [
     "rpgraces:dragonborn/ice/skin",
-    "rpgraces:dragonborn/ice/lineage_marker"
+    "rpgraces:dragonborn/ice/lineage_marker",
+    "rpgraces:dragonborn/ice/glacier_skin"
   ],
   "icon": "minecraft:blue_ice",
   "impact": 1,

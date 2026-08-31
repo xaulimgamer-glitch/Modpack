@@ -4,6 +4,8 @@
     "rpgraces:generic/health/p5h",
     "rpgraces:generic/move_speed/m10p",
     "rpgraces:woodwoad/skin",
+    "rpgraces:woodwoad/solar_nourishment",
+    "rpgraces:woodwoad/axe_nemesis",
     "rpgraces:woodwoad/naturalregeneration"
   ],
   "icon": "minecraft:oak_sapling",

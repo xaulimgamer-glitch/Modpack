@@ -1,0 +1,23 @@
+{
+  "type": "origins:conditioned_attribute",
+  "condition": {
+    "type": "origins:in_rain"
+  },
+  "modifiers": [
+    {
+      "name": "Storm Sense Attack Damage",
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "multiply_base",
+      "value": 0.15
+    },
+    {
+      "name": "Storm Sense Movement Speed",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_base",
+      "value": 0.15
+    }
+  ],
+  "tick_rate": 20,
+  "name": "Storm Sense",
+  "description": "Rain empowers you, increasing attack damage and movement speed by 15%."
+}

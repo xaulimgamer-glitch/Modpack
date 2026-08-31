@@ -1,6 +1,9 @@
 {
   "powers": [
     "rpgraces:dragonborn/lightning/skin",
+    "rpgraces:dragonborn/lightning/galvanized",
+    "rpgraces:dragonborn/lightning/storm_sense",
+    "rpgraces:dragonborn/lightning/lightning_conductor",
     "rpgraces:dragonborn/lightning/lineage_marker"
   ],
   "icon": "minecraft:lightning_rod",

@@ -1,0 +1,23 @@
+{
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:in_tag",
+    "tag": "minecraft:is_lightning"
+  },
+  "modifier": {
+    "operation": "multiply_total",
+    "value": -1.0
+  },
+  "self_action": {
+    "type": "origins:apply_effect",
+    "effect": {
+      "effect": "minecraft:regeneration",
+      "duration": 100,
+      "amplifier": 0,
+      "show_particles": true,
+      "show_icon": true
+    }
+  },
+  "name": "Galvanized",
+  "description": "You are immune to lightning damage. Being struck by lightning grants Regeneration."
+}

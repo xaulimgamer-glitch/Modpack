@@ -1,0 +1,31 @@
+{
+  "type": "origins:action_over_time",
+  "name": "Solar Nourishment",
+  "description": "Sunlight nourishes you while you stand on grass.",
+  "interval": 20,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:exposed_to_sun"
+      },
+      {
+        "type": "origins:on_block",
+        "block_condition": {
+          "type": "origins:block",
+          "block": "minecraft:grass_block"
+        }
+      },
+      {
+        "type": "origins:food_level",
+        "comparison": "<",
+        "compare_to": 20
+      }
+    ]
+  },
+  "entity_action": {
+    "type": "origins:feed",
+    "food": 1,
+    "saturation": 0.5
+  }
+}
