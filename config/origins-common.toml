@@ -295,6 +295,8 @@
 		"rpgraces:dragonborn/fire/skin" = true
 		"rpgraces:dragonborn/fire/lineage_marker" = true
 		"rpgraces:dragonborn/fire/fireresistence" = true
+		"rpgraces:dragonborn/fire/thermal_affinity" = true
+		"rpgraces:dragonborn/fire/thermal_strain" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true

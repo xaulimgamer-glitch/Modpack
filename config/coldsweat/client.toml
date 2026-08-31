@@ -120,7 +120,7 @@
 	# The amount of blur applied to the screen when the player is too hot
 	# ⌄ 
 	#Range: 0.0 ~ 1.0
-	"Heatstroke Blur Strength" = 0.2
+	"Heatstroke Blur Strength" = 0.1
 	#─────────────────────────────────────────────────────────────────────────
 	# The amount of camera sway applied when the player is too hot
 	# ⌄ 
