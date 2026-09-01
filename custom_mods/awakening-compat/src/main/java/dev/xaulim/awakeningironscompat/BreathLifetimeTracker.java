@@ -1,5 +1,6 @@
 package dev.xaulim.awakeningironscompat;
 
+import dev.xaulim.awakeningcompat.AwakeningCompat;
 import io.redspace.ironsspellbooks.entity.spells.AbstractConeProjectile;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -19,7 +20,7 @@ import java.util.UUID;
  * spell pipeline removes them when casting ends. Our Origins action bypasses
  * that pipeline, so P0 explicitly discards its cone after a short duration.
  */
-@Mod.EventBusSubscriber(modid = AwakeningIronsCompat.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class BreathLifetimeTracker {
     private static final Map<ResourceKey<Level>, Map<UUID, Long>> EXPIRY_BY_LEVEL = new HashMap<>();
 

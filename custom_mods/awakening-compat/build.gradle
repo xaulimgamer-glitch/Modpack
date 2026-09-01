@@ -50,6 +50,15 @@ repositories {
     maven {
         url = 'https://maven.kosmx.dev/'
     }
+
+    maven {
+    name = "Greenhouse"
+    url = "https://maven.greenhouse.lgbt/releases/"
+
+    content {
+        includeGroup "io.github.edwinmindcraft"
+    }
+}
 }
 
 dependencies {
@@ -57,6 +66,14 @@ dependencies {
 
     implementation fg.deobf(
             'curse.maven:origins-forge-474438:5314209'
+    )
+
+    compileOnly fg.deobf(
+            'io.github.edwinmindcraft:calio-forge:1.20.1-1.11.0.5'
+    )
+
+compileOnly fg.deobf(
+            'io.github.edwinmindcraft:apoli-forge:1.20.1-2.9.0.8'
     )
 
     implementation fg.deobf(
