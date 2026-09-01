@@ -52,13 +52,13 @@ repositories {
     }
 
     maven {
-    name = "Greenhouse"
-    url = "https://maven.greenhouse.lgbt/releases/"
+        name = "LadySnake"
+        url = "https://maven.ladysnake.org/releases"
 
-    content {
-        includeGroup "io.github.edwinmindcraft"
+        content {
+            includeGroup "io.github.edwinmindcraft"
+            }
     }
-}
 }
 
 dependencies {

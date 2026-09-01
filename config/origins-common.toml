@@ -283,6 +283,7 @@
 		enabled = true
 		"rpgraces:dragonborn/size" = true
 		"rpgraces:generic/metanbolism/p10p" = true
+		"rpgraces:generic/metabolism/p10p" = true
 
 	[origins."rpgraces:lineage/dragonborn/ice"]
 		enabled = true
@@ -291,6 +292,7 @@
 		"rpgraces:dragonborn/ice/glacier_skin" = true
 		"rpgraces:dragonborn/thermal_affinity" = true
 		"rpgraces:dragonborn/thermal_strain" = true
+		"rpgraces:dragonborn/ice/breath" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
@@ -315,6 +317,7 @@
 		"rpgraces:dragonborn/fire/magma_walker" = true
 		"rpgraces:dragonborn/thermal_affinity" = true
 		"rpgraces:dragonborn/thermal_strain" = true
+		"rpgraces:dragonborn/fire/breath" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true
@@ -351,6 +354,7 @@
 		"rpgraces:dragonborn/lightning/galvanized" = true
 		"rpgraces:dragonborn/lightning/storm_sense" = true
 		"rpgraces:dragonborn/lightning/lightning_conductor" = true
+		"rpgraces:dragonborn/lightning/breath" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true
