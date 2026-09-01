@@ -25,7 +25,7 @@
         "type": "awakening_compat:dragon_breath",
         "element": "lightning",
         "damage": 9.0,
-        "duration_ticks": 10
+        "duration_ticks": 20
       },
       {
         "type": "origins:trigger_cooldown",
