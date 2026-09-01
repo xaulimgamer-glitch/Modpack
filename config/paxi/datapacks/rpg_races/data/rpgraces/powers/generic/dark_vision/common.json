@@ -1,6 +1,11 @@
 {
-    "type": "origins:night_vision",
-    "name": "Darkvision",
-    "description": "Your eyes are adapted to dim places, letting you see more clearly in low light.",
-    "strength": 0.2
+  "type": "origins:night_vision",
+  "name": "Darkvision",
+  "description": "Your eyes adjust to dim places, granting a modest improvement to vision in low light.",
+  "strength": 0.10,
+  "condition": {
+    "type": "origins:brightness",
+    "comparison": "<=",
+    "compare_to": 0.33333334
+  }
 }
