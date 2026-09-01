@@ -2,19 +2,75 @@
   "type": "origins:active_self",
   "name": "Frost Breath",
   "description": "Exhale a short cone of killing frost.",
-  "cooldown": 300,
+  "cooldown": 1,
   "hud_render": {
-    "should_render": true,
-    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
-    "bar_index": 0
+    "should_render": false
   },
+
   "key": {
     "key": "key.origins.primary_active"
   },
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:dragonborn/breath_cooldown",
+    "comparison": "==",
+    "compare_to": 0
+  },
+
   "entity_action": {
-    "type": "awakening_compat:dragon_breath",
-    "element": "ice",
-    "damage": 6.0,
-    "duration_ticks": 10
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "awakening_compat:dragon_breath",
+        "element": "ice",
+        "damage": 6.0,
+        "duration_ticks": 10
+      },
+
+      {
+        "type": "origins:trigger_cooldown",
+        "power": "rpgraces:dragonborn/breath_cooldown"
+      },
+
+      {
+        "type": "origins:if_else",
+        "condition": {
+          "type": "origins:command",
+          "command": "execute if entity @s[tag=rpgraces_thermal_affinity]",
+          "comparison": "==",
+          "compare_to": 1
+        },
+
+        "if_action": {
+          "type": "origins:change_resource",
+          "resource": "rpgraces:dragonborn/breath_cooldown",
+          "change": -200
+        },
+
+        "else_action": {
+          "type": "origins:if_else",
+
+          "condition": {
+            "type": "origins:command",
+            "command": "execute if entity @s[tag=rpgraces_thermal_strain]",
+            "comparison": "==",
+            "compare_to": 1
+          },
+
+          "if_action": {
+            "type": "origins:change_resource",
+            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "change": 0
+          },
+
+          "else_action": {
+            "type": "origins:change_resource",
+            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "change": -100
+          }
+        }
+      }
+    ]
   }
 }

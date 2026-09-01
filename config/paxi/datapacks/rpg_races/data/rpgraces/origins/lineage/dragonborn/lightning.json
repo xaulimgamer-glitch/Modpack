@@ -4,6 +4,7 @@
     "rpgraces:dragonborn/lightning/galvanized",
     "rpgraces:dragonborn/lightning/storm_sense",
     "rpgraces:dragonborn/lightning/breath",
+    "rpgraces:dragonborn/lightning/breath_cooldown",
     "rpgraces:dragonborn/lightning/lightning_conductor"
   ],
   "icon": "minecraft:lightning_rod",

@@ -2,19 +2,69 @@
   "type": "origins:active_self",
   "name": "Storm Breath",
   "description": "Exhale a short cone of crackling lightning.",
-  "cooldown": 300,
+  "cooldown": 1,
   "hud_render": {
-    "should_render": true,
-    "sprite_location": "origins:textures/gui/resource_bar.png",
-    "bar_index": 2
+    "should_render": false
   },
+  
   "key": {
     "key": "key.origins.primary_active"
   },
+
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:dragonborn/breath_cooldown",
+    "comparison": "==",
+    "compare_to": 0
+  },
+
   "entity_action": {
-    "type": "awakening_compat:dragon_breath",
-    "element": "lightning",
-    "damage": 6.0,
-    "duration_ticks": 10
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "awakening_compat:dragon_breath",
+        "element": "lightning",
+        "damage": 6.0,
+        "duration_ticks": 10
+      },
+
+      {
+        "type": "origins:trigger_cooldown",
+        "power": "rpgraces:dragonborn/breath_cooldown"
+      },
+
+      {
+        "type": "origins:if_else",
+        "condition": {
+          "type": "origins:in_thunderstorm"
+        },
+
+        "if_action": {
+          "type": "origins:change_resource",
+          "resource": "rpgraces:dragonborn/breath_cooldown",
+          "change": -250
+        },
+
+        "else_action": {
+          "type": "origins:if_else",
+
+          "condition": {
+            "type": "origins:in_rain"
+          },
+
+          "if_action": {
+            "type": "origins:change_resource",
+            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "change": -200
+          },
+
+          "else_action": {
+            "type": "origins:change_resource",
+            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "change": -100
+          }
+        }
+      }
+    ]
   }
 }

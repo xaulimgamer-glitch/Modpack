@@ -293,6 +293,7 @@
 		"rpgraces:dragonborn/thermal_affinity" = true
 		"rpgraces:dragonborn/thermal_strain" = true
 		"rpgraces:dragonborn/ice/breath" = true
+		"rpgraces:dragonborn/ice/breath_cooldown" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
@@ -355,6 +356,7 @@
 		"rpgraces:dragonborn/lightning/storm_sense" = true
 		"rpgraces:dragonborn/lightning/lightning_conductor" = true
 		"rpgraces:dragonborn/lightning/breath" = true
+		"rpgraces:dragonborn/lightning/breath_cooldown" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true
