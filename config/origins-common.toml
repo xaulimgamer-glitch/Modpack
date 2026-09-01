@@ -319,6 +319,7 @@
 		"rpgraces:dragonborn/thermal_affinity" = true
 		"rpgraces:dragonborn/thermal_strain" = true
 		"rpgraces:dragonborn/fire/breath" = true
+		"rpgraces:dragonborn/fire/breath_cooldown" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true
