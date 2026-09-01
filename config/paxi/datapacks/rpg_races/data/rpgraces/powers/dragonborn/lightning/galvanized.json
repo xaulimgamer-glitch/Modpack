@@ -12,8 +12,8 @@
     "type": "origins:apply_effect",
     "effect": {
       "effect": "minecraft:regeneration",
-      "duration": 100,
-      "amplifier": 0,
+      "duration": 250,
+      "amplifier": 1,
       "show_particles": true,
       "show_icon": true
     }
