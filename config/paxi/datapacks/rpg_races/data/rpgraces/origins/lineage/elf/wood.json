@@ -1,11 +1,12 @@
 {
   "powers": [
     "rpgraces:elf/wood_elf/wood_elf_speed",
-    "rpgraces:generic/dark_vision/common"
+    "rpgraces:generic/dark_vision/common",
+    "rpgraces:elf/wood_elf/forest_veil"
   ],
   "icon": "minecraft:oak_sapling",
   "impact": 1,
-  "order":1,
+  "order": 1,
   "name": "Wood Elf",
   "description": "Wood Elves are quick, sharp-eyed wanderers of the green places, equally comfortable beneath moonlight and a crowded canopy."
 }

@@ -2,11 +2,12 @@
   "powers": [
     "rpgraces:generic/dark_vision/superior",
     "rpgraces:elf/drow/sun_sensitivity",
-    "rpgraces:elf/drow/skin"
+    "rpgraces:elf/drow/skin",
+    "rpgraces:elf/drow/shadow_veil"
   ],
   "icon": "minecraft:spider_eye",
   "impact": 1,
-  "order":2,
+  "order": 2,
   "name": "Drow",
   "description": "Drow are children of the deep dark: where others grope blindly, they see with ease—but direct sunlight is a cruel price for those eyes."
 }

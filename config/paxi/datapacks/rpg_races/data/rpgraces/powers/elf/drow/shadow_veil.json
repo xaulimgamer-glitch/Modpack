@@ -1,0 +1,19 @@
+{
+  "type": "origins:invisibility",
+  "name": "Shadow Veil",
+  "description": "While sneaking in deep darkness, you fade into the shadows and become invisible.",
+  "render_armor": false,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:sneaking"
+      },
+      {
+        "type": "origins:brightness",
+        "comparison": "<=",
+        "compare_to": 0.15
+      }
+    ]
+  }
+}

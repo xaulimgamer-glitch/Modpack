@@ -1,0 +1,25 @@
+{
+  "type": "origins:invisibility",
+  "name": "Forest Veil",
+  "description": "While sneaking among dense vegetation, you blend into the foliage and become invisible.",
+  "render_armor": false,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:sneaking"
+      },
+      {
+        "type": "origins:block_in_radius",
+        "block_condition": {
+          "type": "origins:in_tag",
+          "tag": "rpgraces:wood_elf_cover"
+        },
+        "radius": 1,
+        "shape": "cube",
+        "comparison": ">=",
+        "compare_to": 1
+      }
+    ]
+  }
+}
