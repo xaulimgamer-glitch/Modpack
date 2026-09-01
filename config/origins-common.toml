@@ -295,6 +295,7 @@
 		"rpgraces:dragonborn/thermal_strain" = true
 		"rpgraces:dragonborn/ice/breath" = true
 		"rpgraces:dragonborn/ice/breath_cooldown" = true
+		"rpgraces:dragonborn/ice/ice_magic_resistence" = true
 
 	[origins."rpgraces:lineage/elf/drow"]
 		enabled = true
@@ -321,6 +322,7 @@
 		"rpgraces:dragonborn/thermal_strain" = true
 		"rpgraces:dragonborn/fire/breath" = true
 		"rpgraces:dragonborn/fire/breath_cooldown" = true
+		"rpgraces:dragonborn/fire/fire_magic_resistence" = true
 
 	[origins."rpgraces:lineage/dwarf/mountaindwarf"]
 		enabled = true
@@ -359,6 +361,7 @@
 		"rpgraces:dragonborn/lightning/lightning_conductor" = true
 		"rpgraces:dragonborn/lightning/breath" = true
 		"rpgraces:dragonborn/lightning/breath_cooldown" = true
+		"rpgraces:dragonborn/lightning/lightning_magic_resistence" = true
 
 	[origins."icarae_origin:icarae"]
 		enabled = true
