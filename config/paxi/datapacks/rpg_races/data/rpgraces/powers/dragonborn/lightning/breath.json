@@ -6,14 +6,14 @@
   "hud_render": {
     "should_render": false
   },
-  
+
   "key": {
     "key": "key.origins.primary_active"
   },
 
   "condition": {
     "type": "origins:resource",
-    "resource": "rpgraces:dragonborn/breath_cooldown",
+    "resource": "rpgraces:dragonborn/lightning/breath_cooldown",
     "comparison": "==",
     "compare_to": 0
   },
@@ -30,7 +30,7 @@
 
       {
         "type": "origins:trigger_cooldown",
-        "power": "rpgraces:dragonborn/breath_cooldown"
+        "power": "rpgraces:dragonborn/lightning/breath_cooldown"
       },
 
       {
@@ -41,7 +41,7 @@
 
         "if_action": {
           "type": "origins:change_resource",
-          "resource": "rpgraces:dragonborn/breath_cooldown",
+          "resource": "rpgraces:dragonborn/lightning/breath_cooldown",
           "change": -250
         },
 
@@ -54,13 +54,13 @@
 
           "if_action": {
             "type": "origins:change_resource",
-            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "resource": "rpgraces:dragonborn/lightning/breath_cooldown",
             "change": -200
           },
 
           "else_action": {
             "type": "origins:change_resource",
-            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "resource": "rpgraces:dragonborn/lightning/breath_cooldown",
             "change": -100
           }
         }

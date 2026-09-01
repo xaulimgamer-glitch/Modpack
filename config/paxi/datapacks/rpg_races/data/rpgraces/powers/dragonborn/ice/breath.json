@@ -13,7 +13,7 @@
 
   "condition": {
     "type": "origins:resource",
-    "resource": "rpgraces:dragonborn/breath_cooldown",
+    "resource": "rpgraces:dragonborn/ice/breath_cooldown",
     "comparison": "==",
     "compare_to": 0
   },
@@ -30,7 +30,7 @@
 
       {
         "type": "origins:trigger_cooldown",
-        "power": "rpgraces:dragonborn/breath_cooldown"
+        "power": "rpgraces:dragonborn/ice/breath_cooldown"
       },
 
       {
@@ -44,7 +44,7 @@
 
         "if_action": {
           "type": "origins:change_resource",
-          "resource": "rpgraces:dragonborn/breath_cooldown",
+          "resource": "rpgraces:dragonborn/ice/breath_cooldown",
           "change": -200
         },
 
@@ -60,13 +60,13 @@
 
           "if_action": {
             "type": "origins:change_resource",
-            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "resource": "rpgraces:dragonborn/ice/breath_cooldown",
             "change": 0
           },
 
           "else_action": {
             "type": "origins:change_resource",
-            "resource": "rpgraces:dragonborn/breath_cooldown",
+            "resource": "rpgraces:dragonborn/ice/breath_cooldown",
             "change": -100
           }
         }
