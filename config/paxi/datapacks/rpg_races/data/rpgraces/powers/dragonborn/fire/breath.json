@@ -12,7 +12,7 @@
     "key": "key.origins.primary_active"
   },
   "entity_action": {
-    "type": "awakening_irons_compat:dragon_breath",
+    "type": "awakening_compat:dragon_breath",
     "element": "fire",
     "damage": 6.0,
     "duration_ticks": 10

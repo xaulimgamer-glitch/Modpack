@@ -9,4 +9,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'awakening-icarus-compat'
+rootProject.name = 'awakening-compat'
