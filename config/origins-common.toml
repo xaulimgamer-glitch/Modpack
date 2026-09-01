@@ -173,6 +173,7 @@
 		"rpgraces:generic/move_speed/m5p" = true
 		"rpgraces:generic/dark_vision/common" = true
 		"rpgraces:myconid/fungalbody" = true
+		"rpgraces:myconid/natural_mechanics" = true
 
 	[origins."rpgraces:ravenfolk"]
 		enabled = true

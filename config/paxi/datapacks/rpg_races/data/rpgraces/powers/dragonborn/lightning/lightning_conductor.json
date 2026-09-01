@@ -14,7 +14,7 @@
   },
   "entity_action": {
     "type": "origins:chance",
-    "chance": 0.50,
+    "chance": 0.10,
     "action": {
       "type": "origins:spawn_entity",
       "entity_type": "minecraft:lightning_bolt"

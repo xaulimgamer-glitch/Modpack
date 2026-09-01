@@ -1,0 +1,18 @@
+{
+  "type": "origins:conditioned_attribute",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:myconid/form_state",
+    "comparison": "==",
+    "compare_to": 1
+  },
+  "modifier":
+    {
+      "name": "Myconid Natural Offense",
+      "attribute": "minecraft:generic.attack_speed",
+      "operation": "multiply_base",
+      "value": 0.15
+    },
+  "tick_rate": 5,
+  "hidden": true
+}

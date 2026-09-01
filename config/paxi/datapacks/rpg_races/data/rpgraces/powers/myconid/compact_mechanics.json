@@ -6,12 +6,20 @@
     "comparison": "==",
     "compare_to": 0
   },
-  "modifier": {
-    "name": "Myconid Compact Escape Speed",
-    "attribute": "minecraft:generic.movement_speed",
-    "operation": "multiply_total",
-    "value": 0.5
-  },
+  "modifiers": [
+    {
+      "name": "Myconid Compact Escape Speed",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_total",
+      "value": 0.5
+    },
+    {
+      "name": "Myconid Compact Attack Damage",
+      "attribute": "oorigins:modify_jump",
+      "operation": "multiply_total",
+      "value": 0.05
+    }
+  ],
   "tick_rate": 5,
   "hidden": true
 }

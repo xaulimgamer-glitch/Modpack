@@ -10,6 +10,7 @@
     "rpgraces:generic/health/m2h",
     "rpgraces:generic/move_speed/m5p",
     "rpgraces:generic/dark_vision/common",
+    "rpgraces:myconid/natural_mechanics",
     "rpgraces:myconid/fungalbody"
   ],
   "icon": "minecraft:red_mushroom",
