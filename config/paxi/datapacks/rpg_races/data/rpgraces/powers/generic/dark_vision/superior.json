@@ -1,6 +1,11 @@
 {
-    "type": "origins:night_vision",
-    "name": "Superior Darkvision",
-    "description": "Darkness is almost no obstacle to your sight, even where ordinary eyes would see little or nothing.",
-    "strength": 1.0
+  "type": "origins:night_vision",
+  "name": "Superior Darkvision",
+  "description": "Your eyes thrive in darkness, granting strong vision even in very low light.",
+  "strength": 0.60,
+  "condition": {
+    "type": "origins:brightness",
+    "comparison": "<=",
+    "compare_to": 0.61904764
+  }
 }
