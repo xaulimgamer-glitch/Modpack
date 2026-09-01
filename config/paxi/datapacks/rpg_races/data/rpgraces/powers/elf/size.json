@@ -1,7 +1,7 @@
 {
   "type": "origins:action_on_callback",
   "name": "Elven Grace",
-  "description": "Your slender frame makes you 10% narrower, increases your movement speed by 5%, and reduces fall damage by 25%.",
+  "description": "Your slender frame is 10% narrower than a human's, increases movement speed by 5%, and reduces fall damage by 25%",
 
   "entity_action_gained": {
     "type": "origins:execute_command",

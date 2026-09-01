@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
-  "name": "Adaptive Growth: Shrink",
-  "description": "The Compact form increases movement speed by 50%.",
+  "name": "Condense",
+  "description": "Shrink one stage: Bloomed → Natural → Compact. Compact form shrinks to 20% scale and increases movement speed by 50%.",
   "cooldown": 10,
 
   "hud_render": {

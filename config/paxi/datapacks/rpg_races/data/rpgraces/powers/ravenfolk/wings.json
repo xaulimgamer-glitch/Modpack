@@ -1,6 +1,6 @@
 {
   "type": "icarae_origin:wings",
   "name": "Raven Wings",
-  "description": "Your natural wings allow you to fly.",
+  "description": "Your natural wings grant flight, but wet or burning feathers temporarily ground you. Rain is a convincing argument for walking.",
   "wings_type": "icarus:black_feathered_wings"
 }

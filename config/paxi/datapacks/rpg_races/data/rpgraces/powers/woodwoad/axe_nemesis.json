@@ -17,6 +17,6 @@
     "operation": "multiply_total",
     "value": 0.5
   },
-  "name": "Axe Nemesis",
-  "description": "You take 50% more damage from axes."
+  "name": "Axe to Grind",
+  "description": "Axes deal 50% more damage to you. This is less metaphorical than you would prefer."
 }

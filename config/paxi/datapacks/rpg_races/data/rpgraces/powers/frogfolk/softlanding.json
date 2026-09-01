@@ -1,7 +1,7 @@
 {
   "type": "origins:invulnerability",
   "name": "Soft Landing",
-  "description": "Falls shorter than 5 blocks deal no damage; longer falls deal 25% less damage.",
+  "description": "Falls under 5 blocks deal no damage; longer falls deal 25% less damage.",
   "condition": {
     "type": "origins:fall_distance",
     "comparison": "<",

@@ -1,7 +1,7 @@
 {
   "type": "apoli:multiple",
-  "name": "Photosynthesis",
-  "description": "After standing still in direct sunlight for 3 seconds, you regenerate 1 heart per second. Moving or taking damage interrupts the effect, and fire blocks it for 5 seconds.",
+  "name": "Rooted Renewal",
+  "description": "After standing still in direct sunlight for 3 seconds, you heal 1 heart per second. Moving or taking damage breaks the effect; fire suppresses it for 5 seconds.",
 
   "stationary_time": {
     "type": "apoli:resource",

@@ -1,6 +1,6 @@
 {
     "type": "origins:night_vision",
     "name": "Darkvision",
-    "description": "You can see more clearly in low-light environments.",
+    "description": "Your eyes are adapted to dim places, letting you see more clearly in low light.",
     "strength": 0.2
 }

@@ -8,6 +8,6 @@
     "operation": "multiply_total",
     "value": 1.0
   },
-  "name": "Flammable",
-  "description": "You take twice as much damage from fire."
+  "name": "Kindling",
+  "description": "Fire deals double damage to you. Being made of living wood has one very obvious drawback."
 }

@@ -5,5 +5,5 @@
     "name": "hotFloor"
   },
   "name": "Magma Walker",
-  "description": "Walking on magma blocks does not damage you."
+  "description": "Magma blocks cannot harm you. Apparently the floor really can be lava."
 }

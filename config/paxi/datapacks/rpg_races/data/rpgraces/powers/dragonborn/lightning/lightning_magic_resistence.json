@@ -1,7 +1,8 @@
 {
   "type": "origins:attribute",
   "modifier": {
-    "name": "Lightning Magic Resistance",
+    "name": "Storm Magic Ward",
+    "description": "Your resistance to Lightning-school magic is increased by 25%.",
     "attribute": "irons_spellbooks:lightning_magic_resist",
     "value": 0.25,
     "operation": "addition"

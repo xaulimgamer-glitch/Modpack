@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Frost Breath",
-  "description": "Exhale a short cone of killing frost.",
+  "description": "Exhale a cone of killing frost that deals 8 base damage and rapidly freezes targets. Thermal Affinity shortens its recovery; Thermal Strain prolongs it.",
   "cooldown": 1,
   "hud_render": {
     "should_render": false

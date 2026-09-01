@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Verdant Touch",
-  "description": "Channel your natural vitality into plants, encouraging them to grow.",
+  "description": "Channel your vitality into a plant within 5 blocks, applying the effect of Bone Meal. Each use heavily exhausts you and temporarily inflicts Weakness I and Slowness I; repeated uses prolong the fatigue.",
   "cooldown": 20,
   "hud_render": {
     "should_render": false

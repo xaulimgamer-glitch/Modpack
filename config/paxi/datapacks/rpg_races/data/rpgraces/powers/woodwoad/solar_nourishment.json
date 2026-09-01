@@ -1,7 +1,7 @@
 {
   "type": "origins:action_over_time",
   "name": "Solar Nourishment",
-  "description": "Sunlight nourishes you while you stand on grass.",
+  "description": "While standing on grass in direct sunlight and below 16 Hunger, you restore 1 Hunger point and 0.5 saturation each second, up to 16 Hunger.",
   "interval": 20,
   "condition": {
     "type": "origins:and",

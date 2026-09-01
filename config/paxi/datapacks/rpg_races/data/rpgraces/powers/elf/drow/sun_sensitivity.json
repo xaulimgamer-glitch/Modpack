@@ -1,7 +1,7 @@
 {
   "type": "origins:action_over_time",
   "name": "Sun Sensitivity",
-  "description": "You can't see in direct sunlight.",
+  "description": "Your eyes are perfected for darkness; prolonged exposure to direct sunlight inflicts Blindness.",
   "interval": 300,
   "condition": {
     "type": "origins:exposed_to_sun"

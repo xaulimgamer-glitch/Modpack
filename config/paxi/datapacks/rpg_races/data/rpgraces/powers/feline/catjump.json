@@ -1,6 +1,6 @@
 {
     "type": "origins:modify_jump",
-    "name": "Feline Leap",
+    "name": "Pounce",
     "description": "Your natural jump is stronger, and sprinting increases your jump power even further.",
     "modifier": {
         "operation": "addition",

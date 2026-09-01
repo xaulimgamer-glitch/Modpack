@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Storm Breath",
-  "description": "Exhale a short cone of crackling lightning.",
+  "description": "Exhale a cone of crackling lightning that deals 12 base damage. Rain shortens its recovery.",
   "cooldown": 1,
   "hud_render": {
     "should_render": false

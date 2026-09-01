@@ -1,7 +1,7 @@
 {
     "type": "origins:effect_immunity",
     "name": "Fungal Body",
-    "description": "You are immune to poison.",
+    "description": "Poison has no effect on you. To a fungus, chemistry is a matter of perspective.",
     "effects": [
         "minecraft:poison"
     ]

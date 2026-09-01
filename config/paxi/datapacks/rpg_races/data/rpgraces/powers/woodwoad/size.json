@@ -1,7 +1,7 @@
 {
   "type": "origins:action_on_callback",
   "name": "Living Timber",
-  "description": "You are 10% larger, have 5 additional hearts, and move 10% slower.",
+  "description": "You are 10% larger, have 5 additional hearts, and move 10% slower. Hardwood has its advantages.",
 
   "entity_action_gained": {
     "type": "origins:and",

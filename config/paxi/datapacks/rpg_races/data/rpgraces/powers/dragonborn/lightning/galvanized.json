@@ -19,5 +19,5 @@
     }
   },
   "name": "Galvanized",
-  "description": "You are immune to lightning damage. Being struck by lightning grants Regeneration."
+  "description": "Lightning damage cannot harm you; being struck instead grants Regeneration II."
 }

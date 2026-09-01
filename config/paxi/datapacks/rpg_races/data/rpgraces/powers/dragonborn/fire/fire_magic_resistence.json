@@ -1,7 +1,8 @@
 {
   "type": "origins:attribute",
   "modifier": {
-    "name": "Fire Magic Resistance",
+    "name": "Fire Magic Ward",
+    "description": "Your resistance to Fire-school magic is increased by 25%.",
     "attribute": "irons_spellbooks:fire_magic_resist",
     "value": 0.25,
     "operation": "addition"

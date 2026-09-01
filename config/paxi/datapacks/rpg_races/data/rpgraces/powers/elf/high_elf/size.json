@@ -1,7 +1,7 @@
 {
   "type": "origins:action_on_callback",
   "name": "Highborn Stature",
-  "description": "Your refined elven lineage makes you 2% taller than other elves.",
+  "description": "You are 2% taller than other elves. High Elves consider the distinction important.",
 
   "entity_action_gained": {
     "type": "origins:execute_command",

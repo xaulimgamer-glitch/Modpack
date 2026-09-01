@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Flame Breath",
-  "description": "Exhale a short cone of draconic flame.",
+  "description": "Exhale a cone of draconic flame that deals 8 base damage and sets targets ablaze. Thermal Affinity shortens its recovery; Thermal Strain prolongs it.",
   "cooldown": 1,
   "hud_render": {
     "should_render": false

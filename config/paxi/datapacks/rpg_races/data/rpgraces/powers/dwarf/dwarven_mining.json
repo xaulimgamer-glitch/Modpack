@@ -4,6 +4,6 @@
     "operation": "multiply_total",
     "value": 0.30
   },
-  "name": "Dwarven Mining",
-  "description": "You mine blocks 30% faster."
+  "name": "Born to Delve",
+  "description": "You break blocks 30% faster. Dwarves insist this is technique, not impatience."
 }

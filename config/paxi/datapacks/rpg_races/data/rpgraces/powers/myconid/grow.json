@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
-  "name": "Adaptive Growth: Grow",
-  "description": "The Bloomed form grants 2 armor but reduces movement speed by 10%.",
+  "name": "Unfurl",
+  "description": "Grow one stage: Compact → Natural → Bloomed. Natural form grants 15% attack speed; Bloomed form grows to 140% scale, grants 2 armor and 30% knockback resistance, but reduces movement speed by 10%.",
   "cooldown": 10,
 
   "hud_render": {

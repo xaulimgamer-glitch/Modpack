@@ -1,7 +1,7 @@
 {
   "type": "origins:attribute",
   "name": "Shell Armor",
-  "description": "Your shell provides 4 points of natural armor.",
+  "description": "Your shell grants 4 points of natural armor. Conveniently, you never forget to equip it.",
   "modifier": {
     "attribute": "minecraft:generic.armor",
     "operation": "addition",

@@ -8,6 +8,6 @@
     "type": "origins:in_tag",
     "tag": "minecraft:is_fire"
   },
-  "name": "Draconic Fire Resistance",
-  "description": "Your fiery draconic lineage reduces damage from fire, lava, and other sources of flame by 50%."
+  "name": "Fireblood",
+  "description": "Damage from fire and lava is reduced by 50%."
 }

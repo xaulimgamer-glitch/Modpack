@@ -1,6 +1,6 @@
 {
   "type": "origins:prevent_game_event",
   "event": "minecraft:step",
-  "name": "Elven Finesse",
-  "description": "Your footsteps do not cause vibrations."
+  "name": "Weightless Step",
+  "description": "Your footsteps produce no vibrations, allowing you to move without disturbing sculk or other vibration-sensitive listeners."
 }

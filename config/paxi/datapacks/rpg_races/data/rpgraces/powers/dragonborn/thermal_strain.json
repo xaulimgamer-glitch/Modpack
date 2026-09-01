@@ -26,5 +26,5 @@
   "tick_rate": 5,
 
   "name": "Thermal Strain",
-  "description": "When your body temperature opposes your draconic lineage, your movement and attack speed are reduced by 5%."
+  "description": "When the environment works against your lineage, movement and attack speed fall by 5%, and your breath takes longer to recover."
 }
