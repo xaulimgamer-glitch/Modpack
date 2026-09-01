@@ -1,0 +1,20 @@
+{
+  "type": "origins:active_self",
+  "name": "Frost Breath",
+  "description": "Exhale a short cone of killing frost.",
+  "cooldown": 300,
+  "hud_render": {
+    "should_render": true,
+    "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+    "bar_index": 15
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "entity_action": {
+    "type": "awakening_irons_compat:dragon_breath",
+    "element": "ice",
+    "damage": 6.0,
+    "duration_ticks": 10
+  }
+}

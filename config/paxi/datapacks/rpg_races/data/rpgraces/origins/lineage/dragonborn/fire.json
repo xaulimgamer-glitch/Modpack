@@ -4,6 +4,7 @@
     "rpgraces:dragonborn/fire/fireresistence",
     "rpgraces:dragonborn/thermal_affinity",
     "rpgraces:dragonborn/thermal_strain",
+    "rpgraces:dragonborn/fire/breath",
     "rpgraces:dragonborn/fire/magma_walker"
   ],
   "icon": "minecraft:fire_charge",

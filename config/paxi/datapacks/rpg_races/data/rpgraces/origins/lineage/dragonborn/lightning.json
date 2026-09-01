@@ -3,6 +3,7 @@
     "rpgraces:dragonborn/lightning/skin",
     "rpgraces:dragonborn/lightning/galvanized",
     "rpgraces:dragonborn/lightning/storm_sense",
+    "rpgraces:dragonborn/lightning/breath",
     "rpgraces:dragonborn/lightning/lightning_conductor"
   ],
   "icon": "minecraft:lightning_rod",
