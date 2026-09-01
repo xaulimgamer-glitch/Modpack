@@ -126,7 +126,7 @@
   "mild_glare": {
   "type": "origins:overlay",
   "texture": "rpgraces:textures/gui/sun_glare.png",
-  "strength": 0.05,
+  "strength": 0.12,
   "draw_mode": "texture",
   "draw_phase": "below_hud",
   "hide_with_hud": false,
@@ -153,7 +153,7 @@
 "strong_glare": {
   "type": "origins:overlay",
   "texture": "rpgraces:textures/gui/sun_glare.png",
-  "strength": 0.12,
+  "strength": 0.32,
   "draw_mode": "texture",
   "draw_phase": "below_hud",
   "hide_with_hud": false,
