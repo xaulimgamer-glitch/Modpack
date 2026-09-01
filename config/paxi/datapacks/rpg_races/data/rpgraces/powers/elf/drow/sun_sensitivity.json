@@ -2,7 +2,7 @@
   "type": "origins:action_over_time",
   "name": "Sun Sensitivity",
   "description": "You can't see in direct sunlight.",
-  "interval": 10,
+  "interval": 300,
   "condition": {
     "type": "origins:exposed_to_sun"
       },
@@ -10,7 +10,7 @@
     "type": "origins:apply_effect",
     "effect": {
       "effect": "minecraft:blindness",
-      "duration": 20,
+      "duration": 500,
       "amplifier": 0,
       "show_particles": false,
       "show_icon": true

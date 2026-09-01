@@ -1,0 +1,36 @@
+{
+  "type": "origins:active_self",
+  "name": "Verdant Touch",
+  "description": "Channel your natural vitality into plants, encouraging them to grow.",
+  "cooldown": 20,
+  "hud_render": {
+    "should_render": false
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+"entity_action": {
+  "type": "origins:and",
+  "actions": [
+    {
+      "type": "origins:raycast",
+      "distance": 5.0,
+      "block": true,
+      "entity": false,
+      "block_action": {
+        "type": "origins:bonemeal",
+        "effects": true
+      }
+    },
+    {
+      "type": "origins:exhaust",
+      "amount": 16.0
+    },
+    {
+      "type": "origins:change_resource",
+      "resource": "rpgraces:woodwoad/verdant_exhaustion",
+      "change": 60
+    }
+  ]
+}
+}

@@ -1,0 +1,39 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 20,
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:woodwoad/verdant_exhaustion",
+    "comparison": ">",
+    "compare_to": 0
+  },
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:apply_effect",
+        "effects": [
+          {
+            "effect": "minecraft:weakness",
+            "duration": 40,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+          },
+          {
+            "effect": "minecraft:slowness",
+            "duration": 40,
+            "amplifier": 0,
+            "show_particles": false,
+            "show_icon": true
+          }
+        ]
+      },
+      {
+        "type": "origins:change_resource",
+        "resource": "rpgraces:woodwoad/verdant_exhaustion",
+        "change": -20
+      }
+    ]
+  }
+}

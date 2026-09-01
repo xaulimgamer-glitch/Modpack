@@ -159,6 +159,9 @@
 		"rpgraces:woodwoad/solar_nourishment" = true
 		"rpgraces:woodwoad/axe_nemesis" = true
 		"rpgraces:woodwoad/flammable" = true
+		"rpgraces:woodwoad/verdant_touch" = true
+		"rpgraces:woodwoad/verdant_exhaustion" = true
+		"rpgraces:woodwoad/exhaustion_effects" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true

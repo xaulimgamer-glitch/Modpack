@@ -7,6 +7,9 @@
     "rpgraces:woodwoad/solar_nourishment",
     "rpgraces:woodwoad/axe_nemesis",
     "rpgraces:woodwoad/flammable",
+    "rpgraces:woodwoad/verdant_touch",
+    "rpgraces:woodwoad/verdant_exhaustion",
+    "rpgraces:woodwoad/exhaustion_effects",
     "rpgraces:woodwoad/naturalregeneration"
   ],
   "icon": "minecraft:oak_sapling",
