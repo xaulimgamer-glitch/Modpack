@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "name": "Arcane Affinity",
+  "description": "Arcane power comes naturally to you, increasing your maximum mana by 25.",
+  "modifier": {
+    "name": "High Elf Arcane Affinity",
+    "attribute": "irons_spellbooks:max_mana",
+    "operation": "addition",
+    "value": 25.0
+  }
+}

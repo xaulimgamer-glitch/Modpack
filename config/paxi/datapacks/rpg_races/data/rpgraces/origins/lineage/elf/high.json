@@ -1,6 +1,7 @@
 {
   "powers": [
     "rpgraces:elf/high_elf/size",
+    "rpgraces:elf/high_elf/arcane_affinity",
     "rpgraces:generic/dark_vision/common"
   ],
   "icon": "minecraft:amethyst_shard",
