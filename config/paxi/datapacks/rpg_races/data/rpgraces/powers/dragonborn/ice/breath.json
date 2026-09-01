@@ -24,8 +24,8 @@
       {
         "type": "awakening_compat:dragon_breath",
         "element": "ice",
-        "damage": 9.0,
-        "duration_ticks": 10
+        "damage": 8.0,
+        "duration_ticks": 20
       },
 
       {

@@ -1,0 +1,9 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Lightning Magic Resistance",
+    "attribute": "irons_spellbooks:lightning_magic_resist",
+    "value": 0.25,
+    "operation": "addition"
+  }
+}

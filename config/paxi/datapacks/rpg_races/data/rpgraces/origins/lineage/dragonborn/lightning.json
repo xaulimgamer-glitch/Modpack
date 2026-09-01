@@ -5,6 +5,7 @@
     "rpgraces:dragonborn/lightning/storm_sense",
     "rpgraces:dragonborn/lightning/breath",
     "rpgraces:dragonborn/lightning/breath_cooldown",
+    "rpgraces:dragonborn/lightning/lightning_magic_resistence",
     "rpgraces:dragonborn/lightning/lightning_conductor"
   ],
   "icon": "minecraft:lightning_rod",

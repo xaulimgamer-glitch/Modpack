@@ -1,0 +1,9 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Fire Magic Resistance",
+    "attribute": "irons_spellbooks:fire_magic_resist",
+    "value": 0.25,
+    "operation": "addition"
+  }
+}

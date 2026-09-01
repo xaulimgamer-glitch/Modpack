@@ -1,0 +1,9 @@
+{
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Ice Magic Resistance",
+    "attribute": "irons_spellbooks:ice_magic_resist",
+    "value": 0.25,
+    "operation": "addition"
+  }
+}
