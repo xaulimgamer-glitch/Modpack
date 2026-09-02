@@ -1,10 +1,10 @@
 {
   "powers": [
-    
+    "rpgraces:dwarf/stone_sense"
   ],
   "icon": "minecraft:iron_pickaxe",
   "impact": 1,
-  "order":0,
+  "order": 0,
   "name": "Mountain Dwarf",
   "description": "Mountain Dwarves are the old deep-hall stock, shaped by high peaks, long tunnels and traditions older than many kingdoms."
 }
