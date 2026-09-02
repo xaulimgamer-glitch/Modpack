@@ -1,0 +1,25 @@
+{
+  "type": "origins:multiple",
+  "name": "Strongblood",
+  "description": "Your hardy blood grants you 2 extra hearts and reduces the duration of Poison effects by 50%.",
+
+  "health": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Strongblood Max Health",
+      "attribute": "minecraft:generic.max_health",
+      "value": 4.0,
+      "operation": "addition"
+    },
+    "update_health": true
+  },
+
+  "poison_resistance": {
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:poison",
+    "modifier": {
+      "operation": "multiply_base_multiplicative",
+      "value": -0.5
+    }
+  }
+}

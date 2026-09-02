@@ -306,6 +306,7 @@
 		"rpgraces:generic/dark_vision/superior" = true
 		"rpgraces:elf/drow/skin" = true
 		"rpgraces:elf/drow/sun_sensitivity" = true
+		"rpgraces:elf/drow/shadow_veil" = true
 
 	[origins."rpgraces:lineage/elf/highelf"]
 		enabled = true
@@ -345,6 +346,7 @@
 		"rpgraces:elf/high_size" = true
 		"rpgraces:elf/high_elf/size" = true
 		"rpgraces:generic/dark_vision/common" = true
+		"rpgraces:elf/high_elf/arcane_affinity" = true
 
 	[origins."rpgraces:lineage/dwarf/mountain"]
 		enabled = true
@@ -354,6 +356,7 @@
 		"rpgraces:elf/wood_size" = true
 		"rpgraces:elf/wood_elf/wood_elf_speed" = true
 		"rpgraces:generic/dark_vision/common" = true
+		"rpgraces:elf/wood_elf/forest_veil" = true
 
 	[origins."rpgraces:lineage/dragonborn/lightning"]
 		enabled = true

@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "name": "Armored Heritage",
+  "description": "Generations of fighting in heavy armor have taught you how to make the most of it. You gain 2 Armor Toughness.",
+  "modifier": {
+    "name": "Mountain Dwarf Armored Heritage",
+    "attribute": "minecraft:generic.armor_toughness",
+    "value": 2.0,
+    "operation": "addition"
+  }
+}
