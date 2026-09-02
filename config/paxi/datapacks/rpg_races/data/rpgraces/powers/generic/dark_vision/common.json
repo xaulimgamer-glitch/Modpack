@@ -2,7 +2,7 @@
   "type": "origins:night_vision",
   "name": "Darkvision",
   "description": "Your eyes adjust to dim places, granting a modest improvement to vision in low light.",
-  "strength": 0.07,
+  "strength": 0.10,
   "condition": {
     "type": "origins:brightness",
     "comparison": "<=",

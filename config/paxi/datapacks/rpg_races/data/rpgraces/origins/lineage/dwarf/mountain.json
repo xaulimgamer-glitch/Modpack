@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:dwarf/stone_sense"
+    "rpgraces:dwarf/mountain/stone_sense",
+    "rpgraces:dwarf/mountain/armored_heritage"
   ],
   "icon": "minecraft:iron_pickaxe",
   "impact": 1,
