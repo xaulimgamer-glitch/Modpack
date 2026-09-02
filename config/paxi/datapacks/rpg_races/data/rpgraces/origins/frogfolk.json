@@ -2,6 +2,7 @@
   "powers": [
     "rpgraces:frogfolk/size",
     "rpgraces:frogfolk/froghop",
+    "rpgraces:frogfolk/super_jump",
     "rpgraces:frogfolk/softlanding",
     "rpgraces:generic/feather_fall/m25p",
     "rpgraces:frogfolk/skin"
