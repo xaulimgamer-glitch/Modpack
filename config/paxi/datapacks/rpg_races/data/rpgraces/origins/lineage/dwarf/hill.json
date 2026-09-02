@@ -1,6 +1,7 @@
 {
   "powers": [
-    "rpgraces:dwarf/hill/strongblood"
+    "rpgraces:dwarf/hill/strongblood",
+    "rpgraces:dwarf/hill/ancestral_wisdom"
   ],
   "icon": "minecraft:emerald",
   "impact": 1,

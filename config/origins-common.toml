@@ -353,6 +353,7 @@
 		enabled = true
 		"rpgraces:dwarf/mountain/stone_sense" = true
 		"rpgraces:dwarf/mountain/armored_heritage" = true
+		"rpgraces:dwarf/mountain/mountains_roots" = true
 
 	[origins."rpgraces:lineage/elf/wood"]
 		enabled = true

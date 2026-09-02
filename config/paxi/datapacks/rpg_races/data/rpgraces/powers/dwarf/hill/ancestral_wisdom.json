@@ -1,0 +1,25 @@
+{
+  "type": "origins:multiple",
+  "name": "Ancestral Wisdom",
+  "description": "The wisdom of generations strengthens both mind and spirit, increasing your maximum mana by 15 and your resistance to spell damage by 10%.",
+
+  "mana": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Hill Dwarf Maximum Mana",
+      "attribute": "irons_spellbooks:max_mana",
+      "operation": "addition",
+      "value": 15.0
+    }
+  },
+
+  "spell_resistance": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Hill Dwarf Spell Resistance",
+      "attribute": "irons_spellbooks:spell_resist",
+      "operation": "addition",
+      "value": 0.10
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "type": "origins:conditioned_attribute",
+  "name": "Mountain's Roots",
+  "description": "With a shield in hand, your firm stance grants you 50% Knockback Resistance.",
+
+  "modifier": {
+    "name": "Mountain Dwarf Shield Stability",
+    "attribute": "minecraft:generic.knockback_resistance",
+    "operation": "addition",
+    "value": 0.5
+  },
+
+  "condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:shield"
+          }
+        }
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "offhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:shield"
+          }
+        }
+      }
+    ]
+  },
+
+  "tick_rate": 1
+}
