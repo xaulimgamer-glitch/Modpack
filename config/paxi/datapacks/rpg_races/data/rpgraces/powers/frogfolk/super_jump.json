@@ -1,0 +1,23 @@
+{
+  "type": "origins:active_self",
+  "name": "Super Jump",
+  "description": "Use your Primary Active ability while on the ground to launch yourself high into the air and forward in the direction you are facing. 4-second cooldown.",
+  "cooldown": 80,
+  "hud_render": {
+    "should_render": false
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "condition": {
+    "type": "origins:on_block"
+  },
+  "entity_action": {
+    "type": "origins:add_velocity",
+    "x": 0.0,
+    "y": 1.0,
+    "z": 0.55,
+    "space": "local_horizontal_normalized",
+    "set": true
+  }
+}
