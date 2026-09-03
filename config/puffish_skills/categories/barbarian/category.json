@@ -1,0 +1,11 @@
+{
+    "unlocked_by_default": false,
+    "name": "Barbarian",
+    "icon": {
+        "type":"item",
+        "data": {
+            "item": "minecraft:iron_axe"
+        }    
+    },
+    "background":"minecraft:textures/gui/advancements/backgrounds/stone.png"
+}

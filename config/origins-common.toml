@@ -119,6 +119,7 @@
 		"rpgclasses:barbarian/rage_enraged" = true
 		"rpgclasses:barbarian/rage_frenzy" = true
 		"rpgclasses:barbarian/refresh_combat_on_hit" = true
+		"rpgclasses:barbarian/pufferfish_skill_tree" = true
 
 	[origins."rpgclasses:rogue"]
 		enabled = true

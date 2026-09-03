@@ -8,7 +8,8 @@
     "rpgclasses:barbarian/rage_heated",
     "rpgclasses:barbarian/rage_enraged",
     "rpgclasses:barbarian/rage_frenzy",
-    "rpgclasses:barbarian/refresh_combat_on_hit"
+    "rpgclasses:barbarian/refresh_combat_on_hit",
+    "rpgclasses:barbarian/pufferfish_skill_tree"
   ],
 
   "icon": {
