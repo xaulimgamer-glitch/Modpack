@@ -1,0 +1,19 @@
+{
+  "type": "origins:action_over_time",
+  "interval": 10,
+
+  "entity_action": {
+    "type": "origins:change_resource",
+    "resource": "rpgraces:frogfolk/moisture",
+    "change": 4
+  },
+
+  "condition": {
+    "type": "origins:fluid_height",
+    "fluid": "minecraft:water",
+    "comparison": ">",
+    "compare_to": 0.0
+  },
+
+  "hidden": true
+}

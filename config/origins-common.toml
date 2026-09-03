@@ -196,6 +196,15 @@
 		"rpgraces:generic/feather_fall/m25p" = true
 		"rpgraces:generic/swim_speed/p50p" = true
 		"rpgraces:frogfolk/skin" = true
+		"rpgraces:frogfolk/super_jump" = true
+		"rpgraces:frogfolk/moisture_dry_normal" = true
+		"rpgraces:frogfolk/moisture_dry_humid" = true
+		"rpgraces:frogfolk/moisture_dry_hot" = true
+		"rpgraces:frogfolk/moisture_rain" = true
+		"rpgraces:frogfolk/moisture_water" = true
+		"rpgraces:frogfolk/moisture" = true
+		"rpgraces:frogfolk/hydrated" = true
+		"rpgraces:frogfolk/dry" = true
 
 	[origins."rpgraces:giantborn"]
 		enabled = true
@@ -341,6 +350,7 @@
 		enabled = true
 		"rpgraces:generic/health/p2h" = true
 		"rpgraces:dwarf/hill/strongblood" = true
+		"rpgraces:dwarf/hill/ancestral_wisdom" = true
 
 	[origins."rpgraces:lineage/elf/high"]
 		enabled = true

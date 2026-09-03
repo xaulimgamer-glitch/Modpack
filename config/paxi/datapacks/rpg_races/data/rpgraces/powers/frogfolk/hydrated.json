@@ -1,0 +1,49 @@
+{
+  "type": "origins:multiple",
+
+  "attributes": {
+    "type": "origins:conditioned_attribute",
+
+    "condition": {
+      "type": "origins:resource",
+      "resource": "rpgraces:frogfolk/moisture",
+      "comparison": ">=",
+      "compare_to": 70
+    },
+
+    "modifiers": [
+      {
+        "name": "Frogfolk Dry Mobility",
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "multiply_total",
+        "value": 0.1
+      },
+      {
+        "name": "Frogfolk Dry Attack Speed",
+        "attribute": "minecraft:generic.attack_speed",
+        "operation": "multiply_total",
+        "value": 0.1
+      }
+    ],
+
+    "tick_rate": 10
+  },
+
+  "mining": {
+    "type": "origins:modify_break_speed",
+
+    "condition": {
+      "type": "origins:resource",
+      "resource": "rpgraces:frogfolk/moisture",
+      "comparison": ">=",
+      "compare_to": 70
+    },
+
+    "modifier": {
+      "operation": "multiply_total",
+      "value": 0.2
+    }
+  },
+
+  "hidden": true
+}
