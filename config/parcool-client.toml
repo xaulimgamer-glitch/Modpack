@@ -4,7 +4,7 @@
 	can_CatLeap = false
 	can_ChargeJump = false
 	can_ClimbPoles = true
-	can_ClimbUp = true
+	can_ClimbUp = false
 	can_ClingToCliff = false
 	can_HideInBlock = false
 	can_Crawl = true
@@ -15,7 +15,7 @@
 	can_Flipping = false
 	can_HangDown = true
 	can_HorizontalWallRun = false
-	can_JumpFromBar = true
+	can_JumpFromBar = false
 	can_QuickTurn = false
 	can_RideZipline = false
 	can_Roll = false
