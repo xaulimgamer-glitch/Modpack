@@ -120,9 +120,11 @@
 		"rpgclasses:barbarian/rage_frenzy" = true
 		"rpgclasses:barbarian/refresh_combat_on_hit" = true
 		"rpgclasses:barbarian/pufferfish_skill_tree" = true
+		"rpgclasses:barbarian/start_equipment" = true
 
 	[origins."rpgclasses:rogue"]
 		enabled = true
+		"rpgclasses:rogue/start_equipment" = true
 
 	[origins."rpgclasses:untrained"]
 		enabled = true
@@ -136,15 +138,19 @@
 
 	[origins."rpgclasses:ranger"]
 		enabled = true
+		"rpgclasses:ranger/start_equipment" = true
 
 	[origins."rpgclasses:warrior"]
 		enabled = true
+		"rpgclasses:warrior/start_equipment" = true
 
 	[origins."rpgclasses:cleric"]
 		enabled = true
+		"rpgclasses:cleric/start_equipment" = true
 
 	[origins."rpgclasses:wizard"]
 		enabled = true
+		"rpgclasses:wizard/start_equipment" = true
 
 	[origins."rpgraces:woodwoad"]
 		enabled = true
@@ -392,4 +398,8 @@
 		"icarae_origin:hollow_bones" = true
 		"icarae_origin:flimsy" = true
 		"origins:carnivore" = true
+
+	[origins."rpgclasses:paladin"]
+		enabled = true
+		"rpgclasses:paladin/start_equipment" = true
 

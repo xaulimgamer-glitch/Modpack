@@ -1,0 +1,172 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "foundation"
+	group: "0D3A878BF8104D6A"
+	id: "469E04C9462AE542"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "52E066CDD1EF8C84"
+			tasks: [
+				{
+					id: "7585FB37ED9BF12F"
+					item: "minecraft:flint"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5A22B2BB1745A7C3"
+					item: { Count: 2, id: "overgeared:knappable_rock" }
+					type: "item"
+				}
+				{
+					id: "0D1B1119E6F1465C"
+					item: {
+						Count: 1
+						id: "minecraft:stone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "First Tools"
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["52E066CDD1EF8C84"]
+			id: "0A927C82CCCF6830"
+			tasks: [
+				{
+					id: "352ED06A7CFB46E4"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					id: "0E27B81B217F1DE9"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+			]
+			title: "The First Metal"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0A927C82CCCF6830"]
+			id: "02BBD3B3F85549B1"
+			tasks: [
+				{
+					id: "7F34B62770A30CB3"
+					item: {
+						Count: 1
+						id: "overgeared:copper_smithing_hammer"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7E1E6E50AE4930D1"
+					item: {
+						Count: 1
+						id: "overgeared:wooden_tongs"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Tools of the Smith"
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["02BBD3B3F85549B1"]
+			id: "304F4D6E546418F5"
+			tasks: [{
+				id: "30A9F0C264B48182"
+				item: {
+					Count: 1
+					id: "overgeared:copper_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "First Forging"
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			id: "7F568F5AB5DCDEFB"
+			tasks: [{
+				advancement: "minecraft:adventure/sleep_in_bed"
+				criterion: ""
+				id: "1CC26F9BEC349841"
+				title: "Survive the First Night"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["7F568F5AB5DCDEFB"]
+			id: "6961735BB6354864"
+			tasks: [{
+				id: "2FD87C20026BEFD4"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:campfire"
+				type: "observation"
+			}]
+			title: "Warmth and Recovery"
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			id: "1DC49D2E7187D0B1"
+			tasks: [{
+				id: "4F15158D9DC48A37"
+				title: "More Than Hunger"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1DC49D2E7187D0B1"]
+			id: "35B09664F755DFF6"
+			tasks: [{
+				id: "639C58A535AE14AD"
+				title: "A Proper Meal"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"35B09664F755DFF6"
+				"6961735BB6354864"
+				"304F4D6E546418F5"
+			]
+			id: "229CF37F981EF4A9"
+			tasks: [{
+				id: "57C5826D4A754C01"
+				title: "Foundation Established"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	title: "Foundation"
+}

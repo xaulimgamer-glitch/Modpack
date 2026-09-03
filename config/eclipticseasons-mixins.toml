@@ -75,3 +75,16 @@
 		MixinLocalPlayer = true
 		MixinMusicManager = true
 
+[compat]
+
+	[compat.embeddium]
+		MixinBlockOcclusionCache = true
+		MixinBlockRender2 = true
+		MixinBlockRenderTask = true
+		MixinChunkSlice = true
+		MixinClonedChunkSection = true
+
+	[compat.fabric_renderer_indigo]
+		MixinBlockRenderer = true
+		MixinFabricVanillaModelEncoder = true
+

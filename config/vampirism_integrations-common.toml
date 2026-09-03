@@ -1,0 +1,27 @@
+
+[Compatibility]
+
+	[Compatibility.vampirism]
+		enable_compat_vampirism = true
+		disable_integrations_version_check = false
+
+	[Compatibility.mca]
+		enable_compat_mca = true
+
+	[Compatibility.ctov]
+		enable_compat_ctov = true
+
+	[Compatibility.jade]
+		enable_compat_jade = true
+
+	[Compatibility.cold_sweat]
+		enable_compat_cold_sweat = true
+		#Grant vampires cold resistance, but decrease heat resistance
+		enableTemperatureVampires = true
+		#Increase cold resistance for vampires by this degree celsius
+		#Range: 0.0 ~ 100.0
+		vampireColdResistance = 30.0
+		#Decrease the burning point of vampires by this factor
+		#Range: 0.0 ~ 1.0
+		vampireBurningPointModifier = 0.7
+

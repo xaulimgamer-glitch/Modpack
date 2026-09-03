@@ -8,7 +8,8 @@
 	quest_links: [ ]
 	quests: [
 		{
-			can_repeat: true
+			can_repeat: false
+			dependencies: ["3607013B90D69E87"]
 			id: "7E3686EFDC4E8DD2"
 			rewards: [{
 				command: "/origin gui @s rpgraces:races"
@@ -20,12 +21,12 @@
 				id: "2D97B586F5746731"
 				type: "checkmark"
 			}]
-			title: "raça"
+			title: "Choose Your Race"
 			x: 1.5d
 			y: -5.0d
 		}
 		{
-			can_repeat: true
+			can_repeat: false
 			dependencies: ["7E3686EFDC4E8DD2"]
 			id: "0B790E82D7A4147A"
 			rewards: [{
@@ -39,32 +40,57 @@
 				title: "classe"
 				type: "checkmark"
 			}]
+			title: "Choose Your Class"
 			x: 1.5d
 			y: -3.5d
 		}
 		{
-			can_repeat: true
-			id: "3AB1B6B9E3813DAC"
-			rewards: [
-				{
-					command: "/function modpack:dev/reset_character"
-					id: "504BB1D13116E530"
-					type: "command"
-				}
-				{
-					command: "/function modpack:dev/reset_character"
-					id: "21EA3B42D6DC6D60"
-					title: "reset"
-					type: "command"
-				}
-			]
+			id: "3607013B90D69E87"
 			tasks: [{
-				id: "34906A648DB70ACC"
-				title: "reset"
+				id: "23A5F9B016C9E1A5"
+				title: "Awakening"
 				type: "checkmark"
 			}]
 			x: 1.5d
-			y: -6.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["0B790E82D7A4147A"]
+			id: "101C0F3AF9489E76"
+			tasks: [{
+				id: "0C8449963E47C513"
+				title: "Controls & Keybinds"
+				type: "checkmark"
+			}]
+			title: "Controls \\& Keybinds"
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0B790E82D7A4147A"]
+			id: "1230C4E8345E93F1"
+			tasks: [{
+				id: "6C755A22F48A9CF3"
+				title: "Teams & Cooperation"
+				type: "checkmark"
+			}]
+			title: "Teams \\& Cooperation"
+			x: 0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"101C0F3AF9489E76"
+				"1230C4E8345E93F1"
+			]
+			id: "0C58D5FB226A6BC0"
+			tasks: [{
+				id: "1FEF3E2E24A3476A"
+				title: "Ready to Begin"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -1.5d
 		}
 	]
 	title: "Awakening"
