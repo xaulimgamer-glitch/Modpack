@@ -1,0 +1,10 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "minecraft:stone_axe"
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}

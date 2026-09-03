@@ -1,10 +1,10 @@
 {
   "powers": [
-
+    "rpgclasses:ranger/start_equipment"
   ],
 
   "icon": {
-    "item": "minecraft:bow"
+    "item": "kubejs:crude_short_bow"
   },
 
   "order": 1,

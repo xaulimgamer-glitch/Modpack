@@ -1,0 +1,14 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "kubejs:crude_short_bow"
+    },
+    {
+      "item": "minecraft:arrow",
+      "amount": 16
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}

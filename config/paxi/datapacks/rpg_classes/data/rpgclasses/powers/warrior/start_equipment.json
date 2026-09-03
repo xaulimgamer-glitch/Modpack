@@ -1,0 +1,13 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "minecraft:stone_sword"
+    },
+    {
+      "item": "minecraft:shield"
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}

@@ -1,0 +1,13 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "irons_spellbooks:copper_spell_book"
+    },
+    {
+      "item": "minecraft:wooden_sword"
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}

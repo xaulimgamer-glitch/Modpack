@@ -1,0 +1,10 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "irons_spellbooks:copper_spell_book"
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}

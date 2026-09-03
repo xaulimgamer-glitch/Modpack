@@ -1,0 +1,16 @@
+{
+  "type": "origins:starting_equipment",
+  "stacks": [
+    {
+      "item": "minecraft:stone_sword"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "irons_spellbooks:copper_spell_book"
+    }
+  ],
+  "recurrent": false,
+  "hidden": true
+}
