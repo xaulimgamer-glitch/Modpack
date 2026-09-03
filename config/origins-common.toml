@@ -298,6 +298,19 @@
 		"rpgraces:generic/move_speed/m15p" = true
 		"rpgraces:tortle/shellarmor" = true
 		"rpgraces:generic/feather_fall/p10p" = true
+		"rpgraces:tortle/shell_state" = true
+		"rpgraces:tortle/shell_cooldown" = true
+		"rpgraces:tortle/shell_activate" = true
+		"rpgraces:tortle/shell_timer" = true
+		"rpgraces:tortle/shell_defense" = true
+		"rpgraces:tortle/shell_immobility" = true
+		"rpgraces:tortle/shell_no_jump" = true
+		"rpgraces:tortle/shell_no_attack" = true
+		"rpgraces:tortle/shell_no_item_use" = true
+		"rpgraces:tortle/shell_no_block_use" = true
+		"rpgraces:tortle/shell_no_entity_use" = true
+		"rpgraces:tortle/shell_no_sprint" = true
+		"rpgraces:tortle/shell_reset" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true

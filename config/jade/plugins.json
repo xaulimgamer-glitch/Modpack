@@ -59,6 +59,11 @@
     "snowy_status": true,
     "crop.shift_hint": true
   },
+  "treechop": {
+    "plugin": true,
+    "show_tree_block_counts": true,
+    "show_num_chops_remaining": true
+  },
   "twilightforest": {
     "quest_ram_wool": true
   },

@@ -1,0 +1,73 @@
+# Global toggle for monster attraction to player-placed/artificial light sources.
+artificialLightAttractionEnabled: true
+# Per-mob disable list for artificial light attraction.
+# Example: ["minecraft:zombie", "minecraft:skeleton"]
+# If a mob id is listed here, that mob will NOT use the light attraction behaviour.
+artificialLightAttractionDisabledMobs:
+- minecraft:creeper
+# Goal priority used when injecting AttractedToArtificialLightGoal.
+artificialLightAttractionGoalPriority: 8
+# Mob Speed towards artificial light.
+artificialLightAttractionMobSpeed: 0.8
+# Horizontal search radius (blocks) for finding artificial light targets.
+artificialLightAttractionMaxSearchRadius: 32
+# Vertical search radius (blocks) for finding artificial light targets.
+artificialLightAttractionVerticalRadius: 12
+# Master toggle for recording player-made sounds.
+playerSoundTrackingEnabled: true
+# Per-mob disable list for player-made sound attraction.
+# Example: ["minecraft:zombie", "minecraft:skeleton"]
+# If a mob id is listed here, that mob will NOT use the sound attraction behaviour.
+playerSoundTrackingDisabledMobs:
+- minecraft:creeper
+# Allow mining actions to generate sound pings.
+playerSoundMiningEnabled: true
+# Allow block placing actions to generate sound pings.
+playerSoundBlockPlacingEnabled: true
+# Allow eating actions to generate sound pings.
+playerSoundEatingEnabled: true
+# Allow sprinting to generate sound pings.
+playerSoundSprintingEnabled: true
+# Allow falling to generate sound pings.
+playerSoundFallingEnabled: true
+# Allow combat hits to generate sound pings.
+playerSoundCombatEnabled: true
+# Goal priority used when injecting AttractedToPlayerSoundGoal.
+playerSoundAttractionGoalPriority: 7
+# Mob Speed towards player-made sounds.
+playerSoundAttractionMobSpeed: 1.0
+# Horizontal search radius (blocks) for player-made sounds.
+playerSoundAttractionHorizontalRadius: 22.0
+# Vertical search radius (blocks) for player-made sounds.
+playerSoundAttractionVerticalRadius: 8.0
+# Maximum age (ticks) of a player-made sound that mobs will investigate.
+playerSoundAttractionMaxSoundAgeTicks: 80
+# Loudness weight applied to mining and block placing sounds.
+playerMiningLoudness: 1.25
+# Loudness weight applied to sprinting, falling and eating sounds.
+playerSoundLoudness: 0.85
+# Loudness weight applied to combat sounds.
+playerCombatLoudness: 1.75
+# Minimum loudness retained for any recorded sound.
+playerSoundTrackerMinLoudness: 0.1
+# Maximum ticks to retain recorded player sounds.
+playerSoundTrackerMaxAgeTicks: 160
+# Maximum recorded sounds kept per dimension.
+playerSoundTrackerMaxEntriesPerDimension: 128
+# Whether mobs are attracted to player bases/spawn points on nights when players are there
+baseRaidEnabled: true
+# Per-mob disable list for player base raiding.
+# Example: ["minecraft:zombie", "minecraft:skeleton"]
+# If a mob id is listed here, that mob will NOT use the base raid behaviour.
+baseRaidDisabledMobs:
+- minecraft:creeper
+# Priority of base raid goal (lower number = higher priority)
+baseRaidGoalPriority: 4
+# Mob Speed towards player base during base raid goal.
+baseRaidMobSpeed: 0.8
+# Maximum distance (in blocks) from base for mobs to be attracted
+baseRaidMaxDistance: 64.0
+# Minimum distance from base to start moving toward it
+baseRaidMinDistance: 32.0
+# Time in ticks mobs will continue toward base after losing interest
+baseRaidCooldownTicks: 200
