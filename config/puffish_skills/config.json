@@ -1,7 +1,5 @@
 {
 	"version": 3,
 
-	"categories": [
-		"rpgclasses:barbarian"
-	]
+	"show_warnings": true
 }
