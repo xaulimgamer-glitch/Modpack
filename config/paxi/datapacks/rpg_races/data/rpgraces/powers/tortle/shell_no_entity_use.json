@@ -1,0 +1,10 @@
+{
+  "type": "origins:prevent_entity_use",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "comparison": ">",
+    "compare_to": 0
+  },
+  "hidden": true
+}

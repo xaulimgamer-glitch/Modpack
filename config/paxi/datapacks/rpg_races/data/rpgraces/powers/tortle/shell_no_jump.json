@@ -1,0 +1,15 @@
+{
+  "type": "origins:modify_jump",
+  "modifier": {
+    "name": "Tortle Shell Jump Lock",
+    "operation": "multiply_total",
+    "value": -1.0
+  },
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "comparison": ">",
+    "compare_to": 0
+  },
+  "hidden": true
+}

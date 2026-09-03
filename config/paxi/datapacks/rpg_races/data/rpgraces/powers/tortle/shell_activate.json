@@ -1,0 +1,63 @@
+{
+  "type": "origins:active_self",
+  "name": "Shell Defense",
+  "description": "Retreat into your shell for up to 6 seconds. While withdrawn, you are nearly immobile and take 50% less damage from attacks, projectiles, and explosions. Press again to emerge early. 60-second cooldown.",
+  "cooldown": 1,
+  "hud_render": {
+    "should_render": false
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:resource",
+        "resource": "rpgraces:tortle/shell_state",
+        "comparison": ">",
+        "compare_to": 0
+      },
+      {
+        "type": "origins:resource",
+        "resource": "rpgraces:tortle/shell_cooldown",
+        "comparison": "==",
+        "compare_to": 0
+      }
+    ]
+  },
+  "entity_action": {
+    "type": "origins:if_else",
+    "condition": {
+      "type": "origins:resource",
+      "resource": "rpgraces:tortle/shell_state",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "if_action": {
+      "type": "origins:change_resource",
+      "resource": "rpgraces:tortle/shell_state",
+      "operation": "set",
+      "change": 0
+    },
+    "else_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "rpgraces:tortle/shell_state",
+          "operation": "set",
+          "change": 120
+        },
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "rpgraces:tortle/shell_cooldown"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.turtle.hurt player @s ~ ~ ~ 0.6 0.7"
+        }
+      ]
+    }
+  }
+}

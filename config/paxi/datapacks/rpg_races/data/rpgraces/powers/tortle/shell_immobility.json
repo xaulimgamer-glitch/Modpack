@@ -1,0 +1,17 @@
+{
+  "type": "origins:conditioned_attribute",
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "comparison": ">",
+    "compare_to": 0
+  },
+  "modifier": {
+    "name": "Tortle Shell Immobility",
+    "attribute": "minecraft:generic.movement_speed",
+    "operation": "multiply_total",
+    "value": -1.0
+  },
+  "tick_rate": 1,
+  "hidden": true
+}

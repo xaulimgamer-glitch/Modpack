@@ -1,0 +1,15 @@
+{
+  "type": "origins:modify_damage_dealt",
+  "modifier": {
+    "name": "Tortle Shell Attack Lock",
+    "operation": "multiply_total",
+    "value": -1.0
+  },
+  "condition": {
+    "type": "origins:resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "comparison": ">",
+    "compare_to": 0
+  },
+  "hidden": true
+}

@@ -1,0 +1,28 @@
+{
+  "type": "origins:action_on_callback",
+  "entity_action_gained": {
+    "type": "origins:change_resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "operation": "set",
+    "change": 0
+  },
+  "entity_action_added": {
+    "type": "origins:change_resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "operation": "set",
+    "change": 0
+  },
+  "entity_action_respawned": {
+    "type": "origins:change_resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "operation": "set",
+    "change": 0
+  },
+  "entity_action_lost": {
+    "type": "origins:change_resource",
+    "resource": "rpgraces:tortle/shell_state",
+    "operation": "set",
+    "change": 0
+  },
+  "hidden": true
+}
