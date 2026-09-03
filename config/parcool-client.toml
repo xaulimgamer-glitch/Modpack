@@ -1,31 +1,31 @@
 
 ["Possibility_of_Actions(Some_do_not_have_to_work)"]
-	can_BreakfallReady = true
-	can_CatLeap = true
-	can_ChargeJump = true
+	can_BreakfallReady = false
+	can_CatLeap = false
+	can_ChargeJump = false
 	can_ClimbPoles = true
 	can_ClimbUp = true
-	can_ClingToCliff = true
-	can_HideInBlock = true
+	can_ClingToCliff = false
+	can_HideInBlock = false
 	can_Crawl = true
-	can_Dive = true
-	can_Dodge = true
-	can_FastRun = true
-	can_FastSwim = true
-	can_Flipping = true
+	can_Dive = false
+	can_Dodge = false
+	can_FastRun = false
+	can_FastSwim = false
+	can_Flipping = false
 	can_HangDown = true
-	can_HorizontalWallRun = true
+	can_HorizontalWallRun = false
 	can_JumpFromBar = true
-	can_QuickTurn = true
-	can_RideZipline = true
-	can_Roll = true
-	can_SkyDive = true
-	can_Slide = true
-	can_Tap = true
-	can_Vault = true
-	can_VerticalWallRun = true
-	can_WallJump = true
-	can_WallSlide = true
+	can_QuickTurn = false
+	can_RideZipline = false
+	can_Roll = false
+	can_SkyDive = false
+	can_Slide = false
+	can_Tap = false
+	can_Vault = false
+	can_VerticalWallRun = false
+	can_WallJump = false
+	can_WallSlide = false
 	can_StartSwimByCrawl = true
 
 [Stamina_HUD_Configuration]
@@ -220,7 +220,7 @@
 	#Caution : Max stamina and stamina recovery config is removed because they became attributes.
 	#Infinite Stamina (this needs a permission from server, even if it is on single player's game. normally permitted)
 	#Please check 'parcool-server.toml' in 'serverconfig' directory
-	infinite_stamina = false
+	infinite_stamina = true
 	#Infinite Stamina while player is creative mode
 	infinite_stamina_if_creative_mode = true
 	#Enable slowing down of stamina exhaustion
