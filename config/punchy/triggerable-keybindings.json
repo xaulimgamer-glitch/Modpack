@@ -1,4 +1,5 @@
 {
-  "punchy_sword_inspect_old": "key.keyboard.j",
-  "punchy_sword_inspect_rework": "key.keyboard.b"
+  "punchy_sword_inspect_old": "key.keyboard.unknown",
+  "punchy_sword_inspect_rework": "key.mouse.5",
+  "sword_inspect": "key.keyboard.i"
 }

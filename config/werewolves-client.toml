@@ -5,5 +5,5 @@ disableFangCrosshairRendering = false
 
 [internal]
 	#If the mca integration message was send
-	mcaMessage = false
+	mcaMessage = true
 
