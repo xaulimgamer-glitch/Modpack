@@ -9,23 +9,6 @@
 	quests: [
 		{
 			can_repeat: true
-			id: "19819845FEBD78EF"
-			rewards: [{
-				command: "/mca editor"
-				id: "0E0842A5D9667361"
-				title: "Aparencia"
-				type: "command"
-			}]
-			tasks: [{
-				id: "404FEA7BD8BB1E98"
-				type: "checkmark"
-			}]
-			title: "mca"
-			x: 0.5d
-			y: -3.5d
-		}
-		{
-			can_repeat: true
 			id: "7E3686EFDC4E8DD2"
 			rewards: [{
 				command: "/origin gui @s rpgraces:races"
@@ -39,10 +22,11 @@
 			}]
 			title: "raça"
 			x: 1.5d
-			y: -3.5d
+			y: -5.0d
 		}
 		{
 			can_repeat: true
+			dependencies: ["7E3686EFDC4E8DD2"]
 			id: "0B790E82D7A4147A"
 			rewards: [{
 				command: "/origin gui @s rpgclasses:class"
@@ -55,7 +39,7 @@
 				title: "classe"
 				type: "checkmark"
 			}]
-			x: 2.5d
+			x: 1.5d
 			y: -3.5d
 		}
 		{

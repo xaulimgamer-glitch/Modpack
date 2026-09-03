@@ -1,4 +1,5 @@
 {
   "type": "puffish_skills_origins:unlock_category",
-  "category": "rpgclasses:barbarian"
+  "category": "rpgclasses:barbarian",
+  "hidden": true
 }
