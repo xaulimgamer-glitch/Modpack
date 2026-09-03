@@ -1,1 +1,16 @@
-{}
+{
+  "integration_test": {
+    "title": "Barbarian Integration Test",
+    "description": "Temporary node used to verify the Pufferfish and Origins bridge.",
+
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_axe"
+      }
+    },
+
+    "frame": "task",
+    "cost": 0
+  }
+}
