@@ -4,7 +4,9 @@
   "max": 100,
   "start_value": 0,
   "hud_render": {
-    "should_render": true
+    "should_render": true,
+    "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+    "bar_index": 5
   },
   "name": "Rage",
   "description": "Aumenta durante o combate e diminui fora dele."
