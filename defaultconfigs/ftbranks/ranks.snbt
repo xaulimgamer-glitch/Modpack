@@ -1,0 +1,20 @@
+{
+	member: {
+		name: "Member"
+		power: 1
+		condition: "always_active"
+		"command.ftbteams.party.create": false
+		"command.ftbteams.party.join": false
+	}
+	team_access: {
+		name: "Team Access"
+		power: 10
+		"command.ftbteams.party.create": true
+		"command.ftbteams.party.join": true
+	}
+	admin: {
+		name: "Admin"
+		power: 1000
+		condition: "op"
+	}
+}
