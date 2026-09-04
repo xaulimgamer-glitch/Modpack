@@ -21,15 +21,24 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID, value = Dist.CLIENT)
 public final class TortleShellClientEvents {
 
-    private static final TortleShellModel MODEL = new TortleShellModel();
     private static final ResourceLocation SHELL_TEXTURE =
             new ResourceLocation(AwakeningCompat.MOD_ID, "textures/entity/tortle_shell.png");
+    private static TortleShellModel model;
 
     private TortleShellClientEvents() {
     }
 
     private static boolean isShelled(Player player) {
         return player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+    }
+
+    private static TortleShellModel getModel() {
+        if (model == null) {
+            model = new TortleShellModel(
+                    Minecraft.getInstance().getEntityModels().bakeLayer(TortleShellModel.LAYER_LOCATION)
+            );
+        }
+        return model;
     }
 
     @SubscribeEvent
@@ -48,7 +57,7 @@ public final class TortleShellClientEvents {
         VertexConsumer vertexConsumer = event.getMultiBufferSource().getBuffer(
                 RenderType.entityCutoutNoCull(SHELL_TEXTURE)
         );
-        MODEL.render(
+        getModel().render(
                 poseStack,
                 vertexConsumer,
                 event.getPackedLight(),
