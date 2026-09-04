@@ -220,6 +220,12 @@
 			]
 			icon: "minecraft:compass"
 			id: "0C58D5FB226A6BC0"
+			rewards: [{
+				command: "/ftbranks add @s team_access"
+				id: "4A3A2E13C5A3D6F1"
+				title: "Team Access"
+				type: "command"
+			}]
 			tasks: [{
 				id: "1FEF3E2E24A3476A"
 				title: "Complete"
