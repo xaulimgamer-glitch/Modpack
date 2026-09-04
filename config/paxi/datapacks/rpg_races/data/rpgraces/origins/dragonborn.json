@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:dragonborn/size",
     "rpgraces:generic/metabolism/p10p"
   ],
