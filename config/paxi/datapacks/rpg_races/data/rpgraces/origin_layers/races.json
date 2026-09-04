@@ -19,6 +19,7 @@
   ],
 
   "name": "Race",
+  "default_origin": "rpgraces:unawakened",
 
   "allow_random": false,
   "auto_choose": false,
