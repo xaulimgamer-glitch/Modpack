@@ -1,15 +1,15 @@
 // Maps each custom melee item to an existing item model.
-// Fill the values with full model resource locations, for example:
-// 'spartanweaponry:item/iron_long_sword'
+// Use a full model resource location, for example:
+// 'spartanweaponry:item/stone_battleaxe'
 //
 // Leave a value as null to keep KubeJS from generating an override for that item.
 const MELEE_MODELS = {
-  'kubejs:crude_battleaxe': 'spartanweaponry:stone_battleaxe',
-  'kubejs:crude_sword': 'spartanweaponry:',
-  'kubejs:crude_dagger': 'spartanweaponry:',
-  'kubejs:crude_staff': null,
-  'kubejs:crude_long_sword': 'spartanweaponry:',
-  'kubejs:crude_mace': 'spartanweaponry':
+  'kubejs:crude_battleaxe': 'spartanweaponry:item/stone_battleaxe',
+  'kubejs:crude_long_sword': null,
+  'kubejs:crude_dagger': null,
+  'kubejs:crude_flanged_mace': null,
+  'kubejs:crude_sword': null,
+  'kubejs:crude_graybeard_staff': null
 }
 
 ClientEvents.highPriorityAssets(event => {
