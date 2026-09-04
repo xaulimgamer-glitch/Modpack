@@ -1,0 +1,118 @@
+{
+  "itemSpecific": {
+    "kubejs:crude_sword": {
+      "kind": "SWORD",
+      "armKind": "SWORD",
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_1",
+          "var_2": "attack_2",
+          "var_3": "attack_3",
+          "critical_hit": "attack_critical"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_st_start",
+          "looping": "new_mining_st_loop",
+          "end": "new_mining_st_end"
+        }
+      ]
+    },
+    "kubejs:crude_long_sword": {
+      "kind": "SWORD",
+      "armKind": "SWORD",
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_1",
+          "var_2": "attack_2",
+          "var_3": "attack_3",
+          "critical_hit": "attack_critical"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_st_start",
+          "looping": "new_mining_st_loop",
+          "end": "new_mining_st_end"
+        }
+      ]
+    },
+    "kubejs:crude_dagger": {
+      "kind": "SWORD",
+      "armKind": "SWORD",
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_3",
+          "var_2": "attack_1",
+          "critical_hit": "attack_3"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_st_start",
+          "looping": "new_mining_st_loop",
+          "end": "new_mining_st_end"
+        },
+        {
+          "type": "useItem",
+          "name": "spartan_throw_item"
+        }
+      ]
+    },
+    "kubejs:crude_flanged_mace": {
+      "kind": "MACE",
+      "armKind": "MACE",
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_mace",
+          "var_2": "attack_2",
+          "critical_hit": "attack_mace"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_forward_start",
+          "looping": "new_mining_forward_loop",
+          "end": "new_mining_forward_end"
+        }
+      ]
+    },
+    "kubejs:crude_battleaxe": {
+      "kind": "AXE",
+      "armKind": "AXE",
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_1",
+          "var_2": "attack_2",
+          "var_3": "attack_mace",
+          "critical_hit": "attack_mace"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_sideways_start",
+          "looping": "new_mining_sideways_loop",
+          "end": "new_mining_sideways_end"
+        }
+      ]
+    },
+    "kubejs:crude_graybeard_staff": {
+      "customAnimation": [
+        {
+          "type": "attack",
+          "var_1": "attack_1",
+          "var_2": "attack_2",
+          "var_3": "attack_spear_v2-bk",
+          "critical_hit": "attack_mace"
+        },
+        {
+          "type": "mining_v2",
+          "start": "new_mining_st_start",
+          "looping": "new_mining_st_loop",
+          "end": "new_mining_st_end"
+        }
+      ]
+    }
+  }
+}
