@@ -17,7 +17,10 @@
 	# • dimension_id: The ID of the dimension (e.g. "minecraft:the_nether")
 	# • temperature: The temperature offset to apply to the dimension
 	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
-	"Dimension Temperature Offsets" = [["minecraft:the_nether", 32, "f"], ["minecraft:the_end", -5, "f"]]
+	"Dimension Temperature Offsets" = [
+	    ["minecraft:the_nether", 32, "f"],
+	    ["minecraft:the_end", -5, "f"]
+	]
 	#─────────────────────────────────────────────────────────────────────────//v
 	# Defines the temperature of a dimension, overriding biome and elevation temperature
 	# ├── Format: [["dimension_id", temperature, *units], [...], etc]
@@ -47,7 +50,97 @@
 	# • highTemp: The temperature of the biome at noon
 	# • *units: The units of the temperature ("f", "c", or "mc"). Defaults to Minecraft units (mc))
 	# • *waterTemp: The temperature of water in the biome
-	"Biome Temperatures" = [["minecraft:badlands", 84, 120, "F", -5], ["minecraft:bamboo_jungle", 76, 87, "F"], ["minecraft:beach", 52, 84, "F"], ["minecraft:birch_forest", 47, 77, "F"], ["minecraft:cherry_grove", 42, 67, "F"], ["minecraft:cold_ocean", 39, 70, "F"], ["minecraft:dark_forest", 53, 80, "F"], ["minecraft:deep_cold_ocean", 39, 70, "F"], ["minecraft:deep_dark", 63, 63, "F"], ["minecraft:deep_frozen_ocean", 8, 31, "F"], ["minecraft:deep_lukewarm_ocean", 39, 70, "F"], ["minecraft:deep_ocean", 39, 70, "F"], ["minecraft:desert", 48, 115, "F"], ["minecraft:dripstone_caves", "disable"], ["minecraft:eroded_badlands", 88, 120, "F", -5], ["minecraft:flower_forest", 51, 76, "F"], ["minecraft:forest", 51, 76, "F"], ["minecraft:frozen_ocean", 15, 31, "F"], ["minecraft:frozen_peaks", 8, 31, "F"], ["minecraft:frozen_river", 15, 31, "F"], ["minecraft:grove", 10, 36, "F"], ["minecraft:ice_spikes", 17, 47, "F"], ["minecraft:jagged_peaks", -11, 12, "F"], ["minecraft:jungle", 76, 89, "F"], ["minecraft:lukewarm_ocean", 39, 70, "F"], ["minecraft:lush_caves", 39, 70, "F"], ["minecraft:mangrove_swamp", 56, 80, "F"], ["minecraft:meadow", 42, 67, "F"], ["minecraft:mushroom_fields", 61, 84, "F"], ["minecraft:ocean", 39, 70, "F"], ["minecraft:old_growth_birch_forest", 58, 72, "F"], ["minecraft:old_growth_pine_taiga", 48, 62, "F"], ["minecraft:old_growth_spruce_taiga", 48, 62, "F"], ["minecraft:plains", 52, 84, "F"], ["minecraft:river", "disable"], ["minecraft:savanna", 70, 95, "F"], ["minecraft:savanna_plateau", 76, 98, "F"], ["minecraft:small_end_islands", 39, 70, "F"], ["minecraft:snowy_beach", 8, 30, "F"], ["minecraft:snowy_plains", 8, 30, "F"], ["minecraft:snowy_slopes", 24, 32, "F"], ["minecraft:snowy_taiga", 8, 30, "F"], ["minecraft:soul_sand_valley", 53, 53, "F"], ["minecraft:sparse_jungle", 62, 87, "F"], ["minecraft:stony_peaks", 60, 94, "F"], ["minecraft:stony_shore", 50, 64, "F"], ["minecraft:sunflower_plains", 52, 84, "F"], ["minecraft:swamp", 72, 84, "F", 5], ["minecraft:taiga", 44, 62, "F"], ["minecraft:warm_ocean", 67, 76, "F", 10], ["minecraft:windswept_forest", 48, 66, "F"], ["minecraft:windswept_gravelly_hills", 24, 58, "F"], ["minecraft:windswept_hills", 24, 58, "F"], ["minecraft:windswept_savanna", 67, 90, "F"], ["minecraft:wooded_badlands", 80, 108, "F", -5], ["terralith:moonlight_valley", 57, 76, "F"], ["terralith:rocky_mountains", 45, 73, "F"], ["terralith:blooming_plateau", 49, 78, "F"], ["terralith:alpine_grove", 16, 53, "F"], ["terralith:yellowstone", 47, 68, "F"], ["terralith:forested_highlands", 43, 70, "F"], ["terralith:temperate_highlands", 54, 80, "F"], ["terralith:amethyst_rainforest", 69, 84, "F"], ["terralith:sandstone_valley", 78, 114, "F"], ["terralith:ancient_sands", 83, 130, "F"], ["terralith:arid_highlands", 74, 102, "F"], ["terralith:volcanic_crater", 96, 162, "F"], ["terralith:volcanic_peaks", 76, 122, "F"], ["terralith:basalt_cliffs", 76, 122, "F"], ["terralith:birch_taiga", 40, 62, "F"], ["terralith:brushland", 64, 89, "F"], ["terralith:bryce_canyon", 72, 110, "F"], ["terralith:caldera", 58, 71, "F"], ["terralith:cloud_forest", 38, 58, "F"], ["terralith:desert_canyon", 73, 121, "F"], ["terralith:desert_spires", 60, 121, "F"], ["terralith:orchid_swamp", 62, 81, "F"], ["terralith:fractured_savanna", 65, 92, "F"], ["terralith:savanna_badlands", 68, 99, "F"], ["terralith:granite_cliffs", 65, 85, "F"], ["terralith:haze_mountain", 62, 74, "F"], ["terralith:highlands", 62, 74, "F"], ["terralith:lavender_valley", 59, 76, "F"], ["terralith:lavender_forest", 56, 75, "F"], ["terralith:red_oasis", 58, 94, "F"], ["terralith:shield", 48, 68, "F"], ["terralith:shield_clearing", 28, 80, "F"], ["terralith:steppe", 44, 78, "F"], ["terralith:warped_mesa", 66, 84, "F", -5]]
+	"Biome Temperatures" = [
+	    ["minecraft:badlands", 84, 120, "F", -5],
+	    ["minecraft:bamboo_jungle", 76, 87, "F"],
+	    ["minecraft:beach", 52, 84, "F"],
+	    ["minecraft:birch_forest", 47, 77, "F"],
+	    ["minecraft:cherry_grove", 42, 67, "F"],
+	    ["minecraft:cold_ocean", 39, 70, "F"],
+	    ["minecraft:dark_forest", 53, 80, "F"],
+	    ["minecraft:deep_cold_ocean", 39, 70, "F"],
+	    ["minecraft:deep_dark", 63, 63, "F"],
+	    ["minecraft:deep_frozen_ocean", 8, 31, "F"],
+	    ["minecraft:deep_lukewarm_ocean", 39, 70, "F"],
+	    ["minecraft:deep_ocean", 39, 70, "F"],
+	    ["minecraft:desert", 48, 115, "F"],
+	    ["minecraft:dripstone_caves", "disable"],
+	    ["minecraft:eroded_badlands", 88, 120, "F", -5],
+	    ["minecraft:flower_forest", 51, 76, "F"],
+	    ["minecraft:forest", 51, 76, "F"],
+	    ["minecraft:frozen_ocean", 15, 31, "F"],
+	    ["minecraft:frozen_peaks", 8, 31, "F"],
+	    ["minecraft:frozen_river", 15, 31, "F"],
+	    ["minecraft:grove", 10, 36, "F"],
+	    ["minecraft:ice_spikes", 17, 47, "F"],
+	    ["minecraft:jagged_peaks", -11, 12, "F"],
+	    ["minecraft:jungle", 76, 89, "F"],
+	    ["minecraft:lukewarm_ocean", 39, 70, "F"],
+	    ["minecraft:lush_caves", 39, 70, "F"],
+	    ["minecraft:mangrove_swamp", 56, 80, "F"],
+	    ["minecraft:meadow", 42, 67, "F"],
+	    ["minecraft:mushroom_fields", 61, 84, "F"],
+	    ["minecraft:ocean", 39, 70, "F"],
+	    ["minecraft:old_growth_birch_forest", 58, 72, "F"],
+	    ["minecraft:old_growth_pine_taiga", 48, 62, "F"],
+	    ["minecraft:old_growth_spruce_taiga", 48, 62, "F"],
+	    ["minecraft:plains", 52, 84, "F"],
+	    ["minecraft:river", "disable"],
+	    ["minecraft:savanna", 70, 95, "F"],
+	    ["minecraft:savanna_plateau", 76, 98, "F"],
+	    ["minecraft:small_end_islands", 39, 70, "F"],
+	    ["minecraft:snowy_beach", 8, 30, "F"],
+	    ["minecraft:snowy_plains", 8, 30, "F"],
+	    ["minecraft:snowy_slopes", 24, 32, "F"],
+	    ["minecraft:snowy_taiga", 8, 30, "F"],
+	    ["minecraft:soul_sand_valley", 53, 53, "F"],
+	    ["minecraft:sparse_jungle", 62, 87, "F"],
+	    ["minecraft:stony_peaks", 60, 94, "F"],
+	    ["minecraft:stony_shore", 50, 64, "F"],
+	    ["minecraft:sunflower_plains", 52, 84, "F"],
+	    ["minecraft:swamp", 72, 84, "F", 5],
+	    ["minecraft:taiga", 44, 62, "F"],
+	    ["minecraft:warm_ocean", 67, 76, "F", 10],
+	    ["minecraft:windswept_forest", 48, 66, "F"],
+	    ["minecraft:windswept_gravelly_hills", 24, 58, "F"],
+	    ["minecraft:windswept_hills", 24, 58, "F"],
+	    ["minecraft:windswept_savanna", 67, 90, "F"],
+	    ["minecraft:wooded_badlands", 80, 108, "F", -5],
+	    ["terralith:moonlight_valley", 57, 76, "F"],
+	    ["terralith:rocky_mountains", 45, 73, "F"],
+	    ["terralith:blooming_plateau", 49, 78, "F"],
+	    ["terralith:alpine_grove", 16, 53, "F"],
+	    ["terralith:yellowstone", 47, 68, "F"],
+	    ["terralith:forested_highlands", 43, 70, "F"],
+	    ["terralith:temperate_highlands", 54, 80, "F"],
+	    ["terralith:amethyst_rainforest", 69, 84, "F"],
+	    ["terralith:sandstone_valley", 78, 114, "F"],
+	    ["terralith:ancient_sands", 83, 130, "F"],
+	    ["terralith:arid_highlands", 74, 102, "F"],
+	    ["terralith:volcanic_crater", 96, 162, "F"],
+	    ["terralith:volcanic_peaks", 76, 122, "F"],
+	    ["terralith:basalt_cliffs", 76, 122, "F"],
+	    ["terralith:birch_taiga", 40, 62, "F"],
+	    ["terralith:brushland", 64, 89, "F"],
+	    ["terralith:bryce_canyon", 72, 110, "F"],
+	    ["terralith:caldera", 58, 71, "F"],
+	    ["terralith:cloud_forest", 38, 58, "F"],
+	    ["terralith:desert_canyon", 73, 121, "F"],
+	    ["terralith:desert_spires", 60, 121, "F"],
+	    ["terralith:orchid_swamp", 62, 81, "F"],
+	    ["terralith:fractured_savanna", 65, 92, "F"],
+	    ["terralith:savanna_badlands", 68, 99, "F"],
+	    ["terralith:granite_cliffs", 65, 85, "F"],
+	    ["terralith:haze_mountain", 62, 74, "F"],
+	    ["terralith:highlands", 62, 74, "F"],
+	    ["terralith:lavender_valley", 59, 76, "F"],
+	    ["terralith:lavender_forest", 56, 75, "F"],
+	    ["terralith:red_oasis", 58, 94, "F"],
+	    ["terralith:shield", 48, 68, "F"],
+	    ["terralith:shield_clearing", 28, 80, "F"],
+	    ["terralith:steppe", 44, 78, "F"],
+	    ["terralith:warped_mesa", 66, 84, "F", -5]
+	]
 
 [Blocks]
 	#─────────────────────────────────────────────────────────────────────────//v
@@ -64,7 +157,19 @@
 	# • *nbt: The NBT data that the block must have for the temperature to be applied.
 	# • *tempLimit: The maximum world temperature at which this block temp will have any effect.
 	#   (Represents the minimum temp if the block temp is negative)
-	"Block Temperatures" = [["cold_sweat:boiler", 15, 7, "f", 36, "lit=true", "", 212], ["cold_sweat:icebox", -15, 7, "f", 36, "frosted=true", "", 32], ["minecraft:lava", 30, 7, "f", 200, "", "", 1000, true], ["#minecraft:fire", 25, 7, "f", 50, "", "", 400], ["#minecraft:campfires", 25, 7, "f", 50, "lit=true", " ", 400], ["minecraft:magma_block", 20, 3, "f", 48], ["minecraft:lava_cauldron", 30, 7, "f", 200, "", "", 1000, true], ["minecraft:ice", -10, 4, "f", 24, "", "", 33], ["minecraft:packed_ice", -15, 4, "f", 48, "", "", 16], ["minecraft:blue_ice", -20, 4, "f", 64, "", "", 0], ["#minecraft:ice", -6, 4, "f", 27, "", "", 33]]
+	"Block Temperatures" = [
+	    ["cold_sweat:boiler", 15, 7, "f", 36, "lit=true", "", 212],
+	    ["cold_sweat:icebox", -15, 7, "f", 36, "frosted=true", "", 32],
+	    ["minecraft:lava", 30, 7, "f", 200, "", "", 1000, true],
+	    ["#minecraft:fire", 25, 7, "f", 50, "", "", 400],
+	    ["#minecraft:campfires", 25, 7, "f", 50, "lit=true", " ", 400],
+	    ["minecraft:magma_block", 20, 3, "f", 48],
+	    ["minecraft:lava_cauldron", 30, 7, "f", 200, "", "", 1000, true],
+	    ["minecraft:ice", -10, 4, "f", 24, "", "", 33],
+	    ["minecraft:packed_ice", -15, 4, "f", 48, "", "", 16],
+	    ["minecraft:blue_ice", -20, 4, "f", 64, "", "", 0],
+	    ["#minecraft:ice", -6, 4, "f", 27, "", "", 33]
+	]
 	#─────────────────────────────────────────────────────────────────────────
 	# The maximum range of blocks' area of effect
 	# - Note: This will not change anything unless blocks are configured to utilize the expanded range

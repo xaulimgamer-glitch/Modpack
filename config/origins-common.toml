@@ -121,11 +121,13 @@
 		"rpgclasses:barbarian/refresh_combat_on_hit" = true
 		"rpgclasses:barbarian/pufferfish_skill_tree" = true
 		"rpgclasses:barbarian/start_equipment" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgclasses:rogue"]
 		enabled = true
 		"rpgclasses:rogue/start_equipment" = true
 		"rpgclasses:rogue/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgclasses:untrained"]
 		enabled = true
@@ -142,21 +144,25 @@
 		enabled = true
 		"rpgclasses:ranger/start_equipment" = true
 		"rpgclasses:ranger/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgclasses:warrior"]
 		enabled = true
 		"rpgclasses:warrior/start_equipment" = true
 		"rpgclasses:warrior/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgclasses:cleric"]
 		enabled = true
 		"rpgclasses:cleric/start_equipment" = true
 		"rpgclasses:cleric/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgclasses:wizard"]
 		enabled = true
 		"rpgclasses:wizard/start_equipment" = true
 		"rpgclasses:wizard/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 
 	[origins."rpgraces:woodwoad"]
 		enabled = true
@@ -434,4 +440,5 @@
 		enabled = true
 		"rpgclasses:paladin/start_equipment" = true
 		"rpgclasses:paladin/pufferfish_skill_tree" = true
+		"rpgclasses:meta/class_selected" = true
 

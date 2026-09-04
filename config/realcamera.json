@@ -1,5 +1,5 @@
 {
-  "enabled": false,
+  "enabled": true,
   "isClassic": false,
   "dynamicCrosshair": false,
   "renderModel": true,
@@ -23,7 +23,7 @@
   "binding": {
     "screenModifierKey": "key.keyboard.left.alt",
     "legacyMode": false,
-    "adjustOffset": true,
+    "adjustOffset": false,
     "hideFailureMessage": false,
     "renderStuckObjects": true,
     "disableWhenCrawling": false,
