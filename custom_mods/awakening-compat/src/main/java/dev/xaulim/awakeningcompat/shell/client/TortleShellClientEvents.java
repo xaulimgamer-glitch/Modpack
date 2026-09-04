@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
@@ -117,10 +118,52 @@ public final class TortleShellClientEvents {
     }
 
     /**
-     * Camera-relative first-person shell pass. This provides the important part
-     * of GritShell's visual effect without moving the actual Minecraft Camera.
-     * The shell itself moves from above the player into its closed position, so
-     * the near plane is not left embedded in a static world-space shell wall.
+     * Reproduces GritShell's vertical camera relationship without modifying the
+     * actual Minecraft Camera. The original lowers the camera from eye height to
+     * about playerY + 0.2 while withdrawing. Here we calculate that same virtual
+     * camera Y only for positioning the shell model. This keeps the shell out of
+     * the near plane while remaining compatible with Shoulder Surfing and other
+     * camera/render mixins in the pack.
+     */
+    private static double getVirtualCameraY(
+            Player player,
+            Vec3 actualCameraPosition,
+            float partialTick,
+            boolean hiding
+    ) {
+        float progress = ANIMATOR.calcProgress();
+
+        if (hiding) {
+            if (!ANIMATOR.hasLockedY()) {
+                ANIMATOR.lockY((float) (actualCameraPosition.y - player.getY()));
+            }
+
+            return TortleShellVisualMath.cameraY(
+                    player.yo,
+                    player.getY(),
+                    partialTick,
+                    ANIMATOR.getLockedY(),
+                    TortleShellVisualMath.smoothProgress(progress)
+            );
+        }
+
+        if (ANIMATOR.isUnhiding()) {
+            return TortleShellVisualMath.unhideCameraY(
+                    player.yo,
+                    player.getY(),
+                    partialTick,
+                    progress,
+                    player.getEyeHeight(Pose.STANDING)
+            );
+        }
+
+        return actualCameraPosition.y;
+    }
+
+    /**
+     * Camera-relative first-person shell pass. The shell starts above the player
+     * and folds down around the virtual camera position, matching the spatial
+     * relationship used by GritShell without touching Camera#setPosition.
      */
     @SubscribeEvent
     public static void onRenderLevelStage(RenderLevelStageEvent event) {
@@ -137,6 +180,7 @@ public final class TortleShellClientEvents {
 
         float partialTick = event.getPartialTick();
         Vec3 cameraPosition = event.getCamera().getPosition();
+        double virtualCameraY = getVirtualCameraY(player, cameraPosition, partialTick, hiding);
         double playerX = Mth.lerp(partialTick, player.xo, player.getX());
         double playerY = Mth.lerp(partialTick, player.yo, player.getY());
         double playerZ = Mth.lerp(partialTick, player.zo, player.getZ());
@@ -145,7 +189,7 @@ public final class TortleShellClientEvents {
         poseStack.pushPose();
         poseStack.translate(
                 playerX - cameraPosition.x,
-                playerY - cameraPosition.y,
+                playerY - virtualCameraY,
                 playerZ - cameraPosition.z
         );
         poseStack.mulPose(Axis.YP.rotationDegrees(-ANIMATOR.getStartYaw()));
