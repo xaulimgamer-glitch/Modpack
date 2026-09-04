@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:woodwoad/size",
     "rpgraces:generic/health/p5h",
     "rpgraces:generic/move_speed/m10p",
