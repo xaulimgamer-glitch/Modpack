@@ -2,7 +2,7 @@
 #Allowed Values: PEACEFUL, EASY, NORMAL, HARD
 defaultDifficulty = "NORMAL"
 #Resource pack IDs to have enabled by default on the first run.
-defaultResourcePacks = ["file/refined torches 2.1.zip", "vanilla", "Ecliptic Seasons - Regions Unexplored", "Ecliptic Seasons - Quark", "mod_resources", "mod/punchy:punchy", "file/HyperPunchy-v2.5+.zip", "file/Modded Swords x Punchy! 1.2.5.zip", "vampirism2dtextures", "Moonlight Mods Dynamic Assets", "rpg_race_visuals", "fabric"]
+defaultResourcePacks = ["file/refined torches 2.1.zip", "vanilla", "Ecliptic Seasons - Regions Unexplored", "Ecliptic Seasons - Quark", "mod_resources", "vampirism2dtextures", "Moonlight Mods Dynamic Assets", "rpg_race_visuals", "fabric", "mod/punchy:punchy"]
 #Set to true if the difficulty for new world's should be locked to the specific default. This cannot be unlocked by players without external tools! Probably a bad idea. I don't recommend. Why am I adding this option?
 lockDifficulty = false
 
