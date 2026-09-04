@@ -22,8 +22,10 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID, value = Dist.CLIENT)
 public final class TortleShellClientEvents {
 
-    private static final ResourceLocation SHELL_TEXTURE =
-            new ResourceLocation(AwakeningCompat.MOD_ID, "textures/entity/tortle_shell.png");
+    private static final ResourceLocation SHELL_TEXTURE = new ResourceLocation(
+            AwakeningCompat.MOD_ID,
+            "textures/misc/shell_crack_none.png"
+    );
     private static TortleShellModel model;
 
     private TortleShellClientEvents() {}
@@ -52,37 +54,22 @@ public final class TortleShellClientEvents {
         event.setCanceled(true);
         PoseStack poseStack = event.getPoseStack();
         poseStack.pushPose();
+
+        // Same world-space transform used by GritShell when the player is hidden.
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
         poseStack.translate(0.0F, -1.5F, 0.0F);
-        renderShell(event, poseStack);
-        poseStack.popPose();
-    }
 
-    @SubscribeEvent
-    public static void onPlayerRenderPost(RenderPlayerEvent.Post event) {
-        Player player = event.getEntity();
-        if (!hasNaturalShell(player) || isShelled(player)) return;
-
-        PoseStack poseStack = event.getPoseStack();
-        poseStack.pushPose();
-
-        if (player.isCrouching()) {
-            poseStack.translate(0.0F, 0.10F, 0.08F);
-            poseStack.mulPose(Axis.XP.rotationDegrees(18.0F));
-        }
-
-        poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
-        poseStack.translate(0.0F, -1.25F, -0.30F);
-        poseStack.scale(0.55F, 0.68F, 0.18F);
-        renderShell(event, poseStack);
-        poseStack.popPose();
-    }
-
-    private static void renderShell(RenderPlayerEvent event, PoseStack poseStack) {
         VertexConsumer vertexConsumer = event.getMultiBufferSource().getBuffer(
                 RenderType.entityCutoutNoCull(SHELL_TEXTURE)
         );
-        getModel().render(poseStack, vertexConsumer, event.getPackedLight(), OverlayTexture.NO_OVERLAY);
+        getModel().render(
+                poseStack,
+                vertexConsumer,
+                event.getPackedLight(),
+                OverlayTexture.NO_OVERLAY
+        );
+
+        poseStack.popPose();
     }
 
     @SubscribeEvent

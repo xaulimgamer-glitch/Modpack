@@ -22,5 +22,9 @@ public final class TortleShellClientModEvents {
                 TortleShellModel.LAYER_LOCATION,
                 TortleShellModel::createBodyLayer
         );
+        event.registerLayerDefinition(
+                TortleShellArmorModel.LAYER_LOCATION,
+                TortleShellArmorModel::createBodyLayer
+        );
     }
 }
