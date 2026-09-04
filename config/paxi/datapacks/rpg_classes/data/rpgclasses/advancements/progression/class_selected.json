@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "class_selected": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "class_selected"
+    ]
+  ]
+}
