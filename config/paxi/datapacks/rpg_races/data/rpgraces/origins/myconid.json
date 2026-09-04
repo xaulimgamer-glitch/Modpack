@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:myconid/size",
     "rpgraces:myconid/shrink",
     "rpgraces:myconid/grow",
