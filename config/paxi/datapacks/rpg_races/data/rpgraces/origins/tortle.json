@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:tortle/size",
     "rpgraces:generic/health/p2h",
     "rpgraces:generic/move_speed/m15p",
