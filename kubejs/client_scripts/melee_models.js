@@ -4,12 +4,12 @@
 //
 // Leave a value as null to keep KubeJS from generating an override for that item.
 const MELEE_MODELS = {
-  'kubejs:crude_battleaxe': null,
-  'kubejs:crude_sword': null,
-  'kubejs:crude_dagger': null,
+  'kubejs:crude_battleaxe': 'spartanweaponry:stone_battleaxe',
+  'kubejs:crude_sword': 'spartanweaponry:',
+  'kubejs:crude_dagger': 'spartanweaponry:',
   'kubejs:crude_staff': null,
-  'kubejs:crude_spear': null,
-  'kubejs:crude_mace': null
+  'kubejs:crude_long_sword': 'spartanweaponry:',
+  'kubejs:crude_mace': 'spartanweaponry':
 }
 
 ClientEvents.highPriorityAssets(event => {
