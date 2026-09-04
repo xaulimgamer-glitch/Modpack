@@ -10,7 +10,7 @@
     },
     {
       "item": "minecraft:shield",
-      "tag": "{Damage:272,display:{Name:'{\"text\":\"Crude Shield\",\"italic\":false}'}}"
+      "tag": "{display:{Name:'{\"text\":\"Crude Shield\",\"italic\":false}'}}"
     }
   ],
   "recurrent": false,

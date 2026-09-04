@@ -10,6 +10,19 @@
 		{
 			can_repeat: false
 			dependencies: ["3607013B90D69E87"]
+			description: [
+				"Your &lRace&r defines &lwhat your character is&r."
+				""
+				"A Race may alter your size, health, movement, senses, environmental weaknesses, passive traits, or grant active racial abilities."
+				""
+				""
+				"{@pagebreak}"
+				""
+				"Some races make use of the &lPrimary Racial Ability&r or &lSecondary Racial Ability&r keybinds. If your chosen Race grants an active ability, make sure these controls are properly bound."
+				""
+				"&lChoose carefully.&r Your Race is intended to be a meaningful part of your character, not a temporary loadout."
+			]
+			icon: "minecraft:totem_of_undying"
 			id: "7E3686EFDC4E8DD2"
 			rewards: [{
 				command: "/origin gui @s rpgraces:races"
@@ -28,6 +41,26 @@
 		{
 			can_repeat: false
 			dependencies: ["7E3686EFDC4E8DD2"]
+			description: [
+				"Your &lClass&r defines &lhow your character fights and develops in combat&r."
+				""
+				"Each Class has its own abilities, progression, and specializations."
+				""
+				"Your Class is chosen separately from your &lRace&r, &lProfession&r, and &lAttributes&r. None of these systems automatically determines the others."
+				""
+				"As your Class develops, you will unlock new ways to shape your build through its &lSkill Tree&r."
+				""
+				"Different Classes favor different combat styles, abilities, and specializations, but how you develop them is ultimately part of your build."
+				""
+				"&lChoose the combat path you want to develop.&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_sword"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "0B790E82D7A4147A"
 			rewards: [{
 				command: "/origin gui @s rpgclasses:class"
@@ -45,36 +78,113 @@
 			y: -3.5d
 		}
 		{
+			description: [
+				"&o“Hey, you... you're finally awake.”&r"
+				""
+				"You may recognize the world around you, but you are not the same person who would normally wake up in it."
+				""
+				"Your &lRace&r defines what you are. It may alter your body, size, natural strengths and weaknesses, movement, senses, survivability, and even grant unique abilities."
+				""
+				"Your &lClass&r defines how you fight and how your combat abilities develop. Race and Class are independent from one another."
+				""
+				"As your journey continues, you will further shape your character through &lProfessions&r and &lAttributes&r."
+				""
+				"&lWhen you are ready, choose who — and what — you are.&r"
+			]
+			icon: "minecraft:recovery_compass"
 			id: "3607013B90D69E87"
 			tasks: [{
 				id: "23A5F9B016C9E1A5"
 				title: "Awakening"
 				type: "checkmark"
 			}]
+			title: "Awakening"
 			x: 1.5d
 			y: -6.5d
 		}
 		{
 			dependencies: ["0B790E82D7A4147A"]
+			description: [
+				"You begin this journey on your own."
+				""
+				"While you complete your awakening, your quest progress remains personal so that your &lRace&r and &lClass&r belong to you alone."
+				""
+				"Once your awakening is complete, you will be able to create or join a &lParty&r."
+				""
+				"Party members can share progress through many parts of the Quest Book, allowing exploration, crafting, and major milestones to be completed together."
+				""
+				"Travel alone or with others — the choice is yours."
+				""
+				"&lFinish your awakening. Then choose who you journey with.&r"
+			]
+			icon: "minecraft:red_banner"
 			id: "101C0F3AF9489E76"
 			tasks: [{
 				id: "0C8449963E47C513"
 				title: "Controls & Keybinds"
 				type: "checkmark"
 			}]
-			title: "Controls \\& Keybinds"
+			title: "Teams \\& Cooperation"
 			x: 2.5d
 			y: -2.5d
 		}
 		{
 			dependencies: ["0B790E82D7A4147A"]
+			description: [
+				"Not every ability in this world is used through an item or the hotbar."
+				""
+				"Your &lRace&r, &lClass&r, magic, movement, and other systems may give you actions with their own keybinds."
+				""
+				"Before moving on, review the default controls used by the modpack."
+				""
+				"{@pagebreak}"
+				""
+				"&lCharacter \\& Progression&r"
+				""
+				"&lG&r — Origins Power 1"
+				"&lH&r — Origins Power 2"
+				"&lO&r — Open Origins Menu"
+				"&lK&r — Open Skill Tree"
+				"&lL&r — Open Quest Book"
+				""
+				"{@pagebreak}"
+				""
+				"&lMovement \\& Combat&r"
+				""
+				"&lC&r — Crouch"
+				"&lR&r — Combat Roll"
+				""
+				"{@pagebreak}"
+				""
+				"&lMagic&r"
+				""
+				"&lV&r — Cast Spell"
+				"&lZ&r — Toggle Spell Wheel"
+				""
+				"{@pagebreak}"
+				""
+				"&lEquipment&r"
+				""
+				"&lAlt + E&r — Open Curios"
+				""
+				"{@pagebreak}"
+				""
+				"You can review or change these controls at any time under:"
+				""
+				"&lOptions → Controls → Key Binds&r"
+				""
+				"If two actions are assigned to the same key, Minecraft will mark the conflict in &4red&r."
+				""
+				"&lReview your controls. Set your keybinds. Know what you can do.&r"
+			]
+			icon: "create:linked_controller"
 			id: "1230C4E8345E93F1"
 			tasks: [{
 				id: "6C755A22F48A9CF3"
 				title: "Teams & Cooperation"
 				type: "checkmark"
 			}]
-			title: "Teams \\& Cooperation"
+			title: "Controls & Keybinds"
 			x: 0.5d
 			y: -2.5d
 		}
@@ -83,12 +193,29 @@
 				"101C0F3AF9489E76"
 				"1230C4E8345E93F1"
 			]
+			description: [
+				"Your identity is set."
+				""
+				"You know how to use your abilities, and you understand how cooperation works."
+				""
+				"Completing your awakening will unlock the ability to create or join a &lParty&r."
+				""
+				"From this point forward, the world will begin to test what you have chosen to become."
+				""
+				"Your Race, Class, abilities, and decisions have prepared you for the journey ahead — but preparation alone will not keep you alive."
+				""
+				"The rest must be earned out there."
+				""
+				"&lFinish your awakening. Step into the world. Build your foundation.&r"
+			]
+			icon: "minecraft:compass"
 			id: "0C58D5FB226A6BC0"
 			tasks: [{
 				id: "1FEF3E2E24A3476A"
 				title: "Ready to Begin"
 				type: "checkmark"
 			}]
+			title: "Ready to Begin"
 			x: 1.5d
 			y: -1.5d
 		}
