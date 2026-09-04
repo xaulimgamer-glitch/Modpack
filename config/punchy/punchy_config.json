@@ -1,7 +1,7 @@
 {
   "renderArmorArmsFP": true,
   "interactiveStuffCompat": false,
-  "bettercombatCompat": true,
+  "bettercombatCompat": false,
   "swordBlockingCompat": true,
   "animationSpeed": 5.5,
   "enableMod": true,
@@ -33,7 +33,7 @@
   "enableParticles": true,
   "enableModelPartsGlow": true,
   "enableBlurGlowAtDark": false,
-  "firstPersonModelHideEnabled": true,
+  "firstPersonModelHideEnabled": false,
   "firstPersonModelHidePitch": 60.0,
   "itemBlacklist": [],
   "blacklistApplyDualHanded": {},
