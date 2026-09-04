@@ -11,9 +11,10 @@ import net.minecraft.world.item.enchantment.Enchantments;
 /**
  * Owns the lifecycle of the Tortle racial shell.
  *
- * The shell is not normal loot. It exists only while the player has the Tortle
- * shell power, must occupy the chest slot, must never have duplicate copies,
- * and must not survive as an item when the race is lost or the player dies.
+ * The shell is racial state, not loot: while the player owns the Tortle shell
+ * power exactly one managed shell must exist in the chest slot. When the race
+ * is lost or the player dies, the physical stack is removed instead of being
+ * transferred to inventories, drops or corpse storage.
  */
 public final class TortleShellLifecycle {
 
@@ -28,6 +29,10 @@ public final class TortleShellLifecycle {
 
     public static boolean isShell(ItemStack stack) {
         return stack.is(TortleShellRegistries.TORTLE_SHELL_ITEM.get());
+    }
+
+    public static void copyOwnership(ServerPlayer original, ServerPlayer clone) {
+        setOwner(clone, isOwner(original));
     }
 
     public static void gainShell(ServerPlayer player) {
@@ -45,9 +50,8 @@ public final class TortleShellLifecycle {
 
     /**
      * Called before death-inventory systems such as Corpse snapshot the player.
-     * Ownership is intentionally retained so the respawned player can receive
-     * the racial shell again, but the physical ItemStack is removed from the
-     * dying inventory.
+     * Ownership is retained for respawn, but the physical stack is removed from
+     * the dying player's inventory so it cannot be copied into the corpse.
      */
     public static void prepareForDeath(ServerPlayer player) {
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
@@ -56,8 +60,7 @@ public final class TortleShellLifecycle {
     }
 
     /**
-     * Server-side invariant repair. This also cleans legacy duplicated shells
-     * retrieved from old corpses or created by previous versions of the mod.
+     * Repairs the invariant and cleans legacy duplicates from older versions.
      */
     public static void sanitize(ServerPlayer player) {
         if (!isOwner(player)) {
@@ -84,9 +87,6 @@ public final class TortleShellLifecycle {
             }
             player.setItemSlot(EquipmentSlot.CHEST, createNaturalShell());
         } else if (!isManagedShell(chest)) {
-            // Replace manually-created/legacy shell stacks with the managed
-            // racial version while the progression system does not yet store
-            // shell-specific state on the item.
             player.setItemSlot(EquipmentSlot.CHEST, createNaturalShell());
         } else {
             chest.setCount(1);
