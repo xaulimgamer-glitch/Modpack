@@ -63,6 +63,7 @@
 			id: "0B790E82D7A4147A"
 			tasks: [{
 				advancement: "rpgclasses:progression/class_selected"
+				criterion: ""
 				id: "0831C5A1DD0C2EF3"
 				type: "advancement"
 			}]
