@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:giantborn/size",
     "rpgraces:generic/health/p3h",
     "rpgraces:generic/move_speed/m5p",

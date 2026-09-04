@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "race_selected": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "race_selected"
+    ]
+  ]
+}

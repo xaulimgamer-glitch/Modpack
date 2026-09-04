@@ -31,8 +31,9 @@
 				type: "command"
 			}]
 			tasks: [{
+				advancement: "rpgraces:progression/race_selected"
 				id: "2D97B586F5746731"
-				type: "checkmark"
+				type: "advancement"
 			}]
 			title: "Choose Your Race"
 			x: 1.5d
