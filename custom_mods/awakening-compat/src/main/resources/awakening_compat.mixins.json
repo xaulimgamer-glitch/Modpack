@@ -9,7 +9,8 @@
   ],
 
   "client": [
-    "FixedWingEntityModelMixin"
+    "FixedWingEntityModelMixin",
+    "CameraAccessor"
   ],
 
   "injectors": {
