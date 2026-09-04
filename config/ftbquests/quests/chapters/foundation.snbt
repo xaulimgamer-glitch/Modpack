@@ -336,6 +336,17 @@
 		}
 		{
 			dependencies: ["7964C2B4E96725B6"]
+			description: [
+				"Surviving on whatever you find may be enough for a night. It will not be enough forever."
+				""
+				"Cooking allows you to turn simple ingredients into proper meals that restore more &lHunger&r and &lSaturation&r, keeping you fed for longer journeys."
+				""
+				"As your kitchen grows, so will the variety and quality of the meals you can prepare."
+				""
+				"You do not need to become a master cook yet. Start by turning basic ingredients into something more substantial."
+				""
+				"&lPrepare your ingredients. Cook a proper meal. Eat what you made.&r"
+			]
 			icon: "farmersdelight:egg_sandwich"
 			id: "29F648BC45125F8A"
 			tasks: [{
