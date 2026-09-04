@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
   "name": "Withdraw Into Shell",
-  "description": "Press your primary active key to withdraw into your shell. While withdrawn, you cannot move or act. Press the key again to emerge.",
+  "description": "Press your primary active key to withdraw completely into your shell. While withdrawn, you cannot move or act, but you are immune to normal damage and knockback. Press the key again to emerge.",
   "cooldown": 1,
   "hud_render": {
     "should_render": false

@@ -3,6 +3,7 @@ package dev.xaulim.awakeningcompat.shell;
 import dev.xaulim.awakeningcompat.AwakeningCompat;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,6 +14,8 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -32,6 +35,42 @@ public final class TortleShellEvents {
 
     private static boolean hasNaturalShell(Player player) {
         return player.getItemBySlot(EquipmentSlot.CHEST).is(TortleShellRegistries.TORTLE_SHELL_ITEM.get());
+    }
+
+    /**
+     * A fully withdrawn Tortle trades all agency for near-total protection.
+     * Vanilla's BYPASSES_INVULNERABILITY tag is deliberately respected so the
+     * void and administrative kill damage can still terminate the player.
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onIncomingDamage(LivingAttackEvent event) {
+        if (isShelled(event.getEntity())
+                && !event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            event.setCanceled(true);
+        }
+    }
+
+    /**
+     * Secondary guard for damage paths from mods that reach LivingHurtEvent.
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onIncomingHurt(LivingHurtEvent event) {
+        if (isShelled(event.getEntity())
+                && !event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            event.setCanceled(true);
+        }
+    }
+
+    /**
+     * Damage immunity alone is not enough: explosions, melee hits and several
+     * modded attacks may still attempt to move the player. A withdrawn Tortle
+     * behaves as an anchored shell and ignores living-entity knockback entirely.
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onKnockBack(LivingKnockBackEvent event) {
+        if (isShelled(event.getEntity())) {
+            event.setCanceled(true);
+        }
     }
 
     @SubscribeEvent
