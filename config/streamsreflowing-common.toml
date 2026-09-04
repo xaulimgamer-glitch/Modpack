@@ -41,7 +41,7 @@ rebiomeLakes = 1
 #  true = show it once per world (default).  false = never show it.
 #Perf: none.
 #World: safe on an existing world -- applies the moment you save, everywhere.
-welcomeMessage = true
+welcomeMessage = false
 
 #PERFORMANCE -- how FAST vs. how GOOD generation is. Costs CPU at world-gen time only; each
 #region builds once and is saved to disk forever, so the cost is one-time per area. If live

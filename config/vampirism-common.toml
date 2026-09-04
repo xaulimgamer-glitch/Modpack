@@ -6,7 +6,7 @@
 
 	[common.internal]
 		#INTERNAL - Set to 'never' if you don't want to be notified about integration mods
-		integrationsNotifier = ""
+		integrationsNotifier = "never"
 		#INTERNAL
 		optifineBloodvisionWarning = false
 
@@ -30,7 +30,7 @@
 		#Control hunter camp generation. If disabled you should set hunterSpawnChance to 75.
 		enableHunterTentGeneration = true
 		#Use the vanilla campfire block instead of Vampirism's much cooler one
-		useVanillaCampfire = false
+		useVanillaCampfire = true
 
 		[common-server.world.village]
 			#Weight of the Totem Building inside the Village
