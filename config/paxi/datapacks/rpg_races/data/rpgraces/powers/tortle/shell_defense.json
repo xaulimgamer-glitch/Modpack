@@ -1,0 +1,15 @@
+{
+  "type": "origins:active_self",
+  "name": "Shell Defense",
+  "description": "Retreat into your shell for up to 6 seconds. While withdrawn, you cannot move or act and take 50% less damage from direct attacks, projectiles, and explosions. Press again to emerge early. 60-second cooldown.",
+  "cooldown": 1,
+  "hud_render": {
+    "should_render": false
+  },
+  "key": {
+    "key": "key.origins.primary_active"
+  },
+  "entity_action": {
+    "type": "awakening_compat:tortle_shell"
+  }
+}
