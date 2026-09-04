@@ -1,0 +1,19 @@
+{
+  "type": "origins:action_on_callback",
+  "hidden": true,
+
+  "entity_action_gained": {
+    "type": "origins:execute_command",
+    "command": "advancement grant @s only rpgclasses:progression/class_selected"
+  },
+
+  "entity_action_added": {
+    "type": "origins:execute_command",
+    "command": "advancement grant @s only rpgclasses:progression/class_selected"
+  },
+
+  "entity_action_lost": {
+    "type": "origins:execute_command",
+    "command": "advancement revoke @s only rpgclasses:progression/class_selected"
+  }
+}
