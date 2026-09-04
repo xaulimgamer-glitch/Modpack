@@ -1,1 +1,1 @@
-{"powers":["rpgclasses:ranger/start_equipment","rpgclasses:ranger/pufferfish_skill_tree"],"icon":{"item":"kubejs:crude_short_bow"},"order":1,"impact":1,"name":"Ranger","description":"A skilled archer who can strike from a distance with great accuracy."}
+{"powers":["rpgclasses:meta/class_selected","rpgclasses:ranger/start_equipment","rpgclasses:ranger/pufferfish_skill_tree"],"icon":{"item":"kubejs:crude_short_bow"},"order":1,"impact":1,"name":"Ranger","description":"A skilled archer who can strike from a distance with great accuracy."}
