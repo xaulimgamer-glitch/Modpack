@@ -4,11 +4,11 @@
 	can_CatLeap = false
 	can_ChargeJump = false
 	can_ClimbPoles = true
-	can_ClimbUp = false
-	can_ClingToCliff = false
+	can_ClimbUp = true
+	can_ClingToCliff = true
 	can_HideInBlock = false
 	can_Crawl = true
-	can_Dive = false
+	can_Dive = true
 	can_Dodge = false
 	can_FastRun = false
 	can_FastSwim = false
