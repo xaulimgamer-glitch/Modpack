@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:human/adaptivelearning"
   ],
   "icon": "minecraft:player_head",
