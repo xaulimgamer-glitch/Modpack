@@ -30,6 +30,7 @@
 			tasks: [{
 				advancement: "rpgraces:progression/race_selected"
 				criterion: ""
+				icon: "minecraft:totem_of_undying"
 				id: "2D97B586F5746731"
 				type: "advancement"
 			}]
@@ -64,6 +65,13 @@
 			tasks: [{
 				advancement: "rpgclasses:progression/class_selected"
 				criterion: ""
+				icon: {
+					Count: 1
+					id: "minecraft:iron_sword"
+					tag: {
+						Damage: 0
+					}
+				}
 				id: "0831C5A1DD0C2EF3"
 				type: "advancement"
 			}]
@@ -95,7 +103,7 @@
 			}]
 			tasks: [{
 				id: "23A5F9B016C9E1A5"
-				title: "Awakening"
+				title: "Complete"
 				type: "checkmark"
 			}]
 			title: "Awakening"
@@ -121,7 +129,7 @@
 			id: "101C0F3AF9489E76"
 			tasks: [{
 				id: "0C8449963E47C513"
-				title: "Controls & Keybinds"
+				title: "Complete"
 				type: "checkmark"
 			}]
 			title: "Teams \\& Cooperation"
@@ -181,7 +189,7 @@
 			id: "1230C4E8345E93F1"
 			tasks: [{
 				id: "6C755A22F48A9CF3"
-				title: "Teams & Cooperation"
+				title: "Complete"
 				type: "checkmark"
 			}]
 			title: "Controls \\& Keybinds"
@@ -212,7 +220,7 @@
 			id: "0C58D5FB226A6BC0"
 			tasks: [{
 				id: "1FEF3E2E24A3476A"
-				title: "Ready to Begin"
+				title: "Complete"
 				type: "checkmark"
 			}]
 			title: "Ready to Begin"

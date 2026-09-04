@@ -3,11 +3,13 @@
 	default_quest_shape: ""
 	filename: "foundation"
 	group: "0D3A878BF8104D6A"
+	hide_quest_until_deps_complete: true
 	id: "469E04C9462AE542"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["0C58D5FB226A6BC0"]
 			id: "52E066CDD1EF8C84"
 			tasks: [
 				{
@@ -34,8 +36,8 @@
 				}
 			]
 			title: "First Tools"
-			x: -1.5d
-			y: -4.0d
+			x: -7.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["52E066CDD1EF8C84"]
@@ -53,8 +55,8 @@
 				}
 			]
 			title: "The First Metal"
-			x: -1.5d
-			y: -3.0d
+			x: -5.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["0A927C82CCCF6830"]
@@ -84,8 +86,8 @@
 				}
 			]
 			title: "Tools of the Smith"
-			x: -1.5d
-			y: -2.0d
+			x: -3.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["02BBD3B3F85549B1"]
@@ -102,10 +104,11 @@
 				type: "item"
 			}]
 			title: "First Forging"
-			x: -1.5d
-			y: -1.0d
+			x: -1.0d
+			y: -2.5d
 		}
 		{
+			dependencies: ["0C58D5FB226A6BC0"]
 			id: "7F568F5AB5DCDEFB"
 			tasks: [{
 				advancement: "minecraft:adventure/sleep_in_bed"
@@ -114,13 +117,14 @@
 				title: "Survive the First Night"
 				type: "advancement"
 			}]
-			x: 1.5d
-			y: -3.5d
+			x: -0.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["7F568F5AB5DCDEFB"]
 			id: "6961735BB6354864"
 			tasks: [{
+				icon: "minecraft:campfire"
 				id: "2FD87C20026BEFD4"
 				observe_type: 0
 				timer: 0L
@@ -128,35 +132,14 @@
 				type: "observation"
 			}]
 			title: "Warmth and Recovery"
-			x: 1.5d
-			y: -1.0d
-		}
-		{
-			id: "1DC49D2E7187D0B1"
-			tasks: [{
-				id: "4F15158D9DC48A37"
-				title: "More Than Hunger"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["1DC49D2E7187D0B1"]
-			id: "35B09664F755DFF6"
-			tasks: [{
-				id: "639C58A535AE14AD"
-				title: "A Proper Meal"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: -2.0d
+			x: -0.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
-				"35B09664F755DFF6"
 				"6961735BB6354864"
 				"304F4D6E546418F5"
+				"6A65D2A7B2F257DE"
 			]
 			id: "229CF37F981EF4A9"
 			tasks: [{
@@ -164,8 +147,91 @@
 				title: "Foundation Established"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0C58D5FB226A6BC0"
+				"0A927C82CCCF6830"
+			]
+			id: "738AA0DB98FC4FE6"
+			tasks: [
+				{
+					id: "2486AC576DB6FE2E"
+					item: "butchery:rope"
+					type: "item"
+				}
+				{
+					id: "3DB5461283930B93"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:cleavers)"
+						}
+					}
+					title: "Cleaver"
+					type: "item"
+				}
+				{
+					id: "1B3E6A19BC8CF917"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:skinning_knives)"
+						}
+					}
+					title: "Skinning Knive"
+					type: "item"
+				}
+			]
+			title: "Tools of the Butcher"
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["738AA0DB98FC4FE6"]
+			id: "6A65D2A7B2F257DE"
+			tasks: [
+				{
+					id: "79C45937F84E6CE8"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(butchery:raw_meat)"
+						}
+					}
+					title: "Any #butchery:raw_meat"
+					type: "item"
+				}
+				{
+					id: "576DB2147ABBB900"
+					item: "butchery:heart"
+					type: "item"
+				}
+			]
+			title: "Blood and Hide"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0C58D5FB226A6BC0"]
+			id: "7964C2B4E96725B6"
+			tasks: [{
+				id: "6C2397AA22478827"
+				title: "More Than Hunger"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			id: "6EE26428D6A882F8"
+			x: 1.5d
+			y: -4.0d
 		}
 	]
 	title: "Foundation"
