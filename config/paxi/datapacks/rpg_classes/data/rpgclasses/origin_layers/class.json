@@ -13,6 +13,7 @@
   ],
 
   "name": "Class",
+  "default_origin": "rpgclasses:untrained",
 
   "allow_random": false,
   "auto_choose": false,
