@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
@@ -33,6 +34,14 @@ public final class TortleShellItem extends ArmorItem {
 
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair) {
+        return false;
+    }
+
+    /**
+     * The racial shell is player state rather than transferable loot.
+     */
+    @Override
+    public boolean onDroppedByPlayer(ItemStack item, Player player) {
         return false;
     }
 
