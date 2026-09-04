@@ -2,7 +2,7 @@
   "type": "origins:starting_equipment",
   "stacks": [
     {
-      "item": "minecraft:stone_axe"
+      "item": "kubejs:crude_battleaxe"
     }
   ],
   "recurrent": false,

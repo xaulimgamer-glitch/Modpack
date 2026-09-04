@@ -3,6 +3,9 @@
   "stacks": [
     {
       "item": "irons_spellbooks:copper_spell_book"
+    },
+    {
+      "item": "kubejs:crude_graybeard_staff"
     }
   ],
   "recurrent": false,

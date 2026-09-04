@@ -2,7 +2,7 @@
   "type": "origins:starting_equipment",
   "stacks": [
     {
-      "item": "minecraft:stone_sword"
+      "item": "kubejs:crude_dagger"
     }
   ],
   "recurrent": false,

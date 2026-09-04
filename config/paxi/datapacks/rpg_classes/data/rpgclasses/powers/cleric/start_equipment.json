@@ -5,7 +5,11 @@
       "item": "irons_spellbooks:copper_spell_book"
     },
     {
-      "item": "minecraft:wooden_sword"
+      "item": "kubejs:crude_flanged_mace"
+    },
+    {
+      "item": "minecraft:shield",
+      "tag": "{Damage:272,display:{Name:'{\"text\":\"Crude Shield\",\"italic\":false}'}}"
     }
   ],
   "recurrent": false,

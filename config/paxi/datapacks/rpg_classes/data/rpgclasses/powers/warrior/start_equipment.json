@@ -2,10 +2,7 @@
   "type": "origins:starting_equipment",
   "stacks": [
     {
-      "item": "minecraft:stone_sword"
-    },
-    {
-      "item": "minecraft:shield"
+      "item": "kubejs:crude_long_sword"
     }
   ],
   "recurrent": false,
