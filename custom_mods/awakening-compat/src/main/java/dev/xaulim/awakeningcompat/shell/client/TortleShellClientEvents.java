@@ -1,5 +1,6 @@
 package dev.xaulim.awakeningcompat.shell.client;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -7,22 +8,17 @@ import dev.xaulim.awakeningcompat.AwakeningCompat;
 import dev.xaulim.awakeningcompat.shell.TortleShellRegistries;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.MovementInputUpdateEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
-import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,17 +31,21 @@ public final class TortleShellClientEvents {
             "textures/misc/shell_crack_none.png"
     );
 
-    private static final TortleShellAnimator ANIMATOR = new TortleShellAnimator();
+    private static final ResourceLocation SHELL_VISION_TEXTURE = new ResourceLocation(
+            AwakeningCompat.MOD_ID,
+            "textures/gui/tortle_shell_vision.png"
+    );
+
     private static TortleShellModel model;
     private static CameraType previousCameraType;
 
     private TortleShellClientEvents() {}
 
-    private static boolean hasNaturalShell(Player player) {
+    public static boolean hasNaturalShell(Player player) {
         return player.getItemBySlot(EquipmentSlot.CHEST).is(TortleShellRegistries.TORTLE_SHELL_ITEM.get());
     }
 
-    private static boolean isShelled(Player player) {
+    public static boolean isShelled(Player player) {
         return hasNaturalShell(player) && player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
     }
 
@@ -58,13 +58,6 @@ public final class TortleShellClientEvents {
         return model;
     }
 
-    /**
-     * GritShell forces first person while the player is withdrawn. We keep that
-     * behavior, but deliberately avoid mutating Camera internals: several camera
-     * mods (notably Shoulder Surfing) also mix into Camera/RenderType during early
-     * client bootstrap, so protected-method accessors are too fragile for this
-     * modpack.
-     */
     @SubscribeEvent
     public static void onClientTick(TickEvent.ClientTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
@@ -86,8 +79,11 @@ public final class TortleShellClientEvents {
     }
 
     /**
-     * Third-person/world representation for other players. The local player is
-     * rendered by the camera-relative shell pass while in first person.
+     * Other players still see the closed shell model in world space. For the local
+     * first-person player we intentionally do NOT render the 3D shell around the
+     * camera; doing so lets the near clipping plane intersect the model and creates
+     * the large black planes seen during testing. First-person uses a dedicated
+     * HUD mask instead, like vanilla's carved-pumpkin view.
      */
     @SubscribeEvent
     public static void onPlayerRenderPre(RenderPlayerEvent.Pre event) {
@@ -118,148 +114,40 @@ public final class TortleShellClientEvents {
     }
 
     /**
-     * Reproduces GritShell's vertical camera relationship without modifying the
-     * actual Minecraft Camera. The original lowers the camera from eye height to
-     * about playerY + 0.2 while withdrawing. Here we calculate that same virtual
-     * camera Y only for positioning the shell model. This keeps the shell out of
-     * the near plane while remaining compatible with Shoulder Surfing and other
-     * camera/render mixins in the pack.
+     * Dedicated first-person shell vision. The texture is square and is rendered
+     * using the larger screen dimension so the transparent opening remains truly
+     * circular instead of stretching into an ellipse on widescreen displays.
      */
-    private static double getVirtualCameraY(
-            Player player,
-            Vec3 actualCameraPosition,
-            float partialTick,
-            boolean hiding
-    ) {
-        float progress = ANIMATOR.calcProgress();
-
-        if (hiding) {
-            if (!ANIMATOR.hasLockedY()) {
-                ANIMATOR.lockY((float) (actualCameraPosition.y - player.getY()));
-            }
-
-            return TortleShellVisualMath.cameraY(
-                    player.yo,
-                    player.getY(),
-                    partialTick,
-                    ANIMATOR.getLockedY(),
-                    TortleShellVisualMath.smoothProgress(progress)
-            );
-        }
-
-        if (ANIMATOR.isUnhiding()) {
-            return TortleShellVisualMath.unhideCameraY(
-                    player.yo,
-                    player.getY(),
-                    partialTick,
-                    progress,
-                    player.getEyeHeight(Pose.STANDING)
-            );
-        }
-
-        return actualCameraPosition.y;
-    }
-
-    /**
-     * Camera-relative first-person shell pass. The shell starts above the player
-     * and folds down around the virtual camera position, matching the spatial
-     * relationship used by GritShell without touching Camera#setPosition.
-     */
-    @SubscribeEvent
-    public static void onRenderLevelStage(RenderLevelStageEvent event) {
-        if (event.getStage() != RenderLevelStageEvent.Stage.AFTER_ENTITIES) return;
-
+    public static void renderShellVision(GuiGraphics graphics, int screenWidth, int screenHeight) {
         Minecraft minecraft = Minecraft.getInstance();
         Player player = minecraft.player;
-        if (player == null || minecraft.options.getCameraType() != CameraType.FIRST_PERSON) return;
-        if (minecraft.getCameraEntity() != player || !hasNaturalShell(player)) return;
+        if (player == null || !isShelled(player)) return;
+        if (minecraft.options.getCameraType() != CameraType.FIRST_PERSON) return;
 
-        boolean hiding = isShelled(player);
-        ANIMATOR.updateState(hiding, player.getYRot());
-        if (!hiding && !ANIMATOR.isUnhiding()) return;
+        int side = Math.max(screenWidth, screenHeight);
+        int x = (screenWidth - side) / 2;
+        int y = (screenHeight - side) / 2;
 
-        float partialTick = event.getPartialTick();
-        Vec3 cameraPosition = event.getCamera().getPosition();
-        double virtualCameraY = getVirtualCameraY(player, cameraPosition, partialTick, hiding);
-        double playerX = Mth.lerp(partialTick, player.xo, player.getX());
-        double playerY = Mth.lerp(partialTick, player.yo, player.getY());
-        double playerZ = Mth.lerp(partialTick, player.zo, player.getZ());
-
-        PoseStack poseStack = event.getPoseStack();
-        poseStack.pushPose();
-        poseStack.translate(
-                playerX - cameraPosition.x,
-                playerY - virtualCameraY,
-                playerZ - cameraPosition.z
-        );
-        poseStack.mulPose(Axis.YP.rotationDegrees(-ANIMATOR.getStartYaw()));
-
-        float progress = ANIMATOR.calcProgress();
-        float transition = TortleShellVisualMath.shellTransition(progress, ANIMATOR.isUnhiding());
-        poseStack.translate(
+        RenderSystem.disableDepthTest();
+        RenderSystem.depthMask(false);
+        RenderSystem.enableBlend();
+        RenderSystem.defaultBlendFunc();
+        graphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
+        graphics.blit(
+                SHELL_VISION_TEXTURE,
+                x,
+                y,
+                0,
                 0.0F,
-                TortleShellVisualMath.shellY(transition),
-                TortleShellVisualMath.shellZ(transition)
+                0.0F,
+                side,
+                side,
+                256,
+                256
         );
-        poseStack.mulPose(Axis.XP.rotationDegrees(TortleShellVisualMath.shellPitch(transition)));
-        poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
-
-        RenderType renderType = RenderType.entityCutoutNoCull(SHELL_TEXTURE);
-        MultiBufferSource.BufferSource buffers = minecraft.renderBuffers().bufferSource();
-        VertexConsumer vertexConsumer = buffers.getBuffer(renderType);
-        getModel().render(
-                poseStack,
-                vertexConsumer,
-                0x00F000F0,
-                OverlayTexture.NO_OVERLAY
-        );
-        buffers.endBatch(renderType);
-        poseStack.popPose();
-    }
-
-    /**
-     * Preserve GritShell-like pitch/roll and yaw-lock during the transition using
-     * Forge's supported viewport event only. No Camera accessor/mixin is needed.
-     */
-    @SubscribeEvent
-    public static void onComputeCameraAngles(ViewportEvent.ComputeCameraAngles event) {
-        Minecraft minecraft = Minecraft.getInstance();
-        Player player = minecraft.player;
-        if (player == null || !hasNaturalShell(player)) return;
-
-        boolean hiding = isShelled(player);
-        ANIMATOR.updateState(hiding, player.getYRot());
-        boolean lockYaw = false;
-
-        if (ANIMATOR.isWasHiding()) {
-            float progress = ANIMATOR.calcProgress();
-            float smooth = TortleShellVisualMath.smoothProgress(progress);
-
-            if (progress < 1.0F) {
-                lockYaw = true;
-            }
-
-            event.setRoll(TortleShellVisualMath.cameraRoll(progress, smooth, event.getRoll()));
-            float pitch = TortleShellVisualMath.smootherstepPitch(progress);
-            event.setPitch(pitch);
-            player.setXRot(pitch);
-        } else if (ANIMATOR.isUnhiding()) {
-            float progress = ANIMATOR.calcProgress();
-            float pitch = TortleShellVisualMath.smootherstepPitch(progress);
-            event.setPitch(pitch);
-
-            if (progress >= 1.0F) {
-                ANIMATOR.finishUnhiding();
-                lockYaw = true;
-            }
-        }
-
-        if (lockYaw) {
-            float yaw = Mth.rotLerp(0.02F, player.getYRot(), ANIMATOR.getTargetYaw());
-            player.setYRot(yaw);
-            player.setYHeadRot(yaw);
-            event.setYaw(yaw);
-        }
+        graphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.depthMask(true);
+        RenderSystem.enableDepthTest();
     }
 
     @SubscribeEvent
@@ -290,7 +178,7 @@ public final class TortleShellClientEvents {
     @SubscribeEvent
     public static void onRenderHand(RenderHandEvent event) {
         Player player = Minecraft.getInstance().player;
-        if (player != null && (isShelled(player) || ANIMATOR.isUnhiding())) {
+        if (player != null && isShelled(player)) {
             event.setCanceled(true);
         }
     }
