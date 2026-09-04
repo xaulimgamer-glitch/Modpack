@@ -2,7 +2,8 @@
   "type": "origins:starting_equipment",
   "stacks": [
     {
-      "item": "irons_spellbooks:copper_spell_book"
+      "item": "irons_spellbooks:copper_spell_book",
+      "tag": "{display:{Name:'{\"text\":\"Worn Prayer Book\",\"italic\":false}'},\"irons_spellbooks:spell_container\":{maxSpells:3,mustEquip:1b,data:[{index:0,id:\"irons_spellbooks:blessing_of_life\",level:1},{index:1,id:\"irons_spellbooks:fortify\",level:1},{index:2,id:\"irons_spellbooks:guiding_bolt\",level:1}],spellWheel:1b}}"
     },
     {
       "item": "kubejs:crude_flanged_mace"
