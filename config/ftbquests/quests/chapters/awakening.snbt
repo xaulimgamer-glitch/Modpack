@@ -25,9 +25,9 @@
 			icon: "minecraft:totem_of_undying"
 			id: "7E3686EFDC4E8DD2"
 			rewards: [{
-				command: "/origin gui @s rpgraces:races"
+				command: "/origin gui @s rpgclasses:class"
 				id: "40FA202E0A6C2AAB"
-				title: "Raça"
+				title: "Class"
 				type: "command"
 			}]
 			tasks: [{
@@ -63,16 +63,10 @@
 				}
 			}
 			id: "0B790E82D7A4147A"
-			rewards: [{
-				command: "/origin gui @s rpgclasses:class"
-				id: "5092AB51EED84B2B"
-				title: "classe"
-				type: "command"
-			}]
 			tasks: [{
+				advancement: "rpgclasses:progression/class_selected"
 				id: "0831C5A1DD0C2EF3"
-				title: "classe"
-				type: "checkmark"
+				type: "advancement"
 			}]
 			title: "Choose Your Class"
 			x: 1.5d
@@ -94,6 +88,12 @@
 			]
 			icon: "minecraft:recovery_compass"
 			id: "3607013B90D69E87"
+			rewards: [{
+				command: "/origin gui @s rpgraces:races"
+				id: "5092AB51EED84B2B"
+				title: "Race"
+				type: "command"
+			}]
 			tasks: [{
 				id: "23A5F9B016C9E1A5"
 				title: "Awakening"
