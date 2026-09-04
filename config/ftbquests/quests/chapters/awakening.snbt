@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "awakening"
 	group: ""
+	icon: "minecraft:recovery_compass"
 	id: "5C1DC1774C977343"
 	order_index: 0
 	quest_links: [ ]
@@ -161,6 +162,7 @@
 				""
 				"&lC&r — Crouch"
 				"&lR&r — Combat Roll"
+				"&lX&r — Sit"
 				""
 				"{@pagebreak}"
 				""

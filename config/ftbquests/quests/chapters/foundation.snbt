@@ -4,12 +4,33 @@
 	filename: "foundation"
 	group: "0D3A878BF8104D6A"
 	hide_quest_until_deps_complete: true
+	icon: {
+		Count: 1
+		id: "overgeared:copper_pickaxe"
+		tag: {
+			Damage: 0
+		}
+	}
 	id: "469E04C9462AE542"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["0C58D5FB226A6BC0"]
+			description: [
+				"&lFirst Tools&r"
+				""
+				"Punching down a tree is not where your story begins."
+				""
+				"Before wood becomes useful, you will need something sharp enough to work with. Start by finding &lGravel&r — it can be crafted into &lFlint&r, giving you the sharp edge needed for your first tools."
+				""
+				"With Flint in hand, use it on &lStone&r to break off loose &lRocks&r. These Rocks can then be shaped through &lKnapping&r into the components required for primitive tools."
+				""
+				"These early tools are crude and fragile, but they are enough to begin gathering the resources you need to survive."
+				""
+				"&lCraft Flint. Strike Stone for Rocks. Knapp the stone. Craft your first Primitive Tool.&r"
+			]
+			icon: "overgeared:knappable_rock"
 			id: "52E066CDD1EF8C84"
 			tasks: [
 				{
@@ -36,11 +57,23 @@
 				}
 			]
 			title: "First Tools"
-			x: -7.0d
-			y: -2.5d
+			x: -5.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["52E066CDD1EF8C84"]
+			description: [
+				"&lThe First Metal&r"
+				""
+				"Stone got you started. Metal will take you further."
+				""
+				"&lCopper&r is the first metal within your reach. Mine &lCopper Ore&r to obtain &lRaw Copper&r, then smelt it in a &lFurnace&r into usable &lCopper Ingots&r."
+				""
+				"This is your first step beyond primitive tools and into real metallurgy. Copper is soft, but it is workable — and it will become the foundation of your first forged tools."
+				""
+				"&lFind Copper. Smelt the Raw Copper. Prepare your first metal for the forge.&r"
+			]
+			icon: "minecraft:copper_ingot"
 			id: "0A927C82CCCF6830"
 			tasks: [
 				{
@@ -60,6 +93,26 @@
 		}
 		{
 			dependencies: ["0A927C82CCCF6830"]
+			description: [
+				"&lTools of the Smith&r"
+				""
+				"Metal cannot be shaped with bare hands."
+				""
+				"Before you can build a proper place to work it, you will need a &lHammer&r. It is your first essential smithing tool, and you will need it to create your first &lStone Anvil&r."
+				""
+				"To make the Stone Anvil, place a block of &lSmooth Stone&r, then &lSneak + Right-Click&r it while holding your Hammer."
+				""
+				"Once the anvil is ready, craft a pair of &lSmithing Tongs&r so you can handle heated metal safely. Together, these form the basic tools of the forge."
+				""
+				"&lCraft a Hammer. Turn Smooth Stone into a Stone Anvil. Make Smithing Tongs. Prepare the forge.&r"
+			]
+			icon: {
+				Count: 1
+				id: "overgeared:copper_smithing_hammer"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "02BBD3B3F85549B1"
 			tasks: [
 				{
@@ -91,16 +144,37 @@
 		}
 		{
 			dependencies: ["02BBD3B3F85549B1"]
+			description: [
+				"&lFirst Forging&r"
+				""
+				"You have the metal. You have the tools. Now learn the craft."
+				""
+				"Heat your &lCopper&r until it is ready to be worked, then use your &lSmithing Tongs&r to handle it safely and bring it to the &lAnvil&r."
+				""
+				"Unlike ordinary crafting, forged equipment is made through a process. The metal must be heated, positioned, and worked into shape rather than assembled instantly on a crafting table."
+				""
+				"The way an item is forged can affect its &lQuality&r. You do not need to master that yet — for now, focus on learning the basic process and producing something useful."
+				""
+				"&lHeat the Copper. Grip it with your Tongs. Work it at the Anvil. Forge your first Copper item.&r"
+			]
+			icon: {
+				Count: 1
+				id: "overgeared:copper_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "304F4D6E546418F5"
 			tasks: [{
 				id: "30A9F0C264B48182"
 				item: {
 					Count: 1
-					id: "overgeared:copper_pickaxe"
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						Damage: 0
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:copper_tools)"
 					}
 				}
+				title: "Any #turipis:copper_tools"
 				type: "item"
 			}]
 			title: "First Forging"
@@ -109,6 +183,17 @@
 		}
 		{
 			dependencies: ["0C58D5FB226A6BC0"]
+			description: [
+				"&lSurvive the First Night&r"
+				""
+				"You may build a shelter of your own or take refuge in a settlement you discover. How you survive is up to you — what matters is having a secure place to rest before darkness becomes a threat."
+				""
+				"Keep an eye on your &lHunger&r and &lStamina&r while you travel. Exhaustion can be just as dangerous as whatever waits outside your shelter."
+				""
+				"When you are safe, find or craft a &lBed&r and sleep through the night."
+				""
+				"&lFind shelter. Prepare a Bed. Sleep safely. Survive your first night.&r"
+			]
 			id: "7F568F5AB5DCDEFB"
 			tasks: [{
 				advancement: "minecraft:adventure/sleep_in_bed"
@@ -117,11 +202,24 @@
 				title: "Survive the First Night"
 				type: "advancement"
 			}]
-			x: -0.5d
-			y: -6.0d
+			x: 0.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["7F568F5AB5DCDEFB"]
+			description: [
+				"&lWarmth and Recovery&r"
+				""
+				"A fire can do more than hold back the dark."
+				""
+				"When you are wounded, a lit &lCampfire&r gives you a place to stop, rest, and recover before moving on."
+				""
+				"Staying near the flames allows you to regain your strength, making a Campfire more than just a source of light or warmth."
+				""
+				"Knowing when to rest is as important as knowing when to fight."
+				""
+				"&lLight a Campfire. Rest by the flames. Recover your strength.&r"
+			]
 			id: "6961735BB6354864"
 			tasks: [{
 				icon: "minecraft:campfire"
@@ -132,29 +230,21 @@
 				type: "observation"
 			}]
 			title: "Warmth and Recovery"
-			x: -0.5d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"6961735BB6354864"
-				"304F4D6E546418F5"
-				"6A65D2A7B2F257DE"
-			]
-			id: "229CF37F981EF4A9"
-			tasks: [{
-				id: "57C5826D4A754C01"
-				title: "Foundation Established"
-				type: "checkmark"
-			}]
 			x: 0.5d
-			y: -1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
 				"0C58D5FB226A6BC0"
 				"0A927C82CCCF6830"
 			]
+			icon: {
+				Count: 1
+				id: "butchery:copper_cleaver"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "738AA0DB98FC4FE6"
 			tasks: [
 				{
@@ -193,6 +283,7 @@
 		}
 		{
 			dependencies: ["738AA0DB98FC4FE6"]
+			icon: "butchery:pig_head"
 			id: "6A65D2A7B2F257DE"
 			tasks: [
 				{
@@ -219,19 +310,86 @@
 		}
 		{
 			dependencies: ["0C58D5FB226A6BC0"]
+			description: [
+				"&lMore Than Hunger&r"
+				""
+				"Food does more than simply fill your hunger bar."
+				""
+				"Every food restores both &lHunger&r and &lSaturation&r. Hunger determines when you need to eat, while Saturation determines how long you can keep going before hunger begins to return."
+				""
+				"Simple foods may keep you alive, but they will not sustain you for long."
+				""
+				"Eating the same food repeatedly will also become less effective over time. A varied diet will keep you better fed and better prepared for longer journeys."
+				""
+				"&lEat well. Watch your Saturation. Vary your diet.&r"
+			]
+			icon: "minecraft:golden_carrot"
 			id: "7964C2B4E96725B6"
 			tasks: [{
 				id: "6C2397AA22478827"
-				title: "More Than Hunger"
+				title: "Complete"
 				type: "checkmark"
 			}]
-			x: 1.5d
-			y: -6.0d
+			title: "More Than Hunger"
+			x: 2.5d
+			y: -4.5d
 		}
 		{
-			id: "6EE26428D6A882F8"
-			x: 1.5d
-			y: -4.0d
+			dependencies: ["7964C2B4E96725B6"]
+			icon: "farmersdelight:egg_sandwich"
+			id: "29F648BC45125F8A"
+			tasks: [{
+				id: "2A7D4AA734B49FD3"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:proper_meals)"
+					}
+				}
+				title: "Proper Meal"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"6A65D2A7B2F257DE"
+				"304F4D6E546418F5"
+				"29F648BC45125F8A"
+				"6961735BB6354864"
+			]
+			description: [
+				"&lFoundation Established&r"
+				""
+				"You are no longer simply trying to survive."
+				""
+				"You have learned to make primitive tools, work your first metal, build a forge, find shelter, recover by the fire, and sustain yourself with more than whatever food happens to be nearby."
+				""
+				"These skills are only the beginning, but together they form the foundation every greater journey depends on."
+				""
+				"From here, survival becomes preparation — and preparation opens the way to exploration, stronger equipment, deeper craftsmanship, and greater challenges."
+				""
+				"&lYour foundation is established. The next stage of your journey is now open.&r"
+			]
+			id: "29CEF14A77E4ADBF"
+			rewards: [{
+				auto: "invisible"
+				id: "0358BE2D35A1B725"
+				ignore_reward_blocking: true
+				stage: "global_tier_1"
+				title: "Tier I Unlocked"
+				type: "gamestage"
+			}]
+			tasks: [{
+				id: "4195A408BCAC9525"
+				title: "Complete"
+				type: "checkmark"
+			}]
+			title: "Foundation Established"
+			x: 0.5d
+			y: -1.0d
 		}
 	]
 	title: "Foundation"
