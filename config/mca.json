@@ -13,7 +13,7 @@
   "villagerChatPrefix": "",
   "canHurtBabies": true,
   "enterVillageNotification": true,
-  "giveAdvancementBooks": true,
+  "giveAdvancementBooks": false,
   "villagerMarriageNotification": true,
   "villagerBirthNotification": true,
   "innArrivalNotification": true,
