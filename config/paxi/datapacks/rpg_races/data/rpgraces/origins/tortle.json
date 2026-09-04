@@ -9,7 +9,8 @@
     "origins:aqua_affinity",
     "rpgraces:tortle/holdbreath",
     "rpgraces:generic/feather_fall/p10p",
-    "rpgraces:tortle/shellarmor"
+    "rpgraces:tortle/shellarmor",
+    "rpgraces:tortle/shell_defense"
   ],
   "icon": "minecraft:turtle_helmet",
   "impact": 1,
