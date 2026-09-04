@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:dwarf/size",
     "rpgraces:generic/move_speed/m5p",
     "rpgraces:dwarf/dwarven_mining",
