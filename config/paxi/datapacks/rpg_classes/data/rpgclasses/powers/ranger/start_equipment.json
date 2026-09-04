@@ -6,7 +6,7 @@
     },
     {
       "item": "minecraft:arrow",
-      "amount": 16
+      "amount": 32
     }
   ],
   "recurrent": false,
