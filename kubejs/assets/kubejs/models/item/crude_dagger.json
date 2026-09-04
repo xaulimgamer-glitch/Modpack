@@ -1,0 +1,6 @@
+{
+  "parent": "spartanweaponry:item/base/dagger",
+  "textures": {
+    "layer0": "spartanweaponry:item/stone_dagger"
+  }
+}
