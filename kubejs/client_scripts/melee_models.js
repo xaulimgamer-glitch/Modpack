@@ -19,10 +19,25 @@ const MELEE_MODELS = {
       layer0: 'minecraft:item/stone_sword'
     }
   },
-  'kubejs:crude_dagger': null,
+  'kubejs:crude_dagger': {
+    parent: 'spartanweaponry:item/base/dagger',
+    textures: {
+      layer0: 'spartanweaponry:item/stone_dagger'
+    }
+  },
   'kubejs:crude_graybeard_staff': null,
-  'kubejs:crude_long_sword': null,
-  'kubejs:crude_flanged_mace': null
+  'kubejs:crude_long_sword': {
+    parent: 'spartanweaponry:item/base/longsword',
+    textures: {
+      layer0: 'spartanweaponry:item/stone_longsword'
+    }
+  },
+  'kubejs:crude_flanged_mace': {
+    parent: 'spartanweaponry:item/base/flanged_mace',
+    textures: {
+      layer0: 'spartanweaponry:item/stone_flanged_mace'
+    }
+  }
 }
 
 ClientEvents.highPriorityAssets(event => {
