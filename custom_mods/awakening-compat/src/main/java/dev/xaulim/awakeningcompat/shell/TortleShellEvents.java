@@ -39,9 +39,10 @@ public final class TortleShellEvents {
         DamageSource source = event.getSource();
         boolean projectile = source.is(DamageTypeTags.IS_PROJECTILE);
         boolean explosion = source.is(DamageTypeTags.IS_EXPLOSION);
-        boolean attacker = source.getEntity() != null;
+        boolean directAttack = source.getEntity() != null
+                && source.getDirectEntity() == source.getEntity();
 
-        if (projectile || explosion || attacker) {
+        if (projectile || explosion || directAttack) {
             event.setAmount(event.getAmount() * 0.5F);
         }
     }
