@@ -2,7 +2,8 @@
   "type": "origins:starting_equipment",
   "stacks": [
     {
-      "item": "irons_spellbooks:copper_spell_book"
+      "item": "irons_spellbooks:copper_spell_book",
+      "tag": "{display:{Name:'{\"text\":\"Crude Spellbook\",\"italic\":false}'},\"irons_spellbooks:spell_container\":{maxSpells:3,mustEquip:1b,data:[{index:0,id:\"irons_spellbooks:magic_missile\",level:1},{index:1,id:\"irons_spellbooks:gust\",level:1},{index:2,id:\"irons_spellbooks:shield\",level:1}],spellWheel:1b}}"
     },
     {
       "item": "kubejs:crude_graybeard_staff"
