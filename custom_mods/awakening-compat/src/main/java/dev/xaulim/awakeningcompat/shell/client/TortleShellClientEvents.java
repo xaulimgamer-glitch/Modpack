@@ -1,6 +1,5 @@
 package dev.xaulim.awakeningcompat.shell.client;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -31,10 +30,10 @@ public final class TortleShellClientEvents {
             "textures/misc/shell_crack_none.png"
     );
 
-    private static final ResourceLocation SHELL_VISION_TEXTURE = new ResourceLocation(
-            AwakeningCompat.MOD_ID,
-            "textures/gui/tortle_shell_vision.png"
-    );
+    private static final int VISION_MASK_COLOR = 0xFF100B07;
+    private static final int VISION_RIM_COLOR = 0xFF382618;
+    private static final float VISION_OPENING_RADIUS = 0.30F;
+    private static final float VISION_RIM_THICKNESS = 0.045F;
 
     private static TortleShellModel model;
     private static CameraType previousCameraType;
@@ -80,10 +79,8 @@ public final class TortleShellClientEvents {
 
     /**
      * Other players still see the closed shell model in world space. For the local
-     * first-person player we intentionally do NOT render the 3D shell around the
-     * camera; doing so lets the near clipping plane intersect the model and creates
-     * the large black planes seen during testing. First-person uses a dedicated
-     * HUD mask instead, like vanilla's carved-pumpkin view.
+     * first-person player we intentionally do not render the 3D shell around the
+     * camera because the near clipping plane intersects that geometry.
      */
     @SubscribeEvent
     public static void onPlayerRenderPre(RenderPlayerEvent.Pre event) {
@@ -114,9 +111,10 @@ public final class TortleShellClientEvents {
     }
 
     /**
-     * Dedicated first-person shell vision. The texture is square and is rendered
-     * using the larger screen dimension so the transparent opening remains truly
-     * circular instead of stretching into an ellipse on widescreen displays.
+     * Procedural first-person shell vision. Nothing is sampled from a texture:
+     * opaque scanline rectangles cover everything except a circular opening in
+     * the middle of the screen. A brown annulus around the opening suggests the
+     * inner lip of the shell while keeping the center completely unobstructed.
      */
     public static void renderShellVision(GuiGraphics graphics, int screenWidth, int screenHeight) {
         Minecraft minecraft = Minecraft.getInstance();
@@ -124,30 +122,53 @@ public final class TortleShellClientEvents {
         if (player == null || !isShelled(player)) return;
         if (minecraft.options.getCameraType() != CameraType.FIRST_PERSON) return;
 
-        int side = Math.max(screenWidth, screenHeight);
-        int x = (screenWidth - side) / 2;
-        int y = (screenHeight - side) / 2;
+        int centerX = screenWidth / 2;
+        int centerY = screenHeight / 2;
+        float basis = Math.min(screenWidth, screenHeight);
+        float innerRadius = Math.max(18.0F, basis * VISION_OPENING_RADIUS);
+        float outerRadius = innerRadius + Math.max(4.0F, basis * VISION_RIM_THICKNESS);
 
-        RenderSystem.disableDepthTest();
-        RenderSystem.depthMask(false);
-        RenderSystem.enableBlend();
-        RenderSystem.defaultBlendFunc();
-        graphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
-        graphics.blit(
-                SHELL_VISION_TEXTURE,
-                x,
-                y,
-                0,
-                0.0F,
-                0.0F,
-                side,
-                side,
-                256,
-                256
-        );
-        graphics.setColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.depthMask(true);
-        RenderSystem.enableDepthTest();
+        // Two GUI pixels per band keeps the circle smooth enough at normal GUI
+        // scales while avoiding hundreds of unnecessary individual draw calls.
+        final int bandHeight = 2;
+        for (int y = 0; y < screenHeight; y += bandHeight) {
+            int yEnd = Math.min(y + bandHeight, screenHeight);
+            float sampleY = y + (yEnd - y) * 0.5F;
+            float dy = sampleY - centerY;
+            float absDy = Math.abs(dy);
+
+            if (absDy >= outerRadius) {
+                graphics.fill(0, y, screenWidth, yEnd, VISION_MASK_COLOR);
+                continue;
+            }
+
+            int outerDx = (int) Math.ceil(Math.sqrt(outerRadius * outerRadius - dy * dy));
+            int outerLeft = Math.max(0, centerX - outerDx);
+            int outerRight = Math.min(screenWidth, centerX + outerDx);
+
+            if (outerLeft > 0) {
+                graphics.fill(0, y, outerLeft, yEnd, VISION_MASK_COLOR);
+            }
+            if (outerRight < screenWidth) {
+                graphics.fill(outerRight, y, screenWidth, yEnd, VISION_MASK_COLOR);
+            }
+
+            if (absDy >= innerRadius) {
+                graphics.fill(outerLeft, y, outerRight, yEnd, VISION_RIM_COLOR);
+                continue;
+            }
+
+            int innerDx = (int) Math.floor(Math.sqrt(innerRadius * innerRadius - dy * dy));
+            int innerLeft = Math.max(outerLeft, centerX - innerDx);
+            int innerRight = Math.min(outerRight, centerX + innerDx);
+
+            if (innerLeft > outerLeft) {
+                graphics.fill(outerLeft, y, innerLeft, yEnd, VISION_RIM_COLOR);
+            }
+            if (innerRight < outerRight) {
+                graphics.fill(innerRight, y, outerRight, yEnd, VISION_RIM_COLOR);
+            }
+        }
     }
 
     @SubscribeEvent

@@ -31,7 +31,9 @@ public final class TortleShellClientModEvents {
 
     @SubscribeEvent
     public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
-        event.registerAboveAll(
+        // Render before the normal HUD so hotbar, health, crosshair, minimap and
+        // other interface elements stay readable, matching vanilla pumpkin vision.
+        event.registerBelowAll(
                 "tortle_shell_vision",
                 (gui, graphics, partialTick, screenWidth, screenHeight) ->
                         TortleShellClientEvents.renderShellVision(graphics, screenWidth, screenHeight)
