@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgclasses:meta/class_selected",
     "rpgclasses:barbarian/start_equipment",
     "rpgclasses:barbarian/rage",
     "rpgclasses:barbarian/gain_rage_on_hit",
