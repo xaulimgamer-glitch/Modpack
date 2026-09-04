@@ -1,0 +1,12 @@
+{
+  "type": "origins:restrict_armor",
+  "name": "Shell-Bound Chest",
+  "description": "Your natural shell occupies your chest, preventing you from wearing chestplates.",
+  "chest": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "item": "awakening_compat:tortle_shell"
+    },
+    "inverted": true
+  }
+}

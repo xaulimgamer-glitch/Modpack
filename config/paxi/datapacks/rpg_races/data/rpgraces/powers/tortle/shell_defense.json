@@ -1,7 +1,7 @@
 {
   "type": "origins:active_self",
-  "name": "Shell Defense",
-  "description": "Retreat into your shell for up to 6 seconds. While withdrawn, you cannot move or act and take 50% less damage from direct attacks, projectiles, and explosions. Press again to emerge early. 60-second cooldown.",
+  "name": "Withdraw Into Shell",
+  "description": "Press your primary active key to withdraw into your shell. While withdrawn, you cannot move or act. Press the key again to emerge.",
   "cooldown": 1,
   "hud_render": {
     "should_render": false

@@ -10,12 +10,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 
 public final class TortleShellAction extends EntityAction<TortleShellAction.Configuration> {
-
-    public static final int ACTIVE_TICKS = 120;
-    public static final int COOLDOWN_TICKS = 1200;
-    public static final String COOLDOWN_TAG = "AwakeningTortleShellCooldownUntil";
 
     public TortleShellAction() {
         super(Configuration.CODEC);
@@ -27,26 +24,22 @@ public final class TortleShellAction extends EntityAction<TortleShellAction.Conf
             return;
         }
 
+        if (!player.getItemBySlot(EquipmentSlot.CHEST).is(TortleShellRegistries.TORTLE_SHELL_ITEM.get())) {
+            player.displayClientMessage(Component.literal("Your natural shell is not in place."), true);
+            return;
+        }
+
         if (player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get())) {
             player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
             player.level().playSound(null, player.blockPosition(), SoundEvents.ARMOR_EQUIP_TURTLE, SoundSource.PLAYERS, 0.7F, 1.15F);
             return;
         }
 
-        long now = player.level().getGameTime();
-        long cooldownUntil = player.getPersistentData().getLong(COOLDOWN_TAG);
-        if (cooldownUntil > now) {
-            long remainingSeconds = (cooldownUntil - now + 19L) / 20L;
-            player.displayClientMessage(Component.literal("Shell Defense: " + remainingSeconds + "s cooldown remaining"), true);
-            return;
-        }
-
-        player.getPersistentData().putLong(COOLDOWN_TAG, now + COOLDOWN_TICKS);
         player.stopUsingItem();
         player.setSprinting(false);
         player.addEffect(new MobEffectInstance(
                 TortleShellRegistries.TORTLE_SHELL_EFFECT.get(),
-                ACTIVE_TICKS,
+                Integer.MAX_VALUE,
                 0,
                 false,
                 false,

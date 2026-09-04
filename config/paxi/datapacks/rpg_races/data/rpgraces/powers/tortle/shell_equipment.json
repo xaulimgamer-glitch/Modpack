@@ -1,0 +1,12 @@
+{
+  "type": "origins:starting_equipment",
+  "name": "Natural Shell",
+  "description": "Your shell occupies the chest armor slot and cannot be replaced by a chestplate.",
+  "recurrent": true,
+  "stack": {
+    "item": "awakening_compat:tortle_shell",
+    "amount": 1,
+    "slot": 38,
+    "tag": "{Unbreakable:1b,Enchantments:[{id:\"minecraft:binding_curse\",lvl:1s}],HideFlags:5}"
+  }
+}
