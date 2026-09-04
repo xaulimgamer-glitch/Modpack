@@ -136,6 +136,7 @@
 	[origins."rpgraces:human"]
 		enabled = true
 		"rpgraces:human/adaptivelearning" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgclasses:ranger"]
 		enabled = true
@@ -174,6 +175,7 @@
 		"rpgraces:woodwoad/verdant_touch" = true
 		"rpgraces:woodwoad/verdant_exhaustion" = true
 		"rpgraces:woodwoad/exhaustion_effects" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:myconid"]
 		enabled = true
@@ -189,6 +191,7 @@
 		"rpgraces:generic/dark_vision/common" = true
 		"rpgraces:myconid/fungalbody" = true
 		"rpgraces:myconid/natural_mechanics" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:ravenfolk"]
 		enabled = true
@@ -198,6 +201,7 @@
 		"rpgraces:ravenfolk/wings" = true
 		"rpgraces:ravenfolk/flimsy" = true
 		"rpgraces:generic/feather_fall/m50p" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:frogfolk"]
 		enabled = true
@@ -217,6 +221,7 @@
 		"rpgraces:frogfolk/moisture" = true
 		"rpgraces:frogfolk/hydrated" = true
 		"rpgraces:frogfolk/dry" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:giantborn"]
 		enabled = true
@@ -230,6 +235,7 @@
 		"rpgraces:generic/move_speed/m5p" = true
 		"rpgraces:generic/metabolism/p30p" = true
 		"rpgraces:generic/feather_fall/p10p" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:feline"]
 		enabled = true
@@ -247,6 +253,7 @@
 		"rpgraces:feline/sprintjump" = true
 		"origins:scare_creepers" = true
 		"rpgraces:feline/velvet_paws" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:elf"]
 		enabled = true
@@ -254,6 +261,7 @@
 		"rpgraces:generic/move_speed/p5p" = true
 		"rpgraces:generic/feather_fall/m25p" = true
 		"rpgraces:elf/elf_finesse" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:orc"]
 		enabled = true
@@ -262,6 +270,7 @@
 		"rpgraces:generic/health/p2h" = true
 		"rpgraces:generic/metabolism/p20p" = true
 		"rpgraces:orc/skin" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:faerie"]
 		enabled = true
@@ -277,6 +286,7 @@
 		"rpgraces:arcaneskin" = true
 		"rpgraces:faerie/faerieparticles" = true
 		"rpgraces:faerie/arcaneskin" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:dwarf"]
 		enabled = true
@@ -285,6 +295,7 @@
 		"rpgraces:generic/dark_vision/common" = true
 		"rpgraces:dwarf/dwarven_mining" = true
 		"rpgraces:generic/metabolism/p20p" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:tortle"]
 		enabled = true
@@ -316,12 +327,14 @@
 		"rpgraces:tortle/shell_no_entity_use" = true
 		"rpgraces:tortle/shell_no_sprint" = true
 		"rpgraces:tortle/shell_reset" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
 		"rpgraces:dragonborn/size" = true
 		"rpgraces:generic/metanbolism/p10p" = true
 		"rpgraces:generic/metabolism/p10p" = true
+		"rpgraces:meta/race_selected" = true
 
 	[origins."rpgraces:lineage/dragonborn/ice"]
 		enabled = true
