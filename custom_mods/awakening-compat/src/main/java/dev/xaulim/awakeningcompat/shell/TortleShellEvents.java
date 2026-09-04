@@ -2,6 +2,7 @@ package dev.xaulim.awakeningcompat.shell;
 
 import dev.xaulim.awakeningcompat.AwakeningCompat;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,12 +10,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -77,11 +80,31 @@ public final class TortleShellEvents {
         if (isShelled(event.getEntity())) event.setCanceled(true);
     }
 
+    /**
+     * Corpse snapshots the player's death inventory. Removing the racial shell
+     * at HIGHEST priority keeps it out of that snapshot entirely.
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onDeath(LivingDeathEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player
+                && TortleShellLifecycle.isOwner(player)) {
+            TortleShellLifecycle.prepareForDeath(player);
+        }
+    }
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !isShelled(event.player)) return;
+        if (event.phase != TickEvent.Phase.END) return;
 
         Player player = event.player;
+        if (!player.level().isClientSide && player instanceof ServerPlayer serverPlayer) {
+            // Continuous invariant repair also deletes shells recovered from
+            // legacy corpses or inventories created by older builds.
+            TortleShellLifecycle.sanitize(serverPlayer);
+        }
+
+        if (!isShelled(player)) return;
+
         if (!hasNaturalShell(player)) {
             player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
             return;
@@ -103,11 +126,24 @@ public final class TortleShellEvents {
     @SubscribeEvent
     public static void onClone(PlayerEvent.Clone event) {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+
+        if (event.getOriginal() instanceof ServerPlayer original
+                && event.getEntity() instanceof ServerPlayer clone) {
+            TortleShellLifecycle.copyOwnership(original, clone);
+            if (TortleShellLifecycle.isOwner(clone)) {
+                TortleShellLifecycle.gainShell(clone);
+            } else {
+                TortleShellLifecycle.loseShell(clone);
+            }
+        }
     }
 
     @SubscribeEvent
     public static void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        if (event.getEntity() instanceof ServerPlayer player) {
+            TortleShellLifecycle.sanitize(player);
+        }
     }
 
     @SubscribeEvent
