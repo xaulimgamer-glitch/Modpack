@@ -15,9 +15,6 @@
 				""
 				"A Race may alter your size, health, movement, senses, environmental weaknesses, passive traits, or grant active racial abilities."
 				""
-				""
-				"{@pagebreak}"
-				""
 				"Some races make use of the &lPrimary Racial Ability&r or &lSecondary Racial Ability&r keybinds. If your chosen Race grants an active ability, make sure these controls are properly bound."
 				""
 				"&lChoose carefully.&r Your Race is intended to be a meaningful part of your character, not a temporary loadout."
@@ -32,6 +29,7 @@
 			}]
 			tasks: [{
 				advancement: "rpgraces:progression/race_selected"
+				criterion: ""
 				id: "2D97B586F5746731"
 				type: "advancement"
 			}]
@@ -185,7 +183,7 @@
 				title: "Teams & Cooperation"
 				type: "checkmark"
 			}]
-			title: "Controls & Keybinds"
+			title: "Controls \\& Keybinds"
 			x: 0.5d
 			y: -2.5d
 		}

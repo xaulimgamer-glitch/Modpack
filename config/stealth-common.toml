@@ -1,0 +1,81 @@
+
+[general]
+	#If true, players MUST crouch to see the stealth HUD. If false, the HUD is always visible.
+	#Note: This is synchronized from the server to all connected clients on join/reload.
+	require_crouch_for_hud = true
+	#If true, the server exactly calculates the player's visibility (incl. accurate skylight) and sends it to the HUD.
+	#Disable this on large servers to save massive amounts of TPS and network bandwidth! (The client will then estimate it locally).
+	accurate_hud_sync = true
+	#Controls the update rate of the sound waves HUD to perfectly balance fidelity and performance.
+	#Allowed Values: FAST, OPTIMAL, LOW
+	sound_sync_mode = "OPTIMAL"
+	#Base detection range of mobs in blocks.
+	#Range: 1.0 ~ 128.0
+	base_detection_range = 16.0
+	#Field of view (FOV) of mobs in degrees.
+	#Range: 10.0 ~ 360.0
+	fov_degrees = 80.0
+	#Enables or disables the damage bonus for attacks from behind.
+	backstab_enabled = true
+	#Damage multiplier for successful backstab attacks.
+	#Range: 1.0 ~ 100.0
+	backstab_multiplier = 3.0
+	#Sound effect played on a successful backstab attack. Format: 'modid:sound_event' (use 'none' to disable)
+	backstab_sound = "stealth:backstab"
+	#Particle effect spawned on a successful backstab attack. Format: 'modid:particle_type' (use 'none' to disable)
+	backstab_particle = "minecraft:crit"
+	#List of mobs that completely ignore the stealth system. Format: 'modid:entity'
+	blacklisted_mobs = ["minecraft:ender_dragon", "minecraft:wither", "minecraft:vex", "minecraft:phantom", "minecraft:warden"]
+	#List of mobs that are ignored for threat level alerts and sounds. Format: 'modid:entity'
+	alert_ignored_mobs = []
+	#Should the follow range of blacklisted mobs still be boosted to match the stealth config values?
+	boost_ignored_mobs_range = false
+
+[light]
+	#Artificially increases the overall base light level (makes hiding more difficult).
+	#Range: 0.0 ~ 15.0
+	overall_light_multiplier = 0.0
+	#Should the light from held items (torches, etc.) increase the player's visibility?
+	dynamic_lights_enabled = true
+	#List of items and their light levels in the format 'modid:item;level'.
+	dynamic_light_sources = ["minecraft:torch;14", "minecraft:soul_torch;10", "minecraft:lantern;15", "minecraft:soul_lantern;10", "minecraft:glow_berries;14", "minecraft:lava_bucket;15", "minecraft:sea_lantern;15", "minecraft:glowstone;15"]
+
+[vibrations]
+	#Should mobs react to vibrations (footsteps, block breaking, etc.)?
+	vibration_detection_enabled = true
+	#Base hearing range of mobs in blocks (how far they detect vibrations).
+	#Range: 1 ~ 128
+	base_hearing_range = 16
+	#Priority of vibration events. Format: 'game_event_id;priority' (Higher = More important).
+	vibration_priorities = ["minecraft:block_activate;5.0", "minecraft:block_attach;4.0", "minecraft:block_change;4.0", "minecraft:block_close;5.0", "minecraft:block_deactivate;4.0", "minecraft:block_destroy;8.0", "minecraft:block_detach;4.0", "minecraft:block_open;5.0", "minecraft:block_place;6.0", "minecraft:container_close;5.0", "minecraft:container_open;5.0", "minecraft:drink;3.0", "minecraft:eat;3.0", "minecraft:elytra_glide;2.0", "minecraft:entity_damage;6.0", "minecraft:entity_die;8.0", "minecraft:entity_dismount;3.0", "minecraft:entity_interact;3.0", "minecraft:entity_mount;3.0", "minecraft:entity_place;4.0", "minecraft:entity_roar;9.0", "minecraft:entity_shake;4.0", "minecraft:equip;4.0", "minecraft:explode;10.0", "minecraft:flap;3.0", "minecraft:fluid_pickup;5.0", "minecraft:fluid_place;5.0", "minecraft:hit_ground;5.0", "minecraft:instrument_play;7.0", "minecraft:item_interact_finish;3.0", "minecraft:item_interact_start;3.0", "minecraft:jukebox_play;20.0", "minecraft:jukebox_stop_play;4.0", "minecraft:lightning_strike;15.0", "minecraft:note_block_play;6.0", "minecraft:prime_fuse;9.0", "minecraft:projectile_land;10.0", "minecraft:projectile_shoot;7.0", "minecraft:sculk_sensor_tendrils_clicking;2.0", "minecraft:shear;3.0", "minecraft:shriek;12.0", "minecraft:splash;6.0", "minecraft:step;5.0", "minecraft:swim;4.0", "minecraft:teleport;12.0", "minecraft:resonate_1;5.0", "minecraft:resonate_2;5.0", "minecraft:resonate_3;5.0", "minecraft:resonate_4;5.0", "minecraft:resonate_5;5.0", "minecraft:resonate_6;5.0", "minecraft:resonate_7;5.0", "minecraft:resonate_8;5.0", "minecraft:resonate_9;5.0", "minecraft:resonate_10;5.0", "minecraft:resonate_11;5.0", "minecraft:resonate_12;5.0", "minecraft:resonate_13;5.0", "minecraft:resonate_14;5.0", "minecraft:resonate_15;5.0"]
+	#List of game events that are considered worldwide escalations.
+	escalation_events = ["minecraft:entity_damage", "minecraft:entity_die", "minecraft:entity_roar", "minecraft:explode"]
+
+[ai]
+	#Base movement speed multiplier when investigating a distraction.
+	#Range: 0.1 ~ 3.0
+	distraction_base_speed = 0.8
+	#Additional movement speed added based on alert level (speed = base + alert * bonus).
+	#Range: 0.0 ~ 3.0
+	distraction_alert_speed_bonus = 0.6
+	#Speed multiplier applied when a TIMID mob (like a Villager) flees from a vibration.
+	#Range: 0.5 ~ 3.0
+	timid_flee_speed_multiplier = 1.3
+	#Alert level threshold at which mobs stop and look towards the vibration (Phase 1).
+	#Range: 0.0 ~ 1.0
+	look_only_threshold = 0.2
+	#Alert level threshold required for mobs to actually walk to or flee from the vibration (Phase 2).
+	#Range: 0.0 ~ 1.0
+	investigate_threshold = 0.45
+	#Mobs that only turn and look towards sound but NEVER move to investigate. Format: 'modid:entity'
+	passive_behavior_mobs = ["minecraft:cow", "minecraft:sheep", "minecraft:pig", "minecraft:chicken"]
+	#Mobs that actively flee AWAY from vibration locations at high alert (e.g. Villagers). Format: 'modid:entity'
+	timid_behavior_mobs = ["minecraft:villager"]
+	#Percentage chance (0-100) that ANY individual mob gets assigned a passive personality based on its UUID.
+	#Range: 0 ~ 100
+	random_passive_chance = 15
+
+[sound]
+	#Noise multiplier for armor materials. Format: 'material_name;multiplier'.
+	armor_noise_multipliers = ["leather;0.05", "chainmail;0.15", "golden;0.20", "iron;0.30", "diamond;0.20", "netherite;0.25"]
+
