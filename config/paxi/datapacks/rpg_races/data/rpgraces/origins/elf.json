@@ -1,5 +1,6 @@
 {
   "powers": [
+    "rpgraces:meta/race_selected",
     "rpgraces:elf/size",
     "rpgraces:generic/move_speed/p5p",
     "rpgraces:elf/elf_finesse",
