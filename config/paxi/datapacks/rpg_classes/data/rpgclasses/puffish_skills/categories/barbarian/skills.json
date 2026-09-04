@@ -1,8 +1,1 @@
-{
-  "integration_test": {
-    "x": 0,
-    "y": 0,
-    "definition": "integration_test",
-    "root": true
-  }
-}
+{"rage":{"x":0,"y":0,"definition":"rage","root":true},"battle_hardened":{"x":0,"y":-48,"definition":"battle_hardened"},"reckless_assault":{"x":-48,"y":-96,"definition":"reckless_assault"},"relentless_fury":{"x":48,"y":-144,"definition":"relentless_fury"},"unstoppable_rage":{"x":0,"y":-192,"definition":"unstoppable_rage"}}

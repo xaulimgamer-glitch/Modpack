@@ -1,16 +1,1 @@
-{
-  "integration_test": {
-    "title": "Barbarian Integration Test",
-    "description": "Temporary node used to verify the Pufferfish and Origins bridge.",
-
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:iron_axe"
-      }
-    },
-
-    "frame": "task",
-    "cost": 0
-  }
-}
+{"rage":{"title":"Rage","description":"Establish Rage as the Barbarian's core combat resource and momentum loop.","icon":{"type":"item","data":{"item":"minecraft:iron_axe"}},"frame":"task","cost":0},"battle_hardened":{"title":"Battle Hardened","description":"Improve survivability while preserving the class's lighter-armor, aggressive identity.","icon":{"type":"item","data":{"item":"minecraft:leather_chestplate"}},"frame":"task","cost":1},"reckless_assault":{"title":"Reckless Assault","description":"Trade safety for greater offensive pressure through an intentional risk-reward option.","icon":{"type":"item","data":{"item":"minecraft:stone_axe"}},"frame":"task","cost":1},"relentless_fury":{"title":"Relentless Fury","description":"Reward sustained meaningful combat by helping preserve and stabilize Rage.","icon":{"type":"item","data":{"item":"minecraft:redstone"}},"frame":"task","cost":1},"unstoppable_rage":{"title":"Unstoppable Rage","description":"Evolve high Rage into a major resilience and momentum window.","icon":{"type":"item","data":{"item":"minecraft:netherite_axe"}},"frame":"challenge","cost":1}}

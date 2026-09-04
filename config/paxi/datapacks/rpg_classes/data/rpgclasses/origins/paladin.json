@@ -1,15 +1,1 @@
-{
-  "powers": [
-    "rpgclasses:paladin/start_equipment"
-  ],
-
-  "icon": {
-    "item": "minecraft:shield"
-  },
-
-  "order": 1,
-  "impact": 1,
-
-  "name": "Paladin",
-  "description": "A holy warrior who combines martial combat with divine magic."
-}
+{"powers":["rpgclasses:paladin/start_equipment","rpgclasses:paladin/pufferfish_skill_tree"],"icon":{"item":"minecraft:shield"},"order":1,"impact":1,"name":"Paladin","description":"A holy warrior who combines martial combat with divine magic."}

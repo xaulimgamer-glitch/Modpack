@@ -1,15 +1,1 @@
-{
-  "powers": [
-    "rpgclasses:rogue/start_equipment"
-  ],
-
-  "icon": {
-    "item": "minecraft:iron_sword"
-  },
-
-  "order": 1,
-  "impact": 1,
-
-  "name": "Rogue",
-  "description": "A cunning and agile fighter who excels at stealth and precision attacks."
-}
+{"powers":["rpgclasses:rogue/start_equipment","rpgclasses:rogue/pufferfish_skill_tree"],"icon":{"item":"minecraft:iron_sword"},"order":1,"impact":1,"name":"Rogue","description":"A cunning and agile fighter who excels at stealth and precision attacks."}

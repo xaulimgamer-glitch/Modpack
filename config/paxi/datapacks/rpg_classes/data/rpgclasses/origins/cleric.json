@@ -1,15 +1,1 @@
-{
-  "powers": [
-    "rpgclasses:cleric/start_equipment"
-  ],
-
-  "icon": {
-    "item": "minecraft:stick"
-  },
-
-  "order": 1,
-  "impact": 1,
-
-  "name": "Cleric",
-  "description": "A master of divine magic who wields healing spells and spiritual power."
-}
+{"powers":["rpgclasses:cleric/start_equipment","rpgclasses:cleric/pufferfish_skill_tree"],"icon":{"item":"minecraft:stick"},"order":1,"impact":1,"name":"Cleric","description":"A master of divine magic who wields healing spells and spiritual power."}

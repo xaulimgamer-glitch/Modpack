@@ -1,15 +1,1 @@
-{
-  "powers": [
-    "rpgclasses:wizard/start_equipment"
-  ],
-
-  "icon": {
-    "item": "minecraft:book"
-  },
-
-  "order": 1,
-  "impact": 1,
-
-  "name": "Wizard",
-  "description": "A master of arcane arts who wields powerful spells and magical knowledge."
-}
+{"powers":["rpgclasses:wizard/start_equipment","rpgclasses:wizard/pufferfish_skill_tree"],"icon":{"item":"minecraft:book"},"order":1,"impact":1,"name":"Wizard","description":"A master of arcane arts who wields powerful spells and magical knowledge."}
