@@ -36,6 +36,15 @@ public final class TortleShellItem extends ArmorItem {
         return false;
     }
 
+    /**
+     * The racial shell keeps Curse of Binding for its gameplay purpose, but it
+     * should never display Minecraft's enchantment glint.
+     */
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        return false;
+    }
+
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
         return ARMOR_TEXTURE;
