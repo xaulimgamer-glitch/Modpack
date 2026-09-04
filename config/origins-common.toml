@@ -334,6 +334,8 @@
 		"rpgraces:tortle/shell_no_sprint" = true
 		"rpgraces:tortle/shell_reset" = true
 		"rpgraces:meta/race_selected" = true
+		"rpgraces:tortle/shell_equipment" = true
+		"rpgraces:tortle/no_chestplates" = true
 
 	[origins."rpgraces:dragonborn"]
 		enabled = true
