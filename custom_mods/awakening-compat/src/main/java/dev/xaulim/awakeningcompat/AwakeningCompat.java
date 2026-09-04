@@ -1,5 +1,6 @@
 package dev.xaulim.awakeningcompat;
 
+import dev.xaulim.awakeningcompat.shell.TortleShellRegistries;
 import dev.xaulim.awakeningironscompat.action.ModActions;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -15,5 +16,6 @@ public final class AwakeningCompat {
                 FMLJavaModLoadingContext.get().getModEventBus();
 
         ModActions.register(modEventBus);
+        TortleShellRegistries.register(modEventBus);
     }
 }
