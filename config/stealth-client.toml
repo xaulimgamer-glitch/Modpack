@@ -3,5 +3,5 @@
 	#Toggles the entire Stealth HUD (eye, dagger, sound waves) on or off in-game.
 	hud_enabled = true
 	#Toggles the 'Stealth HUD' button in the pause menu (ESC) on or off.
-	hud_editor_button_enabled = true
+	hud_editor_button_enabled = false
 

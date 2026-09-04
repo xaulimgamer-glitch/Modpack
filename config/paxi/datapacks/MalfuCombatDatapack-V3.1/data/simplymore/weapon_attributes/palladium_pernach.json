@@ -1,8 +1,0 @@
-{
-  "parent": "simplymore:template_mace",
-  "attributes": {
-    "attack_range": 2.5,
-    "two_handed": false,
-    "category": "mace"
-  }
-}
