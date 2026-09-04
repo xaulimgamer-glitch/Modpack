@@ -2,6 +2,8 @@ package dev.xaulim.awakeningcompat.shell.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import dev.xaulim.awakeningcompat.AwakeningCompat;
+import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
@@ -9,6 +11,7 @@ import net.minecraft.client.model.geom.builders.CubeListBuilder;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.PartDefinition;
+import net.minecraft.resources.ResourceLocation;
 
 /**
  * Shell geometry adapted from GritShell / Dirty Monster 1.20.1-1.2 (MIT).
@@ -16,10 +19,15 @@ import net.minecraft.client.model.geom.builders.PartDefinition;
  */
 public final class TortleShellModel {
 
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
+            new ResourceLocation(AwakeningCompat.MOD_ID, "tortle_shell"),
+            "main"
+    );
+
     private final ModelPart root;
 
-    public TortleShellModel() {
-        this.root = createLayer().bakeRoot();
+    public TortleShellModel(ModelPart root) {
+        this.root = root;
     }
 
     public void render(
@@ -40,7 +48,7 @@ public final class TortleShellModel {
         );
     }
 
-    private static LayerDefinition createLayer() {
+    public static LayerDefinition createBodyLayer() {
         MeshDefinition mesh = new MeshDefinition();
         PartDefinition meshRoot = mesh.getRoot();
 
