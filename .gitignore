@@ -9,8 +9,23 @@ stats/
 advancements/
 schematics/
 journeymap/data/
-xaeroworldmap/
-xaerominimap/
+
+# ==========================================
+# Xaero - mapas, waypoints e dados de mundos
+# ==========================================
+xaero/
+XaeroWaypoints_BACKUP*/
+
+# ==========================================
+# ModernFix - dados gerados em runtime
+# ==========================================
+modernfix/
+
+# Preferências locais da instância
+user-prefs.json
+
+# Builds locais dos custom mods
+custom_mods/*/bin/
 
 # ==========================================
 # Logs, Caches e Arquivos Temporários
@@ -51,7 +66,6 @@ desktop.ini
 .curseforge/
 .prism/
 .modrinth/
-
 
 # Launcher specific & local
 .curseclient
