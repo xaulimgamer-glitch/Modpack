@@ -4,8 +4,6 @@ import dev.xaulim.awakeningcompat.AwakeningCompat;
 import io.github.edwinmindcraft.origins.api.capabilities.IOriginContainer;
 import io.github.edwinmindcraft.origins.api.origin.OriginLayer;
 import io.github.edwinmindcraft.origins.api.registry.OriginsDynamicRegistries;
-import io.github.edwinmindcraft.origins.common.OriginsCommon;
-import io.github.edwinmindcraft.origins.common.network.S2COpenOriginScreen;
 import io.github.edwinmindcraft.origins.common.registry.OriginRegisters;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +25,7 @@ import java.util.UUID;
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID)
 public final class AwakeningNetwork {
 
-    private static final String PROTOCOL_VERSION = "2";
+    private static final String PROTOCOL_VERSION = "3";
     private static final int ORIGINS_GUI_DELAY_TICKS = 20;
 
     private static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
@@ -60,7 +58,10 @@ public final class AwakeningNetwork {
         }
     }
 
-    private record PendingOriginsSelection(int executeAtTick) {}
+    private record PendingOriginsSelection(
+            OriginsSelectionTarget target,
+            int executeAtTick
+    ) {}
 
     public static void register() {
         if (registered) return;
@@ -74,6 +75,16 @@ public final class AwakeningNetwork {
                 .encoder(CloseQuestBookPacket::encode)
                 .decoder(CloseQuestBookPacket::decode)
                 .consumerMainThread(CloseQuestBookPacket::handle)
+                .add();
+
+        CHANNEL.messageBuilder(
+                        OpenOriginsSelectionPacket.class,
+                        nextMessageId++,
+                        NetworkDirection.PLAY_TO_CLIENT
+                )
+                .encoder(OpenOriginsSelectionPacket::encode)
+                .decoder(OpenOriginsSelectionPacket::decode)
+                .consumerMainThread(OpenOriginsSelectionPacket::handle)
                 .add();
     }
 
@@ -91,24 +102,16 @@ public final class AwakeningNetwork {
         MinecraftServer server = player.getServer();
         if (server == null) return;
 
-        // Close FTB Quests immediately.
         closeQuestBook(player);
 
-        // Origins' own /origin gui command prepares the requested layer and opens
-        // the client screen in the same operation. On a player's first invocation,
-        // the client can receive the open-screen signal before its local origin
-        // container reflects the newly-empty layer. The first command then only
-        // "primes" the layer, which is why repeating the quest works.
-        //
-        // Reproduce the preparation step here first, using the same operations as
-        // OriginCommand.openLayerScreen(), then wait one second before sending the
-        // Origins open-screen packet. This gives S2CSynchronizeOrigin time to reach
-        // and update the client before Origins checks which layers are unchosen.
+        // Prepare the requested Origins layer on the server so choosing an origin
+        // works exactly as it would through /origin gui.
         primeOriginsLayer(player, target);
 
         PENDING_ORIGINS_SELECTIONS.put(
                 player.getUUID(),
                 new PendingOriginsSelection(
+                        target,
                         server.getTickCount() + ORIGINS_GUI_DELAY_TICKS
                 )
         );
@@ -151,14 +154,10 @@ public final class AwakeningNetwork {
             ServerPlayer player = server.getPlayerList().getPlayer(entry.getKey());
             if (player == null) continue;
 
-            openOriginsSelection(player);
+            CHANNEL.send(
+                    PacketDistributor.PLAYER.with(() -> player),
+                    new OpenOriginsSelectionPacket(pending.target().layer())
+            );
         }
-    }
-
-    private static void openOriginsSelection(ServerPlayer player) {
-        OriginsCommon.CHANNEL.send(
-                PacketDistributor.PLAYER.with(() -> player),
-                new S2COpenOriginScreen(false)
-        );
     }
 }
