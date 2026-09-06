@@ -4,18 +4,24 @@ import dev.xaulim.awakeningcompat.AwakeningCompat;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
+@Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID)
 public final class AwakeningNetwork {
 
     private static final String PROTOCOL_VERSION = "2";
+    private static final int ORIGINS_GUI_DELAY_TICKS = 20;
 
     private static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
             .named(new ResourceLocation(AwakeningCompat.MOD_ID, "main"))
@@ -24,7 +30,7 @@ public final class AwakeningNetwork {
             .serverAcceptedVersions(PROTOCOL_VERSION::equals)
             .simpleChannel();
 
-    private static final Map<UUID, OriginsSelectionTarget> PENDING_ORIGINS_SELECTIONS =
+    private static final Map<UUID, PendingOriginsSelection> PENDING_ORIGINS_SELECTIONS =
             new HashMap<>();
 
     private static int nextMessageId = 0;
@@ -47,6 +53,11 @@ public final class AwakeningNetwork {
         }
     }
 
+    private record PendingOriginsSelection(
+            OriginsSelectionTarget target,
+            int executeAtTick
+    ) {}
+
     public static void register() {
         if (registered) return;
         registered = true;
@@ -59,26 +70,6 @@ public final class AwakeningNetwork {
                 .encoder(CloseQuestBookPacket::encode)
                 .decoder(CloseQuestBookPacket::decode)
                 .consumerMainThread(CloseQuestBookPacket::handle)
-                .add();
-
-        CHANNEL.messageBuilder(
-                        PrepareOriginsSelectionPacket.class,
-                        nextMessageId++,
-                        NetworkDirection.PLAY_TO_CLIENT
-                )
-                .encoder(PrepareOriginsSelectionPacket::encode)
-                .decoder(PrepareOriginsSelectionPacket::decode)
-                .consumerMainThread(PrepareOriginsSelectionPacket::handle)
-                .add();
-
-        CHANNEL.messageBuilder(
-                        OriginsSelectionReadyPacket.class,
-                        nextMessageId++,
-                        NetworkDirection.PLAY_TO_SERVER
-                )
-                .encoder(OriginsSelectionReadyPacket::encode)
-                .decoder(OriginsSelectionReadyPacket::decode)
-                .consumerMainThread(OriginsSelectionReadyPacket::handle)
                 .add();
     }
 
@@ -93,24 +84,53 @@ public final class AwakeningNetwork {
             ServerPlayer player,
             OriginsSelectionTarget target
     ) {
-        PENDING_ORIGINS_SELECTIONS.put(player.getUUID(), target);
+        MinecraftServer server = player.getServer();
+        if (server == null) return;
 
-        CHANNEL.send(
-                PacketDistributor.PLAYER.with(() -> player),
-                new PrepareOriginsSelectionPacket()
+        // First dismiss the FTB Quests GUI on the client. Opening Origins in the
+        // same server tick proved unreliable because both mods update the active
+        // screen asynchronously. A full second gives the client enough time to
+        // finish closing the quest book before Origins is asked to open its GUI.
+        closeQuestBook(player);
+
+        PENDING_ORIGINS_SELECTIONS.put(
+                player.getUUID(),
+                new PendingOriginsSelection(
+                        target,
+                        server.getTickCount() + ORIGINS_GUI_DELAY_TICKS
+                )
         );
     }
 
-    static void signalOriginsSelectionReady() {
-        CHANNEL.sendToServer(new OriginsSelectionReadyPacket());
+    @SubscribeEvent
+    public static void onServerTick(TickEvent.ServerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) return;
+
+        MinecraftServer server = event.getServer();
+        int currentTick = server.getTickCount();
+
+        Iterator<Map.Entry<UUID, PendingOriginsSelection>> iterator =
+                PENDING_ORIGINS_SELECTIONS.entrySet().iterator();
+
+        while (iterator.hasNext()) {
+            Map.Entry<UUID, PendingOriginsSelection> entry = iterator.next();
+            PendingOriginsSelection pending = entry.getValue();
+
+            if (currentTick < pending.executeAtTick()) continue;
+
+            iterator.remove();
+
+            ServerPlayer player = server.getPlayerList().getPlayer(entry.getKey());
+            if (player == null) continue;
+
+            openOriginsSelection(player, pending.target());
+        }
     }
 
-    static void completeOriginsSelection(ServerPlayer player) {
-        OriginsSelectionTarget target =
-                PENDING_ORIGINS_SELECTIONS.remove(player.getUUID());
-
-        if (target == null) return;
-
+    private static void openOriginsSelection(
+            ServerPlayer player,
+            OriginsSelectionTarget target
+    ) {
         MinecraftServer server = player.getServer();
         if (server == null) return;
 
