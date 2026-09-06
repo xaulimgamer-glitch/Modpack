@@ -1,6 +1,13 @@
 package dev.xaulim.awakeningcompat.network;
 
 import dev.xaulim.awakeningcompat.AwakeningCompat;
+import io.github.edwinmindcraft.origins.api.capabilities.IOriginContainer;
+import io.github.edwinmindcraft.origins.api.origin.OriginLayer;
+import io.github.edwinmindcraft.origins.api.registry.OriginsDynamicRegistries;
+import io.github.edwinmindcraft.origins.common.OriginsCommon;
+import io.github.edwinmindcraft.origins.common.network.S2COpenOriginScreen;
+import io.github.edwinmindcraft.origins.common.registry.OriginRegisters;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
@@ -39,24 +46,21 @@ public final class AwakeningNetwork {
     private AwakeningNetwork() {}
 
     public enum OriginsSelectionTarget {
-        RACE("rpgraces:races"),
-        CLASS("rpgclasses:class");
+        RACE(new ResourceLocation("rpgraces", "races")),
+        CLASS(new ResourceLocation("rpgclasses", "class"));
 
-        private final String layer;
+        private final ResourceLocation layer;
 
-        OriginsSelectionTarget(String layer) {
+        OriginsSelectionTarget(ResourceLocation layer) {
             this.layer = layer;
         }
 
-        private String layer() {
+        private ResourceLocation layer() {
             return layer;
         }
     }
 
-    private record PendingOriginsSelection(
-            OriginsSelectionTarget target,
-            int executeAtTick
-    ) {}
+    private record PendingOriginsSelection(int executeAtTick) {}
 
     public static void register() {
         if (registered) return;
@@ -87,19 +91,43 @@ public final class AwakeningNetwork {
         MinecraftServer server = player.getServer();
         if (server == null) return;
 
-        // First dismiss the FTB Quests GUI on the client. Opening Origins in the
-        // same server tick proved unreliable because both mods update the active
-        // screen asynchronously. A full second gives the client enough time to
-        // finish closing the quest book before Origins is asked to open its GUI.
+        // Close FTB Quests immediately.
         closeQuestBook(player);
+
+        // Origins' own /origin gui command prepares the requested layer and opens
+        // the client screen in the same operation. On a player's first invocation,
+        // the client can receive the open-screen signal before its local origin
+        // container reflects the newly-empty layer. The first command then only
+        // "primes" the layer, which is why repeating the quest works.
+        //
+        // Reproduce the preparation step here first, using the same operations as
+        // OriginCommand.openLayerScreen(), then wait one second before sending the
+        // Origins open-screen packet. This gives S2CSynchronizeOrigin time to reach
+        // and update the client before Origins checks which layers are unchosen.
+        primeOriginsLayer(player, target);
 
         PENDING_ORIGINS_SELECTIONS.put(
                 player.getUUID(),
                 new PendingOriginsSelection(
-                        target,
                         server.getTickCount() + ORIGINS_GUI_DELAY_TICKS
                 )
         );
+    }
+
+    private static void primeOriginsLayer(
+            ServerPlayer player,
+            OriginsSelectionTarget target
+    ) {
+        ResourceKey<OriginLayer> layerKey = ResourceKey.create(
+                OriginsDynamicRegistries.LAYERS_REGISTRY,
+                target.layer()
+        );
+
+        IOriginContainer.get(player).ifPresent(container -> {
+            container.setOrigin(layerKey, OriginRegisters.EMPTY.getKey());
+            container.synchronize();
+            container.checkAutoChoosingLayers(false);
+        });
     }
 
     @SubscribeEvent
@@ -123,23 +151,14 @@ public final class AwakeningNetwork {
             ServerPlayer player = server.getPlayerList().getPlayer(entry.getKey());
             if (player == null) continue;
 
-            openOriginsSelection(player, pending.target());
+            openOriginsSelection(player);
         }
     }
 
-    private static void openOriginsSelection(
-            ServerPlayer player,
-            OriginsSelectionTarget target
-    ) {
-        MinecraftServer server = player.getServer();
-        if (server == null) return;
-
-        String playerName = player.getGameProfile().getName();
-        server.getCommands().performPrefixedCommand(
-                player.createCommandSourceStack()
-                        .withPermission(2)
-                        .withSuppressedOutput(),
-                "origin gui " + playerName + " " + target.layer()
+    private static void openOriginsSelection(ServerPlayer player) {
+        OriginsCommon.CHANNEL.send(
+                PacketDistributor.PLAYER.with(() -> player),
+                new S2COpenOriginScreen(false)
         );
     }
 }
