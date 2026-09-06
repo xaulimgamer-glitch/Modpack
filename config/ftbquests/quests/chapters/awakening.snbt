@@ -23,7 +23,9 @@
 			icon: "minecraft:totem_of_undying"
 			id: "7E3686EFDC4E8DD2"
 			rewards: [{
+				auto: "enabled"
 				command: "/origin gui @s rpgclasses:class"
+				icon: "minecraft:book"
 				id: "40FA202E0A6C2AAB"
 				title: "Class"
 				type: "command"
@@ -97,7 +99,9 @@
 			icon: "minecraft:recovery_compass"
 			id: "3607013B90D69E87"
 			rewards: [{
+				auto: "enabled"
 				command: "/origin gui @s rpgraces:races"
+				icon: "minecraft:ender_eye"
 				id: "5092AB51EED84B2B"
 				title: "Race"
 				type: "command"
@@ -221,7 +225,9 @@
 			icon: "minecraft:compass"
 			id: "0C58D5FB226A6BC0"
 			rewards: [{
-				command: "/ftbranks add @s team_access"
+				command: "/ftbranks add @p team_access"
+				elevate_perms: true
+				icon: "minecraft:bell"
 				id: "4A3A2E13C5A3D6F1"
 				title: "Team Access"
 				type: "command"
