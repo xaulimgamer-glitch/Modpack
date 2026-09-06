@@ -23,10 +23,16 @@ public final class CloseQuestBookPacket {
             Supplier<NetworkEvent.Context> contextSupplier
     ) {
         NetworkEvent.Context context = contextSupplier.get();
-        context.enqueueWork(() -> DistExecutor.unsafeRunWhenOn(
+
+        // AwakeningNetwork registers this packet with consumerMainThread(), so the
+        // handler is already running on the client main thread. Enqueueing another
+        // task here delayed setScreen(null) long enough for Origins to open its GUI
+        // first, after which this packet immediately closed that new screen.
+        DistExecutor.unsafeRunWhenOn(
                 Dist.CLIENT,
                 () -> AwakeningClientScreens::closeQuestBook
-        ));
+        );
+
         context.setPacketHandled(true);
     }
 }
