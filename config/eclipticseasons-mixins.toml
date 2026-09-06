@@ -88,3 +88,7 @@
 		MixinBlockRenderer = true
 		MixinFabricVanillaModelEncoder = true
 
+	[compat.oculus]
+		MixinBiomeUniforms = true
+		MixinIrisForgeHelpers = true
+

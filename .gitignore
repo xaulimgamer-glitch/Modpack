@@ -83,3 +83,6 @@ custom_mods/*/.gradle/
 custom_mods/*/build/
 custom_mods/*/run/
 custom_mods/*/run-data/
+
+# Mods grandes que não devem ser armazenados no Git
+mods/zmedievalmusic-*.jar
