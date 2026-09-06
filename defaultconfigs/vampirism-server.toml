@@ -1,2 +1,2 @@
-[internal]
-	infoAboutGuideAPI = false
+[server.internal]
+    infoAboutGuideAPI = false
