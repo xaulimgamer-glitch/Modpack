@@ -4,6 +4,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import dev.xaulim.awakeningcompat.AwakeningCompat;
 import dev.xaulim.awakeningcompat.network.AwakeningNetwork;
+import dev.xaulim.awakeningcompat.network.AwakeningNetwork.OriginsSelectionTarget;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
@@ -16,9 +17,6 @@ import java.util.Collection;
 
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID)
 public final class AwakeningCommands {
-
-    private static final String RACE_LAYER = "rpgraces:races";
-    private static final String CLASS_LAYER = "rpgclasses:class";
 
     private AwakeningCommands() {}
 
@@ -39,16 +37,14 @@ public final class AwakeningCommands {
                         .then(Commands.literal("choose_race")
                                 .then(Commands.argument("players", EntityArgument.players())
                                         .executes(context -> openOriginsSelection(
-                                                context,
                                                 EntityArgument.getPlayers(context, "players"),
-                                                RACE_LAYER
+                                                OriginsSelectionTarget.RACE
                                         ))))
                         .then(Commands.literal("choose_class")
                                 .then(Commands.argument("players", EntityArgument.players())
                                         .executes(context -> openOriginsSelection(
-                                                context,
                                                 EntityArgument.getPlayers(context, "players"),
-                                                CLASS_LAYER
+                                                OriginsSelectionTarget.CLASS
                                         ))))
                         .then(Commands.literal("finish")
                                 .then(Commands.argument("players", EntityArgument.players())
@@ -67,30 +63,14 @@ public final class AwakeningCommands {
     }
 
     private static int openOriginsSelection(
-            CommandContext<CommandSourceStack> context,
             Collection<ServerPlayer> players,
-            String layer
+            OriginsSelectionTarget target
     ) {
-        int successes = 0;
-
         for (ServerPlayer player : players) {
-            AwakeningNetwork.closeQuestBook(player);
-
-            String playerName = player.getGameProfile().getName();
-            int result = context.getSource()
-                    .getServer()
-                    .getCommands()
-                    .performPrefixedCommand(
-                            player.createCommandSourceStack()
-                                    .withPermission(2)
-                                    .withSuppressedOutput(),
-                            "origin gui " + playerName + " " + layer
-                    );
-
-            if (result > 0) successes++;
+            AwakeningNetwork.beginOriginsSelection(player, target);
         }
 
-        return successes;
+        return players.size();
     }
 
     private static int finishAwakening(
