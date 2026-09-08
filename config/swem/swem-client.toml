@@ -3,7 +3,7 @@
 [wings_tansparency]
 	# || Set how visible the horse wings should be! 0 = off, 1 = 25%, 2 = 50%, 3 = 75%, 4 = 100%
 	#Range: 0 ~ 4
-	wingsTransparency = 3
+	wingsTransparency = 4
 
 # || =========== [Gait HUD] =========== ||
 [hud]
@@ -18,19 +18,4 @@
 	# || What color should the gait HUD be?
 	#Range: > -2147483648
 	gaitHudColor = 16777215
-
-# || =========== [Gender] =========== ||
-[gender]
-	# || Should gender icons be shown before horse names?
-	# || Icons only show if the horse is tamed and has a custom name.
-	showGenderIcons = true
-	# || What colour the male icon should appear as.
-	# || This is a hex value, format: #A1B2C3. (Default is #18C0ED)
-	maleIconColor = "#18C0ED"
-	# || What colour the female icon should appear as.
-	# || This is a hex value, format: #A1B2C3. (Default is #FF4DAC)
-	femaleIconColor = "#FF4DAC"
-	# || What colour the icon should appear as, when the horse is infertile.
-	# || This is a hex value, format: #A1B2C3. (Default is #444269)
-	infertileIconColor = "#444269"
 

@@ -14,3 +14,10 @@
 	#This package will be loaded first.
 	PriorityLoading = false
 
+#Adds seasonal and humidity compatibility for abnormal crops.
+[es_dp_x_abnormals]
+	#Enable compat package es_dp_x_abnormals
+	Enable = true
+	#This package will be loaded first.
+	PriorityLoading = false
+
