@@ -30,7 +30,7 @@
         "blacklist": []
       },
       "enabled": true,
-      "requireTool": false,
+      "requireTool": true,
       "allowedToolFilter": {
         "whitelistedTags": [
           "minecraft:axes"
