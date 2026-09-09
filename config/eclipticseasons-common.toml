@@ -14,7 +14,7 @@
 	#Range: -64 ~ 64
 	DayOffset = 2
 	#Display a chat message whenever the Solar Term changes.
-	EnableInform = true
+	EnableInform = false
 	#Include a custom icon in the change notification for better visibility.
 	EnableInformIcon = true
 	#Synchronize the in-game calendar and seasonal data with the server/client local time.

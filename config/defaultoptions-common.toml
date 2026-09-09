@@ -2,7 +2,7 @@
 #Allowed Values: PEACEFUL, EASY, NORMAL, HARD
 defaultDifficulty = "NORMAL"
 #Resource pack IDs to have enabled by default on the first run.
-defaultResourcePacks = ["vanilla", "Ecliptic Seasons - Regions Unexplored", "Ecliptic Seasons - Quark", "mod_resources", "vampirism2dtextures", "Moonlight Mods Dynamic Assets", "rpg_race_visuals", "fabric", "builtin/add_pack_finders_test"]
+defaultResourcePacks = ["file/refined torches 2.1.zip", "Ecliptic Seasons - Quark", "Ecliptic Seasons - Regions Unexplored", "mod_resources", "vanilla", "rpg_race_visuals", "builtin/aether_ctm_fix", "fabric", "Moonlight Mods Dynamic Assets", "builtin/add_pack_finders_test", "file/3D item on coaster.zip", "file/AA_structures-v1.1.1.zip", "file/Angel's_Font_v0.8.zip", "file/Angel's_Weather_v1.9.1.3hf.zip", "file/Better-Leaves-9.5.zip", "file/Better_hunters_2.zip", "file/Simple Lower Grass Sides v1.3.0.zip", "file/Shield Tweaks.zip", "file/SimplySpartanShields.zip", "file/MCAR_VanillaMedieval_Universal_1.20.x_Only_Clothes_byDE4THR4SH_v4.zip", "file/EnderEyes_26.2_v3.1.zip", "file/Cataclysm Reimagined v1.3.5 for Forge.zip", "file/Fresh mowzie mobs v. 1.2.1.zip", "file/Iron's Spells AR v0.1.zip", "file/ISS Reimagined v1.8 for Forge.zip", "file/UnlitCampfireIcons_1.20.zip", "file/yellow_lightning_iss_2.zip", "file/§eArmorstands§8-§eReimagined§0_§8[v1.3]§0.zip", "spelunkery:better_vanilla_gems", "vampirism2dtextures"]
 #Set to true if the difficulty for new world's should be locked to the specific default. This cannot be unlocked by players without external tools! Probably a bad idea. I don't recommend. Why am I adding this option?
 lockDifficulty = false
 
