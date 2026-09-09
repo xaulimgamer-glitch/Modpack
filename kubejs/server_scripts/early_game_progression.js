@@ -107,6 +107,30 @@ ServerEvents.recipes(event => {
   ].forEach(output => event.remove({ output: output }))
 
   // ---------------------------------------------------------------------------
+  // Manual wood processing
+  // ---------------------------------------------------------------------------
+  // Preserve every existing shapeless log -> planks recipe and its output count,
+  // but require an axe as a reusable/damageable processing tool. This avoids
+  // hard-coding every vanilla and modded wood family while still making the
+  // Stone Axe the first access point to crafting-table infrastructure.
+  event.forEachRecipe({
+    type: 'minecraft:crafting_shapeless',
+    input: '#minecraft:logs',
+    output: '#minecraft:planks'
+  }, recipe => {
+    const ingredients = recipe.get('ingredients')
+    const updatedIngredients = []
+
+    for (let i = 0; i < ingredients.size(); i++) {
+      updatedIngredients.push(ingredients.get(i))
+    }
+
+    updatedIngredients.push('#minecraft:axes')
+    recipe.set('ingredients', updatedIngredients)
+    recipe.damageIngredient('#minecraft:axes')
+  })
+
+  // ---------------------------------------------------------------------------
   // Tool assembly
   // Keep Overgeared's custom crafting recipe type so head quality/data can be
   // propagated to the finished item.
