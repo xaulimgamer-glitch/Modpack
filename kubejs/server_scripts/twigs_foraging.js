@@ -1,9 +1,11 @@
-// Awakening - Twigs foraging fallback
+// Awakening - Twigs foraging integration
 // Forge 1.20.1 / KubeJS 6
 //
 // Approved behavior:
-// Breaking leaves by hand has a 20% chance to drop one Twigs twig.
-// This supplements Twigs' native environmental worldgen; it does not replace it.
+// - Breaking leaves by hand has a 20% chance to drop one Twigs twig.
+// - Environmental Twigs pebbles drop Overgeared's knappable rock directly.
+//
+// Twigs' native worldgen remains authoritative for environmental placement.
 
 const AWAKENING_TWIG_FORAGING_CHANCE = 0.20
 
@@ -18,4 +20,18 @@ BlockEvents.broken(event => {
   if (Math.random() >= AWAKENING_TWIG_FORAGING_CHANCE) return
 
   event.block.popItem('twigs:twig')
+})
+
+// Twigs' pebble block normally drops twigs:pebble. Overgeared's stone knapping
+// recipes require overgeared:knappable_rock specifically, so the environmental
+// pebble becomes the pack's natural source of that rock instead of adding an
+// extra inventory conversion step.
+ServerEvents.blockLootTables(event => {
+  event.modifyBlock('twigs:pebble', table => {
+    table.clearPools()
+    table.addPool(pool => {
+      pool.addItem('overgeared:knappable_rock')
+      pool.survivesExplosion()
+    })
+  })
 })
