@@ -38,6 +38,13 @@ function awakeningAddOvergearedAssembly(event, recipeId, output, component, hand
   }).id(`awakening:${recipeId}`)
 }
 
+function awakeningIngredientFromRecipeJson(jsonIngredient) {
+  if (!jsonIngredient) return null
+  if (jsonIngredient.item) return jsonIngredient.item
+  if (jsonIngredient.tag) return `#${jsonIngredient.tag}`
+  return null
+}
+
 ServerEvents.tags('item', event => {
   // A reinforced handle is intentionally backwards-compatible with Stone/Copper.
   // The simple handle is NOT accepted by Iron/Steel recipes below.
@@ -56,7 +63,8 @@ ServerEvents.recipes(event => {
   // the Stone Pickaxe milestone.
   event.remove({ id: 'twigs:cobblestone_from_pebble' })
 
-  // Initial playtest ratio. This is deliberately easy to tune after runtime tests.
+  // Compatibility route for pebbles already held in inventories. Newly gathered
+  // ground pebbles are converted to Overgeared rocks directly by twigs_foraging.js.
   event.shapeless('overgeared:knappable_rock', [
     'twigs:pebble'
   ]).id('awakening:pebble_to_knappable_rock')
@@ -85,11 +93,12 @@ ServerEvents.recipes(event => {
     'farmersdelight:straw'
   ]).id('awakening:simple_handle_from_straw')
 
-  // Approved Iron+ handle gate.
+  // Approved Iron+ handle gate. BetterEnd's leather stripe is the canonical
+  // leather strip after Epic Knights was removed from the pack.
   event.shapeless(AWAKENING_REINFORCED_HANDLE, [
     'minecraft:stick',
-    'magistuarmory:leather_strip'
-  ]).id('awakening:reinforced_handle_from_leather_strip')
+    'betterend:leather_stripe'
+  ]).id('awakening:reinforced_handle_from_leather_strip');
 
   // Farmer's Delight already supplies its primitive flint knife as flint + stick,
   // so no replacement recipe is needed here.
@@ -109,25 +118,37 @@ ServerEvents.recipes(event => {
   // ---------------------------------------------------------------------------
   // Manual wood processing
   // ---------------------------------------------------------------------------
-  // Preserve every existing shapeless log -> planks recipe and its output count,
-  // but require an axe as a reusable/damageable processing tool. This avoids
-  // hard-coding every vanilla and modded wood family while still making the
-  // Stone Axe the first access point to crafting-table infrastructure.
+  // Rebuild direct one-input shapeless log -> planks recipes with an axe as a
+  // damageable tool. Reading recipe.json is reliable in KubeJS 6 and preserves
+  // each original wood family's input and output count without hard-coding them.
   event.forEachRecipe({
     type: 'minecraft:crafting_shapeless',
     input: '#minecraft:logs',
     output: '#minecraft:planks'
   }, recipe => {
-    const ingredients = recipe.get('ingredients')
-    const updatedIngredients = []
+    const json = JSON.parse(recipe.json)
 
-    for (let i = 0; i < ingredients.size(); i++) {
-      updatedIngredients.push(ingredients.get(i))
+    // Only replace the ordinary direct conversion. More complex wood recipes
+    // are left untouched for a later processing-route audit.
+    if (!json.ingredients || json.ingredients.length !== 1 || !json.result) return
+
+    const input = awakeningIngredientFromRecipeJson(json.ingredients[0])
+    const outputId = json.result.item
+    const outputCount = json.result.count || 1
+
+    if (!input || !outputId) {
+      console.warn(`[Awakening/Wood] Could not rewrite plank recipe ${recipe.getId()}`)
+      return
     }
 
-    updatedIngredients.push('#minecraft:axes')
-    recipe.set('ingredients', updatedIngredients)
-    recipe.damageIngredient('#minecraft:axes')
+    const recipeId = recipe.getId()
+    event.remove({ id: recipeId })
+    event.shapeless(Item.of(outputId, outputCount), [
+      input,
+      '#minecraft:axes'
+    ])
+      .damageIngredient('#minecraft:axes')
+      .id(recipeId)
   })
 
   // ---------------------------------------------------------------------------
