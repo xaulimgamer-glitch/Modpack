@@ -2,19 +2,22 @@
 // Basic intermediate items only: original mod weapons are never registered here.
 StartupEvents.registry('item', event => {
   const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
-  if (data.schema !== 1) throw new Error('[Awakening/Parts] Unsupported manifest')
+  const twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
+  if (data.schema !== 1 || twilight.schema !== 1) throw new Error('[Awakening/Parts] Unsupported manifest')
 
-  data.materials.forEach(material => {
+  function registerMaterial(material, weaponTypes) {
     const color = parseInt(material.color, 16)
-    material.weapons.forEach(weapon => {
-      const template = data.templates[weapon.type]
+    weaponTypes.forEach(type => {
+      const template = data.templates[type]
+      if (!template) throw new Error('[Awakening/Parts] Missing template: ' + type)
+      const part = 'awakening:' + material.id + '_' + template.suffix
       const label = template.suffix.split('_').map(word =>
         word.charAt(0).toUpperCase() + word.substring(1)
       ).join(' ')
 
       // KubeJS generates minecraft:item/generated models with the real mod's
       // layer0 texture. Item tint recolors the existing pixels without redrawing.
-      event.create(weapon.part)
+      event.create(part)
         .displayName(material.name + ' ' + label)
         .texture(template.texture)
         .color(0, color)
@@ -25,5 +28,14 @@ StartupEvents.registry('item', event => {
       .texture('minecraft:item/iron_nugget')
       .color(0, color)
       .tooltip('1/9 ingot. Heat in a blast furnace before forging.')
+  }
+
+  data.materials.forEach(material => {
+    registerMaterial(material, material.weapons.map(weapon => weapon.type))
   })
+
+  // Steeleaf and Knightmetal are generated from the same Overgeared part
+  // templates as the existing Twilight materials. Only intermediate items are
+  // registered here; final weapons stay spartantwilight:*.
+  twilight.materials.forEach(material => registerMaterial(material, twilight.weapon_types))
 })
