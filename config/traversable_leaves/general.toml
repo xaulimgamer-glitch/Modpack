@@ -3,7 +3,7 @@
 SpeedPenalty = 50
 
 # Whether Armor value reduces movement penalty | Default: true
-ArmorHelps = true
+ArmorHelps = false
 
 # How much armor is required to completely negate the SpeedPenalty (Range: 0 - 255) | Default: 20
 ArmorCap = 20
