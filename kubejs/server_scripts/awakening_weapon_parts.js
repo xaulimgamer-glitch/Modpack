@@ -6,10 +6,75 @@ function awakeningPartsCopy(value) {
   return JSON.parse(JSON.stringify(value))
 }
 
+function awakeningSteeleafResult(type, item) {
+  const thrown = ['throwing_knife', 'tomahawk', 'javelin', 'boomerang']
+  if (type === 'longbow') return { item: item }
+  if (type === 'heavy_crossbow') {
+    return {
+      type: 'minecraft:item_nbt',
+      item: item,
+      nbt: '{Enchantments:[{id:"minecraft:quick_charge",lvl:2s}]}'
+    }
+  }
+  if (type === 'battleaxe') {
+    return {
+      type: 'minecraft:item_nbt',
+      item: item,
+      nbt: '{Enchantments:[{id:"minecraft:efficiency",lvl:2s},{id:"minecraft:looting",lvl:2s}]}'
+    }
+  }
+  if (thrown.indexOf(type) >= 0) {
+    return {
+      type: 'minecraft:item_nbt',
+      item: item,
+      nbt: '{Enchantments:[{id:"spartanweaponry:lucky_throw",lvl:2s}]}'
+    }
+  }
+  return {
+    type: 'minecraft:item_nbt',
+    item: item,
+    nbt: '{Enchantments:[{id:"minecraft:looting",lvl:2s}]}'
+  }
+}
+
+function awakeningPartsLoadData() {
+  const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
+  const twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
+  if (data.schema !== 1 || twilight.schema !== 1) throw new Error('[Awakening/Parts] Unsupported manifest')
+
+  const ironwood = data.materials.find(material => material.id === 'ironwood')
+  if (!ironwood) throw new Error('[Awakening/Parts] Ironwood prototype missing')
+
+  twilight.materials.forEach(material => {
+    const generated = awakeningPartsCopy(material)
+    generated.weapons = twilight.weapon_types.map(type => {
+      const prototype = ironwood.weapons.find(weapon => weapon.type === type)
+      const template = data.templates[type]
+      if (!prototype || !template) throw new Error('[Awakening/Parts] Missing Twilight prototype/template: ' + type)
+
+      const weapon = awakeningPartsCopy(prototype)
+      weapon.part = 'awakening:' + material.id + '_' + template.suffix
+      weapon.source_recipe = 'spartantwilight:' + material.id + '_' + type
+      weapon.original.key[weapon.material_key] = { tag: material.ingredient_tag }
+
+      const output = 'spartantwilight:' + material.id + '_' + type
+      if (material.id === 'steeleaf') {
+        weapon.original.result = awakeningSteeleafResult(type, output)
+      } else {
+        weapon.original.result = { item: output }
+      }
+      return weapon
+    })
+    data.materials.push(generated)
+  })
+
+  return data
+}
+
 function awakeningPartsAssembly(weapon, template) {
   const original = weapon.original
   const recipe = awakeningPartsCopy(template.assembly)
-  recipe.result = awakeningPartsCopy(original.result) // Includes Ironwood NBT.
+  recipe.result = awakeningPartsCopy(original.result) // Includes Twilight NBT where required.
   recipe.conditions = awakeningPartsCopy(original.conditions || [])
   recipe.group = original.group || ''
 
@@ -50,7 +115,7 @@ function awakeningPartsAssembly(weapon, template) {
 }
 
 ServerEvents.tags('item', event => {
-  const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
+  const data = awakeningPartsLoadData()
   data.materials.forEach(material => {
     material.weapons.forEach(weapon => {
       event.add('awakening:weapon_parts', weapon.part)
@@ -61,7 +126,7 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.recipes(event => {
-  const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
+  const data = awakeningPartsLoadData()
   const pending = []
   const outputs = []
   const heating = {}
