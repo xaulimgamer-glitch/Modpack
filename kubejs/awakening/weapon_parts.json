@@ -1,0 +1,1505 @@
+{
+  "schema": 1,
+  "base_commit": "3e2784c5b7c6ed951212147a867e60dea1ac50e2",
+  "templates": {
+    "battleaxe": {
+      "suffix": "battleaxe_head",
+      "texture": "overgearedspartan:item/iron_battleaxe_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "battle_axe"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "x x",
+          "XXX",
+          "x x"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_battleaxe_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_battleaxe_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_battleaxe"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/battle_axe"
+    },
+    "battle_hammer": {
+      "suffix": "battle_hammer_head",
+      "texture": "overgearedspartan:item/iron_battle_hammer_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "battle_hammer"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "xXx",
+          "XXX"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_battle_hammer_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_battle_hammer_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_battle_hammer"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/battle_hammer"
+    },
+    "boomerang": {
+      "suffix": "boomerang_elbow",
+      "texture": "overgearedspartan:item/iron_boomerang_elbow",
+      "forging": {
+        "type": "overgeared:forging",
+        "category": "misc",
+        "hammering": 3,
+        "has_quality": false,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "need_quenching": false,
+        "needs_minigame": false,
+        "pattern": [
+          "Xx",
+          "x "
+        ],
+        "quality_difficulty": "none",
+        "result": {
+          "item": "overgearedspartan:iron_boomerang_elbow"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "x##",
+          "#  ",
+          "#  "
+        ],
+        "key": {
+          "x": {
+            "item": "overgearedspartan:iron_boomerang_elbow"
+          },
+          "#": {
+            "tag": "minecraft:planks"
+          }
+        },
+        "result": {
+          "item": "spartanweaponry:iron_boomerang"
+        },
+        "show_notification": true
+      },
+      "source": "overgearedspartan:iron/parts/boomerang"
+    },
+    "dagger": {
+      "suffix": "dagger_blade",
+      "texture": "overgearedspartan:item/iron_dagger_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "dagger"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "x",
+          "X"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_dagger_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_dagger_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_dagger"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/dagger"
+    },
+    "flanged_mace": {
+      "suffix": "flanged_mace_head",
+      "texture": "overgearedspartan:item/iron_flanged_mace_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "flanged_mace"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "XX",
+          "XX"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_flanged_mace_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_flanged_mace_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_flanged_mace"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/flanged_mace"
+    },
+    "glaive": {
+      "suffix": "glaive_blade",
+      "texture": "overgearedspartan:item/iron_glaive_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "glaive"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X",
+          "xX",
+          " x"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_glaive_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_glaive_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_glaive"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/glaive"
+    },
+    "greatsword": {
+      "suffix": "greatsword_blade",
+      "texture": "overgearedspartan:item/iron_greatsword_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "greatsword"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X ",
+          " X ",
+          "XXX"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_greatsword_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_greatsword_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_greatsword"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/greatsword"
+    },
+    "halberd": {
+      "suffix": "halberd_head",
+      "texture": "overgearedspartan:item/iron_halberd_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "halberd"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X ",
+          "XX ",
+          "X  "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_halberd_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_halberd_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_halberd"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/halberd"
+    },
+    "heavy_crossbow": {
+      "suffix": "heavy_crossbow_limb",
+      "texture": "overgearedspartan:item/iron_heavy_crossbow_limb",
+      "forging": {
+        "type": "overgeared:forging",
+        "category": "misc",
+        "hammering": 3,
+        "has_quality": false,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "need_quenching": false,
+        "needs_minigame": false,
+        "pattern": [
+          "XXX",
+          " x "
+        ],
+        "quality_difficulty": "none",
+        "result": {
+          "item": "overgearedspartan:iron_heavy_crossbow_limb"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "xll",
+          "l#s",
+          "lst"
+        ],
+        "key": {
+          "x": {
+            "item": "overgearedspartan:iron_heavy_crossbow_limb"
+          },
+          "#": {
+            "tag": "minecraft:planks"
+          },
+          "l": {
+            "item": "minecraft:stick"
+          },
+          "s": {
+            "tag": "forge:string"
+          },
+          "t": {
+            "item": "minecraft:tripwire_hook"
+          }
+        },
+        "result": {
+          "item": "spartanweaponry:iron_heavy_crossbow"
+        },
+        "show_notification": true
+      },
+      "source": "overgearedspartan:iron/parts/heavy_crossbow"
+    },
+    "javelin": {
+      "suffix": "javelin_tip",
+      "texture": "overgearedspartan:item/iron_javelin_tip",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "javelin"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " x",
+          "X "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_javelin_tip"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_javelin_tip"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_javelin"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/javelin"
+    },
+    "katana": {
+      "suffix": "katana_blade",
+      "texture": "overgearedspartan:item/iron_katana_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "katana"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "  X",
+          " X ",
+          "x  "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_katana_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_katana_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_katana"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/katana"
+    },
+    "lance": {
+      "suffix": "lance_tip",
+      "texture": "overgearedspartan:item/iron_lance_tip",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "lance"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "  x",
+          "XX ",
+          " X "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_lance_tip"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_lance_tip"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_lance"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/lance"
+    },
+    "longbow": {
+      "suffix": "longbow_limb",
+      "texture": "overgearedspartan:item/iron_longbow_limb",
+      "forging": {
+        "type": "overgeared:forging",
+        "category": "misc",
+        "hammering": 3,
+        "has_quality": false,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "need_quenching": false,
+        "needs_minigame": false,
+        "pattern": [
+          "XxX",
+          "x  ",
+          "X  "
+        ],
+        "quality_difficulty": "none",
+        "result": {
+          "item": "overgearedspartan:iron_longbow_limb"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "xll",
+          "l s",
+          "lss"
+        ],
+        "key": {
+          "x": {
+            "item": "overgearedspartan:iron_longbow_limb"
+          },
+          "l": {
+            "item": "minecraft:stick"
+          },
+          "s": {
+            "tag": "forge:string"
+          }
+        },
+        "result": {
+          "item": "spartanweaponry:iron_longbow"
+        },
+        "show_notification": true
+      },
+      "source": "overgearedspartan:iron/parts/longbow"
+    },
+    "longsword": {
+      "suffix": "longsword_blade",
+      "texture": "overgearedspartan:item/iron_longsword_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "longsword"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "X",
+          "X",
+          "X"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_longsword_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_longsword_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_longsword"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/longsword"
+    },
+    "parrying_dagger": {
+      "suffix": "parrying_dagger_blade",
+      "texture": "overgearedspartan:item/iron_parrying_dagger_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "parrying_dagger"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X ",
+          "xxx"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_parrying_dagger_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_parrying_dagger_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_parrying_dagger"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/parrying_dagger"
+    },
+    "pike": {
+      "suffix": "pike_tip",
+      "texture": "overgearedspartan:item/iron_pike_tip",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "pike"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X",
+          "x "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_pike_tip"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_pike_tip"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_pike"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/pike"
+    },
+    "quarterstaff": {
+      "suffix": "quarterstaff_head",
+      "texture": "overgearedspartan:item/iron_quarterstaff_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "quarterstaff"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "  X",
+          "   ",
+          "X  "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_quarterstaff_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_quarterstaff_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_quarterstaff"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/quarterstaff"
+    },
+    "rapier": {
+      "suffix": "rapier_blade",
+      "texture": "overgearedspartan:item/iron_rapier_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "rapier"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "  X",
+          "xX ",
+          " x "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_rapier_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_rapier_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_rapier"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/rapier"
+    },
+    "saber": {
+      "suffix": "saber_blade",
+      "texture": "overgearedspartan:item/iron_saber_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "saber"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X",
+          " X",
+          "xX"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_saber_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_saber_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_saber"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/saber"
+    },
+    "scythe": {
+      "suffix": "scythe_blade",
+      "texture": "overgearedspartan:item/iron_scythe_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "scythe"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "XXX",
+          "  X"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_scythe_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_scythe_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_scythe"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/scythe"
+    },
+    "spear": {
+      "suffix": "spear_tip",
+      "texture": "overgearedspartan:item/iron_spear_tip",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "spear"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " X ",
+          "xXx"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_spear_tip"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:pole"
+          },
+          {
+            "item": "overgearedspartan:iron_spear_tip"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_spear"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/spear"
+    },
+    "throwing_knife": {
+      "suffix": "throwing_knife_blade",
+      "texture": "overgearedspartan:item/iron_throwing_knife_blade",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "throwing_knife"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "  x",
+          " X ",
+          "x  "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_throwing_knife_blade"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_throwing_knife_blade"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_throwing_knife"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/throwing_knife"
+    },
+    "tomahawk": {
+      "suffix": "tomahawk_head",
+      "texture": "overgearedspartan:item/iron_tomahawk_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "tomahawk"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          "xX",
+          "X "
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_tomahawk_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_tomahawk_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_tomahawk"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/tomahawk"
+    },
+    "warhammer": {
+      "suffix": "warhammer_head",
+      "texture": "overgearedspartan:item/iron_warhammer_head",
+      "forging": {
+        "type": "overgeared:forging",
+        "blueprint": [
+          "warhammer"
+        ],
+        "category": "misc",
+        "hammering": 3,
+        "has_polishing": true,
+        "has_quality": true,
+        "key": {
+          "X": {
+            "item": "overgeared:heated_iron_ingot"
+          },
+          "x": {
+            "item": "overgearedspartan:heated_iron_nugget"
+          }
+        },
+        "minimum_quality": "poor",
+        "need_quenching": true,
+        "needs_minigame": false,
+        "pattern": [
+          " x",
+          "XX",
+          " x"
+        ],
+        "quality_difficulty": "none",
+        "requires_blueprint": false,
+        "result": {
+          "item": "overgearedspartan:iron_warhammer_head"
+        },
+        "show_notification": true,
+        "tier": "stone"
+      },
+      "assembly": {
+        "type": "overgeared:crafting_shapeless",
+        "category": "equipment",
+        "ingredients": [
+          {
+            "item": "spartanweaponry:handle"
+          },
+          {
+            "item": "overgearedspartan:iron_warhammer_head"
+          }
+        ],
+        "result": {
+          "item": "spartanweaponry:iron_warhammer"
+        }
+      },
+      "source": "overgearedspartan:iron/parts/warhammer"
+    }
+  },
+  "materials": [
+    {
+      "id": "cloggrum",
+      "name": "Cloggrum",
+      "color": "B8A27B",
+      "ingredient_tag": "forge:ingots/cloggrum",
+      "fragment": "awakening:cloggrum_smithing_fragment",
+      "weapons": [
+        {
+          "type": "boomerang",
+          "part": "awakening:cloggrum_boomerang_elbow",
+          "source_recipe": "spartanundergarden:cloggrum_boomerang",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "boomerang"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:boomerang",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "P": {
+                "tag": "minecraft:planks"
+              }
+            },
+            "pattern": [
+              "#PP",
+              "P  ",
+              "P  "
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_boomerang"
+            }
+          }
+        },
+        {
+          "type": "dagger",
+          "part": "awakening:cloggrum_dagger_blade",
+          "source_recipe": "spartanundergarden:cloggrum_dagger",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "dagger"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:dagger",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "|": {
+                "item": "spartanweaponry:handle"
+              }
+            },
+            "pattern": [
+              "#",
+              "|"
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_dagger"
+            }
+          }
+        },
+        {
+          "type": "heavy_crossbow",
+          "part": "awakening:cloggrum_heavy_crossbow_limb",
+          "source_recipe": "spartanundergarden:cloggrum_heavy_crossbow",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "heavy_crossbow"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:heavy_crossbow",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "D": {
+                "item": "minecraft:bow"
+              },
+              "H": {
+                "item": "minecraft:tripwire_hook"
+              },
+              "P": {
+                "tag": "minecraft:planks"
+              },
+              "|": {
+                "item": "spartanweaponry:handle"
+              }
+            },
+            "pattern": [
+              "#D#",
+              "PHP",
+              " | "
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_heavy_crossbow"
+            }
+          }
+        },
+        {
+          "type": "longbow",
+          "part": "awakening:cloggrum_longbow_limb",
+          "source_recipe": "spartanundergarden:cloggrum_longbow",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "longbow"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:longbow",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "/": {
+                "tag": "forge:rods/wooden"
+              },
+              "|": {
+                "item": "spartanweaponry:handle"
+              },
+              "~": {
+                "tag": "forge:string"
+              }
+            },
+            "pattern": [
+              "|/#",
+              "/ ~",
+              "#~~"
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_longbow"
+            }
+          }
+        },
+        {
+          "type": "pike",
+          "part": "awakening:cloggrum_pike_tip",
+          "source_recipe": "spartanundergarden:cloggrum_pike",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "pike"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:pike",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "/": {
+                "item": "spartanweaponry:pole"
+              }
+            },
+            "pattern": [
+              "#",
+              "/",
+              "/"
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_pike"
+            }
+          }
+        },
+        {
+          "type": "quarterstaff",
+          "part": "awakening:cloggrum_quarterstaff_head",
+          "source_recipe": "spartanundergarden:cloggrum_quarterstaff",
+          "material_key": "#",
+          "original": {
+            "type": "minecraft:crafting_shaped",
+            "conditions": [
+              {
+                "type": "spartanweaponry:type_disabled",
+                "disabled": [
+                  "quarterstaff"
+                ]
+              }
+            ],
+            "group": "spartanweaponry:quarterstaff",
+            "key": {
+              "#": {
+                "tag": "forge:ingots/cloggrum"
+              },
+              "/": {
+                "item": "spartanweaponry:pole"
+              }
+            },
+            "pattern": [
+              "  #",
+              " / ",
+              "#  "
+            ],
+            "result": {
+              "item": "spartanundergarden:cloggrum_quarterstaff"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
