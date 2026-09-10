@@ -34,7 +34,7 @@ function awakeningPartsAssembly(weapon, template) {
     // Preserve the original bow grip (ordinary, blaze, or witherbone) in place
     // of one stick. The rest of the limb/string/hook/plank layout stays intact.
     if (weapon.type === 'longbow' || weapon.type === 'heavy_crossbow') {
-      const grip = original.key['|']
+      let grip = original.key['|']
       if (!grip) throw new Error('[Awakening/Parts] Missing bow grip: ' + weapon.source_recipe)
       recipe.key.h = awakeningPartsCopy(grip)
       let placed = false
