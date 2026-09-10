@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "source": "SpartanTwilight 1.20.1-3.1.1 @ 78ace7c63b90cf6f13f8e124beda5e8ae6ce6d89",
+  "weapon_types": [
+    "battleaxe",
+    "battle_hammer",
+    "boomerang",
+    "dagger",
+    "flanged_mace",
+    "glaive",
+    "greatsword",
+    "halberd",
+    "heavy_crossbow",
+    "javelin",
+    "katana",
+    "lance",
+    "longbow",
+    "longsword",
+    "parrying_dagger",
+    "pike",
+    "quarterstaff",
+    "rapier",
+    "saber",
+    "scythe",
+    "spear",
+    "throwing_knife",
+    "tomahawk",
+    "warhammer"
+  ],
+  "materials": [
+    {
+      "id": "steeleaf",
+      "name": "Steeleaf",
+      "color": "78A85B",
+      "ingredient_tag": "forge:ingots/steeleaf",
+      "fragment": "awakening:steeleaf_smithing_fragment"
+    },
+    {
+      "id": "knightmetal",
+      "name": "Knightmetal",
+      "color": "777C87",
+      "ingredient_tag": "forge:ingots/knightmetal",
+      "fragment": "awakening:knightmetal_smithing_fragment"
+    }
+  ]
+}
