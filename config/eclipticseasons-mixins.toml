@@ -1,3 +1,4 @@
+version = 2
 
 [common]
 
@@ -75,6 +76,10 @@
 		MixinLocalPlayer = true
 		MixinMusicManager = true
 
+	[client.gui]
+		MixinAbstractButton = true
+		MixinCycleButtonBuilder = true
+
 [compat]
 
 	[compat.embeddium]
@@ -83,6 +88,8 @@
 		MixinBlockRenderTask = true
 		MixinChunkSlice = true
 		MixinClonedChunkSection = true
+		Mixin_ColorSource = true
+		Mixin_FoliageColorSource = true
 
 	[compat.fabric_renderer_indigo]
 		MixinBlockRenderer = true
