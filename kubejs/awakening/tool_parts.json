@@ -102,6 +102,20 @@
         "shovel":"cataclysm:black_steel_shovel",
         "hoe":"cataclysm:black_steel_hoe"
       }
+    },
+    {
+      "id":"fire_dragonsteel",
+      "name":"Fire Dragonsteel",
+      "ingredient_tag":"forge:ingots/fire_dragonsteel",
+      "fragment":"awakening:fire_dragonsteel_smithing_fragment",
+      "handle":"spartanfire:witherbone_handle",
+      "outputs":{
+        "sword":"iceandfire:dragonsteel_fire_sword",
+        "pickaxe":"iceandfire:dragonsteel_fire_pickaxe",
+        "axe":"iceandfire:dragonsteel_fire_axe",
+        "shovel":"iceandfire:dragonsteel_fire_shovel",
+        "hoe":"iceandfire:dragonsteel_fire_hoe"
+      }
     }
   ]
 }
