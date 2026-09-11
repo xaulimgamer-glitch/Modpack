@@ -130,6 +130,20 @@
         "shovel":"iceandfire:dragonsteel_ice_shovel",
         "hoe":"iceandfire:dragonsteel_ice_hoe"
       }
+    },
+    {
+      "id":"lightning_dragonsteel",
+      "name":"Lightning Dragonsteel",
+      "ingredient_tag":"forge:ingots/lightning_dragonsteel",
+      "fragment":"awakening:lightning_dragonsteel_smithing_fragment",
+      "handle":"spartanfire:witherbone_handle",
+      "outputs":{
+        "sword":"iceandfire:dragonsteel_lightning_sword",
+        "pickaxe":"iceandfire:dragonsteel_lightning_pickaxe",
+        "axe":"iceandfire:dragonsteel_lightning_axe",
+        "shovel":"iceandfire:dragonsteel_lightning_shovel",
+        "hoe":"iceandfire:dragonsteel_lightning_hoe"
+      }
     }
   ]
 }
