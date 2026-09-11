@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "source": "SpartanCataclysm 1.1.2 @ b46756438e24937fc7e5d60e2647847526e8cc8e",
+  "prototype": "ancient_metal",
+  "materials": [
+    {
+      "id": "black_steel",
+      "name": "Black Steel",
+      "color": "343840",
+      "ingredient_tag": "spartancataclysm:black_steel_ingots",
+      "fragment": "awakening:black_steel_smithing_fragment"
+    }
+  ]
+}
