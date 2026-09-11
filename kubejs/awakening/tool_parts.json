@@ -88,6 +88,20 @@
         "pickaxe":"twilightforest:knightmetal_pickaxe",
         "axe":"twilightforest:knightmetal_axe"
       }
+    },
+    {
+      "id":"black_steel",
+      "name":"Black Steel",
+      "ingredient_tag":"spartancataclysm:black_steel_ingots",
+      "fragment":"awakening:black_steel_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "outputs":{
+        "sword":"cataclysm:black_steel_sword",
+        "pickaxe":"cataclysm:black_steel_pickaxe",
+        "axe":"cataclysm:black_steel_axe",
+        "shovel":"cataclysm:black_steel_shovel",
+        "hoe":"cataclysm:black_steel_hoe"
+      }
     }
   ]
 }
