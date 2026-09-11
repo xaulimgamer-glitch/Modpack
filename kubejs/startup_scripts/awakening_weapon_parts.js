@@ -3,7 +3,10 @@
 StartupEvents.registry('item', event => {
   const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
   const twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
-  if (data.schema !== 1 || twilight.schema !== 1) throw new Error('[Awakening/Parts] Unsupported manifest')
+  const cataclysm = JSON.parse(JsonIO.readString('kubejs/awakening/cataclysm_weapon_parts.json'))
+  if (data.schema !== 1 || twilight.schema !== 1 || cataclysm.schema !== 1) {
+    throw new Error('[Awakening/Parts] Unsupported manifest')
+  }
 
   function registerMaterial(material, weaponTypes) {
     const color = parseInt(material.color, 16)
@@ -38,4 +41,11 @@ StartupEvents.registry('item', event => {
   // templates as the existing Twilight materials. Only intermediate items are
   // registered here; final weapons stay spartantwilight:*.
   twilight.materials.forEach(material => registerMaterial(material, twilight.weapon_types))
+
+  // Black Steel follows the Ancient Metal weapon set. Cursium and Ignitium are
+  // intentionally excluded: their existing smithing-table weapon upgrades stay intact.
+  const cataclysmPrototype = data.materials.find(material => material.id === cataclysm.prototype)
+  if (!cataclysmPrototype) throw new Error('[Awakening/Parts] Cataclysm prototype missing: ' + cataclysm.prototype)
+  const cataclysmWeaponTypes = cataclysmPrototype.weapons.map(weapon => weapon.type)
+  cataclysm.materials.forEach(material => registerMaterial(material, cataclysmWeaponTypes))
 })
