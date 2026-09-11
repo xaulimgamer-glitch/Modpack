@@ -1,14 +1,14 @@
-const heatedMetalsConfig = JsonIO.read('kubejs/awakening/heated_metals.json')
+const AWAKENING_HEATED_METALS_CONFIG = JsonIO.read('kubejs/awakening/heated_metals.json')
 
-if (!heatedMetalsConfig || !Array.isArray(heatedMetalsConfig.metals)) {
+if (!AWAKENING_HEATED_METALS_CONFIG || !Array.isArray(AWAKENING_HEATED_METALS_CONFIG.metals)) {
   console.error('[Awakening] Could not load kubejs/awakening/heated_metals.json')
 } else {
-  const ingredient = value => value.startsWith('#')
+  const awakeningHeatedIngredient = value => value.startsWith('#')
     ? { tag: value.substring(1) }
     : { item: value }
 
   ServerEvents.tags('item', event => {
-    heatedMetalsConfig.metals.forEach(metal => {
+    AWAKENING_HEATED_METALS_CONFIG.metals.forEach(metal => {
       const nativeConfig = metal.native || {}
       if (nativeConfig.heatedTag !== true) {
         event.add('overgeared:heated_metals', metal.heated)
@@ -17,7 +17,7 @@ if (!heatedMetalsConfig || !Array.isArray(heatedMetalsConfig.metals)) {
   })
 
   ServerEvents.recipes(event => {
-    heatedMetalsConfig.metals.forEach(metal => {
+    AWAKENING_HEATED_METALS_CONFIG.metals.forEach(metal => {
       const nativeConfig = metal.native || {}
       const heating = metal.heating || {}
       const sources = Array.isArray(heating.sources) ? heating.sources : []
@@ -41,7 +41,7 @@ if (!heatedMetalsConfig || !Array.isArray(heatedMetalsConfig.metals)) {
             category: 'misc',
             cookingtime: processConfig.cookingTime,
             experience: processConfig.experience,
-            ingredient: ingredient(source),
+            ingredient: awakeningHeatedIngredient(source),
             result: metal.heated
           }).id(`awakening:heated_metals/${metal.id}/${process}/${sourcePath}`)
         })
