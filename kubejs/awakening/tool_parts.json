@@ -61,6 +61,20 @@
         "sword":"twilightforest:fiery_sword",
         "pickaxe":"twilightforest:fiery_pickaxe"
       }
+    },
+    {
+      "id":"steeleaf",
+      "name":"Steeleaf",
+      "ingredient_tag":"forge:ingots/steeleaf",
+      "fragment":"awakening:steeleaf_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "outputs":{
+        "sword":"twilightforest:steeleaf_sword",
+        "pickaxe":"twilightforest:steeleaf_pickaxe",
+        "axe":"twilightforest:steeleaf_axe",
+        "shovel":"twilightforest:steeleaf_shovel",
+        "hoe":"twilightforest:steeleaf_hoe"
+      }
     }
   ]
 }
