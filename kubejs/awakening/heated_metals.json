@@ -87,6 +87,13 @@
       "native":{"item":false,"heatedTag":false,"cooling":false},
       "heating":{"sources":["undergarden:utherium_crystal"],"blasting":{"enabled":true,"native":false,"experience":0.0,"cookingTime":100}},
       "forging":{"overrides":[]}
+    },
+    {
+      "id":"fire_dragonsteel","name":"Fire Dragonsteel","heated":"awakening:heated_fire_dragonsteel_ingot","cooled":"iceandfire:dragonsteel_fire_ingot","texture":"overgeared:item/heated_iron_ingot",
+      "native":{"item":false,"heatedTag":false,"cooling":false},
+      "heating":{"sources":["iceandfire:dragonsteel_fire_ingot"],"blasting":{"enabled":true,"native":false,"experience":0.0,"cookingTime":100}},
+      "dragonforge":{"id":"iceandfire:dragonforge/dragonsteel_fire_ingot","dragonType":"fire","cookTime":1000,"input":"#forge:ingots/iron","blood":"iceandfire:fire_dragon_blood"},
+      "forging":{"overrides":[]}
     }
   ]
 }

@@ -58,6 +58,20 @@
         }).id(`awakening:heated_metals/${metal.id}/cooling`)
       }
 
+      const dragonforge = metal.dragonforge || null
+      if (dragonforge) {
+        event.remove({ id: dragonforge.id })
+
+        event.custom({
+          type: 'iceandfire:dragonforge',
+          dragon_type: dragonforge.dragonType,
+          cook_time: dragonforge.cookTime,
+          input: awakeningHeatedIngredient(dragonforge.input),
+          blood: awakeningHeatedIngredient(dragonforge.blood),
+          result: { item: metal.heated }
+        }).id(dragonforge.id)
+      }
+
       const forging = metal.forging || {}
       const overrides = Array.isArray(forging.overrides) ? forging.overrides : []
 
