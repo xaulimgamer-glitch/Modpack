@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "templates": [
+    {"type":"sword","suffix":"sword_blade","display":"Sword Blade","tooltype":"sword","pattern":["X","X"]},
+    {"type":"pickaxe","suffix":"pickaxe_head","display":"Pickaxe Head","tooltype":"pickaxe","pattern":["XXX"]},
+    {"type":"axe","suffix":"axe_head","display":"Axe Head","tooltype":"axe","pattern":["XX","X "]},
+    {"type":"shovel","suffix":"shovel_head","display":"Shovel Head","tooltype":"shovel","pattern":["X"]},
+    {"type":"hoe","suffix":"hoe_head","display":"Hoe Head","tooltype":"hoe","pattern":["XX"]}
+  ],
+  "materials": [
+    {
+      "id":"cloggrum",
+      "name":"Cloggrum",
+      "ingredient_tag":"forge:ingots/cloggrum",
+      "fragment":"awakening:cloggrum_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "outputs":{
+        "sword":"undergarden:cloggrum_sword",
+        "pickaxe":"undergarden:cloggrum_pickaxe",
+        "axe":"undergarden:cloggrum_axe",
+        "shovel":"undergarden:cloggrum_shovel",
+        "hoe":"undergarden:cloggrum_hoe"
+      }
+    }
+  ]
+}
