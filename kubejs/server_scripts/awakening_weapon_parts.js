@@ -126,7 +126,8 @@ function awakeningPartsAssembly(weapon, template) {
     })
 
     // Preserve the original bow grip (ordinary, blaze, or witherbone) in place
-    // of one stick. The rest of the limb/string/hook/plank layout stays intact.
+    // of one stick. Longbows also keep their original shaft material in the
+    // remaining stick slots, e.g. blaze rods or wither bones.
     if (weapon.type === 'longbow' || weapon.type === 'heavy_crossbow') {
       let grip = original.key['|']
       if (!grip) throw new Error('[Awakening/Parts] Missing bow grip: ' + weapon.source_recipe)
@@ -138,6 +139,10 @@ function awakeningPartsAssembly(weapon, template) {
         return row.replace('l', 'h')
       })
       if (!placed) throw new Error('[Awakening/Parts] Missing stick slot')
+
+      if (weapon.type === 'longbow' && original.key['/']) {
+        recipe.key.l = awakeningPartsCopy(original.key['/'])
+      }
     }
   }
   return recipe
