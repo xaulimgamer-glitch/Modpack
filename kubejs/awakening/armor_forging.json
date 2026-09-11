@@ -118,6 +118,20 @@
         "leggings":"iceandfire:dragonsteel_fire_leggings",
         "boots":"iceandfire:dragonsteel_fire_boots"
       }
+    },
+    {
+      "id":"ice_dragonsteel",
+      "name":"Ice Dragonsteel",
+      "ingredient_tag":"forge:ingots/dragonsteel_ice",
+      "plate":"awakening:ice_dragonsteel_plate",
+      "plate_tag":"forge:plates/dragonsteel_ice",
+      "tier":"above_b",
+      "outputs":{
+        "helmet":"iceandfire:dragonsteel_ice_helmet",
+        "chestplate":"iceandfire:dragonsteel_ice_chestplate",
+        "leggings":"iceandfire:dragonsteel_ice_leggings",
+        "boots":"iceandfire:dragonsteel_ice_boots"
+      }
     }
   ]
 }
