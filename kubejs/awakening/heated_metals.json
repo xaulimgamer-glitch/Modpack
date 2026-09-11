@@ -190,6 +190,32 @@
       }
     },
     {
+      "id": "fiery",
+      "name": "Fiery",
+      "heated": "awakening:heated_fiery_ingot",
+      "cooled": "twilightforest:fiery_ingot",
+      "texture": "overgeared:item/heated_iron_ingot",
+      "native": {
+        "item": false,
+        "heatedTag": false,
+        "cooling": false
+      },
+      "heating": {
+        "sources": [
+          "twilightforest:fiery_ingot"
+        ],
+        "blasting": {
+          "enabled": true,
+          "native": false,
+          "experience": 0.0,
+          "cookingTime": 100
+        }
+      },
+      "forging": {
+        "overrides": []
+      }
+    },
+    {
       "id": "utherium",
       "name": "Utherium Crystal",
       "heated": "awakening:heated_utherium_crystal",
