@@ -1,8 +1,11 @@
-const AWAKENING_HEATED_METALS_CONFIG = JsonIO.read('kubejs/awakening/heated_metals.json')
+(function () {
+  const AWAKENING_HEATED_METALS_CONFIG = JsonIO.read('kubejs/awakening/heated_metals.json')
 
-if (!AWAKENING_HEATED_METALS_CONFIG || !Array.isArray(AWAKENING_HEATED_METALS_CONFIG.metals)) {
-  console.error('[Awakening] Could not load kubejs/awakening/heated_metals.json')
-} else {
+  if (!AWAKENING_HEATED_METALS_CONFIG || !Array.isArray(AWAKENING_HEATED_METALS_CONFIG.metals)) {
+    console.error('[Awakening] Could not load kubejs/awakening/heated_metals.json')
+    return
+  }
+
   const awakeningHeatedIngredient = value => value.startsWith('#')
     ? { tag: value.substring(1) }
     : { item: value }
@@ -81,4 +84,4 @@ if (!AWAKENING_HEATED_METALS_CONFIG || !Array.isArray(AWAKENING_HEATED_METALS_CO
       })
     })
   })
-}
+})()
