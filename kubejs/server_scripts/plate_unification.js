@@ -19,6 +19,32 @@ const AWAKENING_PLATE_UNIFICATION = [
   }
 ]
 
+// Armor materials gain a Create press route as soon as they are migrated to
+// heated_metals.json. Their plate tag is already managed by awakening_armor.js.
+const awakeningPlateHeatedMetals = JsonIO.read('kubejs/awakening/heated_metals.json')
+const awakeningPlateArmor = JSON.parse(JsonIO.readString('kubejs/awakening/armor_forging.json'))
+
+if (awakeningPlateHeatedMetals && Array.isArray(awakeningPlateHeatedMetals.metals) &&
+    awakeningPlateArmor && Array.isArray(awakeningPlateArmor.materials)) {
+  const heatedById = {}
+  awakeningPlateHeatedMetals.metals.forEach(metal => {
+    if (metal && metal.id && metal.heated) heatedById[metal.id] = metal
+  })
+
+  awakeningPlateArmor.materials.forEach(material => {
+    const heatedMetal = heatedById[material.id]
+    if (!heatedMetal) return
+
+    AWAKENING_PLATE_UNIFICATION.push({
+      id: material.id,
+      pressIngredient: { item: heatedMetal.heated },
+      canonical: material.plate,
+      deprecated: [],
+      tags: []
+    })
+  })
+}
+
 ServerEvents.tags('item', event => {
   AWAKENING_PLATE_UNIFICATION.forEach(material => {
     material.tags.forEach(tag => {
@@ -34,7 +60,7 @@ ServerEvents.recipes(event => {
     material.deprecated.forEach(item => event.remove({ output: item }))
 
     // Keep Create's mechanical press useful, but make it produce the
-    // canonical Overgeared plate instead of a second equivalent item.
+    // canonical plate from the same heated input used by anvil forging.
     event.custom({
       type: 'create:pressing',
       ingredients: [

@@ -2,8 +2,22 @@
 // Every external weapon ID and material tag comes from pinned manifests.
 // No part -> ingot, weapon -> part, or fragment -> ingot conversion is added.
 
+const AWAKENING_WEAPON_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
+
 function awakeningPartsCopy(value) {
   return JSON.parse(JSON.stringify(value))
+}
+
+function awakeningPartsLoadHeatedMetals() {
+  const data = JsonIO.read(AWAKENING_WEAPON_HEATED_METALS)
+  const byId = {}
+
+  if (!data || !Array.isArray(data.metals)) return byId
+  data.metals.forEach(metal => {
+    if (metal && metal.id && metal.heated) byId[metal.id] = metal
+  })
+
+  return byId
 }
 
 function awakeningSteeleafResult(type, item) {
@@ -161,6 +175,7 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
   const data = awakeningPartsLoadData()
+  const heatedMetals = awakeningPartsLoadHeatedMetals()
   const pending = []
   const outputs = []
   const heating = {}
@@ -179,8 +194,8 @@ ServerEvents.recipes(event => {
     if (heating[item]) return
     heating[item] = true
     // Native Overgeared serializer adds Heated NBT to the SAME item, 1 -> 1.
-    // No XP farming and no guessed heated registry IDs. Its forge serializer
-    // reads requires_heated and rejects ordinary cold stacks.
+    // This remains the fragment path and the fallback for materials that have
+    // not yet migrated to a dedicated heated registry item.
     queue('heat/' + item.replace(':', '/'), {
       type: 'overgeared:nbt_add_blasting',
       category: 'misc',
@@ -194,10 +209,21 @@ ServerEvents.recipes(event => {
 
   // Preflight the entire manifest before removing any weapon recipes.
   data.materials.forEach(material => {
-    requireIngredient({ tag: material.ingredient_tag }, material.id)
+    const heatedMetal = heatedMetals[material.id]
+    const forgingMaterial = heatedMetal
+      ? { item: heatedMetal.heated }
+      : { tag: material.ingredient_tag, requires_heated: true }
+
+    requireIngredient({ tag: material.ingredient_tag }, material.id + '/cold-material')
+    if (heatedMetal) requireIngredient({ item: heatedMetal.heated }, material.id + '/heated-material')
     requireIngredient({ item: material.fragment }, material.id)
     requireIngredient({ tag: 'overgeared:smithing_hammers' }, material.id)
-    Ingredient.of('#' + material.ingredient_tag).itemIds.forEach(id => queueHeating(String(id)))
+
+    // Dedicated heated items replace the legacy NBT-heated ingot path. Keep
+    // NBT heating for fragments, which do not have separate heated registry IDs.
+    if (!heatedMetal) {
+      Ingredient.of('#' + material.ingredient_tag).itemIds.forEach(id => queueHeating(String(id)))
+    }
     queueHeating(material.fragment)
 
     queue(material.id + '/fragments', {
@@ -217,7 +243,7 @@ ServerEvents.recipes(event => {
 
       const forging = awakeningPartsCopy(template.forging)
       forging.key = {
-        X: { tag: material.ingredient_tag, requires_heated: true },
+        X: forgingMaterial,
         x: { item: material.fragment, requires_heated: true }
       }
       // Some patterns use only X. Keep only symbols actually present.

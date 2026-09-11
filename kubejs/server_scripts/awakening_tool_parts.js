@@ -5,6 +5,7 @@
 // to swords, pickaxes, axes, shovels and hoes.
 
 const AWAKENING_TOOL_PARTS_MANIFEST = 'kubejs/awakening/tool_parts.json'
+const AWAKENING_TOOL_PARTS_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
 
 function awakeningToolPartsLoadData() {
   const data = JSON.parse(JsonIO.readString(AWAKENING_TOOL_PARTS_MANIFEST))
@@ -12,6 +13,18 @@ function awakeningToolPartsLoadData() {
     throw new Error('[Awakening/ToolParts] Invalid manifest: ' + AWAKENING_TOOL_PARTS_MANIFEST)
   }
   return data
+}
+
+function awakeningToolPartsLoadHeatedMetals() {
+  const data = JsonIO.read(AWAKENING_TOOL_PARTS_HEATED_METALS)
+  const byId = {}
+
+  if (!data || !Array.isArray(data.metals)) return byId
+  data.metals.forEach(metal => {
+    if (metal && metal.id && metal.heated) byId[metal.id] = metal
+  })
+
+  return byId
 }
 
 function awakeningToolPartId(material, template) {
@@ -42,6 +55,7 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
   const data = awakeningToolPartsLoadData()
+  const heatedMetals = awakeningToolPartsLoadHeatedMetals()
   const pending = []
   const outputs = []
 
@@ -56,7 +70,12 @@ ServerEvents.recipes(event => {
   }
 
   data.materials.forEach(material => {
-    requireIngredient({ tag: material.ingredient_tag }, material.id)
+    const heatedMetal = heatedMetals[material.id]
+    const forgingIngredient = heatedMetal
+      ? { item: heatedMetal.heated }
+      : { tag: material.ingredient_tag, requires_heated: true }
+
+    requireIngredient(heatedMetal ? { item: heatedMetal.heated } : { tag: material.ingredient_tag }, material.id)
     requireIngredient({ item: material.fragment }, material.id)
     requireIngredient({ item: material.handle }, material.id)
     requireIngredient({ tag: 'overgeared:smithing_hammers' }, material.id)
@@ -80,7 +99,7 @@ ServerEvents.recipes(event => {
         has_polishing: true,
         has_quality: true,
         key: {
-          X: { tag: material.ingredient_tag, requires_heated: true }
+          X: forgingIngredient
         },
         minimumQuality: 'poor',
         need_quenching: true,

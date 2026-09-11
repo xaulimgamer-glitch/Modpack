@@ -3,6 +3,7 @@
 // each source mod's native final armor items.
 
 const AWAKENING_ARMOR_MANIFEST = 'kubejs/awakening/armor_forging.json'
+const AWAKENING_ARMOR_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
 
 function awakeningArmorLoadData() {
   const data = JSON.parse(JsonIO.readString(AWAKENING_ARMOR_MANIFEST))
@@ -10,6 +11,18 @@ function awakeningArmorLoadData() {
     throw new Error('[Awakening/Armor] Invalid manifest: ' + AWAKENING_ARMOR_MANIFEST)
   }
   return data
+}
+
+function awakeningArmorLoadHeatedMetals() {
+  const data = JsonIO.read(AWAKENING_ARMOR_HEATED_METALS)
+  const byId = {}
+
+  if (!data || !Array.isArray(data.metals)) return byId
+  data.metals.forEach(metal => {
+    if (metal && metal.id && metal.heated) byId[metal.id] = metal
+  })
+
+  return byId
 }
 
 ServerEvents.tags('item', event => {
@@ -23,6 +36,7 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
   const data = awakeningArmorLoadData()
+  const heatedMetals = awakeningArmorLoadHeatedMetals()
   const pending = []
   const outputs = []
 
@@ -37,18 +51,24 @@ ServerEvents.recipes(event => {
   }
 
   data.materials.forEach(material => {
-    requireIngredient({ tag: material.ingredient_tag }, material.id)
+    const heatedMetal = heatedMetals[material.id]
+    const plateIngredient = heatedMetal
+      ? { item: heatedMetal.heated }
+      : { tag: material.ingredient_tag }
+
+    requireIngredient(plateIngredient, material.id + '/plate-material')
     requireIngredient({ item: material.plate }, material.id + '/plate')
 
-    // Mirrors Overgeared's iron/copper plate forging: one ingot -> one plate,
-    // no quality roll and no quenching.
+    // Mirrors Overgeared's iron/copper plate forging: one heated metal -> one plate,
+    // no quality roll and no quenching. Materials not yet migrated keep their
+    // legacy ingredient tag until they are added to heated_metals.json.
     queue(material.id + '/plate', {
       type: 'overgeared:forging',
       category: 'misc',
       hammering: 3,
       has_quality: false,
       key: {
-        X: { tag: material.ingredient_tag }
+        X: plateIngredient
       },
       need_quenching: false,
       needs_minigame: false,
