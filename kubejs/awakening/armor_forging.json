@@ -48,6 +48,20 @@
         "leggings":"undergarden:utherium_leggings",
         "boots":"undergarden:utherium_boots"
       }
+    },
+    {
+      "id":"ironwood",
+      "name":"Ironwood",
+      "ingredient_tag":"forge:ingots/ironwood",
+      "plate":"awakening:ironwood_plate",
+      "plate_tag":"forge:plates/ironwood",
+      "tier":"stone",
+      "outputs":{
+        "helmet":"twilightforest:ironwood_helmet",
+        "chestplate":"twilightforest:ironwood_chestplate",
+        "leggings":"twilightforest:ironwood_leggings",
+        "boots":"twilightforest:ironwood_boots"
+      }
     }
   ]
 }
