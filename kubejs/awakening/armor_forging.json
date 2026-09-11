@@ -34,6 +34,20 @@
         "leggings":"undergarden:froststeel_leggings",
         "boots":"undergarden:froststeel_boots"
       }
+    },
+    {
+      "id":"utherium",
+      "name":"Utherium",
+      "ingredient_tag":"forge:ingots/utherium",
+      "plate":"awakening:utherium_plate",
+      "plate_tag":"forge:plates/utherium",
+      "tier":"iron",
+      "outputs":{
+        "helmet":"undergarden:utherium_helmet",
+        "chestplate":"undergarden:utherium_chestplate",
+        "leggings":"undergarden:utherium_leggings",
+        "boots":"undergarden:utherium_boots"
+      }
     }
   ]
 }
