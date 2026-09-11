@@ -216,6 +216,32 @@
       }
     },
     {
+      "id": "steeleaf",
+      "name": "Steeleaf",
+      "heated": "awakening:heated_steeleaf_ingot",
+      "cooled": "twilightforest:steeleaf_ingot",
+      "texture": "overgeared:item/heated_iron_ingot",
+      "native": {
+        "item": false,
+        "heatedTag": false,
+        "cooling": false
+      },
+      "heating": {
+        "sources": [
+          "twilightforest:steeleaf_ingot"
+        ],
+        "blasting": {
+          "enabled": true,
+          "native": false,
+          "experience": 0.0,
+          "cookingTime": 100
+        }
+      },
+      "forging": {
+        "overrides": []
+      }
+    },
+    {
       "id": "utherium",
       "name": "Utherium Crystal",
       "heated": "awakening:heated_utherium_crystal",
