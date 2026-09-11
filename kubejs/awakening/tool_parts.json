@@ -75,6 +75,19 @@
         "shovel":"twilightforest:steeleaf_shovel",
         "hoe":"twilightforest:steeleaf_hoe"
       }
+    },
+    {
+      "id":"knightmetal",
+      "name":"Knightmetal",
+      "ingredient_tag":"forge:ingots/knightmetal",
+      "fragment":"awakening:knightmetal_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["sword","pickaxe","axe"],
+      "outputs":{
+        "sword":"twilightforest:knightmetal_sword",
+        "pickaxe":"twilightforest:knightmetal_pickaxe",
+        "axe":"twilightforest:knightmetal_axe"
+      }
     }
   ]
 }
