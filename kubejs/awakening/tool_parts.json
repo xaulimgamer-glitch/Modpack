@@ -35,6 +35,20 @@
         "shovel":"undergarden:froststeel_shovel",
         "hoe":"undergarden:froststeel_hoe"
       }
+    },
+    {
+      "id":"ironwood",
+      "name":"Ironwood",
+      "ingredient_tag":"forge:ingots/ironwood",
+      "fragment":"awakening:ironwood_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "outputs":{
+        "sword":"twilightforest:ironwood_sword",
+        "pickaxe":"twilightforest:ironwood_pickaxe",
+        "axe":"twilightforest:ironwood_axe",
+        "shovel":"twilightforest:ironwood_shovel",
+        "hoe":"twilightforest:ironwood_hoe"
+      }
     }
   ]
 }
