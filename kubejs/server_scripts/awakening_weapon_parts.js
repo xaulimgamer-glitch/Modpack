@@ -1,5 +1,5 @@
 // Status: IMPLEMENTED / STATIC-OBSERVED. Minecraft/JEI verification is pending.
-// Every external weapon ID and material tag comes from the pinned manifest.
+// Every external weapon ID and material tag comes from pinned manifests.
 // No part -> ingot, weapon -> part, or fragment -> ingot conversion is added.
 
 function awakeningPartsCopy(value) {
@@ -37,10 +37,19 @@ function awakeningSteeleafResult(type, item) {
   }
 }
 
+function awakeningRetargetTagCondition(value, oldTag, newTag) {
+  if (!value || typeof value !== 'object') return
+  if (value.tag === oldTag) value.tag = newTag
+  Object.keys(value).forEach(key => awakeningRetargetTagCondition(value[key], oldTag, newTag))
+}
+
 function awakeningPartsLoadData() {
   const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
   const twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
-  if (data.schema !== 1 || twilight.schema !== 1) throw new Error('[Awakening/Parts] Unsupported manifest')
+  const cataclysm = JSON.parse(JsonIO.readString('kubejs/awakening/cataclysm_weapon_parts.json'))
+  if (data.schema !== 1 || twilight.schema !== 1 || cataclysm.schema !== 1) {
+    throw new Error('[Awakening/Parts] Unsupported manifest')
+  }
 
   const ironwood = data.materials.find(material => material.id === 'ironwood')
   if (!ironwood) throw new Error('[Awakening/Parts] Ironwood prototype missing')
@@ -68,13 +77,33 @@ function awakeningPartsLoadData() {
     data.materials.push(generated)
   })
 
+  const cataclysmPrototype = data.materials.find(material => material.id === cataclysm.prototype)
+  if (!cataclysmPrototype) throw new Error('[Awakening/Parts] Cataclysm prototype missing: ' + cataclysm.prototype)
+
+  cataclysm.materials.forEach(material => {
+    const generated = awakeningPartsCopy(material)
+    generated.weapons = cataclysmPrototype.weapons.map(prototype => {
+      const template = data.templates[prototype.type]
+      if (!template) throw new Error('[Awakening/Parts] Missing Cataclysm template: ' + prototype.type)
+
+      const weapon = awakeningPartsCopy(prototype)
+      weapon.part = 'awakening:' + material.id + '_' + template.suffix
+      weapon.source_recipe = 'spartancataclysm:' + material.id + '_' + prototype.type
+      weapon.original.key[weapon.material_key] = { tag: material.ingredient_tag }
+      awakeningRetargetTagCondition(weapon.original.conditions, cataclysmPrototype.ingredient_tag, material.ingredient_tag)
+      weapon.original.result = { item: 'spartancataclysm:' + material.id + '_' + prototype.type }
+      return weapon
+    })
+    data.materials.push(generated)
+  })
+
   return data
 }
 
 function awakeningPartsAssembly(weapon, template) {
   const original = weapon.original
   const recipe = awakeningPartsCopy(template.assembly)
-  recipe.result = awakeningPartsCopy(original.result) // Includes Twilight NBT where required.
+  recipe.result = awakeningPartsCopy(original.result) // Includes material-specific NBT where required.
   recipe.conditions = awakeningPartsCopy(original.conditions || [])
   recipe.group = original.group || ''
 
