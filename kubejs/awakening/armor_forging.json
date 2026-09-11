@@ -76,6 +76,20 @@
         "leggings":"twilightforest:fiery_leggings",
         "boots":"twilightforest:fiery_boots"
       }
+    },
+    {
+      "id":"steeleaf",
+      "name":"Steeleaf",
+      "ingredient_tag":"forge:ingots/steeleaf",
+      "plate":"awakening:steeleaf_plate",
+      "plate_tag":"forge:plates/steeleaf",
+      "tier":"iron",
+      "outputs":{
+        "helmet":"twilightforest:steeleaf_helmet",
+        "chestplate":"twilightforest:steeleaf_chestplate",
+        "leggings":"twilightforest:steeleaf_leggings",
+        "boots":"twilightforest:steeleaf_boots"
+      }
     }
   ]
 }
