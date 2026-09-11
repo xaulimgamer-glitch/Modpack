@@ -101,6 +101,13 @@
       "heating":{"sources":["iceandfire:dragonsteel_ice_ingot"],"blasting":{"enabled":true,"native":false,"experience":0.0,"cookingTime":100}},
       "dragonforge":{"id":"iceandfire:dragonforge/dragonsteel_ice_ingot","dragonType":"ice","cookTime":1000,"input":"#forge:ingots/iron","blood":"iceandfire:ice_dragon_blood"},
       "forging":{"overrides":[]}
+    },
+    {
+      "id":"lightning_dragonsteel","name":"Lightning Dragonsteel","heated":"awakening:heated_lightning_dragonsteel_ingot","cooled":"iceandfire:dragonsteel_lightning_ingot","texture":"iceandfire:item/dragonsteel_lightning_ingot",
+      "native":{"item":false,"heatedTag":false,"cooling":false},
+      "heating":{"sources":["iceandfire:dragonsteel_lightning_ingot"],"blasting":{"enabled":true,"native":false,"experience":0.0,"cookingTime":100}},
+      "dragonforge":{"id":"iceandfire:dragonforge/dragonsteel_lightning_ingot","dragonType":"lightning","cookTime":1000,"input":"#forge:ingots/iron","blood":"iceandfire:lightning_dragon_blood"},
+      "forging":{"overrides":[]}
     }
   ]
 }
