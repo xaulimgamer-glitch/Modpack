@@ -5,14 +5,14 @@
 const AWAKENING_PLATE_UNIFICATION = [
   {
     id: 'iron',
-    ingotTag: 'forge:ingots/iron',
+    pressIngredient: { item: 'overgeared:heated_iron_ingot' },
     canonical: 'overgeared:iron_plate',
     deprecated: ['create:iron_sheet'],
     tags: ['forge:plates/iron', 'overgeared:iron_plates']
   },
   {
     id: 'copper',
-    ingotTag: 'forge:ingots/copper',
+    pressIngredient: { tag: 'forge:ingots/copper' },
     canonical: 'overgeared:copper_plate',
     deprecated: ['create:copper_sheet'],
     tags: ['forge:plates/copper', 'overgeared:copper_plates']
@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
     event.custom({
       type: 'create:pressing',
       ingredients: [
-        { tag: material.ingotTag }
+        material.pressIngredient
       ],
       results: [
         { item: material.canonical }
