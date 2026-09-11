@@ -62,6 +62,20 @@
         "leggings":"twilightforest:ironwood_leggings",
         "boots":"twilightforest:ironwood_boots"
       }
+    },
+    {
+      "id":"fiery",
+      "name":"Fiery",
+      "ingredient_tag":"forge:ingots/fiery",
+      "plate":"awakening:fiery_plate",
+      "plate_tag":"forge:plates/fiery",
+      "tier":"above_a",
+      "outputs":{
+        "helmet":"twilightforest:fiery_helmet",
+        "chestplate":"twilightforest:fiery_chestplate",
+        "leggings":"twilightforest:fiery_leggings",
+        "boots":"twilightforest:fiery_boots"
+      }
     }
   ]
 }
