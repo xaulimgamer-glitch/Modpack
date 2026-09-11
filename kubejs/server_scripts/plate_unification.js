@@ -12,7 +12,7 @@ const AWAKENING_PLATE_UNIFICATION = [
   },
   {
     id: 'copper',
-    pressIngredient: { tag: 'forge:ingots/copper' },
+    pressIngredient: { item: 'overgeared:heated_copper_ingot' },
     canonical: 'overgeared:copper_plate',
     deprecated: ['create:copper_sheet'],
     tags: ['forge:plates/copper', 'overgeared:copper_plates']

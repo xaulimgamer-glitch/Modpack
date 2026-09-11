@@ -47,6 +47,54 @@
           }
         ]
       }
+    },
+    {
+      "id": "copper",
+      "name": "Copper",
+      "heated": "overgeared:heated_copper_ingot",
+      "cooled": "minecraft:copper_ingot",
+      "texture": "overgeared:item/heated_copper_ingot",
+      "native": {
+        "item": true,
+        "heatedTag": true,
+        "cooling": true
+      },
+      "heating": {
+        "sources": [
+          "minecraft:raw_copper",
+          "minecraft:copper_ore",
+          "minecraft:deepslate_copper_ore"
+        ],
+        "smelting": {
+          "enabled": true,
+          "native": false,
+          "experience": 0.7,
+          "cookingTime": 200
+        },
+        "blasting": {
+          "enabled": true,
+          "native": true,
+          "experience": 0.7,
+          "cookingTime": 100
+        }
+      },
+      "forging": {
+        "overrides": [
+          {
+            "id": "overgeared:copper_plate",
+            "result": "overgeared:copper_plate",
+            "category": "misc",
+            "tier": "stone",
+            "hammering": 3,
+            "hasQuality": false,
+            "needsMinigame": false,
+            "needQuenching": false,
+            "pattern": [
+              "#"
+            ]
+          }
+        ]
+      }
     }
   ]
 }
