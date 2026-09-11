@@ -20,6 +20,20 @@
         "leggings":"undergarden:cloggrum_leggings",
         "boots":"undergarden:cloggrum_boots"
       }
+    },
+    {
+      "id":"froststeel",
+      "name":"Froststeel",
+      "ingredient_tag":"forge:ingots/froststeel",
+      "plate":"awakening:froststeel_plate",
+      "plate_tag":"forge:plates/froststeel",
+      "tier":"stone",
+      "outputs":{
+        "helmet":"undergarden:froststeel_helmet",
+        "chestplate":"undergarden:froststeel_chestplate",
+        "leggings":"undergarden:froststeel_leggings",
+        "boots":"undergarden:froststeel_boots"
+      }
     }
   ]
 }
