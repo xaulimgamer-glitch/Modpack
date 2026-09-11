@@ -49,6 +49,18 @@
         "shovel":"twilightforest:ironwood_shovel",
         "hoe":"twilightforest:ironwood_hoe"
       }
+    },
+    {
+      "id":"fiery",
+      "name":"Fiery",
+      "ingredient_tag":"forge:ingots/fiery",
+      "fragment":"awakening:fiery_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["sword","pickaxe"],
+      "outputs":{
+        "sword":"twilightforest:fiery_sword",
+        "pickaxe":"twilightforest:fiery_pickaxe"
+      }
     }
   ]
 }

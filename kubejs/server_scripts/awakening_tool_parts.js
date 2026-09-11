@@ -18,11 +18,21 @@ function awakeningToolPartId(material, template) {
   return 'awakening:' + material.id + '_' + template.suffix
 }
 
+function awakeningToolPartsTemplatesForMaterial(data, material) {
+  if (!Array.isArray(material.tool_types)) return data.templates
+
+  const selected = data.templates.filter(template => material.tool_types.indexOf(template.type) !== -1)
+  if (selected.length !== material.tool_types.length) {
+    throw new Error('[Awakening/ToolParts] Invalid tool_types for material: ' + material.id)
+  }
+  return selected
+}
+
 ServerEvents.tags('item', event => {
   const data = awakeningToolPartsLoadData()
 
   data.materials.forEach(material => {
-    data.templates.forEach(template => {
+    awakeningToolPartsTemplatesForMaterial(data, material).forEach(template => {
       const part = awakeningToolPartId(material, template)
       event.add('awakening:tool_parts', part)
       event.add('overgeared:tool_parts', part)
@@ -51,7 +61,7 @@ ServerEvents.recipes(event => {
     requireIngredient({ item: material.handle }, material.id)
     requireIngredient({ tag: 'overgeared:smithing_hammers' }, material.id)
 
-    data.templates.forEach(template => {
+    awakeningToolPartsTemplatesForMaterial(data, material).forEach(template => {
       const part = awakeningToolPartId(material, template)
       const output = material.outputs[template.type]
 
