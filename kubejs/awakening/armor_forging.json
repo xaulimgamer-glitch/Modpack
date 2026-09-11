@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "templates": [
+    {"type":"helmet","display":"Helmet","hammering":3,"pattern":["XXX","X X"]},
+    {"type":"chestplate","display":"Chestplate","hammering":5,"pattern":["X X","XXX","XXX"]},
+    {"type":"leggings","display":"Leggings","hammering":4,"pattern":["XXX","X X","X X"]},
+    {"type":"boots","display":"Boots","hammering":3,"pattern":["X X","X X"]}
+  ],
+  "materials": [
+    {
+      "id":"cloggrum",
+      "name":"Cloggrum",
+      "ingredient_tag":"forge:ingots/cloggrum",
+      "plate":"awakening:cloggrum_plate",
+      "plate_tag":"forge:plates/cloggrum",
+      "tier":"stone",
+      "outputs":{
+        "helmet":"undergarden:cloggrum_helmet",
+        "chestplate":"undergarden:cloggrum_chestplate",
+        "leggings":"undergarden:cloggrum_leggings",
+        "boots":"undergarden:cloggrum_boots"
+      }
+    }
+  ]
+}
