@@ -116,6 +116,20 @@
         "shovel":"iceandfire:dragonsteel_fire_shovel",
         "hoe":"iceandfire:dragonsteel_fire_hoe"
       }
+    },
+    {
+      "id":"ice_dragonsteel",
+      "name":"Ice Dragonsteel",
+      "ingredient_tag":"forge:ingots/ice_dragonsteel",
+      "fragment":"awakening:ice_dragonsteel_smithing_fragment",
+      "handle":"spartanfire:witherbone_handle",
+      "outputs":{
+        "sword":"iceandfire:dragonsteel_ice_sword",
+        "pickaxe":"iceandfire:dragonsteel_ice_pickaxe",
+        "axe":"iceandfire:dragonsteel_ice_axe",
+        "shovel":"iceandfire:dragonsteel_ice_shovel",
+        "hoe":"iceandfire:dragonsteel_ice_hoe"
+      }
     }
   ]
 }
