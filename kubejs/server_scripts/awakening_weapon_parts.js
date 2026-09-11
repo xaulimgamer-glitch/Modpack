@@ -2,25 +2,27 @@
   // Status: IMPLEMENTED / STATIC-OBSERVED. Minecraft/JEI verification is pending.
   // Every external weapon ID and material tag comes from pinned manifests.
   // No part -> ingot, weapon -> part, or fragment -> ingot conversion is added.
+  // Rhino/KubeJS 1.20.1 compatibility: closure locals use function-scoped var
+  // instead of block-scoped const/let to avoid lexical redeclaration leaks.
 
-  const AWAKENING_WEAPON_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
+  var AWAKENING_WEAPON_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
 
   function awakeningPartsCopy(value) {
     return JSON.parse(JSON.stringify(value))
   }
 
   function awakeningPartsLoadHeatedMetals() {
-    const data = JsonIO.read(AWAKENING_WEAPON_HEATED_METALS)
-    const byId = {}
+    var data = JsonIO.read(AWAKENING_WEAPON_HEATED_METALS)
+    var byId = {}
     if (!data || !Array.isArray(data.metals)) return byId
-    data.metals.forEach(metal => {
+    data.metals.forEach(function (metal) {
       if (metal && metal.id && metal.heated) byId[metal.id] = metal
     })
     return byId
   }
 
   function awakeningSteeleafResult(type, item) {
-    const thrown = ['throwing_knife', 'tomahawk', 'javelin', 'boomerang']
+    var thrown = ['throwing_knife', 'tomahawk', 'javelin', 'boomerang']
     if (type === 'longbow') return { item: item }
     if (type === 'heavy_crossbow') {
       return { type: 'minecraft:item_nbt', item: item, nbt: '{Enchantments:[{id:"minecraft:quick_charge",lvl:2s}]}' }
@@ -37,38 +39,40 @@
   function awakeningRetargetTagCondition(value, oldTag, newTag) {
     if (!value || typeof value !== 'object') return
     if (value.tag === oldTag) value.tag = newTag
-    Object.keys(value).forEach(key => awakeningRetargetTagCondition(value[key], oldTag, newTag))
+    Object.keys(value).forEach(function (key) {
+      awakeningRetargetTagCondition(value[key], oldTag, newTag)
+    })
   }
 
   function awakeningPartsLoadData() {
-    const data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
-    const twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
-    const cataclysm = JSON.parse(JsonIO.readString('kubejs/awakening/cataclysm_weapon_parts.json'))
+    var data = JSON.parse(JsonIO.readString('kubejs/awakening/weapon_parts.json'))
+    var twilight = JSON.parse(JsonIO.readString('kubejs/awakening/twilight_weapon_parts.json'))
+    var cataclysm = JSON.parse(JsonIO.readString('kubejs/awakening/cataclysm_weapon_parts.json'))
     if (!data || !twilight || !cataclysm || data.schema !== 1 || twilight.schema !== 1 || cataclysm.schema !== 1) {
       throw new Error('[Awakening/Parts] Unsupported manifest')
     }
 
-    const ironwood = data.materials.find(material => material.id === 'ironwood')
+    var ironwood = data.materials.find(function (material) { return material.id === 'ironwood' })
     if (!ironwood) {
       console.warn('[Awakening/Parts] Ironwood prototype missing; Twilight generated materials will be skipped.')
     } else {
-      twilight.materials.forEach(material => {
-        const generated = awakeningPartsCopy(material)
-        const generatedWeapons = []
-        const reasons = []
+      twilight.materials.forEach(function (material) {
+        var generated = awakeningPartsCopy(material)
+        var generatedWeapons = []
+        var reasons = []
 
-        twilight.weapon_types.forEach(type => {
-          const prototype = ironwood.weapons.find(weapon => weapon.type === type)
-          const template = data.templates[type]
+        twilight.weapon_types.forEach(function (type) {
+          var prototype = ironwood.weapons.find(function (weapon) { return weapon.type === type })
+          var template = data.templates[type]
           if (!prototype || !template) {
             reasons.push('missing Twilight prototype/template ' + type)
             return
           }
-          const weapon = awakeningPartsCopy(prototype)
+          var weapon = awakeningPartsCopy(prototype)
           weapon.part = 'awakening:' + material.id + '_' + template.suffix
           weapon.source_recipe = 'spartantwilight:' + material.id + '_' + type
           weapon.original.key[weapon.material_key] = { tag: material.ingredient_tag }
-          const output = 'spartantwilight:' + material.id + '_' + type
+          var output = 'spartantwilight:' + material.id + '_' + type
           weapon.original.result = material.id === 'steeleaf'
             ? awakeningSteeleafResult(type, output)
             : { item: output }
@@ -84,22 +88,22 @@
       })
     }
 
-    const cataclysmPrototype = data.materials.find(material => material.id === cataclysm.prototype)
+    var cataclysmPrototype = data.materials.find(function (material) { return material.id === cataclysm.prototype })
     if (!cataclysmPrototype) {
       console.warn('[Awakening/Parts] Cataclysm prototype missing: ' + cataclysm.prototype + '; generated Cataclysm materials will be skipped.')
     } else {
-      cataclysm.materials.forEach(material => {
-        const generated = awakeningPartsCopy(material)
-        const generatedWeapons = []
-        const reasons = []
+      cataclysm.materials.forEach(function (material) {
+        var generated = awakeningPartsCopy(material)
+        var generatedWeapons = []
+        var reasons = []
 
-        cataclysmPrototype.weapons.forEach(prototype => {
-          const template = data.templates[prototype.type]
+        cataclysmPrototype.weapons.forEach(function (prototype) {
+          var template = data.templates[prototype.type]
           if (!template) {
             reasons.push('missing Cataclysm template ' + prototype.type)
             return
           }
-          const weapon = awakeningPartsCopy(prototype)
+          var weapon = awakeningPartsCopy(prototype)
           weapon.part = 'awakening:' + material.id + '_' + template.suffix
           weapon.source_recipe = 'spartancataclysm:' + material.id + '_' + prototype.type
           weapon.original.key[weapon.material_key] = { tag: material.ingredient_tag }
@@ -121,31 +125,31 @@
   }
 
   function awakeningPartsAssembly(weapon, template) {
-    const original = weapon.original
-    const recipe = awakeningPartsCopy(template.assembly)
+    var original = weapon.original
+    var recipe = awakeningPartsCopy(template.assembly)
     recipe.result = awakeningPartsCopy(original.result)
     recipe.conditions = awakeningPartsCopy(original.conditions || [])
     recipe.group = original.group || ''
 
     if (recipe.ingredients) {
       recipe.ingredients = [{ item: weapon.part }]
-      original.pattern.join('').split('').forEach(symbol => {
+      original.pattern.join('').split('').forEach(function (symbol) {
         if (symbol !== ' ' && symbol !== weapon.material_key) {
           recipe.ingredients.push(awakeningPartsCopy(original.key[symbol]))
         }
       })
     } else {
-      Object.keys(recipe.key).forEach(symbol => {
-        const value = recipe.key[symbol]
+      Object.keys(recipe.key).forEach(function (symbol) {
+        var value = recipe.key[symbol]
         if (value.item === template.forging.result.item) recipe.key[symbol] = { item: weapon.part }
       })
 
       if (weapon.type === 'longbow' || weapon.type === 'heavy_crossbow') {
-        const grip = original.key['|']
+        var grip = original.key['|']
         if (!grip) throw new Error('missing bow grip: ' + weapon.source_recipe)
         recipe.key.h = awakeningPartsCopy(grip)
-        let placed = false
-        recipe.pattern = recipe.pattern.map(row => {
+        var placed = false
+        recipe.pattern = recipe.pattern.map(function (row) {
           if (placed || row.indexOf('l') < 0) return row
           placed = true
           return row.replace('l', 'h')
@@ -165,14 +169,14 @@
     }
   }
 
-  ServerEvents.tags('item', event => {
-    const data = awakeningPartsLoadData()
-    data.materials.forEach(material => {
+  ServerEvents.tags('item', function (event) {
+    var data = awakeningPartsLoadData()
+    data.materials.forEach(function (material) {
       if (!material || !Array.isArray(material.weapons)) {
         console.warn('[Awakening/Parts] Skipping malformed weapon-part tag material: ' + JSON.stringify(material))
         return
       }
-      material.weapons.forEach(weapon => {
+      material.weapons.forEach(function (weapon) {
         if (!weapon || !weapon.part) return
         event.add('awakening:weapon_parts', weapon.part)
         event.add('overgeared:tool_parts', weapon.part)
@@ -180,13 +184,13 @@
     })
   })
 
-  ServerEvents.recipes(event => {
-    const data = awakeningPartsLoadData()
-    const heatedMetals = awakeningPartsLoadHeatedMetals()
-    const pending = []
-    const outputs = []
-    const heating = {}
-    let skipped = 0
+  ServerEvents.recipes(function (event) {
+    var data = awakeningPartsLoadData()
+    var heatedMetals = awakeningPartsLoadHeatedMetals()
+    var pending = []
+    var outputs = []
+    var heating = {}
+    var skipped = 0
 
     function queue(id, json) {
       pending.push({ id: 'awakening:weapon_parts/' + id, json: json })
@@ -206,16 +210,16 @@
       })
     }
 
-    data.materials.forEach(material => {
-      const reasons = []
-      const materialPending = []
-      const materialOutputs = []
-      const materialHeating = []
-      const heatedMetal = heatedMetals[material.id]
-      const forgingMaterial = heatedMetal
+    data.materials.forEach(function (material) {
+      var reasons = []
+      var materialPending = []
+      var materialOutputs = []
+      var materialHeating = []
+      var heatedMetal = material && material.id ? heatedMetals[material.id] : null
+      var forgingMaterial = heatedMetal
         ? { item: heatedMetal.heated }
         : { tag: material.ingredient_tag, requires_heated: true }
-      const forgingValidation = heatedMetal
+      var forgingValidation = heatedMetal
         ? { item: heatedMetal.heated }
         : { tag: material.ingredient_tag }
 
@@ -223,12 +227,12 @@
       if (!material || !material.ingredient_tag) reasons.push('missing ingredient tag')
       if (!material || !material.fragment) reasons.push('missing fragment item id')
       if (!material || !Array.isArray(material.weapons)) reasons.push('missing weapons list')
-      if (!awakeningPartsIngredientExists(forgingValidation)) reasons.push('missing forging material ' + JSON.stringify(forgingValidation))
+      if (material && material.ingredient_tag && !awakeningPartsIngredientExists(forgingValidation)) reasons.push('missing forging material ' + JSON.stringify(forgingValidation))
       if (material && material.fragment && !awakeningPartsIngredientExists({ item: material.fragment })) reasons.push('missing fragment ' + material.fragment)
       if (!awakeningPartsIngredientExists({ tag: 'overgeared:smithing_hammers' })) reasons.push('missing overgeared:smithing_hammers')
 
       if (reasons.length === 0 && !heatedMetal) {
-        Ingredient.of('#' + material.ingredient_tag).itemIds.forEach(id => materialHeating.push(String(id)))
+        Ingredient.of('#' + material.ingredient_tag).itemIds.forEach(function (id) { materialHeating.push(String(id)) })
       }
       if (reasons.length === 0) materialHeating.push(material.fragment)
 
@@ -249,8 +253,8 @@
 
       if (reasons.length === 0) {
         try {
-          material.weapons.forEach(weapon => {
-            const template = data.templates[weapon.type]
+          material.weapons.forEach(function (weapon) {
+            var template = data.templates[weapon.type]
             if (!template) {
               reasons.push('missing template for ' + weapon.type)
               return
@@ -259,13 +263,13 @@
               reasons.push('missing part ' + (weapon.part || '<undefined>'))
               return
             }
-            const outputItem = weapon.original && weapon.original.result ? weapon.original.result.item : null
+            var outputItem = weapon.original && weapon.original.result ? weapon.original.result.item : null
             if (!outputItem || !awakeningPartsIngredientExists({ item: outputItem })) {
               reasons.push('missing output item for ' + (weapon.source_recipe || weapon.type))
               return
             }
 
-            const forging = awakeningPartsCopy(template.forging)
+            var forging = awakeningPartsCopy(template.forging)
             forging.key = {
               X: forgingMaterial,
               x: { item: material.fragment, requires_heated: true }
@@ -278,9 +282,9 @@
               delete forging.minimum_quality
             }
 
-            const assembly = awakeningPartsAssembly(weapon, template)
-            const ingredients = assembly.ingredients || Object.keys(assembly.key).map(k => assembly.key[k])
-            ingredients.forEach(ingredient => {
+            var assembly = awakeningPartsAssembly(weapon, template)
+            var ingredients = assembly.ingredients || Object.keys(assembly.key).map(function (key) { return assembly.key[key] })
+            ingredients.forEach(function (ingredient) {
               if (!awakeningPartsIngredientExists(ingredient)) {
                 reasons.push('missing assembly ingredient in ' + weapon.source_recipe + ': ' + JSON.stringify(ingredient))
               }
@@ -313,13 +317,13 @@
         return
       }
 
-      materialHeating.forEach(item => queueHeating(item))
-      materialPending.forEach(recipe => queue(recipe.id, recipe.json))
-      materialOutputs.forEach(output => outputs.push(output))
+      materialHeating.forEach(function (item) { queueHeating(item) })
+      materialPending.forEach(function (recipe) { queue(recipe.id, recipe.json) })
+      materialOutputs.forEach(function (output) { outputs.push(output) })
     })
 
-    outputs.forEach(output => event.remove({ output: output }))
-    pending.forEach(recipe => event.custom(recipe.json).id(recipe.id))
+    outputs.forEach(function (output) { event.remove({ output: output }) })
+    pending.forEach(function (recipe) { event.custom(recipe.json).id(recipe.id) })
     console.info('[Awakening/Parts] Installed ' + outputs.length + ' original-weapon assemblies; ' + pending.length + ' recipes; skipped ' + skipped + ' materials. Live verification pending.')
   })
 })()
