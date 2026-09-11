@@ -21,6 +21,20 @@
         "shovel":"undergarden:cloggrum_shovel",
         "hoe":"undergarden:cloggrum_hoe"
       }
+    },
+    {
+      "id":"froststeel",
+      "name":"Froststeel",
+      "ingredient_tag":"forge:ingots/froststeel",
+      "fragment":"awakening:froststeel_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "outputs":{
+        "sword":"undergarden:froststeel_sword",
+        "pickaxe":"undergarden:froststeel_pickaxe",
+        "axe":"undergarden:froststeel_axe",
+        "shovel":"undergarden:froststeel_shovel",
+        "hoe":"undergarden:froststeel_hoe"
+      }
     }
   ]
 }
