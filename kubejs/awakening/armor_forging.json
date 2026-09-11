@@ -104,6 +104,20 @@
         "leggings":"twilightforest:knightmetal_leggings",
         "boots":"twilightforest:knightmetal_boots"
       }
+    },
+    {
+      "id":"fire_dragonsteel",
+      "name":"Fire Dragonsteel",
+      "ingredient_tag":"forge:ingots/dragonsteel_fire",
+      "plate":"awakening:fire_dragonsteel_plate",
+      "plate_tag":"forge:plates/dragonsteel_fire",
+      "tier":"above_b",
+      "outputs":{
+        "helmet":"iceandfire:dragonsteel_fire_helmet",
+        "chestplate":"iceandfire:dragonsteel_fire_chestplate",
+        "leggings":"iceandfire:dragonsteel_fire_leggings",
+        "boots":"iceandfire:dragonsteel_fire_boots"
+      }
     }
   ]
 }
