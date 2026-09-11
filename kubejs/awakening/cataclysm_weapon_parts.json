@@ -9,13 +9,6 @@
       "color": "343840",
       "ingredient_tag": "spartancataclysm:black_steel_ingots",
       "fragment": "awakening:black_steel_smithing_fragment"
-    },
-    {
-      "id": "witherite",
-      "name": "Witherite",
-      "color": "33383F",
-      "ingredient_tag": "spartancataclysm:witherite_ingots",
-      "fragment": "awakening:witherite_smithing_fragment"
     }
   ]
 }
