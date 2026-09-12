@@ -234,81 +234,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"0C58D5FB226A6BC0"
-				"0A927C82CCCF6830"
-			]
-			icon: {
-				Count: 1
-				id: "butchery:copper_cleaver"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "738AA0DB98FC4FE6"
-			tasks: [
-				{
-					id: "2486AC576DB6FE2E"
-					item: "butchery:rope"
-					type: "item"
-				}
-				{
-					id: "3DB5461283930B93"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:cleavers)"
-						}
-					}
-					title: "Cleaver"
-					type: "item"
-				}
-				{
-					id: "1B3E6A19BC8CF917"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(turipis:skinning_knives)"
-						}
-					}
-					title: "Skinning Knive"
-					type: "item"
-				}
-			]
-			title: "Tools of the Butcher"
-			x: -4.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["738AA0DB98FC4FE6"]
-			icon: "butchery:pig_head"
-			id: "6A65D2A7B2F257DE"
-			tasks: [
-				{
-					id: "79C45937F84E6CE8"
-					item: {
-						Count: 1
-						id: "ftbfiltersystem:smart_filter"
-						tag: {
-							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(butchery:raw_meat)"
-						}
-					}
-					title: "Any #butchery:raw_meat"
-					type: "item"
-				}
-				{
-					id: "576DB2147ABBB900"
-					item: "butchery:heart"
-					type: "item"
-				}
-			]
-			title: "Blood and Hide"
-			x: -2.0d
-			y: -1.0d
-		}
-		{
 			dependencies: ["0C58D5FB226A6BC0"]
 			description: [
 				"&lMore Than Hunger&r"
@@ -366,7 +291,6 @@
 		}
 		{
 			dependencies: [
-				"6A65D2A7B2F257DE"
 				"304F4D6E546418F5"
 				"29F648BC45125F8A"
 				"6961735BB6354864"
