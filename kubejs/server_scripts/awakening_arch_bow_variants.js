@@ -4,7 +4,16 @@
   var WEAPON_PARTS = 'kubejs/awakening/weapon_parts.json'
   var TWILIGHT_PARTS = 'kubejs/awakening/twilight_weapon_parts.json'
   var CATACLYSM_PARTS = 'kubejs/awakening/cataclysm_weapon_parts.json'
-  var LONGBOW_LIMB_PATTERN = ['XxX', 'x  ', 'X  ']
+  var LIMB_PATTERNS = {
+    short_bow: ['XxX', ' x ', ' X '],
+    recurve_bow: ['xXX', ' X ', 'x  '],
+    flat_bow: ['XXX', 'x x']
+  }
+  var FULL_ONLY_LIMB_PATTERNS = {
+    short_bow: ['XXX', ' X ', ' X '],
+    recurve_bow: [' XX', 'XX ', 'X  '],
+    flat_bow: ['XXX', 'X X']
+  }
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
@@ -67,6 +76,13 @@
 
   function limb(material, typeId) {
     return 'awakening:' + materialKey(material) + '_' + limbSuffix(typeId)
+  }
+
+  function limbPattern(typeId, fullOnly) {
+    var patterns = fullOnly ? FULL_ONLY_LIMB_PATTERNS : LIMB_PATTERNS
+    var pattern = patterns[typeId]
+    if (!pattern) throw new Error('[Awakening/Bows] Missing limb forging pattern for ' + typeId)
+    return pattern
   }
 
   function addition(upgrade) {
@@ -189,7 +205,7 @@
             },
             need_quenching: false,
             needs_minigame: false,
-            pattern: LONGBOW_LIMB_PATTERN,
+            pattern: limbPattern(typeId, false),
             quality_difficulty: 'none',
             result: { item: bowLimb },
             show_notification: true,
@@ -202,6 +218,7 @@
             event.forEachRecipe({ type: 'overgeared:forging', output: sourceLimb }, function (recipe) {
               if (forgeInstalled) return
               var forging = JSON.parse(recipe.json)
+              forging.pattern = limbPattern(typeId, !(forging.key && forging.key.x))
               forging.result = { item: bowLimb }
               event.custom(forging).id('awakening:bows/' + material.id + '/forge/' + limbSuffix(typeId))
               forgeInstalled = true
@@ -217,7 +234,7 @@
               key: { X: { item: heated.heated } },
               need_quenching: false,
               needs_minigame: false,
-              pattern: ['XXX', 'X  ', 'X  '],
+              pattern: limbPattern(typeId, true),
               quality_difficulty: 'none',
               result: { item: bowLimb },
               show_notification: true,
