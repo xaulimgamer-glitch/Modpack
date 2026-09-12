@@ -7,7 +7,29 @@
     return data
   }
 
-  function model(typeId) {
+  function materialKey(material) {
+    return material.id === 'wood' ? 'wooden' : material.id
+  }
+
+  function materialName(material) {
+    return material.id === 'wood' ? 'Wooden' : material.name
+  }
+
+  function model(typeId, material) {
+    if (material.id === 'wood') {
+      var base = 'awakening:item/bows/wooden_' + typeId
+      var pulling = base + '_pulling_'
+      return {
+        parent: 'minecraft:item/generated',
+        textures: { layer0: base },
+        overrides: [
+          { predicate: { pulling: 1 }, model: pulling + '0' },
+          { predicate: { pulling: 1, pull: 0.65 }, model: pulling + '1' },
+          { predicate: { pulling: 1, pull: 0.9 }, model: pulling + '2' }
+        ]
+      }
+    }
+
     var child = 'awakening:item/bows/' + typeId + '_pulling_'
     return {
       parent: child + '0',
@@ -27,29 +49,30 @@
     var data = loadData()
 
     data.materials.forEach(function (material) {
-      var hasDedicatedLimbs = !material.existing_outputs && Array.isArray(material.limb_candidates) && material.limb_candidates.length > 0
+      var hasDedicatedLimbs = material.id !== 'leather' &&
+        !material.existing_outputs &&
+        Array.isArray(material.limb_candidates) &&
+        material.limb_candidates.length > 0
 
       if (hasDedicatedLimbs) {
         Object.keys(data.bow_types).forEach(function (typeId) {
           var type = data.bow_types[typeId]
-          var limb = event.create('awakening:' + material.id + '_' + limbSuffix(typeId))
-            .displayName(material.name + ' ' + type.name + ' Limb')
+          var limb = event.create('awakening:' + materialKey(material) + '_' + limbSuffix(typeId))
+            .displayName(materialName(material) + ' ' + type.name + ' Limb')
             .texture('overgearedspartan:item/iron_longbow_limb')
 
           if (material.color) limb.color(0, parseInt(material.color, 16))
         })
       }
 
-      // Wood uses explicit Awakening output IDs so the server recipe layer can
-      // own its recipes without trying to generate dedicated wood limbs.
       if (material.existing_outputs && material.id !== 'wood') return
 
       Object.keys(data.bow_types).forEach(function (typeId) {
         var type = data.bow_types[typeId]
-        var item = event.create('awakening:' + material.id + '_' + type.suffix, 'bow')
-          .displayName(material.name + ' ' + type.name)
+        var item = event.create('awakening:' + materialKey(material) + '_' + type.suffix, 'bow')
+          .displayName(materialName(material) + ' ' + type.name)
           .maxDamage(type.max_damage)
-          .modelJson(model(typeId))
+          .modelJson(model(typeId, material))
 
         if (material.color) item.color(0, parseInt(material.color, 16))
         item.bow(function (bow) {
