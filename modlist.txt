@@ -77,7 +77,6 @@ forge,Forge,47.4.22,forge-1.20.1-47.4.22-universal.jar,,https://minecraftforge.n
 dungeons_arise,When Dungeons Arise,2.1.58-1.20.x,DungeonsArise-1.20.x-2.1.58-release.jar,,https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise,
 tectonic,Tectonic,3.0.17,tectonic-3.0.17-forge-1.20.1.jar,,https://modrinth.com/project/tectonic,https://github.com/Apollounknowndev/tectonic/issues
 minecraft,Minecraft,1.20.1,client-1.20.1-20230612.114412-srg.jar,,,
-butchery,Butchery,5.2,butchery-5.2-forge-1.20.1.jar,,https://discord.gg/4jyFpT8jEk,
 aquaculturedelight,Aquaculture Delight,1.1.1,aquaculturedelight-1.1.1-forge-1.20.1.jar,,https://www.curseforge.com/minecraft/mc-mods/aquaculture-delight,
 terrablender,TerraBlender,3.0.1.10,TerraBlender-forge-1.20.1-3.0.1.10.jar,,,https://github.com/Glitchfiend/TerraBlender/issues
 fabric_api_base,Fabric API Base,0.4.32+ef105b4977,fabric-api-base-0.4.32+ef105b4977.jar,,,
