@@ -2,6 +2,11 @@
 // Vanilla arrows remain more efficient (4 arrows with a feather).
 // This improvised recipe removes the feather requirement at half the yield.
 ServerEvents.recipes(event => {
+  const SIMPLE_HANDLE = 'spartanweaponry:simple_handle'
+  const WOODEN_ROD = '#forge:rods/wooden'
+  const STRING = '#forge:string'
+  const PLANKS = '#minecraft:planks'
+
   event.shaped('2x minecraft:arrow', [
     'F',
     'S'
@@ -10,41 +15,54 @@ ServerEvents.recipes(event => {
     S: 'minecraft:stick'
   }).id('kubejs:improvised_arrows')
 
-  // Arch Bows progression now uses Spartan Weaponry handles.
-  // The Arch Bows longbow is intentionally left without a crafting recipe;
-  // Spartan Weaponry owns the longbow progression in Awakening.
-  event.remove({ output: 'archbows:shortbow' })
-  event.remove({ output: 'archbows:recurve' })
-  event.remove({ output: 'archbows:flatbow' })
-  event.remove({ output: 'archbows:longbow' })
+  event.remove({ output: 'kubejs:crude_short_bow' })
+  event.remove({ output: 'awakening:wood_short_bow' })
+  event.remove({ output: 'awakening:wood_recurve_bow' })
+  event.remove({ output: 'awakening:wood_flat_bow' })
 
-  event.shaped('archbows:shortbow', [
-    ' /S',
-    '| S'
+  // Tier 0: the Crude Short Bow remains the primitive starter bow.
+  // Sticks keep it craftable before normal plank processing, but it still
+  // participates in Awakening's handle progression.
+  event.shaped('kubejs:crude_short_bow', [
+    ' RS',
+    'H S'
   ], {
-    '/': '#forge:rods/wooden',
-    '|': 'spartanweaponry:simple_handle',
-    S: '#forge:string'
-  }).id('awakening:archbows/shortbow')
+    R: 'minecraft:stick',
+    H: SIMPLE_HANDLE,
+    S: STRING
+  }).id('awakening:ranger/crude_short_bow')
 
-  event.shaped('archbows:recurve', [
-    ' /S',
-    '| S',
-    ' /S'
+  // Wood bows use the same ingredient family as Spartan Weaponry's Wooden
+  // Longbow, but substitute its reinforced handle for Awakening's Simple Handle.
+  event.shaped('awakening:wood_short_bow', [
+    'PHR',
+    'RSS'
   ], {
-    '/': '#forge:rods/wooden',
-    '|': 'spartanweaponry:simple_handle',
-    S: 'archbows:flax_string'
-  }).id('awakening:archbows/recurve')
+    P: PLANKS,
+    H: SIMPLE_HANDLE,
+    R: WOODEN_ROD,
+    S: STRING
+  }).id('awakening:ranger/wood_short_bow')
 
-  event.shaped('archbows:flatbow', [
-    '|/#',
-    '/ S',
-    '#SS'
+  event.shaped('awakening:wood_recurve_bow', [
+    'RHP',
+    'R S',
+    'RSS'
   ], {
-    '#': '#minecraft:planks',
-    '/': '#forge:rods/wooden',
-    '|': 'spartanweaponry:handle',
-    S: 'archbows:linen_string'
-  }).id('awakening:archbows/flatbow')
+    P: PLANKS,
+    H: SIMPLE_HANDLE,
+    R: WOODEN_ROD,
+    S: STRING
+  }).id('awakening:ranger/wood_recurve_bow')
+
+  event.shaped('awakening:wood_flat_bow', [
+    'PHR',
+    'P S',
+    'RSS'
+  ], {
+    P: PLANKS,
+    H: SIMPLE_HANDLE,
+    R: WOODEN_ROD,
+    S: STRING
+  }).id('awakening:ranger/wood_flat_bow')
 })

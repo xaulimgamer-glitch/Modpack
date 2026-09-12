@@ -3,7 +3,7 @@
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
-    if (!data || data.schema !== 2 || !data.bow_types || !data.assembly || !Array.isArray(data.materials)) throw new Error('[Awakening/ArchBows] Unsupported manifest')
+    if (!data || data.schema !== 2 || !data.bow_types || !data.assembly || !Array.isArray(data.materials)) throw new Error('[Awakening/Bows] Unsupported manifest')
     return data
   }
 
@@ -40,7 +40,9 @@
         })
       }
 
-      if (material.existing_outputs) return
+      // Wood uses explicit Awakening output IDs so the server recipe layer can
+      // own its recipes without trying to generate dedicated wood limbs.
+      if (material.existing_outputs && material.id !== 'wood') return
 
       Object.keys(data.bow_types).forEach(function (typeId) {
         var type = data.bow_types[typeId]

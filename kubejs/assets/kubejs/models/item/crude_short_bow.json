@@ -1,0 +1,25 @@
+{
+  "parent": "awakening:item/bows/short_bow_pulling_0",
+  "overrides": [
+    {
+      "predicate": {
+        "pulling": 1
+      },
+      "model": "awakening:item/bows/short_bow_pulling_0"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.65
+      },
+      "model": "awakening:item/bows/short_bow_pulling_1"
+    },
+    {
+      "predicate": {
+        "pulling": 1,
+        "pull": 0.9
+      },
+      "model": "awakening:item/bows/short_bow_pulling_2"
+    }
+  ]
+}
