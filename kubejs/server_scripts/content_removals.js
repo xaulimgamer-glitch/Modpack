@@ -40,6 +40,16 @@ const SWEM_REMOVED_PLAYER_GEAR = [
   'swem:helmet_riding'
 ]
 
+const ARTIFACTS_REMOVED_FROM_PROGRESSION = [
+  'artifacts:plastic_drinking_hat',
+  'artifacts:novelty_drinking_hat',
+  'artifacts:night_vision_goggles',
+  'artifacts:snorkel',
+  'artifacts:whoopee_cushion',
+  'artifacts:umbrella',
+  'artifacts:everlasting_beef'
+]
+
 ServerEvents.recipes(event => {
   // Alex's Caves Nuclear Furnace is assembled from this craftable component.
   // Removing every recipe that outputs the component makes the multiblock unobtainable in survival.
@@ -51,6 +61,10 @@ ServerEvents.recipes(event => {
   // Remove SWEM combat/player equipment without touching horse armor or tack.
   // Output-based removal also catches compat recipes that produce the same registered items.
   SWEM_REMOVED_PLAYER_GEAR.forEach(item => event.remove({ output: item }))
+
+  // The selected Artifacts remain registered for save compatibility, but no recipe or compat recipe
+  // may reintroduce them as a progression route.
+  ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
 })
 
 // Submarines are spawned directly by Abyssal Ruins and by the Enigmatic Engine,

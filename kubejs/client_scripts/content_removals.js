@@ -39,11 +39,22 @@ const SWEM_REMOVED_PLAYER_GEAR = [
   'swem:helmet_riding'
 ]
 
+const ARTIFACTS_REMOVED_FROM_PROGRESSION = [
+  'artifacts:plastic_drinking_hat',
+  'artifacts:novelty_drinking_hat',
+  'artifacts:night_vision_goggles',
+  'artifacts:snorkel',
+  'artifacts:whoopee_cushion',
+  'artifacts:umbrella',
+  'artifacts:everlasting_beef'
+]
+
 JEIEvents.hideItems(event => {
   event.hide('alexscaves:nuclear_furnace_component')
   event.hide('alexscaves:submarine')
 
   SWEM_REMOVED_PLAYER_GEAR.forEach(item => event.hide(item))
+  ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.hide(item))
 })
 
 JEIEvents.removeCategories(event => {
