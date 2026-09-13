@@ -6,7 +6,7 @@ StartupEvents.registry('item', event => {
         .bow(bow => {
             bow.modifyBow(attributes => {
                 attributes
-                    .fullChargeTick(12)
+                    .fullChargeTick(15)
                     .baseDamage(1.0)
             })
         })

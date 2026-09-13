@@ -5,7 +5,8 @@
     {"type":"pickaxe","suffix":"pickaxe_head","display":"Pickaxe Head","tooltype":"pickaxe","pattern":["XXX"]},
     {"type":"axe","suffix":"axe_head","display":"Axe Head","tooltype":"axe","pattern":["XX","X "]},
     {"type":"shovel","suffix":"shovel_head","display":"Shovel Head","tooltype":"shovel","pattern":["X"]},
-    {"type":"hoe","suffix":"hoe_head","display":"Hoe Head","tooltype":"hoe","pattern":["XX"]}
+    {"type":"hoe","suffix":"hoe_head","display":"Hoe Head","tooltype":"hoe","pattern":["XX"]},
+    {"type":"machete","suffix":"machete_blade","display":"Machete Blade","tooltype":"machete","texture":"overgearedspartan:item/iron_saber_blade","pattern":[" X"," X","xX"]}
   ],
   "materials": [
     {
@@ -14,12 +15,14 @@
       "ingredient_tag":"forge:ingots/cloggrum",
       "fragment":"awakening:cloggrum_smithing_fragment",
       "handle":"spartanweaponry:handle",
+      "machete_tier":{"level":2,"uses":286,"speed":6.0,"attack_damage_bonus":3.0,"enchantment_value":8,"repair_ingredient":"undergarden:cloggrum_ingot"},
       "outputs":{
         "sword":"undergarden:cloggrum_sword",
         "pickaxe":"undergarden:cloggrum_pickaxe",
         "axe":"undergarden:cloggrum_axe",
         "shovel":"undergarden:cloggrum_shovel",
-        "hoe":"undergarden:cloggrum_hoe"
+        "hoe":"undergarden:cloggrum_hoe",
+        "machete":"awakening:cloggrum_machete"
       }
     },
     {
@@ -28,12 +31,14 @@
       "ingredient_tag":"forge:ingots/froststeel",
       "fragment":"awakening:froststeel_smithing_fragment",
       "handle":"spartanweaponry:handle",
+      "machete_tier":{"level":2,"uses":575,"speed":7.0,"attack_damage_bonus":2.0,"enchantment_value":20,"repair_ingredient":"undergarden:froststeel_ingot"},
       "outputs":{
         "sword":"undergarden:froststeel_sword",
         "pickaxe":"undergarden:froststeel_pickaxe",
         "axe":"undergarden:froststeel_axe",
         "shovel":"undergarden:froststeel_shovel",
-        "hoe":"undergarden:froststeel_hoe"
+        "hoe":"undergarden:froststeel_hoe",
+        "machete":"awakening:froststeel_machete"
       }
     },
     {
@@ -42,12 +47,14 @@
       "ingredient_tag":"forge:ingots/ironwood",
       "fragment":"awakening:ironwood_smithing_fragment",
       "handle":"spartanweaponry:handle",
+      "machete_tier":{"level":2,"uses":512,"speed":6.5,"attack_damage_bonus":2.0,"enchantment_value":25,"repair_ingredient":"twilightforest:ironwood_ingot"},
       "outputs":{
         "sword":"twilightforest:ironwood_sword",
         "pickaxe":"twilightforest:ironwood_pickaxe",
         "axe":"twilightforest:ironwood_axe",
         "shovel":"twilightforest:ironwood_shovel",
-        "hoe":"twilightforest:ironwood_hoe"
+        "hoe":"twilightforest:ironwood_hoe",
+        "machete":"awakening:ironwood_machete"
       }
     },
     {
@@ -56,10 +63,12 @@
       "ingredient_tag":"forge:ingots/fiery",
       "fragment":"awakening:fiery_smithing_fragment",
       "handle":"spartanweaponry:handle",
-      "tool_types":["sword","pickaxe"],
+      "tool_types":["sword","pickaxe","machete"],
+      "machete_tier":{"level":4,"uses":1024,"speed":9.0,"attack_damage_bonus":4.0,"enchantment_value":10,"repair_ingredient":"twilightforest:fiery_ingot"},
       "outputs":{
         "sword":"twilightforest:fiery_sword",
-        "pickaxe":"twilightforest:fiery_pickaxe"
+        "pickaxe":"twilightforest:fiery_pickaxe",
+        "machete":"awakening:fiery_machete"
       }
     },
     {
@@ -68,12 +77,14 @@
       "ingredient_tag":"forge:ingots/steeleaf",
       "fragment":"awakening:steeleaf_smithing_fragment",
       "handle":"spartanweaponry:handle",
+      "machete_tier":{"level":3,"uses":131,"speed":8.0,"attack_damage_bonus":3.0,"enchantment_value":9,"repair_ingredient":"twilightforest:steeleaf_ingot"},
       "outputs":{
         "sword":"twilightforest:steeleaf_sword",
         "pickaxe":"twilightforest:steeleaf_pickaxe",
         "axe":"twilightforest:steeleaf_axe",
         "shovel":"twilightforest:steeleaf_shovel",
-        "hoe":"twilightforest:steeleaf_hoe"
+        "hoe":"twilightforest:steeleaf_hoe",
+        "machete":"awakening:steeleaf_machete"
       }
     },
     {
@@ -82,11 +93,13 @@
       "ingredient_tag":"forge:ingots/knightmetal",
       "fragment":"awakening:knightmetal_smithing_fragment",
       "handle":"spartanweaponry:handle",
-      "tool_types":["sword","pickaxe","axe"],
+      "tool_types":["sword","pickaxe","axe","machete"],
+      "machete_tier":{"level":3,"uses":512,"speed":8.0,"attack_damage_bonus":3.0,"enchantment_value":8,"repair_ingredient":"twilightforest:knightmetal_ingot"},
       "outputs":{
         "sword":"twilightforest:knightmetal_sword",
         "pickaxe":"twilightforest:knightmetal_pickaxe",
-        "axe":"twilightforest:knightmetal_axe"
+        "axe":"twilightforest:knightmetal_axe",
+        "machete":"awakening:knightmetal_machete"
       }
     },
     {
@@ -95,13 +108,40 @@
       "ingredient_tag":"spartancataclysm:black_steel_ingots",
       "fragment":"awakening:black_steel_smithing_fragment",
       "handle":"spartanweaponry:handle",
+      "tool_types":["sword","pickaxe","axe","shovel","hoe","machete"],
+      "machete_tier":{"level":3,"uses":750,"speed":8.0,"attack_damage_bonus":2.0,"enchantment_value":25,"repair_ingredient":"cataclysm:black_steel_ingot"},
       "outputs":{
         "sword":"cataclysm:black_steel_sword",
         "pickaxe":"cataclysm:black_steel_pickaxe",
         "axe":"cataclysm:black_steel_axe",
         "shovel":"cataclysm:black_steel_shovel",
-        "hoe":"cataclysm:black_steel_hoe"
+        "hoe":"cataclysm:black_steel_hoe",
+        "machete":"awakening:black_steel_machete"
       }
+    },
+    {
+      "id":"ancient_metal",
+      "name":"Ancient Metal",
+      "ingredient_tag":"spartancataclysm:ancient_metal_ingots",
+      "fragment":"awakening:ancient_metal_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"B5B790",
+      "machete_tier":{"level":3,"uses":750,"speed":8.0,"attack_damage_bonus":2.0,"enchantment_value":25,"repair_ingredient":"cataclysm:ancient_metal_ingot"},
+      "outputs":{"machete":"awakening:ancient_metal_machete"}
+    },
+    {
+      "id":"witherite",
+      "name":"Witherite",
+      "ingredient_tag":"spartancataclysm:witherite_ingots",
+      "fragment":"awakening:witherite_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"77728B",
+      "fire_resistant":true,
+      "rarity":"epic",
+      "machete_tier":{"level":5,"uses":-1,"speed":7.0,"attack_damage_bonus":6.0,"enchantment_value":18,"repair_ingredient":"cataclysm:witherite_ingot"},
+      "outputs":{"machete":"awakening:witherite_machete"}
     },
     {
       "id":"fire_dragonsteel",
@@ -109,6 +149,7 @@
       "ingredient_tag":"forge:ingots/fire_dragonsteel",
       "fragment":"awakening:fire_dragonsteel_smithing_fragment",
       "handle":"spartanfire:witherbone_handle",
+      "tool_types":["sword","pickaxe","axe","shovel","hoe"],
       "outputs":{
         "sword":"iceandfire:dragonsteel_fire_sword",
         "pickaxe":"iceandfire:dragonsteel_fire_pickaxe",
@@ -123,6 +164,7 @@
       "ingredient_tag":"forge:ingots/ice_dragonsteel",
       "fragment":"awakening:ice_dragonsteel_smithing_fragment",
       "handle":"spartanfire:witherbone_handle",
+      "tool_types":["sword","pickaxe","axe","shovel","hoe"],
       "outputs":{
         "sword":"iceandfire:dragonsteel_ice_sword",
         "pickaxe":"iceandfire:dragonsteel_ice_pickaxe",
@@ -137,6 +179,7 @@
       "ingredient_tag":"forge:ingots/lightning_dragonsteel",
       "fragment":"awakening:lightning_dragonsteel_smithing_fragment",
       "handle":"spartanfire:witherbone_handle",
+      "tool_types":["sword","pickaxe","axe","shovel","hoe"],
       "outputs":{
         "sword":"iceandfire:dragonsteel_lightning_sword",
         "pickaxe":"iceandfire:dragonsteel_lightning_pickaxe",
@@ -144,6 +187,18 @@
         "shovel":"iceandfire:dragonsteel_lightning_shovel",
         "hoe":"iceandfire:dragonsteel_lightning_hoe"
       }
+    },
+    {
+      "id":"utherium",
+      "name":"Utherium",
+      "ingredient_item":"undergarden:utherium_crystal",
+      "fragment":"awakening:utherium_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"DC584A",
+      "register_fragment":true,
+      "machete_tier":{"level":3,"uses":1279,"speed":8.5,"attack_damage_bonus":3.5,"enchantment_value":17,"repair_ingredient":"undergarden:utherium_crystal"},
+      "outputs":{"machete":"awakening:utherium_machete"}
     }
   ]
 }

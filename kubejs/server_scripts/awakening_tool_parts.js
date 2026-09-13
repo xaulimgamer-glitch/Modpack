@@ -1,9 +1,9 @@
 (function () {
   // Awakening conventional tool parts.
-  // Heating and smithing-fragment production stay owned by awakening_weapon_parts.js.
+  // Heating and smithing-fragment production stay owned by awakening_weapon_parts.js
+  // except for materials that are tool-only here (currently Utherium).
   // This script consumes the same heated material inputs and existing fragments,
-  // avoiding duplicate heating/fragment recipes while extending the Overgeared flow
-  // to swords, pickaxes, axes, shovels and hoes.
+  // avoiding duplicate heating/fragment recipes while extending the Overgeared flow.
 
   const AWAKENING_TOOL_PARTS_MANIFEST = 'kubejs/awakening/tool_parts.json'
   const AWAKENING_TOOL_PARTS_HEATED_METALS = 'kubejs/awakening/heated_metals.json'
@@ -39,6 +39,11 @@
     return { valid: true, templates: selected, reason: '' }
   }
 
+  function awakeningToolPartsMaterialIngredient(material) {
+    if (material.ingredient_item) return { item: material.ingredient_item }
+    return { tag: material.ingredient_tag }
+  }
+
   function awakeningToolPartsIngredientExists(ingredient) {
     try {
       return Ingredient.of(ingredient).itemIds.size() > 0
@@ -59,6 +64,12 @@
         const part = awakeningToolPartId(material, template)
         event.add('awakening:tool_parts', part)
         event.add('overgeared:tool_parts', part)
+
+        if (template.type === 'machete' && material.outputs && material.outputs.machete) {
+          // Nether's Delight scavenging_tools already includes this tag, so this
+          // preserves Machete hunting/drop behavior without pretending to be a knife.
+          event.add('nethersdelight:tools/machetes', material.outputs.machete)
+        }
       })
     })
   })
@@ -76,12 +87,15 @@
       const heatedMetal = heatedMetals[material.id]
       const forgingIngredient = heatedMetal
         ? { item: heatedMetal.heated }
-        : { tag: material.ingredient_tag, requires_heated: true }
+        : material.ingredient_item
+          ? { item: material.ingredient_item, requires_heated: true }
+          : { tag: material.ingredient_tag, requires_heated: true }
       const validationIngredient = heatedMetal
         ? { item: heatedMetal.heated }
-        : { tag: material.ingredient_tag }
+        : awakeningToolPartsMaterialIngredient(material)
 
       if (!selection.valid) reasons.push(selection.reason)
+      if (!material.ingredient_item && !material.ingredient_tag) reasons.push('missing material ingredient')
       if (!awakeningToolPartsIngredientExists(validationIngredient)) reasons.push('missing forging material ' + JSON.stringify(validationIngredient))
       if (!awakeningToolPartsIngredientExists({ item: material.fragment })) reasons.push('missing fragment ' + material.fragment)
       if (!awakeningToolPartsIngredientExists({ item: material.handle })) reasons.push('missing handle ' + material.handle)
@@ -107,9 +121,44 @@
       const materialPending = []
       const materialOutputs = []
 
+      if (material.register_fragment) {
+        materialPending.push({
+          id: 'awakening:tool_parts/' + material.id + '/fragments',
+          json: {
+            type: 'overgeared:crafting_shapeless',
+            category: 'misc',
+            ingredients: [
+              awakeningToolPartsMaterialIngredient(material),
+              { tag: 'overgeared:smithing_hammers', remainder: true, durability_decrease: 1 }
+            ],
+            result: { item: material.fragment, count: 9 }
+          }
+        })
+
+        materialPending.push({
+          id: 'awakening:tool_parts/' + material.id + '/heat/fragment',
+          json: {
+            type: 'overgeared:nbt_add_blasting',
+            category: 'misc',
+            ingredient: { item: material.fragment },
+            result: { item: material.fragment, count: 1 },
+            nbt: { Heated: true },
+            experience: 0,
+            cookingtime: 100
+          }
+        })
+      }
+
       selection.templates.forEach(template => {
         const part = awakeningToolPartId(material, template)
         const output = material.outputs[template.type]
+        const forgingKey = { X: forgingIngredient }
+
+        // Dedicated Machete blades use a heated smithing fragment in the same
+        // way existing Overgeared Spartan weapon-part patterns use lowercase x.
+        if (template.pattern.join('').indexOf('x') >= 0) {
+          forgingKey.x = { item: material.fragment, requires_heated: true }
+        }
 
         materialPending.push({
           id: 'awakening:tool_parts/' + material.id + '/forge/' + template.type,
@@ -117,10 +166,10 @@
             type: 'overgeared:forging',
             blueprint: [template.tooltype],
             category: 'misc',
-            hammering: 3,
+            hammering: template.type === 'machete' ? 2 : 3,
             has_polishing: true,
             has_quality: true,
-            key: { X: forgingIngredient },
+            key: forgingKey,
             minimumQuality: 'poor',
             need_quenching: true,
             needs_minigame: false,

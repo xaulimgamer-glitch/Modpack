@@ -1,9 +1,10 @@
-// Wings are currently racial traits, not obtainable equipment.
+// Wings are racial traits in Awakening, not obtainable equipment.
 //
-// Faerie and Ravenfolk receive their wings through Origins powers using
-// icarae_origin:wings, so the wing items/types must remain registered.
-// We only suppress the normal crafting routes from Icarus and Icarus: Re-Winged.
+// Faerie and Ravenfolk still depend on Icarus' registered wing types through
+// Origins powers, so the items themselves must remain registered.
+// The canonical #icarus:wings tag includes both Icarus and Icarus: Re-Winged.
 ServerEvents.recipes(event => {
-  event.remove({ mod: 'icarus' })
-  event.remove({ mod: 'icarusrewinged' })
+  // Remove every recipe that produces a wing, including compatibility recipes
+  // added outside the two Icarus namespaces.
+  event.remove({ output: '#icarus:wings' })
 })
