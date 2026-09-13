@@ -35,6 +35,32 @@ function awakeningToolPartsLoadColors() {
   return colors
 }
 
+function awakeningToolPartsColor(colors, material) {
+  if (material.color) return parseInt(material.color, 16)
+  return colors[material.id]
+}
+
+ItemEvents.toolTierRegistry(event => {
+  const data = JSON.parse(JsonIO.readString(AWAKENING_TOOL_PARTS_MANIFEST))
+  if (!data || data.schema !== 1 || !Array.isArray(data.materials)) {
+    throw new Error('[Awakening/ToolParts] Invalid manifest: ' + AWAKENING_TOOL_PARTS_MANIFEST)
+  }
+
+  data.materials.forEach(material => {
+    const tier = material.machete_tier
+    if (!tier) return
+
+    event.add('awakening_' + material.id + '_machete', customTier => {
+      customTier.uses = tier.uses
+      customTier.speed = tier.speed
+      customTier.attackDamageBonus = tier.attack_damage_bonus
+      customTier.level = tier.level
+      customTier.enchantmentValue = tier.enchantment_value
+      customTier.repairIngredient = tier.repair_ingredient
+    })
+  })
+})
+
 StartupEvents.registry('item', event => {
   const data = JSON.parse(JsonIO.readString(AWAKENING_TOOL_PARTS_MANIFEST))
   const colors = awakeningToolPartsLoadColors()
@@ -44,21 +70,43 @@ StartupEvents.registry('item', event => {
   }
 
   data.materials.forEach(material => {
-    const color = colors[material.id]
-    if (color === undefined) {
+    const color = awakeningToolPartsColor(colors, material)
+    if (color === undefined || Number.isNaN(color)) {
       throw new Error('[Awakening/ToolParts] Missing visual color for material: ' + material.id)
     }
 
     awakeningToolPartsTemplatesForMaterial(data, material).forEach(template => {
       const id = 'awakening:' + material.id + '_' + template.suffix
       const displayName = material.name + ' ' + template.display
+      const texture = template.texture || ('overgeared:item/iron_' + template.suffix)
 
-      // Reuse Overgeared's iron part pixels and tint them exactly like the
-      // already-registered Awakening weapon parts. No custom PNG is required.
+      // Reuse existing Overgeared/Overgeared Spartan part pixels and tint them.
+      // Machete blades are dedicated Awakening items; only the temporary visual
+      // base is shared with the curved saber blade until bespoke pixels exist.
       event.create(id)
         .displayName(displayName)
-        .texture('overgeared:item/iron_' + template.suffix)
+        .texture(texture)
         .color(0, color)
     })
+
+    if (material.register_fragment) {
+      event.create(material.fragment)
+        .displayName(material.name + ' Smithing Fragment')
+        .texture('minecraft:item/iron_nugget')
+        .color(0, color)
+        .tooltip('1/9 material. Heat in a blast furnace before forging.')
+    }
+
+    if (material.machete_tier && material.outputs && material.outputs.machete) {
+      // Nether's Delight MacheteItem is a SwordItem with baseline damage 2 and
+      // attack speed -2.6. The custom tier supplies the material properties.
+      event.create(material.outputs.machete, 'sword')
+        .displayName(material.name + ' Machete')
+        .tier('awakening_' + material.id + '_machete')
+        .attackDamageBaseline(2)
+        .speedBaseline(-2.6)
+        .texture('nethersdelight:item/iron_machete')
+        .color(0, color)
+    }
   })
 })
