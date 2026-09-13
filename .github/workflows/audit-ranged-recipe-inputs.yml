@@ -1,0 +1,77 @@
+name: Audit ranged recipe inputs
+
+on:
+  push:
+    branches:
+      - audit/bow-crossbow-recipes
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan recipe sources
+        shell: python
+        run: |
+          import json
+          import pathlib
+          import zipfile
+
+          targets = ('minecraft:bow', 'minecraft:crossbow')
+          lines = []
+
+          def contains_target(value):
+              if isinstance(value, dict):
+                  return any(contains_target(v) for v in value.values())
+              if isinstance(value, list):
+                  return any(contains_target(v) for v in value)
+              return isinstance(value, str) and value in targets
+
+          def add(source, payload):
+              lines.append('SOURCE: ' + source)
+              try:
+                  obj = json.loads(payload)
+                  lines.append(json.dumps(obj, sort_keys=True, separators=(',', ':')))
+              except Exception:
+                  for row in payload.splitlines():
+                      if any(t in row for t in targets):
+                          lines.append(row.strip())
+              lines.append('')
+
+          for path in pathlib.Path('mods').glob('*.jar'):
+              try:
+                  with zipfile.ZipFile(path) as jar:
+                      for name in jar.namelist():
+                          if '/recipes/' not in name or not name.endswith('.json'):
+                              continue
+                          try:
+                              raw = jar.read(name).decode('utf-8')
+                              obj = json.loads(raw)
+                          except Exception:
+                              continue
+                          if contains_target(obj):
+                              add(f'{path}!/{name}', raw)
+              except zipfile.BadZipFile:
+                  pass
+
+          text_roots = [pathlib.Path('kubejs'), pathlib.Path('config/paxi/datapacks'), pathlib.Path('defaultconfigs')]
+          for root in text_roots:
+              if not root.exists():
+                  continue
+              for path in root.rglob('*'):
+                  if not path.is_file() or path.suffix.lower() not in {'.json', '.js', '.zs', '.toml', '.json5'}:
+                      continue
+                  try:
+                      raw = path.read_text(encoding='utf-8')
+                  except Exception:
+                      continue
+                  if any(t in raw for t in targets):
+                      add(str(path), raw)
+
+          report = '\n'.join(lines) if lines else 'NO MATCHES\n'
+          pathlib.Path('ranged-recipe-audit.txt').write_text(report, encoding='utf-8')
+          print(report)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ranged-recipe-audit
+          path: ranged-recipe-audit.txt
