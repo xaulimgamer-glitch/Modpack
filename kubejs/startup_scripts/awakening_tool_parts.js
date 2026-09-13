@@ -100,7 +100,7 @@ StartupEvents.registry('item', event => {
     if (material.machete_tier && material.outputs && material.outputs.machete) {
       // Nether's Delight MacheteItem is a SwordItem with baseline damage 2 and
       // attack speed -2.6. The custom tier supplies the material properties.
-      const machete = event.create(material.outputs.machete, 'sword')
+      var machete = event.create(material.outputs.machete, 'sword')
         .displayName(material.name + ' Machete')
         .tier('awakening_' + material.id + '_machete')
         .attackDamageBaseline(2)
