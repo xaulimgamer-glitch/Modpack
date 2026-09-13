@@ -30,13 +30,14 @@
       }
     }
 
-    var child = 'awakening:item/bows/' + typeId + '_pulling_'
+    var base = 'awakening:item/bows/' + typeId
+    var pulling = base + '_pulling_'
     return {
-      parent: child + '0',
+      parent: base,
       overrides: [
-        { predicate: { pulling: 1 }, model: child + '0' },
-        { predicate: { pulling: 1, pull: 0.65 }, model: child + '1' },
-        { predicate: { pulling: 1, pull: 0.9 }, model: child + '2' }
+        { predicate: { pulling: 1 }, model: pulling + '0' },
+        { predicate: { pulling: 1, pull: 0.65 }, model: pulling + '1' },
+        { predicate: { pulling: 1, pull: 0.9 }, model: pulling + '2' }
       ]
     }
   }
