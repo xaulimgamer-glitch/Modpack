@@ -1,7 +1,7 @@
 (function () {
   // Awakening conventional tool parts.
   // Heating and smithing-fragment production stay owned by awakening_weapon_parts.js
-  // except for materials that are tool-only here (currently Utherium).
+  // except for materials that are tool-only here (currently Gold and Utherium).
   // This script consumes the same heated material inputs and existing fragments,
   // avoiding duplicate heating/fragment recipes while extending the Overgeared flow.
 
@@ -79,7 +79,25 @@
     const heatedMetals = awakeningToolPartsLoadHeatedMetals()
     const pending = []
     const outputs = []
+    const heating = {}
     let skipped = 0
+
+    function queueHeating(item) {
+      if (heating[item]) return
+      heating[item] = true
+      pending.push({
+        id: 'awakening:tool_parts/heat/' + item.replace(':', '/'),
+        json: {
+          type: 'overgeared:nbt_add_blasting',
+          category: 'misc',
+          ingredient: { item: item },
+          result: { item: item, count: 1 },
+          nbt: { Heated: true },
+          experience: 0,
+          cookingtime: 100
+        }
+      })
+    }
 
     data.materials.forEach(material => {
       const reasons = []
@@ -93,11 +111,14 @@
       const validationIngredient = heatedMetal
         ? { item: heatedMetal.heated }
         : awakeningToolPartsMaterialIngredient(material)
+      const fragmentIngredient = material.heated_fragment
+        ? { item: material.heated_fragment }
+        : { item: material.fragment }
 
       if (!selection.valid) reasons.push(selection.reason)
       if (!material.ingredient_item && !material.ingredient_tag) reasons.push('missing material ingredient')
       if (!awakeningToolPartsIngredientExists(validationIngredient)) reasons.push('missing forging material ' + JSON.stringify(validationIngredient))
-      if (!awakeningToolPartsIngredientExists({ item: material.fragment })) reasons.push('missing fragment ' + material.fragment)
+      if (!awakeningToolPartsIngredientExists(fragmentIngredient)) reasons.push('missing fragment ' + JSON.stringify(fragmentIngredient))
       if (!awakeningToolPartsIngredientExists({ item: material.handle })) reasons.push('missing handle ' + material.handle)
       if (!awakeningToolPartsIngredientExists({ tag: 'overgeared:smithing_hammers' })) reasons.push('missing overgeared:smithing_hammers')
 
@@ -120,6 +141,11 @@
 
       const materialPending = []
       const materialOutputs = []
+
+      if (!heatedMetal) {
+        Ingredient.of(awakeningToolPartsMaterialIngredient(material)).itemIds.forEach(id => queueHeating(String(id)))
+        queueHeating(material.fragment)
+      }
 
       if (material.register_fragment) {
         materialPending.push({
@@ -157,7 +183,9 @@
         // Dedicated Machete blades use a heated smithing fragment in the same
         // way existing Overgeared Spartan weapon-part patterns use lowercase x.
         if (template.pattern.join('').indexOf('x') >= 0) {
-          forgingKey.x = { item: material.fragment, requires_heated: true }
+          forgingKey.x = material.heated_fragment
+            ? { item: material.heated_fragment }
+            : { item: material.fragment, requires_heated: true }
         }
 
         materialPending.push({

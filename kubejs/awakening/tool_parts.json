@@ -10,6 +10,27 @@
   ],
   "materials": [
     {
+      "id":"iron",
+      "name":"Iron",
+      "ingredient_tag":"forge:ingots/iron",
+      "fragment":"minecraft:iron_nugget",
+      "heated_fragment":"overgearedspartan:heated_iron_nugget",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"FFFFFF",
+      "outputs":{"machete":"nethersdelight:iron_machete"}
+    },
+    {
+      "id":"gold",
+      "name":"Gold",
+      "ingredient_tag":"forge:ingots/gold",
+      "fragment":"minecraft:gold_nugget",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"FFD83D",
+      "outputs":{"machete":"nethersdelight:golden_machete"}
+    },
+    {
       "id":"cloggrum",
       "name":"Cloggrum",
       "ingredient_tag":"forge:ingots/cloggrum",
