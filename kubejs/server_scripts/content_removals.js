@@ -50,6 +50,11 @@ const ARTIFACTS_REMOVED_FROM_PROGRESSION = [
   'artifacts:everlasting_beef'
 ]
 
+const VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION = [
+  'minecraft:bow',
+  'minecraft:crossbow'
+]
+
 ServerEvents.recipes(event => {
   // Alex's Caves Nuclear Furnace is assembled from this craftable component.
   // Removing every recipe that outputs the component makes the multiblock unobtainable in survival.
@@ -65,6 +70,10 @@ ServerEvents.recipes(event => {
   // The selected Artifacts remain registered for save compatibility, but no recipe or compat recipe
   // may reintroduce them as a progression route.
   ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
+
+  // Vanilla bow and crossbow remain registered for compatibility/commands/Creative, but recipes from
+  // vanilla, mods, datapacks, or KubeJS must not make them obtainable through normal progression.
+  VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
 })
 
 // Submarines are spawned directly by Abyssal Ruins and by the Enigmatic Engine,
