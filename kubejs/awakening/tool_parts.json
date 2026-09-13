@@ -108,14 +108,40 @@
       "ingredient_tag":"spartancataclysm:black_steel_ingots",
       "fragment":"awakening:black_steel_smithing_fragment",
       "handle":"spartanweaponry:handle",
-      "tool_types":["sword","pickaxe","axe","shovel","hoe"],
+      "tool_types":["sword","pickaxe","axe","shovel","hoe","machete"],
+      "machete_tier":{"level":3,"uses":750,"speed":8.0,"attack_damage_bonus":2.0,"enchantment_value":25,"repair_ingredient":"cataclysm:black_steel_ingot"},
       "outputs":{
         "sword":"cataclysm:black_steel_sword",
         "pickaxe":"cataclysm:black_steel_pickaxe",
         "axe":"cataclysm:black_steel_axe",
         "shovel":"cataclysm:black_steel_shovel",
-        "hoe":"cataclysm:black_steel_hoe"
+        "hoe":"cataclysm:black_steel_hoe",
+        "machete":"awakening:black_steel_machete"
       }
+    },
+    {
+      "id":"ancient_metal",
+      "name":"Ancient Metal",
+      "ingredient_tag":"spartancataclysm:ancient_metal_ingots",
+      "fragment":"awakening:ancient_metal_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"B5B790",
+      "machete_tier":{"level":3,"uses":750,"speed":8.0,"attack_damage_bonus":2.0,"enchantment_value":25,"repair_ingredient":"cataclysm:ancient_metal_ingot"},
+      "outputs":{"machete":"awakening:ancient_metal_machete"}
+    },
+    {
+      "id":"witherite",
+      "name":"Witherite",
+      "ingredient_tag":"spartancataclysm:witherite_ingots",
+      "fragment":"awakening:witherite_smithing_fragment",
+      "handle":"spartanweaponry:handle",
+      "tool_types":["machete"],
+      "color":"77728B",
+      "fire_resistant":true,
+      "rarity":"epic",
+      "machete_tier":{"level":5,"uses":-1,"speed":7.0,"attack_damage_bonus":6.0,"enchantment_value":18,"repair_ingredient":"cataclysm:witherite_ingot"},
+      "outputs":{"machete":"awakening:witherite_machete"}
     },
     {
       "id":"fire_dragonsteel",
