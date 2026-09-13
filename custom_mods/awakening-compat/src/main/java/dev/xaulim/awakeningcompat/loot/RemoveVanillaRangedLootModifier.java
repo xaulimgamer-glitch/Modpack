@@ -1,6 +1,6 @@
 package dev.xaulim.awakeningcompat.loot;
 
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.ItemStack;
@@ -13,8 +13,8 @@ import org.jetbrains.annotations.NotNull;
 
 public final class RemoveVanillaRangedLootModifier extends LootModifier {
 
-    public static final MapCodec<RemoveVanillaRangedLootModifier> CODEC =
-            RecordCodecBuilder.mapCodec(instance ->
+    public static final Codec<RemoveVanillaRangedLootModifier> CODEC =
+            RecordCodecBuilder.create(instance ->
                     codecStart(instance).apply(instance, RemoveVanillaRangedLootModifier::new));
 
     public RemoveVanillaRangedLootModifier(LootItemCondition[] conditions) {
@@ -32,7 +32,7 @@ public final class RemoveVanillaRangedLootModifier extends LootModifier {
     }
 
     @Override
-    public MapCodec<? extends IGlobalLootModifier> codec() {
+    public Codec<? extends IGlobalLootModifier> codec() {
         return CODEC;
     }
 }

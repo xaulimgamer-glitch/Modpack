@@ -1,6 +1,6 @@
 package dev.xaulim.awakeningcompat;
 
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
 import dev.xaulim.awakeningcompat.loot.RemoveVanillaRangedLootModifier;
 import dev.xaulim.awakeningcompat.network.AwakeningNetwork;
 import dev.xaulim.awakeningcompat.shell.TortleShellRegistries;
@@ -17,7 +17,7 @@ public final class AwakeningCompat {
 
     public static final String MOD_ID = "awakening_compat";
 
-    private static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> GLOBAL_LOOT_MODIFIER_SERIALIZERS =
+    private static final DeferredRegister<Codec<? extends IGlobalLootModifier>> GLOBAL_LOOT_MODIFIER_SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, MOD_ID);
 
     static {
