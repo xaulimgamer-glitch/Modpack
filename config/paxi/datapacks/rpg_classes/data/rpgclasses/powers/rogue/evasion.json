@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_damage_taken",
+  "hidden": true,
+  "condition": {"type": "origins:sneaking"},
+  "modifier": {
+    "name": "Rogue evasion",
+    "operation": "multiply_total",
+    "value": -0.10
+  }
+}

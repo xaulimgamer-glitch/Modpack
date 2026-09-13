@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_damage_dealt",
+  "hidden": true,
+  "condition": {"type": "origins:sneaking"},
+  "modifier": {
+    "name": "Rogue sneak attack",
+    "operation": "multiply_total",
+    "value": 0.20
+  }
+}

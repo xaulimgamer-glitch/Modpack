@@ -1,1 +1,52 @@
-{"sneak_attack":{"title":"Sneak Attack","description":"Establish the Rogue's opening-and-positioning burst loop.","icon":{"type":"item","data":{"item":"minecraft:iron_sword"}},"frame":"task","cost":0},"cunning_movement":{"title":"Cunning Movement","description":"Improve repositioning after creating or exploiting an opening.","icon":{"type":"item","data":{"item":"minecraft:rabbit_foot"}},"frame":"task","cost":1},"evasion":{"title":"Evasion","description":"Develop conditional avoidance against dangerous telegraphed or area threats.","icon":{"type":"item","data":{"item":"minecraft:feather"}},"frame":"task","cost":1},"exploit_opening":{"title":"Exploit Opening","description":"Turn a successful setup into a short follow-up window for continued pressure.","icon":{"type":"item","data":{"item":"minecraft:tripwire_hook"}},"frame":"task","cost":1},"vanish":{"title":"Vanish","description":"Gain a limited disengage and stealth reset for creating a new opening.","icon":{"type":"item","data":{"item":"minecraft:ender_pearl"}},"frame":"challenge","cost":1}}
+{
+  "sneak_attack": {
+    "title": "Sneak Attack",
+    "description": "Deal 20% more melee damage while sneaking.",
+    "icon": {"type": "item", "data": {"item": "minecraft:iron_sword"}},
+    "frame": "task",
+    "cost": 0,
+    "rewards": [
+      {"type": "puffish_skills_origins:power", "data": {"power": "rpgclasses:rogue/sneak_attack"}}
+    ]
+  },
+  "cunning_movement": {
+    "title": "Cunning Movement",
+    "description": "Gain 20% of base movement speed while sneaking, making stealth repositioning less restrictive.",
+    "icon": {"type": "item", "data": {"item": "minecraft:rabbit_foot"}},
+    "frame": "task",
+    "cost": 1,
+    "rewards": [
+      {"type": "puffish_skills_origins:power", "data": {"power": "rpgclasses:rogue/cunning_movement"}}
+    ]
+  },
+  "evasion": {
+    "title": "Evasion",
+    "description": "Take 10% less damage while sneaking.",
+    "icon": {"type": "item", "data": {"item": "minecraft:feather"}},
+    "frame": "task",
+    "cost": 1,
+    "rewards": [
+      {"type": "puffish_skills_origins:power", "data": {"power": "rpgclasses:rogue/evasion"}}
+    ]
+  },
+  "exploit_opening": {
+    "title": "Exploit Opening",
+    "description": "Gain 10% of base attack speed while sneaking to capitalize on an opening.",
+    "icon": {"type": "item", "data": {"item": "minecraft:tripwire_hook"}},
+    "frame": "task",
+    "cost": 1,
+    "rewards": [
+      {"type": "puffish_skills_origins:power", "data": {"power": "rpgclasses:rogue/exploit_opening"}}
+    ]
+  },
+  "vanish": {
+    "title": "Vanish",
+    "description": "Use the primary Origins ability key to become invisible for 5 seconds. Cooldown: 30 seconds.",
+    "icon": {"type": "item", "data": {"item": "minecraft:ender_pearl"}},
+    "frame": "challenge",
+    "cost": 1,
+    "rewards": [
+      {"type": "puffish_skills_origins:power", "data": {"power": "rpgclasses:rogue/vanish"}}
+    ]
+  }
+}

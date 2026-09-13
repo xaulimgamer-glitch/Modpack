@@ -1,0 +1,12 @@
+{
+  "type": "origins:conditioned_attribute",
+  "hidden": true,
+  "condition": {"type": "origins:sneaking"},
+  "tick_rate": 5,
+  "modifier": {
+    "attribute": "minecraft:generic.movement_speed",
+    "name": "Rogue cunning movement",
+    "operation": "multiply_base",
+    "value": 0.20
+  }
+}
