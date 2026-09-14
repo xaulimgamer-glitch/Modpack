@@ -28,11 +28,17 @@ const MELEE_MODELS = {
   'kubejs:crude_graybeard_staff': {
     loader: 'forge:separate_transforms',
     base: {
-      parent: 'irons_spellbooks:item/graybeard_staff_gui'
+      parent: 'irons_spellbooks:item/graybeard_staff_handled'
     },
     perspectives: {
-      none: {
-        parent: 'irons_spellbooks:item/graybeard_staff_handled'
+      gui: {
+        parent: 'irons_spellbooks:item/graybeard_staff_gui'
+      },
+      ground: {
+        parent: 'irons_spellbooks:item/graybeard_staff_gui'
+      },
+      fixed: {
+        parent: 'irons_spellbooks:item/graybeard_staff_gui'
       }
     }
   },
