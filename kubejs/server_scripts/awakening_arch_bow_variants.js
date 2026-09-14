@@ -62,6 +62,36 @@
     return 'awakening:' + materialKey(material) + '_' + type.suffix
   }
 
+  function installBaseBowRecipeFromSource(event, data, material, typeId, type) {
+    if (!material.source_longbow) return false
+
+    var installed = false
+    event.forEachRecipe({ output: material.source_longbow }, function (recipe) {
+      if (installed) return
+
+      var raw = String(recipe.json)
+      var hasBaseBow = false
+
+      data.materials.forEach(function (candidate) {
+        if (!candidate.source_longbow || candidate.source_longbow === material.source_longbow) return
+        if (raw.indexOf('"' + candidate.source_longbow + '"') >= 0) hasBaseBow = true
+      })
+
+      if (!hasBaseBow) return
+
+      var transformed = raw
+      data.materials.forEach(function (candidate) {
+        if (!candidate.source_longbow) return
+        transformed = transformed.split('"' + candidate.source_longbow + '"').join('"' + output(candidate, typeId, type) + '"')
+      })
+
+      event.custom(JSON.parse(transformed)).id('awakening:bows/' + material.id + '/' + type.suffix)
+      installed = true
+    })
+
+    return installed
+  }
+
   function findSourceLimb(material) {
     var candidates = material.limb_candidates || []
     for (var i = 0; i < candidates.length; i++) {
@@ -103,7 +133,8 @@
       Object.keys(data.bow_types).forEach(function (typeId) {
         event.add('forge:tools/bows', output(material, typeId, data.bow_types[typeId]))
 
-        var hasDedicatedLimb = material.id !== 'leather' &&
+        var hasDedicatedLimb = typeId !== 'short_bow' &&
+          material.id !== 'leather' &&
           !material.existing_outputs &&
           Array.isArray(material.limb_candidates) &&
           material.limb_candidates.length > 0
@@ -173,6 +204,16 @@
             result: { item: bowOutput }
           }).id('awakening:bows/' + material.id + '/' + type.suffix)
           installedBows++
+          return
+        }
+
+        if (typeId === 'short_bow') {
+          if (installBaseBowRecipeFromSource(event, data, material, typeId, type)) {
+            installedBows++
+          } else {
+            console.warn('[Awakening/Bows] Skipping ' + material.id + ' short_bow: no source Longbow recipe using a base bow was found')
+            skipped++
+          }
           return
         }
 
