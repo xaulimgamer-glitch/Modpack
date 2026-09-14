@@ -62,7 +62,7 @@
 
       if (hasDedicatedLimbs) {
         Object.keys(data.bow_types).forEach(function (typeId) {
-          if (typeId === 'short_bow' || typeId === 'recurve_bow') return
+          if (typeId === 'short_bow' || typeId === 'recurve_bow' || typeId === 'flat_bow') return
           var type = data.bow_types[typeId]
           var limb = event.create('awakening:' + materialKey(material) + '_' + limbSuffix(typeId))
             .displayName(materialName(material) + ' ' + type.name + ' Limb')
