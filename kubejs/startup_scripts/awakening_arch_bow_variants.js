@@ -19,8 +19,13 @@
     if (material.id === 'wood') {
       var base = 'awakening:item/bows/wooden_' + typeId
       var pulling = base + '_pulling_'
+      var parent = typeId === 'recurve_bow'
+        ? 'awakening:item/bows/wooden_recurve_bow_base'
+        : typeId === 'flat_bow'
+          ? 'awakening:item/bows/wooden_flat_bow_base'
+          : 'awakening:item/bows/wooden_bow_base'
       return {
-        parent: 'awakening:item/bows/wooden_bow_base',
+        parent: parent,
         textures: { layer0: base },
         overrides: [
           { predicate: { pulling: 1 }, model: pulling + '0' },
