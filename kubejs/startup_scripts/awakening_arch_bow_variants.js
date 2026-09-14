@@ -20,7 +20,7 @@
       var base = 'awakening:item/bows/wooden_' + typeId
       var pulling = base + '_pulling_'
       return {
-        parent: 'minecraft:item/generated',
+        parent: 'awakening:item/bows/wooden_bow_base',
         textures: { layer0: base },
         overrides: [
           { predicate: { pulling: 1 }, model: pulling + '0' },
