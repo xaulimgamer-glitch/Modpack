@@ -25,12 +25,6 @@ const MELEE_MODELS = {
       layer0: 'spartanweaponry:item/stone_dagger'
     }
   },
-  'kubejs:crude_graybeard_staff': {
-    parent: 'spartanweaponry:item/base/staff',
-    textures: {
-      layer0: 'spartanweaponry:item/stone_graybeard_staff'
-    }
-  },
   'kubejs:crude_long_sword': {
     parent: 'spartanweaponry:item/base/longsword',
     textures: {

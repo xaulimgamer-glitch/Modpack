@@ -1,7 +1,6 @@
 {
-  "parent": "irons_spellbooks:item/graybeard_staff",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "0": "irons_spellbooks:item/graybeard_staff",
-    "particle": "irons_spellbooks:item/graybeard_staff"
+    "layer0": "irons_spellbooks:item/graybeard_staff_gui"
   }
 }
