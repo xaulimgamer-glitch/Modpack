@@ -20,14 +20,12 @@
   function addBowStats(stack, advanced, text) {
     var bow = stack.getItem()
     var drawTicks = Number(bow.rjs$getFullChargeTick())
-    var projectileSpeed = Number(bow.rjs$getArrowSpeedScale())
-    var baseDamage = Number(bow.rjs$getBaseDamage())
-    var maxDurability = Number(stack.getMaxDamage())
+    var arrowSpeed = Number(bow.rjs$getArrowSpeedScale())
+    var insertAt = Math.min(2, text.size())
 
-    text.add('Draw Time: ' + drawTicks + ' ticks (' + formatNumber(drawTicks / 20) + ' s)')
-    text.add('Projectile Speed: ' + formatNumber(projectileSpeed))
-    text.add('Base Arrow Damage: ' + formatNumber(baseDamage))
-    text.add('Max Durability: ' + maxDurability)
+    text.add(insertAt++, Text.aqua('Ammo Type: ').append(Text.gray('Arrows')))
+    text.add(insertAt++, Text.aqua('Draw Time: ').append(Text.gray(formatNumber(drawTicks / 20) + 's')))
+    text.add(insertAt, Text.aqua('Arrow Speed: ').append(Text.gray('x' + formatNumber(arrowSpeed))))
   }
 
   ItemEvents.tooltip(function (event) {
