@@ -94,6 +94,22 @@ const ARTIFACTS_REMOVED_FROM_PROGRESSION = [
   'artifacts:everlasting_beef'
 ]
 
+const ARTIFACTS_PROGRESSION_LOOT_TAGS = [
+  'artifacts:artifacts_worn_by_mimics',
+  'artifacts:campsite_artifacts',
+  'artifacts:drinking_hats',
+  'artifacts:entity_artifacts',
+  'artifacts:fishing_artifacts',
+  'artifacts:generic_artifacts',
+  'artifacts:item_rewards',
+  'artifacts:mimic_only_artifacts',
+  'artifacts:rare_artifacts',
+  'artifacts:wearable_artifacts',
+  'artifacts:wearable_in_campsites',
+  'artifacts:wearable_loot',
+  'artifacts:wearable_mimic_artifacts'
+]
+
 const VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION = [
   'minecraft:bow',
   'minecraft:crossbow'
@@ -118,6 +134,23 @@ ServerEvents.recipes(event => {
   // Vanilla bow and crossbow remain registered for compatibility/commands/Creative, but recipes from
   // vanilla, mods, datapacks, or KubeJS must not make them obtainable through normal progression.
   VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
+})
+
+// Artifacts uses item tags to choose candidates for several native progression routes (mimics,
+// campsites, fishing, entity rewards and wearable loot). Remove only the seven disabled items from
+// those acquisition tags while leaving their registry entries and unrelated Artifacts untouched.
+ServerEvents.tags('item', event => {
+  ARTIFACTS_PROGRESSION_LOOT_TAGS.forEach(tag => {
+    ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove(tag, item))
+  })
+})
+
+// Artifacts also injects rewards through Forge loot modifiers (including Everlasting Beef).
+// LootJS filters the final generated loot, after Forge modifiers, so no loot-table path can
+// reintroduce one of the disabled items without unregistering it or affecting other Artifacts.
+LootJS.modifiers(event => {
+  const allLootTables = event.addLootTableModifier(/.*/)
+  ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => allLootTables.removeLoot(item))
 })
 
 // Submarines are spawned directly by Abyssal Ruins and by the Enigmatic Engine,
