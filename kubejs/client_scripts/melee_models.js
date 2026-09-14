@@ -25,6 +25,17 @@ const MELEE_MODELS = {
       layer0: 'spartanweaponry:item/stone_dagger'
     }
   },
+  'kubejs:crude_graybeard_staff': {
+    loader: 'forge:separate_transforms',
+    base: {
+      parent: 'irons_spellbooks:item/graybeard_staff_gui'
+    },
+    perspectives: {
+      none: {
+        parent: 'irons_spellbooks:item/graybeard_staff_handled'
+      }
+    }
+  },
   'kubejs:crude_long_sword': {
     parent: 'spartanweaponry:item/base/longsword',
     textures: {
