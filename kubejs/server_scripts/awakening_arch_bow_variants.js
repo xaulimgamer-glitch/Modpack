@@ -133,7 +133,7 @@
       Object.keys(data.bow_types).forEach(function (typeId) {
         event.add('forge:tools/bows', output(material, typeId, data.bow_types[typeId]))
 
-        var hasDedicatedLimb = typeId !== 'short_bow' &&
+        var hasDedicatedLimb = typeId !== 'short_bow' && typeId !== 'recurve_bow' &&
           material.id !== 'leather' &&
           !material.existing_outputs &&
           Array.isArray(material.limb_candidates) &&
@@ -207,11 +207,11 @@
           return
         }
 
-        if (typeId === 'short_bow') {
+        if (typeId === 'short_bow' || typeId === 'recurve_bow') {
           if (installBaseBowRecipeFromSource(event, data, material, typeId, type)) {
             installedBows++
           } else {
-            console.warn('[Awakening/Bows] Skipping ' + material.id + ' short_bow: no source Longbow recipe using a base bow was found')
+            console.warn('[Awakening/Bows] Skipping ' + material.id + ' ' + typeId + ': no source Longbow recipe using a base bow was found')
             skipped++
           }
           return
