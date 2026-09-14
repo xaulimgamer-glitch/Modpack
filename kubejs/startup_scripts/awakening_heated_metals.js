@@ -8,15 +8,12 @@ if (!heatedMetalsConfig || !Array.isArray(heatedMetalsConfig.metals)) {
       const nativeConfig = metal.native || {}
       if (nativeConfig.item === true) return
 
-      // Witherite deliberately reuses Overgeared's Heated Crude Steel pixels.
-      // The tint keeps the exact heated silhouette/pattern while adapting it to
-      // the established Awakening Witherite palette without a copied PNG asset.
+      // Witherite deliberately reuses Overgeared's Heated Crude Steel pixels
+      // without tinting, so it matches the forging heated-material reference.
       const isWitherite = metal.id === 'witherite'
-      const heatedItem = event.create(metal.heated)
+      event.create(metal.heated)
         .displayName(`Heated ${metal.name} Ingot`)
         .texture(isWitherite ? 'overgeared:item/heated_crude_steel' : (metal.texture || 'overgeared:item/heated_iron_ingot'))
-
-      if (isWitherite) heatedItem.color(0, 0x77728B)
     })
   })
 }
