@@ -38,46 +38,68 @@ public final class TortleShellEvents {
     }
 
     /**
-     * A fully withdrawn Tortle trades all agency for near-total protection.
-     * Vanilla's BYPASSES_INVULNERABILITY tag is deliberately respected so the
-     * void and administrative kill damage can still terminate the player.
-     */
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public static void onIncomingDamage(LivingAttackEvent event) {
-        if (isShelled(event.getEntity())
-                && !event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
-            event.setCanceled(true);
-        }
-    }
-
-    /**
-     * Secondary guard for damage paths from mods that reach LivingHurtEvent.
+     * A withdrawn Tortle absorbs ordinary incoming damage with a finite guard.
+     * The guard starts at 32 damage points (16 hearts) on each shell entry.
+     * Damage tagged BYPASSES_INVULNERABILITY is deliberately untouched and does
+     * not consume the guard. Any damage that exceeds the remaining guard breaks
+     * the shell and the overflow continues through the normal damage pipeline.
      */
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onIncomingHurt(LivingHurtEvent event) {
-        if (isShelled(event.getEntity())
-                && !event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+        if (!(event.getEntity() instanceof ServerPlayer player)
+                || !isShelled(player)
+                || event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            return;
+        }
+
+        float incoming = event.getAmount();
+        if (incoming <= 0.0F) return;
+
+        float remaining = TortleShellAction.getShellGuard(player);
+        if (remaining <= 0.0F) {
+            TortleShellAction.exitShell(player);
+            return;
+        }
+
+        float absorbed = Math.min(incoming, remaining);
+        float overflow = incoming - absorbed;
+        float newRemaining = remaining - absorbed;
+
+        if (newRemaining > 0.0F) {
+            TortleShellAction.setShellGuard(player, newRemaining);
+        } else {
+            TortleShellAction.exitShell(player);
+        }
+
+        if (overflow <= 0.0F) {
             event.setCanceled(true);
+        } else {
+            event.setAmount(overflow);
         }
     }
 
     /**
-     * Damage immunity alone is not enough: explosions, melee hits and several
-     * modded attacks may still attempt to move the player. A withdrawn Tortle
-     * behaves as an anchored shell and ignores living-entity knockback entirely.
+     * Damage absorption is handled only at LivingHurtEvent so one hit cannot be
+     * counted twice. LivingAttackEvent remains reserved for blocking attacks made
+     * by a player who is currently withdrawn.
      */
-    @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public static void onKnockBack(LivingKnockBackEvent event) {
-        if (isShelled(event.getEntity())) {
-            event.setCanceled(true);
-        }
-    }
-
     @SubscribeEvent
     public static void onOutgoingDamage(LivingAttackEvent event) {
         if (event.getSource().getEntity() instanceof Player attacker
                 && event.getSource().getDirectEntity() == attacker
                 && isShelled(attacker)) {
+            event.setCanceled(true);
+        }
+    }
+
+    /**
+     * Explosions, melee hits and several modded attacks may still attempt to move
+     * the player. A withdrawn Tortle behaves as an anchored shell and ignores
+     * living-entity knockback entirely while the shell remains active.
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onKnockBack(LivingKnockBackEvent event) {
+        if (isShelled(event.getEntity())) {
             event.setCanceled(true);
         }
     }
@@ -145,7 +167,11 @@ public final class TortleShellEvents {
         if (!isShelled(player)) return;
 
         if (!hasNaturalShell(player)) {
-            player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+            if (player instanceof ServerPlayer serverPlayer) {
+                TortleShellAction.exitShell(serverPlayer);
+            } else {
+                player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+            }
             return;
         }
 
@@ -168,6 +194,7 @@ public final class TortleShellEvents {
 
         if (event.getOriginal() instanceof ServerPlayer original
                 && event.getEntity() instanceof ServerPlayer clone) {
+            TortleShellAction.clearShellGuard(clone);
             TortleShellLifecycle.copyOwnership(original, clone);
             if (TortleShellLifecycle.isOwner(clone)) {
                 TortleShellLifecycle.gainShell(clone);
@@ -181,6 +208,7 @@ public final class TortleShellEvents {
     public static void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         if (event.getEntity() instanceof ServerPlayer player) {
+            TortleShellAction.clearShellGuard(player);
             TortleShellLifecycle.sanitize(player);
         }
     }
@@ -188,5 +216,8 @@ public final class TortleShellEvents {
     @SubscribeEvent
     public static void onLogout(PlayerEvent.PlayerLoggedOutEvent event) {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        if (event.getEntity() instanceof ServerPlayer player) {
+            TortleShellAction.clearShellGuard(player);
+        }
     }
 }

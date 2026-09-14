@@ -18,7 +18,6 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.MovementInputUpdateEvent;
 import net.minecraftforge.client.event.RenderHandEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -30,13 +29,9 @@ public final class TortleShellClientEvents {
             "textures/misc/shell_crack_none.png"
     );
 
-    private static final int VISION_MASK_COLOR = 0xFF100B07;
-    private static final int VISION_RIM_COLOR = 0xFF382618;
-    private static final float VISION_OPENING_RADIUS = 0.30F;
-    private static final float VISION_RIM_THICKNESS = 0.045F;
+    private static final int VISION_BLACKOUT_COLOR = 0xFF000000;
 
     private static TortleShellModel model;
-    private static CameraType previousCameraType;
 
     private TortleShellClientEvents() {}
 
@@ -55,26 +50,6 @@ public final class TortleShellClientEvents {
             );
         }
         return model;
-    }
-
-    @SubscribeEvent
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) return;
-
-        Minecraft minecraft = Minecraft.getInstance();
-        Player player = minecraft.player;
-
-        if (player != null && isShelled(player)) {
-            if (previousCameraType == null) {
-                previousCameraType = minecraft.options.getCameraType();
-            }
-            if (minecraft.options.getCameraType() != CameraType.FIRST_PERSON) {
-                minecraft.options.setCameraType(CameraType.FIRST_PERSON);
-            }
-        } else if (previousCameraType != null) {
-            minecraft.options.setCameraType(previousCameraType);
-            previousCameraType = null;
-        }
     }
 
     /**
@@ -111,64 +86,14 @@ public final class TortleShellClientEvents {
     }
 
     /**
-     * Procedural first-person shell vision. Nothing is sampled from a texture:
-     * opaque scanline rectangles cover everything except a circular opening in
-     * the middle of the screen. A brown annulus around the opening suggests the
-     * inner lip of the shell while keeping the center completely unobstructed.
+     * A withdrawn Tortle cannot see the world at all. The overlay is independent
+     * of camera mode, so first-person and both third-person views remain fully
+     * black while the normal HUD can still be rendered above it.
      */
     public static void renderShellVision(GuiGraphics graphics, int screenWidth, int screenHeight) {
-        Minecraft minecraft = Minecraft.getInstance();
-        Player player = minecraft.player;
+        Player player = Minecraft.getInstance().player;
         if (player == null || !isShelled(player)) return;
-        if (minecraft.options.getCameraType() != CameraType.FIRST_PERSON) return;
-
-        int centerX = screenWidth / 2;
-        int centerY = screenHeight / 2;
-        float basis = Math.min(screenWidth, screenHeight);
-        float innerRadius = Math.max(18.0F, basis * VISION_OPENING_RADIUS);
-        float outerRadius = innerRadius + Math.max(4.0F, basis * VISION_RIM_THICKNESS);
-
-        // Two GUI pixels per band keeps the circle smooth enough at normal GUI
-        // scales while avoiding hundreds of unnecessary individual draw calls.
-        final int bandHeight = 2;
-        for (int y = 0; y < screenHeight; y += bandHeight) {
-            int yEnd = Math.min(y + bandHeight, screenHeight);
-            float sampleY = y + (yEnd - y) * 0.5F;
-            float dy = sampleY - centerY;
-            float absDy = Math.abs(dy);
-
-            if (absDy >= outerRadius) {
-                graphics.fill(0, y, screenWidth, yEnd, VISION_MASK_COLOR);
-                continue;
-            }
-
-            int outerDx = (int) Math.ceil(Math.sqrt(outerRadius * outerRadius - dy * dy));
-            int outerLeft = Math.max(0, centerX - outerDx);
-            int outerRight = Math.min(screenWidth, centerX + outerDx);
-
-            if (outerLeft > 0) {
-                graphics.fill(0, y, outerLeft, yEnd, VISION_MASK_COLOR);
-            }
-            if (outerRight < screenWidth) {
-                graphics.fill(outerRight, y, screenWidth, yEnd, VISION_MASK_COLOR);
-            }
-
-            if (absDy >= innerRadius) {
-                graphics.fill(outerLeft, y, outerRight, yEnd, VISION_RIM_COLOR);
-                continue;
-            }
-
-            int innerDx = (int) Math.floor(Math.sqrt(innerRadius * innerRadius - dy * dy));
-            int innerLeft = Math.max(outerLeft, centerX - innerDx);
-            int innerRight = Math.min(outerRight, centerX + innerDx);
-
-            if (innerLeft > outerLeft) {
-                graphics.fill(outerLeft, y, innerLeft, yEnd, VISION_RIM_COLOR);
-            }
-            if (innerRight < outerRight) {
-                graphics.fill(innerRight, y, outerRight, yEnd, VISION_RIM_COLOR);
-            }
-        }
+        graphics.fill(0, 0, screenWidth, screenHeight, VISION_BLACKOUT_COLOR);
     }
 
     @SubscribeEvent

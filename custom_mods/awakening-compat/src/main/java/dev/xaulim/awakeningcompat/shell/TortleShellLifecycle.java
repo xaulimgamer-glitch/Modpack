@@ -38,12 +38,14 @@ public final class TortleShellLifecycle {
     public static void gainShell(ServerPlayer player) {
         setOwner(player, true);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        TortleShellAction.clearShellGuard(player);
         ensureShellEquipped(player);
     }
 
     public static void loseShell(ServerPlayer player) {
         setOwner(player, false);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        TortleShellAction.clearShellGuard(player);
         removeAllShellItems(player);
         syncInventory(player);
     }
@@ -55,6 +57,7 @@ public final class TortleShellLifecycle {
      */
     public static void prepareForDeath(ServerPlayer player) {
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        TortleShellAction.clearShellGuard(player);
         removeAllShellItems(player);
         syncInventory(player);
     }
@@ -64,6 +67,8 @@ public final class TortleShellLifecycle {
      */
     public static void sanitize(ServerPlayer player) {
         if (!isOwner(player)) {
+            player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+            TortleShellAction.clearShellGuard(player);
             if (hasAnyShell(player)) {
                 removeAllShellItems(player);
                 syncInventory(player);
