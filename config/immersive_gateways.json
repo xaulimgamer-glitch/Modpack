@@ -2,6 +2,7 @@
   "minDistance": 1024,
   "maxDistance": 8096,
   "onlyPlayersCanTeleport": true,
+  "generatePortalsAutomatically": true,
   "colors": {
     "minecraft:dripstone_caves": 12618846,
     "minecraft:warped_forest": 2154691,
