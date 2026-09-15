@@ -4,6 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import dev.xaulim.awakeningcompat.AwakeningCompat;
+import dev.xaulim.awakeningcompat.shell.TortleShellAction;
 import dev.xaulim.awakeningcompat.shell.TortleShellRegistries;
 import net.minecraft.client.CameraType;
 import net.minecraft.client.Minecraft;
@@ -30,8 +31,16 @@ public final class TortleShellClientEvents {
     );
 
     private static final int VISION_BLACKOUT_COLOR = 0xFF000000;
+    private static final int GUARD_SEGMENTS = 16;
+    private static final int GUARD_SEGMENT_WIDTH = 4;
+    private static final int GUARD_SEGMENT_HEIGHT = 5;
+    private static final int GUARD_SEGMENT_GAP = 1;
+    private static final int GUARD_BACKGROUND_COLOR = 0xCC101010;
+    private static final int GUARD_EMPTY_COLOR = 0xFF3A3A3A;
+    private static final int GUARD_FILL_COLOR = 0xFF55AA55;
 
     private static TortleShellModel model;
+    private static float shellGuard;
 
     private TortleShellClientEvents() {}
 
@@ -41,6 +50,10 @@ public final class TortleShellClientEvents {
 
     public static boolean isShelled(Player player) {
         return hasNaturalShell(player) && player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+    }
+
+    public static void setShellGuard(float amount) {
+        shellGuard = Math.max(0.0F, Math.min(TortleShellAction.MAX_SHELL_GUARD, amount));
     }
 
     private static TortleShellModel getModel() {
@@ -94,6 +107,54 @@ public final class TortleShellClientEvents {
         Player player = Minecraft.getInstance().player;
         if (player == null || !isShelled(player)) return;
         graphics.fill(0, 0, screenWidth, screenHeight, VISION_BLACKOUT_COLOR);
+    }
+
+    /**
+     * Shows the synchronized shell integrity as sixteen two-point segments. The
+     * overlay is rendered after the normal HUD so it remains readable on top of
+     * the blackout without replacing vanilla health, armor or hotbar elements.
+     */
+    public static void renderShellGuard(GuiGraphics graphics, int screenWidth, int screenHeight) {
+        Player player = Minecraft.getInstance().player;
+        if (player == null || !isShelled(player) || shellGuard <= 0.0F) return;
+
+        int totalWidth = GUARD_SEGMENTS * GUARD_SEGMENT_WIDTH
+                + (GUARD_SEGMENTS - 1) * GUARD_SEGMENT_GAP;
+        int startX = (screenWidth - totalWidth) / 2;
+        int startY = screenHeight - 50;
+
+        graphics.fill(
+                startX - 2,
+                startY - 2,
+                startX + totalWidth + 2,
+                startY + GUARD_SEGMENT_HEIGHT + 2,
+                GUARD_BACKGROUND_COLOR
+        );
+
+        float pointsPerSegment = TortleShellAction.MAX_SHELL_GUARD / GUARD_SEGMENTS;
+        for (int segment = 0; segment < GUARD_SEGMENTS; segment++) {
+            int x = startX + segment * (GUARD_SEGMENT_WIDTH + GUARD_SEGMENT_GAP);
+            graphics.fill(
+                    x,
+                    startY,
+                    x + GUARD_SEGMENT_WIDTH,
+                    startY + GUARD_SEGMENT_HEIGHT,
+                    GUARD_EMPTY_COLOR
+            );
+
+            float segmentRemaining = shellGuard - segment * pointsPerSegment;
+            float fillFraction = Math.max(0.0F, Math.min(1.0F, segmentRemaining / pointsPerSegment));
+            if (fillFraction <= 0.0F) continue;
+
+            int fillWidth = Math.max(1, Math.round(GUARD_SEGMENT_WIDTH * fillFraction));
+            graphics.fill(
+                    x,
+                    startY,
+                    x + fillWidth,
+                    startY + GUARD_SEGMENT_HEIGHT,
+                    GUARD_FILL_COLOR
+            );
+        }
     }
 
     @SubscribeEvent

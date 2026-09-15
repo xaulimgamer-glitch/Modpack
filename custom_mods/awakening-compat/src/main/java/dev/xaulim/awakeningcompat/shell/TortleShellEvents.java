@@ -1,6 +1,7 @@
 package dev.xaulim.awakeningcompat.shell;
 
 import dev.xaulim.awakeningcompat.AwakeningCompat;
+import dev.xaulim.awakeningcompat.network.AwakeningNetwork;
 import io.redspace.ironsspellbooks.api.events.SpellPreCastEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.DamageTypeTags;
@@ -67,6 +68,7 @@ public final class TortleShellEvents {
 
         if (newRemaining > 0.0F) {
             TortleShellAction.setShellGuard(player, newRemaining);
+            AwakeningNetwork.syncTortleShellGuard(player, newRemaining);
         } else {
             TortleShellAction.exitShell(player);
         }
@@ -195,6 +197,7 @@ public final class TortleShellEvents {
         if (event.getOriginal() instanceof ServerPlayer original
                 && event.getEntity() instanceof ServerPlayer clone) {
             TortleShellAction.clearShellGuard(clone);
+            AwakeningNetwork.syncTortleShellGuard(clone, 0.0F);
             TortleShellLifecycle.copyOwnership(original, clone);
             if (TortleShellLifecycle.isOwner(clone)) {
                 TortleShellLifecycle.gainShell(clone);
@@ -209,6 +212,7 @@ public final class TortleShellEvents {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         if (event.getEntity() instanceof ServerPlayer player) {
             TortleShellAction.clearShellGuard(player);
+            AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
             TortleShellLifecycle.sanitize(player);
         }
     }

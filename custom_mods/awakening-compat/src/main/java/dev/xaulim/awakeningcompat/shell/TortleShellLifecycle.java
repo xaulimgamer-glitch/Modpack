@@ -1,5 +1,6 @@
 package dev.xaulim.awakeningcompat.shell;
 
+import dev.xaulim.awakeningcompat.network.AwakeningNetwork;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -39,6 +40,7 @@ public final class TortleShellLifecycle {
         setOwner(player, true);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         TortleShellAction.clearShellGuard(player);
+        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
         ensureShellEquipped(player);
     }
 
@@ -46,6 +48,7 @@ public final class TortleShellLifecycle {
         setOwner(player, false);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         TortleShellAction.clearShellGuard(player);
+        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
         removeAllShellItems(player);
         syncInventory(player);
     }
@@ -58,6 +61,7 @@ public final class TortleShellLifecycle {
     public static void prepareForDeath(ServerPlayer player) {
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         TortleShellAction.clearShellGuard(player);
+        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
         removeAllShellItems(player);
         syncInventory(player);
     }
@@ -67,8 +71,12 @@ public final class TortleShellLifecycle {
      */
     public static void sanitize(ServerPlayer player) {
         if (!isOwner(player)) {
+            boolean wasShelled = player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
             player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
             TortleShellAction.clearShellGuard(player);
+            if (wasShelled) {
+                AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
+            }
             if (hasAnyShell(player)) {
                 removeAllShellItems(player);
                 syncInventory(player);

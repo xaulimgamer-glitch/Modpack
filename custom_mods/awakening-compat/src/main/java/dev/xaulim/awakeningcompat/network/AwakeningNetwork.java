@@ -25,7 +25,7 @@ import java.util.UUID;
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID)
 public final class AwakeningNetwork {
 
-    private static final String PROTOCOL_VERSION = "3";
+    private static final String PROTOCOL_VERSION = "4";
     private static final int ORIGINS_GUI_DELAY_TICKS = 20;
 
     private static final SimpleChannel CHANNEL = NetworkRegistry.ChannelBuilder
@@ -86,12 +86,29 @@ public final class AwakeningNetwork {
                 .decoder(OpenOriginsSelectionPacket::decode)
                 .consumerMainThread(OpenOriginsSelectionPacket::handle)
                 .add();
+
+        CHANNEL.messageBuilder(
+                        SyncTortleShellGuardPacket.class,
+                        nextMessageId++,
+                        NetworkDirection.PLAY_TO_CLIENT
+                )
+                .encoder(SyncTortleShellGuardPacket::encode)
+                .decoder(SyncTortleShellGuardPacket::decode)
+                .consumerMainThread(SyncTortleShellGuardPacket::handle)
+                .add();
     }
 
     public static void closeQuestBook(ServerPlayer player) {
         CHANNEL.send(
                 PacketDistributor.PLAYER.with(() -> player),
                 new CloseQuestBookPacket()
+        );
+    }
+
+    public static void syncTortleShellGuard(ServerPlayer player, float shellGuard) {
+        CHANNEL.send(
+                PacketDistributor.PLAYER.with(() -> player),
+                new SyncTortleShellGuardPacket(shellGuard)
         );
     }
 

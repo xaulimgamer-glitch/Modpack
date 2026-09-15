@@ -38,5 +38,13 @@ public final class TortleShellClientModEvents {
                 (gui, graphics, partialTick, screenWidth, screenHeight) ->
                         TortleShellClientEvents.renderShellVision(graphics, screenWidth, screenHeight)
         );
+
+        // The guard belongs to the HUD itself, so it renders after both the world
+        // blackout and vanilla overlays and cannot be hidden by shell vision.
+        event.registerAboveAll(
+                "tortle_shell_guard",
+                (gui, graphics, partialTick, screenWidth, screenHeight) ->
+                        TortleShellClientEvents.renderShellGuard(graphics, screenWidth, screenHeight)
+        );
     }
 }

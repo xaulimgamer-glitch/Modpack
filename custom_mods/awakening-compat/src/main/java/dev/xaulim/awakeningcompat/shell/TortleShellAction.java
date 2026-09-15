@@ -2,6 +2,7 @@ package dev.xaulim.awakeningcompat.shell;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import dev.xaulim.awakeningcompat.network.AwakeningNetwork;
 import io.github.edwinmindcraft.apoli.api.IDynamicFeatureConfiguration;
 import io.github.edwinmindcraft.apoli.api.power.factory.EntityAction;
 import net.minecraft.nbt.CompoundTag;
@@ -49,6 +50,7 @@ public final class TortleShellAction extends EntityAction<TortleShellAction.Conf
                 false
         ));
         resetShellGuard(player);
+        AwakeningNetwork.syncTortleShellGuard(player, MAX_SHELL_GUARD);
         player.level().playSound(null, player.blockPosition(), SoundEvents.ARMOR_EQUIP_TURTLE, SoundSource.PLAYERS, 0.85F, 0.75F);
     }
 
@@ -82,6 +84,7 @@ public final class TortleShellAction extends EntityAction<TortleShellAction.Conf
         boolean wasShelled = player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         clearShellGuard(player);
+        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
         if (wasShelled) {
             player.level().playSound(null, player.blockPosition(), SoundEvents.ARMOR_EQUIP_TURTLE, SoundSource.PLAYERS, 0.7F, 1.15F);
         }
