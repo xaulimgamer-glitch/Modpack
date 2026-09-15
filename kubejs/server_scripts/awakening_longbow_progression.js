@@ -22,11 +22,9 @@
     try { return Ingredient.of(value).itemIds.size() > 0 } catch (error) { return false }
   }
 
-  function usesAwakeningLongbowLimb(material) {
-    if (!Array.isArray(material.limb_candidates)) return false
-    return material.limb_candidates.some(function (candidate) {
-      return typeof candidate === 'string' && candidate.indexOf('awakening:') === 0 && candidate.indexOf('_longbow_limb') > 0
-    })
+  function isCustomDirectLongbow(material) {
+    if (!material || material.id === 'wood' || material.id === 'leather' || material.upgrade || !material.source_longbow) return false
+    return material.source_longbow.indexOf('spartanweaponry:') !== 0
   }
 
   function findReferenceRecipe(event, data, heatedMetals) {
@@ -72,10 +70,9 @@
     }
 
     data.materials.forEach(function (material) {
-      if (!material || material.id === 'wood' || material.id === 'leather' || material.upgrade) return
-      if (!usesAwakeningLongbowLimb(material)) return
+      if (!isCustomDirectLongbow(material)) return
 
-      if (!material.source_longbow || !ingredientExists(material.source_longbow)) {
+      if (!ingredientExists(material.source_longbow)) {
         console.warn('[Awakening/Longbows] Skipping ' + material.id + ': source Longbow is not registered (' + material.source_longbow + ')')
         skipped++
         return
