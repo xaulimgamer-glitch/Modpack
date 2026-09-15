@@ -93,12 +93,24 @@ const ARTIFACTS_REMOVED_FROM_PROGRESSION = [
   'artifacts:everlasting_beef'
 ]
 
+const OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS = [
+  'overgearedspartan:copper_longbow_limb',
+  'overgearedspartan:iron_longbow_limb',
+  'overgearedspartan:gold_longbow_limb',
+  'overgearedspartan:golden_longbow_limb',
+  'overgearedspartan:diamond_longbow_limb',
+  'overgearedspartan:netherite_longbow_limb',
+  'overgearedspartan:steel_longbow_limb',
+  'overgearedspartan:silver_longbow_limb'
+]
+
 JEIEvents.hideItems(event => {
   event.hide('alexscaves:nuclear_furnace_component')
   event.hide('alexscaves:submarine')
 
   SWEM_REMOVED_PLAYER_GEAR.forEach(item => event.hide(item))
   ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.hide(item))
+  OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => event.hide(item))
 })
 
 JEIEvents.removeCategories(event => {

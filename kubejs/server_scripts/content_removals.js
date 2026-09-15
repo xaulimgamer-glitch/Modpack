@@ -115,6 +115,19 @@ const VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION = [
   'minecraft:crossbow'
 ]
 
+// Native OvergearedSpartan Longbow limbs that are obsolete after the bow progression migration.
+// Wooden and Leather are intentionally retained until a safe non-limb Longbow path is verified.
+const OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS = [
+  'overgearedspartan:copper_longbow_limb',
+  'overgearedspartan:iron_longbow_limb',
+  'overgearedspartan:gold_longbow_limb',
+  'overgearedspartan:golden_longbow_limb',
+  'overgearedspartan:diamond_longbow_limb',
+  'overgearedspartan:netherite_longbow_limb',
+  'overgearedspartan:steel_longbow_limb',
+  'overgearedspartan:silver_longbow_limb'
+]
+
 ServerEvents.recipes(event => {
   // Alex's Caves Nuclear Furnace is assembled from this craftable component.
   // Removing every recipe that outputs the component makes the multiblock unobtainable in survival.
@@ -134,6 +147,13 @@ ServerEvents.recipes(event => {
   // Vanilla bow and crossbow remain registered for compatibility/commands/Creative, but recipes from
   // vanilla, mods, datapacks, or KubeJS must not make them obtainable through normal progression.
   VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
+
+  // Keep native registry entries for save compatibility while removing both ways to create the
+  // obsolete parts and recipes/tooltype conversions that still consume them.
+  OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => {
+    event.remove({ output: item })
+    event.remove({ input: item })
+  })
 })
 
 // Artifacts uses item tags to choose candidates for several native progression routes (mimics,
@@ -142,6 +162,10 @@ ServerEvents.recipes(event => {
 ServerEvents.tags('item', event => {
   ARTIFACTS_PROGRESSION_LOOT_TAGS.forEach(tag => {
     ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove(tag, item))
+  })
+
+  OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => {
+    event.remove('overgeared:tool_parts', item)
   })
 })
 
