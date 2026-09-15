@@ -48,9 +48,9 @@
       "name": "Wood",
       "source_longbow": "spartanweaponry:wooden_longbow",
       "existing_outputs": {
-        "short_bow": "awakening:wood_short_bow",
-        "recurve_bow": "awakening:wood_recurve_bow",
-        "flat_bow": "awakening:wood_flat_bow"
+        "short_bow": "awakening:wooden_short_bow",
+        "recurve_bow": "awakening:wooden_recurve_bow",
+        "flat_bow": "awakening:wooden_flat_bow"
       }
     },
     {
