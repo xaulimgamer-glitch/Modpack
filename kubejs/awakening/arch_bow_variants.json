@@ -36,7 +36,7 @@
       "name": "Flat Bow",
       "draw_time": 65,
       "velocity": 4.0,
-      "base_damage": 2.0,
+      "base_damage": 3.0,
       "max_damage": 384,
       "handle": "spartanweaponry:simple_handle",
       "string": "minecraft:string"
