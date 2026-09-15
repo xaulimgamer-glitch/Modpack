@@ -177,7 +177,7 @@
         return
       }
       material.weapons.forEach(function (weapon) {
-        if (!weapon || !weapon.part) return
+        if (!weapon || weapon.type === 'longbow' || !weapon.part) return
         event.add('awakening:weapon_parts', weapon.part)
         event.add('overgeared:tool_parts', weapon.part)
       })
@@ -254,6 +254,7 @@
       if (reasons.length === 0) {
         try {
           material.weapons.forEach(function (weapon) {
+            if (weapon.type === 'longbow') return
             var template = data.templates[weapon.type]
             if (!template) {
               reasons.push('missing template for ' + weapon.type)

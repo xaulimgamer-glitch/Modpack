@@ -11,6 +11,7 @@ StartupEvents.registry('item', event => {
   function registerMaterial(material, weaponTypes) {
     const color = parseInt(material.color, 16)
     weaponTypes.forEach(type => {
+      if (type === 'longbow') return
       const template = data.templates[type]
       if (!template) throw new Error('[Awakening/Parts] Missing template: ' + type)
       const part = 'awakening:' + material.id + '_' + template.suffix
