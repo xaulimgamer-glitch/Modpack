@@ -4,4 +4,6 @@
 	hud_enabled = true
 	#Toggles the 'Stealth HUD' button in the pause menu (ESC) on or off.
 	hud_editor_button_enabled = false
+	#If true, the HUD is automatically displayed when the player crawls (e.g., via trapdoors or mods).
+	show_hud_on_crawl = true
 

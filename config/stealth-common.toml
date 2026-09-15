@@ -30,6 +30,8 @@
 	alert_ignored_mobs = []
 	#Should the follow range of blacklisted mobs still be boosted to match the stealth config values?
 	boost_ignored_mobs_range = false
+	#If true, crawling (e.g., using trapdoors or mods) grants the same stealth bonuses as crouching.
+	crawl_stealth_enabled = true
 
 [light]
 	#Artificially increases the overall base light level (makes hiding more difficult).
