@@ -1,10 +1,10 @@
 {
   "schema": 2,
   "notes": [
-    "Short, Recurve and Flat bow material recipes derive from loaded Longbow base-bow recipes instead of dedicated limbs.",
-    "Direct custom Longbows derive from a loaded heated-material Longbow recipe that uses the wooden Longbow as its base.",
+    "Short, Recurve, Flat and Longbow material progression is intentionally separate from the forged melee weapon-part system.",
+    "All non-wood ranged bows are crafted in a vanilla crafting table from the matching wooden bow plus two units of the normal, unheated material.",
+    "Wooden Short, Recurve and Flat bows are crafted directly from planks, wooden rods, a simple handle and string.",
     "Tin, Bronze, Electrum, Lead, Nickel, Invar, Constantan, Platinum and Aluminum variants are intentionally excluded.",
-    "Forgotten, Cursium and Ignitium preserve their smithing-upgrade progression.",
     "Visuals are original Awakening pixel geometry built entirely from model JSON and vanilla Minecraft textures."
   ],
   "assembly": {
@@ -57,160 +57,169 @@
       "id": "leather",
       "name": "Leather",
       "source_longbow": "spartanweaponry:leather_longbow",
-      "color": "B97845"
+      "color": "B97845",
+      "crafting_material": "minecraft:leather"
     },
     {
       "id": "copper",
       "name": "Copper",
       "source_longbow": "spartanweaponry:copper_longbow",
-      "color": "E2835D"
+      "color": "E2835D",
+      "crafting_material": "minecraft:copper_ingot"
     },
     {
       "id": "iron",
       "name": "Iron",
       "source_longbow": "spartanweaponry:iron_longbow",
-      "color": "D0D7DC"
+      "color": "D0D7DC",
+      "crafting_material": "minecraft:iron_ingot"
     },
     {
       "id": "gold",
       "name": "Gold",
       "source_longbow": "spartanweaponry:golden_longbow",
-      "color": "FFE26A"
+      "color": "FFE26A",
+      "crafting_material": "minecraft:gold_ingot"
     },
     {
       "id": "diamond",
       "name": "Diamond",
       "source_longbow": "spartanweaponry:diamond_longbow",
-      "color": "91F7E8"
+      "color": "91F7E8",
+      "crafting_material": "minecraft:diamond"
     },
     {
       "id": "netherite",
       "name": "Netherite",
       "source_longbow": "spartanweaponry:netherite_longbow",
-      "color": "9B8790"
+      "color": "9B8790",
+      "crafting_material": "minecraft:netherite_ingot"
     },
     {
       "id": "steel",
       "name": "Steel",
       "source_longbow": "spartanweaponry:steel_longbow",
-      "color": "C2D0D7"
+      "color": "C2D0D7",
+      "crafting_material": "#forge:ingots/steel"
     },
     {
       "id": "silver",
       "name": "Silver",
       "source_longbow": "spartanweaponry:silver_longbow",
-      "color": "F2F5F5"
+      "color": "F2F5F5",
+      "crafting_material": "#forge:ingots/silver"
     },
     {
       "id": "cloggrum",
       "name": "Cloggrum",
       "source_longbow": "spartanundergarden:cloggrum_longbow",
-      "color": "82AAA1"
+      "color": "82AAA1",
+      "crafting_material": "undergarden:cloggrum_ingot"
     },
     {
       "id": "froststeel",
       "name": "Froststeel",
       "source_longbow": "spartanundergarden:froststeel_longbow",
-      "color": "CAE9F4"
+      "color": "CAE9F4",
+      "crafting_material": "undergarden:froststeel_ingot"
     },
     {
       "id": "utherium",
       "name": "Utherium",
       "source_longbow": "spartanundergarden:utherium_longbow",
-      "color": "C49AE3"
+      "color": "C49AE3",
+      "crafting_material": "undergarden:utherium_crystal"
     },
     {
       "id": "forgotten",
       "name": "Forgotten",
       "source_longbow": "spartanundergarden:forgotten_longbow",
       "color": "A0AAA7",
-      "upgrade": {
-        "from": "cloggrum",
-        "template_item": "undergarden:forgotten_upgrade_smithing_template",
-        "addition_tag": "forge:ingots/forgotten_metal"
-      }
+      "crafting_material": "#forge:ingots/forgotten_metal"
     },
     {
       "id": "cursium",
       "name": "Cursium",
       "source_longbow": "spartancataclysm:cursium_longbow",
       "color": "E481A7",
-      "upgrade": {
-        "from": "netherite",
-        "template_item": "cataclysm:cursium_upgrade_smithing_template",
-        "addition_item": "cataclysm:cursium_ingot"
-      }
+      "crafting_material": "cataclysm:cursium_ingot"
     },
     {
       "id": "ignitium",
       "name": "Ignitium",
       "source_longbow": "spartancataclysm:ignitium_longbow",
       "color": "FFAA4C",
-      "upgrade": {
-        "from": "netherite",
-        "template_item": "cataclysm:ignitium_upgrade_smithing_template",
-        "addition_item": "cataclysm:ignitium_ingot"
-      }
+      "crafting_material": "cataclysm:ignitium_ingot"
     },
     {
       "id": "ironwood",
       "name": "Ironwood",
       "source_longbow": "spartantwilight:ironwood_longbow",
-      "color": "B69B67"
+      "color": "B69B67",
+      "crafting_material": "twilightforest:ironwood_ingot"
     },
     {
       "id": "fiery",
       "name": "Fiery",
       "source_longbow": "spartantwilight:fiery_longbow",
-      "color": "FFB32E"
+      "color": "FFB32E",
+      "crafting_material": "twilightforest:fiery_ingot"
     },
     {
       "id": "steeleaf",
       "name": "Steeleaf",
       "source_longbow": "spartantwilight:steeleaf_longbow",
-      "color": "A3D67E"
+      "color": "A3D67E",
+      "crafting_material": "twilightforest:steeleaf_ingot"
     },
     {
       "id": "knightmetal",
       "name": "Knightmetal",
       "source_longbow": "spartantwilight:knightmetal_longbow",
-      "color": "D0D7EC"
+      "color": "D0D7EC",
+      "crafting_material": "twilightforest:knightmetal_ingot"
     },
     {
       "id": "ancient_metal",
       "name": "Ancient Metal",
       "source_longbow": "spartancataclysm:ancient_metal_longbow",
-      "color": "D3B77A"
+      "color": "D3B77A",
+      "crafting_material": "cataclysm:ancient_metal_ingot"
     },
     {
       "id": "black_steel",
       "name": "Black Steel",
       "source_longbow": "spartancataclysm:black_steel_longbow",
-      "color": "7C8795"
+      "color": "7C8795",
+      "crafting_material": "cataclysm:black_steel_ingot"
     },
     {
       "id": "witherite",
       "name": "Witherite",
       "source_longbow": "spartancataclysm:witherite_longbow",
-      "color": "9D94B3"
+      "color": "9D94B3",
+      "crafting_material": "cataclysm:witherite_ingot"
     },
     {
       "id": "fire_dragonsteel",
       "name": "Fire Dragonsteel",
       "source_longbow": "spartanfire:fire_dragonsteel_longbow",
-      "color": "E76054"
+      "color": "E76054",
+      "crafting_material": "iceandfire:dragonsteel_fire_ingot"
     },
     {
       "id": "ice_dragonsteel",
       "name": "Ice Dragonsteel",
       "source_longbow": "spartanfire:ice_dragonsteel_longbow",
-      "color": "9CD9E8"
+      "color": "9CD9E8",
+      "crafting_material": "iceandfire:dragonsteel_ice_ingot"
     },
     {
       "id": "lightning_dragonsteel",
       "name": "Lightning Dragonsteel",
       "source_longbow": "spartanfire:lightning_dragonsteel_longbow",
-      "color": "B9AEF2"
+      "color": "B9AEF2",
+      "crafting_material": "iceandfire:dragonsteel_lightning_ingot"
     }
   ]
 }
