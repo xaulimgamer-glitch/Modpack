@@ -1,0 +1,116 @@
+name: Temporary awakening-compat build
+
+on:
+  push:
+    branches:
+      - tmp-awakening-build-ceed78f
+    paths:
+      - '.github/workflows/tmp-awakening-build.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build awakening-compat
+        working-directory: custom_mods/awakening-compat
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x gradlew
+          java -version
+          ./gradlew --version
+          ./gradlew clean build --no-daemon
+
+      - name: Validate and stage packaged JAR
+        shell: bash
+        run: |
+          set -euo pipefail
+          LIBDIR='custom_mods/awakening-compat/build/libs'
+          mapfile -t candidates < <(find "$LIBDIR" -maxdepth 1 -type f -name '*.jar' \
+            ! -name '*-sources.jar' \
+            ! -name '*-javadoc.jar' \
+            ! -name '*-dev.jar' \
+            ! -name '*-debug.jar' \
+            ! -name '*-development.jar' \
+            | sort)
+
+          printf 'Eligible build JARs:\n'
+          printf '  %s\n' "${candidates[@]}"
+          if [ "${#candidates[@]}" -ne 1 ]; then
+            echo "Expected exactly one distributable JAR, found ${#candidates[@]}" >&2
+            exit 1
+          fi
+
+          final_jar="${candidates[0]}"
+          final_name="$(basename "$final_jar")"
+
+          mapfile -t old_jars < <(find mods -maxdepth 1 -type f -iname 'awakening-compat*.jar' -printf '%f\n' | sort)
+          if [ "${#old_jars[@]}" -lt 1 ]; then
+            echo 'No existing awakening-compat JAR found in mods/' >&2
+            exit 1
+          fi
+
+          old_csv="$(IFS=,; echo "${old_jars[*]}")"
+          find mods -maxdepth 1 -type f -iname 'awakening-compat*.jar' -delete
+          cp "$final_jar" "mods/$final_name"
+
+          mapfile -t active_jars < <(find mods -maxdepth 1 -type f -iname 'awakening-compat*.jar' -printf '%f\n' | sort)
+          if [ "${#active_jars[@]}" -ne 1 ]; then
+            echo "Expected one active awakening-compat JAR in mods/, found ${#active_jars[@]}" >&2
+            printf '  %s\n' "${active_jars[@]}" >&2
+            exit 1
+          fi
+
+          java_line="$(java -version 2>&1 | head -n 1)"
+          gradle_version="$(custom_mods/awakening-compat/gradlew --version | awk '/^Gradle / {print $2; exit}')"
+          sha256="$(sha256sum "$final_jar" | awk '{print $1}')"
+
+          cat > .tmp-awakening-build-report <<EOF
+          INITIAL_SHA=ceed78f3ab50b671db3b065e762e4a9a2e44a1ed
+          JAVA_VERSION=$java_line
+          GRADLE_VERSION=$gradle_version
+          GRADLE_COMMAND=./gradlew clean build --no-daemon
+          BUILD_RESULT=success
+          FINAL_JAR_NAME=$final_name
+          FINAL_JAR_PATH=$final_jar
+          FINAL_JAR_SHA256=$sha256
+          OLD_MOD_JARS=$old_csv
+          NEW_MOD_JAR=${active_jars[0]}
+          ACTIVE_COUNT=${#active_jars[@]}
+          EOF
+
+          git add -A -- mods .tmp-awakening-build-report
+          mapfile -t staged_mods < <(git diff --cached --name-only -- mods)
+          for changed in "${staged_mods[@]}"; do
+            case "$changed" in
+              mods/awakening-compat*.jar) ;;
+              *) echo "Unexpected mods/ change: $changed" >&2; exit 1 ;;
+            esac
+          done
+
+          echo 'Staged changes:'
+          git diff --cached --name-status
+          cat .tmp-awakening-build-report
+
+      - name: Commit built artifact to temporary branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'ci: stage awakening-compat build artifact'
+          git push origin HEAD:tmp-awakening-build-ceed78f
