@@ -36,14 +36,14 @@ import java.util.function.Predicate;
  *
  * The target class is pinned by build.gradle to Spartan Weaponry 1.20.1-3.2.1.
  */
-@Mixin(value = HeavyCrossbowItem.class, remap = false)
+@Mixin(HeavyCrossbowItem.class)
 public abstract class HeavyCrossbowArrowMixin {
     private static final Predicate<ItemStack> AWAKENING_ARROWS = stack -> stack.getItem() instanceof ArrowItem;
     private static final float HEAVY_MAX_INACCURACY = 12.0F;
     private static final float HEAVY_PROJECTILE_VELOCITY = 4.5F;
 
-    @Shadow protected WeaponMaterial material;
-    @Shadow protected List<WeaponTrait> rangedTraits;
+    @Shadow(remap = false) protected WeaponMaterial material;
+    @Shadow(remap = false) protected List<WeaponTrait> rangedTraits;
 
     @Inject(method = "getAllSupportedProjectiles", at = @At("HEAD"), cancellable = true)
     private void awakening$allSupportedProjectiles(CallbackInfoReturnable<Predicate<ItemStack>> cir) {
