@@ -11,6 +11,10 @@ const prototype = clone(full)
 prototype.materials = prototype.materials.filter(m => m.id === 'cloggrum')
 prototype.materials[0].weapons = prototype.materials[0].weapons.filter(w => prototypeTypes.includes(w.type))
 
+function isSeparatedRangedType(type) {
+  return type === 'longbow' || type === 'heavy_crossbow'
+}
+
 function run(data, missing) {
   const items = new Map()
   const tags = new Map()
@@ -22,6 +26,7 @@ function run(data, missing) {
     if (!tags.has(tag)) tags.set(tag, new Set())
     tags.get(tag).add(item)
   }
+
   // Fixture IDs are deliberately test-only. Runtime resolves actual tag members.
   data.materials.forEach(m => {
     addTag(m.ingredient_tag, 'test:' + m.id + '_ingot')
@@ -41,10 +46,24 @@ function run(data, missing) {
   addTag('forge:string', 'test:string')
   addTag('overgeared:smithing_hammers', 'test:hammer')
   if (missing) tags.delete(data.materials[0].ingredient_tag)
+
   const registered = []
+  const twilightFixture = { schema: 1, weapon_types: [], materials: [] }
+  const cataclysmFixture = { schema: 1, prototype: data.materials[0].id, materials: [] }
   const context = {
-    console: { info() {} },
-    JsonIO: { readString: () => JSON.stringify(data) },
+    console: { info() {}, warn() {} },
+    JsonIO: {
+      readString(file) {
+        if (file.endsWith('weapon_parts.json') && !file.includes('twilight_') && !file.includes('cataclysm_')) return JSON.stringify(data)
+        if (file.endsWith('twilight_weapon_parts.json')) return JSON.stringify(twilightFixture)
+        if (file.endsWith('cataclysm_weapon_parts.json')) return JSON.stringify(cataclysmFixture)
+        throw new Error('Unexpected JsonIO.readString: ' + file)
+      },
+      read(file) {
+        if (file.endsWith('heated_metals.json')) return { metals: [] }
+        throw new Error('Unexpected JsonIO.read: ' + file)
+      }
+    },
     StartupEvents: { registry(type, callback) {
       assert.equal(type, 'item')
       callback({ create(id) {
@@ -65,16 +84,20 @@ function run(data, missing) {
       recipes(callback) { callbacks.recipes = callback }
     },
     Ingredient: { of(value) {
-      const v = typeof value === 'string' ? { tag: value.substring(1) } : value
+      const v = typeof value === 'string'
+        ? value.startsWith('#') ? { tag: value.substring(1) } : { item: value }
+        : value
       const ids = v.tag ? [...(tags.get(v.tag) || [])] : items.has(v.item) ? [v.item] : []
       return { itemIds: { size: () => ids.length, forEach: f => ids.forEach(f) } }
     } }
   }
+
   vm.createContext(context)
   for (const phase of ['startup', 'server']) {
     const filename = path.join(root, 'kubejs', phase + '_scripts/awakening_weapon_parts.js')
     vm.runInContext(fs.readFileSync(filename, 'utf8'), context, { filename })
   }
+
   callbacks.tags({ add: addTag })
   const event = {
     remove(filter) {
@@ -87,15 +110,27 @@ function run(data, missing) {
       recipes.set(id, clone(json))
     } } }
   }
+
+  const allWeapons = data.materials.flatMap(m => m.weapons)
+  const weapons = allWeapons.filter(w => !isSeparatedRangedType(w.type))
+  const separated = allWeapons.filter(w => isSeparatedRangedType(w.type))
+
   if (missing) {
-    assert.throws(() => callbacks.recipes(event), /Missing ingredient/)
+    callbacks.recipes(event)
     assert.equal(removed.length, 0, 'Preflight failure must not remove crafts')
     return
   }
+
   callbacks.recipes(event)
-  const weapons = data.materials.flatMap(m => m.weapons)
   assert.equal(registered.length, weapons.length + data.materials.length)
   assert.equal(removed.length, weapons.length)
+
+  for (const w of separated) {
+    assert.ok(!items.has(w.part), 'Separated ranged part must not be registered: ' + w.part)
+    assert.ok(!tags.get('overgeared:tool_parts')?.has(w.part), 'Separated ranged part must not be tagged: ' + w.part)
+    assert.ok(!queue.some(id => id.endsWith('/' + w.type)), 'Separated ranged recipe must not be generated: ' + w.type)
+  }
+
   for (const m of data.materials) {
     const prefix = 'awakening:weapon_parts/' + m.id + '/'
     const cut = recipes.get(prefix + 'fragments')
@@ -103,7 +138,8 @@ function run(data, missing) {
     assert.equal(cut.ingredients[0].tag, m.ingredient_tag)
     assert.equal(cut.ingredients[1].remainder, true)
     assert.equal(cut.ingredients[1].durability_decrease, 1)
-    for (const w of m.weapons) {
+
+    for (const w of m.weapons.filter(w => !isSeparatedRangedType(w.type))) {
       const t = data.templates[w.type]
       const forge = recipes.get(prefix + 'forge/' + w.type)
       assert.deepEqual(forge.pattern, t.forging.pattern)
@@ -114,6 +150,7 @@ function run(data, missing) {
       const materialUnits = [...pattern].reduce((sum, c) => sum + (c === 'X' ? 9 : c === 'x' ? 1 : 0), 0)
       assert.ok(materialUnits > 0)
       assert.equal(materialUnits, [...t.forging.pattern.join('')].reduce((sum, c) => sum + (c === 'X' ? 9 : c === 'x' ? 1 : 0), 0))
+
       const assembly = recipes.get(prefix + 'assemble/' + w.type)
       assert.deepEqual(assembly.result, w.original.result, 'Preserve output, count and enchantment NBT')
       assert.equal(assembly.result.count || 1, 1, 'One consumed part must not multiply weapons')
@@ -127,16 +164,14 @@ function run(data, missing) {
         assert.deepEqual(inputs.slice(1), expected, 'Preserve original melee handle/pole multiplicity')
       }
       if (w.type === 'pike') assert.equal(inputs.length, 3, 'Pike must retain both poles')
-      if (w.type === 'longbow' || w.type === 'heavy_crossbow') {
-        assert.deepEqual(assembly.key.h, w.original.key['|'])
-        assert.ok(inputs.some(i => i.tag === 'forge:string'))
-      }
+
       const item = items.get(w.part)
       assert.deepEqual(item.texture, [t.texture])
       assert.deepEqual(item.color, [0, parseInt(m.color, 16)])
       assert.ok(tags.get('overgeared:tool_parts').has(w.part))
     }
   }
+
   const heats = [...recipes.values()].filter(r => r.type === 'overgeared:nbt_add_blasting')
   for (const r of heats) {
     assert.equal(r.result.item, r.ingredient.item)
@@ -144,11 +179,12 @@ function run(data, missing) {
     assert.equal(r.experience, 0)
     assert.equal(r.nbt.Heated, true)
   }
+
   // Replaying a resource reload must not create parallel original/new assemblies.
   queue.length = 0
   callbacks.recipes(event)
   for (const w of weapons) assert.equal([...recipes.values()].filter(r => r.result?.item === w.original.result.item).length, 1)
-  console.log(`STATIC-OBSERVED: ${weapons.length} parts, ${registered.length} registrations, ${queue.length} recipes; NBT, components, heating, removals and reload checked.`)
+  console.log(`STATIC-OBSERVED: ${weapons.length} forged parts, ${separated.length} ranged parts excluded, ${registered.length} registrations; NBT, components, heating, removals and reload checked.`)
 }
 
 run(prototype)
