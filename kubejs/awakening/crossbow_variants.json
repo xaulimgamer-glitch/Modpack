@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "notes": [
+    "Crossbows are a ranged subsystem independent from forged weapon parts.",
+    "The material matrix is derived from Heavy Crossbows present in the installed Spartan Weaponry/addon set, not from the bow matrix.",
+    "Every material variant upgrades from the wooden version of the same family with normal, unheated material.",
+    "Heavy Crossbow IDs remain native; Pistol Crossbow and Arbalest use Awakening IDs.",
+    "All three families use arrows. Bolt progression is obsolete."
+  ],
+  "baseline": {
+    "heavy": {
+      "charge_ticks": 25,
+      "projectile_damage": 4.0,
+      "projectile_velocity": 4.5,
+      "inaccuracy_ticks": 10
+    }
+  },
+  "families": {
+    "pistol_crossbow": {
+      "suffix": "pistol_crossbow",
+      "name": "Pistol Crossbow",
+      "role": "fast",
+      "source_texture": "mytextures/iron_pistol_crossbow.png"
+    },
+    "heavy_crossbow": {
+      "suffix": "heavy_crossbow",
+      "name": "Heavy Crossbow",
+      "role": "reference",
+      "source_charged_texture": "mytextures/heavy_crossbow_arrow.png"
+    },
+    "arbalest": {
+      "suffix": "arbalest",
+      "name": "Arbalest",
+      "role": "power",
+      "source_texture": "mytextures/iron_arbalest.png"
+    }
+  },
+  "materials": [
+    {
+      "id": "wood",
+      "name": "Wood",
+      "heavy_output": "spartanweaponry:wooden_heavy_crossbow"
+    },
+    {
+      "id": "leather",
+      "name": "Leather",
+      "heavy_output": "spartanweaponry:leather_heavy_crossbow",
+      "color": "B97845",
+      "crafting_material": "minecraft:leather"
+    },
+    {
+      "id": "copper",
+      "name": "Copper",
+      "heavy_output": "spartanweaponry:copper_heavy_crossbow",
+      "color": "E2835D",
+      "crafting_material": "minecraft:copper_ingot"
+    },
+    {
+      "id": "iron",
+      "name": "Iron",
+      "heavy_output": "spartanweaponry:iron_heavy_crossbow",
+      "color": "D0D7DC",
+      "crafting_material": "minecraft:iron_ingot"
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "heavy_output": "spartanweaponry:golden_heavy_crossbow",
+      "color": "FFE26A",
+      "crafting_material": "minecraft:gold_ingot"
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "heavy_output": "spartanweaponry:diamond_heavy_crossbow",
+      "color": "91F7E8",
+      "crafting_material": "minecraft:diamond"
+    },
+    {
+      "id": "netherite",
+      "name": "Netherite",
+      "heavy_output": "spartanweaponry:netherite_heavy_crossbow",
+      "color": "9B8790",
+      "crafting_material": "minecraft:netherite_ingot"
+    },
+    {
+      "id": "steel",
+      "name": "Steel",
+      "heavy_output": "spartanweaponry:steel_heavy_crossbow",
+      "color": "C2D0D7",
+      "crafting_material": "#forge:ingots/steel"
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "heavy_output": "spartanweaponry:silver_heavy_crossbow",
+      "color": "F2F5F5",
+      "crafting_material": "#forge:ingots/silver"
+    },
+    {
+      "id": "cloggrum",
+      "name": "Cloggrum",
+      "heavy_output": "spartanundergarden:cloggrum_heavy_crossbow",
+      "color": "82AAA1",
+      "crafting_material": "undergarden:cloggrum_ingot"
+    },
+    {
+      "id": "froststeel",
+      "name": "Froststeel",
+      "heavy_output": "spartanundergarden:froststeel_heavy_crossbow",
+      "color": "CAE9F4",
+      "crafting_material": "undergarden:froststeel_ingot"
+    },
+    {
+      "id": "ironwood",
+      "name": "Ironwood",
+      "heavy_output": "spartantwilight:ironwood_heavy_crossbow",
+      "color": "B69B67",
+      "crafting_material": "twilightforest:ironwood_ingot"
+    },
+    {
+      "id": "fiery",
+      "name": "Fiery",
+      "heavy_output": "spartantwilight:fiery_heavy_crossbow",
+      "color": "FFB32E",
+      "crafting_material": "twilightforest:fiery_ingot"
+    },
+    {
+      "id": "ancient_metal",
+      "name": "Ancient Metal",
+      "heavy_output": "spartancataclysm:ancient_metal_heavy_crossbow",
+      "color": "D3B77A",
+      "crafting_material": "cataclysm:ancient_metal_ingot"
+    },
+    {
+      "id": "witherite",
+      "name": "Witherite",
+      "heavy_output": "spartancataclysm:witherite_heavy_crossbow",
+      "color": "9D94B3",
+      "crafting_material": "cataclysm:witherite_ingot"
+    },
+    {
+      "id": "fire_dragonsteel",
+      "name": "Fire Dragonsteel",
+      "heavy_output": "spartanfire:fire_dragonsteel_heavy_crossbow",
+      "color": "E76054",
+      "crafting_material": "iceandfire:dragonsteel_fire_ingot"
+    },
+    {
+      "id": "ice_dragonsteel",
+      "name": "Ice Dragonsteel",
+      "heavy_output": "spartanfire:ice_dragonsteel_heavy_crossbow",
+      "color": "9CD9E8",
+      "crafting_material": "iceandfire:dragonsteel_ice_ingot"
+    },
+    {
+      "id": "lightning_dragonsteel",
+      "name": "Lightning Dragonsteel",
+      "heavy_output": "spartanfire:lightning_dragonsteel_heavy_crossbow",
+      "color": "B9AEF2",
+      "crafting_material": "iceandfire:dragonsteel_lightning_ingot"
+    }
+  ]
+}
