@@ -1,12 +1,12 @@
 {
-  "schema": 3,
+  "schema": 4,
   "notes": [
     "Crossbows are a ranged subsystem independent from forged weapon parts.",
     "The material matrix is derived from Heavy Crossbows registered by the installed Spartan Weaponry 3.2.1 and Spartan Undergarden 1.1.0 set, not from the bow matrix or the old forging matrix.",
     "Every material variant upgrades from the wooden version of the same family with normal, unheated material.",
     "Heavy Crossbow IDs remain native; Pistol Crossbow and Arbalest use Awakening IDs.",
     "All three families use arrows. Bolt progression is obsolete.",
-    "Family stats are derived from the audited Spartan Heavy Crossbow baseline; material stats preserve Heavy durability/enchantability.",
+    "Family stats are derived from the audited Spartan Heavy Crossbow baseline; material stats preserve Heavy durability/enchantability and material ranged traits.",
     "For materials already represented by Awakening bows, the established Awakening tint palette is reused for visual consistency; the bow manifest is not used to determine the crossbow material matrix."
   ],
   "balance_reference": {
@@ -127,7 +127,8 @@
       "color": "9B8790",
       "crafting_material": "minecraft:netherite_ingot",
       "durability": 2031,
-      "enchantability": 15
+      "enchantability": 15,
+      "fire_resistant": true
     },
     {
       "id": "tin",
@@ -163,7 +164,12 @@
       "color": "F2F5F5",
       "crafting_material": "#forge:ingots/silver",
       "durability": 48,
-      "enchantability": 16
+      "enchantability": 16,
+      "damage_trait": {
+        "kind": "mob_type",
+        "value": "UNDEAD",
+        "multiplier": 1.5
+      }
     },
     {
       "id": "electrum",
@@ -181,7 +187,8 @@
       "color": "57617D",
       "crafting_material": "#forge:ingots/lead",
       "durability": 240,
-      "enchantability": 5
+      "enchantability": 5,
+      "charge_scale": 1.2
     },
     {
       "id": "nickel",
@@ -226,7 +233,8 @@
       "color": "AEBBBF",
       "crafting_material": "#spartanweaponry:ingots/aluminum",
       "durability": 400,
-      "enchantability": 7
+      "enchantability": 7,
+      "charge_scale": 0.8
     },
     {
       "id": "cloggrum",
@@ -245,7 +253,11 @@
       "crafting_material": "undergarden:froststeel_ingot",
       "durability": 575,
       "enchantability": 20,
-      "trait": "spartanundergarden:chilly"
+      "post_hit_effect": {
+        "id": "undergarden:chilly",
+        "duration": 600,
+        "amplifier": 2
+      }
     },
     {
       "id": "utherium",
@@ -255,7 +267,11 @@
       "crafting_material": "undergarden:utherium_crystal",
       "durability": 1279,
       "enchantability": 17,
-      "trait": "spartanundergarden:rotspawn_damage_bonus"
+      "damage_trait": {
+        "kind": "entity_tag",
+        "value": "undergarden:rotspawn",
+        "multiplier": 1.5
+      }
     },
     {
       "id": "forgotten",
@@ -265,7 +281,11 @@
       "crafting_material": "#forge:ingots/forgotten_metal",
       "durability": 1876,
       "enchantability": 2,
-      "trait": "spartanundergarden:undergarden_damage_bonus"
+      "damage_trait": {
+        "kind": "namespace_non_boss",
+        "value": "undergarden",
+        "multiplier": 1.5
+      }
     }
   ]
 }
