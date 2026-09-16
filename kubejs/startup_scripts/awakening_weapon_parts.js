@@ -8,10 +8,14 @@ StartupEvents.registry('item', event => {
     throw new Error('[Awakening/Parts] Unsupported manifest')
   }
 
+  function isSeparatedRangedType(type) {
+    return type === 'longbow' || type === 'heavy_crossbow'
+  }
+
   function registerMaterial(material, weaponTypes) {
     const color = parseInt(material.color, 16)
     weaponTypes.forEach(type => {
-      if (type === 'longbow') return
+      if (isSeparatedRangedType(type)) return
       const template = data.templates[type]
       if (!template) throw new Error('[Awakening/Parts] Missing template: ' + type)
       const part = 'awakening:' + material.id + '_' + template.suffix
