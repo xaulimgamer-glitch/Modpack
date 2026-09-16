@@ -52,6 +52,16 @@
       throw new Error('[Awakening/Parts] Unsupported manifest')
     }
 
+    // Ranged families are managed by their own progression systems. Longbows were
+    // already separated; Heavy Crossbows now follow the same rule and must never
+    // generate forged limbs, assemblies, tool-part tags, or heated-material paths.
+    data.materials.forEach(function (material) {
+      if (!material || !Array.isArray(material.weapons)) return
+      material.weapons = material.weapons.filter(function (weapon) {
+        return weapon && weapon.type !== 'heavy_crossbow'
+      })
+    })
+
     var ironwood = data.materials.find(function (material) { return material.id === 'ironwood' })
     if (!ironwood) {
       console.warn('[Awakening/Parts] Ironwood prototype missing; Twilight generated materials will be skipped.')
@@ -62,6 +72,7 @@
         var reasons = []
 
         twilight.weapon_types.forEach(function (type) {
+          if (type === 'heavy_crossbow') return
           var prototype = ironwood.weapons.find(function (weapon) { return weapon.type === type })
           var template = data.templates[type]
           if (!prototype || !template) {
