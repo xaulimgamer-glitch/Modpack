@@ -3,7 +3,7 @@
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
-    if (!data || data.schema !== 3 || !data.families || !Array.isArray(data.materials)) {
+    if (!data || data.schema !== 4 || !data.families || !Array.isArray(data.materials)) {
       throw new Error('[Awakening/Crossbows] Unsupported manifest')
     }
     return data
