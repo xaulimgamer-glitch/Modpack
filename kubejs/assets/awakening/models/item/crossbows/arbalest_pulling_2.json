@@ -1,0 +1,4 @@
+{
+  "parent": "awakening:item/crossbows/crossbow_base",
+  "textures": { "layer0": "awakening:item/crossbows/arbalest_pulling_2" }
+}
