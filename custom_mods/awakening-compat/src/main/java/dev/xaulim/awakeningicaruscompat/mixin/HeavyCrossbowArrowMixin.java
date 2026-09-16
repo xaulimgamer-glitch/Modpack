@@ -39,6 +39,8 @@ import java.util.function.Predicate;
 @Mixin(value = HeavyCrossbowItem.class, remap = false)
 public abstract class HeavyCrossbowArrowMixin {
     private static final Predicate<ItemStack> AWAKENING_ARROWS = stack -> stack.getItem() instanceof ArrowItem;
+    private static final float HEAVY_MAX_INACCURACY = 12.0F;
+    private static final float HEAVY_PROJECTILE_VELOCITY = 4.5F;
 
     @Shadow protected WeaponMaterial material;
     @Shadow protected List<WeaponTrait> rangedTraits;
@@ -101,7 +103,7 @@ public abstract class HeavyCrossbowArrowMixin {
             int remainingInaccuracyTicks = Mth.clamp(aimTicks - usedTicks, 0, aimTicks);
             float inaccuracy = remainingInaccuracyTicks == 0 || aimTicks == 0
                     ? 0.0F
-                    : Defaults.CrossbowInaccuracyMax * ((float) remainingInaccuracyTicks / (float) aimTicks);
+                    : HEAVY_MAX_INACCURACY * ((float) remainingInaccuracyTicks / (float) aimTicks);
 
             int count = Math.max(1, storedArrow.getCount());
             spawnArrow(crossbow, storedArrow, level, player, creativeOrInfinite, inaccuracy, 0.0F);
@@ -141,7 +143,7 @@ public abstract class HeavyCrossbowArrowMixin {
         Vec3 up = player.getUpVector(1.0F);
         Quaternionf rotation = new Quaternionf().setAngleAxis(projectileAngle * (Mth.PI / 180.0F), up.x, up.y, up.z);
         Vector3f direction = player.getViewVector(1.0F).toVector3f().rotate(rotation);
-        arrow.shoot(direction.x, direction.y, direction.z, 4.5F, inaccuracy);
+        arrow.shoot(direction.x, direction.y, direction.z, HEAVY_PROJECTILE_VELOCITY, inaccuracy);
 
         if (rangedTraits != null) {
             for (WeaponTrait trait : rangedTraits) {
