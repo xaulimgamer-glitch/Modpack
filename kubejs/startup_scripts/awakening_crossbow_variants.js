@@ -1,10 +1,14 @@
 (function () {
   var MANIFEST = 'kubejs/awakening/crossbow_variants.json'
   var $ArrowItem = Java.loadClass('net.minecraft.world.item.ArrowItem')
+  var $MobType = Java.loadClass('net.minecraft.world.entity.MobType')
+  var $UGEntityTags = Java.loadClass('quek.undergarden.registry.UGTags$Entities')
+  var $ForgeEntityTags = Java.loadClass('net.minecraftforge.common.Tags$EntityTypes')
+  var $ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
-    if (!data || data.schema !== 3 || !data.families || !Array.isArray(data.materials)) {
+    if (!data || data.schema !== 4 || !data.families || !Array.isArray(data.materials)) {
       throw new Error('[Awakening/Crossbows] Unsupported manifest')
     }
     return data
@@ -22,12 +26,12 @@
     return stack != null && stack.getItem() instanceof $ArrowItem
   }
 
+  function chargeTicks(family, material) {
+    return Math.floor(family.charge_ticks * (material.charge_scale || 1.0))
+  }
+
   function model(familyId, material) {
-    var texture = material.id === 'wood'
-      ? familyId
-      : material.id === 'iron'
-        ? 'iron_' + familyId
-        : 'iron_' + familyId
+    var texture = material.id === 'wood' ? familyId : 'iron_' + familyId
     var base = 'awakening:item/crossbows/' + familyId
 
     return {
@@ -40,6 +44,50 @@
         { predicate: { charged: 1 }, model: base + '_arrow' }
       ]
     }
+  }
+
+  function damageTraitMatches(target, trait) {
+    if (!target || !trait) return false
+
+    if (trait.kind === 'mob_type') {
+      return trait.value === 'UNDEAD' && target.getMobType().equals($MobType.UNDEAD)
+    }
+
+    if (trait.kind === 'entity_tag') {
+      return trait.value === 'undergarden:rotspawn' && target.getType().is($UGEntityTags.ROTSPAWN)
+    }
+
+    if (trait.kind === 'namespace_non_boss') {
+      var key = $ForgeRegistries.ENTITY_TYPES.getKey(target.getType())
+      return key != null && key.getNamespace() === trait.value && !target.getType().is($ForgeEntityTags.BOSSES)
+    }
+
+    return false
+  }
+
+  function configureHitTraits(crossbow, material) {
+    if (!material.damage_trait && !material.post_hit_effect) return
+
+    crossbow.onArrowHit(function (arrow) {
+      if (material.damage_trait) {
+        arrow.hitEntity(function (event) {
+          var target = event.getEntity()
+          if (damageTraitMatches(target, material.damage_trait)) {
+            event.setDamage(event.getDamage() * material.damage_trait.multiplier)
+          }
+        })
+      }
+
+      if (material.post_hit_effect) {
+        arrow.postHurtEffect(function (target) {
+          target.potionEffects.add(
+            material.post_hit_effect.id,
+            material.post_hit_effect.duration,
+            material.post_hit_effect.amplifier
+          )
+        })
+      }
+    })
   }
 
   StartupEvents.registry('item', function (event) {
@@ -55,16 +103,20 @@
           .maxDamage(material.durability)
           .modelJson(model(familyId, material))
 
+        if (material.fire_resistant) item.fireResistant(true)
+
         item.crossbow(function (crossbow) {
           crossbow.modifyCrossbow(function (attributes) {
             attributes
-              .fullChargeTick(family.charge_ticks)
+              .fullChargeTick(chargeTicks(family, material))
               .arrowDamage(family.projectile_damage)
               .arrowSpeed(family.projectile_velocity)
               .ammo(isArrow)
               .ammoHeld(isArrow)
             attributes.enchantmentValue(material.enchantability)
           })
+
+          configureHitTraits(crossbow, material)
         })
       })
     })
