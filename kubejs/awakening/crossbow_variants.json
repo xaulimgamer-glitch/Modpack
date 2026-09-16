@@ -1,13 +1,41 @@
 {
-  "schema": 2,
+  "schema": 3,
   "notes": [
     "Crossbows are a ranged subsystem independent from forged weapon parts.",
     "The material matrix is derived from Heavy Crossbows registered by the installed Spartan Weaponry 3.2.1 and Spartan Undergarden 1.1.0 set, not from the bow matrix or the old forging matrix.",
     "Every material variant upgrades from the wooden version of the same family with normal, unheated material.",
     "Heavy Crossbow IDs remain native; Pistol Crossbow and Arbalest use Awakening IDs.",
     "All three families use arrows. Bolt progression is obsolete.",
-    "Family stats are deliberately separated from material stats: Pistol is faster/lighter, Heavy preserves Spartan baseline, and Arbalest is slower/harder-hitting."
+    "Family stats are derived from the audited Spartan Heavy Crossbow baseline; material stats preserve Heavy durability/enchantability.",
+    "For materials already represented by Awakening bows, the established Awakening tint palette is reused for visual consistency; the bow manifest is not used to determine the crossbow material matrix."
   ],
+  "balance_reference": {
+    "source": "Spartan Weaponry 3.2.1 HeavyCrossbowItem/Defaults",
+    "heavy": {
+      "charge_ticks": 25,
+      "projectile_damage": 4.0,
+      "projectile_velocity": 4.5,
+      "aim_ticks": 10,
+      "max_inaccuracy": 12.0
+    },
+    "family_scales": {
+      "pistol_crossbow": {
+        "charge": 0.6,
+        "damage": 0.75,
+        "velocity": 0.8
+      },
+      "heavy_crossbow": {
+        "charge": 1.0,
+        "damage": 1.0,
+        "velocity": 1.0
+      },
+      "arbalest": {
+        "charge": 1.4,
+        "damage": 1.25,
+        "velocity": 1.2
+      }
+    }
+  },
   "families": {
     "pistol_crossbow": {
       "suffix": "pistol_crossbow",
@@ -15,7 +43,7 @@
       "role": "fast",
       "charge_ticks": 15,
       "projectile_damage": 3.0,
-      "projectile_velocity": 3.5,
+      "projectile_velocity": 3.6,
       "source_texture": "mytextures/iron_pistol_crossbow.png"
     },
     "heavy_crossbow": {
@@ -25,7 +53,8 @@
       "charge_ticks": 25,
       "projectile_damage": 4.0,
       "projectile_velocity": 4.5,
-      "inaccuracy_ticks": 10,
+      "aim_ticks": 10,
+      "max_inaccuracy": 12.0,
       "source_charged_texture": "mytextures/heavy_crossbow_arrow.png"
     },
     "arbalest": {
@@ -34,7 +63,7 @@
       "role": "power",
       "charge_ticks": 35,
       "projectile_damage": 5.0,
-      "projectile_velocity": 5.5,
+      "projectile_velocity": 5.4,
       "source_texture": "mytextures/iron_arbalest.png"
     }
   },
