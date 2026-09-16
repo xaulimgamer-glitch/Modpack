@@ -2,7 +2,7 @@
   "schema": 1,
   "notes": [
     "Crossbows are a ranged subsystem independent from forged weapon parts.",
-    "The material matrix is derived from Heavy Crossbows present in the installed Spartan Weaponry/addon set, not from the bow matrix.",
+    "The material matrix is derived from Heavy Crossbows registered by the installed Spartan Weaponry/addon set, not from the bow matrix or the old forging matrix.",
     "Every material variant upgrades from the wooden version of the same family with normal, unheated material.",
     "Heavy Crossbow IDs remain native; Pistol Crossbow and Arbalest use Awakening IDs.",
     "All three families use arrows. Bolt progression is obsolete."
@@ -84,6 +84,20 @@
       "crafting_material": "minecraft:netherite_ingot"
     },
     {
+      "id": "tin",
+      "name": "Tin",
+      "heavy_output": "spartanweaponry:tin_heavy_crossbow",
+      "color": "BEBED8",
+      "crafting_material": "#forge:ingots/tin"
+    },
+    {
+      "id": "bronze",
+      "name": "Bronze",
+      "heavy_output": "spartanweaponry:bronze_heavy_crossbow",
+      "color": "B36D0A",
+      "crafting_material": "#forge:ingots/bronze"
+    },
+    {
       "id": "steel",
       "name": "Steel",
       "heavy_output": "spartanweaponry:steel_heavy_crossbow",
@@ -96,6 +110,55 @@
       "heavy_output": "spartanweaponry:silver_heavy_crossbow",
       "color": "F2F5F5",
       "crafting_material": "#forge:ingots/silver"
+    },
+    {
+      "id": "electrum",
+      "name": "Electrum",
+      "heavy_output": "spartanweaponry:electrum_heavy_crossbow",
+      "color": "D5BB4F",
+      "crafting_material": "#forge:ingots/electrum"
+    },
+    {
+      "id": "lead",
+      "name": "Lead",
+      "heavy_output": "spartanweaponry:lead_heavy_crossbow",
+      "color": "57617D",
+      "crafting_material": "#forge:ingots/lead"
+    },
+    {
+      "id": "nickel",
+      "name": "Nickel",
+      "heavy_output": "spartanweaponry:nickel_heavy_crossbow",
+      "color": "DBCF95",
+      "crafting_material": "#forge:ingots/nickel"
+    },
+    {
+      "id": "invar",
+      "name": "Invar",
+      "heavy_output": "spartanweaponry:invar_heavy_crossbow",
+      "color": "AEB6AB",
+      "crafting_material": "#forge:ingots/invar"
+    },
+    {
+      "id": "constantan",
+      "name": "Constantan",
+      "heavy_output": "spartanweaponry:constantan_heavy_crossbow",
+      "color": "B47C54",
+      "crafting_material": "#forge:ingots/constantan"
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "heavy_output": "spartanweaponry:platinum_heavy_crossbow",
+      "color": "69DAF0",
+      "crafting_material": "#forge:ingots/platinum"
+    },
+    {
+      "id": "aluminum",
+      "name": "Aluminum",
+      "heavy_output": "spartanweaponry:aluminum_heavy_crossbow",
+      "color": "AEBBBF",
+      "crafting_material": "#spartanweaponry:ingots/aluminum"
     },
     {
       "id": "cloggrum",
