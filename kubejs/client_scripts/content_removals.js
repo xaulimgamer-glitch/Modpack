@@ -104,6 +104,20 @@ const OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS = [
   'overgearedspartan:silver_longbow_limb'
 ]
 
+const SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION = [
+  'spartanweaponry:bolt',
+  'spartanweaponry:tipped_bolt',
+  'spartanweaponry:spectral_bolt',
+  'spartanweaponry:copper_bolt',
+  'spartanweaponry:tipped_copper_bolt',
+  'spartanweaponry:diamond_bolt',
+  'spartanweaponry:tipped_diamond_bolt',
+  'spartanweaponry:netherite_bolt',
+  'spartanweaponry:tipped_netherite_bolt'
+]
+
+const OVERGEAREDSPARTAN_HEAVY_CROSSBOW_LIMBS = Ingredient.of(/^overgearedspartan:.*_heavy_crossbow_limb$/)
+
 JEIEvents.hideItems(event => {
   event.hide('alexscaves:nuclear_furnace_component')
   event.hide('alexscaves:submarine')
@@ -111,6 +125,8 @@ JEIEvents.hideItems(event => {
   SWEM_REMOVED_PLAYER_GEAR.forEach(item => event.hide(item))
   ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => event.hide(item))
   OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => event.hide(item))
+  SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION.forEach(item => event.hide(item))
+  event.hide(OVERGEAREDSPARTAN_HEAVY_CROSSBOW_LIMBS)
 })
 
 JEIEvents.removeCategories(event => {
