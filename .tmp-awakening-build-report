@@ -1,0 +1,11 @@
+INITIAL_SHA=ceed78f3ab50b671db3b065e762e4a9a2e44a1ed
+JAVA_VERSION=openjdk version "17.0.20.1" 2026-08-18
+GRADLE_VERSION=8.8
+GRADLE_COMMAND=./gradlew clean build --no-daemon
+BUILD_RESULT=success
+FINAL_JAR_NAME=awakening-compat-0.1.0.jar
+FINAL_JAR_PATH=custom_mods/awakening-compat/build/libs/awakening-compat-0.1.0.jar
+FINAL_JAR_SHA256=9a5d3714563816f5d7d41dadac6dcbd3932aa204d2752e36d01b898fdd4c020d
+OLD_MOD_JARS=awakening-compat-0.1.0.jar
+NEW_MOD_JAR=awakening-compat-0.1.0.jar
+ACTIVE_COUNT=1
