@@ -128,6 +128,24 @@ const OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS = [
   'overgearedspartan:silver_longbow_limb'
 ]
 
+// Heavy Crossbow limbs are no longer a progression concept. Match the actual registered
+// OvergearedSpartan namespace instead of maintaining a guessed material list.
+const OVERGEAREDSPARTAN_HEAVY_CROSSBOW_LIMB_PATTERN = /^overgearedspartan:.*_heavy_crossbow_limb$/
+
+// Keep the external Spartan Weaponry registry entries for save compatibility, while retiring
+// every bolt currently exposed by the installed 3.2.1 #spartanweaponry:bolts tag.
+const SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION = [
+  'spartanweaponry:bolt',
+  'spartanweaponry:tipped_bolt',
+  'spartanweaponry:spectral_bolt',
+  'spartanweaponry:copper_bolt',
+  'spartanweaponry:tipped_copper_bolt',
+  'spartanweaponry:diamond_bolt',
+  'spartanweaponry:tipped_diamond_bolt',
+  'spartanweaponry:netherite_bolt',
+  'spartanweaponry:tipped_netherite_bolt'
+]
+
 ServerEvents.recipes(event => {
   // Alex's Caves Nuclear Furnace is assembled from this craftable component.
   // Removing every recipe that outputs the component makes the multiblock unobtainable in survival.
@@ -149,8 +167,20 @@ ServerEvents.recipes(event => {
   VANILLA_RANGED_WEAPONS_REMOVED_FROM_PROGRESSION.forEach(item => event.remove({ output: item }))
 
   // Keep native registry entries for save compatibility while removing both ways to create the
-  // obsolete parts and recipes/tooltype conversions that still consume them.
+  // obsolete Longbow parts and recipes/tooltype conversions that still consume them.
   OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => {
+    event.remove({ output: item })
+    event.remove({ input: item })
+  })
+
+  // Heavy Crossbow limbs are matched by registered namespace/path, so optional material integrations
+  // cannot silently re-enter progression when the installed OvergearedSpartan set changes.
+  const heavyCrossbowLimbs = Ingredient.of(OVERGEAREDSPARTAN_HEAVY_CROSSBOW_LIMB_PATTERN)
+  event.remove({ output: heavyCrossbowLimbs })
+  event.remove({ input: heavyCrossbowLimbs })
+
+  // Bolts remain registered but have no crafting, upgrading, recycling or compat recipe route.
+  SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION.forEach(item => {
     event.remove({ output: item })
     event.remove({ input: item })
   })
@@ -167,6 +197,19 @@ ServerEvents.tags('item', event => {
   OVERGEAREDSPARTAN_OBSOLETE_LONGBOW_LIMBS.forEach(item => {
     event.remove('overgeared:tool_parts', item)
   })
+
+  // Filter the resolved tool-parts tag rather than guessing which optional metal limbs exist.
+  event.get('overgeared:tool_parts').getObjectIds().forEach(item => {
+    const id = String(item)
+    if (OVERGEAREDSPARTAN_HEAVY_CROSSBOW_LIMB_PATTERN.test(id)) {
+      event.remove('overgeared:tool_parts', id)
+    }
+  })
+
+  // Heavy Crossbows now use arrows, so the legacy bolt tag is emptied without unregistering items.
+  SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION.forEach(item => {
+    event.remove('spartanweaponry:bolts', item)
+  })
 })
 
 // Artifacts also injects rewards through Forge loot modifiers (including Everlasting Beef).
@@ -175,6 +218,7 @@ ServerEvents.tags('item', event => {
 LootJS.modifiers(event => {
   const allLootTables = event.addLootTableModifier(/.*/)
   ARTIFACTS_REMOVED_FROM_PROGRESSION.forEach(item => allLootTables.removeLoot(item))
+  SPARTANWEAPONRY_BOLTS_REMOVED_FROM_PROGRESSION.forEach(item => allLootTables.removeLoot(item))
 })
 
 // Submarines are spawned directly by Abyssal Ruins and by the Enigmatic Engine,
