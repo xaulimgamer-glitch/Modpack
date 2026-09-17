@@ -316,6 +316,8 @@
           .displayName(materialName(material) + ' ' + family.name)
           .modelJson(model(familyId, material))
 
+        if (material.color) item.color(0, '#' + material.color)
+
         if (!material.unbreakable) {
           if (typeof material.durability !== 'number' || material.durability <= 0) {
             throw new Error('[Awakening/Crossbows] Invalid durability for ' + material.id)
