@@ -169,24 +169,24 @@
     if (owner == null) return
 
     if (target instanceof $EntityIceDragon) {
-      if (hasTrait(material, 'spartanfire:ice_dragon_damage_bonus_ii')) {
+      if (hasTrait(material, 'spartanfire:ice_dragon_damage_bonus_2')) {
         target.hurt(owner.level().damageSources().inFire(), 13.5)
-      } else if (hasTrait(material, 'spartanfire:ice_dragon_damage_bonus_i')) {
+      } else if (hasTrait(material, 'spartanfire:ice_dragon_damage_bonus_1')) {
         target.hurt(owner.level().damageSources().inFire(), 9.5)
       }
     }
 
     if (target instanceof $EntityFireDragon) {
-      if (hasTrait(material, 'spartanfire:fire_dragon_damage_bonus_ii')) {
+      if (hasTrait(material, 'spartanfire:fire_dragon_damage_bonus_2')) {
         target.hurt(owner.level().damageSources().drown(), 13.5)
-      } else if (hasTrait(material, 'spartanfire:fire_dragon_damage_bonus_i')) {
+      } else if (hasTrait(material, 'spartanfire:fire_dragon_damage_bonus_1')) {
         target.hurt(owner.level().damageSources().drown(), 9.5)
       }
     }
   }
 
   function applyMyrmexBonus(material, target, owner) {
-    if (!hasTrait(material, 'spartanfire:non_arthropod_damage_bonus') || owner == null) return
+    if (!hasTrait(material, 'spartanfire:non-arthropod_damage_bonus') || owner == null) return
 
     var allowed = true
     if (owner instanceof $Player && owner.attackAnim > 0.2) allowed = false
@@ -206,8 +206,8 @@
     }
 
     var flamedSeconds = 0
-    if (hasTrait(material, 'spartanfire:flamed_ii')) flamedSeconds = 15
-    else if (hasTrait(material, 'spartanfire:flamed_i')) flamedSeconds = 5
+    if (hasTrait(material, 'spartanfire:flamed_2')) flamedSeconds = 15
+    else if (hasTrait(material, 'spartanfire:flamed_1')) flamedSeconds = 5
 
     if (flamedSeconds > 0) {
       target.setSecondsOnFire(flamedSeconds)
@@ -217,8 +217,8 @@
 
   function applyIcedTraits(material, target) {
     var level = 0
-    if (hasTrait(material, 'spartanfire:iced_ii')) level = 2
-    else if (hasTrait(material, 'spartanfire:iced_i')) level = 1
+    if (hasTrait(material, 'spartanfire:iced_2')) level = 2
+    else if (hasTrait(material, 'spartanfire:iced_1')) level = 1
     if (level === 0) return
 
     var ticks = 100 + level * 100
@@ -323,6 +323,8 @@
             throw new Error('[Awakening/Crossbows] Invalid durability for ' + material.id)
           }
           item.maxDamage(material.durability)
+        } else {
+          item.unstackable()
         }
 
         if (material.fire_resistant) item.fireResistant(true)
