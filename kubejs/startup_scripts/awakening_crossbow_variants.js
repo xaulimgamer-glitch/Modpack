@@ -4,6 +4,7 @@
   var $ArrowItem = Java.loadClass('net.minecraft.world.item.ArrowItem')
   var $MobType = Java.loadClass('net.minecraft.world.entity.MobType')
   var $ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+  var $LivingEntity = Java.loadClass('net.minecraft.world.entity.LivingEntity')
   var $Player = Java.loadClass('net.minecraft.world.entity.player.Player')
   var $EntityType = Java.loadClass('net.minecraft.world.entity.EntityType')
   var $MobEffectInstance = Java.loadClass('net.minecraft.world.effect.MobEffectInstance')
@@ -150,7 +151,7 @@
 
   function applyPreHitTraits(material, hit) {
     var target = hit.getEntity()
-    if (target == null) return
+    if (!(target instanceof $LivingEntity)) return
 
     if (material.damage_trait && damageTraitMatches(target, material.damage_trait)) {
       hit.setDamage(hit.getDamage() * material.damage_trait.multiplier)
