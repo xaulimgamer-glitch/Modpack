@@ -1,291 +1,73 @@
 {
-  "schema": 4,
+  "schema": 5,
   "notes": [
     "Crossbows are a ranged subsystem independent from forged weapon parts.",
-    "The material matrix is derived from Heavy Crossbows registered by the installed Spartan Weaponry 3.2.1 and Spartan Undergarden 1.1.0 set, not from the bow matrix or the old forging matrix.",
-    "Every material variant upgrades from the wooden version of the same family with normal, unheated material.",
+    "The material matrix is derived from Heavy Crossbows registered by the installed Spartan Weaponry 3.2.1, Spartan Undergarden 1.1.0, Spartan Twilight 3.1.1, Spartan Fire 2.1.0 and Spartan Cataclysm 1.1.2 set.",
+    "Normal material upgrades use the wooden version of the same family plus two units of the material.",
+    "Materials whose native identity cannot be expressed unambiguously with one repeated ingredient use a base_material + catalyst recipe override; this is currently limited to elemental Dragon Bone and Myrmex Stinger variants.",
     "Heavy Crossbow IDs remain native; Pistol Crossbow and Arbalest use Awakening IDs.",
     "All three families use arrows. Bolt progression is obsolete.",
-    "Family stats are derived from the audited Spartan Heavy Crossbow baseline; material stats preserve Heavy durability/enchantability and material ranged traits.",
+    "Family stats are derived from the audited Spartan Heavy Crossbow baseline; material durability/enchantability comes from the material tiers used by the installed addons.",
+    "unbreakable materials intentionally omit max durability on Awakening Pistol Crossbow and Arbalest.",
+    "special_traits records audited native traits even where an Awakening implementation still requires a separately verified RangedJS mapping.",
     "For materials already represented by Awakening bows, the established Awakening tint palette is reused for visual consistency; the bow manifest is not used to determine the crossbow material matrix."
   ],
   "balance_reference": {
     "source": "Spartan Weaponry 3.2.1 HeavyCrossbowItem/Defaults",
-    "heavy": {
-      "charge_ticks": 25,
-      "projectile_damage": 4.0,
-      "projectile_velocity": 4.5,
-      "aim_ticks": 10,
-      "max_inaccuracy": 12.0
-    },
+    "heavy": {"charge_ticks": 25, "projectile_damage": 4.0, "projectile_velocity": 4.5, "aim_ticks": 10, "max_inaccuracy": 12.0},
     "family_scales": {
-      "pistol_crossbow": {
-        "charge": 0.6,
-        "damage": 0.75,
-        "velocity": 0.8
-      },
-      "heavy_crossbow": {
-        "charge": 1.0,
-        "damage": 1.0,
-        "velocity": 1.0
-      },
-      "arbalest": {
-        "charge": 1.4,
-        "damage": 1.25,
-        "velocity": 1.2
-      }
+      "pistol_crossbow": {"charge": 0.6, "damage": 0.75, "velocity": 0.8},
+      "heavy_crossbow": {"charge": 1.0, "damage": 1.0, "velocity": 1.0},
+      "arbalest": {"charge": 1.4, "damage": 1.25, "velocity": 1.2}
     }
   },
   "families": {
-    "pistol_crossbow": {
-      "suffix": "pistol_crossbow",
-      "name": "Pistol Crossbow",
-      "role": "fast",
-      "charge_ticks": 15,
-      "projectile_damage": 3.0,
-      "projectile_velocity": 3.6,
-      "source_texture": "mytextures/iron_pistol_crossbow.png"
-    },
-    "heavy_crossbow": {
-      "suffix": "heavy_crossbow",
-      "name": "Heavy Crossbow",
-      "role": "reference",
-      "charge_ticks": 25,
-      "projectile_damage": 4.0,
-      "projectile_velocity": 4.5,
-      "aim_ticks": 10,
-      "max_inaccuracy": 12.0,
-      "source_charged_texture": "mytextures/heavy_crossbow_arrow.png"
-    },
-    "arbalest": {
-      "suffix": "arbalest",
-      "name": "Arbalest",
-      "role": "power",
-      "charge_ticks": 35,
-      "projectile_damage": 5.0,
-      "projectile_velocity": 5.4,
-      "source_texture": "mytextures/iron_arbalest.png"
-    }
+    "pistol_crossbow": {"suffix": "pistol_crossbow", "name": "Pistol Crossbow", "role": "fast", "charge_ticks": 15, "projectile_damage": 3.0, "projectile_velocity": 3.6, "source_texture": "mytextures/iron_pistol_crossbow.png"},
+    "heavy_crossbow": {"suffix": "heavy_crossbow", "name": "Heavy Crossbow", "role": "reference", "charge_ticks": 25, "projectile_damage": 4.0, "projectile_velocity": 4.5, "aim_ticks": 10, "max_inaccuracy": 12.0, "source_charged_texture": "mytextures/heavy_crossbow_arrow.png"},
+    "arbalest": {"suffix": "arbalest", "name": "Arbalest", "role": "power", "charge_ticks": 35, "projectile_damage": 5.0, "projectile_velocity": 5.4, "source_texture": "mytextures/iron_arbalest.png"}
   },
   "materials": [
-    {
-      "id": "wood",
-      "name": "Wood",
-      "heavy_output": "spartanweaponry:wooden_heavy_crossbow",
-      "durability": 59,
-      "enchantability": 15
-    },
-    {
-      "id": "leather",
-      "name": "Leather",
-      "heavy_output": "spartanweaponry:leather_heavy_crossbow",
-      "color": "B97845",
-      "crafting_material": "minecraft:leather",
-      "durability": 128,
-      "enchantability": 5
-    },
-    {
-      "id": "copper",
-      "name": "Copper",
-      "heavy_output": "spartanweaponry:copper_heavy_crossbow",
-      "color": "E2835D",
-      "crafting_material": "minecraft:copper_ingot",
-      "durability": 200,
-      "enchantability": 8
-    },
-    {
-      "id": "iron",
-      "name": "Iron",
-      "heavy_output": "spartanweaponry:iron_heavy_crossbow",
-      "color": "D0D7DC",
-      "crafting_material": "minecraft:iron_ingot",
-      "durability": 250,
-      "enchantability": 14
-    },
-    {
-      "id": "gold",
-      "name": "Gold",
-      "heavy_output": "spartanweaponry:golden_heavy_crossbow",
-      "color": "FFE26A",
-      "crafting_material": "minecraft:gold_ingot",
-      "durability": 32,
-      "enchantability": 22
-    },
-    {
-      "id": "diamond",
-      "name": "Diamond",
-      "heavy_output": "spartanweaponry:diamond_heavy_crossbow",
-      "color": "91F7E8",
-      "crafting_material": "minecraft:diamond",
-      "durability": 1561,
-      "enchantability": 10
-    },
-    {
-      "id": "netherite",
-      "name": "Netherite",
-      "heavy_output": "spartanweaponry:netherite_heavy_crossbow",
-      "color": "9B8790",
-      "crafting_material": "minecraft:netherite_ingot",
-      "durability": 2031,
-      "enchantability": 15,
-      "fire_resistant": true
-    },
-    {
-      "id": "tin",
-      "name": "Tin",
-      "heavy_output": "spartanweaponry:tin_heavy_crossbow",
-      "color": "BEBED8",
-      "crafting_material": "#forge:ingots/tin",
-      "durability": 180,
-      "enchantability": 6
-    },
-    {
-      "id": "bronze",
-      "name": "Bronze",
-      "heavy_output": "spartanweaponry:bronze_heavy_crossbow",
-      "color": "B36D0A",
-      "crafting_material": "#forge:ingots/bronze",
-      "durability": 320,
-      "enchantability": 12
-    },
-    {
-      "id": "steel",
-      "name": "Steel",
-      "heavy_output": "spartanweaponry:steel_heavy_crossbow",
-      "color": "C2D0D7",
-      "crafting_material": "#forge:ingots/steel",
-      "durability": 480,
-      "enchantability": 14
-    },
-    {
-      "id": "silver",
-      "name": "Silver",
-      "heavy_output": "spartanweaponry:silver_heavy_crossbow",
-      "color": "F2F5F5",
-      "crafting_material": "#forge:ingots/silver",
-      "durability": 48,
-      "enchantability": 16,
-      "damage_trait": {
-        "kind": "mob_type",
-        "value": "UNDEAD",
-        "multiplier": 1.5
-      }
-    },
-    {
-      "id": "electrum",
-      "name": "Electrum",
-      "heavy_output": "spartanweaponry:electrum_heavy_crossbow",
-      "color": "D5BB4F",
-      "crafting_material": "#forge:ingots/electrum",
-      "durability": 180,
-      "enchantability": 8
-    },
-    {
-      "id": "lead",
-      "name": "Lead",
-      "heavy_output": "spartanweaponry:lead_heavy_crossbow",
-      "color": "57617D",
-      "crafting_material": "#forge:ingots/lead",
-      "durability": 240,
-      "enchantability": 5,
-      "charge_scale": 1.2
-    },
-    {
-      "id": "nickel",
-      "name": "Nickel",
-      "heavy_output": "spartanweaponry:nickel_heavy_crossbow",
-      "color": "DBCF95",
-      "crafting_material": "#forge:ingots/nickel",
-      "durability": 200,
-      "enchantability": 6
-    },
-    {
-      "id": "invar",
-      "name": "Invar",
-      "heavy_output": "spartanweaponry:invar_heavy_crossbow",
-      "color": "AEB6AB",
-      "crafting_material": "#forge:ingots/invar",
-      "durability": 440,
-      "enchantability": 12
-    },
-    {
-      "id": "constantan",
-      "name": "Constantan",
-      "heavy_output": "spartanweaponry:constantan_heavy_crossbow",
-      "color": "B47C54",
-      "crafting_material": "#forge:ingots/constantan",
-      "durability": 300,
-      "enchantability": 7
-    },
-    {
-      "id": "platinum",
-      "name": "Platinum",
-      "heavy_output": "spartanweaponry:platinum_heavy_crossbow",
-      "color": "69DAF0",
-      "crafting_material": "#forge:ingots/platinum",
-      "durability": 1024,
-      "enchantability": 18
-    },
-    {
-      "id": "aluminum",
-      "name": "Aluminum",
-      "heavy_output": "spartanweaponry:aluminum_heavy_crossbow",
-      "color": "AEBBBF",
-      "crafting_material": "#spartanweaponry:ingots/aluminum",
-      "durability": 400,
-      "enchantability": 7,
-      "charge_scale": 0.8
-    },
-    {
-      "id": "cloggrum",
-      "name": "Cloggrum",
-      "heavy_output": "spartanundergarden:cloggrum_heavy_crossbow",
-      "color": "82AAA1",
-      "crafting_material": "undergarden:cloggrum_ingot",
-      "durability": 286,
-      "enchantability": 8
-    },
-    {
-      "id": "froststeel",
-      "name": "Froststeel",
-      "heavy_output": "spartanundergarden:froststeel_heavy_crossbow",
-      "color": "CAE9F4",
-      "crafting_material": "undergarden:froststeel_ingot",
-      "durability": 575,
-      "enchantability": 20,
-      "post_hit_effect": {
-        "id": "undergarden:chilly",
-        "duration": 600,
-        "amplifier": 2
-      }
-    },
-    {
-      "id": "utherium",
-      "name": "Utherium",
-      "heavy_output": "spartanundergarden:utherium_heavy_crossbow",
-      "color": "C49AE3",
-      "crafting_material": "undergarden:utherium_crystal",
-      "durability": 1279,
-      "enchantability": 17,
-      "damage_trait": {
-        "kind": "entity_tag",
-        "value": "undergarden:rotspawn",
-        "multiplier": 1.5
-      }
-    },
-    {
-      "id": "forgotten",
-      "name": "Forgotten",
-      "heavy_output": "spartanundergarden:forgotten_heavy_crossbow",
-      "color": "A0AAA7",
-      "crafting_material": "#forge:ingots/forgotten_metal",
-      "durability": 1876,
-      "enchantability": 2,
-      "damage_trait": {
-        "kind": "namespace_non_boss",
-        "value": "undergarden",
-        "multiplier": 1.5
-      }
-    }
+    {"id":"wood","name":"Wood","heavy_output":"spartanweaponry:wooden_heavy_crossbow","durability":59,"enchantability":15},
+    {"id":"leather","name":"Leather","heavy_output":"spartanweaponry:leather_heavy_crossbow","color":"B97845","crafting_material":"minecraft:leather","durability":128,"enchantability":5},
+    {"id":"copper","name":"Copper","heavy_output":"spartanweaponry:copper_heavy_crossbow","color":"E2835D","crafting_material":"minecraft:copper_ingot","durability":200,"enchantability":8},
+    {"id":"iron","name":"Iron","heavy_output":"spartanweaponry:iron_heavy_crossbow","color":"D0D7DC","crafting_material":"minecraft:iron_ingot","durability":250,"enchantability":14},
+    {"id":"gold","name":"Gold","heavy_output":"spartanweaponry:golden_heavy_crossbow","color":"FFE26A","crafting_material":"minecraft:gold_ingot","durability":32,"enchantability":22},
+    {"id":"diamond","name":"Diamond","heavy_output":"spartanweaponry:diamond_heavy_crossbow","color":"91F7E8","crafting_material":"minecraft:diamond","durability":1561,"enchantability":10},
+    {"id":"netherite","name":"Netherite","heavy_output":"spartanweaponry:netherite_heavy_crossbow","color":"9B8790","crafting_material":"minecraft:netherite_ingot","durability":2031,"enchantability":15,"fire_resistant":true},
+    {"id":"tin","name":"Tin","heavy_output":"spartanweaponry:tin_heavy_crossbow","color":"BEBED8","crafting_material":"#forge:ingots/tin","durability":180,"enchantability":6},
+    {"id":"bronze","name":"Bronze","heavy_output":"spartanweaponry:bronze_heavy_crossbow","color":"B36D0A","crafting_material":"#forge:ingots/bronze","durability":320,"enchantability":12},
+    {"id":"steel","name":"Steel","heavy_output":"spartanweaponry:steel_heavy_crossbow","color":"C2D0D7","crafting_material":"#forge:ingots/steel","durability":480,"enchantability":14},
+    {"id":"silver","name":"Silver","heavy_output":"spartanweaponry:silver_heavy_crossbow","color":"F2F5F5","crafting_material":"#forge:ingots/silver","durability":48,"enchantability":16,"damage_trait":{"kind":"mob_type","value":"UNDEAD","multiplier":1.5}},
+    {"id":"electrum","name":"Electrum","heavy_output":"spartanweaponry:electrum_heavy_crossbow","color":"D5BB4F","crafting_material":"#forge:ingots/electrum","durability":180,"enchantability":8},
+    {"id":"lead","name":"Lead","heavy_output":"spartanweaponry:lead_heavy_crossbow","color":"57617D","crafting_material":"#forge:ingots/lead","durability":240,"enchantability":5,"charge_scale":1.2},
+    {"id":"nickel","name":"Nickel","heavy_output":"spartanweaponry:nickel_heavy_crossbow","color":"DBCF95","crafting_material":"#forge:ingots/nickel","durability":200,"enchantability":6},
+    {"id":"invar","name":"Invar","heavy_output":"spartanweaponry:invar_heavy_crossbow","color":"AEB6AB","crafting_material":"#forge:ingots/invar","durability":440,"enchantability":12},
+    {"id":"constantan","name":"Constantan","heavy_output":"spartanweaponry:constantan_heavy_crossbow","color":"B47C54","crafting_material":"#forge:ingots/constantan","durability":300,"enchantability":7},
+    {"id":"platinum","name":"Platinum","heavy_output":"spartanweaponry:platinum_heavy_crossbow","color":"69DAF0","crafting_material":"#forge:ingots/platinum","durability":1024,"enchantability":18},
+    {"id":"aluminum","name":"Aluminum","heavy_output":"spartanweaponry:aluminum_heavy_crossbow","color":"AEBBBF","crafting_material":"#spartanweaponry:ingots/aluminum","durability":400,"enchantability":7,"charge_scale":0.8},
+    {"id":"cloggrum","name":"Cloggrum","heavy_output":"spartanundergarden:cloggrum_heavy_crossbow","color":"82AAA1","crafting_material":"undergarden:cloggrum_ingot","durability":286,"enchantability":8},
+    {"id":"froststeel","name":"Froststeel","heavy_output":"spartanundergarden:froststeel_heavy_crossbow","color":"CAE9F4","crafting_material":"undergarden:froststeel_ingot","durability":575,"enchantability":20,"post_hit_effect":{"id":"undergarden:chilly","duration":600,"amplifier":2}},
+    {"id":"utherium","name":"Utherium","heavy_output":"spartanundergarden:utherium_heavy_crossbow","color":"C49AE3","crafting_material":"undergarden:utherium_crystal","durability":1279,"enchantability":17,"damage_trait":{"kind":"entity_tag","value":"undergarden:rotspawn","multiplier":1.5}},
+    {"id":"forgotten","name":"Forgotten","heavy_output":"spartanundergarden:forgotten_heavy_crossbow","color":"A0AAA7","crafting_material":"#forge:ingots/forgotten_metal","durability":1876,"enchantability":2,"damage_trait":{"kind":"namespace_non_boss","value":"undergarden","multiplier":1.5}},
+    {"id":"ironwood","name":"Ironwood","heavy_output":"spartantwilight:ironwood_heavy_crossbow","crafting_material":"#forge:ingots/ironwood","durability":512,"enchantability":25},
+    {"id":"steeleaf","name":"Steeleaf","heavy_output":"spartantwilight:steeleaf_heavy_crossbow","crafting_material":"#forge:ingots/steeleaf","durability":131,"enchantability":9},
+    {"id":"knightmetal","name":"Knightmetal","heavy_output":"spartantwilight:knightmetal_heavy_crossbow","crafting_material":"#forge:ingots/knightmetal","durability":512,"enchantability":8,"special_traits":["spartantwilight:armored_damage_bonus"]},
+    {"id":"fiery","name":"Fiery","heavy_output":"spartantwilight:fiery_heavy_crossbow","crafting_material":"#forge:ingots/fiery","durability":1024,"enchantability":10,"fire_resistant":true,"special_traits":["spartanweaponry:fireproof","spartantwilight:blazing"]},
+    {"id":"dragon_bone","name":"Dragon Bone","heavy_output":"spartanfire:dragon_bone_heavy_crossbow","crafting_material":"#forge:bones/dragon","durability":1660,"enchantability":22},
+    {"id":"flamed_dragon_bone","name":"Flamed Dragon Bone","heavy_output":"spartanfire:flamed_dragon_bone_heavy_crossbow","recipe":{"base_material":"dragon_bone","catalyst":"iceandfire:fire_dragon_blood"},"durability":2000,"enchantability":22,"special_traits":["spartanfire:ice_dragon_damage_bonus_ii","spartanfire:flamed_i"]},
+    {"id":"iced_dragon_bone","name":"Iced Dragon Bone","heavy_output":"spartanfire:iced_dragon_bone_heavy_crossbow","recipe":{"base_material":"dragon_bone","catalyst":"iceandfire:ice_dragon_blood"},"durability":2000,"enchantability":22,"special_traits":["spartanfire:fire_dragon_damage_bonus_ii","spartanfire:iced_i"]},
+    {"id":"lightning_dragon_bone","name":"Lightning Dragon Bone","heavy_output":"spartanfire:lightning_dragon_bone_heavy_crossbow","recipe":{"base_material":"dragon_bone","catalyst":"iceandfire:lightning_dragon_blood"},"durability":2000,"enchantability":22,"special_traits":["spartanfire:ice_dragon_damage_bonus_i","spartanfire:fire_dragon_damage_bonus_i","spartanfire:shocked"]},
+    {"id":"desert_myrmex_chitin","name":"Desert Myrmex Chitin","heavy_output":"spartanfire:desert_myrmex_chitin_heavy_crossbow","crafting_material":"#forge:chitin_desert","durability":600,"enchantability":8,"special_traits":["spartanfire:non_arthropod_damage_bonus"]},
+    {"id":"desert_myrmex_stinger","name":"Desert Myrmex Stinger","heavy_output":"spartanfire:desert_myrmex_stinger_heavy_crossbow","recipe":{"base_material":"desert_myrmex_chitin","catalyst":"iceandfire:myrmex_stinger"},"durability":600,"enchantability":8,"special_traits":["spartanfire:non_arthropod_damage_bonus","spartanfire:poisoned"]},
+    {"id":"jungle_myrmex_chitin","name":"Jungle Myrmex Chitin","heavy_output":"spartanfire:jungle_myrmex_chitin_heavy_crossbow","crafting_material":"#forge:chitin_jungle","durability":600,"enchantability":8,"special_traits":["spartanfire:non_arthropod_damage_bonus"]},
+    {"id":"jungle_myrmex_stinger","name":"Jungle Myrmex Stinger","heavy_output":"spartanfire:jungle_myrmex_stinger_heavy_crossbow","recipe":{"base_material":"jungle_myrmex_chitin","catalyst":"iceandfire:myrmex_stinger"},"durability":600,"enchantability":8,"special_traits":["spartanfire:non_arthropod_damage_bonus","spartanfire:poisoned"]},
+    {"id":"fire_dragonsteel","name":"Fire Dragonsteel","heavy_output":"spartanfire:fire_dragonsteel_heavy_crossbow","crafting_material":"#forge:ingots/fire_dragonsteel","durability":8000,"enchantability":10,"special_traits":["spartanfire:flamed_ii"]},
+    {"id":"ice_dragonsteel","name":"Ice Dragonsteel","heavy_output":"spartanfire:ice_dragonsteel_heavy_crossbow","crafting_material":"#forge:ingots/ice_dragonsteel","durability":8000,"enchantability":10,"special_traits":["spartanfire:iced_ii"]},
+    {"id":"lightning_dragonsteel","name":"Lightning Dragonsteel","heavy_output":"spartanfire:lightning_dragonsteel_heavy_crossbow","crafting_material":"#forge:ingots/lightning_dragonsteel","durability":8000,"enchantability":10,"special_traits":["spartanfire:shocked"]},
+    {"id":"ancient_metal","name":"Ancient Metal","heavy_output":"spartancataclysm:ancient_metal_heavy_crossbow","crafting_material":"#spartancataclysm:ancient_metal_ingots","durability":750,"enchantability":25},
+    {"id":"black_steel","name":"Black Steel","heavy_output":"spartancataclysm:black_steel_heavy_crossbow","crafting_material":"#spartancataclysm:black_steel_ingots","durability":750,"enchantability":25},
+    {"id":"cursium","name":"Cursium","heavy_output":"spartancataclysm:cursium_heavy_crossbow","crafting_material":"#spartancataclysm:cursium_ingots","enchantability":20,"unbreakable":true,"fire_resistant":true,"special_traits":["spartancataclysm:accursed_rage","spartanweaponry:fireproof","spartancataclysm:unbreakable"]},
+    {"id":"ignitium","name":"Ignitium","heavy_output":"spartancataclysm:ignitium_heavy_crossbow","crafting_material":"#spartancataclysm:ignitium_ingots","enchantability":20,"unbreakable":true,"fire_resistant":true,"special_traits":["spartancataclysm:blazing_brand","spartanweaponry:fireproof","spartancataclysm:unbreakable"]},
+    {"id":"witherite","name":"Witherite","heavy_output":"spartancataclysm:witherite_heavy_crossbow","crafting_material":"#spartancataclysm:witherite_ingots","enchantability":18,"unbreakable":true,"fire_resistant":true,"special_traits":["spartancataclysm:mecha_smite","spartancataclysm:mecha_pulse","spartanweaponry:fireproof","spartancataclysm:unbreakable"]}
   ]
 }
