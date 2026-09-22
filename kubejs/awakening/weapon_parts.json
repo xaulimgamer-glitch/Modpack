@@ -421,66 +421,6 @@
       },
       "source": "overgearedspartan:iron/parts/halberd"
     },
-    "heavy_crossbow": {
-      "suffix": "heavy_crossbow_limb",
-      "texture": "overgearedspartan:item/iron_heavy_crossbow_limb",
-      "forging": {
-        "type": "overgeared:forging",
-        "category": "misc",
-        "hammering": 3,
-        "has_quality": false,
-        "key": {
-          "X": {
-            "item": "overgeared:heated_iron_ingot"
-          },
-          "x": {
-            "item": "overgearedspartan:heated_iron_nugget"
-          }
-        },
-        "need_quenching": false,
-        "needs_minigame": false,
-        "pattern": [
-          "XXX",
-          " x "
-        ],
-        "quality_difficulty": "none",
-        "result": {
-          "item": "overgearedspartan:iron_heavy_crossbow_limb"
-        },
-        "show_notification": true,
-        "tier": "stone"
-      },
-      "assembly": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "xll",
-          "l#s",
-          "lst"
-        ],
-        "key": {
-          "x": {
-            "item": "overgearedspartan:iron_heavy_crossbow_limb"
-          },
-          "#": {
-            "tag": "minecraft:planks"
-          },
-          "l": {
-            "item": "minecraft:stick"
-          },
-          "s": {
-            "tag": "forge:string"
-          },
-          "t": {
-            "item": "minecraft:tripwire_hook"
-          }
-        },
-        "result": {
-          "item": "spartanweaponry:iron_heavy_crossbow"
-        },
-        "show_notification": true
-      },
-      "source": "overgearedspartan:iron/parts/heavy_crossbow"
-    },
     "javelin": {
       "suffix": "javelin_tip",
       "texture": "overgearedspartan:item/iron_javelin_tip",
@@ -1559,49 +1499,6 @@
           }
         },
         {
-          "type": "heavy_crossbow",
-          "part": "awakening:cloggrum_heavy_crossbow_limb",
-          "source_recipe": "spartanundergarden:cloggrum_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/cloggrum"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanweaponry:handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartanundergarden:cloggrum_heavy_crossbow"
-            }
-          }
-        },
-        {
           "type": "javelin",
           "part": "awakening:cloggrum_javelin_tip",
           "source_recipe": "spartanundergarden:cloggrum_javelin",
@@ -2396,49 +2293,6 @@
             ],
             "result": {
               "item": "spartanundergarden:froststeel_halberd"
-            }
-          }
-        },
-        {
-          "type": "heavy_crossbow",
-          "part": "awakening:froststeel_heavy_crossbow_limb",
-          "source_recipe": "spartanundergarden:froststeel_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/froststeel"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanweaponry:handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartanundergarden:froststeel_heavy_crossbow"
             }
           }
         },
@@ -3253,49 +3107,6 @@
               "type": "minecraft:item_nbt",
               "item": "spartantwilight:ironwood_halberd",
               "nbt": "{Enchantments:[{id:\"minecraft:knockback\",lvl:1s}]}"
-            }
-          }
-        },
-        {
-          "type": "heavy_crossbow",
-          "part": "awakening:ironwood_heavy_crossbow_limb",
-          "source_recipe": "spartantwilight:ironwood_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/ironwood"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanweaponry:handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartantwilight:ironwood_heavy_crossbow"
             }
           }
         },
@@ -4128,49 +3939,6 @@
           }
         },
         {
-          "type": "heavy_crossbow",
-          "part": "awakening:fiery_heavy_crossbow_limb",
-          "source_recipe": "spartantwilight:fiery_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/fiery"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "minecraft:blaze_rod"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartantwilight:fiery_heavy_crossbow"
-            }
-          }
-        },
-        {
           "type": "javelin",
           "part": "awakening:fiery_javelin_tip",
           "source_recipe": "spartantwilight:fiery_javelin",
@@ -4972,49 +4740,6 @@
             ],
             "result": {
               "item": "spartancataclysm:ancient_metal_halberd"
-            }
-          }
-        },
-        {
-          "type": "heavy_crossbow",
-          "part": "awakening:ancient_metal_heavy_crossbow_limb",
-          "source_recipe": "spartancataclysm:ancient_metal_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "spartancataclysm:ancient_metal_ingots"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanweaponry:handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartancataclysm:ancient_metal_heavy_crossbow"
             }
           }
         },
@@ -5838,49 +5563,6 @@
           }
         },
         {
-          "type": "heavy_crossbow",
-          "part": "awakening:witherite_heavy_crossbow_limb",
-          "source_recipe": "spartancataclysm:witherite_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "spartancataclysm:witherite_ingots"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanweaponry:handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartancataclysm:witherite_heavy_crossbow"
-            }
-          }
-        },
-        {
           "type": "javelin",
           "part": "awakening:witherite_javelin_tip",
           "source_recipe": "spartancataclysm:witherite_javelin",
@@ -6693,49 +6375,6 @@
           }
         },
         {
-          "type": "heavy_crossbow",
-          "part": "awakening:fire_dragonsteel_heavy_crossbow_limb",
-          "source_recipe": "spartanfire:fire_dragonsteel_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/fire_dragonsteel"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanfire:witherbone_handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartanfire:fire_dragonsteel_heavy_crossbow"
-            }
-          }
-        },
-        {
           "type": "javelin",
           "part": "awakening:fire_dragonsteel_javelin_tip",
           "source_recipe": "spartanfire:fire_dragonsteel_javelin",
@@ -7534,49 +7173,6 @@
           }
         },
         {
-          "type": "heavy_crossbow",
-          "part": "awakening:ice_dragonsteel_heavy_crossbow_limb",
-          "source_recipe": "spartanfire:ice_dragonsteel_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/ice_dragonsteel"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanfire:witherbone_handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartanfire:ice_dragonsteel_heavy_crossbow"
-            }
-          }
-        },
-        {
           "type": "javelin",
           "part": "awakening:ice_dragonsteel_javelin_tip",
           "source_recipe": "spartanfire:ice_dragonsteel_javelin",
@@ -8371,49 +7967,6 @@
             ],
             "result": {
               "item": "spartanfire:lightning_dragonsteel_halberd"
-            }
-          }
-        },
-        {
-          "type": "heavy_crossbow",
-          "part": "awakening:lightning_dragonsteel_heavy_crossbow_limb",
-          "source_recipe": "spartanfire:lightning_dragonsteel_heavy_crossbow",
-          "material_key": "#",
-          "original": {
-            "type": "minecraft:crafting_shaped",
-            "conditions": [
-              {
-                "type": "spartanweaponry:type_disabled",
-                "disabled": [
-                  "heavy_crossbow"
-                ]
-              }
-            ],
-            "group": "spartanweaponry:heavy_crossbow",
-            "key": {
-              "#": {
-                "tag": "forge:ingots/lightning_dragonsteel"
-              },
-              "D": {
-                "item": "minecraft:bow"
-              },
-              "H": {
-                "item": "minecraft:tripwire_hook"
-              },
-              "P": {
-                "tag": "minecraft:planks"
-              },
-              "|": {
-                "item": "spartanfire:witherbone_handle"
-              }
-            },
-            "pattern": [
-              "#D#",
-              "PHP",
-              " | "
-            ],
-            "result": {
-              "item": "spartanfire:lightning_dragonsteel_heavy_crossbow"
             }
           }
         },

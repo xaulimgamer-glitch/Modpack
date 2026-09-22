@@ -1,0 +1,6 @@
+{
+  "parent": "spartanweaponry:item/base/heavy_crossbow_loaded",
+  "textures": {
+    "layer1": "awakening:item/crossbows/heavy_crossbow_arrow_overlay"
+  }
+}

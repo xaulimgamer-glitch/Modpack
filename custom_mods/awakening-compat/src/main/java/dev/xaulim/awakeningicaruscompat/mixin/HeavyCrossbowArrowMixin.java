@@ -61,7 +61,7 @@ public abstract class HeavyCrossbowArrowMixin {
         if (!(living instanceof Player player)) return;
 
         HeavyCrossbowItem self = (HeavyCrossbowItem) (Object) this;
-        boolean creativeOrInfinite = player.getAbilities().instabuild
+        boolean creativeOrInfinityEnchantment = player.getAbilities().instabuild
                 || crossbow.getEnchantmentLevel(Enchantments.INFINITY_ARROWS) > 0;
 
         if (self.getLoadProgress(crossbow, living) == 1.0F) {
@@ -95,7 +95,7 @@ public abstract class HeavyCrossbowArrowMixin {
         int usedTicks = self.getUseDuration(crossbow) - timeLeft;
 
         if (usedTicks < 0 || !crossbow.getOrCreateTag().getBoolean(HeavyCrossbowItem.NBT_CHARGED)) return;
-        if (storedArrow.isEmpty() && !creativeOrInfinite) return;
+        if (storedArrow.isEmpty() && !creativeOrInfinityEnchantment) return;
         if (storedArrow.isEmpty()) storedArrow = new ItemStack(Items.ARROW);
 
         if (!level.isClientSide) {
@@ -106,10 +106,13 @@ public abstract class HeavyCrossbowArrowMixin {
                     : HEAVY_MAX_INACCURACY * ((float) remainingInaccuracyTicks / (float) aimTicks);
 
             int count = Math.max(1, storedArrow.getCount());
-            spawnArrow(crossbow, storedArrow, level, player, creativeOrInfinite, inaccuracy, 0.0F);
+            boolean projectileInfinite = player.getAbilities().instabuild
+                    || (storedArrow.getItem() instanceof ArrowItem arrowItem
+                    && arrowItem.isInfinite(storedArrow, crossbow, player));
+            spawnArrow(crossbow, storedArrow, level, player, projectileInfinite, inaccuracy, 0.0F);
             if (count > 1) {
-                spawnArrow(crossbow, storedArrow, level, player, creativeOrInfinite, inaccuracy, -10.0F);
-                spawnArrow(crossbow, storedArrow, level, player, creativeOrInfinite, inaccuracy, 10.0F);
+                spawnArrow(crossbow, storedArrow, level, player, projectileInfinite, inaccuracy, -10.0F);
+                spawnArrow(crossbow, storedArrow, level, player, projectileInfinite, inaccuracy, 10.0F);
             }
 
             int durabilityDamage = count > 1 ? 3 : 1;

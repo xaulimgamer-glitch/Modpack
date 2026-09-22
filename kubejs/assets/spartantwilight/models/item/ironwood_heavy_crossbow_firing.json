@@ -1,0 +1,6 @@
+{
+  "parent": "awakening:item/crossbows/heavy_crossbow_firing_arrow",
+  "textures": {
+    "layer0": "spartantwilight:item/ironwood_heavy_crossbow_pulling_2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "awakening:item/crossbows/heavy_crossbow_loaded_arrow",
+  "textures": {
+    "layer0": "spartanweaponry:item/leather_heavy_crossbow_pulling_2"
+  }
+}

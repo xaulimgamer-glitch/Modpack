@@ -6,13 +6,13 @@ const path = require('node:path')
 const root = path.resolve(__dirname, '..')
 const clone = value => JSON.parse(JSON.stringify(value))
 const full = JSON.parse(fs.readFileSync(path.join(root, 'kubejs/awakening/weapon_parts.json')))
-const prototypeTypes = ['dagger', 'pike', 'quarterstaff', 'boomerang', 'longbow', 'heavy_crossbow']
+const prototypeTypes = ['dagger', 'pike', 'quarterstaff', 'boomerang', 'longbow']
 const prototype = clone(full)
 prototype.materials = prototype.materials.filter(m => m.id === 'cloggrum')
 prototype.materials[0].weapons = prototype.materials[0].weapons.filter(w => prototypeTypes.includes(w.type))
 
 function isSeparatedRangedType(type) {
-  return type === 'longbow' || type === 'heavy_crossbow'
+  return type === 'longbow'
 }
 
 function run(data, missing) {

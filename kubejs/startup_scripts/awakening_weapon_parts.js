@@ -9,7 +9,7 @@ StartupEvents.registry('item', event => {
   }
 
   function isSeparatedRangedType(type) {
-    return type === 'longbow' || type === 'heavy_crossbow'
+    return type === 'longbow'
   }
 
   function registerMaterial(material, weaponTypes) {
