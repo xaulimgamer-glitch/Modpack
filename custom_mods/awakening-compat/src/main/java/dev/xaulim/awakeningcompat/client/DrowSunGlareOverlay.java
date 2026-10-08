@@ -28,7 +28,7 @@ import java.util.OptionalInt;
 /**
  * Renders the Drow's direct-sun glare from the synchronized dark-adaptation
  * resource. Mechanics remain datapack-driven; this class only interpolates the
- * visual opacity between resource updates.
+ * visual opacity between resource updates and briefly carries glare into shade.
  */
 @Mod.EventBusSubscriber(
         modid = AwakeningCompat.MOD_ID,
@@ -51,7 +51,9 @@ public final class DrowSunGlareOverlay implements IGuiOverlay {
     private static final float BASE_GLARE = 0.15F;
     private static final float ADAPTATION_GLARE = 0.40F;
     private static final float RECOVERY_SMOOTHING_SECONDS = 0.18F;
+    private static final float SHADOW_FADE_SECONDS = 0.70F;
     private static final float MAX_FRAME_DELTA_SECONDS = 0.10F;
+    private static final float MIN_VISIBLE_ALPHA = 0.0005F;
 
     private float displayedAlpha;
     private boolean wasExposedToSun;
@@ -82,8 +84,17 @@ public final class DrowSunGlareOverlay implements IGuiOverlay {
         }
 
         OptionalInt adaptation = getDarkAdaptation(player);
-        if (adaptation.isEmpty() || !SimpleEntityCondition.isExposedToSun(player)) {
+        if (adaptation.isEmpty()) {
             reset(now);
+            return;
+        }
+
+        if (!SimpleEntityCondition.isExposedToSun(player)) {
+            fadeOutInShade(now);
+
+            if (displayedAlpha > 0.0F) {
+                renderGlare(screenWidth, screenHeight, displayedAlpha);
+            }
             return;
         }
 
@@ -94,15 +105,11 @@ public final class DrowSunGlareOverlay implements IGuiOverlay {
             // Entering sunlight, or becoming more dark-adapted, must feel immediate.
             displayedAlpha = targetAlpha;
         } else {
-            float deltaSeconds = Mth.clamp(
-                    (now - lastFrameNanos) / 1_000_000_000.0F,
-                    0.0F,
-                    MAX_FRAME_DELTA_SECONDS
-            );
+            float deltaSeconds = frameDeltaSeconds(now);
             float blend = 1.0F - (float) Math.exp(-deltaSeconds / RECOVERY_SMOOTHING_SECONDS);
             displayedAlpha = Mth.lerp(blend, displayedAlpha, targetAlpha);
 
-            if (Math.abs(displayedAlpha - targetAlpha) < 0.0005F) {
+            if (Math.abs(displayedAlpha - targetAlpha) < MIN_VISIBLE_ALPHA) {
                 displayedAlpha = targetAlpha;
             }
         }
@@ -124,6 +131,38 @@ public final class DrowSunGlareOverlay implements IGuiOverlay {
                     return power == null ? OptionalInt.empty() : power.getValue(player);
                 })
                 .orElseGet(OptionalInt::empty);
+    }
+
+    private void fadeOutInShade(long now) {
+        wasExposedToSun = false;
+
+        if (displayedAlpha <= 0.0F || lastFrameNanos == 0L) {
+            displayedAlpha = 0.0F;
+            lastFrameNanos = now;
+            return;
+        }
+
+        float deltaSeconds = frameDeltaSeconds(now);
+        float blend = 1.0F - (float) Math.exp(-deltaSeconds / SHADOW_FADE_SECONDS);
+        displayedAlpha = Mth.lerp(blend, displayedAlpha, 0.0F);
+
+        if (displayedAlpha < MIN_VISIBLE_ALPHA) {
+            displayedAlpha = 0.0F;
+        }
+
+        lastFrameNanos = now;
+    }
+
+    private float frameDeltaSeconds(long now) {
+        if (lastFrameNanos == 0L) {
+            return 0.0F;
+        }
+
+        return Mth.clamp(
+                (now - lastFrameNanos) / 1_000_000_000.0F,
+                0.0F,
+                MAX_FRAME_DELTA_SECONDS
+        );
     }
 
     private void reset(long now) {
