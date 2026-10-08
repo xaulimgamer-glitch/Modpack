@@ -36,18 +36,49 @@ public final class TortleShellLifecycle {
         setOwner(clone, isOwner(original));
     }
 
+    /**
+     * A genuine acquisition initializes an absent reserve to full. Keeping an
+     * already-initialized value avoids accidental refills if a callback is
+     * replayed by a datapack/power reload.
+     */
     public static void gainShell(ServerPlayer player) {
         setOwner(player, true);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
-        TortleShellAction.clearShellGuard(player);
-        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
+        TortleShellAction.initializeShellGuard(player);
+        TortleShellAction.updateShellRecharge(player);
+        AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
+        ensureShellEquipped(player);
+    }
+
+    /**
+     * Re-applies lifecycle invariants without treating a reload/login as a new
+     * racial acquisition.
+     */
+    public static void syncShell(ServerPlayer player) {
+        restoreExistingShellState(player);
+    }
+
+    /**
+     * Re-equips the racial shell after clone/respawn while preserving the copied
+     * guard amount and recharge window.
+     */
+    public static void respawnShell(ServerPlayer player) {
+        restoreExistingShellState(player);
+    }
+
+    private static void restoreExistingShellState(ServerPlayer player) {
+        setOwner(player, true);
+        player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
+        TortleShellAction.initializeShellGuard(player);
+        TortleShellAction.updateShellRecharge(player);
+        AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
         ensureShellEquipped(player);
     }
 
     public static void loseShell(ServerPlayer player) {
         setOwner(player, false);
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
-        TortleShellAction.clearShellGuard(player);
+        TortleShellAction.clearShellGuardState(player);
         AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
         removeAllShellItems(player);
         syncInventory(player);
@@ -55,13 +86,22 @@ public final class TortleShellLifecycle {
 
     /**
      * Called before death-inventory systems such as Corpse snapshot the player.
-     * Ownership is retained for respawn, but the physical stack is removed from
-     * the dying player's inventory so it cannot be copied into the corpse.
+     * Ownership and Shell Guard are retained for respawn, but the physical stack
+     * is removed from the dying player's inventory so it cannot be copied into
+     * the corpse.
      */
     public static void prepareForDeath(ServerPlayer player) {
+        boolean wasShelled = player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
-        TortleShellAction.clearShellGuard(player);
-        AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
+
+        TortleShellAction.initializeShellGuard(player);
+        if (wasShelled) {
+            TortleShellAction.startShellRecharge(player);
+        } else {
+            TortleShellAction.ensureShellRechargeStarted(player);
+        }
+        AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
+
         removeAllShellItems(player);
         syncInventory(player);
     }
@@ -73,7 +113,7 @@ public final class TortleShellLifecycle {
         if (!isOwner(player)) {
             boolean wasShelled = player.hasEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
             player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
-            TortleShellAction.clearShellGuard(player);
+            TortleShellAction.clearShellGuardState(player);
             if (wasShelled) {
                 AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
             }

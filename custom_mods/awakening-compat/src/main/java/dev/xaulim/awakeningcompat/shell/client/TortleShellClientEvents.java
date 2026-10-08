@@ -53,6 +53,10 @@ public final class TortleShellClientEvents {
     }
 
     public static void setShellGuard(float amount) {
+        if (!Float.isFinite(amount)) {
+            shellGuard = 0.0F;
+            return;
+        }
         shellGuard = Math.max(0.0F, Math.min(TortleShellAction.MAX_SHELL_GUARD, amount));
     }
 

@@ -39,11 +39,11 @@ public final class TortleShellEvents {
     }
 
     /**
-     * A withdrawn Tortle absorbs ordinary incoming damage with a finite guard.
-     * The guard starts at 32 damage points (16 hearts) on each shell entry.
-     * Damage tagged BYPASSES_INVULNERABILITY is deliberately untouched and does
-     * not consume the guard. Any damage that exceeds the remaining guard breaks
-     * the shell and the overflow continues through the normal damage pipeline.
+     * A withdrawn Tortle absorbs ordinary incoming damage with a finite,
+     * persistent guard. Damage tagged BYPASSES_INVULNERABILITY is deliberately
+     * untouched and does not consume the guard. Any damage that exceeds the
+     * remaining guard breaks the shell and the overflow continues through the
+     * normal damage pipeline.
      */
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onIncomingHurt(LivingHurtEvent event) {
@@ -70,6 +70,7 @@ public final class TortleShellEvents {
             TortleShellAction.setShellGuard(player, newRemaining);
             AwakeningNetwork.syncTortleShellGuard(player, newRemaining);
         } else {
+            TortleShellAction.setShellGuard(player, 0.0F);
             TortleShellAction.exitShell(player);
         }
 
@@ -164,6 +165,14 @@ public final class TortleShellEvents {
             // Continuous invariant repair also deletes shells recovered from
             // legacy corpses or inventories created by older builds.
             TortleShellLifecycle.sanitize(serverPlayer);
+
+            // Recharge checks are intentionally spaced and server-authoritative.
+            if (TortleShellLifecycle.isOwner(serverPlayer)
+                    && !isShelled(serverPlayer)
+                    && serverPlayer.tickCount % 20 == 0
+                    && TortleShellAction.updateShellRecharge(serverPlayer)) {
+                AwakeningNetwork.syncTortleShellGuard(serverPlayer, TortleShellAction.MAX_SHELL_GUARD);
+            }
         }
 
         if (!isShelled(player)) return;
@@ -196,11 +205,11 @@ public final class TortleShellEvents {
 
         if (event.getOriginal() instanceof ServerPlayer original
                 && event.getEntity() instanceof ServerPlayer clone) {
-            TortleShellAction.clearShellGuard(clone);
-            AwakeningNetwork.syncTortleShellGuard(clone, 0.0F);
             TortleShellLifecycle.copyOwnership(original, clone);
+            TortleShellAction.copyShellGuardState(original, clone);
+
             if (TortleShellLifecycle.isOwner(clone)) {
-                TortleShellLifecycle.gainShell(clone);
+                TortleShellLifecycle.respawnShell(clone);
             } else {
                 TortleShellLifecycle.loseShell(clone);
             }
@@ -211,17 +220,30 @@ public final class TortleShellEvents {
     public static void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         if (event.getEntity() instanceof ServerPlayer player) {
-            TortleShellAction.clearShellGuard(player);
-            AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
             TortleShellLifecycle.sanitize(player);
+            if (TortleShellLifecycle.isOwner(player)) {
+                TortleShellAction.initializeShellGuard(player);
+                TortleShellAction.updateShellRecharge(player);
+                AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
+            } else {
+                AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
+            }
         }
     }
 
     @SubscribeEvent
     public static void onLogout(PlayerEvent.PlayerLoggedOutEvent event) {
+        // Leaving the server never clears or refills the persistent reserve.
+        // If the player disconnected while withdrawn, recharge starts on login.
         event.getEntity().removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
-        if (event.getEntity() instanceof ServerPlayer player) {
-            TortleShellAction.clearShellGuard(player);
+    }
+
+    @SubscribeEvent
+    public static void onChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player
+                && TortleShellLifecycle.isOwner(player)) {
+            TortleShellAction.updateShellRecharge(player);
+            AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
         }
     }
 }

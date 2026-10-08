@@ -21,7 +21,9 @@ public final class TortleShellLifecycleAction extends EntityAction<TortleShellLi
         if (!(entity instanceof ServerPlayer player)) return;
 
         switch (configuration.operation()) {
-            case "gain", "respawn", "sync" -> TortleShellLifecycle.gainShell(player);
+            case "gain" -> TortleShellLifecycle.gainShell(player);
+            case "respawn" -> TortleShellLifecycle.respawnShell(player);
+            case "sync" -> TortleShellLifecycle.syncShell(player);
             case "lose" -> TortleShellLifecycle.loseShell(player);
             default -> throw new IllegalArgumentException(
                     "Unknown Tortle shell lifecycle operation: " + configuration.operation()
