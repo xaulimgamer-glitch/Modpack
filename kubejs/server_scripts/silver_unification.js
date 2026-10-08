@@ -1,4 +1,4 @@
-// Canonical silver: Ice and Fire Community Edition.
+// Canonical silver: Ice and Fire.
 // Werewolves silver registry entries remain available for commands/creative,
 // but are removed from normal recipe/tag progression.
 
