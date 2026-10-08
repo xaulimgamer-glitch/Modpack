@@ -1,6 +1,9 @@
 {
   "type": "origins:prevent_game_event",
-  "event": "minecraft:step",
+  "events": [
+    "minecraft:step",
+    "minecraft:hit_ground"
+  ],
   "name": "Weightless Step",
   "description": "Your footsteps produce no vibrations, allowing you to move without disturbing sculk or other vibration-sensitive listeners."
 }

@@ -1,6 +1,9 @@
 {
   "type": "origins:prevent_game_event",
-  "event": "minecraft:step",
+  "events": [
+    "minecraft:step",
+    "minecraft:hit_ground"
+  ],
   "name": "Velvet Paws",
   "description": "You place each step without a whisper; your footsteps produce no vibrations."
 }
