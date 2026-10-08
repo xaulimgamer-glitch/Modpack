@@ -1,25 +1,57 @@
 {
-  "type": "origins:invisibility",
+  "type": "origins:multiple",
   "name": "Forest Veil",
   "description": "While sneaking among dense vegetation, you blend into the foliage and become invisible.",
-  "render_armor": false,
-  "condition": {
-    "type": "origins:and",
-    "conditions": [
-      {
-        "type": "origins:sneaking"
-      },
-      {
-        "type": "origins:block_in_radius",
-        "block_condition": {
-          "type": "origins:in_tag",
-          "tag": "rpgraces:wood_elf_cover"
+  "invisibility": {
+    "type": "origins:invisibility",
+    "render_armor": false,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:sneaking"
         },
-        "radius": 1,
-        "shape": "cube",
-        "comparison": ">=",
-        "compare_to": 1
-      }
-    ]
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "rpgraces:wood_elf_cover"
+          },
+          "radius": 1,
+          "shape": "cube",
+          "comparison": ">=",
+          "compare_to": 1
+        }
+      ]
+    }
+  },
+  "camouflage": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "name": "Forest Veil Camouflage",
+      "attribute": "stealth:camouflage",
+      "operation": "addition",
+      "value": 1.0
+    },
+    "tick_rate": 1,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:sneaking"
+        },
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "rpgraces:wood_elf_cover"
+          },
+          "radius": 1,
+          "shape": "cube",
+          "comparison": ">=",
+          "compare_to": 1
+        }
+      ]
+    }
   }
 }
