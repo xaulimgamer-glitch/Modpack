@@ -114,7 +114,7 @@
     },
     "modifier": {
       "operation": "multiply_total",
-      "value": -0.028
+      "value": -0.02777778
     }
   },
   "strong_adaptation_attack_penalty": {
@@ -171,7 +171,7 @@
     },
     "modifier": {
       "operation": "multiply_total",
-      "value": -0.056
+      "value": -0.05555556
     }
   },
   "extreme_adaptation_attack_penalty": {
@@ -216,7 +216,7 @@
     },
     "modifier": {
       "operation": "multiply_total",
-      "value": -0.111
+      "value": -0.11111111
     }
   }
 }
