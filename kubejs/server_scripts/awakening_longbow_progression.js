@@ -3,7 +3,7 @@
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
-    if (!data || data.schema !== 2 || !Array.isArray(data.materials)) {
+    if (!data || data.schema !== 3 || !Array.isArray(data.materials)) {
       throw new Error('[Awakening/Longbows] Unsupported bow manifest')
     }
     return data
