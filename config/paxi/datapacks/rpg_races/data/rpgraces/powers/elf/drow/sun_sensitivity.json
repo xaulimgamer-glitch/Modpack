@@ -22,7 +22,7 @@
     "entity_action": {
       "type": "apoli:change_resource",
       "resource": "rpgraces:elf/drow/sun_sensitivity_dark_adaptation",
-      "change": 1
+      "change": 2
     }
   },
   "adapt_to_sun": {
@@ -34,7 +34,7 @@
     "entity_action": {
       "type": "apoli:change_resource",
       "resource": "rpgraces:elf/drow/sun_sensitivity_dark_adaptation",
-      "change": -3
+      "change": -1
     }
   },
   "base_attack_penalty": {
