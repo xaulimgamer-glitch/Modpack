@@ -1,0 +1,68 @@
+name: Build Awakening Compat
+
+on:
+  push:
+    branches:
+      - development
+    paths:
+      - 'custom_mods/awakening-compat/**'
+      - '.github/workflows/build-awakening-compat.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: awakening-compat-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: custom_mods/awakening-compat
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+          cache-dependency-path: custom_mods/awakening-compat/*.gradle*
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
+      - name: Build mod
+        run: ./gradlew --no-daemon clean build
+
+      - name: Verify Drow glare overlay is packaged
+        run: |
+          JAR='build/libs/awakening-compat-0.1.0.jar'
+          test -f "$JAR"
+          jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'
+
+      - name: Install built JAR into modpack
+        run: cp build/libs/awakening-compat-0.1.0.jar ../../mods/awakening-compat-0.1.0.jar
+
+      - name: Commit rebuilt JAR
+        working-directory: .
+        shell: bash
+        run: |
+          if git diff --quiet -- mods/awakening-compat-0.1.0.jar; then
+            echo 'Packaged JAR is already current.'
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mods/awakening-compat-0.1.0.jar
+          git commit -m 'Rebuild awakening-compat JAR'
+          git push origin HEAD:development
