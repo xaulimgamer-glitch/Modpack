@@ -57,6 +57,17 @@ ordering="AFTER"
 side="BOTH"
 
 # =========================
+# SPARTAN WEAPONRY
+# =========================
+
+[[dependencies.awakening_compat]]
+modId="spartanweaponry"
+mandatory=true
+versionRange="[3.2.1]"
+ordering="AFTER"
+side="BOTH"
+
+# =========================
 # IRON'S SPELLBOOKS
 # =========================
 
