@@ -213,6 +213,8 @@ public final class TortleShellLifecycle {
     private static void syncInventory(ServerPlayer player) {
         player.getInventory().setChanged();
         player.inventoryMenu.broadcastChanges();
-        player.containerMenu.broadcastChanges();
+        if (player.containerMenu != player.inventoryMenu) {
+            player.containerMenu.broadcastChanges();
+        }
     }
 }
