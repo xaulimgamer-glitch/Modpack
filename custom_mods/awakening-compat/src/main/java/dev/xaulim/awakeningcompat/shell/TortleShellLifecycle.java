@@ -80,8 +80,9 @@ public final class TortleShellLifecycle {
         player.removeEffect(TortleShellRegistries.TORTLE_SHELL_EFFECT.get());
         TortleShellAction.clearShellGuardState(player);
         AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
-        removeAllShellItems(player);
-        syncInventory(player);
+        if (removeAllShellItems(player)) {
+            syncInventory(player);
+        }
     }
 
     /**
@@ -102,8 +103,9 @@ public final class TortleShellLifecycle {
         }
         AwakeningNetwork.syncTortleShellGuard(player, TortleShellAction.getShellGuard(player));
 
-        removeAllShellItems(player);
-        syncInventory(player);
+        if (removeAllShellItems(player)) {
+            syncInventory(player);
+        }
     }
 
     /**
@@ -117,8 +119,7 @@ public final class TortleShellLifecycle {
             if (wasShelled) {
                 AwakeningNetwork.syncTortleShellGuard(player, 0.0F);
             }
-            if (hasAnyShell(player)) {
-                removeAllShellItems(player);
+            if (removeAllShellItems(player)) {
                 syncInventory(player);
             }
             return;
@@ -129,6 +130,7 @@ public final class TortleShellLifecycle {
 
     private static void ensureShellEquipped(ServerPlayer player) {
         ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+        boolean changed = false;
 
         if (!isShell(chest)) {
             if (!chest.isEmpty()) {
@@ -139,14 +141,16 @@ public final class TortleShellLifecycle {
                 }
             }
             player.setItemSlot(EquipmentSlot.CHEST, createNaturalShell());
+            changed = true;
         } else if (!isManagedShell(chest)) {
             player.setItemSlot(EquipmentSlot.CHEST, createNaturalShell());
-        } else {
+            changed = true;
+        } else if (chest.getCount() != 1) {
             chest.setCount(1);
+            changed = true;
         }
 
         Inventory inventory = player.getInventory();
-        boolean changed = false;
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             if (i == CHEST_INVENTORY_INDEX) continue;
             if (isShell(inventory.getItem(i))) {
@@ -162,8 +166,6 @@ public final class TortleShellLifecycle {
 
         if (changed) {
             syncInventory(player);
-        } else {
-            player.inventoryMenu.broadcastChanges();
         }
     }
 
@@ -184,24 +186,20 @@ public final class TortleShellLifecycle {
                 && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BINDING_CURSE, stack) > 0;
     }
 
-    private static void removeAllShellItems(ServerPlayer player) {
+    private static boolean removeAllShellItems(ServerPlayer player) {
         Inventory inventory = player.getInventory();
+        boolean changed = false;
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             if (isShell(inventory.getItem(i))) {
                 inventory.setItem(i, ItemStack.EMPTY);
+                changed = true;
             }
         }
         if (isShell(player.containerMenu.getCarried())) {
             player.containerMenu.setCarried(ItemStack.EMPTY);
+            changed = true;
         }
-    }
-
-    private static boolean hasAnyShell(ServerPlayer player) {
-        Inventory inventory = player.getInventory();
-        for (int i = 0; i < inventory.getContainerSize(); i++) {
-            if (isShell(inventory.getItem(i))) return true;
-        }
-        return isShell(player.containerMenu.getCarried());
+        return changed;
     }
 
     private static void setOwner(ServerPlayer player, boolean owner) {
