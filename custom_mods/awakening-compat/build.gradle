@@ -72,6 +72,10 @@ dependencies {
             'curse.maven:spartan-weaponry-278141:6842571'
     )
 
+    runtimeOnly fg.deobf(
+            'curse.maven:spartan-weaponry-278141:6842571'
+    )
+
     compileOnly fg.deobf(
             'io.github.edwinmindcraft:calio-forge:1.20.1-1.11.0.5'
     )
