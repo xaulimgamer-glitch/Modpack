@@ -19,9 +19,6 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: custom_mods/awakening-compat
 
     steps:
       - name: Checkout repository
@@ -35,73 +32,74 @@ jobs:
           cache: gradle
           cache-dependency-path: custom_mods/awakening-compat/*.gradle*
 
-      - name: Make Gradle wrapper executable
-        run: chmod +x gradlew
-
-      - name: Clean build
-        run: ./gradlew --no-daemon clean build --stacktrace
-
-      - name: Inspect packaged Mixin metadata
+      - name: Build and record diagnostics
         shell: bash
         run: |
-          set -euxo pipefail
-          REPORT='../../validation-awakening-mixin-repair.txt'
-          JAR='build/libs/awakening-compat-0.1.0.jar'
-          test -f "$JAR"
+          set -uo pipefail
+          REPORT="$GITHUB_WORKSPACE/validation-awakening-mixin-repair.txt"
+          MODDIR="$GITHUB_WORKSPACE/custom_mods/awakening-compat"
+          JAR="$MODDIR/build/libs/awakening-compat-0.1.0.jar"
+          : > "$REPORT"
+
           {
-            echo '=== packaged entries ==='
-            jar tf "$JAR" | grep -E 'awakening_compat\.(mixins|refmap)\.json|HeavyCrossbowArrowMixin.class'
+            echo "commit=$GITHUB_SHA"
+            echo "java=$(java -version 2>&1 | head -n 1)"
             echo
-            echo '=== mixins json ==='
-            unzip -p "$JAR" awakening_compat.mixins.json
-            echo
-            echo '=== refmap ==='
-            unzip -p "$JAR" awakening_compat.refmap.json
-            echo
-          } | tee "$REPORT"
+            echo '=== gradle build ==='
+          } >> "$REPORT"
 
-      - name: Inspect Heavy Crossbow mixin bytecode
-        shell: bash
-        run: |
-          set -euxo pipefail
-          REPORT='../../validation-awakening-mixin-repair.txt'
-          JAR='build/libs/awakening-compat-0.1.0.jar'
-          {
-            echo '=== HeavyCrossbowArrowMixin javap ==='
-            javap -v -p -classpath "$JAR" dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin \
-              | grep -E -A10 -B4 'getAllSupportedProjectiles|getSupportedHeldProjectiles|releaseUsing|RuntimeVisibleAnnotations|RuntimeInvisibleAnnotations'
-            echo
-          } | tee -a "$REPORT"
+          cd "$MODDIR"
+          chmod +x gradlew
+          set +e
+          ./gradlew --no-daemon clean build --stacktrace >> "$REPORT" 2>&1
+          BUILD_STATUS=$?
+          set -e
 
-      - name: Inspect resolved Spartan Heavy Crossbow signatures
-        shell: bash
-        run: |
-          set -euxo pipefail
-          REPORT='../../validation-awakening-mixin-repair.txt'
-          SPARTAN=$(find ~/.gradle/caches -type f \( -iname '*spartan*weaponry*.jar' -o -iname '*SpartanWeaponry*.jar' \) | head -n 1)
-          test -n "$SPARTAN"
-          {
-            echo '=== Spartan resolved JAR ==='
-            echo "$SPARTAN"
-            echo '=== Spartan HeavyCrossbowItem signatures ==='
-            javap -p -classpath "$SPARTAN" com.oblivioussp.spartanweaponry.item.HeavyCrossbowItem \
-              | grep -E 'getAllSupportedProjectiles|getSupportedHeldProjectiles|getDefaultCreativeAmmo|releaseUsing'
-            echo
-          } | tee -a "$REPORT"
+          echo >> "$REPORT"
+          echo "build_status=$BUILD_STATUS" >> "$REPORT"
 
-      - name: Verify Drow glare overlay is packaged
-        run: |
-          JAR='build/libs/awakening-compat-0.1.0.jar'
-          jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'
-          echo 'DrowSunGlareOverlay.class: packaged' >> ../../validation-awakening-mixin-repair.txt
+          if [ "$BUILD_STATUS" -eq 0 ]; then
+            {
+              echo
+              echo '=== packaged entries ==='
+              jar tf "$JAR" | grep -E 'awakening_compat\.(mixins|refmap)\.json|HeavyCrossbowArrowMixin.class'
+              echo
+              echo '=== mixins json ==='
+              unzip -p "$JAR" awakening_compat.mixins.json
+              echo
+              echo '=== refmap ==='
+              unzip -p "$JAR" awakening_compat.refmap.json
+              echo
+              echo '=== HeavyCrossbowArrowMixin javap ==='
+              javap -v -p -classpath "$JAR" dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin \
+                | grep -E -A10 -B4 'getAllSupportedProjectiles|getSupportedHeldProjectiles|releaseUsing|RuntimeVisibleAnnotations|RuntimeInvisibleAnnotations'
+              echo
+              echo '=== Spartan resolved JAR ==='
+            } >> "$REPORT" 2>&1
 
-      - name: Commit validation report
-        working-directory: .
-        shell: bash
-        run: |
-          set -euxo pipefail
+            SPARTAN=$(find ~/.gradle/caches -type f \( -iname '*spartan*weaponry*.jar' -o -iname '*SpartanWeaponry*.jar' \) | head -n 1 || true)
+            echo "$SPARTAN" >> "$REPORT"
+            if [ -n "$SPARTAN" ]; then
+              {
+                echo '=== Spartan HeavyCrossbowItem signatures ==='
+                javap -p -classpath "$SPARTAN" com.oblivioussp.spartanweaponry.item.HeavyCrossbowItem \
+                  | grep -E 'getAllSupportedProjectiles|getSupportedHeldProjectiles|getDefaultCreativeAmmo|releaseUsing'
+              } >> "$REPORT" 2>&1 || true
+            fi
+
+            if jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'; then
+              echo 'DrowSunGlareOverlay.class: packaged' >> "$REPORT"
+            else
+              echo 'DrowSunGlareOverlay.class: MISSING' >> "$REPORT"
+              BUILD_STATUS=1
+            fi
+          fi
+
+          cd "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add validation-awakening-mixin-repair.txt
-          git commit -m 'Record awakening-compat repair validation'
+          git commit -m 'Record awakening-compat repair validation' || true
           git push origin HEAD:awakening-mixin-repair
+
+          exit "$BUILD_STATUS"
