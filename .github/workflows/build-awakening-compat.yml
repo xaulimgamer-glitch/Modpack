@@ -1,23 +1,23 @@
-name: Build Awakening Compat
+name: Validate Awakening Compat Repair
 
 on:
   push:
     branches:
-      - development
+      - awakening-mixin-repair
     paths:
       - 'custom_mods/awakening-compat/**'
       - '.github/workflows/build-awakening-compat.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: awakening-compat-${{ github.ref }}
+  group: awakening-compat-repair-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,8 +26,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -40,29 +38,40 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
 
-      - name: Build mod
-        run: ./gradlew --no-daemon clean build
+      - name: Clean build
+        run: ./gradlew --no-daemon clean build --stacktrace
+
+      - name: Inspect packaged Mixin metadata
+        shell: bash
+        run: |
+          set -euxo pipefail
+          JAR='build/libs/awakening-compat-0.1.0.jar'
+          test -f "$JAR"
+          jar tf "$JAR" | grep -E 'awakening_compat\.(mixins|refmap)\.json|HeavyCrossbowArrowMixin.class'
+          unzip -p "$JAR" awakening_compat.mixins.json
+          echo
+          unzip -p "$JAR" awakening_compat.refmap.json
+          echo
+
+      - name: Inspect Heavy Crossbow mixin bytecode
+        shell: bash
+        run: |
+          set -euxo pipefail
+          JAR='build/libs/awakening-compat-0.1.0.jar'
+          javap -v -p -classpath "$JAR" dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin \
+            | grep -E -A8 -B3 'getAllSupportedProjectiles|getSupportedHeldProjectiles|releaseUsing|RuntimeVisibleAnnotations|RuntimeInvisibleAnnotations'
+
+      - name: Inspect resolved Spartan Heavy Crossbow signatures
+        shell: bash
+        run: |
+          set -euxo pipefail
+          SPARTAN=$(find ~/.gradle/caches -type f -name '*spartan*weaponry*.jar' -o -name '*SpartanWeaponry*.jar' | head -n 1)
+          test -n "$SPARTAN"
+          echo "Spartan JAR: $SPARTAN"
+          javap -p -classpath "$SPARTAN" com.oblivioussp.spartanweaponry.item.HeavyCrossbowItem \
+            | grep -E 'getAllSupportedProjectiles|getSupportedHeldProjectiles|getDefaultCreativeAmmo|releaseUsing'
 
       - name: Verify Drow glare overlay is packaged
         run: |
           JAR='build/libs/awakening-compat-0.1.0.jar'
-          test -f "$JAR"
           jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'
-
-      - name: Install built JAR into modpack
-        run: cp build/libs/awakening-compat-0.1.0.jar ../../mods/awakening-compat-0.1.0.jar
-
-      - name: Commit rebuilt JAR
-        working-directory: .
-        shell: bash
-        run: |
-          if git diff --quiet -- mods/awakening-compat-0.1.0.jar; then
-            echo 'Packaged JAR is already current.'
-            exit 0
-          fi
-
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add mods/awakening-compat-0.1.0.jar
-          git commit -m 'Rebuild awakening-compat JAR'
-          git push origin HEAD:development
