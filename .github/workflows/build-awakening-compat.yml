@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: awakening-compat-repair-${{ github.ref }}
@@ -45,33 +45,63 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          REPORT='../../validation-awakening-mixin-repair.txt'
           JAR='build/libs/awakening-compat-0.1.0.jar'
           test -f "$JAR"
-          jar tf "$JAR" | grep -E 'awakening_compat\.(mixins|refmap)\.json|HeavyCrossbowArrowMixin.class'
-          unzip -p "$JAR" awakening_compat.mixins.json
-          echo
-          unzip -p "$JAR" awakening_compat.refmap.json
-          echo
+          {
+            echo '=== packaged entries ==='
+            jar tf "$JAR" | grep -E 'awakening_compat\.(mixins|refmap)\.json|HeavyCrossbowArrowMixin.class'
+            echo
+            echo '=== mixins json ==='
+            unzip -p "$JAR" awakening_compat.mixins.json
+            echo
+            echo '=== refmap ==='
+            unzip -p "$JAR" awakening_compat.refmap.json
+            echo
+          } | tee "$REPORT"
 
       - name: Inspect Heavy Crossbow mixin bytecode
         shell: bash
         run: |
           set -euxo pipefail
+          REPORT='../../validation-awakening-mixin-repair.txt'
           JAR='build/libs/awakening-compat-0.1.0.jar'
-          javap -v -p -classpath "$JAR" dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin \
-            | grep -E -A8 -B3 'getAllSupportedProjectiles|getSupportedHeldProjectiles|releaseUsing|RuntimeVisibleAnnotations|RuntimeInvisibleAnnotations'
+          {
+            echo '=== HeavyCrossbowArrowMixin javap ==='
+            javap -v -p -classpath "$JAR" dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin \
+              | grep -E -A10 -B4 'getAllSupportedProjectiles|getSupportedHeldProjectiles|releaseUsing|RuntimeVisibleAnnotations|RuntimeInvisibleAnnotations'
+            echo
+          } | tee -a "$REPORT"
 
       - name: Inspect resolved Spartan Heavy Crossbow signatures
         shell: bash
         run: |
           set -euxo pipefail
-          SPARTAN=$(find ~/.gradle/caches -type f -name '*spartan*weaponry*.jar' -o -name '*SpartanWeaponry*.jar' | head -n 1)
+          REPORT='../../validation-awakening-mixin-repair.txt'
+          SPARTAN=$(find ~/.gradle/caches -type f \( -iname '*spartan*weaponry*.jar' -o -iname '*SpartanWeaponry*.jar' \) | head -n 1)
           test -n "$SPARTAN"
-          echo "Spartan JAR: $SPARTAN"
-          javap -p -classpath "$SPARTAN" com.oblivioussp.spartanweaponry.item.HeavyCrossbowItem \
-            | grep -E 'getAllSupportedProjectiles|getSupportedHeldProjectiles|getDefaultCreativeAmmo|releaseUsing'
+          {
+            echo '=== Spartan resolved JAR ==='
+            echo "$SPARTAN"
+            echo '=== Spartan HeavyCrossbowItem signatures ==='
+            javap -p -classpath "$SPARTAN" com.oblivioussp.spartanweaponry.item.HeavyCrossbowItem \
+              | grep -E 'getAllSupportedProjectiles|getSupportedHeldProjectiles|getDefaultCreativeAmmo|releaseUsing'
+            echo
+          } | tee -a "$REPORT"
 
       - name: Verify Drow glare overlay is packaged
         run: |
           JAR='build/libs/awakening-compat-0.1.0.jar'
           jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'
+          echo 'DrowSunGlareOverlay.class: packaged' >> ../../validation-awakening-mixin-repair.txt
+
+      - name: Commit validation report
+        working-directory: .
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add validation-awakening-mixin-repair.txt
+          git commit -m 'Record awakening-compat repair validation'
+          git push origin HEAD:awakening-mixin-repair
