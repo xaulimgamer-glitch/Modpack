@@ -1,4 +1,4 @@
-commit=fded4f80c9a34cc7fdffaf6f18aadba136cee5ac
+commit=927b17758fbbd5a0c3528ea4d7ce6274bf5a2ec6
 java=openjdk version "17.0.20.1" 2026-08-18
 
 === gradle build ===
@@ -42,23 +42,17 @@ Executing steps
  > Running 'listLibraries'
  > Running 'rename'
 Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
-[12:12:56] [main/INFO]: Writing debug log file accesstransform.log
-[12:12:56] [main/INFO]: Access Transformer processor running version 8.2.14
-[12:12:56] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg]
-[12:12:56] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar
-[12:12:56] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
-[12:12:56] [main/INFO]: Transformer file /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg
-[12:12:56] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, overwriting
-[12:12:59] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
+[12:20:13] [main/INFO]: Writing debug log file accesstransform.log
+[12:20:13] [main/INFO]: Access Transformer processor running version 8.2.14
+[12:20:13] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg]
+[12:20:13] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar
+[12:20:13] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
+[12:20:13] [main/INFO]: Transformer file /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg
+[12:20:13] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, overwriting
+[12:20:16] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
 Creating SRG -> MCP TSRG
 Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7.38)
 Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
-/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningicaruscompat/mixin/FixedWingEntityModelMixin.java:10: error: Mixin target com.r3x.icarusrewinged.client.models.FixedWingEntityModel could not be found
-@Mixin(
-^
-/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningicaruscompat/mixin/IcarusHelperMixin.java:10: error: Mixin target dev.cammiescorner.icarus.util.IcarusHelper could not be found
-@Mixin(
-^
 Note: Loading searge mappings from /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/createMcpToSrg/output.tsrg
 Note: Writing refmap to /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/tmp/compileJava/compileJava-refmap.json
 Note: Writing refmap to /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/tmp/compileJava/compileJava-refmap.json
@@ -66,264 +60,87 @@ Note: Writing searge composite mappings to /home/runner/work/Modpack/Modpack/cus
 Note: Writing refmap to /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/tmp/compileJava/compileJava-refmap.json
 Note: Writing refmap to /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/tmp/compileJava/compileJava-refmap.json
 Note: Writing searge composite mappings to /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/tmp/compileJava/compileJava-mappings.tsrg
-2 errors
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:23: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "class")
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:26: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation WIZARD = new ResourceLocation("rpgclasses", "wizard");
+                                                   ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:27: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation CLERIC = new ResourceLocation("rpgclasses", "cleric");
+                                                   ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:30: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "paladin"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:31: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "ranger"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:32: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "warrior"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:33: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "barbarian"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:34: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "rogue"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningironscompat/SpellCastRestrictionHandler.java:35: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation("rpgclasses", "untrained")
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/shell/client/TortleShellArmorModel.java:24: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation(AwakeningCompat.MOD_ID, "tortle_shell_armor"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/shell/client/TortleShellClientEvents.java:28: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation SHELL_TEXTURE = new ResourceLocation(
+                                                          ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/shell/client/TortleShellModel.java:23: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            new ResourceLocation(AwakeningCompat.MOD_ID, "tortle_shell"),
+            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/network/AwakeningNetwork.java:32: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+            .named(new ResourceLocation(AwakeningCompat.MOD_ID, "main"))
+                   ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/network/AwakeningNetwork.java:47: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+        RACE(new ResourceLocation("rpgraces", "races")),
+             ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/network/AwakeningNetwork.java:48: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+        CLASS(new ResourceLocation("rpgclasses", "class"));
+              ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.java:42: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation DARK_ADAPTATION = new ResourceLocation(
+                                                            ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.java:46: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+    private static final ResourceLocation GLARE_TEXTURE = new ResourceLocation(
+                                                          ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/AwakeningCompat.java:32: warning: [removal] get() in FMLJavaModLoadingContext has been deprecated and marked for removal
+                FMLJavaModLoadingContext.get().getModEventBus();
+                                        ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningicaruscompat/compat/FaerieDetector.java:17: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+                    new ResourceLocation("rpgraces", "races")
+                    ^
+/home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningicaruscompat/compat/FaerieDetector.java:23: warning: [removal] ResourceLocation(String,String) in ResourceLocation has been deprecated and marked for removal
+                    new ResourceLocation("rpgraces", "faerie")
+                    ^
+Note: /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/src/main/java/dev/xaulim/awakeningcompat/shell/TortleShellLifecycle.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+20 warnings
 
-> Task :compileJava FAILED
-
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':compileJava'.
-> Compilation failed; see the compiler error output for details.
-
-* Try:
-> Run with --info option to get more log output.
-> Run with --scan to get full insights.
-
-* Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileJava'.
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
-	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
-	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:61)
-	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:41)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:38)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
-	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
-	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$3(JavaCompile.java:202)
-	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:52)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:64)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$1.call(CompileJavaBuildOperationReportingCompiler.java:48)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:48)
-	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:220)
-	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:161)
-	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:146)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.doExecute(IncrementalTaskAction.java:45)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
-	at org.gradle.api.internal.project.taskfactory.IncrementalTaskAction.execute(IncrementalTaskAction.java:26)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:67)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:45)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:76)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:54)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:54)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:106)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:55)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:116)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-
+> Task :addMixinsToJar
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :configureReobfTaskForReobfJar
+> Task :reobfJar
+> Task :configureReobfTaskForReobfJarJar
+> Task :addMixinsToJarJar
+> Task :jarJar SKIPPED
+> Task :reobfJarJar SKIPPED
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
 
@@ -331,7 +148,282 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 5m 33s
-5 actionable tasks: 5 executed
+BUILD SUCCESSFUL in 4m 47s
+12 actionable tasks: 12 executed
 
-build_status=1
+build_status=0
+
+=== packaged entries ===
+awakening_compat.mixins.json
+awakening_compat.refmap.json
+dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.class
+
+=== mixins json ===
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.xaulim.awakeningicaruscompat.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "awakening_compat.refmap.json",
+
+  "mixins": [
+    "IcarusHelperMixin",
+    "HeavyCrossbowArrowMixin"
+  ],
+
+  "client": [
+    "FixedWingEntityModelMixin"
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+
+=== refmap ===
+{
+  "mappings": {
+    "dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin": {
+      "releaseUsing": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_5551_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V",
+      "getSupportedHeldProjectiles": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_6442_()Ljava/util/function/Predicate;",
+      "getAllSupportedProjectiles": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_6437_()Ljava/util/function/Predicate;"
+    }
+  },
+  "data": {
+    "searge": {
+      "dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin": {
+        "releaseUsing": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_5551_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V",
+        "getSupportedHeldProjectiles": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_6442_()Ljava/util/function/Predicate;",
+        "getAllSupportedProjectiles": "Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;m_6437_()Ljava/util/function/Predicate;"
+      }
+    }
+  }
+}
+=== HeavyCrossbowArrowMixin javap ===
+   #42 = Utf8               (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+   #43 = Utf8               (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;)V
+   #44 = Utf8               Lorg/spongepowered/asm/mixin/injection/Inject;
+   #45 = Utf8               method
+   #46 = Utf8               getAllSupportedProjectiles
+   #47 = Utf8               at
+   #48 = Utf8               Lorg/spongepowered/asm/mixin/injection/At;
+   #49 = Utf8               RETURN
+   #50 = Utf8               cancellable
+   #51 = Integer            1
+   #52 = Utf8               org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable
+   #53 = Class              #52           // org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable
+   #54 = Utf8               getReturnValue
+   #55 = Utf8               ()Ljava/lang/Object;
+   #56 = NameAndType        #54:#55       // getReturnValue:()Ljava/lang/Object;
+--
+   #85 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;
+   #86 = Utf8               Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;
+   #87 = Utf8               original
+   #88 = Utf8               awakening$heldProjectiles
+   #89 = Utf8               getSupportedHeldProjectiles
+   #90 = Utf8               lambda$awakening$heldProjectiles$2
+   #91 = NameAndType        #90:#63       // lambda$awakening$heldProjectiles$2:(Ljava/util/function/Predicate;Lnet/minecraft/world/item/ItemStack;)Z
+   #92 = Methodref          #2.#91        // dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$heldProjectiles$2:(Ljava/util/function/Predicate;Lnet/minecraft/world/item/ItemStack;)Z
+   #93 = MethodHandle       6:#92         // REF_invokeStatic dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$heldProjectiles$2:(Ljava/util/function/Predicate;Lnet/minecraft/world/item/ItemStack;)Z
+   #94 = InvokeDynamic      #1:#78        // #1:test:(Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+   #95 = Utf8               awakening$releaseUsing
+   #96 = Utf8               (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;ILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+   #97 = Utf8               releaseUsing
+   #98 = Utf8               HEAD
+   #99 = Utf8               net/minecraft/world/entity/player/Player
+  #100 = Class              #99           // net/minecraft/world/entity/player/Player
+  #101 = Utf8               com/oblivioussp/spartanweaponry/item/HeavyCrossbowItem
+  #102 = Class              #101          // com/oblivioussp/spartanweaponry/item/HeavyCrossbowItem
+  #103 = Utf8               getLoadProgress
+  #104 = Utf8               (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)F
+  #105 = NameAndType        #103:#104     // getLoadProgress:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)F
+  #106 = Methodref          #102.#105     // com/oblivioussp/spartanweaponry/item/HeavyCrossbowItem.getLoadProgress:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)F
+  #107 = Utf8               net/minecraft/world/entity/LivingEntity
+--
+  #302 = Methodref          #2.#301       // dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.spawnArrow:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;ZFF)V
+  #303 = Float              -10.0f
+  #304 = Float              10.0f
+  #305 = MethodType         #81           //  (Ljava/lang/Object;)V
+  #306 = Utf8               lambda$awakening$releaseUsing$3
+  #307 = Utf8               (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+  #308 = NameAndType        #306:#307     // lambda$awakening$releaseUsing$3:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+  #309 = Methodref          #2.#308       // dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$releaseUsing$3:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+  #310 = MethodHandle       6:#309        // REF_invokeStatic dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$releaseUsing$3:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+  #311 = Utf8               (Lnet/minecraft/world/entity/player/Player;)V
+  #312 = MethodType         #311          //  (Lnet/minecraft/world/entity/player/Player;)V
+  #313 = Utf8               accept
+  #314 = Utf8               (Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+  #315 = NameAndType        #313:#314     // accept:(Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+  #316 = InvokeDynamic      #2:#315       // #2:accept:(Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
+  #317 = Utf8               m_41622_
+  #318 = Utf8               (ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V
+  #319 = NameAndType        #317:#318     // m_41622_:(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V
+  #320 = Methodref          #118.#319     // net/minecraft/world/item/ItemStack.m_41622_:(ILnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Consumer;)V
+--
+  #569 = NameAndType        #76:#568      // test:()Ljava/util/function/Predicate;
+  #570 = InvokeDynamic      #4:#569       // #4:test:()Ljava/util/function/Predicate;
+  #571 = Utf8               Signature
+  #572 = Utf8               ConstantValue
+  #573 = Utf8               RuntimeVisibleAnnotations
+  #574 = Utf8               Code
+  #575 = Utf8               LineNumberTable
+  #576 = Utf8               LocalVariableTable
+  #577 = Utf8               LocalVariableTypeTable
+  #578 = Utf8               StackMapTable
+  #579 = Utf8               InnerClasses
+  #580 = Utf8               SourceFile
+  #581 = Utf8               RuntimeInvisibleAnnotations
+  #582 = Utf8               BootstrapMethods
+{
+  private static final java.util.function.Predicate<net.minecraft.world.item.ItemStack> AWAKENING_ARROWS;
+    descriptor: Ljava/util/function/Predicate;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Signature: #21                          // Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;
+
+  private static final float HEAVY_MAX_INACCURACY;
+    descriptor: F
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+--
+
+  protected com.oblivioussp.spartanweaponry.api.WeaponMaterial material;
+    descriptor: Lcom/oblivioussp/spartanweaponry/api/WeaponMaterial;
+    flags: (0x0004) ACC_PROTECTED
+    RuntimeVisibleAnnotations:
+      0: #29(#30=Z#31)
+        org.spongepowered.asm.mixin.Shadow(
+          remap=false
+        )
+
+  protected java.util.List<com.oblivioussp.spartanweaponry.api.trait.WeaponTrait> rangedTraits;
+    descriptor: Ljava/util/List;
+    flags: (0x0004) ACC_PROTECTED
+    Signature: #34                          // Ljava/util/List<Lcom/oblivioussp/spartanweaponry/api/trait/WeaponTrait;>;
+    RuntimeVisibleAnnotations:
+      0: #29(#30=Z#31)
+        org.spongepowered.asm.mixin.Shadow(
+          remap=false
+        )
+
+  public dev.xaulim.awakeningicaruscompat.mixin.HeavyCrossbowArrowMixin();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+--
+        Start  Length  Slot  Name   Signature
+            0      19     1   cir   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;
+            8      11     2 original   Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;
+    Signature: #43                          // (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;)V
+    RuntimeVisibleAnnotations:
+      0: #44(#45=[s#46],#47=[@#48(#7=s#49)],#50=Z#51)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["getAllSupportedProjectiles"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="RETURN"
+          )]
+          cancellable=true
+        )
+
+  private void awakening$heldProjectiles(org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<java.util.function.Predicate<net.minecraft.world.item.ItemStack>>);
+    descriptor: (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+--
+        Start  Length  Slot  Name   Signature
+            0      19     1   cir   Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;
+            8      11     2 original   Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;
+    Signature: #43                          // (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<Ljava/util/function/Predicate<Lnet/minecraft/world/item/ItemStack;>;>;)V
+    RuntimeVisibleAnnotations:
+      0: #44(#45=[s#89],#47=[@#48(#7=s#49)],#50=Z#51)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["getSupportedHeldProjectiles"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="RETURN"
+          )]
+          cancellable=true
+        )
+
+  private void awakening$releaseUsing(net.minecraft.world.item.ItemStack, net.minecraft.world.level.Level, net.minecraft.world.entity.LivingEntity, int, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;ILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=14, locals=20, args_size=6
+         0: aload_3
+         1: instanceof    #100                // class net/minecraft/world/entity/player/Player
+         4: ifeq          16
+         7: aload_3
+         8: checkcast     #100                // class net/minecraft/world/entity/player/Player
+        11: astore        6
+--
+          150     565     9 creativeOrInfinityEnchantment   Z
+          339     376    10 projectileTag   Lnet/minecraft/nbt/CompoundTag;
+          360     355    11 storedArrow   Lnet/minecraft/world/item/ItemStack;
+          371     344    12 usedTicks   I
+    RuntimeVisibleAnnotations:
+      0: #44(#45=[s#97],#47=[@#48(#7=s#98)],#50=Z#51)
+        org.spongepowered.asm.mixin.injection.Inject(
+          method=["releaseUsing"]
+          at=[@org.spongepowered.asm.mixin.injection.At(
+            value="HEAD"
+          )]
+          cancellable=true
+        )
+
+  private void spawnArrow(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.level.Level, net.minecraft.world.entity.player.Player, boolean, float, float);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;ZFF)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+--
+            0      12     0  this   Ldev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin;
+            0      12     1 arrow   Lnet/minecraft/world/entity/projectile/AbstractArrow;
+            0      12     2 callback   Lcom/oblivioussp/spartanweaponry/api/trait/IRangedTraitCallback;
+
+  private static void lambda$awakening$releaseUsing$3(net.minecraft.world.entity.player.Player, net.minecraft.world.entity.player.Player);
+    descriptor: (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_1
+         1: aload_0
+         2: invokevirtual #556                // Method net/minecraft/world/entity/player/Player.m_7655_:()Lnet/minecraft/world/InteractionHand;
+         5: invokevirtual #560                // Method net/minecraft/world/entity/player/Player.m_21190_:(Lnet/minecraft/world/InteractionHand;)V
+         8: return
+      LineNumberTable:
+--
+InnerClasses:
+  public static final #13= #10 of #12;    // Pickup=class net/minecraft/world/entity/projectile/AbstractArrow$Pickup of class net/minecraft/world/entity/projectile/AbstractArrow
+  public static final #18= #15 of #17;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "HeavyCrossbowArrowMixin.java"
+RuntimeInvisibleAnnotations:
+  0: #6(#7=[c#8])
+    org.spongepowered.asm.mixin.Mixin(
+      value=[class Lcom/oblivioussp/spartanweaponry/item/HeavyCrossbowItem;]
+    )
+BootstrapMethods:
+  0: #75 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #61 (Ljava/lang/Object;)Z
+      #66 REF_invokeStatic dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$allSupportedProjectiles$1:(Ljava/util/function/Predicate;Lnet/minecraft/world/item/ItemStack;)Z
+      #68 (Lnet/minecraft/world/item/ItemStack;)Z
+--
+      #68 (Lnet/minecraft/world/item/ItemStack;)Z
+  2: #75 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #305 (Ljava/lang/Object;)V
+      #310 REF_invokeStatic dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$awakening$releaseUsing$3:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/player/Player;)V
+      #312 (Lnet/minecraft/world/entity/player/Player;)V
+  3: #75 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #305 (Ljava/lang/Object;)V
+      #485 REF_invokeVirtual dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$spawnArrow$4:(Lnet/minecraft/world/entity/projectile/AbstractArrow;Lcom/oblivioussp/spartanweaponry/api/trait/IRangedTraitCallback;)V
+      #487 (Lcom/oblivioussp/spartanweaponry/api/trait/IRangedTraitCallback;)V
+  4: #75 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #61 (Ljava/lang/Object;)Z
+      #567 REF_invokeStatic dev/xaulim/awakeningicaruscompat/mixin/HeavyCrossbowArrowMixin.lambda$static$0:(Lnet/minecraft/world/item/ItemStack;)Z
+
+=== Spartan resolved JAR ===
+/home/runner/.gradle/caches/modules-2/files-2.1/curse.maven/spartan-weaponry-278141/6842571/187977cf09972df5773c92b8af5fd342a9d726cb/spartan-weaponry-278141-6842571.jar
+=== Spartan HeavyCrossbowItem signatures ===
+  private static void lambda$releaseUsing$2(net.minecraft.world.entity.player.Player, net.minecraft.world.entity.player.Player);
+DrowSunGlareOverlay.class: packaged
