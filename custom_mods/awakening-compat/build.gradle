@@ -111,11 +111,6 @@ dependencies {
 mixin {
     add sourceSets.main, 'awakening_compat.refmap.json'
     config 'awakening_compat.mixins.json'
-
-    // Icarus/Icarus Rewinged mixins deliberately target optional third-party classes by name.
-    // Keep the plugin option as documentation/IDE support; Gradle 8.8 + MixinGradle 0.7.38
-    // does not propagate it reliably to javac, so the JavaCompile option below is authoritative.
-    disableTargetValidator = true
 }
 
 tasks.named('jar', Jar).configure {
@@ -132,5 +127,4 @@ tasks.named('jar', Jar).configure {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.release = 17
-    options.compilerArgs += ['-AdisableTargetValidator=true']
 }
