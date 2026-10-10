@@ -6,301 +6,42 @@
     "All non-wood ranged bows are crafted in a vanilla crafting table from the matching wooden bow plus two units of the normal, unheated material.",
     "Wooden Short, Recurve and Flat bows are crafted directly from planks, wooden rods, a simple handle and string.",
     "Tin, Bronze, Electrum, Lead, Nickel, Invar, Constantan, Platinum and Aluminum variants are intentionally excluded.",
-    "Material traits audited from native Spartan addons are not implicitly inherited by Awakening Short/Recurve/Flat bows; trait integration must be explicit.",
+    "enchantability, fire_resistant, damage_trait, post_hit_effect and special_traits are audited material properties mapped only where the RangedJS behavior is verified.",
+    "Cataclysm unbreakable traits are intentionally not mapped here because global durability removal is a separate task.",
     "Visuals are original Awakening pixel geometry built entirely from model JSON and vanilla Minecraft textures."
   ],
-  "balance": {
-    "draw_rounding": "round",
-    "minimum_draw_time": 5
-  },
-  "assembly": {
-    "rod": "#forge:rods/wooden"
-  },
+  "balance": {"draw_rounding":"round","minimum_draw_time":5},
+  "assembly": {"rod":"#forge:rods/wooden"},
   "bow_types": {
-    "short_bow": {
-      "suffix": "short_bow",
-      "name": "Short Bow",
-      "draw_time": 15,
-      "velocity": 1.8,
-      "base_damage": 2.0,
-      "max_damage": 384,
-      "handle": "spartanweaponry:simple_handle",
-      "string": "minecraft:string"
-    },
-    "recurve_bow": {
-      "suffix": "recurve_bow",
-      "name": "Recurve Bow",
-      "draw_time": 20,
-      "velocity": 3.3,
-      "base_damage": 2.0,
-      "max_damage": 384,
-      "handle": "spartanweaponry:simple_handle",
-      "string": "minecraft:string"
-    },
-    "flat_bow": {
-      "suffix": "flat_bow",
-      "name": "Flat Bow",
-      "draw_time": 65,
-      "velocity": 4.0,
-      "base_damage": 3.0,
-      "max_damage": 384,
-      "handle": "spartanweaponry:simple_handle",
-      "string": "minecraft:string"
-    }
+    "short_bow": {"suffix":"short_bow","name":"Short Bow","draw_time":15,"velocity":1.8,"base_damage":2.0,"max_damage":384,"handle":"spartanweaponry:simple_handle","string":"minecraft:string"},
+    "recurve_bow": {"suffix":"recurve_bow","name":"Recurve Bow","draw_time":20,"velocity":3.3,"base_damage":2.0,"max_damage":384,"handle":"spartanweaponry:simple_handle","string":"minecraft:string"},
+    "flat_bow": {"suffix":"flat_bow","name":"Flat Bow","draw_time":65,"velocity":4.0,"base_damage":3.0,"max_damage":384,"handle":"spartanweaponry:simple_handle","string":"minecraft:string"}
   },
   "materials": [
-    {
-      "id": "wood",
-      "name": "Wood",
-      "source_longbow": "spartanweaponry:wooden_longbow",
-      "damage_scale": 1.0,
-      "velocity_scale": 1.0,
-      "draw_scale": 1.0,
-      "existing_outputs": {
-        "short_bow": "awakening:wooden_short_bow",
-        "recurve_bow": "awakening:wooden_recurve_bow",
-        "flat_bow": "awakening:wooden_flat_bow"
-      }
-    },
-    {
-      "id": "leather",
-      "name": "Leather",
-      "source_longbow": "spartanweaponry:leather_longbow",
-      "damage_scale": 0.95,
-      "velocity_scale": 1.02,
-      "draw_scale": 0.95,
-      "color": "B97845",
-      "crafting_material": "minecraft:leather"
-    },
-    {
-      "id": "copper",
-      "name": "Copper",
-      "source_longbow": "spartanweaponry:copper_longbow",
-      "damage_scale": 1.05,
-      "velocity_scale": 1.02,
-      "draw_scale": 1.0,
-      "color": "E2835D",
-      "crafting_material": "minecraft:copper_ingot"
-    },
-    {
-      "id": "iron",
-      "name": "Iron",
-      "source_longbow": "spartanweaponry:iron_longbow",
-      "damage_scale": 1.15,
-      "velocity_scale": 1.04,
-      "draw_scale": 1.0,
-      "color": "D0D7DC",
-      "crafting_material": "minecraft:iron_ingot"
-    },
-    {
-      "id": "gold",
-      "name": "Gold",
-      "source_longbow": "spartanweaponry:golden_longbow",
-      "damage_scale": 1.0,
-      "velocity_scale": 1.08,
-      "draw_scale": 0.9,
-      "color": "FFE26A",
-      "crafting_material": "minecraft:gold_ingot"
-    },
-    {
-      "id": "diamond",
-      "name": "Diamond",
-      "source_longbow": "spartanweaponry:diamond_longbow",
-      "damage_scale": 1.28,
-      "velocity_scale": 1.08,
-      "draw_scale": 0.95,
-      "color": "91F7E8",
-      "crafting_material": "minecraft:diamond"
-    },
-    {
-      "id": "netherite",
-      "name": "Netherite",
-      "source_longbow": "spartanweaponry:netherite_longbow",
-      "damage_scale": 1.38,
-      "velocity_scale": 1.09,
-      "draw_scale": 1.02,
-      "color": "9B8790",
-      "crafting_material": "minecraft:netherite_ingot"
-    },
-    {
-      "id": "steel",
-      "name": "Steel",
-      "source_longbow": "spartanweaponry:steel_longbow",
-      "damage_scale": 1.2,
-      "velocity_scale": 1.05,
-      "draw_scale": 1.0,
-      "color": "C2D0D7",
-      "crafting_material": "#forge:ingots/steel"
-    },
-    {
-      "id": "silver",
-      "name": "Silver",
-      "source_longbow": "spartanweaponry:silver_longbow",
-      "damage_scale": 1.02,
-      "velocity_scale": 1.05,
-      "draw_scale": 0.98,
-      "color": "F2F5F5",
-      "crafting_material": "#forge:ingots/silver"
-    },
-    {
-      "id": "cloggrum",
-      "name": "Cloggrum",
-      "source_longbow": "spartanundergarden:cloggrum_longbow",
-      "damage_scale": 1.18,
-      "velocity_scale": 1.04,
-      "draw_scale": 1.03,
-      "color": "82AAA1",
-      "crafting_material": "undergarden:cloggrum_ingot"
-    },
-    {
-      "id": "froststeel",
-      "name": "Froststeel",
-      "source_longbow": "spartanundergarden:froststeel_longbow",
-      "damage_scale": 1.1,
-      "velocity_scale": 1.08,
-      "draw_scale": 0.95,
-      "color": "CAE9F4",
-      "crafting_material": "undergarden:froststeel_ingot"
-    },
-    {
-      "id": "utherium",
-      "name": "Utherium",
-      "source_longbow": "spartanundergarden:utherium_longbow",
-      "damage_scale": 1.28,
-      "velocity_scale": 1.11,
-      "draw_scale": 0.95,
-      "color": "C49AE3",
-      "crafting_material": "undergarden:utherium_crystal"
-    },
-    {
-      "id": "forgotten",
-      "name": "Forgotten",
-      "source_longbow": "spartanundergarden:forgotten_longbow",
-      "damage_scale": 1.32,
-      "velocity_scale": 1.09,
-      "draw_scale": 1.05,
-      "color": "A0AAA7",
-      "crafting_material": "#forge:ingots/forgotten_metal"
-    },
-    {
-      "id": "cursium",
-      "name": "Cursium",
-      "source_longbow": "spartancataclysm:cursium_longbow",
-      "damage_scale": 1.42,
-      "velocity_scale": 1.12,
-      "draw_scale": 1.0,
-      "color": "E481A7",
-      "crafting_material": "cataclysm:cursium_ingot"
-    },
-    {
-      "id": "ignitium",
-      "name": "Ignitium",
-      "source_longbow": "spartancataclysm:ignitium_longbow",
-      "damage_scale": 1.46,
-      "velocity_scale": 1.11,
-      "draw_scale": 1.03,
-      "color": "FFAA4C",
-      "crafting_material": "cataclysm:ignitium_ingot"
-    },
-    {
-      "id": "ironwood",
-      "name": "Ironwood",
-      "source_longbow": "spartantwilight:ironwood_longbow",
-      "damage_scale": 1.12,
-      "velocity_scale": 1.06,
-      "draw_scale": 0.95,
-      "color": "B69B67",
-      "crafting_material": "twilightforest:ironwood_ingot"
-    },
-    {
-      "id": "fiery",
-      "name": "Fiery",
-      "source_longbow": "spartantwilight:fiery_longbow",
-      "damage_scale": 1.32,
-      "velocity_scale": 1.11,
-      "draw_scale": 1.0,
-      "color": "FFB32E",
-      "crafting_material": "twilightforest:fiery_ingot"
-    },
-    {
-      "id": "steeleaf",
-      "name": "Steeleaf",
-      "source_longbow": "spartantwilight:steeleaf_longbow",
-      "damage_scale": 1.14,
-      "velocity_scale": 1.13,
-      "draw_scale": 0.9,
-      "color": "A3D67E",
-      "crafting_material": "twilightforest:steeleaf_ingot"
-    },
-    {
-      "id": "knightmetal",
-      "name": "Knightmetal",
-      "source_longbow": "spartantwilight:knightmetal_longbow",
-      "damage_scale": 1.22,
-      "velocity_scale": 1.06,
-      "draw_scale": 1.05,
-      "color": "D0D7EC",
-      "crafting_material": "twilightforest:knightmetal_ingot"
-    },
-    {
-      "id": "ancient_metal",
-      "name": "Ancient Metal",
-      "source_longbow": "spartancataclysm:ancient_metal_longbow",
-      "damage_scale": 1.22,
-      "velocity_scale": 1.09,
-      "draw_scale": 0.95,
-      "color": "D3B77A",
-      "crafting_material": "cataclysm:ancient_metal_ingot"
-    },
-    {
-      "id": "black_steel",
-      "name": "Black Steel",
-      "source_longbow": "spartancataclysm:black_steel_longbow",
-      "damage_scale": 1.22,
-      "velocity_scale": 1.09,
-      "draw_scale": 0.95,
-      "color": "7C8795",
-      "crafting_material": "cataclysm:black_steel_ingot"
-    },
-    {
-      "id": "witherite",
-      "name": "Witherite",
-      "source_longbow": "spartancataclysm:witherite_longbow",
-      "damage_scale": 1.44,
-      "velocity_scale": 1.07,
-      "draw_scale": 1.08,
-      "color": "9D94B3",
-      "crafting_material": "cataclysm:witherite_ingot"
-    },
-    {
-      "id": "fire_dragonsteel",
-      "name": "Fire Dragonsteel",
-      "source_longbow": "spartanfire:fire_dragonsteel_longbow",
-      "damage_scale": 1.55,
-      "velocity_scale": 1.15,
-      "draw_scale": 0.95,
-      "color": "E76054",
-      "crafting_material": "iceandfire:dragonsteel_fire_ingot"
-    },
-    {
-      "id": "ice_dragonsteel",
-      "name": "Ice Dragonsteel",
-      "source_longbow": "spartanfire:ice_dragonsteel_longbow",
-      "damage_scale": 1.55,
-      "velocity_scale": 1.15,
-      "draw_scale": 0.95,
-      "color": "9CD9E8",
-      "crafting_material": "iceandfire:dragonsteel_ice_ingot"
-    },
-    {
-      "id": "lightning_dragonsteel",
-      "name": "Lightning Dragonsteel",
-      "source_longbow": "spartanfire:lightning_dragonsteel_longbow",
-      "damage_scale": 1.55,
-      "velocity_scale": 1.15,
-      "draw_scale": 0.95,
-      "color": "B9AEF2",
-      "crafting_material": "iceandfire:dragonsteel_lightning_ingot"
-    }
+    {"id":"wood","name":"Wood","source_longbow":"spartanweaponry:wooden_longbow","damage_scale":1.0,"velocity_scale":1.0,"draw_scale":1.0,"enchantability":15,"existing_outputs":{"short_bow":"awakening:wooden_short_bow","recurve_bow":"awakening:wooden_recurve_bow","flat_bow":"awakening:wooden_flat_bow"}},
+    {"id":"leather","name":"Leather","source_longbow":"spartanweaponry:leather_longbow","damage_scale":0.95,"velocity_scale":1.02,"draw_scale":0.95,"enchantability":5,"color":"B97845","crafting_material":"minecraft:leather"},
+    {"id":"copper","name":"Copper","source_longbow":"spartanweaponry:copper_longbow","damage_scale":1.05,"velocity_scale":1.02,"draw_scale":1.0,"enchantability":8,"color":"E2835D","crafting_material":"minecraft:copper_ingot"},
+    {"id":"iron","name":"Iron","source_longbow":"spartanweaponry:iron_longbow","damage_scale":1.15,"velocity_scale":1.04,"draw_scale":1.0,"enchantability":14,"color":"D0D7DC","crafting_material":"minecraft:iron_ingot"},
+    {"id":"gold","name":"Gold","source_longbow":"spartanweaponry:golden_longbow","damage_scale":1.0,"velocity_scale":1.08,"draw_scale":0.9,"enchantability":22,"color":"FFE26A","crafting_material":"minecraft:gold_ingot"},
+    {"id":"diamond","name":"Diamond","source_longbow":"spartanweaponry:diamond_longbow","damage_scale":1.28,"velocity_scale":1.08,"draw_scale":0.95,"enchantability":10,"color":"91F7E8","crafting_material":"minecraft:diamond"},
+    {"id":"netherite","name":"Netherite","source_longbow":"spartanweaponry:netherite_longbow","damage_scale":1.38,"velocity_scale":1.09,"draw_scale":1.02,"enchantability":15,"fire_resistant":true,"color":"9B8790","crafting_material":"minecraft:netherite_ingot"},
+    {"id":"steel","name":"Steel","source_longbow":"spartanweaponry:steel_longbow","damage_scale":1.2,"velocity_scale":1.05,"draw_scale":1.0,"enchantability":14,"color":"C2D0D7","crafting_material":"#forge:ingots/steel"},
+    {"id":"silver","name":"Silver","source_longbow":"spartanweaponry:silver_longbow","damage_scale":1.02,"velocity_scale":1.05,"draw_scale":0.98,"enchantability":16,"damage_trait":{"kind":"mob_type","value":"UNDEAD","multiplier":1.5},"color":"F2F5F5","crafting_material":"#forge:ingots/silver"},
+    {"id":"cloggrum","name":"Cloggrum","source_longbow":"spartanundergarden:cloggrum_longbow","damage_scale":1.18,"velocity_scale":1.04,"draw_scale":1.03,"enchantability":8,"color":"82AAA1","crafting_material":"undergarden:cloggrum_ingot"},
+    {"id":"froststeel","name":"Froststeel","source_longbow":"spartanundergarden:froststeel_longbow","damage_scale":1.1,"velocity_scale":1.08,"draw_scale":0.95,"enchantability":20,"post_hit_effect":{"id":"undergarden:chilly","duration":600,"amplifier":2},"color":"CAE9F4","crafting_material":"undergarden:froststeel_ingot"},
+    {"id":"utherium","name":"Utherium","source_longbow":"spartanundergarden:utherium_longbow","damage_scale":1.28,"velocity_scale":1.11,"draw_scale":0.95,"enchantability":17,"damage_trait":{"kind":"entity_tag","value":"undergarden:rotspawn","multiplier":1.5},"color":"C49AE3","crafting_material":"undergarden:utherium_crystal"},
+    {"id":"forgotten","name":"Forgotten","source_longbow":"spartanundergarden:forgotten_longbow","damage_scale":1.32,"velocity_scale":1.09,"draw_scale":1.05,"enchantability":2,"damage_trait":{"kind":"namespace_non_boss","value":"undergarden","multiplier":1.5},"color":"A0AAA7","crafting_material":"#forge:ingots/forgotten_metal"},
+    {"id":"cursium","name":"Cursium","source_longbow":"spartancataclysm:cursium_longbow","damage_scale":1.42,"velocity_scale":1.12,"draw_scale":1.0,"enchantability":20,"fire_resistant":true,"special_traits":["spartancataclysm:accursed_rage"],"color":"E481A7","crafting_material":"cataclysm:cursium_ingot"},
+    {"id":"ignitium","name":"Ignitium","source_longbow":"spartancataclysm:ignitium_longbow","damage_scale":1.46,"velocity_scale":1.11,"draw_scale":1.03,"enchantability":20,"fire_resistant":true,"special_traits":["spartancataclysm:blazing_brand"],"color":"FFAA4C","crafting_material":"cataclysm:ignitium_ingot"},
+    {"id":"ironwood","name":"Ironwood","source_longbow":"spartantwilight:ironwood_longbow","damage_scale":1.12,"velocity_scale":1.06,"draw_scale":0.95,"enchantability":25,"color":"B69B67","crafting_material":"twilightforest:ironwood_ingot"},
+    {"id":"fiery","name":"Fiery","source_longbow":"spartantwilight:fiery_longbow","damage_scale":1.32,"velocity_scale":1.11,"draw_scale":1.0,"enchantability":10,"fire_resistant":true,"special_traits":["spartantwilight:blazing"],"color":"FFB32E","crafting_material":"twilightforest:fiery_ingot"},
+    {"id":"steeleaf","name":"Steeleaf","source_longbow":"spartantwilight:steeleaf_longbow","damage_scale":1.14,"velocity_scale":1.13,"draw_scale":0.9,"enchantability":9,"color":"A3D67E","crafting_material":"twilightforest:steeleaf_ingot"},
+    {"id":"knightmetal","name":"Knightmetal","source_longbow":"spartantwilight:knightmetal_longbow","damage_scale":1.22,"velocity_scale":1.06,"draw_scale":1.05,"enchantability":8,"special_traits":["spartantwilight:armored_damage_bonus"],"color":"D0D7EC","crafting_material":"twilightforest:knightmetal_ingot"},
+    {"id":"ancient_metal","name":"Ancient Metal","source_longbow":"spartancataclysm:ancient_metal_longbow","damage_scale":1.22,"velocity_scale":1.09,"draw_scale":0.95,"enchantability":25,"color":"D3B77A","crafting_material":"cataclysm:ancient_metal_ingot"},
+    {"id":"black_steel","name":"Black Steel","source_longbow":"spartancataclysm:black_steel_longbow","damage_scale":1.22,"velocity_scale":1.09,"draw_scale":0.95,"enchantability":25,"color":"7C8795","crafting_material":"cataclysm:black_steel_ingot"},
+    {"id":"witherite","name":"Witherite","source_longbow":"spartancataclysm:witherite_longbow","damage_scale":1.44,"velocity_scale":1.07,"draw_scale":1.08,"enchantability":18,"fire_resistant":true,"special_traits":["spartancataclysm:mecha_smite","spartancataclysm:mecha_pulse"],"color":"9D94B3","crafting_material":"cataclysm:witherite_ingot"},
+    {"id":"fire_dragonsteel","name":"Fire Dragonsteel","source_longbow":"spartanfire:fire_dragonsteel_longbow","damage_scale":1.55,"velocity_scale":1.15,"draw_scale":0.95,"enchantability":10,"special_traits":["spartanfire:flamed_2"],"color":"E76054","crafting_material":"iceandfire:dragonsteel_fire_ingot"},
+    {"id":"ice_dragonsteel","name":"Ice Dragonsteel","source_longbow":"spartanfire:ice_dragonsteel_longbow","damage_scale":1.55,"velocity_scale":1.15,"draw_scale":0.95,"enchantability":10,"special_traits":["spartanfire:iced_2"],"color":"9CD9E8","crafting_material":"iceandfire:dragonsteel_ice_ingot"},
+    {"id":"lightning_dragonsteel","name":"Lightning Dragonsteel","source_longbow":"spartanfire:lightning_dragonsteel_longbow","damage_scale":1.55,"velocity_scale":1.15,"draw_scale":0.95,"enchantability":10,"special_traits":["spartanfire:shocked"],"color":"B9AEF2","crafting_material":"iceandfire:dragonsteel_lightning_ingot"}
   ]
 }
