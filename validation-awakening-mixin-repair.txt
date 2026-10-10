@@ -1,4 +1,4 @@
-commit=43cdc4f719ecca30a62c24d054621dc80513de5e
+commit=fded4f80c9a34cc7fdffaf6f18aadba136cee5ac
 java=openjdk version "17.0.20.1" 2026-08-18
 
 === gradle build ===
@@ -42,14 +42,14 @@ Executing steps
  > Running 'listLibraries'
  > Running 'rename'
 Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
-[12:05:44] [main/INFO]: Writing debug log file accesstransform.log
-[12:05:44] [main/INFO]: Access Transformer processor running version 8.2.14
-[12:05:44] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg]
-[12:05:44] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar
-[12:05:44] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
-[12:05:44] [main/INFO]: Transformer file /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg
-[12:05:44] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, overwriting
-[12:05:47] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
+[12:12:56] [main/INFO]: Writing debug log file accesstransform.log
+[12:12:56] [main/INFO]: Access Transformer processor running version 8.2.14
+[12:12:56] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg]
+[12:12:56] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22/forge-1.20.1-47.4.22-injected.jar
+[12:12:56] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
+[12:12:56] [main/INFO]: Transformer file /home/runner/work/Modpack/Modpack/custom_mods/awakening-compat/build/_atJar_4/parent_at.cfg
+[12:12:56] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar, overwriting
+[12:12:59] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.22_mapped_official_1.20.1/forge-1.20.1-47.4.22_mapped_official_1.20.1.jar
 Creating SRG -> MCP TSRG
 Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7.38)
 Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
@@ -331,7 +331,7 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 5m 40s
+BUILD FAILED in 5m 33s
 5 actionable tasks: 5 executed
 
 build_status=1
