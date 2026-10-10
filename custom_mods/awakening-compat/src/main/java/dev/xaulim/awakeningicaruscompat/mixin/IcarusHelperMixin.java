@@ -3,10 +3,12 @@ package dev.xaulim.awakeningicaruscompat.mixin;
 import dev.xaulim.awakeningicaruscompat.compat.FaerieDetector;
 import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+@Pseudo
 @Mixin(
     targets = "dev.cammiescorner.icarus.util.IcarusHelper",
     remap = false
