@@ -57,6 +57,17 @@ ordering="AFTER"
 side="BOTH"
 
 # =========================
+# ICARUS: RE-WINGED
+# =========================
+
+[[dependencies.awakening_compat]]
+modId="icarusrewinged"
+mandatory=false
+versionRange="[1.1.4]"
+ordering="AFTER"
+side="CLIENT"
+
+# =========================
 # SPARTAN WEAPONRY
 # =========================
 

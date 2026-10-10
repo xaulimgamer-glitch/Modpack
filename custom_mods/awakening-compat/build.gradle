@@ -71,6 +71,14 @@ dependencies {
             'curse.maven:origins-forge-474438:5314209'
     )
 
+    runtimeOnly fg.deobf(
+            'curse.maven:icarus-428151:8247925'
+    )
+
+    runtimeOnly fg.deobf(
+            'curse.maven:icarus-rewinged-1584283:8539656'
+    )
+
     compileOnly fg.deobf(
             'curse.maven:spartan-weaponry-278141:6842571'
     )
