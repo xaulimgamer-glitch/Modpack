@@ -14,6 +14,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
@@ -27,6 +28,8 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = AwakeningCompat.MOD_ID)
 public final class TortleShellEvents {
+
+    private static final int SANITIZE_INTERVAL_TICKS = 100;
 
     private TortleShellEvents() {}
 
@@ -156,15 +159,38 @@ public final class TortleShellEvents {
         }
     }
 
+    /**
+     * Chest-slot changes are the common path for an invariant violation. Repair
+     * Tortles immediately, and non-Tortles only when the changed stack itself is
+     * a racial shell. The periodic sanitizer remains as a backstop for commands,
+     * other mods and legacy inventory state that can bypass equipment events.
+     */
+    @SubscribeEvent
+    public static void onEquipmentChange(LivingEquipmentChangeEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)
+                || event.getSlot() != EquipmentSlot.CHEST) {
+            return;
+        }
+
+        if (TortleShellLifecycle.isOwner(player)
+                || TortleShellLifecycle.isShell(event.getFrom())
+                || TortleShellLifecycle.isShell(event.getTo())) {
+            TortleShellLifecycle.sanitize(player);
+        }
+    }
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
 
         Player player = event.player;
         if (!player.level().isClientSide && player instanceof ServerPlayer serverPlayer) {
-            // Continuous invariant repair also deletes shells recovered from
-            // legacy corpses or inventories created by older builds.
-            TortleShellLifecycle.sanitize(serverPlayer);
+            // Lifecycle/equipment events handle normal changes immediately. This
+            // staggered fallback catches mutations that bypass those paths without
+            // scanning every player's entire inventory on every server tick.
+            if (Math.floorMod(serverPlayer.tickCount + serverPlayer.getId(), SANITIZE_INTERVAL_TICKS) == 0) {
+                TortleShellLifecycle.sanitize(serverPlayer);
+            }
 
             // Recharge checks are intentionally spaced and server-authoritative.
             if (TortleShellLifecycle.isOwner(serverPlayer)

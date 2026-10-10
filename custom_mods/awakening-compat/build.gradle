@@ -2,6 +2,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.38'
 }
 
 version = '0.1.0'
@@ -57,18 +58,24 @@ repositories {
 
         content {
             includeGroup "io.github.edwinmindcraft"
-            }
+        }
     }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.4.22'
 
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     implementation fg.deobf(
             'curse.maven:origins-forge-474438:5314209'
     )
 
     compileOnly fg.deobf(
+            'curse.maven:spartan-weaponry-278141:6842571'
+    )
+
+    runtimeOnly fg.deobf(
             'curse.maven:spartan-weaponry-278141:6842571'
     )
 
@@ -99,6 +106,11 @@ dependencies {
     runtimeOnly fg.deobf(
             'dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20'
     )
+}
+
+mixin {
+    add sourceSets.main, 'awakening_compat.refmap.json'
+    config 'awakening_compat.mixins.json'
 }
 
 tasks.named('jar', Jar).configure {

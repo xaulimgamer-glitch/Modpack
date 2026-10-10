@@ -31,47 +31,62 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Replaces Spartan Weaponry's bolt-only Heavy Crossbow projectile path with arrows while preserving
- * its load/aim timing, enchantment behavior, material traits and durability handling.
+ * Extends Spartan Weaponry's Heavy Crossbow projectile support with arrows while preserving
+ * its native bolt path, load/aim timing, enchantment behavior, material traits and durability handling.
  *
  * The target class is pinned by build.gradle to Spartan Weaponry 1.20.1-3.2.1.
  */
 @Mixin(HeavyCrossbowItem.class)
 public abstract class HeavyCrossbowArrowMixin {
-    private static final Predicate<ItemStack> AWAKENING_ARROWS = stack -> stack.getItem() instanceof ArrowItem;
+    private static final Predicate<ItemStack> AWAKENING_ARROWS = stack ->
+            stack != null && !stack.isEmpty() && stack.getItem() instanceof ArrowItem;
     private static final float HEAVY_MAX_INACCURACY = 12.0F;
     private static final float HEAVY_PROJECTILE_VELOCITY = 4.5F;
 
     @Shadow(remap = false) protected WeaponMaterial material;
     @Shadow(remap = false) protected List<WeaponTrait> rangedTraits;
 
-    @Inject(method = "getAllSupportedProjectiles", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getAllSupportedProjectiles", at = @At("RETURN"), cancellable = true)
     private void awakening$allSupportedProjectiles(CallbackInfoReturnable<Predicate<ItemStack>> cir) {
-        cir.setReturnValue(AWAKENING_ARROWS);
+        Predicate<ItemStack> original = cir.getReturnValue();
+        cir.setReturnValue(stack -> (original != null && original.test(stack)) || AWAKENING_ARROWS.test(stack));
     }
 
-    @Inject(method = "getSupportedHeldProjectiles", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getSupportedHeldProjectiles", at = @At("RETURN"), cancellable = true)
     private void awakening$heldProjectiles(CallbackInfoReturnable<Predicate<ItemStack>> cir) {
-        cir.setReturnValue(AWAKENING_ARROWS);
+        Predicate<ItemStack> original = cir.getReturnValue();
+        cir.setReturnValue(stack -> (original != null && original.test(stack)) || AWAKENING_ARROWS.test(stack));
     }
 
     @Inject(method = "releaseUsing", at = @At("HEAD"), cancellable = true)
     private void awakening$releaseUsing(ItemStack crossbow, Level level, LivingEntity living, int timeLeft, CallbackInfo ci) {
-        ci.cancel();
         if (!(living instanceof Player player)) return;
 
         HeavyCrossbowItem self = (HeavyCrossbowItem) (Object) this;
+        boolean loadingArrow = self.getLoadProgress(crossbow, living) == 1.0F;
+
+        if (loadingArrow) {
+            ItemStack selectedProjectile = living.getProjectile(crossbow);
+            if (!AWAKENING_ARROWS.test(selectedProjectile)) return;
+        } else {
+            CompoundTag storedProjectileTag = crossbow.getOrCreateTag().getCompound(HeavyCrossbowItem.NBT_PROJECTILE);
+            ItemStack storedProjectile = storedProjectileTag.isEmpty()
+                    ? ItemStack.EMPTY
+                    : ItemStack.of(storedProjectileTag);
+            if (!AWAKENING_ARROWS.test(storedProjectile)) return;
+        }
+
+        ci.cancel();
+
         boolean creativeOrInfinityEnchantment = player.getAbilities().instabuild
                 || crossbow.getEnchantmentLevel(Enchantments.INFINITY_ARROWS) > 0;
 
-        if (self.getLoadProgress(crossbow, living) == 1.0F) {
+        if (loadingArrow) {
             crossbow.getOrCreateTag().putBoolean(HeavyCrossbowItem.NBT_CHARGED, true);
 
             int projectileCount = crossbow.getEnchantmentLevel(Enchantments.MULTISHOT) > 0 ? 3 : 1;
             ItemStack arrow = living.getProjectile(crossbow);
-            if (arrow.isEmpty() || !AWAKENING_ARROWS.test(arrow)) {
-                arrow = new ItemStack(Items.ARROW);
-            }
+            if (!AWAKENING_ARROWS.test(arrow)) return;
 
             ItemStack storedArrow = arrow.copy();
             storedArrow.setCount(projectileCount);
