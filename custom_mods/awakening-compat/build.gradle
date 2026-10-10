@@ -111,6 +111,11 @@ dependencies {
 mixin {
     add sourceSets.main, 'awakening_compat.refmap.json'
     config 'awakening_compat.mixins.json'
+
+    // Icarus/Icarus Rewinged mixins deliberately target optional third-party classes by name.
+    // Those classes are not part of this module's compile classpath, so the AP target validator
+    // must not reject them. Refmap generation/remapping for Minecraft targets remains enabled.
+    disableTargetValidator = true
 }
 
 tasks.named('jar', Jar).configure {
