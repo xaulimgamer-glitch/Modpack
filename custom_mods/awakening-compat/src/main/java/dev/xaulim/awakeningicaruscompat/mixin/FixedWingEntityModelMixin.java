@@ -4,9 +4,11 @@ import dev.xaulim.awakeningicaruscompat.compat.FaerieDetector;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+@Pseudo
 @Mixin(
     targets = "com.r3x.icarusrewinged.client.models.FixedWingEntityModel",
     remap = false
