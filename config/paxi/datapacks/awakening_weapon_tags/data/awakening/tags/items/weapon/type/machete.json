@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "awakening:ancient_metal_machete",
+    "awakening:black_steel_machete",
+    "awakening:cloggrum_machete",
+    "awakening:fiery_machete",
+    "awakening:froststeel_machete",
+    "awakening:ironwood_machete",
+    "awakening:knightmetal_machete",
+    "awakening:steeleaf_machete",
+    "awakening:utherium_machete",
+    "awakening:witherite_machete",
+    "nethersdelight:diamond_machete",
+    "nethersdelight:golden_machete",
+    "nethersdelight:iron_machete",
+    "nethersdelight:netherite_machete"
+  ]
+}

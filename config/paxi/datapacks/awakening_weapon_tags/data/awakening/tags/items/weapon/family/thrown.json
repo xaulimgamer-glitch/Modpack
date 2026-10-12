@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/boomerang",
+    "#awakening:weapon/type/chakram",
+    "#awakening:weapon/type/throwable_bottle",
+    "#awakening:weapon/type/throwable_charge",
+    "#awakening:weapon/type/throwable_swarm",
+    "#awakening:weapon/type/throwing_dust",
+    "#awakening:weapon/type/throwing_feathers"
+  ]
+}

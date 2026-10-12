@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "vampirism:crucifix_enhanced",
+    "vampirism:crucifix_normal",
+    "vampirism:crucifix_ultimate"
+  ]
+}

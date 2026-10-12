@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/blowgun",
+    "#awakening:weapon/type/slingshot"
+  ]
+}

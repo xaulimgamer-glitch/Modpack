@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/arbalest",
+    "#awakening:weapon/type/crossbow",
+    "#awakening:weapon/type/double_crossbow",
+    "#awakening:weapon/type/heavy_crossbow",
+    "#awakening:weapon/type/pistol_crossbow",
+    "#awakening:weapon/type/tech_crossbow"
+  ]
+}

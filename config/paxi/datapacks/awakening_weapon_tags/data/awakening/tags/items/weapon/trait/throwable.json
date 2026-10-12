@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/anchor",
+    "#awakening:weapon/type/boomerang",
+    "#awakening:weapon/type/chakram",
+    "#awakening:weapon/type/dynamite",
+    "cataclysm:brontes",
+    "#awakening:weapon/type/javelin",
+    "#awakening:weapon/type/molotov",
+    "alexscaves:extinction_spear",
+    "alexscaves:frostmint_spear",
+    "alexscaves:limestone_spear",
+    "cataclysm:coral_spear",
+    "irons_spellbooks:twilight_gale",
+    "#awakening:weapon/type/throwable_bottle",
+    "#awakening:weapon/type/throwable_charge",
+    "#awakening:weapon/type/throwing_knife",
+    "#awakening:weapon/type/tomahawk",
+    "#awakening:weapon/type/trident"
+  ]
+}

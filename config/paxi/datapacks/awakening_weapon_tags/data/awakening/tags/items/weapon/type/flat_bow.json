@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "awakening:ancient_metal_flat_bow",
+    "awakening:black_steel_flat_bow",
+    "awakening:cloggrum_flat_bow",
+    "awakening:copper_flat_bow",
+    "awakening:cursium_flat_bow",
+    "awakening:diamond_flat_bow",
+    "awakening:fiery_flat_bow",
+    "awakening:fire_dragonsteel_flat_bow",
+    "awakening:forgotten_flat_bow",
+    "awakening:froststeel_flat_bow",
+    "awakening:gold_flat_bow",
+    "awakening:ice_dragonsteel_flat_bow",
+    "awakening:ignitium_flat_bow",
+    "awakening:iron_flat_bow",
+    "awakening:ironwood_flat_bow",
+    "awakening:knightmetal_flat_bow",
+    "awakening:leather_flat_bow",
+    "awakening:lightning_dragonsteel_flat_bow",
+    "awakening:netherite_flat_bow",
+    "awakening:silver_flat_bow",
+    "awakening:steel_flat_bow",
+    "awakening:steeleaf_flat_bow",
+    "awakening:utherium_flat_bow",
+    "awakening:witherite_flat_bow",
+    "awakening:wooden_flat_bow"
+  ]
+}

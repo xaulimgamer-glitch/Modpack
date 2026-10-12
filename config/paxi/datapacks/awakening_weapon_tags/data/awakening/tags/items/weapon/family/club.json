@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/club",
+    "#awakening:weapon/type/macuahuitl"
+  ]
+}

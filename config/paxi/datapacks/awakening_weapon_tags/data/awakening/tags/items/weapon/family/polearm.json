@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/bardiche",
+    "#awakening:weapon/type/glaive",
+    "#awakening:weapon/type/halberd",
+    "#awakening:weapon/type/javelin",
+    "#awakening:weapon/type/lance",
+    "#awakening:weapon/type/pike",
+    "#awakening:weapon/type/scythe",
+    "#awakening:weapon/type/spear",
+    "#awakening:weapon/type/trident"
+  ]
+}

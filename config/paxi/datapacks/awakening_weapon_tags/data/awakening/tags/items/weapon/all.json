@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/family/axe",
+    "#awakening:weapon/family/blunt",
+    "#awakening:weapon/family/bow",
+    "#awakening:weapon/family/club",
+    "#awakening:weapon/family/crossbow",
+    "#awakening:weapon/family/device",
+    "#awakening:weapon/family/explosive",
+    "#awakening:weapon/family/firearm",
+    "#awakening:weapon/family/fist",
+    "#awakening:weapon/family/flexible",
+    "#awakening:weapon/family/knife",
+    "#awakening:weapon/family/launcher",
+    "#awakening:weapon/family/magic",
+    "#awakening:weapon/family/polearm",
+    "#awakening:weapon/family/shield",
+    "#awakening:weapon/family/staff",
+    "#awakening:weapon/family/sword",
+    "#awakening:weapon/family/thrown"
+  ]
+}

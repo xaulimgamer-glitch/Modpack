@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/flail",
+    "#awakening:weapon/type/hook",
+    "#awakening:weapon/type/whip"
+  ]
+}

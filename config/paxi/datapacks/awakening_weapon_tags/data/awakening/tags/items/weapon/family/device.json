@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/deployable_device",
+    "#awakening:weapon/type/detonator",
+    "#awakening:weapon/type/shredder"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cataclysm:void_core",
+    "cataclysm:wrath_of_the_desert",
+    "iceandfire:cyclops_eye",
+    "iceandfire:gorgon_head",
+    "mowziesmobs:ice_crystal",
+    "mythsandlegends:noctifer_tenebris",
+    "twilightforest:cube_of_annihilation"
+  ]
+}

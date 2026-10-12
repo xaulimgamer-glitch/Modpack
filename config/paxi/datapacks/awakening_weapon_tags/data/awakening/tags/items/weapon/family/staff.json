@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/battle_staff",
+    "#awakening:weapon/type/quarterstaff",
+    "#awakening:weapon/type/staff"
+  ]
+}

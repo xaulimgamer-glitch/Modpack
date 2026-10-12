@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "awakening:ancient_metal_short_bow",
+    "awakening:black_steel_short_bow",
+    "awakening:cloggrum_short_bow",
+    "awakening:copper_short_bow",
+    "awakening:cursium_short_bow",
+    "awakening:diamond_short_bow",
+    "awakening:fiery_short_bow",
+    "awakening:fire_dragonsteel_short_bow",
+    "awakening:forgotten_short_bow",
+    "awakening:froststeel_short_bow",
+    "awakening:gold_short_bow",
+    "awakening:ice_dragonsteel_short_bow",
+    "awakening:ignitium_short_bow",
+    "awakening:iron_short_bow",
+    "awakening:ironwood_short_bow",
+    "awakening:knightmetal_short_bow",
+    "awakening:leather_short_bow",
+    "awakening:lightning_dragonsteel_short_bow",
+    "awakening:netherite_short_bow",
+    "awakening:silver_short_bow",
+    "awakening:steel_short_bow",
+    "awakening:steeleaf_short_bow",
+    "awakening:utherium_short_bow",
+    "awakening:witherite_short_bow",
+    "awakening:wooden_short_bow",
+    "kubejs:crude_short_bow"
+  ]
+}

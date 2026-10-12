@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/greatsword",
+    "#awakening:weapon/type/katana",
+    "#awakening:weapon/type/khopesh",
+    "#awakening:weapon/type/long_sword",
+    "#awakening:weapon/type/rapier",
+    "#awakening:weapon/type/saber",
+    "#awakening:weapon/type/sword"
+  ]
+}

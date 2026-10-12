@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/dagger",
+    "#awakening:weapon/type/fillet_knife",
+    "#awakening:weapon/type/improvised_melee",
+    "#awakening:weapon/type/knife",
+    "#awakening:weapon/type/machete",
+    "#awakening:weapon/type/parrying_dagger",
+    "#awakening:weapon/type/stake",
+    "#awakening:weapon/type/throwing_knife"
+  ]
+}

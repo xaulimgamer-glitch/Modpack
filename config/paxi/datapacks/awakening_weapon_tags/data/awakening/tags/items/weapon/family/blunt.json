@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/anchor",
+    "#awakening:weapon/type/battle_hammer",
+    "#awakening:weapon/type/flanged_mace",
+    "#awakening:weapon/type/hammer",
+    "#awakening:weapon/type/mace",
+    "#awakening:weapon/type/war_hammer"
+  ]
+}

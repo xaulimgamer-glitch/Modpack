@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/bow",
+    "#awakening:weapon/type/flat_bow",
+    "#awakening:weapon/type/longbow",
+    "#awakening:weapon/type/recurve_bow",
+    "#awakening:weapon/type/short_bow"
+  ]
+}

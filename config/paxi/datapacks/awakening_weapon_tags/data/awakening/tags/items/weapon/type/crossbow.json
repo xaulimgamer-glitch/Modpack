@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "irons_spellbooks:autoloader_crossbow",
+    "minecraft:crossbow",
+    "vampirism:basic_crossbow",
+    "vampirism:enhanced_crossbow"
+  ]
+}

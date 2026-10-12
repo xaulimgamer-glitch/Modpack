@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "alexscaves:dreadbow",
+    "alexsmobsdelight:banana_bow",
+    "aquaculture:neptunium_bow",
+    "cataclysm:cursed_bow",
+    "iceandfire:dragonbone_bow",
+    "minecraft:bow",
+    "swem:bow_amethyst",
+    "twilightforest:ender_bow",
+    "twilightforest:ice_bow",
+    "twilightforest:seeker_bow",
+    "twilightforest:triple_bow"
+  ]
+}

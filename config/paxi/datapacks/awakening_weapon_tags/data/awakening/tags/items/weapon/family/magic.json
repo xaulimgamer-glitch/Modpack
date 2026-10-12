@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/crucifix",
+    "#awakening:weapon/type/magic_bottle",
+    "#awakening:weapon/type/magic_focus",
+    "#awakening:weapon/type/magic_instrument",
+    "#awakening:weapon/type/scepter",
+    "#awakening:weapon/type/wand"
+  ]
+}

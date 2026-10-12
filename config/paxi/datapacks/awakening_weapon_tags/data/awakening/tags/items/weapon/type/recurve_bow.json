@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "awakening:ancient_metal_recurve_bow",
+    "awakening:black_steel_recurve_bow",
+    "awakening:cloggrum_recurve_bow",
+    "awakening:copper_recurve_bow",
+    "awakening:cursium_recurve_bow",
+    "awakening:diamond_recurve_bow",
+    "awakening:fiery_recurve_bow",
+    "awakening:fire_dragonsteel_recurve_bow",
+    "awakening:forgotten_recurve_bow",
+    "awakening:froststeel_recurve_bow",
+    "awakening:gold_recurve_bow",
+    "awakening:ice_dragonsteel_recurve_bow",
+    "awakening:ignitium_recurve_bow",
+    "awakening:iron_recurve_bow",
+    "awakening:ironwood_recurve_bow",
+    "awakening:knightmetal_recurve_bow",
+    "awakening:leather_recurve_bow",
+    "awakening:lightning_dragonsteel_recurve_bow",
+    "awakening:netherite_recurve_bow",
+    "awakening:silver_recurve_bow",
+    "awakening:steel_recurve_bow",
+    "awakening:steeleaf_recurve_bow",
+    "awakening:utherium_recurve_bow",
+    "awakening:witherite_recurve_bow",
+    "awakening:wooden_recurve_bow"
+  ]
+}

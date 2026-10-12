@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/bomb",
+    "#awakening:weapon/type/dynamite",
+    "#awakening:weapon/type/molotov",
+    "#awakening:weapon/type/rocket"
+  ]
+}

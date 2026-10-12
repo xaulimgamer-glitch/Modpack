@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#awakening:weapon/type/blaster",
+    "#awakening:weapon/type/cannon",
+    "#awakening:weapon/type/gatling_gun",
+    "#awakening:weapon/type/gun",
+    "#awakening:weapon/type/hand_cannon",
+    "#awakening:weapon/type/ray_gun",
+    "#awakening:weapon/type/shoulder_cannon",
+    "#awakening:weapon/type/sprayer"
+  ]
+}
