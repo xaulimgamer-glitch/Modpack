@@ -25,9 +25,9 @@ public final class SpellCastRestrictionHandler {
 
     private static final ResourceLocation WIZARD = new ResourceLocation("rpgclasses", "wizard");
     private static final ResourceLocation CLERIC = new ResourceLocation("rpgclasses", "cleric");
+    private static final ResourceLocation PALADIN = new ResourceLocation("rpgclasses", "paladin");
 
     private static final Set<ResourceLocation> BLOCKED_CLASSES = Set.of(
-            new ResourceLocation("rpgclasses", "paladin"),
             new ResourceLocation("rpgclasses", "ranger"),
             new ResourceLocation("rpgclasses", "warrior"),
             new ResourceLocation("rpgclasses", "barbarian"),
@@ -48,6 +48,10 @@ public final class SpellCastRestrictionHandler {
     private static final Set<ResourceLocation> CLERIC_SCHOOLS = Set.of(
             SchoolRegistry.HOLY_RESOURCE,
             SchoolRegistry.BLOOD_RESOURCE
+    );
+
+    private static final Set<ResourceLocation> PALADIN_SCHOOLS = Set.of(
+            SchoolRegistry.HOLY_RESOURCE
     );
 
     private SpellCastRestrictionHandler() {
@@ -80,6 +84,10 @@ public final class SpellCastRestrictionHandler {
 
         if (CLERIC.equals(classId)) {
             return CLERIC_SCHOOLS.contains(schoolId);
+        }
+
+        if (PALADIN.equals(classId)) {
+            return PALADIN_SCHOOLS.contains(schoolId);
         }
 
         if (BLOCKED_CLASSES.contains(classId)) {
