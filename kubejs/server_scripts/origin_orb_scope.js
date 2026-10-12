@@ -17,7 +17,7 @@ function rpgOrbTarget(layerId) {
 }
 
 ItemEvents.rightClicked('origins:orb_of_origin', event => {
-  if (!event.player || event.player.isFake()) {
+  if (!event.player) {
     return
   }
 
