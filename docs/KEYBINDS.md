@@ -26,7 +26,10 @@ O arquivo `defaultoptions.journal.json` é estado local de execução do Default
 | Sit | `X` | Mantido. O antigo `dragon_down` foi removido por estar órfão. |
 | Vampirism — menu | `P` | Default upstream restaurado; `P` estava livre no esquema distribuído. |
 | Deeper and Darker — Soul Elytra Boost | `B` | Default upstream restaurado; `B` estava livre após a remoção dos bindings do Map Atlases. |
+| Deeper and Darker — Sculk Transmitter | `.` | Upstream usa `V`, mas `V` é o cast do Iron's Spellbooks; o handler só atua com Sculk Transmitter no inventário. |
 | Alex's Caves — Special Ability | `M` | Upstream usa `G`, mas `G` é Primary Active do Origins; `M` é a alternativa do pack. |
+| Create — Tool Menu | `,` | Upstream usa `Left Alt`; movido por conflito com Iron's Spellbooks. Compartilha `,` com Toolbelt por contexto. |
+| Create — Toolbelt | `,` | Upstream usa `Left Alt`; movido por conflito com Iron's Spellbooks. Compartilha `,` com Tool Menu por contexto. |
 
 ## SWEM
 
@@ -82,6 +85,7 @@ Nem toda duplicidade física exibida na tela de controles é um conflito funcion
 - `Space`: pulo, Wall Jump do ParCool e subida em voo do SWEM. São ações contextuais de movimento.
 - `Left Shift`: sprint, Fast Run, detalhes do Jade, pesquisa do Relics, Equipment Compare e descida em voo do SWEM. A sobreposição é predominantemente contextual/modificadora.
 - `Mouse Right`: uso vanilla e várias ações do ParCool. São intencionalmente sensíveis ao estado do movimento/ambiente.
+- `,`: Create Tool Menu e Toolbelt. Upstream também compartilha uma única tecla entre as duas ações; os handlers dependem de contexto de schematic/toolbox, portanto o compartilhamento é intencional.
 
 Essas duplicidades devem ser reavaliadas apenas se um teste de gameplay demonstrar acionamento simultâneo indesejado.
 
@@ -135,18 +139,17 @@ Não restaurar os defaults conflitantes literalmente; isso apenas recriaria coli
 
 ### Werewolves
 
-Na versão 1.20.1 auditada, upstream registra:
+Upstream registra `Leap` em `Left Ctrl` e `Bite` em `V`, ambos com contexto `IN_GAME`.
 
-- Leap: `Left Ctrl`; a ação só executa quando Jump também está pressionado e o jogador está transformado.
-- Bite: `V`.
+`Leap` só executa quando `Jump` também está pressionado, o jogador é werewolf, está transformado e a ação não está em cooldown. `Bite` usa `consumeClick()` e só executa para um werewolf mirando uma entidade válida para mordida.
 
-O pack deixa ambos sem tecla. `V` conflita diretamente com Iron's Spellbooks. O Leap pode ser restaurado de forma contextual, mas `Left Ctrl` também é Sneak no esquema do pack, portanto precisa de teste de gameplay antes de ser adotado.
+Mesmo assim, o pack mantém ambos sem tecla nesta etapa: `Left Ctrl` é Sneak e `V` é cast do Iron's Spellbooks. Como são ações de combate/movimento P1, não serão deslocadas para uma tecla periférica sem teste de gameplay ou decisão de esquema.
 
 ### Create
 
-Create 1.20.1 registra `Tool Menu` e `Toolbelt` em `Left Alt`; `Rotate Menu` já vem sem tecla upstream. O pack deixa os três sem tecla.
+Create registra `Tool Menu` e `Toolbelt` upstream na mesma tecla, `Left Alt`, enquanto `Rotate Menu` já vem sem tecla.
 
-`Left Alt` está reservado ao modificador da barra de magias do Iron's Spellbooks, portanto restaurar os defaults do Create literalmente não é recomendável. Se acesso rápido às Toolboxes/Schematic Overlay for importante no pack, essas duas ações devem receber teclas alternativas.
+`Left Alt` está reservado ao modificador da barra de magias do Iron's Spellbooks. O pack move `Tool Menu` e `Toolbelt` juntos para `,`, preservando o compartilhamento intencional entre as duas ações e evitando a disputa com magia. `Rotate Menu` permanece sem tecla, seguindo o upstream.
 
 ### Alex's Caves
 
@@ -161,7 +164,7 @@ Upstream registra:
 - Soul Elytra Boost: `B`
 - Sculk Transmitter: `V`
 
-O pack restaura Soul Elytra Boost em `B`, que não possui outro binding físico nos defaults versionados atuais. Sculk Transmitter permanece sem tecla porque `V` é usado pelo cast do Iron's Spellbooks e ainda precisa de alternativa segura.
+O pack restaura Soul Elytra Boost em `B`. Sculk Transmitter é movido para `.` porque `V` é usado pelo cast do Iron's Spellbooks. O handler do Transmitter só processa a ação quando existe um `SculkTransmitterItem` no inventário, portanto `.` fica reservado a uma ação utilitária contextual e evita colisão com combate/magia.
 
 ### Quivers
 
@@ -197,7 +200,8 @@ Validação estática concluída:
 - segunda passagem de namespaces órfãos concluída;
 - defaults upstream de Vampirism, Werewolves, Create, Alex's Caves e Deeper and Darker comparados ao pack;
 - input customizado de `awakening-compat` revisado;
-- `P` restaurado para o menu do Vampirism, `B` restaurado para Soul Elytra Boost e `M` definido como alternativa do pack para Alex's Caves Special Ability.
+- `P` restaurado para o menu do Vampirism, `B` restaurado para Soul Elytra Boost e `M` definido como alternativa do pack para Alex's Caves Special Ability;
+- Create Tool Menu/Toolbelt movidos juntos para `,` e Sculk Transmitter movido para `.`.
 
 Ainda requer validação dentro do cliente Minecraft:
 
@@ -206,6 +210,6 @@ Ainda requer validação dentro do cliente Minecraft:
 3. Origins `G/H` montado em cavalo SWEM, confirmando ausência de acionamento duplo após o remapeamento;
 4. Iron's Spellbooks + Relics, confirmando seleção independente por scroll;
 5. SWEM Frost Walk em `N` e saddlebag/bedroll em `I`;
-6. controles com layout de teclado usado pelo público-alvo, especialmente `[` e `]`;
-7. Vampirism menu em `P`, Deeper and Darker Soul Elytra Boost em `B` e Alex's Caves Special Ability em `M`;
-8. qualquer novo binding alternativo escolhido para as ações restantes de Vampirism/Werewolves, Create e Deeper and Darker.
+6. controles com layout de teclado usado pelo público-alvo, especialmente `[`, `]`, `,` e `.`;
+7. Vampirism menu em `P`, Deeper and Darker Soul Elytra Boost em `B`, Sculk Transmitter em `.`, Alex's Caves Special Ability em `M` e Create Tool Menu/Toolbelt em `,`;
+8. qualquer novo binding alternativo escolhido para as ações restantes de Vampirism/Werewolves.
