@@ -107,12 +107,12 @@ key_key.shouldersurfing.enter_shoulder_surfing:key.keyboard.unknown:NONE
 key_keys.eclipticseasons.main/debug:key.keyboard.unknown:NONE
 key_keys.eclipticseasons.main/debug_1:key.keyboard.unknown:NONE
 key_key.ponder.ponder:key.keyboard.w:NONE
-key_keys.vampirism.action:key.keyboard.unknown:NONE
-key_keys.vampirism.suck:key.keyboard.unknown:NONE
+key_keys.vampirism.action:key.keyboard.r:ALT
+key_keys.vampirism.suck:key.keyboard.v:ALT
 key_keys.vampirism.select_skills:key.keyboard.p:NONE
-key_keys.vampirism.vision:key.keyboard.unknown:NONE
+key_keys.vampirism.vision:key.keyboard.n:ALT
 key_keys.vampirism.minion_task:key.keyboard.unknown:NONE
-key_keys.vampirism.select_ammo:key.keyboard.unknown:NONE
+key_keys.vampirism.select_ammo:key.keyboard.c:ALT
 key_keys.vampirism.action9:key.keyboard.unknown:NONE
 key_keys.vampirism.action8:key.keyboard.unknown:NONE
 key_keys.vampirism.action7:key.keyboard.unknown:NONE
@@ -123,7 +123,7 @@ key_keys.vampirism.action3:key.keyboard.3:ALT
 key_keys.vampirism.action2:key.keyboard.2:ALT
 key_keys.vampirism.action1:key.keyboard.1:ALT
 key_keys.werewolves.leap:key.keyboard.unknown:NONE
-key_keys.werewolves.bite:key.keyboard.unknown:NONE
+key_keys.werewolves.bite:key.keyboard.v:ALT
 key_key.swem.horse.increment:key.keyboard.right.bracket:NONE
 key_key.swem.horse.decrement:key.keyboard.left.bracket:NONE
 key_key.swem.horse.toggle_saddlebag_and_bedroll:key.keyboard.i:NONE
