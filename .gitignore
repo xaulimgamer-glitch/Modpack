@@ -23,6 +23,7 @@ modernfix/
 
 # Preferências locais da instância
 user-prefs.json
+/defaultoptions.journal.json
 
 # Builds locais dos custom mods
 custom_mods/*/bin/
