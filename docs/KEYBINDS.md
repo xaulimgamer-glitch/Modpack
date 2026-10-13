@@ -23,6 +23,9 @@ O arquivo `defaultoptions.journal.json` é estado local de execução do Default
 | Iron's Spellbooks — modificador da barra | `Left Alt` | Mantido. O seletor de habilidades do Relics foi movido para evitar disputa de scroll. |
 | Combat Roll — rolar | `R` | Mantido. O handler do mod não executa roll enquanto o jogador está em um veículo. |
 | Small Ships — vela | `R` | Mantido por ser contextual a embarcações e não competir funcionalmente com Combat Roll durante condução. |
+| Vanilla — alternar perspectiva | `F5` | Restaurado; Shoulder Surfing intercepta o binding vanilla para o ciclo de perspectiva. |
+| Shoulder Surfing — trocar ombro | `U` | Default upstream restaurado; compartilha fisicamente com JEI Show Uses, mas em contexto distinto. |
+| FirstPerson — toggle | `F6` | Mantido. |
 | Sit | `X` | Mantido. O antigo `dragon_down` foi removido por estar órfão. |
 | Vampirism — menu | `P` | Default upstream restaurado; `P` estava livre no esquema distribuído. |
 | Vampirism — Action Menu | `Alt+R` | Preserva a letra upstream e evita conflito direto com Combat Roll/Small Ships. |
@@ -61,6 +64,28 @@ Os controles auxiliares do SWEM foram afastados dos bindings centrais do jogador
 | Lista/seletor de habilidades | `Left Alt` | `Y` | Relics e Iron's Spellbooks utilizam modificador + scroll; usar a mesma tecla produz conflito funcional. |
 | Pesquisar relíquia | `Left Shift` | `Left Shift` | Contextual; compartilhamento mantido. |
 
+## Shoulder Surfing
+
+Shoulder Surfing Reloaded `1.20.1-5.0.11` usa o binding vanilla de perspectiva como parte do ciclo da câmera. O pack volta a distribuir `F5` em `key.togglePerspective` e deixa o binding alternativo `toggle_first_person` sem tecla, que é o default upstream.
+
+`Swap Shoulder` foi restaurado em `U`, também default upstream. O `U` do JEI é `Show Uses` e atua em interface/recipe lookup, enquanto a troca de ombro atua na câmera em gameplay; o compartilhamento é tratado como contextual.
+
+`Free Look` permanece sem tecla no pack apesar do default upstream `Left Alt`, porque `Left Alt` é o modificador de seleção da barra de magias do Iron's Spellbooks. Os demais toggles/entradas diretas de perspectiva continuam sem tecla conforme upstream ou por baixa prioridade.
+
+## ParCool
+
+Na linha 1.20.1 auditada, ParCool registra `Ctrl+P` para Enable/Disable, `Alt+P` para abrir configurações, `C` para Crawl e Hide In Block, `R` para Breakfall/Dodge/Horizontal Wall Run e `Left Ctrl` para Fast Run.
+
+O pack aplica:
+
+- `Ctrl+P` — Enable/Disable ParCool, restaurado;
+- `Alt+P` — abrir configurações, restaurado;
+- `C` — Crawl e Hide In Block, compartilhamento upstream restaurado;
+- `Left Shift` — Fast Run, mantido como adaptação do pack porque `Left Ctrl` é Sneak;
+- Breakfall, Dodge e Horizontal Wall Run — sem tecla, porque restaurar `R` disputaria uma ação P1 com Combat Roll;
+- Quick Turn e Flipping — sem tecla, seguindo o upstream;
+- ações contextuais em `Mouse Right` e Wall Jump em `Space` — mantidas.
+
 ## Origins customizados
 
 No conjunto atual de raças/linhagens/classes, os poderes ativos auditados usam os inputs do Origins, e não key mappings próprios das classes.
@@ -89,8 +114,10 @@ As classes Barbarian, Wizard, Cleric, Warrior, Rogue, Paladin e Ranger não regi
 Nem toda duplicidade física exibida na tela de controles é um conflito funcional.
 
 - `R`: Combat Roll, Small Ships e JEI Show Recipe. JEI opera em GUI; Combat Roll aborta quando o jogador está em veículo; Small Ships é contextual à embarcação.
+- `U`: Shoulder Surfing Swap Shoulder e JEI Show Uses. Câmera em gameplay versus consulta em GUI.
 - `W`: movimento e Ponder. O Ponder usa contexto de interface/bloco.
 - `A`: movimento e bookmark do JEI. O binding do JEI é usado em GUI.
+- `C`: ParCool Crawl e Hide In Block. Compartilhamento definido pelo próprio upstream e dependente do estado da ação.
 - `Space`: pulo, Wall Jump do ParCool e subida em voo do SWEM. São ações contextuais de movimento.
 - `Left Shift`: sprint, Fast Run, detalhes do Jade, pesquisa do Relics, Equipment Compare e descida em voo do SWEM. A sobreposição é predominantemente contextual/modificadora.
 - `Mouse Right`: uso vanilla e várias ações do ParCool. São intencionalmente sensíveis ao estado do movimento/ambiente.
@@ -124,9 +151,21 @@ Removidos na segunda passagem:
 
 Se qualquer um desses mods voltar ao modpack, seus bindings devem ser auditados novamente antes de serem reintroduzidos no arquivo do Default Options.
 
+## Pendências antigas que não pertencem ao inventário atual
+
+As referências do handoff a JourneyMap, Xaero, MineMenu e Sinytra não correspondem ao `modlist.txt` nem aos mappings distribuídos no estado atual do branch. Elas não serão recriadas apenas para eliminar pendências históricas. Se algum desses mods voltar à distribuição, deve entrar como uma nova auditoria de input.
+
 ## Mods instalados com defaults suprimidos
 
 `key.keyboard.unknown` não significa necessariamente que a ação é opcional no mod original. A auditoria encontrou vários casos em que o Default Options do pack anulava ou ainda anula uma tecla que upstream fornece por padrão.
+
+### Better Combat
+
+Better Combat `1.9.0+1.20.1` registra `Feint` e `Toggle Mine With Weapons` com `InputConstants.UNKNOWN` por padrão. Os dois `unknown` atuais são, portanto, defaults upstream intencionais e permanecem sem tecla.
+
+### Spartan Shields
+
+Spartan Shields `3.1.1` registra `Alt Shield Bash` com código `-1`, isto é, sem tecla dedicada. Quando o mapping continua unbound, o próprio mod usa o botão de ataque como fallback para a ação/tooltip. O pack mantém esse `unknown` e não reserva uma tecla adicional.
 
 ### Vampirism
 
@@ -211,6 +250,11 @@ Validação estática concluída:
 - bindings órfãos cruzados com o inventário versionado;
 - segunda passagem de namespaces órfãos concluída;
 - defaults upstream de Vampirism, Werewolves, Create, Alex's Caves e Deeper and Darker comparados ao pack;
+- Better Combat `Feint`/`Toggle Mine With Weapons` confirmados como unbound upstream;
+- Spartan Shields `Alt Shield Bash` confirmado como unbound upstream com fallback no Attack;
+- Shoulder Surfing `F5` vanilla e `U` Swap Shoulder restaurados; Free Look mantido sem tecla por conflito com Iron's Spellbooks;
+- ParCool `Ctrl+P`, `Alt+P` e `C` compartilhado restaurados; ações em `R` mantidas unbound por conflito com Combat Roll;
+- pendências históricas de JourneyMap, Xaero, MineMenu e Sinytra descartadas por ausência no inventário atual;
 - input customizado de `awakening-compat` revisado;
 - `P` restaurado para o menu do Vampirism, `B` restaurado para Soul Elytra Boost e `M` definido como alternativa do pack para Alex's Caves Special Ability;
 - Create Tool Menu/Toolbelt movidos juntos para `,` e Sculk Transmitter movido para `.`;
@@ -223,11 +267,13 @@ Ainda requer validação dentro do cliente Minecraft:
 
 1. instalação limpa, confirmando que os novos defaults são aplicados;
 2. perfil já existente com teclas personalizadas, confirmando que o Default Options não as sobrescreve;
-3. Origins `G/H` montado em cavalo SWEM, confirmando ausência de acionamento duplo após o remapeamento;
-4. Iron's Spellbooks + Relics, confirmando seleção independente por scroll;
-5. SWEM Frost Walk em `N` e saddlebag/bedroll em `I`;
-6. controles com layout de teclado usado pelo público-alvo, especialmente `[`, `]`, `,` e `.`;
-7. Vampirism em `P`, `Alt+R/V/N/C` e `Alt+1/2/3`, Werewolves Bite em `Alt+V`, Deeper and Darker Soul Elytra Boost em `B`, Sculk Transmitter em `.`, Alex's Caves Special Ability em `M` e Create Tool Menu/Toolbelt em `,`;
-8. confirmar que os chords `Alt+...` não disparam simultaneamente os bindings simples correspondentes no cliente real;
-9. confirmar que `Alt+V` não produz efeito duplo fora do estado de facção esperado;
-10. Werewolves Leap continuará sem tecla até surgir alternativa melhor ou necessidade prática comprovada.
+3. `F5` com Shoulder Surfing e `U` compartilhado com JEI Show Uses;
+4. ParCool `Ctrl+P`, `Alt+P`, Crawl/Hide In Block em `C` e Fast Run em `Left Shift`;
+5. Origins `G/H` montado em cavalo SWEM, confirmando ausência de acionamento duplo após o remapeamento;
+6. Iron's Spellbooks + Relics, confirmando seleção independente por scroll;
+7. SWEM Frost Walk em `N` e saddlebag/bedroll em `I`;
+8. controles com layout de teclado usado pelo público-alvo, especialmente `[`, `]`, `,` e `.`;
+9. Vampirism em `P`, `Alt+R/V/N/C` e `Alt+1/2/3`, Werewolves Bite em `Alt+V`, Deeper and Darker Soul Elytra Boost em `B`, Sculk Transmitter em `.`, Alex's Caves Special Ability em `M` e Create Tool Menu/Toolbelt em `,`;
+10. confirmar que os chords `Alt+...` não disparam simultaneamente os bindings simples correspondentes no cliente real;
+11. confirmar que `Alt+V` não produz efeito duplo fora do estado de facção esperado;
+12. Werewolves Leap continuará sem tecla até surgir alternativa melhor ou necessidade prática comprovada.
