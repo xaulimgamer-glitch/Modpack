@@ -25,6 +25,9 @@ O arquivo `defaultoptions.journal.json` é estado local de execução do Default
 | Small Ships — vela | `R` | Mantido por ser contextual a embarcações e não competir funcionalmente com Combat Roll durante condução. |
 | Sit | `X` | Mantido. O antigo `dragon_down` foi removido por estar órfão. |
 | Vampirism — menu | `P` | Default upstream restaurado; `P` estava livre no esquema distribuído. |
+| Vampirism — ação 1 | `Alt+1` | Default upstream restaurado; Forge prioriza o mapping com modifier sobre `1` simples. |
+| Vampirism — ação 2 | `Alt+2` | Default upstream restaurado; Forge prioriza o mapping com modifier sobre `2` simples. |
+| Vampirism — ação 3 | `Alt+3` | Default upstream restaurado; Forge prioriza o mapping com modifier sobre `3` simples. |
 | Deeper and Darker — Soul Elytra Boost | `B` | Default upstream restaurado; `B` estava livre após a remoção dos bindings do Map Atlases. |
 | Deeper and Darker — Sculk Transmitter | `.` | Upstream usa `V`, mas `V` é o cast do Iron's Spellbooks; o handler só atua com Sculk Transmitter no inventário. |
 | Alex's Caves — Special Ability | `M` | Upstream usa `G`, mas `G` é Primary Active do Origins; `M` é a alternativa do pack. |
@@ -120,7 +123,7 @@ Se qualquer um desses mods voltar ao modpack, seus bindings devem ser auditados 
 
 ### Vampirism
 
-Na linha 1.20 usada como referência pelo mod instalado, os defaults upstream são:
+O mod instalado é Vampirism `1.10.16`. O repositório oficial não expõe uma tag `1.10.16`; a referência de código oficial mais próxima encontrada para Minecraft 1.20.1 é `v1.10.15-1.20.1`. Nessa linha, os defaults relevantes são:
 
 | Ação | Upstream | Pack atual | Situação |
 | --- | --- | --- | --- |
@@ -128,14 +131,16 @@ Na linha 1.20 usada como referência pelo mod instalado, os defaults upstream s�
 | Suck Blood | `V` | sem tecla | `V` conflita com Iron's Spellbooks cast. |
 | Vampirism menu | `P` | `P` | Default upstream restaurado; não há outro binding físico `P` nos defaults distribuídos. |
 | Vampire Vision | `N` | sem tecla | `N` foi atribuído ao Frost Walk do SWEM. |
-| Action 1 | `Alt+1` | sem tecla | upstream usa modificador; requer teste com hotbar. |
-| Action 2 | `Alt+2` | sem tecla | upstream usa modificador; requer teste com hotbar. |
-| Action 3 | `Alt+3` | sem tecla | upstream usa modificador; requer teste com hotbar. |
+| Action 1 | `Alt+1` | `Alt+1` | Default upstream restaurado. O mapping é `IN_GAME` e usa `KeyModifier.ALT`. |
+| Action 2 | `Alt+2` | `Alt+2` | Default upstream restaurado. O mapping é `IN_GAME` e usa `KeyModifier.ALT`. |
+| Action 3 | `Alt+3` | `Alt+3` | Default upstream restaurado. O mapping é `IN_GAME` e usa `KeyModifier.ALT`. |
 | Actions 4–9 | sem tecla | sem tecla | Mantém o comportamento upstream. |
 | Minion task | sem tecla | sem tecla | Mantém o comportamento upstream. |
 | Select ammo | `C` | sem tecla | `C` conflita com Crawl do ParCool. |
 
-Não restaurar os defaults conflitantes literalmente; isso apenas recriaria colisões funcionais. O menu em `P` foi restaurado por não apresentar colisão estática, mas as demais ações relevantes ainda precisam de esquema alternativo ou validação contextual.
+Forge 47 agrupa `KeyMapping`s por modifier e tecla física. Quando um modifier ativo possui um mapping correspondente, esse grupo é consultado antes do mapping `NONE` da mesma tecla. Por isso, `Alt+1/2/3` são estruturalmente diferentes dos bindings simples da hotbar `1/2/3` e foram restaurados sem remover os controles vanilla. Essa conclusão ainda precisa de confirmação prática no cliente do pack.
+
+Não restaurar literalmente os demais defaults conflitantes: isso recriaria colisões com sistemas já priorizados. Action menu, Suck Blood, Vampire Vision e Select Ammo ainda precisam de esquema alternativo ou validação contextual.
 
 ### Werewolves
 
@@ -201,7 +206,8 @@ Validação estática concluída:
 - defaults upstream de Vampirism, Werewolves, Create, Alex's Caves e Deeper and Darker comparados ao pack;
 - input customizado de `awakening-compat` revisado;
 - `P` restaurado para o menu do Vampirism, `B` restaurado para Soul Elytra Boost e `M` definido como alternativa do pack para Alex's Caves Special Ability;
-- Create Tool Menu/Toolbelt movidos juntos para `,` e Sculk Transmitter movido para `.`.
+- Create Tool Menu/Toolbelt movidos juntos para `,` e Sculk Transmitter movido para `.`;
+- Vampirism Action 1–3 restaurados em `Alt+1/2/3` após verificação da semântica de modifiers do Forge 47.
 
 Ainda requer validação dentro do cliente Minecraft:
 
@@ -211,5 +217,6 @@ Ainda requer validação dentro do cliente Minecraft:
 4. Iron's Spellbooks + Relics, confirmando seleção independente por scroll;
 5. SWEM Frost Walk em `N` e saddlebag/bedroll em `I`;
 6. controles com layout de teclado usado pelo público-alvo, especialmente `[`, `]`, `,` e `.`;
-7. Vampirism menu em `P`, Deeper and Darker Soul Elytra Boost em `B`, Sculk Transmitter em `.`, Alex's Caves Special Ability em `M` e Create Tool Menu/Toolbelt em `,`;
-8. qualquer novo binding alternativo escolhido para as ações restantes de Vampirism/Werewolves.
+7. Vampirism menu em `P` e Action 1–3 em `Alt+1/2/3`, Deeper and Darker Soul Elytra Boost em `B`, Sculk Transmitter em `.`, Alex's Caves Special Ability em `M` e Create Tool Menu/Toolbelt em `,`;
+8. confirmar que `Alt+1/2/3` não troca a hotbar nem dispara ação simples simultânea no cliente real;
+9. qualquer novo binding alternativo escolhido para Action menu/Suck Blood/Vampire Vision/Select Ammo e Werewolves Leap/Bite.
