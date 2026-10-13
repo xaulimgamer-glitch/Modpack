@@ -119,9 +119,9 @@ key_keys.vampirism.action7:key.keyboard.unknown:NONE
 key_keys.vampirism.action6:key.keyboard.unknown:NONE
 key_keys.vampirism.action5:key.keyboard.unknown:NONE
 key_keys.vampirism.action4:key.keyboard.unknown:NONE
-key_keys.vampirism.action3:key.keyboard.unknown:NONE
-key_keys.vampirism.action2:key.keyboard.unknown:NONE
-key_keys.vampirism.action1:key.keyboard.unknown:NONE
+key_keys.vampirism.action3:key.keyboard.3:ALT
+key_keys.vampirism.action2:key.keyboard.2:ALT
+key_keys.vampirism.action1:key.keyboard.1:ALT
 key_keys.werewolves.leap:key.keyboard.unknown:NONE
 key_keys.werewolves.bite:key.keyboard.unknown:NONE
 key_key.swem.horse.increment:key.keyboard.right.bracket:NONE
