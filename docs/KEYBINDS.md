@@ -24,6 +24,9 @@ O arquivo `defaultoptions.journal.json` é estado local de execução do Default
 | Combat Roll — rolar | `R` | Mantido. O handler do mod não executa roll enquanto o jogador está em um veículo. |
 | Small Ships — vela | `R` | Mantido por ser contextual a embarcações e não competir funcionalmente com Combat Roll durante condução. |
 | Sit | `X` | Mantido. O antigo `dragon_down` foi removido por estar órfão. |
+| Vampirism — menu | `P` | Default upstream restaurado; `P` estava livre no esquema distribuído. |
+| Deeper and Darker — Soul Elytra Boost | `B` | Default upstream restaurado; `B` estava livre após a remoção dos bindings do Map Atlases. |
+| Alex's Caves — Special Ability | `M` | Upstream usa `G`, mas `G` é Primary Active do Origins; `M` é a alternativa do pack. |
 
 ## SWEM
 
@@ -109,7 +112,7 @@ Se qualquer um desses mods voltar ao modpack, seus bindings devem ser auditados 
 
 ## Mods instalados com defaults suprimidos
 
-`key.keyboard.unknown` não significa necessariamente que a ação é opcional no mod original. A auditoria encontrou vários casos em que o Default Options do pack está anulando uma tecla que upstream fornece por padrão.
+`key.keyboard.unknown` não significa necessariamente que a ação é opcional no mod original. A auditoria encontrou vários casos em que o Default Options do pack anulava ou ainda anula uma tecla que upstream fornece por padrão.
 
 ### Vampirism
 
@@ -119,7 +122,7 @@ Na linha 1.20 usada como referência pelo mod instalado, os defaults upstream s�
 | --- | --- | --- | --- |
 | Action menu | `R` | sem tecla | `R` conflita com Combat Roll/Small Ships. |
 | Suck Blood | `V` | sem tecla | `V` conflita com Iron's Spellbooks cast. |
-| Vampirism menu | `P` | sem tecla | `P` está livre no esquema atual; candidato seguro à restauração. |
+| Vampirism menu | `P` | `P` | Default upstream restaurado; não há outro binding físico `P` nos defaults distribuídos. |
 | Vampire Vision | `N` | sem tecla | `N` foi atribuído ao Frost Walk do SWEM. |
 | Action 1 | `Alt+1` | sem tecla | upstream usa modificador; requer teste com hotbar. |
 | Action 2 | `Alt+2` | sem tecla | upstream usa modificador; requer teste com hotbar. |
@@ -128,7 +131,7 @@ Na linha 1.20 usada como referência pelo mod instalado, os defaults upstream s�
 | Minion task | sem tecla | sem tecla | Mantém o comportamento upstream. |
 | Select ammo | `C` | sem tecla | `C` conflita com Crawl do ParCool. |
 
-Não restaurar os defaults conflitantes literalmente; isso apenas recriaria colisões funcionais. É necessário definir um esquema alternativo se Vampirism fizer parte do gameplay esperado do pack.
+Não restaurar os defaults conflitantes literalmente; isso apenas recriaria colisões funcionais. O menu em `P` foi restaurado por não apresentar colisão estática, mas as demais ações relevantes ainda precisam de esquema alternativo ou validação contextual.
 
 ### Werewolves
 
@@ -147,9 +150,9 @@ Create 1.20.1 registra `Tool Menu` e `Toolbelt` em `Left Alt`; `Rotate Menu` já
 
 ### Alex's Caves
 
-`Special Ability` é `G` upstream. O pack deixa a ação sem tecla porque `G` é o Primary Active do Origins.
+`Special Ability` é `G` upstream. Como `G` é o Primary Active do Origins, o pack distribui essa ação em `M`.
 
-A ação controla habilidades especiais de montarias/armaduras e não possui uma alternativa global equivalente. Este é um candidato de alta prioridade para receber outra tecla em vez de permanecer desativado.
+`M` não possui outro binding físico nos defaults versionados atuais. A ação deixa de ficar inacessível por padrão, mas ainda precisa ser validada no cliente com os equipamentos/montarias que realmente consomem `Special Ability`.
 
 ### Deeper and Darker
 
@@ -158,7 +161,7 @@ Upstream registra:
 - Soul Elytra Boost: `B`
 - Sculk Transmitter: `V`
 
-O pack deixa ambos sem tecla. `V` conflita com Iron's Spellbooks. `B` está livre no esquema atual após a remoção do Map Atlases e pode ser restaurado com baixo risco, sujeito a teste de gameplay.
+O pack restaura Soul Elytra Boost em `B`, que não possui outro binding físico nos defaults versionados atuais. Sculk Transmitter permanece sem tecla porque `V` é usado pelo cast do Iron's Spellbooks e ainda precisa de alternativa segura.
 
 ### Quivers
 
@@ -193,7 +196,8 @@ Validação estática concluída:
 - bindings órfãos cruzados com o inventário versionado;
 - segunda passagem de namespaces órfãos concluída;
 - defaults upstream de Vampirism, Werewolves, Create, Alex's Caves e Deeper and Darker comparados ao pack;
-- input customizado de `awakening-compat` revisado.
+- input customizado de `awakening-compat` revisado;
+- `P` restaurado para o menu do Vampirism, `B` restaurado para Soul Elytra Boost e `M` definido como alternativa do pack para Alex's Caves Special Ability.
 
 Ainda requer validação dentro do cliente Minecraft:
 
@@ -203,4 +207,5 @@ Ainda requer validação dentro do cliente Minecraft:
 4. Iron's Spellbooks + Relics, confirmando seleção independente por scroll;
 5. SWEM Frost Walk em `N` e saddlebag/bedroll em `I`;
 6. controles com layout de teclado usado pelo público-alvo, especialmente `[` e `]`;
-7. qualquer novo binding alternativo escolhido para Alex's Caves, Vampirism/Werewolves, Create e Deeper and Darker.
+7. Vampirism menu em `P`, Deeper and Darker Soul Elytra Boost em `B` e Alex's Caves Special Ability em `M`;
+8. qualquer novo binding alternativo escolhido para as ações restantes de Vampirism/Werewolves, Create e Deeper and Darker.
