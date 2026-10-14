@@ -46,6 +46,17 @@ ordering="NONE"
 side="BOTH"
 
 # =========================
+# BLOCK PARRY DODGE
+# =========================
+
+[[dependencies.awakening_compat]]
+modId="block_parry_dodge"
+mandatory=true
+versionRange="*"
+ordering="AFTER"
+side="BOTH"
+
+# =========================
 # ICARUS
 # =========================
 

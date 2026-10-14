@@ -72,6 +72,10 @@ dependencies {
     )
 
     runtimeOnly fg.deobf(
+            'curse.maven:block-parry-dodge-1027340:5622581'
+    )
+
+    runtimeOnly fg.deobf(
             'curse.maven:icarus-428151:8247925'
     )
 

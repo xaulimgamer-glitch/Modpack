@@ -1,0 +1,87 @@
+type,family,category,parry_eligibility,reason
+anchor,blunt,melee+ranged,ALLOW,Hybrid type with canonical melee use; remains parry-eligible while held.
+arbalest,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+axe,axe,melee,ALLOW,Canonical physical melee weapon type.
+bardiche,polearm,melee,ALLOW,Canonical physical melee weapon type.
+battle_hammer,blunt,melee,ALLOW,Canonical physical melee weapon type.
+battle_staff,staff,melee,ALLOW,Canonical physical melee weapon type.
+battleaxe,axe,melee,ALLOW,Canonical physical melee weapon type.
+blaster,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+blowgun,launcher,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+bomb,explosive,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+boomerang,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+bow,bow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+cannon,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+cestus,fist,melee,DENY,Fist weapon; parry is reserved for held deflecting weapons.
+chakram,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+claw,fist,melee,DENY,Fist weapon; parry is reserved for held deflecting weapons.
+club,club,melee,ALLOW,Canonical physical melee weapon type.
+crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+crucifix,magic,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+dagger,knife,melee,ALLOW,Canonical physical melee weapon type.
+deployable_device,device,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+detonator,device,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+double_crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+dynamite,explosive,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+fillet_knife,knife,melee,ALLOW,Canonical physical melee weapon type.
+flail,flexible,ranged,DENY,Flexible/ranged weapon; direct weapon parry is not part of its combat role.
+flanged_mace,blunt,melee,ALLOW,Canonical physical melee weapon type.
+flat_bow,bow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+gatling_gun,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+gauntlet,fist,mixed/exception-only,DENY,Fist weapon family; mixed melee/ranged implementations are denied fail-closed.
+glaive,polearm,melee,ALLOW,Canonical physical melee weapon type.
+greatsword,sword,melee,ALLOW,Canonical physical melee weapon type.
+gun,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+halberd,polearm,melee,ALLOW,Canonical physical melee weapon type.
+hammer,blunt,melee,ALLOW,Canonical physical melee weapon type.
+hand_cannon,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+heavy_crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+hook,flexible,ranged,DENY,Flexible/ranged weapon; direct weapon parry is not part of its combat role.
+improvised_melee,knife,melee,ALLOW,Canonical physical melee weapon type.
+javelin,polearm,melee+ranged,ALLOW,Hybrid type with canonical melee use; remains parry-eligible while held.
+katana,sword,melee,ALLOW,Canonical physical melee weapon type.
+khopesh,sword,melee,ALLOW,Canonical physical melee weapon type.
+knife,knife,melee,ALLOW,Canonical physical melee weapon type.
+lance,polearm,melee,ALLOW,Canonical physical melee weapon type.
+long_sword,sword,melee,ALLOW,Canonical physical melee weapon type.
+longbow,bow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+mace,blunt,melee,ALLOW,Canonical physical melee weapon type.
+machete,knife,melee,ALLOW,Canonical physical melee weapon type.
+macuahuitl,club,melee,ALLOW,Canonical physical melee weapon type.
+magic_bottle,magic,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+magic_focus,magic,ranged,DENY,Magic family is denied even when an individual item also has melee behavior.
+magic_instrument,magic,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+molotov,explosive,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+parrying_dagger,knife,melee,ALLOW,Canonical physical melee weapon type.
+pike,polearm,melee,ALLOW,Canonical physical melee weapon type.
+pistol_crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+quarterstaff,staff,melee,ALLOW,Canonical physical melee weapon type.
+rapier,sword,melee,ALLOW,Canonical physical melee weapon type.
+ray_gun,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+recurve_bow,bow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+rocket,explosive,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+saber,sword,melee,ALLOW,Canonical physical melee weapon type.
+scepter,magic,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+scythe,polearm,melee,ALLOW,Canonical physical melee weapon type.
+shield,shield,melee,DENY,Uses the shield/blocking defensive path instead of weapon parry.
+short_bow,bow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+shoulder_cannon,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+shredder,device,melee,DENY,Device-style melee exception; not a conventional held parrying weapon.
+slingshot,launcher,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+spear,polearm,melee,ALLOW,Canonical physical melee weapon type.
+sprayer,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+staff,staff,mixed/exception-only,DENY,Generic staff type is mostly ranged/magic; denied as a type. crude_graybeard_staff is an explicit item exception.
+stake,knife,melee,ALLOW,Canonical physical melee weapon type.
+sword,sword,melee,ALLOW,Canonical physical melee weapon type.
+tech_crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwable_bottle,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwable_charge,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwable_swarm,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwing_dust,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwing_feathers,thrown,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+throwing_knife,knife,melee+ranged,ALLOW,Hybrid type with canonical melee use; remains parry-eligible while held.
+tomahawk,axe,melee+ranged,ALLOW,Hybrid type with canonical melee use; remains parry-eligible while held.
+trident,polearm,melee+ranged,ALLOW,Hybrid type with canonical melee use; remains parry-eligible while held.
+wand,magic,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
+war_hammer,blunt,melee,ALLOW,Canonical physical melee weapon type.
+whip,flexible,melee,DENY,Flexible weapon; direct weapon parry is excluded from Awakening combat policy.
