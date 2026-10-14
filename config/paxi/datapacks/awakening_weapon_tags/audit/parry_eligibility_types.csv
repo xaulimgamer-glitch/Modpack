@@ -70,7 +70,7 @@ shredder,device,melee,DENY,Device-style melee exception; not a conventional held
 slingshot,launcher,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
 spear,polearm,melee,ALLOW,Canonical physical melee weapon type.
 sprayer,firearm,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.
-staff,staff,mixed/exception-only,DENY,Generic staff type is mostly ranged/magic; denied as a type. crude_graybeard_staff is an explicit item exception.
+staff,staff,mixed/exception-only,DENY,Generic staff type is predominantly ranged/magic; the entire type is denied fail-closed.
 stake,knife,melee,ALLOW,Canonical physical melee weapon type.
 sword,sword,melee,ALLOW,Canonical physical melee weapon type.
 tech_crossbow,crossbow,ranged,DENY,No canonical melee parry role; ranged/magic/device/thrown-only type.

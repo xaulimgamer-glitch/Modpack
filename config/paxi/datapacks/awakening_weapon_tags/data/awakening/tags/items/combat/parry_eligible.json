@@ -37,7 +37,6 @@
     "#awakening:weapon/type/throwing_knife",
     "#awakening:weapon/type/tomahawk",
     "#awakening:weapon/type/trident",
-    "#awakening:weapon/type/war_hammer",
-    "kubejs:crude_graybeard_staff"
+    "#awakening:weapon/type/war_hammer"
   ]
 }
