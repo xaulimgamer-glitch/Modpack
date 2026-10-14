@@ -44,6 +44,7 @@ key_key.curios.open.desc:key.keyboard.e:ALT
 key_key.origins.primary_active:key.keyboard.g:NONE
 key_key.origins.secondary_active:key.keyboard.h:NONE
 key_key.origins.view_origin:key.keyboard.o:NONE
+key_key.block_parry_dodge.parry_key:key.mouse.5:NONE
 key_iris.keybind.reload:key.keyboard.unknown:NONE
 key_iris.keybind.toggleShaders:key.keyboard.unknown:NONE
 key_iris.keybind.shaderPackSelection:key.keyboard.unknown:NONE
