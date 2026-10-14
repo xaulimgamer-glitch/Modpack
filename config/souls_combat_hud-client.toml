@@ -1,0 +1,457 @@
+
+#Skill Overlay
+[skill_overlay]
+	#Toggle whether to use custom skill overlay for Epic Fight.
+	enabled = true
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	anchor = "BOTTOM_LEFT"
+	x = 12
+	y = 120
+	#Range: 0.25 ~ 4.0
+	scale = 1.0
+
+	[skill_overlay.skill_setting]
+		#Show weapon passive skills. Note that it may break epic fight addons that utilizes special skill overlays.
+		show_weapon_passive_skill = false
+		#Dont use custom skill overlay for certain weapon passive skills.
+		show_weapon_passive_skill_blacklist = ["wom:solar_passive", "wom:napoleon_passive"]
+		#Show passive skills.
+		show_passive_skills = true
+		show_passive_skills_blacklist = []
+		#Show guard skill.
+		show_guard_skill = true
+		show_guard_skill_blacklist = []
+		#Show identity skill.
+		show_identity_skill = true
+		show_identity_skill_blacklist = []
+
+	[skill_overlay.icon]
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "CENTER_LEFT"
+		x = 4
+		y = 0
+		#Range: 0.25 ~ 4.0
+		scale = 1.0
+
+	[skill_overlay.text]
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "CENTER_LEFT"
+		x = 22
+		y = 1
+		#Range: 0.25 ~ 4.0
+		scale = 1.0
+
+#Equipment Hud
+[equipment_hud]
+	#Toggle whether to use the custom equipment HUD.
+	enabled = true
+	#Should cycling items play a sound.
+	cycle_sound = true
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	anchor = "BOTTOM_LEFT"
+	x = 60
+	y = 60
+	#Range: 0.25 ~ 4.0
+	scale = 1.0
+
+	#Slots
+	[equipment_hud.equipment_slots]
+
+		[equipment_hud.equipment_slots.weapon_slot]
+			enabled = true
+			#Include Combat Preferred Items (Epic Fight)
+			include_combat_prefered = true
+			#Include items as a weapon
+			weapons_whitelist = []
+			#Exclude items as a weapon
+			weapons_blacklist = []
+			x = 28
+			y = 0
+
+			#Preview Slots
+			[equipment_hud.equipment_slots.weapon_slot.preview_slots]
+				#Range: 0 ~ 12
+				max_slots = 0
+				#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+				anchor = "CENTER_RIGHT"
+				#Allowed Values: HORIZONTAL, VERTICAL
+				orientation = "VERTICAL"
+				x = 0
+				y = 0
+
+		[equipment_hud.equipment_slots.offhand_slot]
+			enabled = true
+			x = -28
+			y = 0
+
+			#Preview Slots
+			[equipment_hud.equipment_slots.offhand_slot.preview_slots]
+				#Range: 0 ~ 12
+				max_slots = 0
+				#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+				anchor = "CENTER_LEFT"
+				#Allowed Values: HORIZONTAL, VERTICAL
+				orientation = "VERTICAL"
+				x = 0
+				y = 0
+
+		[equipment_hud.equipment_slots.consumable_slot]
+			enabled = true
+			#Should cycling your consumables jump to the item.
+			cycle_consumable_switch = false
+			#Should the use consumable key work directly if selected hotbar item is a consumable.
+			use_consumable_on_selected = false
+			#Include items as a consumable
+			consumables_whitelist = []
+			#Exclude items as a consumable
+			consumables_blacklist = []
+			#Exclude items that should autoconsume
+			autoconsume_blacklist = ["remnantcurios:flask"]
+			x = 0
+			y = 18
+
+			[equipment_hud.equipment_slots.consumable_slot.item_name]
+				enabled = true
+				auto_hide = false
+				#Range: 0 ~ 20000
+				hold_millis = 2000
+				#Range: 0 ~ 5000
+				fade_millis = 400
+
+			#Preview Slots
+			[equipment_hud.equipment_slots.consumable_slot.preview_slots]
+				#Range: 0 ~ 12
+				max_slots = 3
+				#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+				anchor = "BOTTOM_RIGHT"
+				#Allowed Values: HORIZONTAL, VERTICAL
+				orientation = "HORIZONTAL"
+				x = 0
+				y = -16
+
+		[equipment_hud.equipment_slots.spell_slot]
+			enabled = true
+			x = 0
+			y = -18
+
+			[equipment_hud.equipment_slots.spell_slot.item_name]
+				enabled = true
+				auto_hide = false
+				#Range: 0 ~ 20000
+				hold_millis = 2000
+				#Range: 0 ~ 5000
+				fade_millis = 400
+
+			#Preview Slots
+			[equipment_hud.equipment_slots.spell_slot.preview_slots]
+				#Range: 0 ~ 12
+				max_slots = 3
+				#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+				anchor = "TOP_RIGHT"
+				#Allowed Values: HORIZONTAL, VERTICAL
+				orientation = "HORIZONTAL"
+				x = 0
+				y = 16
+
+#Custom Bossbar
+[custom_bossbar]
+	#Toggle whether to use Souls-like bossbars.
+	enabled = true
+	#Should the bossbar display the damage value it has taken. This only works if mod is installed on the server.
+	reduction_value_text = true
+	#Should the bossbar name text allow the text to be colored etc.
+	ignore_boss_name_formatting = true
+	#Delay in miliseconds before the bossbar disappears
+	#This is added on to custom bossbar disappear_delay property
+	#Range: 0 ~ 2147483647
+	disappear_delay = 0
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	anchor = "BOTTOM_CENTER"
+	max_visible = 4
+	#Range: 0.25 ~ 4.0
+	scale = 1.0
+	width = 320
+	x = 0
+	y = 64
+
+#Oxygen Bar
+[oxygen_bar]
+	#Toggle oxygen bar
+	enabled = true
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	anchor = "BOTTOM_CENTER"
+	#Range: 0.25 ~ 4.0
+	scale = 1.0
+	width = 182
+	x = 0
+	y = 60
+
+#Experience Overlay
+[experience_overlay]
+	#Toggle experience overlay
+	enabled = true
+	#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+	anchor = "BOTTOM_RIGHT"
+	#Range: 0.25 ~ 4.0
+	scale = 1.0
+	x = 12
+	y = 12
+
+	#Experience Icon Settings
+	[experience_overlay.xp_icon]
+		#Toggle experience icon
+		enabled = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "CENTER_LEFT"
+		x = 2
+		y = 0
+
+	#Experience Bar Settings
+	[experience_overlay.xp_bar]
+		#Toggle experience bar
+		enabled = true
+
+	#Experience Total Text Settings
+	[experience_overlay.xp_total_text]
+		#Toggle experience total text
+		enabled = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "CENTER_RIGHT"
+		x = 4
+		y = 0
+
+	#Experience Level Text Settings
+	[experience_overlay.xp_level_text]
+		#Toggle experience level text
+		enabled = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "CENTER_LEFT"
+		x = 12
+		y = -1
+
+	[experience_overlay.xp_gain_popup]
+		enabled = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "TOP_RIGHT"
+		x = 4
+		y = -12
+
+#Status Gauge
+[status_gauge]
+	#Should party members be able to see your status
+	hide_status_from_party = false
+
+	#This mostly applies for the player gauge, party gauges will always use the server's preferred source type.
+	[status_gauge.client_source_preferences]
+		#Ensure ignore stamina source is disabled
+		#Allowed Values: AUTO, EPIC_FIGHT, PARCOOL, PARAGLIDER, MINE_AND_SLASH
+		client_stamina_source = "AUTO"
+		#Ensure ignore mana source is disabled
+		#Allowed Values: AUTO, IRONS_SPELLBOOKS, MINE_AND_SLASH
+		client_mana_source = "AUTO"
+		#Allowed Values: AUTO, THIRST_WAS_RECLAIMED, LEGENDARY_SURVIVAL_OVERHAUL
+		client_thirst_source = "AUTO"
+		ignore_server_stamina_source = false
+		ignore_server_mana_source = false
+
+	#Player Gauge Overlay
+	#Customize the status gauge in assets/souls_combat_hud/souls_bars/player_gauge.json
+	[status_gauge.player_gauge_overlay]
+		#Toggle player gauge overlay
+		enabled = false
+		status_bars = true
+		#Allowed Values: FACE, MODEL
+		crest_display_mode = "MODEL"
+		crest_team_outline = true
+		crest_attributes = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "TOP_LEFT"
+		x = 24
+		y = 24
+		#Range: 0.25 ~ 4.0
+		scale = 1.0
+
+	#Party Gauge Overlay
+	#Shows status gauges for your teammates
+	#Customize the status gauge in assets/souls_combat_hud/souls_bars/party_gauge.json
+	[status_gauge.party_gauge_overlay]
+		#Toggle party gauge overlay
+		enabled = true
+		status_bars = true
+		#Allowed Values: FACE, MODEL
+		crest_display_mode = "MODEL"
+		crest_team_outline = true
+		#Maximum amount of party members to display
+		#Range: 0 ~ 16
+		max_displayed_party_members = 4
+		#Should offline party members be displayed (FTB Teams)
+		show_offline_members = true
+		#Sort online players first
+		sort_online_first = true
+		#Gap offset between party member rows
+		#Range: 0 ~ 64
+		member_row_gap = 4
+		#Should status effects push party member rows.
+		status_effects_affect_row_layout = true
+		#Allowed Values: TOP_LEFT, TOP_CENTER, TOP_RIGHT, CENTER_LEFT, CENTER, CENTER_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT
+		anchor = "TOP_LEFT"
+		x = 24
+		y = 76
+		#Range: 0.25 ~ 4.0
+		scale = 0.8125
+
+	#Baseline and projected-max values used to scale HUD bar widths.
+	[status_gauge.status_bars]
+		#Let servers override local baseline and projected max values
+		force_server_values = true
+		#Shows current and max value of status bars
+		show_value_text = false
+		#Should status bar have equal width. Set 0 to disable.
+		#Range: 0 ~ 512
+		constant_bar_width = 0
+
+		[status_gauge.status_bars.health]
+			#Range: > 1
+			baseline = 20
+			#Range: > 1
+			projected_max = 50
+			#Range: 0.1 ~ 3.0
+			bar_width_curve = 1.0
+
+		[status_gauge.status_bars.stamina]
+
+			[status_gauge.status_bars.stamina.presets]
+
+				[status_gauge.status_bars.stamina.presets.epic_fight]
+					#Range: > 1
+					baseline = 20
+					#Range: > 1
+					projected_max = 45
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 1.0
+
+				[status_gauge.status_bars.stamina.presets.parcool]
+					#Range: > 1
+					baseline = 2000
+					#Range: > 1
+					projected_max = 3000
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 1.0
+
+				[status_gauge.status_bars.stamina.presets.paraglider]
+					#Range: > 1
+					baseline = 1000
+					#Range: > 1
+					projected_max = 3000
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 1.0
+
+				[status_gauge.status_bars.stamina.presets.mine_and_slash]
+					#Range: > 1
+					baseline = 50
+					#Range: > 1
+					projected_max = 1040
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 0.4
+
+		[status_gauge.status_bars.mana]
+
+			[status_gauge.status_bars.mana.presets]
+
+				[status_gauge.status_bars.mana.presets.irons_spellbooks]
+					#Range: > 1
+					baseline = 100
+					#Range: > 1
+					projected_max = 800
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 1.0
+
+				[status_gauge.status_bars.mana.presets.mine_and_slash]
+					#Range: > 1
+					baseline = 50
+					#Range: > 1
+					projected_max = 1040
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 0.4
+
+	#Status Effects
+	[status_gauge.status_effects]
+		#Max status effect icons shown per gauge, 0 to disable.
+		#Range: 0 ~ 64
+		max_displayed = 0
+		#Order status effect icons are shown in.
+		#Allowed Values: NEWEST, OLDEST, HARMFUL, BENEFICIAL
+		sort_order = "NEWEST"
+
+#Visibility
+[visibility]
+
+	[visibility.minecraft]
+		#Hides the vanilla bossbar.
+		hide_bossbar = true
+		hide_potion_icons = true
+		#Item name text shifts when switching off and on creative mode.
+		disable_shift_text_on_gamemode = true
+
+		#Vanilla Hotbar settings
+		[visibility.minecraft.hotbar]
+			hide_offhand_slot = true
+			#Hides the More Offhand Slots slots in the hotbar.
+			hide_moreoffhandslots = true
+
+			#Hotbar Status Setting
+			[visibility.minecraft.hotbar.status]
+				hidden = true
+				x = 0
+				y = -7
+
+				[visibility.minecraft.hotbar.status.health_level]
+					hidden = true
+					x = 0
+					y = 0
+
+				[visibility.minecraft.hotbar.status.food_level]
+					hidden = false
+					x = 0
+					y = 0
+
+				[visibility.minecraft.hotbar.status.armor_level]
+					hidden = false
+					x = 0
+					y = 0
+
+				[visibility.minecraft.hotbar.status.air_level]
+					hidden = true
+					x = 0
+					y = 0
+
+				[visibility.minecraft.hotbar.status.xp_level]
+					hidden = true
+					x = 0
+					y = 0
+
+		#Vanilla Highlight Item Name Settings
+		[visibility.minecraft.item_name]
+			x = 0
+			y = -22
+
+		#Vanilla Action Bar Settings
+		[visibility.minecraft.record_overlay]
+			x = 0
+			y = -20
+
+	[visibility.epicfight]
+		hide_stamina_bar = true
+
+	[visibility.thirst]
+		#Hide thirst bar for mods that dont have the config option.
+		hide_thirst_bar = true
+
+	[visibility.autohud]
+		#Should the hotbar remain hidden if you switched items with the equipment binds.
+		hotbar_remain_hidden = true
+
+[debug_client]
+	#Allow the mod to send output to log. Useful for obtaining skill overlay ids.
+	enabled = false
+

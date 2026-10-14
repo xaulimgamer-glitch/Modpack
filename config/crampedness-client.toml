@@ -1,0 +1,6 @@
+#Move held items in both hands away from nearby blocks and entities in first person.
+enabled = true
+#Visual effect multiplier. 0 disables movement; 1 is the default.
+#Range: 0.0 ~ 2.0
+strength = 1.0
+
