@@ -1,18 +1,397 @@
 {
   "top_level_jars": 288,
-  "archives_scanned": 479,
-  "module_candidates": 391,
+  "archives_scanned": 478,
+  "module_candidates": 390,
   "malformed_old_csv_rows": [],
   "failures": [],
   "exporter_candidates": [
     {
-      "source": "irons_spellbooks-1.20.1-3.16.3.jar",
+      "source": "irons_spellbooks-1.20.1-3.16.4.jar",
       "class_name": "io/redspace/ironsspellbooks/command/GenerateModList.class"
     }
   ],
   "old_inventory_rows": 391,
-  "old_file_not_found": [],
-  "version_changes": [],
+  "old_file_not_found": [
+    {
+      "mod_id": "artifacts",
+      "mod_name": "Artifacts",
+      "mod_version": "9.5.19",
+      "mod_file": "artifacts-forge-9.5.19.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
+      "issue_tracker_url": "https://github.com/ochotonida/artifacts/issues"
+    },
+    {
+      "mod_id": "burnt",
+      "mod_name": "Burnt Basic",
+      "mod_version": "1.10.5.3",
+      "mod_file": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+    },
+    {
+      "mod_id": "collective",
+      "mod_name": "Collective",
+      "mod_version": "8.87",
+      "mod_file": "collective-1.20.1-8.87.jar",
+      "mod_url": "",
+      "display_url": "https://serilum.com/mod/collective",
+      "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+    },
+    {
+      "mod_id": "entityculling",
+      "mod_name": "EntityCulling",
+      "mod_version": "1.12.1",
+      "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/entityculling",
+      "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+    },
+    {
+      "mod_id": "expandability",
+      "mod_name": "ExpandAbility",
+      "mod_version": "9.0.4",
+      "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/expandability-forge-9.0.4.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/florensie/expandability/issues"
+    },
+    {
+      "mod_id": "fwa",
+      "mod_name": "Fancy World Animations",
+      "mod_version": "1.3.7-patch.3",
+      "mod_file": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/maDU59/FancyWorldAnimations"
+    },
+    {
+      "mod_id": "geckolib",
+      "mod_name": "GeckoLib 4",
+      "mod_version": "4.8.4",
+      "mod_file": "geckolib-forge-1.20.1-4.8.4.jar",
+      "mod_url": "",
+      "display_url": "http://geckolib.com/",
+      "issue_tracker_url": "https://github.com/bernie-g/geckolib/issues"
+    },
+    {
+      "mod_id": "irons_spellbooks",
+      "mod_name": "Iron's Spells 'n Spellbooks",
+      "mod_version": "1.20.1-3.16.3",
+      "mod_file": "irons_spellbooks-1.20.1-3.16.3.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
+      "issue_tracker_url": "https://github.com/iron431/Irons-Spells-n-Spellbooks/issues"
+    },
+    {
+      "mod_id": "jei",
+      "mod_name": "Just Enough Items",
+      "mod_version": "15.74.0.234",
+      "mod_file": "jei-1.20.1-forge-15.74.0.234.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+      "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "mezz_config",
+      "mod_name": "MezzConfig",
+      "mod_version": "0.6.10",
+      "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/mezz/MezzConfig",
+      "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.5",
+      "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "multimine",
+      "mod_name": "Multi Mine",
+      "mod_version": "1.20.1.4",
+      "mod_file": "multimine-1.20.1.4.jar",
+      "mod_url": "",
+      "display_url": "http://atomicstryker.org/",
+      "issue_tracker_url": "https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues"
+    },
+    {
+      "mod_id": "particlerain",
+      "mod_name": "Particle Rain",
+      "mod_version": "4.0.3",
+      "mod_file": "particlerain-4.0.3-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/PigCart/particle-rain/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "transition",
+      "mod_name": "TRansition",
+      "mod_version": "1.0.28",
+      "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/tr7zw/TRansition",
+      "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+    },
+    {
+      "mod_id": "trender",
+      "mod_name": "TRender",
+      "mod_version": "1.0.17",
+      "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/tr7zw/TRender",
+      "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+    }
+  ],
+  "version_changes": [
+    {
+      "previous": {
+        "mod_id": "artifacts",
+        "mod_name": "Artifacts",
+        "mod_version": "9.5.19",
+        "mod_file": "artifacts-forge-9.5.19.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
+        "issue_tracker_url": "https://github.com/ochotonida/artifacts/issues"
+      },
+      "current": [
+        {
+          "mod_id": "artifacts",
+          "mod_name": "Artifacts",
+          "mod_version": "9.5.20",
+          "mod_file": "artifacts-forge-9.5.20.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
+          "issue_tracker_url": "https://github.com/ochotonida/artifacts/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "burnt",
+        "mod_name": "Burnt Basic",
+        "mod_version": "1.10.5.3",
+        "mod_file": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+      },
+      "current": [
+        {
+          "mod_id": "burnt",
+          "mod_name": "Burnt Basic",
+          "mod_version": "1.10.5.4",
+          "mod_file": "burnt_basic-1.10.5.4-forge-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "collective",
+        "mod_name": "Collective",
+        "mod_version": "8.87",
+        "mod_file": "collective-1.20.1-8.87.jar",
+        "mod_url": "",
+        "display_url": "https://serilum.com/mod/collective",
+        "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+      },
+      "current": [
+        {
+          "mod_id": "collective",
+          "mod_name": "Collective",
+          "mod_version": "8.88",
+          "mod_file": "collective-1.20.1-8.88.jar",
+          "mod_url": "",
+          "display_url": "https://serilum.com/mod/collective",
+          "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "entityculling",
+        "mod_name": "EntityCulling",
+        "mod_version": "1.12.1",
+        "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/entityculling",
+        "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+      },
+      "current": [
+        {
+          "mod_id": "entityculling",
+          "mod_name": "EntityCulling",
+          "mod_version": "1.12.2",
+          "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/entityculling",
+          "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "fwa",
+        "mod_name": "Fancy World Animations",
+        "mod_version": "1.3.7-patch.3",
+        "mod_file": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/maDU59/FancyWorldAnimations"
+      },
+      "current": [
+        {
+          "mod_id": "fwa",
+          "mod_name": "Fancy World Animations",
+          "mod_version": "1.3.9",
+          "mod_file": "fwa-1.20.1-forge-1.3.9.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/maDU59/FancyWorldAnimations"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "geckolib",
+        "mod_name": "GeckoLib 4",
+        "mod_version": "4.8.4",
+        "mod_file": "geckolib-forge-1.20.1-4.8.4.jar",
+        "mod_url": "",
+        "display_url": "http://geckolib.com/",
+        "issue_tracker_url": "https://github.com/bernie-g/geckolib/issues"
+      },
+      "current": [
+        {
+          "mod_id": "geckolib",
+          "mod_name": "GeckoLib 4",
+          "mod_version": "4.8.5",
+          "mod_file": "geckolib-forge-1.20.1-4.8.5.jar",
+          "mod_url": "",
+          "display_url": "http://geckolib.com/",
+          "issue_tracker_url": "https://github.com/bernie-g/geckolib/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "irons_spellbooks",
+        "mod_name": "Iron's Spells 'n Spellbooks",
+        "mod_version": "1.20.1-3.16.3",
+        "mod_file": "irons_spellbooks-1.20.1-3.16.3.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
+        "issue_tracker_url": "https://github.com/iron431/Irons-Spells-n-Spellbooks/issues"
+      },
+      "current": [
+        {
+          "mod_id": "irons_spellbooks",
+          "mod_name": "Iron's Spells 'n Spellbooks",
+          "mod_version": "1.20.1-3.16.4",
+          "mod_file": "irons_spellbooks-1.20.1-3.16.4.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
+          "issue_tracker_url": "https://github.com/iron431/Irons-Spells-n-Spellbooks/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "jei",
+        "mod_name": "Just Enough Items",
+        "mod_version": "15.74.0.234",
+        "mod_file": "jei-1.20.1-forge-15.74.0.234.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+        "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+      },
+      "current": [
+        {
+          "mod_id": "jei",
+          "mod_name": "Just Enough Items",
+          "mod_version": "15.75.0.242",
+          "mod_file": "jei-1.20.1-forge-15.75.0.242.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+          "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "mezz_config",
+        "mod_name": "MezzConfig",
+        "mod_version": "0.6.10",
+        "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/mezz/MezzConfig",
+        "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+      },
+      "current": [
+        {
+          "mod_id": "mezz_config",
+          "mod_name": "MezzConfig",
+          "mod_version": "0.7.1",
+          "mod_file": "mezz_config-1.20.1-forge-0.7.1.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/mezz/MezzConfig",
+          "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "multimine",
+        "mod_name": "Multi Mine",
+        "mod_version": "1.20.1.4",
+        "mod_file": "multimine-1.20.1.4.jar",
+        "mod_url": "",
+        "display_url": "http://atomicstryker.org/",
+        "issue_tracker_url": "https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues"
+      },
+      "current": [
+        {
+          "mod_id": "multimine",
+          "mod_name": "Multi Mine",
+          "mod_version": "1.20.1.5",
+          "mod_file": "multimine-1.20.1.5.jar",
+          "mod_url": "",
+          "display_url": "http://atomicstryker.org/",
+          "issue_tracker_url": "https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "particlerain",
+        "mod_name": "Particle Rain",
+        "mod_version": "4.0.3",
+        "mod_file": "particlerain-4.0.3-1.20.1-forge.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/PigCart/particle-rain/issues?q=is%3Aissue"
+      },
+      "current": [
+        {
+          "mod_id": "particlerain",
+          "mod_name": "Particle Rain",
+          "mod_version": "4.0.4",
+          "mod_file": "particlerain-4.0.4-1.20.1-forge.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/PigCart/particle-rain/issues?q=is%3Aissue"
+        }
+      ]
+    }
+  ],
   "new_mod_ids": [],
   "no_longer_declared": [],
   "duplicate_top_level_ids": {},
@@ -35,26 +414,6 @@
         "mod_url": "",
         "display_url": "",
         "issue_tracker_url": "https://github.com/shedaniel/architectury/issues"
-      }
-    ],
-    "mezz_config": [
-      {
-        "mod_id": "mezz_config",
-        "mod_name": "MezzConfig",
-        "mod_version": "0.6.10",
-        "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
-        "mod_url": "",
-        "display_url": "https://github.com/mezz/MezzConfig",
-        "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
-      },
-      {
-        "mod_id": "mezz_config",
-        "mod_name": "MezzConfig",
-        "mod_version": "0.7.1",
-        "mod_file": "mezz_config-1.20.1-forge-0.7.1.jar",
-        "mod_url": "",
-        "display_url": "https://github.com/mezz/MezzConfig",
-        "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
       }
     ],
     "mixinextras": [
@@ -161,7 +520,7 @@
         "mod_id": "mixinextras",
         "mod_name": "MixinExtras",
         "mod_version": "0.3.5",
-        "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+        "mod_file": "artifacts-forge-9.5.20.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
         "mod_url": "",
         "display_url": "https://github.com/LlamaLad7/MixinExtras",
         "issue_tracker_url": ""
@@ -419,7 +778,7 @@
         "mod_id": "transition",
         "mod_name": "TRansition",
         "mod_version": "1.0.28",
-        "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+        "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
         "mod_url": "",
         "display_url": "https://github.com/tr7zw/TRansition",
         "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
@@ -439,7 +798,7 @@
         "mod_id": "trender",
         "mod_name": "TRender",
         "mod_version": "1.0.17",
-        "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+        "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
         "mod_url": "",
         "display_url": "https://github.com/tr7zw/TRender",
         "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
@@ -1547,10 +1906,10 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "artifacts-forge-9.5.19.jar",
-      "top": "artifacts-forge-9.5.19.jar",
+      "source": "artifacts-forge-9.5.20.jar",
+      "top": "artifacts-forge-9.5.20.jar",
       "depth": 0,
-      "sha256": "f1e4dc786866b6e4f2a48142f2acf63bb9bee54ac2f31621ad5d8f18ab54c7b0",
+      "sha256": "d9e5413bab156b00896c780272ff00bc5dbdc7b3c8fb3ebc70696272b300afe4",
       "manifest": {
         "Manifest-Version": "1.0",
         "MixinConfigs": "mixins.artifacts.common.json,mixins.artifacts.forge.json"
@@ -1559,8 +1918,8 @@
         {
           "mod_id": "artifacts",
           "mod_name": "Artifacts",
-          "mod_version": "9.5.19",
-          "mod_file": "artifacts-forge-9.5.19.jar",
+          "mod_version": "9.5.20",
+          "mod_file": "artifacts-forge-9.5.20.jar",
           "mod_url": "",
           "display_url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
           "issue_tracker_url": "https://github.com/ochotonida/artifacts/issues"
@@ -1644,10 +2003,10 @@
       }
     },
     {
-      "source": "artifacts-forge-9.5.19.jar!/META-INF/jars/expandability-forge-9.0.4.jar",
-      "top": "artifacts-forge-9.5.19.jar",
+      "source": "artifacts-forge-9.5.20.jar!/META-INF/jars/expandability-forge-9.0.4.jar",
+      "top": "artifacts-forge-9.5.20.jar",
       "depth": 1,
-      "sha256": "0977c531a648319c2632384fe7771a14cf93b6485351cfb2c4f9fd20fbfdd590",
+      "sha256": "07ebf547717a827ebbdfd64a5211b4e2e43ef8cda74f1d33a0399a53f14cf0ba",
       "manifest": {
         "Manifest-Version": "1.0",
         "MixinConfigs": "expandability.mixins.json,expandability-common.mixins.json"
@@ -1657,7 +2016,7 @@
           "mod_id": "expandability",
           "mod_name": "ExpandAbility",
           "mod_version": "9.0.4",
-          "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/expandability-forge-9.0.4.jar",
+          "mod_file": "artifacts-forge-9.5.20.jar!/META-INF/jars/expandability-forge-9.0.4.jar",
           "mod_url": "",
           "display_url": "",
           "issue_tracker_url": "https://github.com/florensie/expandability/issues"
@@ -1702,8 +2061,8 @@
       }
     },
     {
-      "source": "artifacts-forge-9.5.19.jar!/META-INF/jars/expandability-forge-9.0.4.jar!/META-INF/jars/MixinExtras-0.1.1.jar",
-      "top": "artifacts-forge-9.5.19.jar",
+      "source": "artifacts-forge-9.5.20.jar!/META-INF/jars/expandability-forge-9.0.4.jar!/META-INF/jars/MixinExtras-0.1.1.jar",
+      "top": "artifacts-forge-9.5.20.jar",
       "depth": 2,
       "sha256": "5027407eca59918b084aecf48160272e8d7328291d3075e8b41f54736b606094",
       "manifest": {
@@ -1714,10 +2073,10 @@
       "fabric": null
     },
     {
-      "source": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
-      "top": "artifacts-forge-9.5.19.jar",
+      "source": "artifacts-forge-9.5.20.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+      "top": "artifacts-forge-9.5.20.jar",
       "depth": 1,
-      "sha256": "b30fbcaccc18f4a3fcf20a5a0e85ae4250c2a249b941885b1fcd65db33245f8a",
+      "sha256": "38b89599eb0b4b48bfa0f53ec615d9d7112728b9d7cd77f55a2aa4e43c1f764b",
       "manifest": {
         "Manifest-Version": "1.0",
         "MixinConfigs": "mixinextras.init.mixins.json",
@@ -1728,7 +2087,7 @@
           "mod_id": "mixinextras",
           "mod_name": "MixinExtras",
           "mod_version": "0.3.5",
-          "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+          "mod_file": "artifacts-forge-9.5.20.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
           "mod_url": "",
           "display_url": "https://github.com/LlamaLad7/MixinExtras",
           "issue_tracker_url": ""
@@ -1756,8 +2115,8 @@
       }
     },
     {
-      "source": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar!/META-INF/jars/MixinExtras-0.3.5.jar",
-      "top": "artifacts-forge-9.5.19.jar",
+      "source": "artifacts-forge-9.5.20.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar!/META-INF/jars/MixinExtras-0.3.5.jar",
+      "top": "artifacts-forge-9.5.20.jar",
       "depth": 2,
       "sha256": "41b0bd1c7c6e7f0bdfe5c3dc969897148b0d8455a6083f0297456ad6fe738a51",
       "manifest": {
@@ -1814,7 +2173,7 @@
       "source": "awakening-compat-0.1.0.jar",
       "top": "awakening-compat-0.1.0.jar",
       "depth": 0,
-      "sha256": "d27441943f70d8eb6ca279075ca0769f9b71a5f317dfcd7b7f7f6727c92e4efa",
+      "sha256": "97fd48150c75a26c9a52b9d5a02851aab92e77e303547e6359afb1b795b3bf10",
       "manifest": {
         "Manifest-Version": "1.0",
         "MixinConfigs": "awakening_compat.mixins.json",
@@ -2936,17 +3295,17 @@
       "fabric": null
     },
     {
-      "source": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
-      "top": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
+      "source": "burnt_basic-1.10.5.4-forge-1.20.1.jar",
+      "top": "burnt_basic-1.10.5.4-forge-1.20.1.jar",
       "depth": 0,
-      "sha256": "79c2cc67a738795a793a9bb3e25482f6fed85489ee1a1c0f7905fa4d70f2ef66",
+      "sha256": "18ebd46dbaffe12bee77214111299c35206177286e94244a84d31d38214ab8a6",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "burnt",
         "Specification-Vendor": "Pixelbank",
         "Specification-Version": "1",
         "Implementation-Title": "burnt",
-        "Implementation-Version": "1.10.5.3",
+        "Implementation-Version": "1.10.5.4",
         "Implementation-Vendor": "Pixelbank",
         "MixinConfigs": "burnt.mixins.json,burnt.compat.mixins.json"
       },
@@ -2954,8 +3313,8 @@
         {
           "mod_id": "burnt",
           "mod_name": "Burnt Basic",
-          "mod_version": "1.10.5.3",
-          "mod_file": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
+          "mod_version": "1.10.5.4",
+          "mod_file": "burnt_basic-1.10.5.4-forge-1.20.1.jar",
           "mod_url": "",
           "display_url": "",
           "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
@@ -3434,20 +3793,20 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "collective-1.20.1-8.87.jar",
-      "top": "collective-1.20.1-8.87.jar",
+      "source": "collective-1.20.1-8.88.jar",
+      "top": "collective-1.20.1-8.88.jar",
       "depth": 0,
-      "sha256": "5206c9a902dbc498657c06c092924afc08d8b7e1c8680d21b0c1a3bdcc2f8115",
+      "sha256": "3aee63a5c09252bf5ac05bcba66ad91fbbd2ec2ef9fce6456ef5f339115f7b0a",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "collective",
         "Specification-Vendor": "Serilum",
-        "Specification-Version": "8.87",
+        "Specification-Version": "8.88",
         "Implementation-Title": "Forge",
-        "Implementation-Version": "8.87",
+        "Implementation-Version": "8.88",
         "Implementation-Vendor": "Serilum",
-        "Implementation-Timestamp": "2026-11-15T13:17:11+0100",
-        "Timestampe": "1794745031739",
+        "Implementation-Timestamp": "2026-11-22T17:46:51+0100",
+        "Timestampe": "1795366011316",
         "Built-On-Java": "21.0.11+1-b1163.116 (JetBrains s.r.o.)",
         "Build-On-Minecraft": "1.20.1",
         "MixinConfigs": "collective_forge.mixins.json"
@@ -3456,8 +3815,8 @@
         {
           "mod_id": "collective",
           "mod_name": "Collective",
-          "mod_version": "8.87",
-          "mod_file": "collective-1.20.1-8.87.jar",
+          "mod_version": "8.88",
+          "mod_file": "collective-1.20.1-8.88.jar",
           "mod_url": "",
           "display_url": "https://serilum.com/mod/collective",
           "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
@@ -6161,10 +6520,10 @@
       "fabric": null
     },
     {
-      "source": "entityculling-forge-1.12.1-mc1.20.1.jar",
-      "top": "entityculling-forge-1.12.1-mc1.20.1.jar",
+      "source": "entityculling-forge-1.12.2-mc1.20.1.jar",
+      "top": "entityculling-forge-1.12.2-mc1.20.1.jar",
       "depth": 0,
-      "sha256": "94f8881f696dfa73f1fe59395fca040655187ca87340747fb65cad69e13759b9",
+      "sha256": "d82f6350b6e4b5ac48d4054ad5a54469ab14f019040e9053f38c192b4b1adc9d",
       "manifest": {
         "Manifest-Version": "1.0",
         "Stonecutter-Plugin-Version": "0.9.8",
@@ -6179,8 +6538,8 @@
         {
           "mod_id": "entityculling",
           "mod_name": "EntityCulling",
-          "mod_version": "1.12.1",
-          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar",
+          "mod_version": "1.12.2",
+          "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar",
           "mod_url": "",
           "display_url": "https://modrinth.com/mod/entityculling",
           "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
@@ -6229,10 +6588,10 @@
       }
     },
     {
-      "source": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
-      "top": "entityculling-forge-1.12.1-mc1.20.1.jar",
+      "source": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+      "top": "entityculling-forge-1.12.2-mc1.20.1.jar",
       "depth": 1,
-      "sha256": "774e952182f10ac854fb8e4571b00e0d1ce33a2cecbde3056c9775bcc5700653",
+      "sha256": "eaf57365c1108864efec58ea97d48627dd7f80762d6e62ee625cfb234ed457c5",
       "manifest": {
         "Manifest-Version": "1.0",
         "Stonecutter-Plugin-Version": "0.9.8",
@@ -6248,7 +6607,7 @@
           "mod_id": "transition",
           "mod_name": "TRansition",
           "mod_version": "1.0.28",
-          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+          "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
           "mod_url": "",
           "display_url": "https://github.com/tr7zw/TRansition",
           "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
@@ -6271,10 +6630,10 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
-      "top": "entityculling-forge-1.12.1-mc1.20.1.jar",
+      "source": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+      "top": "entityculling-forge-1.12.2-mc1.20.1.jar",
       "depth": 1,
-      "sha256": "97ba067240b0b4d96e03775e7f8491b8014eb25adb85661a3702779a675fdc86",
+      "sha256": "8b2beadf9a092a805750b8a1d35fdeb3b8fcb336d28a9a795398aeff808cae13",
       "manifest": {
         "Manifest-Version": "1.0",
         "Stonecutter-Plugin-Version": "0.9.8",
@@ -6290,7 +6649,7 @@
           "mod_id": "trender",
           "mod_name": "TRender",
           "mod_version": "1.0.17",
-          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+          "mod_file": "entityculling-forge-1.12.2-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
           "mod_url": "",
           "display_url": "https://github.com/tr7zw/TRender",
           "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
@@ -10196,27 +10555,27 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
-      "top": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
+      "source": "fwa-1.20.1-forge-1.3.9.jar",
+      "top": "fwa-1.20.1-forge-1.3.9.jar",
       "depth": 0,
-      "sha256": "985bfa85791973a6fecfe3b32963a68181fcac81d01c25dbf542b23de2c18703",
+      "sha256": "cd95aa530d3c953f5e4568d5d4556cc4e0b9d3a3160f8331c894244fc26d1d1c",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "fwa",
         "Specification-Vendor": "maDU59_",
         "Specification-Version": "1",
         "Implementation-Title": "fwa",
-        "Implementation-Version": "1.3.7-patch.3",
+        "Implementation-Version": "1.3.9",
         "Implementation-Vendor": "maDU59_",
-        "Implementation-Timestamp": "2026-11-17T14:58:30+0100",
+        "Implementation-Timestamp": "2026-11-22T18:23:55+0100",
         "MixinConfigs": "fwa.mixins.json"
       },
       "mods": [
         {
           "mod_id": "fwa",
           "mod_name": "Fancy World Animations",
-          "mod_version": "1.3.7-patch.3",
-          "mod_file": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
+          "mod_version": "1.3.9",
+          "mod_file": "fwa-1.20.1-forge-1.3.9.jar",
           "mod_url": "",
           "display_url": "",
           "issue_tracker_url": "https://github.com/maDU59/FancyWorldAnimations"
@@ -10353,27 +10712,27 @@
       "fabric": null
     },
     {
-      "source": "geckolib-forge-1.20.1-4.8.4.jar",
-      "top": "geckolib-forge-1.20.1-4.8.4.jar",
+      "source": "geckolib-forge-1.20.1-4.8.5.jar",
+      "top": "geckolib-forge-1.20.1-4.8.5.jar",
       "depth": 0,
-      "sha256": "c04abba4fd354dd8c0e8a732f1f05f4dca893d2e1d962b2ab128bbd411478747",
+      "sha256": "385b8888d7c739f554e3aa33855aa7f8d5f984cbb484fabc82d94d38f2c478fa",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "GeckoLib 4",
         "Specification-Vendor": "Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin",
         "Specification-Version": "4",
         "Implementation-Title": "GeckoLib 4 Forge",
-        "Implementation-Version": "4.8.4",
+        "Implementation-Version": "4.8.5",
         "Implementation-Vendor": "Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin",
-        "Implementation-Timestamp": "2026-06-20T21:07:43+1000",
+        "Implementation-Timestamp": "2026-11-21T20:01:53+1000",
         "MixinConfigs": "geckolib.mixins.json"
       },
       "mods": [
         {
           "mod_id": "geckolib",
           "mod_name": "GeckoLib 4",
-          "mod_version": "4.8.4",
-          "mod_file": "geckolib-forge-1.20.1-4.8.4.jar",
+          "mod_version": "4.8.5",
+          "mod_file": "geckolib-forge-1.20.1-4.8.5.jar",
           "mod_url": "",
           "display_url": "http://geckolib.com/",
           "issue_tracker_url": "https://github.com/bernie-g/geckolib/issues"
@@ -10426,8 +10785,8 @@
       }
     },
     {
-      "source": "geckolib-forge-1.20.1-4.8.4.jar!/META-INF/jarjar/mclib-20.jar",
-      "top": "geckolib-forge-1.20.1-4.8.4.jar",
+      "source": "geckolib-forge-1.20.1-4.8.5.jar!/META-INF/jarjar/mclib-20.jar",
+      "top": "geckolib-forge-1.20.1-4.8.5.jar",
       "depth": 1,
       "sha256": "74fac6a10e6e365045c220370c86a4f7739cf89d2a2ad8b63e0cebebc947b949",
       "manifest": {
@@ -12151,27 +12510,27 @@
       "fabric": null
     },
     {
-      "source": "irons_spellbooks-1.20.1-3.16.3.jar",
-      "top": "irons_spellbooks-1.20.1-3.16.3.jar",
+      "source": "irons_spellbooks-1.20.1-3.16.4.jar",
+      "top": "irons_spellbooks-1.20.1-3.16.4.jar",
       "depth": 0,
-      "sha256": "54b5aaa52887c38f570fbd820288171234d8541c17a5e953f9271189fdd480fb",
+      "sha256": "fcb035bb4041d4d9b0288da31ee770535c51aa6fa1f79476428e50a116dba20c",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "Iron's Spells 'n Spellbooks",
         "Specification-Vendor": "Iron431, Lab3",
         "Specification-Version": "1",
         "Implementation-Title": "Iron's Spells 'n Spellbooks",
-        "Implementation-Version": "1.20.1-3.16.3",
+        "Implementation-Version": "1.20.1-3.16.4",
         "Implementation-Vendor": "Iron431, Lab3",
-        "Implementation-Timestamp": "2026-08-18T15:34:43-0500",
+        "Implementation-Timestamp": "2026-11-19T10:15:38-0600",
         "MixinConfigs": "mixins.irons_spellbooks.json"
       },
       "mods": [
         {
           "mod_id": "irons_spellbooks",
           "mod_name": "Iron's Spells 'n Spellbooks",
-          "mod_version": "1.20.1-3.16.3",
-          "mod_file": "irons_spellbooks-1.20.1-3.16.3.jar",
+          "mod_version": "1.20.1-3.16.4",
+          "mod_file": "irons_spellbooks-1.20.1-3.16.4.jar",
           "mod_url": "",
           "display_url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
           "issue_tracker_url": "https://github.com/iron431/Irons-Spells-n-Spellbooks/issues"
@@ -12343,17 +12702,17 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "jei-1.20.1-forge-15.74.0.234.jar",
-      "top": "jei-1.20.1-forge-15.74.0.234.jar",
+      "source": "jei-1.20.1-forge-15.75.0.242.jar",
+      "top": "jei-1.20.1-forge-15.75.0.242.jar",
       "depth": 0,
-      "sha256": "0bbd27c886b974be6906fe16f5e5e3ace8a87350b32e4361cca0213df1e7e86e",
+      "sha256": "266057cffa5a95759a1f9b91c065a83a28e8873009e92a3258785567ab9d8046",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "Just Enough Items",
         "Specification-Vendor": "mezz",
-        "Specification-Version": "15.74.0",
+        "Specification-Version": "15.75.0",
         "Implementation-Title": "modShadeJar",
-        "Implementation-Version": "15.74.0.234",
+        "Implementation-Version": "15.75.0.242",
         "Implementation-Vendor": "mezz",
         "Multi-Release": "true"
       },
@@ -12361,8 +12720,8 @@
         {
           "mod_id": "jei",
           "mod_name": "Just Enough Items",
-          "mod_version": "15.74.0.234",
-          "mod_file": "jei-1.20.1-forge-15.74.0.234.jar",
+          "mod_version": "15.75.0.242",
+          "mod_file": "jei-1.20.1-forge-15.75.0.242.jar",
           "mod_url": "",
           "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
           "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
@@ -12380,7 +12739,7 @@
           {
             "modId": "mezz_config_gui",
             "mandatory": false,
-            "versionRange": "[0.5.10,)",
+            "versionRange": "[0.7.2,0.8)",
             "ordering": "AFTER",
             "side": "CLIENT"
           },
@@ -12395,70 +12754,6 @@
             "modId": "minecraft",
             "mandatory": true,
             "versionRange": "[1.20.1, 1.20.2)",
-            "ordering": "NONE",
-            "side": "BOTH"
-          }
-        ]
-      },
-      "fabric": null,
-      "loader": "javafml",
-      "loader_range": "[47,)",
-      "metadata": "META-INF/mods.toml",
-      "jarjar": {
-        "jars": [
-          {
-            "identifier": {
-              "group": "net.mezzdev.config",
-              "artifact": "mezz_config-1.20.1-forge"
-            },
-            "version": {
-              "range": "[0.6.10,1.0.0)",
-              "artifactVersion": "0.6.10"
-            },
-            "path": "META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
-            "isObfuscated": false
-          }
-        ]
-      }
-    },
-    {
-      "source": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
-      "top": "jei-1.20.1-forge-15.74.0.234.jar",
-      "depth": 1,
-      "sha256": "3f549623d8490077ee13a3f3899ff3fbe51f36af0a492b81974c456608e623c1",
-      "manifest": {
-        "Manifest-Version": "1.0",
-        "Specification-Title": "MezzConfig",
-        "Specification-Vendor": "mezz",
-        "Specification-Version": "0.6.10",
-        "Implementation-Title": "jar",
-        "Implementation-Version": "0.6.10",
-        "Implementation-Vendor": "mezz"
-      },
-      "mods": [
-        {
-          "mod_id": "mezz_config",
-          "mod_name": "MezzConfig",
-          "mod_version": "0.6.10",
-          "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
-          "mod_url": "",
-          "display_url": "https://github.com/mezz/MezzConfig",
-          "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
-        }
-      ],
-      "dependencies": {
-        "mezz_config": [
-          {
-            "modId": "forge",
-            "mandatory": true,
-            "versionRange": "[47.0,)",
-            "ordering": "NONE",
-            "side": "BOTH"
-          },
-          {
-            "modId": "minecraft",
-            "mandatory": true,
-            "versionRange": "[1.20.1]",
             "ordering": "NONE",
             "side": "BOTH"
           }
@@ -14772,26 +15067,26 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "multimine-1.20.1.4.jar",
-      "top": "multimine-1.20.1.4.jar",
+      "source": "multimine-1.20.1.5.jar",
+      "top": "multimine-1.20.1.5.jar",
       "depth": 0,
-      "sha256": "3e8f152bfe0e57718553d5baa1e6fdefe04867470446cadd81d0e0c8b08b5150",
+      "sha256": "5fc7da801044bd1f28a04fd8d2d9e712436227e91478ce74bd7b7c3ac1fd404a",
       "manifest": {
         "Manifest-Version": "1.0",
         "Specification-Title": "multimine",
         "Specification-Vendor": "atomicstryker",
-        "Specification-Version": "1.20.1.4",
+        "Specification-Version": "1.20.1.5",
         "Implementation-Title": "MultiMine",
-        "Implementation-Version": "1.20.1.4",
+        "Implementation-Version": "1.20.1.5",
         "Implementation-Vendor": "atomicstryker",
-        "Implementation-Timestamp": "2024-06-01T09:05:41+0200"
+        "Implementation-Timestamp": "2026-11-19T15:24:45+0100"
       },
       "mods": [
         {
           "mod_id": "multimine",
           "mod_name": "Multi Mine",
-          "mod_version": "1.20.1.4",
-          "mod_file": "multimine-1.20.1.4.jar",
+          "mod_version": "1.20.1.5",
+          "mod_file": "multimine-1.20.1.5.jar",
           "mod_url": "",
           "display_url": "http://atomicstryker.org/",
           "issue_tracker_url": "https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues"
@@ -16932,10 +17227,10 @@
       "metadata": "META-INF/mods.toml"
     },
     {
-      "source": "particlerain-4.0.3-1.20.1-forge.jar",
-      "top": "particlerain-4.0.3-1.20.1-forge.jar",
+      "source": "particlerain-4.0.4-1.20.1-forge.jar",
+      "top": "particlerain-4.0.4-1.20.1-forge.jar",
       "depth": 0,
-      "sha256": "44bc0ab3ed373fe0d004b4457d09f91137d01ca6f8c195a5f530cb48064cb14f",
+      "sha256": "0bdac63ae9edcfadc95860057df434c243d113350e725fc554db65f2f364a2d5",
       "manifest": {
         "Manifest-Version": "1.0",
         "Stonecutter-Plugin-Version": "0.10-beta.3",
@@ -16948,8 +17243,8 @@
         {
           "mod_id": "particlerain",
           "mod_name": "Particle Rain",
-          "mod_version": "4.0.3",
-          "mod_file": "particlerain-4.0.3-1.20.1-forge.jar",
+          "mod_version": "4.0.4",
+          "mod_file": "particlerain-4.0.4-1.20.1-forge.jar",
           "mod_url": "",
           "display_url": "",
           "issue_tracker_url": "https://github.com/PigCart/particle-rain/issues?q=is%3Aissue"
@@ -16995,8 +17290,8 @@
       }
     },
     {
-      "source": "particlerain-4.0.3-1.20.1-forge.jar!/META-INF/jarjar/mixinextras-forge-0.5.0.jar",
-      "top": "particlerain-4.0.3-1.20.1-forge.jar",
+      "source": "particlerain-4.0.4-1.20.1-forge.jar!/META-INF/jarjar/mixinextras-forge-0.5.0.jar",
+      "top": "particlerain-4.0.4-1.20.1-forge.jar",
       "depth": 1,
       "sha256": "12eed47509e3733a59135a52edd8a90807332248d292b7f1668afd42407ca01d",
       "manifest": {
@@ -17026,8 +17321,8 @@
       }
     },
     {
-      "source": "particlerain-4.0.3-1.20.1-forge.jar!/META-INF/jarjar/mixinextras-forge-0.5.0.jar!/META-INF/jars/MixinExtras-0.5.0.jar",
-      "top": "particlerain-4.0.3-1.20.1-forge.jar",
+      "source": "particlerain-4.0.4-1.20.1-forge.jar!/META-INF/jarjar/mixinextras-forge-0.5.0.jar!/META-INF/jars/MixinExtras-0.5.0.jar",
+      "top": "particlerain-4.0.4-1.20.1-forge.jar",
       "depth": 2,
       "sha256": "6e248dea7fad8045da6063ffeb905db7a25ac6c6a10211ae393b0e1b196f71a7",
       "manifest": {

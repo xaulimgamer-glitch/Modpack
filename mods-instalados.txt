@@ -17,9 +17,9 @@ Aquaculture-1.20.1-2.5.7.jar                                               60183
 aquaculturedelight-1.1.1-forge-1.20.1.jar                                  225149
 aquamirae-forge-1.20.1-6.4.0.jar                                           19073985
 architectury-9.2.14-forge.jar                                              580602
-artifacts-forge-9.5.19.jar                                                 850974
+artifacts-forge-9.5.20.jar                                                 850972
 astikorcartsredux-1.2.5.jar                                                530548
-awakening-compat-0.1.0.jar                                                 108835
+awakening-compat-0.1.0.jar                                                 108899
 ba_bt-1.20.1-3.0.0-beta3.2.1.jar                                           54453322
 baguettelib-1.20.1-Forge-2.0.7.jar                                         63126
 balm-forge-1.20.1-7.3.44.jar                                               561741
@@ -33,7 +33,7 @@ block_parry_dodge_1.20.1.jar                                               59132
 blueprint-1.20.1-7.1.5.jar                                                 1160817
 bmcfix-forge-1.0.2.jar                                                     8341
 BrewinAndChewin-1.20.1-3.2.1.jar                                           1206255
-burnt_basic-1.10.5.3-forge-1.20.1.jar                                      8952218
+burnt_basic-1.10.5.4-forge-1.20.1.jar                                      8943926
 burnt_coldsweat_compat-1.0.0.jar                                           10841
 caelus-forge-3.2.0+1.20.1.jar                                              40125
 cataclysmiccombat-1.4.1-1.20.1.jar                                         4291
@@ -43,7 +43,7 @@ cloth-config-11.1.136-forge.jar                                            11814
 Clumps-forge-1.20.1-12.0.0.4.jar                                           20299
 ColdSweat-2.4.5.jar                                                        2739282
 ColdSweatOrigins-1.0.4.jar                                                 19862
-collective-1.20.1-8.87.jar                                                 1131568
+collective-1.20.1-8.88.jar                                                 1131599
 combatroll-forge-1.3.3+1.20.1.jar                                          217962
 common-networking-forge-1.0.6-1.20.1.jar                                   21714
 Compat_AlexsMobs-Naturalist.jar                                            107423
@@ -82,7 +82,7 @@ emf_compat_core_forge_1.20.1_2.4.0.jar                                     18406
 endersdelight-1.1.4.jar                                                    192001
 entity_model_features-3.3.12-1.20.1-forge.jar                              840669
 entity_texture_features-7.2.7-1.20.1-forge.jar                             1004366
-entityculling-forge-1.12.1-mc1.20.1.jar                                    1528604
+entityculling-forge-1.12.2-mc1.20.1.jar                                    1529393
 EquipmentCompare-1.20.1-forge-1.3.7.jar                                    31704
 fabric-api-0.92.6+1.11.15+1.20.1.jar                                       3065815
 fallingtrees-forge-mc1.20-0.13.2-SNAPSHOT.jar                              4025908
@@ -102,9 +102,9 @@ ftb-quests-forge-2001.4.22.jar                                             12554
 ftb-ranks-forge-2001.1.7.jar                                               87362
 ftb-teams-forge-2001.3.2.jar                                               252579
 ftb-xmod-compat-forge-2.1.3.jar                                            129725
-fwa-1.20.1-forge-1.3.7-patch.3.jar                                         414642
+fwa-1.20.1-forge-1.3.9.jar                                                 415286
 fzzy_config-0.7.7+1.20.1+forge.jar                                         2397175
-geckolib-forge-1.20.1-4.8.4.jar                                            1038209
+geckolib-forge-1.20.1-4.8.5.jar                                            1044857
 GlitchCore-forge-1.20.1-0.0.1.1.jar                                        87550
 goblintraders-forge-1.20.1-1.11.5.jar                                      328727
 hardcorerevival-forge-1.20.1-20.1.19.jar                                   243947
@@ -128,10 +128,10 @@ integrated_cataclysm_forge-1.0.5+1.20.1.jar                                50790
 integrated_patches v1.2.0-1.20.1.jar                                       60922
 integrated_stronghold-1.1.2+1.20.1-forge.jar                               5254827
 irons_lib-1.20.1-2.4.0.jar                                                 1152936
-irons_spellbooks-1.20.1-3.16.3.jar                                         15570397
+irons_spellbooks-1.20.1-3.16.4.jar                                         15553271
 ISS-1.20.1.jar                                                             185531
 Jade-1.20.1-Forge-11.13.3.jar                                              553487
-jei-1.20.1-forge-15.74.0.234.jar                                           4805946
+jei-1.20.1-forge-15.75.0.242.jar                                           6629654
 jupiter-2.3.7-1.20.1-forge.jar                                             280116
 JustEnoughResources-1.20.1-1.4.0.247.jar                                   276231
 kotlinforforge-4.13.0-all.jar                                              8131545
@@ -163,7 +163,7 @@ moonlight-1.20-2.16.39-forge.jar                                           14234
 MouseTweaks-forge-mc1.20.1-2.25.1.jar                                      76237
 mowzies_cataclysm-1.2.1.jar                                                29019
 mowziesmobs-1.8.2.jar                                                      36033850
-multimine-1.20.1.4.jar                                                     36602
+multimine-1.20.1.5.jar                                                     36740
 mythsandlegends-1.0.6.jar                                                  28464702
 naturalist-5.0pre2+forge-1.20.1.jar                                        3793857
 nebulus_trees-1.0.0-forge-1.20.1.jar                                       1129298
@@ -188,7 +188,7 @@ pandalib-forge-mc1.20-0.5.2-SNAPSHOT.jar                                   86439
 ParCool-1.20.1-3.4.3.3.jar                                                 1154052
 ParCool-CompatibilityAddon-1.20.1-3.4.1.5-1.1.jar                          24155
 parcoolstealthbridge_1.20.1_forge_1.0.3.jar                                142537
-particlerain-4.0.3-1.20.1-forge.jar                                        1258400
+particlerain-4.0.4-1.20.1-forge.jar                                        1261437
 Paxi-1.20-Forge-4.0.jar                                                    96892
 Pehkui-3.8.2+1.20.1-forge.jar                                              671605
 Placebo-1.20.1-8.6.3.jar                                                   282474

@@ -1,0 +1,30 @@
+{
+  "replace": true,
+  "values": [
+    "alexscavesdelight:cut_cooked_lanternfish",
+    "alexscavesdelight:cut_cooked_radgill",
+    "alexscavesdelight:cut_cooked_trilocararis",
+    "alexscavesdelight:cut_cooked_tripodfish",
+    "alexscavesdelight:cut_dinosaur_chop_cooked",
+    "alexscavesdelight:cut_dinosaur_chop_raw",
+    "alexscavesdelight:cut_lanternfish",
+    "alexscavesdelight:cut_radgill",
+    "alexscavesdelight:cut_sea_pig",
+    "alexscavesdelight:cut_sweetish_fish_blue",
+    "alexscavesdelight:cut_sweetish_fish_green",
+    "alexscavesdelight:cut_sweetish_fish_pink",
+    "alexscavesdelight:cut_sweetish_fish_red",
+    "alexscavesdelight:cut_sweetish_fish_yellow",
+    "alexscavesdelight:cut_trilocaris_tail",
+    "alexscavesdelight:cut_tripodfish",
+    "alexscavesdelight:tremorzilla_maet",
+    {
+      "id": "alexscavesdelight:cooked_sea_pig",
+      "required": false
+    },
+    {
+      "id": "alexscavesdelight:dried_tripodfish",
+      "required": false
+    }
+  ]
+}

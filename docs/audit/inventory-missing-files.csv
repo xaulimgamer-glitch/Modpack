@@ -1,1 +1,16 @@
 mod_id,mod_name,mod_version,mod_file,mod_url,display_url,issue_tracker_url
+artifacts,Artifacts,9.5.19,artifacts-forge-9.5.19.jar,,https://www.curseforge.com/minecraft/mc-mods/artifacts,https://github.com/ochotonida/artifacts/issues
+burnt,Burnt Basic,1.10.5.3,burnt_basic-1.10.5.3-forge-1.20.1.jar,,,https://discord.com/invite/NUqTwsfTzn
+collective,Collective,8.87,collective-1.20.1-8.87.jar,,https://serilum.com/mod/collective,https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective
+entityculling,EntityCulling,1.12.1,entityculling-forge-1.12.1-mc1.20.1.jar,,https://modrinth.com/mod/entityculling,https://github.com/tr7zw/EntityCulling/issues
+expandability,ExpandAbility,9.0.4,artifacts-forge-9.5.19.jar!/META-INF/jars/expandability-forge-9.0.4.jar,,,https://github.com/florensie/expandability/issues
+fwa,Fancy World Animations,1.3.7-patch.3,fwa-1.20.1-forge-1.3.7-patch.3.jar,,,https://github.com/maDU59/FancyWorldAnimations
+geckolib,GeckoLib 4,4.8.4,geckolib-forge-1.20.1-4.8.4.jar,,http://geckolib.com/,https://github.com/bernie-g/geckolib/issues
+irons_spellbooks,Iron's Spells 'n Spellbooks,1.20.1-3.16.3,irons_spellbooks-1.20.1-3.16.3.jar,,https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks,https://github.com/iron431/Irons-Spells-n-Spellbooks/issues
+jei,Just Enough Items,15.74.0.234,jei-1.20.1-forge-15.74.0.234.jar,,https://www.curseforge.com/minecraft/mc-mods/jei,https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue
+mezz_config,MezzConfig,0.6.10,jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar,,https://github.com/mezz/MezzConfig,https://github.com/mezz/MezzConfig/issues?q=is%3Aissue
+mixinextras,MixinExtras,0.3.5,artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar,,https://github.com/LlamaLad7/MixinExtras,
+multimine,Multi Mine,1.20.1.4,multimine-1.20.1.4.jar,,http://atomicstryker.org/,https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues
+particlerain,Particle Rain,4.0.3,particlerain-4.0.3-1.20.1-forge.jar,,,https://github.com/PigCart/particle-rain/issues?q=is%3Aissue
+transition,TRansition,1.0.28,entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar,,https://github.com/tr7zw/TRansition,https://github.com/tr7zw/TRansition/issues
+trender,TRender,1.0.17,entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar,,https://github.com/tr7zw/TRender,https://github.com/tr7zw/TRender/issues

@@ -11,7 +11,7 @@
 
   function loadData() {
     var data = JSON.parse(JsonIO.readString(MANIFEST))
-    if (!data || data.schema !== 2 || !data.bow_types || !Array.isArray(data.materials)) {
+    if (!data || (data.schema !== 2 && data.schema !== 3) || !data.bow_types || !Array.isArray(data.materials)) {
       throw new Error('[Awakening/Bow Tooltips] Unsupported manifest')
     }
     return data

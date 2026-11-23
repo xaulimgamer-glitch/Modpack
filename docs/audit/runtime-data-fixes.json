@@ -1,0 +1,20 @@
+{
+  "pack": "config\\paxi\\datapacks\\awakening_runtime_fixes",
+  "files": [
+    "pack.mcmeta",
+    "data/forge/tags/items/cooked_trilocararis.json",
+    "data/forge/tags/items/dinosaur_chop_raw.json",
+    "data/forge/tags/items/dinosaur_chop_cooked.json",
+    "data/forge/tags/items/plates/silver.json",
+    "data/ctov/tags/items/wares/cardboard_box.json",
+    "data/ctov/tags/items/wares/sealed_delivery_agreement.json",
+    "data/forge/tags/items/fruits/gearo_berry.json",
+    "data/forge/tags/items/protein/peanut.json",
+    "data/minecraft/recipes/beetroot_soup.json",
+    "data/minecraft/recipes/mushroom_stew.json",
+    "data/minecraft/recipes/rabbit_stew_from_brown_mushroom.json",
+    "data/minecraft/recipes/rabbit_stew_from_red_mushroom.json",
+    "data/naturalist/loot_tables/entities/tortoise.json",
+    "data/minecraft/loot_tables/chests/jungle_temple.json"
+  ]
+}

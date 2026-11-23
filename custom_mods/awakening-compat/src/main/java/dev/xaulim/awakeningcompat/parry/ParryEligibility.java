@@ -29,6 +29,17 @@ public final class ParryEligibility {
     }
 
     /**
+     * Reserve defense for an equipped shield before use-item processing starts.
+     * BPD's key callback can run before vanilla raises the shield, on both client
+     * and server. Checking only isUsingItem() permits both animations to start.
+     * This deliberately also reserves defense while that shield is on cooldown.
+     */
+    public static boolean isShieldEquipped(Player player) {
+        return player != null && (isShieldBlockingStack(player.getMainHandItem())
+                || isShieldBlockingStack(player.getOffhandItem()));
+    }
+
+    /**
      * Shield defense owns an incoming hit while a shield is actively being used.
      * When Shield Overhaul is installed, its perfect-parry window also owns the
      * hit after the use button is released. This keeps weapon parry and shield
@@ -71,6 +82,8 @@ public final class ParryEligibility {
      */
     public static boolean canParry(Player player) {
         if (player == null) return false;
+
+        if (isShieldEquipped(player)) return false;
 
         return isWeaponEligible(player.getMainHandItem())
                 && ParryClassPolicy.isAllowed(player)

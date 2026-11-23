@@ -1,0 +1,2563 @@
+{
+  "log": "logs/latest.log",
+  "item_registry_count": 15298,
+  "error_messages": [
+    {
+      "message": "Cannot load key=minionTaskOrder, type=java.lang.String in config=vampirism:CLIENT",
+      "occurrences": 3
+    },
+    {
+      "message": "Found a broken recipe, failed to setRecipe with RecipeLayoutBuilder:",
+      "occurrences": 3
+    },
+    {
+      "message": "Couldn't parse data file minecraft:beetroot_soup from minecraft:recipes/beetroot_soup.json",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:cooked_trilocararis as it is missing following references: alexscaves:cooked_trilocaris (from alexscavesdelight-1.0.27-final.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:plates/silver as it is missing following references: overgeared:silver_plate (from overgeared_iaf-0.63.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:meat as it is missing following references: alexscavesdelight:cooked_sea_pig (from alexscavesdelight-1.0.27-final.jar), ",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:dinosaur_chop_raw as it is missing following references: alexscaves:dinosaur_chop_raw (from alexscavesdelight-1.0.27-final.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag ctov:wares/cardboard_box as it is missing following references: wares:cardboard_box (from [forge]ctov-3.4.14.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:fruits as it is missing following references: #forge:fruits/gearo_berry (from vintagedelight-0.1.6.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:protein as it is missing following references: #forge:protein/peanut (from vintagedelight-0.1.6.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag origins:meat as it is missing following references: alexscavesdelight:cooked_sea_pig (from alexscavesdelight-1.0.27-final.jar), ",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag forge:dinosaur_chop_cooked as it is missing following references: alexscaves:dinosaur_chop_cooked (from alexscavesdelight-1.0.27-final.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't load tag ctov:wares/sealed_delivery_agreement as it is missing following references: wares:sealed_delivery_agreement (from [forge]ctov-3.4.14.jar)",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse data file minecraft:mushroom_stew from minecraft:recipes/mushroom_stew.json",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse data file minecraft:rabbit_stew_from_brown_mushroom from minecraft:recipes/rabbit_stew_from_brown_mushroom.json",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse data file minecraft:rabbit_stew_from_red_mushroom from minecraft:recipes/rabbit_stew_from_red_mushroom.json",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:culturaldelights:blocks/exotic_roll_medley_block",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:hauntedharvest:blocks/green_jack_o_lantern",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:naturalist:entities/tortoise",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:hauntedharvest:blocks/redstone_jack_o_lantern",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:culturaldelights:blocks/avocado_leaf_carpet",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:culturaldelights:blocks/avocado_bundle",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:irons_spellbooks:chests/citadel/citadel_tomes",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:betterend:entities/end_slime",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:irons_spellbooks:chests/catacombs/crypt_loot",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:minecraft:chests/jungle_temple",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:parcool:grant_parcool_guide",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:culturaldelights:blocks/fruiting_avocado_leaves",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:culturaldelights:blocks/avocado_leaves",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:hauntedharvest:blocks/soul_jack_o_lantern",
+      "occurrences": 2
+    },
+    {
+      "message": "Couldn't parse element loot_tables:hauntedharvest:blocks/ender_jack_o_lantern",
+      "occurrences": 2
+    },
+    {
+      "message": "Parsing error loading custom advancement spartanshields:recipes/basic_mekanists_tower_shield: Unknown item id 'mekanism:energy_tablet'",
+      "occurrences": 2
+    },
+    {
+      "message": "Parsing error loading custom advancement spartanshields:recipes/dark_steel_riot_basic_shield: Unknown item id 'enderio:octadic_capacitor'",
+      "occurrences": 2
+    },
+    {
+      "message": "Parsing error loading custom advancement spartanshields:recipes/dark_steel_riot_tower_shield: Unknown item id 'enderio:octadic_capacitor'",
+      "occurrences": 2
+    },
+    {
+      "message": "Parsing error loading custom advancement spartanshields:recipes/basic_mekanists_basic_shield: Unknown item id 'mekanism:energy_tablet'",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:rocky_mountains\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:blooming_plateau\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:alpine_grove\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:arid_highlands\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:brushland\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:cloud_forest\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:haze_mountain\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:red_oasis\" does not exist",
+      "occurrences": 2
+    },
+    {
+      "message": "Mod mixin into Embeddium internals detected. This instance is now tainted. The Embeddium team does not provide any guarantee of support for issues encountered while such mods are installed.",
+      "occurrences": 1
+    },
+    {
+      "message": "[bclib] ItemColors.register filtered AIR item(s) stacktrace",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask cataclysm:item/music_disc_maledictus needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x208",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/core_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/ocean_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/land_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/sky_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/end_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/city_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "fromAnimatedImage - Palette mask ba_bt:item/resonance_crystal/nether_resonance_stone needs to be at least as large as the target image amendments:block/music_discs/music_disc_mask and have the same frame count. You must alter the mask's 16x16 to match the texture size's 16x128",
+      "occurrences": 1
+    },
+    {
+      "message": "Failed to load model mowziesmobs:models/block/black_pink_grottol.json",
+      "occurrences": 1
+    },
+    {
+      "message": "Failed to load model mowziesmobs:models/block/diamond_grottol.json",
+      "occurrences": 1
+    },
+    {
+      "message": "Using missing texture, unable to load awakening_compat:entity/tortle_shell",
+      "occurrences": 1
+    },
+    {
+      "message": "Failed to load model twm:models/custom/cowboyhat2_-_converted.json",
+      "occurrences": 1
+    },
+    {
+      "message": "Failed to load model twm:models/custom/cowboyhat1_-_converted.json",
+      "occurrences": 1
+    },
+    {
+      "message": "Fabric API detected! This is not a Fabric mod, so please dont report related issues to MoonlightLib or its dependant. This can usually happen with connector or when having a mod that does NOT have a proper Forge native implementation. This can easily lead to poor compatibility and issues. Proceed ar your own risk. ",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:block",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:entity_type",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:item",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:mob_effect",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:painting_variant",
+      "occurrences": 1
+    },
+    {
+      "message": "Unidentified mapping from registry minecraft:sound_event",
+      "occurrences": 1
+    },
+    {
+      "message": "There are unidentified mappings in this world - we are going to attempt to process anyway",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:moonlight_valley\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:moonlight_valley, 57, 76, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:rocky_mountains, 45, 73, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:blooming_plateau, 49, 78, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:alpine_grove, 16, 53, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:yellowstone\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:yellowstone, 47, 68, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:forested_highlands\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:forested_highlands, 43, 70, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:temperate_highlands\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:temperate_highlands, 54, 80, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:amethyst_rainforest\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:amethyst_rainforest, 69, 84, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:sandstone_valley\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:sandstone_valley, 78, 114, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:ancient_sands\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:ancient_sands, 83, 130, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:arid_highlands, 74, 102, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:volcanic_crater\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:volcanic_crater, 96, 162, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:volcanic_peaks\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:volcanic_peaks, 76, 122, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:basalt_cliffs\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:basalt_cliffs, 76, 122, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:birch_taiga\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:birch_taiga, 40, 62, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:brushland, 64, 89, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:bryce_canyon\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:bryce_canyon, 72, 110, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:caldera\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:caldera, 58, 71, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:cloud_forest, 38, 58, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:desert_canyon\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:desert_canyon, 73, 121, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:desert_spires\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:desert_spires, 60, 121, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:orchid_swamp\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:orchid_swamp, 62, 81, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:fractured_savanna\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:fractured_savanna, 65, 92, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:savanna_badlands\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:savanna_badlands, 68, 99, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:granite_cliffs\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:granite_cliffs, 65, 85, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:haze_mountain, 62, 74, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:highlands\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:highlands, 62, 74, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:lavender_valley\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:lavender_valley, 59, 76, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:lavender_forest\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:lavender_forest, 56, 75, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:red_oasis, 58, 94, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:shield\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:shield, 48, 68, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:shield_clearing\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:shield_clearing, 28, 80, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:steppe\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:steppe, 44, 78, F]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:warped_mesa\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:warped_mesa, 66, 84, F, 71.0]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:red_oasis, 3]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:desert_oasis\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:desert_oasis, 3]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:tropical_jungle\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:tropical_jungle, 80]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:arid_highlands, 1.5]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:rocky_jungle\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:rocky_jungle, 80]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:brushland, 1.5]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:blooming_plateau, 5]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:rocky_mountains, 6]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:alpine_grove, 6]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:scarlet_mountains\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:scarlet_mountains, 4]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing config: worldgen/biome \"terralith:windswept_spires\" does not exist",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:windswept_spires, 16]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:cloud_forest, 4]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Error parsing minecraft:worldgen/biome config \"[terralith:haze_mountain, 4]\"",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 5.101 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 10.00 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 15.10 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 20.10 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 25.10 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: jei:minecraft is running and has taken 30.10 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Caught an error from mod plugin: class org.betterx.betterend.integration.jei.JEIPlugin betterend:jei_plugin",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: create:jei_plugin is running and has taken 5.098 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: create:jei_plugin is running and has taken 10.10 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 5.019 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 10.02 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 15.02 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering recipes: irons_spellbooks:jei_plugin is running and has taken 20.02 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "awakening_bow_tooltips.js#15: Error in 'ItemEvents.tooltip': Error: [Awakening/Bow Tooltips] Unsupported manifest",
+      "occurrences": 1
+    },
+    {
+      "message": "�rhino.JavaScriptException: Error: [Awakening/Bow Tooltips] Unsupported manifest (client_scripts:awakening_bow_tooltips.js#15)",
+      "occurrences": 1
+    },
+    {
+      "message": "Registering Runtime: jei:forge_gui is running and has taken 5.100 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Sending Runtime: kubejs:jei is running and has taken 5.094 seconds so far",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key guardvillagers:guard, not a valid namespaced id",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key recruits:recruit, not a valid namespaced id",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key recruits:bowman, not a valid namespaced id",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key recruits:recruit_shieldman, not a valid namespaced id",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key recruits:nomad, not a valid namespaced id",
+      "occurrences": 1
+    },
+    {
+      "message": "Could not parse mob_relations entry key recruits:horseman, not a valid namespaced id",
+      "occurrences": 1
+    }
+  ],
+  "loot_errors": {
+    "culturaldelights:blocks/exotic_roll_medley_block": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'culturaldelights:exotic_roll_medley_block'",
+    "hauntedharvest:blocks/green_jack_o_lantern": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'hauntedharvest:green_jack_o_lantern'",
+    "naturalist:entities/tortoise": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'minecraft:turtle_scute'",
+    "hauntedharvest:blocks/redstone_jack_o_lantern": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'hauntedharvest:redstone_jack_o_lantern'",
+    "culturaldelights:blocks/avocado_leaf_carpet": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'culturaldelights:avocado_leaf_carpet'",
+    "culturaldelights:blocks/avocado_bundle": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'culturaldelights:avocado_bundle'",
+    "irons_spellbooks:chests/citadel/citadel_tomes": "com.google.gson.JsonSyntaxException: Unknown type 'minecraft:set_written_book_pages'",
+    "betterend:entities/end_slime": "com.google.gson.JsonSyntaxException: Unknown sub-predicate type: minecraft:slime",
+    "irons_spellbooks:chests/catacombs/crypt_loot": "com.google.gson.JsonSyntaxException: Missing name, expected to find a string",
+    "minecraft:chests/jungle_temple": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'twm:teste'",
+    "parcool:grant_parcool_guide": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'patchouli:guide_book'",
+    "culturaldelights:blocks/fruiting_avocado_leaves": "com.google.gson.JsonSyntaxException: Unknown type 'minecraft:alternative'",
+    "culturaldelights:blocks/avocado_leaves": "com.google.gson.JsonSyntaxException: Unknown type 'minecraft:alternative'",
+    "hauntedharvest:blocks/soul_jack_o_lantern": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'hauntedharvest:soul_jack_o_lantern'",
+    "hauntedharvest:blocks/ender_jack_o_lantern": "com.google.gson.JsonSyntaxException: Expected name to be an item, was unknown string 'hauntedharvest:ender_jack_o_lantern'"
+  },
+  "resource_sources": {
+    "data/betterend/loot_tables/entities/end_slime.json": [
+      {
+        "archive": "BetterEnd-20.0.13-forge.jar",
+        "text": "{\n  \"type\": \"minecraft:entity\",\n  \"pools\": [\n    {\n      \"rolls\": 1.0,\n      \"bonus_rolls\": 0.0,\n      \"conditions\": [\n        {\n          \"condition\": \"minecraft:entity_properties\",\n          \"entity\": \"this\",\n          \"predicate\": {\n            \"type_specific\": {\n              \"type\": \"minecraft:slime\",\n              \"size\": 1\n            }\n          }\n        }\n      ],\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:slime_ball\",\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": 1.0,\n              \"add\": false\n            },\n            {\n              \"function\": \"minecraft:looting_enchant\",\n              \"count\": {\n                \"type\": \"minecraft:uniform\",\n                \"min\": 0.0,\n                \"max\": 1.0\n              }\n            },\n            {\n              \"function\": \"minecraft:limit_count\",\n              \"limit\": {\n                \"max\": 1\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"rolls\": 1.0,\n      \"bonus_rolls\": 0.0,\n      \"conditions\": [\n        {\n          \"condition\": \"minecraft:entity_properties\",\n          \"entity\": \"this\",\n          \"predicate\": {\n            \"type_specific\": {\n              \"type\": \"minecraft:slime\",\n              \"size\": 2\n            }\n          }\n        }\n      ],\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:slime_ball\",\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"type\": \"minecraft:uniform\",\n                \"min\": 1.0,\n                \"max\": 2.0\n              },\n              \"add\": false\n            },\n            {\n              \"function\": \"minecraft:looting_enchant\",\n              \"count\": {\n                \"type\": \"minecraft:uniform\",\n                \"min\": 0.0,\n                \"max\": 1.0\n              }\n            },\n            {\n              \"function\": \"minecraft:limit_count\",\n              \"limit\": {\n                \"max\": 2\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"rolls\": 1.0,\n      \"bonus_rolls\": 0.0,\n      \"conditions\": [\n        {\n          \"condition\": \"minecraft:entity_properties\",\n          \"entity\": \"this\",\n          \"predicate\": {\n            \"type_specific\": {\n              \"type\": \"minecraft:slime\",\n              \"size\": 4\n            }\n          }\n        }\n      ],\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:slime_ball\",\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"type\": \"minecraft:uniform\",\n                \"min\": 2.0,\n                \"max\": 4.0\n              },\n              \"add\": false\n            },\n            {\n              \"function\": \"minecraft:looting_enchant\",\n              \"count\": {\n                \"type\": \"minecraft:uniform\",\n                \"min\": 0.0,\n                \"max\": 1.0\n              }\n            },\n            {\n              \"function\": \"minecraft:limit_count\",\n              \"limit\": {\n                \"max\": 4\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n",
+        "json": {
+          "type": "minecraft:entity",
+          "pools": [
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "minecraft:slime",
+                      "size": 1
+                    }
+                  }
+                }
+              ],
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:slime_ball",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": 1.0,
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:looting_enchant",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 0.0,
+                        "max": 1.0
+                      }
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "minecraft:slime",
+                      "size": 2
+                    }
+                  }
+                }
+              ],
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:slime_ball",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 1.0,
+                        "max": 2.0
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:looting_enchant",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 0.0,
+                        "max": 1.0
+                      }
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 2
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "type_specific": {
+                      "type": "minecraft:slime",
+                      "size": 4
+                    }
+                  }
+                }
+              ],
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:slime_ball",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 2.0,
+                        "max": 4.0
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:looting_enchant",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 0.0,
+                        "max": 1.0
+                      }
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 4
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/ctov/tags/items/wares/cardboard_box.json": [
+      {
+        "archive": "[forge]ctov-3.4.14.jar",
+        "text": "{\r\n    \"values\": [\r\n      \"wares:cardboard_box\"\r\n    ]\r\n}  ",
+        "json": {
+          "values": [
+            "wares:cardboard_box"
+          ]
+        }
+      }
+    ],
+    "data/ctov/tags/items/wares/sealed_delivery_agreement.json": [
+      {
+        "archive": "[forge]ctov-3.4.14.jar",
+        "text": "{\r\n    \"values\": [\r\n      \"wares:sealed_delivery_agreement\"\r\n    ]\r\n}  ",
+        "json": {
+          "values": [
+            "wares:sealed_delivery_agreement"
+          ]
+        }
+      }
+    ],
+    "data/culturaldelights/loot_tables/blocks/avocado_bundle.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:alternatives\",\r\n          \"children\": [\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"conditions\": [\r\n                {\r\n                  \"condition\": \"minecraft:match_tool\",\r\n                  \"predicate\": {\r\n                    \"enchantments\": [\r\n                      {\r\n                        \"enchantment\": \"minecraft:silk_touch\",\r\n                        \"levels\": {\r\n                          \"min\": 1\r\n                        }\r\n                      }\r\n                    ]\r\n                  }\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:avocado_bundle\"\r\n            },\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"functions\": [\r\n                {\r\n                  \"function\": \"minecraft:set_count\",\r\n                  \"count\": {\r\n                    \"min\": 2.0,\r\n                    \"max\": 4.0,\r\n                    \"type\": \"minecraft:uniform\"\r\n                  }\r\n                },\r\n                {\r\n                  \"function\": \"minecraft:apply_bonus\",\r\n                  \"enchantment\": \"minecraft:fortune\",\r\n                  \"formula\": \"minecraft:uniform_bonus_count\",\r\n                  \"parameters\": {\r\n                    \"bonusMultiplier\": 1\r\n                  }\r\n                },\r\n                {\r\n                  \"function\": \"minecraft:limit_count\",\r\n                  \"limit\": {\r\n                    \"max\": 8\r\n                  }\r\n                },\r\n                {\r\n                  \"function\": \"minecraft:explosion_decay\"\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:avocado\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:alternatives",
+                  "children": [
+                    {
+                      "type": "minecraft:item",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:match_tool",
+                          "predicate": {
+                            "enchantments": [
+                              {
+                                "enchantment": "minecraft:silk_touch",
+                                "levels": {
+                                  "min": 1
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "name": "culturaldelights:avocado_bundle"
+                    },
+                    {
+                      "type": "minecraft:item",
+                      "functions": [
+                        {
+                          "function": "minecraft:set_count",
+                          "count": {
+                            "min": 2.0,
+                            "max": 4.0,
+                            "type": "minecraft:uniform"
+                          }
+                        },
+                        {
+                          "function": "minecraft:apply_bonus",
+                          "enchantment": "minecraft:fortune",
+                          "formula": "minecraft:uniform_bonus_count",
+                          "parameters": {
+                            "bonusMultiplier": 1
+                          }
+                        },
+                        {
+                          "function": "minecraft:limit_count",
+                          "limit": {
+                            "max": 8
+                          }
+                        },
+                        {
+                          "function": "minecraft:explosion_decay"
+                        }
+                      ],
+                      "name": "culturaldelights:avocado"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/culturaldelights/loot_tables/blocks/avocado_leaf_carpet.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "\r\n{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"culturaldelights:avocado_leaf_carpet\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:survives_explosion\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "culturaldelights:avocado_leaf_carpet"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/culturaldelights/loot_tables/blocks/avocado_leaves.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:alternatives\",\r\n          \"children\": [\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"conditions\": [\r\n                {\r\n                  \"condition\": \"minecraft:alternative\",\r\n                  \"terms\": [\r\n                    {\r\n                      \"condition\": \"minecraft:match_tool\",\r\n                      \"predicate\": {\r\n                        \"items\": [\r\n                          \"minecraft:shears\"\r\n                        ]\r\n                      }\r\n                    },\r\n                    {\r\n                      \"condition\": \"minecraft:match_tool\",\r\n                      \"predicate\": {\r\n                        \"enchantments\": [\r\n                          {\r\n                            \"enchantment\": \"minecraft:silk_touch\",\r\n                            \"levels\": {\r\n                              \"min\": 1\r\n                            }\r\n                          }\r\n                        ]\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:avocado_leaves\"\r\n            },\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"conditions\": [\r\n                {\r\n                  \"condition\": \"minecraft:survives_explosion\"\r\n                },\r\n                {\r\n                  \"condition\": \"minecraft:table_bonus\",\r\n                  \"enchantment\": \"minecraft:fortune\",\r\n                  \"chances\": [\r\n                    0.05,\r\n                    0.0625,\r\n                    0.083333336,\r\n                    0.1\r\n                  ]\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:avocado_sapling\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"conditions\": [\r\n            {\r\n              \"condition\": \"minecraft:table_bonus\",\r\n              \"enchantment\": \"minecraft:fortune\",\r\n              \"chances\": [\r\n                0.02,\r\n                0.022222223,\r\n                0.025,\r\n                0.033333335,\r\n                0.1\r\n              ]\r\n            }\r\n          ],\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"type\": \"minecraft:uniform\",\r\n                \"min\": 1.0,\r\n                \"max\": 2.0\r\n              },\r\n              \"add\": false\r\n            },\r\n            {\r\n              \"function\": \"minecraft:explosion_decay\"\r\n            }\r\n          ],\r\n          \"name\": \"minecraft:stick\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:inverted\",\r\n          \"term\": {\r\n            \"condition\": \"minecraft:alternative\",\r\n            \"terms\": [\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"items\": [\r\n                    \"minecraft:shears\"\r\n                  ]\r\n                }\r\n              },\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"enchantments\": [\r\n                    {\r\n                      \"enchantment\": \"minecraft:silk_touch\",\r\n                      \"levels\": {\r\n                        \"min\": 1\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"conditions\": [\r\n            {\r\n              \"condition\": \"minecraft:survives_explosion\"\r\n            },\r\n            {\r\n              \"condition\": \"minecraft:table_bonus\",\r\n              \"enchantment\": \"minecraft:fortune\",\r\n              \"chances\": [\r\n                0.005,\r\n                0.0055555557,\r\n                0.00625,\r\n                0.008333334,\r\n                0.025\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"culturaldelights:avocado\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:inverted\",\r\n          \"term\": {\r\n            \"condition\": \"minecraft:alternative\",\r\n            \"terms\": [\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"items\": [\r\n                    \"minecraft:shears\"\r\n                  ]\r\n                }\r\n              },\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"enchantments\": [\r\n                    {\r\n                      \"enchantment\": \"minecraft:silk_touch\",\r\n                      \"levels\": {\r\n                        \"min\": 1\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:alternatives",
+                  "children": [
+                    {
+                      "type": "minecraft:item",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:alternative",
+                          "terms": [
+                            {
+                              "condition": "minecraft:match_tool",
+                              "predicate": {
+                                "items": [
+                                  "minecraft:shears"
+                                ]
+                              }
+                            },
+                            {
+                              "condition": "minecraft:match_tool",
+                              "predicate": {
+                                "enchantments": [
+                                  {
+                                    "enchantment": "minecraft:silk_touch",
+                                    "levels": {
+                                      "min": 1
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "culturaldelights:avocado_leaves"
+                    },
+                    {
+                      "type": "minecraft:item",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:survives_explosion"
+                        },
+                        {
+                          "condition": "minecraft:table_bonus",
+                          "enchantment": "minecraft:fortune",
+                          "chances": [
+                            0.05,
+                            0.0625,
+                            0.083333336,
+                            0.1
+                          ]
+                        }
+                      ],
+                      "name": "culturaldelights:avocado_sapling"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:table_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "chances": [
+                        0.02,
+                        0.022222223,
+                        0.025,
+                        0.033333335,
+                        0.1
+                      ]
+                    }
+                  ],
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 1.0,
+                        "max": 2.0
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:explosion_decay"
+                    }
+                  ],
+                  "name": "minecraft:stick"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:alternative",
+                    "terms": [
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "items": [
+                            "minecraft:shears"
+                          ]
+                        }
+                      },
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "enchantments": [
+                            {
+                              "enchantment": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:survives_explosion"
+                    },
+                    {
+                      "condition": "minecraft:table_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "chances": [
+                        0.005,
+                        0.0055555557,
+                        0.00625,
+                        0.008333334,
+                        0.025
+                      ]
+                    }
+                  ],
+                  "name": "culturaldelights:avocado"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:alternative",
+                    "terms": [
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "items": [
+                            "minecraft:shears"
+                          ]
+                        }
+                      },
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "enchantments": [
+                            {
+                              "enchantment": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/culturaldelights/loot_tables/blocks/exotic_roll_medley_block.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"name\": \"pool1\",\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"culturaldelights:exotic_roll_medley_block\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:block_state_property\",\r\n          \"block\": \"culturaldelights:exotic_roll_medley_block\",\r\n          \"properties\": {\r\n            \"servings\": \"8\"\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"pool2\",\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:bowl\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:inverted\",\r\n          \"term\": {\r\n            \"condition\": \"minecraft:block_state_property\",\r\n            \"block\": \"culturaldelights:exotic_roll_medley_block\",\r\n            \"properties\": {\r\n              \"servings\": \"8\"\r\n            }\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "name": "pool1",
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "culturaldelights:exotic_roll_medley_block"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "culturaldelights:exotic_roll_medley_block",
+                  "properties": {
+                    "servings": "8"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "pool2",
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:bowl"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:block_state_property",
+                    "block": "culturaldelights:exotic_roll_medley_block",
+                    "properties": {
+                      "servings": "8"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/culturaldelights/loot_tables/blocks/fruiting_avocado_leaves.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:alternatives\",\r\n          \"children\": [\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"conditions\": [\r\n                {\r\n                  \"condition\": \"minecraft:alternative\",\r\n                  \"terms\": [\r\n                    {\r\n                      \"condition\": \"minecraft:match_tool\",\r\n                      \"predicate\": {\r\n                        \"items\": [\r\n                          \"minecraft:shears\"\r\n                        ]\r\n                      }\r\n                    },\r\n                    {\r\n                      \"condition\": \"minecraft:match_tool\",\r\n                      \"predicate\": {\r\n                        \"enchantments\": [\r\n                          {\r\n                            \"enchantment\": \"minecraft:silk_touch\",\r\n                            \"levels\": {\r\n                              \"min\": 1\r\n                            }\r\n                          }\r\n                        ]\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:fruiting_avocado_leaves\"\r\n            },\r\n            {\r\n              \"type\": \"minecraft:item\",\r\n              \"conditions\": [\r\n                {\r\n                  \"condition\": \"minecraft:survives_explosion\"\r\n                },\r\n                {\r\n                  \"condition\": \"minecraft:table_bonus\",\r\n                  \"enchantment\": \"minecraft:fortune\",\r\n                  \"chances\": [\r\n                    0.05,\r\n                    0.0625,\r\n                    0.083333336,\r\n                    0.1\r\n                  ]\r\n                }\r\n              ],\r\n              \"name\": \"culturaldelights:avocado_sapling\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"conditions\": [\r\n            {\r\n              \"condition\": \"minecraft:table_bonus\",\r\n              \"enchantment\": \"minecraft:fortune\",\r\n              \"chances\": [\r\n                0.02,\r\n                0.022222223,\r\n                0.025,\r\n                0.033333335,\r\n                0.1\r\n              ]\r\n            }\r\n          ],\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"type\": \"minecraft:uniform\",\r\n                \"min\": 1.0,\r\n                \"max\": 2.0\r\n              },\r\n              \"add\": false\r\n            },\r\n            {\r\n              \"function\": \"minecraft:explosion_decay\"\r\n            }\r\n          ],\r\n          \"name\": \"minecraft:stick\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:inverted\",\r\n          \"term\": {\r\n            \"condition\": \"minecraft:alternative\",\r\n            \"terms\": [\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"items\": [\r\n                    \"minecraft:shears\"\r\n                  ]\r\n                }\r\n              },\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"enchantments\": [\r\n                    {\r\n                      \"enchantment\": \"minecraft:silk_touch\",\r\n                      \"levels\": {\r\n                        \"min\": 1\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1.0,\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"conditions\": [\r\n            {\r\n              \"condition\": \"minecraft:survives_explosion\"\r\n            },\r\n            {\r\n              \"condition\": \"minecraft:table_bonus\",\r\n              \"enchantment\": \"minecraft:fortune\",\r\n              \"chances\": [\r\n                0.005,\r\n                0.0055555557,\r\n                0.00625,\r\n                0.008333334,\r\n                0.025\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"culturaldelights:avocado\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:inverted\",\r\n          \"term\": {\r\n            \"condition\": \"minecraft:alternative\",\r\n            \"terms\": [\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"items\": [\r\n                    \"minecraft:shears\"\r\n                  ]\r\n                }\r\n              },\r\n              {\r\n                \"condition\": \"minecraft:match_tool\",\r\n                \"predicate\": {\r\n                  \"enchantments\": [\r\n                    {\r\n                      \"enchantment\": \"minecraft:silk_touch\",\r\n                      \"levels\": {\r\n                        \"min\": 1\r\n                      }\r\n                    }\r\n                  ]\r\n                }\r\n              }\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:alternatives",
+                  "children": [
+                    {
+                      "type": "minecraft:item",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:alternative",
+                          "terms": [
+                            {
+                              "condition": "minecraft:match_tool",
+                              "predicate": {
+                                "items": [
+                                  "minecraft:shears"
+                                ]
+                              }
+                            },
+                            {
+                              "condition": "minecraft:match_tool",
+                              "predicate": {
+                                "enchantments": [
+                                  {
+                                    "enchantment": "minecraft:silk_touch",
+                                    "levels": {
+                                      "min": 1
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "culturaldelights:fruiting_avocado_leaves"
+                    },
+                    {
+                      "type": "minecraft:item",
+                      "conditions": [
+                        {
+                          "condition": "minecraft:survives_explosion"
+                        },
+                        {
+                          "condition": "minecraft:table_bonus",
+                          "enchantment": "minecraft:fortune",
+                          "chances": [
+                            0.05,
+                            0.0625,
+                            0.083333336,
+                            0.1
+                          ]
+                        }
+                      ],
+                      "name": "culturaldelights:avocado_sapling"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:table_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "chances": [
+                        0.02,
+                        0.022222223,
+                        0.025,
+                        0.033333335,
+                        0.1
+                      ]
+                    }
+                  ],
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "type": "minecraft:uniform",
+                        "min": 1.0,
+                        "max": 2.0
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:explosion_decay"
+                    }
+                  ],
+                  "name": "minecraft:stick"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:alternative",
+                    "terms": [
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "items": [
+                            "minecraft:shears"
+                          ]
+                        }
+                      },
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "enchantments": [
+                            {
+                              "enchantment": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "rolls": 1.0,
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:survives_explosion"
+                    },
+                    {
+                      "condition": "minecraft:table_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "chances": [
+                        0.005,
+                        0.0055555557,
+                        0.00625,
+                        0.008333334,
+                        0.025
+                      ]
+                    }
+                  ],
+                  "name": "culturaldelights:avocado"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:inverted",
+                  "term": {
+                    "condition": "minecraft:alternative",
+                    "terms": [
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "items": [
+                            "minecraft:shears"
+                          ]
+                        }
+                      },
+                      {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                          "enchantments": [
+                            {
+                              "enchantment": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/cooked_trilocararis.json": [
+      {
+        "archive": "alexscavesdelight-1.0.27-final.jar",
+        "text": "{\n  \"values\": [\n    \"alexscaves:cooked_trilocaris\",\n    \"alexscavesdelight:cut_cooked_trilocararis\"\n  ]\n}",
+        "json": {
+          "values": [
+            "alexscaves:cooked_trilocaris",
+            "alexscavesdelight:cut_cooked_trilocararis"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/dinosaur_chop_cooked.json": [
+      {
+        "archive": "alexscavesdelight-1.0.27-final.jar",
+        "text": "{\n  \"values\": [\n    \"alexscaves:dinosaur_chop_cooked\",\n    \"alexscavesdelight:cut_dinosaur_chop_cooked\"\n  ]\n}",
+        "json": {
+          "values": [
+            "alexscaves:dinosaur_chop_cooked",
+            "alexscavesdelight:cut_dinosaur_chop_cooked"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/dinosaur_chop_raw.json": [
+      {
+        "archive": "alexscavesdelight-1.0.27-final.jar",
+        "text": "{\n  \"values\": [\n    \"alexscaves:dinosaur_chop_raw\",\n    \"alexscavesdelight:cut_dinosaur_chop_raw\"\n  ]\n}",
+        "json": {
+          "values": [
+            "alexscaves:dinosaur_chop_raw",
+            "alexscavesdelight:cut_dinosaur_chop_raw"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/fruits.json": [
+      {
+        "archive": "undergardendelight-2.0.3-forge-1.20.1.jar",
+        "text": "{\n  \"replace\": false,\n  \"values\": [\n    {\n      \"id\": \"undergarden:droopvine_item\",\n      \"required\": false\n    }\n  ]\n}",
+        "json": {
+          "replace": false,
+          "values": [
+            {
+              "id": "undergarden:droopvine_item",
+              "required": false
+            }
+          ]
+        }
+      },
+      {
+        "archive": "upgrade_aquatic-1.20.1-6.0.3.jar",
+        "text": "{\r\n  \"replace\": false,\r\n  \"values\": [\r\n    \"#forge:fruits/mulberry\"\r\n  ]\r\n}",
+        "json": {
+          "replace": false,
+          "values": [
+            "#forge:fruits/mulberry"
+          ]
+        }
+      },
+      {
+        "archive": "vintagedelight-0.1.6.jar",
+        "text": "{\n\t\"replace\": false,\n\t\"values\": [\n\t\t\"#forge:fruits/gearo_berry\"\n\n\t]\n}",
+        "json": {
+          "replace": false,
+          "values": [
+            "#forge:fruits/gearo_berry"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/meat.json": [
+      {
+        "archive": "alexscavesdelight-1.0.27-final.jar",
+        "text": "{\n  \"values\": [\n    \"alexscavesdelight:cut_cooked_lanternfish\",\n    \"alexscavesdelight:cut_cooked_radgill\",\n    \"alexscavesdelight:cut_cooked_trilocararis\",\n    \"alexscavesdelight:cut_cooked_tripodfish\",\n    \"alexscavesdelight:cut_dinosaur_chop_cooked\",\n    \"alexscavesdelight:cut_dinosaur_chop_raw\",\n    \"alexscavesdelight:cut_lanternfish\",\n    \"alexscavesdelight:cut_radgill\",\n    \"alexscavesdelight:cut_sea_pig\",\n    \"alexscavesdelight:cut_sweetish_fish_blue\",\n    \"alexscavesdelight:cut_sweetish_fish_green\",\n    \"alexscavesdelight:cut_sweetish_fish_pink\",\n    \"alexscavesdelight:cut_sweetish_fish_red\",\n    \"alexscavesdelight:cut_sweetish_fish_yellow\",\n    \"alexscavesdelight:cut_trilocaris_tail\",\n    \"alexscavesdelight:cut_tripodfish\",\n    \"alexscavesdelight:tremorzilla_maet\",\n    \"alexscavesdelight:cooked_sea_pig\",\n    \"alexscavesdelight:dried_tripodfish\"\n  ]\n}",
+        "json": {
+          "values": [
+            "alexscavesdelight:cut_cooked_lanternfish",
+            "alexscavesdelight:cut_cooked_radgill",
+            "alexscavesdelight:cut_cooked_trilocararis",
+            "alexscavesdelight:cut_cooked_tripodfish",
+            "alexscavesdelight:cut_dinosaur_chop_cooked",
+            "alexscavesdelight:cut_dinosaur_chop_raw",
+            "alexscavesdelight:cut_lanternfish",
+            "alexscavesdelight:cut_radgill",
+            "alexscavesdelight:cut_sea_pig",
+            "alexscavesdelight:cut_sweetish_fish_blue",
+            "alexscavesdelight:cut_sweetish_fish_green",
+            "alexscavesdelight:cut_sweetish_fish_pink",
+            "alexscavesdelight:cut_sweetish_fish_red",
+            "alexscavesdelight:cut_sweetish_fish_yellow",
+            "alexscavesdelight:cut_trilocaris_tail",
+            "alexscavesdelight:cut_tripodfish",
+            "alexscavesdelight:tremorzilla_maet",
+            "alexscavesdelight:cooked_sea_pig",
+            "alexscavesdelight:dried_tripodfish"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/plates/silver.json": [
+      {
+        "archive": "overgeared_iaf-0.63.jar",
+        "text": "{\n  \"values\": [\n    \"overgeared:silver_plate\"\n  ]\n}",
+        "json": {
+          "values": [
+            "overgeared:silver_plate"
+          ]
+        }
+      }
+    ],
+    "data/forge/tags/items/protein.json": [
+      {
+        "archive": "vintagedelight-0.1.6.jar",
+        "text": "{\n\t\"replace\": false,\n\t\"values\": [\n\t\t\"#forge:protein/peanut\"\n\t]\n}",
+        "json": {
+          "replace": false,
+          "values": [
+            "#forge:protein/peanut"
+          ]
+        }
+      }
+    ],
+    "data/hauntedharvest/loot_tables/blocks/ender_jack_o_lantern.json": [
+      {
+        "archive": "hauntedharvest-1.20-3.2.0.jar",
+        "text": "{\r\n  \"global_conditions\": [\r\n    {\r\n      \"modid\": \"botanypots\",\r\n      \"type\": \"forge:mod_loaded\"\r\n    }\r\n  ],\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:copy_nbt\",\r\n              \"source\": \"block_entity\",\r\n              \"ops\": [\r\n                {\r\n                  \"source\": \"Pixels\",\r\n                  \"target\": \"BlockEntityTag.Pixels\",\r\n                  \"op\": \"replace\"\r\n                },\r\n                {\r\n                  \"source\": \"Waxed\",\r\n                  \"target\": \"BlockEntityTag.Waxed\",\r\n                  \"op\": \"replace\"\r\n                }\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"hauntedharvest:ender_jack_o_lantern\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:survives_explosion\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "global_conditions": [
+            {
+              "modid": "botanypots",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "functions": [
+                    {
+                      "function": "minecraft:copy_nbt",
+                      "source": "block_entity",
+                      "ops": [
+                        {
+                          "source": "Pixels",
+                          "target": "BlockEntityTag.Pixels",
+                          "op": "replace"
+                        },
+                        {
+                          "source": "Waxed",
+                          "target": "BlockEntityTag.Waxed",
+                          "op": "replace"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": "hauntedharvest:ender_jack_o_lantern"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/hauntedharvest/loot_tables/blocks/green_jack_o_lantern.json": [
+      {
+        "archive": "hauntedharvest-1.20-3.2.0.jar",
+        "text": "{\r\n  \"global_conditions\": [\r\n    {\r\n      \"modid\": \"botanypots\",\r\n      \"type\": \"forge:mod_loaded\"\r\n    }\r\n  ],\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:copy_nbt\",\r\n              \"source\": \"block_entity\",\r\n              \"ops\": [\r\n                {\r\n                  \"source\": \"Pixels\",\r\n                  \"target\": \"BlockEntityTag.Pixels\",\r\n                  \"op\": \"replace\"\r\n                },\r\n                {\r\n                  \"source\": \"Waxed\",\r\n                  \"target\": \"BlockEntityTag.Waxed\",\r\n                  \"op\": \"replace\"\r\n                }\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"hauntedharvest:green_jack_o_lantern\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:survives_explosion\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "global_conditions": [
+            {
+              "modid": "botanypots",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "functions": [
+                    {
+                      "function": "minecraft:copy_nbt",
+                      "source": "block_entity",
+                      "ops": [
+                        {
+                          "source": "Pixels",
+                          "target": "BlockEntityTag.Pixels",
+                          "op": "replace"
+                        },
+                        {
+                          "source": "Waxed",
+                          "target": "BlockEntityTag.Waxed",
+                          "op": "replace"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": "hauntedharvest:green_jack_o_lantern"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/hauntedharvest/loot_tables/blocks/redstone_jack_o_lantern.json": [
+      {
+        "archive": "hauntedharvest-1.20-3.2.0.jar",
+        "text": "{\r\n  \"global_conditions\": [\r\n    {\r\n      \"modid\": \"botanypots\",\r\n      \"type\": \"forge:mod_loaded\"\r\n    }\r\n  ],\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:copy_nbt\",\r\n              \"source\": \"block_entity\",\r\n              \"ops\": [\r\n                {\r\n                  \"source\": \"Pixels\",\r\n                  \"target\": \"BlockEntityTag.Pixels\",\r\n                  \"op\": \"replace\"\r\n                },\r\n                {\r\n                  \"source\": \"Waxed\",\r\n                  \"target\": \"BlockEntityTag.Waxed\",\r\n                  \"op\": \"replace\"\r\n                }\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"hauntedharvest:redstone_jack_o_lantern\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:survives_explosion\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "global_conditions": [
+            {
+              "modid": "botanypots",
+              "type": "forge:mod_loaded"
+            }
+          ],
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "functions": [
+                    {
+                      "function": "minecraft:copy_nbt",
+                      "source": "block_entity",
+                      "ops": [
+                        {
+                          "source": "Pixels",
+                          "target": "BlockEntityTag.Pixels",
+                          "op": "replace"
+                        },
+                        {
+                          "source": "Waxed",
+                          "target": "BlockEntityTag.Waxed",
+                          "op": "replace"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": "hauntedharvest:redstone_jack_o_lantern"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/hauntedharvest/loot_tables/blocks/soul_jack_o_lantern.json": [
+      {
+        "archive": "hauntedharvest-1.20-3.2.0.jar",
+        "text": "{\r\n  \"type\": \"minecraft:block\",\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:copy_nbt\",\r\n              \"source\": \"block_entity\",\r\n              \"ops\": [\r\n                {\r\n                  \"source\": \"Pixels\",\r\n                  \"target\": \"BlockEntityTag.Pixels\",\r\n                  \"op\": \"replace\"\r\n                },\r\n                {\r\n                  \"source\": \"Waxed\",\r\n                  \"target\": \"BlockEntityTag.Waxed\",\r\n                  \"op\": \"replace\"\r\n                }\r\n              ]\r\n            }\r\n          ],\r\n          \"name\": \"hauntedharvest:soul_jack_o_lantern\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:survives_explosion\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "type": "minecraft:block",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "functions": [
+                    {
+                      "function": "minecraft:copy_nbt",
+                      "source": "block_entity",
+                      "ops": [
+                        {
+                          "source": "Pixels",
+                          "target": "BlockEntityTag.Pixels",
+                          "op": "replace"
+                        },
+                        {
+                          "source": "Waxed",
+                          "target": "BlockEntityTag.Waxed",
+                          "op": "replace"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": "hauntedharvest:soul_jack_o_lantern"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/irons_spellbooks/loot_tables/chests/catacombs/crypt_loot.json": [
+      {
+        "archive": "irons_spellbooks-1.20.1-3.16.4.jar",
+        "text": "{\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:loot_table\",\r\n          \"name\": \"irons_spellbooks:magic_items/basic_curios\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:random_chance\",\r\n          \"chance\": 0.25\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:ancient_knowledge_fragment\"\r\n        }\r\n      ],\r\n      \"conditions\": [\r\n        {\r\n          \"condition\": \"minecraft:random_chance\",\r\n          \"chance\": 0.5\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 3,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:gold_ingot\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 2,\r\n                \"max\": 5\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:diamond\"\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:magic_cloth\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 1,\r\n                \"max\": 2\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:arcane_ingot\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 1,\r\n                \"max\": 2\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:emerald\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 1,\r\n                \"max\": 6\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"weight\": 3,\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:golden_apple\"\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:enchanted_golden_apple\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:scroll\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"irons_spellbooks:randomize_spell\",\r\n              \"quality\": {\r\n                \"min\": 0.5,\r\n                \"max\": 1\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:blank_rune\"\r\n        }\r\n      ],\r\n      \"rolls\": 2\r\n    },\r\n    {\r\n      \"bonus_rolls\": 0.0,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:loot_table\",\r\n          \"name\": \"irons_spellbooks:magic_items/reward_ink\"\r\n        }\r\n      ],\r\n      \"rolls\": 3\r\n    },\r\n    {\r\n      \"rolls\": 2,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:blood_vial\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 1,\r\n                \"max\": 4\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"irons_spellbooks:dead_king_phylactery_shard\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_count\",\r\n              \"count\": {\r\n                \"min\": 1,\r\n                \"max\": 3\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+        "json": {
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "irons_spellbooks:magic_items/basic_curios"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.25
+                }
+              ]
+            },
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:ancient_knowledge_fragment"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "rolls": 3,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_ingot",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 2,
+                        "max": 5
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:diamond"
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:magic_cloth",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:arcane_ingot",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 6
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "weight": 3,
+                  "type": "minecraft:item",
+                  "name": "minecraft:golden_apple"
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:enchanted_golden_apple"
+                }
+              ]
+            },
+            {
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:scroll",
+                  "functions": [
+                    {
+                      "function": "irons_spellbooks:randomize_spell",
+                      "quality": {
+                        "min": 0.5,
+                        "max": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:blank_rune"
+                }
+              ],
+              "rolls": 2
+            },
+            {
+              "bonus_rolls": 0.0,
+              "entries": [
+                {
+                  "type": "minecraft:loot_table",
+                  "name": "irons_spellbooks:magic_items/reward_ink"
+                }
+              ],
+              "rolls": 3
+            },
+            {
+              "rolls": 2,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:blood_vial",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 4
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "irons_spellbooks:dead_king_phylactery_shard",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/irons_spellbooks/loot_tables/chests/citadel/citadel_tomes.json": [
+      {
+        "archive": "irons_spellbooks-1.20.1-3.16.4.jar",
+        "text": "{\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.construction_ledger\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.soul_research\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.planar_travel\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.legion_war_journal\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.armory_ledger\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.training_manual\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.cinderous_rituals\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.architectural_diagrams\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.fire_notes\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.quarry\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.complaint\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"minecraft:item\",\r\n          \"name\": \"minecraft:written_book\",\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"minecraft:set_name\",\r\n              \"name\": {\r\n                \"translate\": \"lore.citadel_book.title\",\r\n                \"italic\": false\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"minecraft:set_nbt\",\r\n              \"tag\": \"{title:\\\"\\\",author:\\\"\\\",pages:['{\\\"translate\\\":\\\"lore.citadel_book.soul_warning\\\",\\\"color\\\":\\\"dark_gray\\\",\\\"italic\\\":true}']}\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+        "json": {
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.construction_ledger\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.soul_research\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.planar_travel\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.legion_war_journal\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.armory_ledger\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.training_manual\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.cinderous_rituals\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.architectural_diagrams\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.fire_notes\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.quarry\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.complaint\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:written_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_name",
+                      "name": {
+                        "translate": "lore.citadel_book.title",
+                        "italic": false
+                      }
+                    },
+                    {
+                      "function": "minecraft:set_nbt",
+                      "tag": "{title:\"\",author:\"\",pages:['{\"translate\":\"lore.citadel_book.soul_warning\",\"color\":\"dark_gray\",\"italic\":true}']}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/minecraft/loot_tables/chests/jungle_temple.json": [
+      {
+        "archive": "twm-1.3.1-forge-1.20.1.jar",
+        "text": "{\n  \"type\": \"minecraft:chest\",\n  \"pools\": [\n    {\n      \"rolls\": {\n        \"min\": 2,\n        \"max\": 6\n      },\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:diamond\",\n          \"weight\": 3\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:iron_ingot\",\n          \"weight\": 10,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 1,\n                \"max\": 5\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:gold_ingot\",\n          \"weight\": 15,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 2,\n                \"max\": 7\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:bamboo\",\n          \"weight\": 15,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 1,\n                \"max\": 3\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:emerald\",\n          \"weight\": 2\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:bone\",\n          \"weight\": 20,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 4,\n                \"max\": 6\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:rotten_flesh\",\n          \"weight\": 16,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 3,\n                \"max\": 7\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:saddle\",\n          \"weight\": 3\n        }\n      ]\n    },\n    {\n      \"rolls\": 1,\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:enchanted_book\",\n          \"functions\": [\n            {\n              \"function\": \"minecraft:enchant_randomly\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"rolls\": 1,\n      \"entries\": [\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"minecraft:air\",\n          \"weight\": 10\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"twm:sus_plant\",\n          \"weight\": 2,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": 1\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"twm:tabaco_seed\",\n          \"weight\": 4,\n          \"functions\": [\n            {\n              \"function\": \"minecraft:set_count\",\n              \"count\": {\n                \"min\": 1,\n                \"max\": 2\n              }\n            }\n          ]\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"twm:teste\",\n          \"weight\": 1\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"twm:tomahawk_with_torpor\",\n          \"weight\": 1\n        },\n        {\n          \"type\": \"minecraft:item\",\n          \"name\": \"twm:tomahawk_with_wild_toxin\",\n          \"weight\": 1\n        }\n      ]\n    }\n  ],\n  \"random_sequence\": \"minecraft:chests/jungle_temple\"\n}\n",
+        "json": {
+          "type": "minecraft:chest",
+          "pools": [
+            {
+              "rolls": {
+                "min": 2,
+                "max": 6
+              },
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:diamond",
+                  "weight": 3
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:iron_ingot",
+                  "weight": 10,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 5
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:gold_ingot",
+                  "weight": 15,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 2,
+                        "max": 7
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:bamboo",
+                  "weight": 15,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald",
+                  "weight": 2
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:bone",
+                  "weight": 20,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 4,
+                        "max": 6
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:rotten_flesh",
+                  "weight": 16,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 3,
+                        "max": 7
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:saddle",
+                  "weight": 3
+                }
+              ]
+            },
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:enchanted_book",
+                  "functions": [
+                    {
+                      "function": "minecraft:enchant_randomly"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:air",
+                  "weight": 10
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "twm:sus_plant",
+                  "weight": 2,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "twm:tabaco_seed",
+                  "weight": 4,
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 2
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "twm:teste",
+                  "weight": 1
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "twm:tomahawk_with_torpor",
+                  "weight": 1
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "twm:tomahawk_with_wild_toxin",
+                  "weight": 1
+                }
+              ]
+            }
+          ],
+          "random_sequence": "minecraft:chests/jungle_temple"
+        }
+      }
+    ],
+    "data/minecraft/recipes/beetroot_soup.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "",
+        "json": null
+      }
+    ],
+    "data/minecraft/recipes/mushroom_stew.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "",
+        "json": null
+      }
+    ],
+    "data/minecraft/recipes/rabbit_stew_from_brown_mushroom.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "",
+        "json": null
+      }
+    ],
+    "data/minecraft/recipes/rabbit_stew_from_red_mushroom.json": [
+      {
+        "archive": "culturaldelights-0.16.7.jar",
+        "text": "",
+        "json": null
+      }
+    ],
+    "data/naturalist/loot_tables/entities/tortoise.json": [
+      {
+        "archive": "naturalist-5.0pre2+forge-1.20.1.jar",
+        "text": "{\r\n  \"pools\": [\r\n    {\r\n      \"rolls\": 1,\r\n      \"entries\": [\r\n        {\r\n          \"type\": \"item\",\r\n          \"name\": \"minecraft:turtle_scute\",\r\n          \"weight\": 1,\r\n          \"functions\": [\r\n            {\r\n              \"function\": \"set_count\",\r\n              \"count\": {\r\n                \"min\": 0,\r\n                \"max\": 1\r\n              }\r\n            },\r\n            {\r\n              \"function\": \"looting_enchant\",\r\n              \"count\": {\r\n                \"min\": 0,\r\n                \"max\": 1\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+        "json": {
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "item",
+                  "name": "minecraft:turtle_scute",
+                  "weight": 1,
+                  "functions": [
+                    {
+                      "function": "set_count",
+                      "count": {
+                        "min": 0,
+                        "max": 1
+                      }
+                    },
+                    {
+                      "function": "looting_enchant",
+                      "count": {
+                        "min": 0,
+                        "max": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/origins/tags/items/meat.json": [
+      {
+        "archive": "alexscavesdelight-1.0.27-final.jar",
+        "text": "{\n  \"values\": [\n    \"alexscavesdelight:cut_cooked_lanternfish\",\n    \"alexscavesdelight:cut_cooked_radgill\",\n    \"alexscavesdelight:cut_cooked_trilocararis\",\n    \"alexscavesdelight:cut_cooked_tripodfish\",\n    \"alexscavesdelight:cut_dinosaur_chop_cooked\",\n    \"alexscavesdelight:cut_dinosaur_chop_raw\",\n    \"alexscavesdelight:cut_lanternfish\",\n    \"alexscavesdelight:cut_radgill\",\n    \"alexscavesdelight:cut_sea_pig\",\n    \"alexscavesdelight:cut_sweetish_fish_blue\",\n    \"alexscavesdelight:cut_sweetish_fish_green\",\n    \"alexscavesdelight:cut_sweetish_fish_pink\",\n    \"alexscavesdelight:cut_sweetish_fish_red\",\n    \"alexscavesdelight:cut_sweetish_fish_yellow\",\n    \"alexscavesdelight:cut_trilocaris_tail\",\n    \"alexscavesdelight:cut_tripodfish\",\n    \"alexscavesdelight:tremorzilla_maet\",\n    \"alexscavesdelight:cooked_sea_pig\",\n    \"alexscavesdelight:dried_tripodfish\"\n  ]\n}",
+        "json": {
+          "values": [
+            "alexscavesdelight:cut_cooked_lanternfish",
+            "alexscavesdelight:cut_cooked_radgill",
+            "alexscavesdelight:cut_cooked_trilocararis",
+            "alexscavesdelight:cut_cooked_tripodfish",
+            "alexscavesdelight:cut_dinosaur_chop_cooked",
+            "alexscavesdelight:cut_dinosaur_chop_raw",
+            "alexscavesdelight:cut_lanternfish",
+            "alexscavesdelight:cut_radgill",
+            "alexscavesdelight:cut_sea_pig",
+            "alexscavesdelight:cut_sweetish_fish_blue",
+            "alexscavesdelight:cut_sweetish_fish_green",
+            "alexscavesdelight:cut_sweetish_fish_pink",
+            "alexscavesdelight:cut_sweetish_fish_red",
+            "alexscavesdelight:cut_sweetish_fish_yellow",
+            "alexscavesdelight:cut_trilocaris_tail",
+            "alexscavesdelight:cut_tripodfish",
+            "alexscavesdelight:tremorzilla_maet",
+            "alexscavesdelight:cooked_sea_pig",
+            "alexscavesdelight:dried_tripodfish"
+          ]
+        }
+      },
+      {
+        "archive": "artifacts-forge-9.5.20.jar",
+        "text": "{\n  \"values\": [\n    \"artifacts:everlasting_beef\",\n    \"artifacts:eternal_steak\"\n  ]\n}",
+        "json": {
+          "values": [
+            "artifacts:everlasting_beef",
+            "artifacts:eternal_steak"
+          ]
+        }
+      },
+      {
+        "archive": "BrewinAndChewin-1.20.1-3.2.1.jar",
+        "text": "{\n  \"values\": [\n    \"brewinandchewin:jerky\",\n    \"brewinandchewin:kippers\",\n    \"brewinandchewin:cheesy_pasta\",\n    \"brewinandchewin:horror_lasagna\",\n    \"brewinandchewin:fiery_fondue\",\n    \"brewinandchewin:ham_and_cheese_sandwich\"\n  ]\n}",
+        "json": {
+          "values": [
+            "brewinandchewin:jerky",
+            "brewinandchewin:kippers",
+            "brewinandchewin:cheesy_pasta",
+            "brewinandchewin:horror_lasagna",
+            "brewinandchewin:fiery_fondue",
+            "brewinandchewin:ham_and_cheese_sandwich"
+          ]
+        }
+      },
+      {
+        "archive": "FarmersDelight-1.20.1-1.3.4.jar",
+        "text": "{\n  \"values\": [\n    \"farmersdelight:fried_egg\",\n    \"farmersdelight:cod_slice\",\n    \"farmersdelight:cooked_cod_slice\",\n    \"farmersdelight:salmon_slice\",\n    \"farmersdelight:cooked_salmon_slice\",\n    \"farmersdelight:bacon_and_eggs\"\n  ]\n}",
+        "json": {
+          "values": [
+            "farmersdelight:fried_egg",
+            "farmersdelight:cod_slice",
+            "farmersdelight:cooked_cod_slice",
+            "farmersdelight:salmon_slice",
+            "farmersdelight:cooked_salmon_slice",
+            "farmersdelight:bacon_and_eggs"
+          ]
+        }
+      },
+      {
+        "archive": "origins-forge-1.20.1-1.10.0.9-all.jar",
+        "text": "{\r\n  \"replace\": false,\r\n  \"values\": [\r\n    \"minecraft:rotten_flesh\",\r\n    \"minecraft:cod\",\r\n    \"minecraft:tropical_fish\",\r\n    \"minecraft:pufferfish\",\r\n    \"minecraft:salmon\",\r\n    \"minecraft:beef\",\r\n    \"minecraft:porkchop\",\r\n    \"minecraft:mutton\",\r\n    \"minecraft:chicken\",\r\n    \"minecraft:rabbit\",\r\n    \"minecraft:cooked_chicken\",\r\n    \"minecraft:cooked_rabbit\",\r\n    \"minecraft:rabbit_stew\",\r\n    \"minecraft:cooked_porkchop\",\r\n    \"minecraft:cooked_cod\",\r\n    \"minecraft:cooked_beef\",\r\n    \"minecraft:cooked_mutton\",\r\n    \"minecraft:cooked_salmon\",\r\n    \"minecraft:spider_eye\"\r\n  ]\r\n}",
+        "json": {
+          "replace": false,
+          "values": [
+            "minecraft:rotten_flesh",
+            "minecraft:cod",
+            "minecraft:tropical_fish",
+            "minecraft:pufferfish",
+            "minecraft:salmon",
+            "minecraft:beef",
+            "minecraft:porkchop",
+            "minecraft:mutton",
+            "minecraft:chicken",
+            "minecraft:rabbit",
+            "minecraft:cooked_chicken",
+            "minecraft:cooked_rabbit",
+            "minecraft:rabbit_stew",
+            "minecraft:cooked_porkchop",
+            "minecraft:cooked_cod",
+            "minecraft:cooked_beef",
+            "minecraft:cooked_mutton",
+            "minecraft:cooked_salmon",
+            "minecraft:spider_eye"
+          ]
+        }
+      }
+    ],
+    "data/parcool/loot_tables/grant_parcool_guide.json": [
+      {
+        "archive": "ParCool-1.20.1-3.4.3.3.jar",
+        "text": "{\n  \"type\": \"advancement_reward\",\n  \"pools\": [\n    {\n      \"rolls\": 1,\n      \"entries\": [\n        {\n          \"type\": \"item\",\n          \"name\": \"patchouli:guide_book\",\n          \"functions\": [\n            {\n              \"function\": \"set_nbt\",\n              \"tag\": \"{\\\"patchouli:book\\\": \\\"parcool:parcool_guide\\\"}\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+        "json": {
+          "type": "advancement_reward",
+          "pools": [
+            {
+              "rolls": 1,
+              "entries": [
+                {
+                  "type": "item",
+                  "name": "patchouli:guide_book",
+                  "functions": [
+                    {
+                      "function": "set_nbt",
+                      "tag": "{\"patchouli:book\": \"parcool:parcool_guide\"}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "data/spartanweaponry/recipes/copper_spear.json": [
+      {
+        "archive": "overgearedspartan-0.67.jar",
+        "text": "{\n  \"type\": \"forge:false\"\n}",
+        "json": {
+          "type": "forge:false"
+        }
+      },
+      {
+        "archive": "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar",
+        "text": "{\n  \"type\": \"minecraft:crafting_shaped\",\n  \"conditions\": [\n    {\n      \"type\": \"spartanweaponry:type_disabled\",\n      \"disabled\": [\n        \"spear\",\n        \"copper\"\n      ]\n    },\n    {\n      \"type\": \"forge:not\",\n      \"value\": {\n        \"type\": \"forge:tag_empty\",\n        \"tag\": \"forge:ingots/copper\"\n      }\n    }\n  ],\n  \"group\": \"spartanweaponry:spear\",\n  \"key\": {\n    \"#\": {\n      \"tag\": \"forge:ingots/copper\"\n    },\n    \"/\": {\n      \"tag\": \"spartanweaponry:poles\"\n    }\n  },\n  \"pattern\": [\n    \"#\",\n    \"/\"\n  ],\n  \"result\": {\n    \"item\": \"spartanweaponry:copper_spear\"\n  }\n}",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "conditions": [
+            {
+              "type": "spartanweaponry:type_disabled",
+              "disabled": [
+                "spear",
+                "copper"
+              ]
+            },
+            {
+              "type": "forge:not",
+              "value": {
+                "type": "forge:tag_empty",
+                "tag": "forge:ingots/copper"
+              }
+            }
+          ],
+          "group": "spartanweaponry:spear",
+          "key": {
+            "#": {
+              "tag": "forge:ingots/copper"
+            },
+            "/": {
+              "tag": "spartanweaponry:poles"
+            }
+          },
+          "pattern": [
+            "#",
+            "/"
+          ],
+          "result": {
+            "item": "spartanweaponry:copper_spear"
+          }
+        }
+      }
+    ]
+  },
+  "related_registered_items": [
+    "alexscaves:cave_painting_trilocaris",
+    "alexscaves:cooked_dinosaur_chop",
+    "alexscaves:cooked_trilocaris_tail",
+    "alexscaves:dinosaur_chop",
+    "alexscaves:sea_pig",
+    "alexscaves:sea_pig_bucket",
+    "alexscaves:spawn_egg_sea_pig",
+    "alexscaves:spawn_egg_trilocaris",
+    "alexscaves:trilocaris_bucket",
+    "alexscaves:trilocaris_tail",
+    "alexscavesdelight:bioluminesscence_glazed_sea_pig",
+    "alexscavesdelight:bioluminesscence_glazed_sea_pig_block",
+    "alexscavesdelight:cut_cooked_trilocararis",
+    "alexscavesdelight:cut_dinosaur_chop_cooked",
+    "alexscavesdelight:cut_dinosaur_chop_raw",
+    "alexscavesdelight:cut_sea_pig",
+    "alexscavesdelight:cut_trilocaris_tail",
+    "alexscavesdelight:honey_glazed_dinosaur_chop",
+    "alexscavesdelight:honey_glazed_dinosaur_chop_block",
+    "alexscavesdelight:sea_pig_soup",
+    "alexscavesdelight:trilocararis_roll",
+    "overgeared_iaf:silver_plate",
+    "vintagedelight:gearo_berry",
+    "vintagedelight:gearo_berry_bag",
+    "vintagedelight:gearo_berry_jam_bottle",
+    "vintagedelight:gearo_berry_jam_jar",
+    "vintagedelight:gearo_berry_mason_jar",
+    "vintagedelight:honey_roasted_peanut",
+    "vintagedelight:magic_peanut",
+    "vintagedelight:peanut",
+    "vintagedelight:peanut_crate",
+    "vintagedelight:roasted_peanut",
+    "vintagedelight:wild_peanuts"
+  ],
+  "item_dump_tagged_items": 0,
+  "tag_dump_reliable": false,
+  "tag_validation_note": "All-empty tags cannot establish runtime tag membership or absence."
+}

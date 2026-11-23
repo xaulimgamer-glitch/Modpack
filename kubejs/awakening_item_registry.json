@@ -1,6 +1,6 @@
 {
 	"minecraft": "1.20.1",
-	"total_items": 15288,
+	"total_items": 15298,
 	"namespaces": {
 		"spartanshields": 64,
 		"upgrade_aquatic": 336,
@@ -30,7 +30,7 @@
 		"miners_delight": 69,
 		"aquaculture": 123,
 		"spartanundergarden": 96,
-		"burnt": 426,
+		"burnt": 435,
 		"supplementaries": 302,
 		"alexsdelight": 23,
 		"spartancataclysm": 120,
@@ -70,8 +70,8 @@
 		"culturaldelights": 67,
 		"cold_sweat": 30,
 		"nethersdelight": 33,
-		"overgeared": 90,
 		"astikorcartsredux": 67,
+		"overgeared": 90,
 		"ba_bt": 67,
 		"mowziesmobs": 56,
 		"goblintraders": 2,
@@ -80,9 +80,9 @@
 		"citadel": 5,
 		"immersive_melodies": 11,
 		"eclipticseasons": 28,
-		"darkermagic": 7,
 		"nebulus_trees": 10,
 		"hauntedharvest": 13,
+		"darkermagic": 8,
 		"stardew_fishing": 16,
 		"solclassic": 3,
 		"windswept_delights": 17,
@@ -17362,6 +17362,12 @@
 			"tags": []
 		},
 		{
+			"id": "burnt:burnt_dirt_slab",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "burnt:burnt_door",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.DoubleHighBlockItem",
@@ -17423,6 +17429,12 @@
 		},
 		{
 			"id": "burnt:burnt_grass",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
+			"id": "burnt:burnt_grass_slab",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
 			"tags": []
@@ -17531,6 +17543,12 @@
 		},
 		{
 			"id": "burnt:burnt_moss_carpet",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
+			"id": "burnt:burnt_moss_slab",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
 			"tags": []
@@ -17836,6 +17854,12 @@
 			"tags": []
 		},
 		{
+			"id": "burnt:creeper_flag",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "burnt:cyan_flag",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
@@ -17986,6 +18010,12 @@
 			"tags": []
 		},
 		{
+			"id": "burnt:fire_flag",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "burnt:fire_set_block",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
@@ -18107,6 +18137,12 @@
 		},
 		{
 			"id": "burnt:recovering_grass",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
+			"id": "burnt:recovering_grass_slab",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
 			"tags": []
@@ -18406,6 +18442,12 @@
 			"tags": []
 		},
 		{
+			"id": "burnt:smoldering_grass_slab",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "burnt:smoldering_grass_start",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
@@ -18527,6 +18569,12 @@
 		},
 		{
 			"id": "burnt:smoldering_moss_carpet",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
+			"id": "burnt:smoldering_moss_slab",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
 			"tags": []
@@ -19535,6 +19583,12 @@
 		},
 		{
 			"id": "burnt:white_flag",
+			"namespace": "burnt",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
+			"id": "burnt:wilderness_flag",
 			"namespace": "burnt",
 			"class": "net.minecraft.world.item.BlockItem",
 			"tags": []
@@ -26386,6 +26440,18 @@
 			"tags": []
 		},
 		{
+			"id": "darkermagic:mage_journal",
+			"namespace": "darkermagic",
+			"class": "net.rev.darkermagic.item.MageJournalItem",
+			"tags": []
+		},
+		{
+			"id": "darkermagic:sculk_rod",
+			"namespace": "darkermagic",
+			"class": "net.minecraft.world.item.Item",
+			"tags": []
+		},
+		{
 			"id": "darkermagic:volume_of_the_deep",
 			"namespace": "darkermagic",
 			"class": "net.rev.darkermagic.item.VolumeOfTheDeep",
@@ -26413,12 +26479,6 @@
 			"id": "darkermagic:warden_mage_leggings",
 			"namespace": "darkermagic",
 			"class": "net.rev.darkermagic.item.WardenMageArmorItem",
-			"tags": []
-		},
-		{
-			"id": "darkermagic:warden_stick",
-			"namespace": "darkermagic",
-			"class": "net.minecraft.world.item.Item",
 			"tags": []
 		},
 		{
@@ -46950,7 +47010,7 @@
 		{
 			"id": "overgeared:copper_axe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.AxeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModAxeItem",
 			"tags": []
 		},
 		{
@@ -46986,7 +47046,7 @@
 		{
 			"id": "overgeared:copper_hoe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.HoeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModHoeItem",
 			"tags": []
 		},
 		{
@@ -47010,7 +47070,7 @@
 		{
 			"id": "overgeared:copper_pickaxe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.PickaxeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModPickaxeItem",
 			"tags": []
 		},
 		{
@@ -47200,6 +47260,12 @@
 			"tags": []
 		},
 		{
+			"id": "overgeared:iron_smithing_anvil",
+			"namespace": "overgeared",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "overgeared:iron_sword_blade",
 			"namespace": "overgeared",
 			"class": "net.minecraft.world.item.Item",
@@ -47214,7 +47280,7 @@
 		{
 			"id": "overgeared:iron_tongs",
 			"namespace": "overgeared",
-			"class": "net.stirdrem.overgeared.item.custom.Tongs",
+			"class": "net.stirdrem.overgeared.item.custom.ForgeTongs",
 			"tags": []
 		},
 		{
@@ -47248,12 +47314,6 @@
 			"tags": []
 		},
 		{
-			"id": "overgeared:smithing_anvil",
-			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.BlockItem",
-			"tags": []
-		},
-		{
 			"id": "overgeared:smithing_hammer",
 			"namespace": "overgeared",
 			"class": "net.stirdrem.overgeared.item.custom.SmithingHammer",
@@ -47274,7 +47334,7 @@
 		{
 			"id": "overgeared:steel_axe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.AxeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModAxeItem",
 			"tags": []
 		},
 		{
@@ -47316,7 +47376,7 @@
 		{
 			"id": "overgeared:steel_hoe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.HoeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModHoeItem",
 			"tags": []
 		},
 		{
@@ -47346,7 +47406,7 @@
 		{
 			"id": "overgeared:steel_pickaxe",
 			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.PickaxeItem",
+			"class": "net.stirdrem.overgeared.item.custom.ModPickaxeItem",
 			"tags": []
 		},
 		{
@@ -47394,13 +47454,7 @@
 		{
 			"id": "overgeared:steel_tongs",
 			"namespace": "overgeared",
-			"class": "net.stirdrem.overgeared.item.custom.Tongs",
-			"tags": []
-		},
-		{
-			"id": "overgeared:stone_anvil",
-			"namespace": "overgeared",
-			"class": "net.minecraft.world.item.BlockItem",
+			"class": "net.stirdrem.overgeared.item.custom.ForgeTongs",
 			"tags": []
 		},
 		{
@@ -47434,6 +47488,12 @@
 			"tags": []
 		},
 		{
+			"id": "overgeared:stone_smithing_anvil",
+			"namespace": "overgeared",
+			"class": "net.minecraft.world.item.BlockItem",
+			"tags": []
+		},
+		{
 			"id": "overgeared:stone_sword_blade",
 			"namespace": "overgeared",
 			"class": "net.minecraft.world.item.Item",
@@ -47460,7 +47520,7 @@
 		{
 			"id": "overgeared:wooden_tongs",
 			"namespace": "overgeared",
-			"class": "net.stirdrem.overgeared.item.custom.Tongs",
+			"class": "net.stirdrem.overgeared.item.custom.ForgeTongs",
 			"tags": []
 		},
 		{
