@@ -11,11 +11,26 @@
     "alexscavesdelight:sweet_tooth_knife",
     "alexscavesdelight:tectonic_knife",
     "alexscavesdelight:uranium_knife",
-    "alexsmobsdelight:crocodile_knife",
-    "alexsmobsdelight:dimensional_slicer",
-    "alexsmobsdelight:froststalker_horn_knife",
-    "alexsmobsdelight:lobster_knife",
-    "alexsmobsdelight:skelewag_knife",
+    {
+      "id": "alexsmobsdelight:crocodile_knife",
+      "required": false
+    },
+    {
+      "id": "alexsmobsdelight:dimensional_slicer",
+      "required": false
+    },
+    {
+      "id": "alexsmobsdelight:froststalker_horn_knife",
+      "required": false
+    },
+    {
+      "id": "alexsmobsdelight:lobster_knife",
+      "required": false
+    },
+    {
+      "id": "alexsmobsdelight:skelewag_knife",
+      "required": false
+    },
     "aquaculturedelight:neptunium_knife",
     "farmersdelight:diamond_knife",
     "farmersdelight:flint_knife",

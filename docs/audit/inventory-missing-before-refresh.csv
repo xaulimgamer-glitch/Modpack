@@ -1,0 +1,68 @@
+mod_id,mod_name,mod_version,mod_file,mod_url,display_url,issue_tracker_url
+modernfix,ModernFix,5.27.83+mc1.20.1,modernfix-forge-5.27.83+mc1.20.1.jar,,https://modrinth.com/mod/modernfix,https://github.com/embeddedt/ModernFix/issues
+balm,Balm,7.3.42,balm-forge-1.20.1-7.3.42.jar,,https://mods.twelveiterations.com/,https://github.com/TwelveIterations/Balm/issues
+handcrafted,Handcrafted,3.0.6,handcrafted-forge-1.20.1-3.0.6.jar,,https://modrinth.com/mod/handcrafted,https://github.com/terrarium-earth/handcrafted/issues
+icarus,Icarus,2.14.0,Icarus-Forge-2.14.0.jar,,https://curseforge.com/projects/428151,https://github.com/Up-Mods/Icarus/issues
+transition,TRansition,1.0.21,TRansition-1.0.21-1.20.1-forge-SNAPSHOT.jar,,https://github.com/tr7zw/TRansition,https://github.com/tr7zw/TRansition/issues
+lootintegrations_moog,lootintegrations_moog mod,1,lootintegrations_moog-2.1.jar,,,
+puffish_skills,Pufferfish's Skills,0.18.3,puffish_skills-0.18.3-1.20-forge.jar,,,
+jei,Just Enough Items,15.56.0.205,jei-1.20.1-forge-15.56.0.205.jar,,https://www.curseforge.com/minecraft/mc-mods/jei,https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue
+lithostitched,Lithostitched,1.4.11,lithostitched-forge-1.20.1-1.4.11.jar,,,https://github.com/Apollounknowndev/lithostitched/issues
+irons_lib,Iron's Lib,1.20.1-2.1.0,irons_lib-1.20.1-2.1.0.jar,,,
+archbows,Arch Bows,1.1.9-1.20.1,archbows-1.1.9-1.20.1.jar,,,
+integrated_dungeons_arise,Integrated Dungeons Arise,2.1.1,IDA v2.1.1-1.20.1.jar,,https://modrinth.com/datapack/integrated-dungeons-arise,
+shield_overhaul,Shield Overhaul,2.0.1-FORGE,shield_overhaul-2.0.1-FORGE_mapped_srg_1.20.1.jar,https://fabricmc.net/,https://fabricmc.net/,
+integrated_api,Integrated API,1.8.0,integrated_api-forge-1.20.1-1.8.0.jar,,https://www.curseforge.com/minecraft/mc-mods/integrated_api,
+darkermagic,Deeper and Darker: Spellbooks,1.3.1-1.20.1,darkermagic-1.3.1-1.20.1-ver.b.jar,,,
+corpsecurioscompat,corpsecurioscompat,3.1.3,corpsecurioscompat-1.20.1-Forge-3.1.3.jar,,,
+forge,Forge,47.4.22,forge-1.20.1-47.4.22-universal.jar,,https://minecraftforge.net/,https://minecraftforge.net/
+minecraft,Minecraft,1.20.1,client-1.20.1-20230612.114412-srg.jar,,,
+punchy,Punchy,2.7e,punchy-2.7e-forge-1.20.1.jar,,,
+shouldersurfing,Shoulder Surfing Reloaded,1.20.1-5.0.11,ShoulderSurfing-Forge-1.20.1-5.0.11.jar,,https://github.com/Exopandora/ShoulderSurfing,
+bettermountsteering,Seramicx's Better Mount Steering,1.0.9,bettermountsteering-forge-1.20.1-1.0.9.jar,,,
+eclipticseasons,Ecliptic Seasons,0.13.10-hotfix-6.1,EclipticSeasons-1.20.1-forge-0.13.10-hotfix-6.1-all.jar,,,
+sereneseasons,Serene Seasons API Stub (Ecliptic Seasons Bridge),9.1.0.2-patch11,ecliptic-seasons-serene-api-bridge-1.20.1-forge-9.1.0.2-patch11-all.jar,,,
+kotlinforforge,Kotlin For Forge,4.12.0,kffmod-4.12.0.jar,,,
+notenoughanimations,NotEnoughAnimations,1.12.4,notenoughanimations-forge-1.12.4-mc1.20.1.jar,,https://modrinth.com/mod/not-enough-animations,https://github.com/tr7zw/NotEnoughAnimations/issues
+entityculling,EntityCulling,1.10.5,entityculling-forge-1.10.5-mc1.20.1.jar,,https://modrinth.com/mod/entityculling,https://github.com/tr7zw/EntityCulling/issues
+hardcorerevival,Hardcore Revival,20.1.18,hardcorerevival-forge-1.20.1-20.1.18.jar,,https://mods.twelveiterations.com/minecraft/hardcorerevival,https://github.com/TwelveIterations/HardcoreRevival/issues
+vampirism,Vampirism,1.10.16,Vampirism-1.20.1-1.10.16.jar,,https://vampirism.dev,https://github.com/TeamLapen/Vampirism/issues
+teamlapenlib,Teamlapen Library,1.10.16,Vampirism-1.20.1-1.10.16.jar,,https://vampirism.maxanier.de,https://github.com/TeamLapen/Vampirism/issues
+cold_sweat,Cold Sweat,2.4.2,ColdSweat-2.4.2.jar,,,
+mns,MoogsNetherStructures,3.0.0,MoogsNetherStructures-1.20-3.0.0.jar,,https://www.curseforge.com/minecraft/mc-mods/mns-moogs-nether-structures,
+betterend,Better End,20.0.11,BetterEnd-20.0.11.jar,,https://www.curseforge.com/minecraft/mc-mods/betterend,https://github.com/quiqueck/BetterEnd/issues
+treechop,HT's TreeChop,0.19.0,TreeChop-1.20.1-forge-0.19.0-fixed.jar,,https://github.com/hammertater/treechop,https://github.com/hammertater/treechop/issues
+swem,Star Worm Equestrian Mod,1.6.6,swem-1.20.1-1.6.6.jar,,https://swequestrian.com,https://github.com/AlaharranHonor/SWEquestrianM/issues
+firstperson,FirstPerson,2.7.2,firstperson-forge-2.7.2-mc1.20.1.jar,,https://modrinth.com/mod/first-person-model,https://github.com/tr7zw/FirstPersonModel/issues
+structureessentials,Structure Essentials mod,1.20.1-5.0,structureessentials-1.20.1-5.0.jar,,,
+burnt,Burnt Basic,1.10.4.3,burnt_basic-1.10.4.3-forge-1.20.1.jar,,,https://discord.com/invite/NUqTwsfTzn
+lootintegrations,Lootintegrations mod,1.20.1-4.7,lootintegrations-1.20.1-4.7.jar,,,
+stardew_fishing,Stardew Fishing,3.7,stardew_fishing-3.7-1.20.1.jar,,,
+baguettelib,BaguetteLib,2.0.5,baguettelib-1.20.1-Forge-2.0.5.jar,,,
+fzzy_config,Fzzy Config,0.7.6+1.20.1+forge,fzzy_config-0.7.6+1.20.1+forge.jar,,,https://github.com/fzzyhmstrs/fconfig/issues
+bclib,BCLib,20.0.13,BCLib-20.0.13.jar,,https://modrinth.com/mod/bclib,https://github.com/quiqueck/bclib/issues
+ambientsounds,AmbientSounds,6.3.8,AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar,,https://modrinth.com/mod/ambientsounds,https://github.com/CreativeMD/AmbientSounds/issues
+collective,Collective,8.39,collective-1.20.1-8.39.jar,,https://serilum.com/mod/collective,https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective
+cupboard,Cupboard utilities,1.20.1-4.1,cupboard-1.20.1-4.1.jar,,,
+moogs_structures,Moog's Structure Lib,3.1.2,MoogsStructureLib-forge-1.20-3.1.2.jar,,,
+smallships,Small Ships,2.0.0-b1.4,smallships-forge-1.20.1-2.0.0-b1.4.jar,,,
+solclassic,Spice of Life: Classic Edition,2.11,spiceoflife_classic-forge-2.11.jar,,,
+octolib,OctoLib,0.5.0.1,OctoLib-FORGE-0.5.0.1+1.20.1.jar,,,https://github.com/SSKirillSS/octo-lib/issues
+mss,MoogsSoaringStructures,2.1.0,MoogsSoaringStructures-1.20-2.1.0.jar,,https://www.curseforge.com/minecraft/mc-mods/mss-moogs-soaring-structures,
+copycats,Create: Copycats+,3.0.8+mc.1.20.1-forge,copycats-3.0.8+mc.1.20.1-forge.jar,,https://github.com/copycats-plus/copycats,https://github.com/copycats-plus/copycats/issues
+trender,TRender,1.0.15,TRender-1.0.15-1.20.1-forge-SNAPSHOT.jar,,https://github.com/tr7zw/TRender,https://github.com/tr7zw/TRender/issues
+magistuarmory,Epic-Knights: Shields, Armor and Weapons,10.11,epic-knights-1.20.1-forge-10.11.jar,,
+magistuarmoryaddon,Epic Knights: Addon,2.6,epic-knights-addon-1.20.x-forge-2.6.jar,,,https://github.com/Magistu/Epic-Knights-Addon/issues
+mobawareness,Mob Awareness,1.0.0,mobawareness-1.20.1-forge-1.0.0.jar,,,https://domkss.fider.io/
+moonlight,Moonlight Library,1.20-2.16.34,moonlight-1.20-2.16.34-forge.jar,https://www.curseforge.com/minecraft/mc-mods/selene,,https://github.com/MehVahdJukaar/Moonlight/issues
+creativecore,CreativeCore,2.12.39,CreativeCore_FORGE_v2.12.39_mc1.20.1.jar,,https://modrinth.com/mod/creativecore,https://github.com/CreativeMD/CreativeCore/issues
+epic_knights_x_better_combat,Epic-Knights-x-Better-Combat,1.0.1-1.20.1+1.21.1,Epic-Knights-x-Better-Combat.jar,,https://modrinth.com/datapack/epic-knights-bettercombat-compatibility,https://github.com/Salty-Codes/Epic-Knights-x-Better-Combat/issues
+supplementaries,Supplementaries,1.20-3.1.43,supplementaries-1.20-3.1.43-forge.jar,https://www.curseforge.com/minecraft/mc-mods/supplementaries,,https://github.com/MehVahdJukaar/supplementaries/issues
+overgeared,Overgeared: A Blacksmith Mod,1.20.1-1.6.33,overgeared-1.20.1-1.6.33.jar,,https://github.com/phuccom000/Overgeared-1.20.1,
+overgeared_epic_knights,Overgeared x Epic Knights,1.20.1-1.0.4,overgeared_epic_knights-1.20.1-1.0.4.jar,,,https://github.com/Salty-Codes/Overgeared-Epic-Knights/issues
+vampire_spells_addon,Vampire Spells Addon,1.20.1-0.0.9,vampire_spells_addon-forge-1.20.1-0.0.9.jar,,https://github.com/xsharov/VampireSpellsAddon,https://github.com/xsharov/VampireSpellsAddon/issues
+paladin_spells,Paladin Spells - Iron's Spells 'n Spellbooks Addon,1.20.1-1.1.1,paladin_spells-1.20.1-1.1.1.jar,,https://github.com/Kaufko/Paladin-Spells,https://github.com/Kaufko/Paladin-Spells/Issues
+mvs,MoogsVoyagerStructures,5.1.1,MoogsVoyagerStructures-universal-1.20-5.1.1.jar,,https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures,
+chisel,Chisel Modern,1.3.3,chisel-1.20.1-Forge-1.3.3.jar,,,
+eclipticseasons_bundles,Ecliptic Seasons : Bundles,0.18.0.2,EclipticSeasons-Bundles-0.18.0.2.jar,,,
+healingcampfire,Healing Campfire,6.3,healingcampfire-1.20.1-6.3.jar,,https://serilum.com/mod/healing-campfire,https://github.com/Serilum/.issue-tracker/labels/Mod:%20Healing%20Campfire

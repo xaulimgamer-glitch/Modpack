@@ -1,0 +1,18 @@
+
+[movement_modifiers]
+	#Camouflage bonus while sliding (Slide). Default: 0.3 (30%)
+	#Range: -10.0 ~ 1.0
+	slide_camouflage = 0.3
+	#Camouflage penalty (malus) during fast running/swimming (FastRun / FastSwim). Default: -0.3 (-30%)
+	#Range: -10.0 ~ 1.0
+	fastrun_camouflage_penalty = -0.3
+	#Muffling penalty (malus) during fast running/swimming (FastRun / FastSwim). Default: -0.4 (-40%)
+	#Range: -10.0 ~ 1.0
+	fastrun_muffling_penalty = -0.4
+	#Camouflage bonus when clinging to edges (Cling / HangDown). Default: 0.2 (20%)
+	#Range: -10.0 ~ 1.0
+	cling_camouflage = 0.2
+	#Camouflage bonus inside cardboard box / block hiding (HideInBlock). Default: 0.9 (90%)
+	#Range: -10.0 ~ 1.0
+	hide_in_block_camouflage = 0.9
+

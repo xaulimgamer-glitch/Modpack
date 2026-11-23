@@ -1,0 +1,1001 @@
+{
+  "file_counts": {
+    ".toml": 171,
+    ".json": 769,
+    ".snbt": 9,
+    ".json5": 14,
+    ".mcfunction": 7,
+    ".js": 41
+  },
+  "parse_findings": [
+    {
+      "file": "config/caveore.json",
+      "error": "Expecting property name enclosed in double quotes: line 3 column 5 (char 25)",
+      "strict_datapack_json": false
+    },
+    {
+      "file": "config/cupboard.json",
+      "error": "Expecting property name enclosed in double quotes: line 3 column 5 (char 40)",
+      "strict_datapack_json": false
+    },
+    {
+      "file": "config/lithostitched.json",
+      "error": "Expecting property name enclosed in double quotes: line 2 column 3 (char 4)",
+      "strict_datapack_json": false
+    },
+    {
+      "file": "config/lootintegrations.json",
+      "error": "Expecting property name enclosed in double quotes: line 3 column 5 (char 36)",
+      "strict_datapack_json": false
+    },
+    {
+      "file": "config/structureessentials.json",
+      "error": "Expecting property name enclosed in double quotes: line 3 column 5 (char 39)",
+      "strict_datapack_json": false
+    }
+  ],
+  "not_parsed_formats": {
+    ".snbt": 9,
+    ".json5": 14,
+    ".mcfunction": 7,
+    ".js": 41
+  },
+  "unknown_namespace_candidates": {
+    "alexmobs": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/smallships-common.toml",
+          "id": "alexmobs:cachalot_whale"
+        }
+      ]
+    },
+    "alexsmobsdelight": {
+      "count": 12,
+      "examples": [
+        {
+          "file": "config/alexsmobsdelight-common.toml",
+          "id": "alexsmobsdelight:eternal_cooked_seagull"
+        },
+        {
+          "file": "config/alexsmobsdelight-common.toml",
+          "id": "alexsmobsdelight:enchanted_eternal_cooked_seagull"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/axe.json",
+          "id": "alexsmobsdelight:mantis_shrimp_axe"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/bow.json",
+          "id": "alexsmobsdelight:banana_bow"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/hammer.json",
+          "id": "alexsmobsdelight:mantis_shrimp_hammer"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/knife.json",
+          "id": "alexsmobsdelight:crocodile_knife"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/knife.json",
+          "id": "alexsmobsdelight:dimensional_slicer"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/knife.json",
+          "id": "alexsmobsdelight:froststalker_horn_knife"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/knife.json",
+          "id": "alexsmobsdelight:lobster_knife"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/knife.json",
+          "id": "alexsmobsdelight:skelewag_knife"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/scythe.json",
+          "id": "alexsmobsdelight:mantis_shrimp_scythe"
+        },
+        {
+          "file": "config/paxi/datapacks/awakening_weapon_tags/data/awakening/tags/items/weapon/type/sword.json",
+          "id": "alexsmobsdelight:crocodile_scute_sword"
+        }
+      ]
+    },
+    "antiqueatlas": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/firstperson.json",
+          "id": "antiqueatlas:antique_atlas"
+        }
+      ]
+    },
+    "atmospheric": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "atmospheric:rosewood_leaves"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "atmospheric:morado_leaves"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "atmospheric:yucca_leaves"
+        }
+      ]
+    },
+    "autumnity": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "autumnity:maple_leaves"
+        },
+        {
+          "file": "config/alexsmobs/banana_slug_spawns.json",
+          "id": "autumnity:maple_forest"
+        }
+      ]
+    },
+    "avm_staff": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "avm_staff:campfire_flame"
+        }
+      ]
+    },
+    "betternether": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "betternether:.*_bark"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "betternether:.*_log"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "betternether:.*_leaves"
+        }
+      ]
+    },
+    "biomesoplenty": {
+      "count": 36,
+      "examples": [
+        {
+          "file": "config/alexsmobs/alligator_snapping_turtle_spawns.json",
+          "id": "biomesoplenty:tundra_bog"
+        },
+        {
+          "file": "config/alexsmobs/bald_eagle_spawns.json",
+          "id": "biomesoplenty:jade_cliffs"
+        },
+        {
+          "file": "config/alexsmobs/banana_slug_spawns.json",
+          "id": "biomesoplenty:redwood_forest"
+        },
+        {
+          "file": "config/alexsmobs/banana_slug_spawns.json",
+          "id": "biomesoplenty:coniferous_forest"
+        },
+        {
+          "file": "config/alexsmobs/banana_slug_spawns.json",
+          "id": "biomesoplenty:fir_clearing"
+        },
+        {
+          "file": "config/alexsmobs/bison_spawns.json",
+          "id": "biomesoplenty:field"
+        },
+        {
+          "file": "config/alexsmobs/bison_spawns.json",
+          "id": "biomesoplenty:forested_field"
+        },
+        {
+          "file": "config/alexsmobs/bison_spawns.json",
+          "id": "biomesoplenty:grassland"
+        },
+        {
+          "file": "config/alexsmobs/bison_spawns.json",
+          "id": "biomesoplenty:pasture"
+        },
+        {
+          "file": "config/alexsmobs/bison_spawns.json",
+          "id": "biomesoplenty:prairie"
+        },
+        {
+          "file": "config/alexsmobs/blue_jay_spawns.json",
+          "id": "biomesoplenty:redwood_forest"
+        },
+        {
+          "file": "config/alexsmobs/blue_jay_spawns.json",
+          "id": "biomesoplenty:snowblossom_grove"
+        }
+      ]
+    },
+    "botania": {
+      "count": 16,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "botania:flame_ring"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "botania:magic_missile"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "botania:falling_star"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "botania:mana_burst"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "botania:starfield"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "botania:exchange_rod"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "botania:dirt_rod"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "botania:skydirt_rod"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "botania:cobble_rod"
+        },
+        {
+          "file": "config/spartanweaponry-common.toml",
+          "id": "botania:crystal_bow"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "botania:mystical_flower"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "botania:floating_flower"
+        }
+      ]
+    },
+    "byg": {
+      "count": 69,
+      "examples": [
+        {
+          "file": "config/alexsmobs/crimson_mosquito_spawns.json",
+          "id": "byg:crimson_gardens"
+        },
+        {
+          "file": "config/alexsmobs/soul_vulture_spawns.json",
+          "id": "byg:warped_desert"
+        },
+        {
+          "file": "config/alexsmobs/warped_toad_spawns.json",
+          "id": "byg:crimson_gardens"
+        },
+        {
+          "file": "config/alexsmobs/warped_toad_spawns.json",
+          "id": "byg:warped_desert"
+        },
+        {
+          "file": "config/iceandfire/amphithere_biomes.json",
+          "id": "byg:guiana_shield"
+        },
+        {
+          "file": "config/iceandfire/amphithere_biomes.json",
+          "id": "byg:temperate_rainforest"
+        },
+        {
+          "file": "config/iceandfire/amphithere_biomes.json",
+          "id": "byg:tropical_rainforest"
+        },
+        {
+          "file": "config/iceandfire/amphithere_biomes.json",
+          "id": "byg:jacaranda_forest"
+        },
+        {
+          "file": "config/iceandfire/cockatrice_biomes.json",
+          "id": "byg:baobab_savanna"
+        },
+        {
+          "file": "config/iceandfire/cockatrice_biomes.json",
+          "id": "byg:araucaria_savanna"
+        },
+        {
+          "file": "config/iceandfire/cyclops_cave_biomes.json",
+          "id": "byg:dacite_shore"
+        },
+        {
+          "file": "config/iceandfire/cyclops_cave_biomes.json",
+          "id": "byg:basalt_barrera"
+        }
+      ]
+    },
+    "cinematiccataclysm": {
+      "count": 5,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "cinematiccataclysm:scylla_cutscene"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "cinematiccataclysm:maledictus_cutscene"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "cinematiccataclysm:leviathan_cutscene"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "cinematiccataclysm:ancient_remnant_cutscene"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "cinematiccataclysm:ignis_cutscene"
+        }
+      ]
+    },
+    "createbigcannons": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "createbigcannons:cannon_carriage"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "createbigcannons:pitch_contraption"
+        }
+      ]
+    },
+    "cumulus_menus": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/cumulus_menus-client.toml",
+          "id": "cumulus_menus:minecraft"
+        }
+      ]
+    },
+    "drg_flares": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "drg_flares:drg_flares"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "drg_flares:drg_flares"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "drg_flares:drg_flare"
+        }
+      ]
+    },
+    "druidcraft": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/supplementaries-client.toml",
+          "id": "druidcraft:dreadfish"
+        },
+        {
+          "file": "config/supplementaries-client.toml",
+          "id": "druidcraft:lunar_moth"
+        }
+      ]
+    },
+    "dynamictrees": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "#dynamictrees:branches"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "dynamictrees:trunk_shell"
+        }
+      ]
+    },
+    "endergetic": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "endergetic:bolloom_bud"
+        }
+      ]
+    },
+    "enlightened_end": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/amendments-common.toml",
+          "id": "enlightened_end:xenon_lantern"
+        }
+      ]
+    },
+    "environmental": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "environmental:giant_tall_grass"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "environmental:willow_leaves"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "environmental:hanging_willow_leaves"
+        }
+      ]
+    },
+    "exposure": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/firstperson.json",
+          "id": "exposure:camera"
+        }
+      ]
+    },
+    "grassslabs": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "grassslabs:grass_carpet"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "grassslabs:grass_slab"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "grassslabs:grass_stairs"
+        }
+      ]
+    },
+    "https": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/mca.json",
+          "id": "https://api.conczin.net/v1/mca/chat"
+        },
+        {
+          "file": "config/mca.json",
+          "id": "https://api-rk.conczin.net/"
+        },
+        {
+          "file": "config/mca.json",
+          "id": "https://mca.conczin.net"
+        }
+      ]
+    },
+    "incendium": {
+      "count": 9,
+      "examples": [
+        {
+          "file": "config/alexsmobs/crimson_mosquito_spawns.json",
+          "id": "incendium:ash_barrens"
+        },
+        {
+          "file": "config/alexsmobs/crimson_mosquito_spawns.json",
+          "id": "incendium:infernal_dunes"
+        },
+        {
+          "file": "config/alexsmobs/soul_vulture_spawns.json",
+          "id": "incendium:weeping_valley"
+        },
+        {
+          "file": "config/alexsmobs/straddler_spawns.json",
+          "id": "incendium:volcanic_deltas"
+        },
+        {
+          "file": "config/alexsmobs/straddler_spawns.json",
+          "id": "incendium:withered_forest"
+        },
+        {
+          "file": "config/alexsmobs/stradpole_spawns.json",
+          "id": "incendium:volcanic_deltas"
+        },
+        {
+          "file": "config/alexsmobs/stradpole_spawns.json",
+          "id": "incendium:withered_forest"
+        },
+        {
+          "file": "config/alexsmobs/warped_toad_spawns.json",
+          "id": "incendium:inverted_forest"
+        },
+        {
+          "file": "config/alexsmobs/warped_toad_spawns.json",
+          "id": "incendium:quartz_flats"
+        }
+      ]
+    },
+    "integrateddynamics": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "integrateddynamics:cable"
+        }
+      ]
+    },
+    "irons_patreon_lib": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "kubejs/awakening_item_registry.json",
+          "id": "irons_patreon_lib:player_statue"
+        },
+        {
+          "file": "kubejs/awakening_item_registry.json",
+          "id": "irons_patreon_lib:transmog_table"
+        }
+      ]
+    },
+    "jepb": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/modernfix-common.toml",
+          "id": "jepb:jei_plugin"
+        }
+      ]
+    },
+    "mekanism": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "mekanism:atomic_disassembler"
+        }
+      ]
+    },
+    "mna": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "mna:chimerite_crystal"
+        }
+      ]
+    },
+    "mod": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/mobcontrol.toml",
+          "id": "mod:mob"
+        },
+        {
+          "file": "config/mobcontrol.toml",
+          "id": "mod:mob"
+        }
+      ]
+    },
+    "more_slabs_stairs_and_walls": {
+      "count": 112,
+      "examples": [
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:acacia_log_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:acacia_wood_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:bamboo_block_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:birch_log_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:birch_wood_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:cherry_log_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:cherry_wood_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:dark_oak_log_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:dark_oak_wood_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:jungle_log_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:jungle_wood_slab"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_smoldering_slabs.json",
+          "id": "more_slabs_stairs_and_walls:mangrove_log_slab"
+        }
+      ]
+    },
+    "morered": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "morered:network_cable"
+        }
+      ]
+    },
+    "mts": {
+      "count": 3,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "mts:builder_rendering"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "mts:builder_existing"
+        },
+        {
+          "file": "config/entityculling.json",
+          "id": "mts:builder_seat"
+        }
+      ]
+    },
+    "mysticbiomes": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "mysticbiomes:.*_log"
+        }
+      ]
+    },
+    "oorigins": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/paxi/datapacks/rpg_races/data/rpgraces/powers/myconid/compact_mechanics.json",
+          "id": "oorigins:modify_jump"
+        }
+      ]
+    },
+    "practicaltools": {
+      "count": 4,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "practicaltools:diamond_greataxe"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "practicaltools:golden_greataxe"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "practicaltools:iron_greataxe"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "practicaltools:netherite_greataxe"
+        }
+      ]
+    },
+    "psi": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "psi:programmer"
+        }
+      ]
+    },
+    "quad-mstv-mtv": {
+      "count": 22,
+      "examples": [
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:pale_oak_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:bamboo_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:spruce_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:jungle_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:birch_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:warped_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:bamboo_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:mangrove_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:cherry_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:jungle_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:mangrove_soul_torch"
+        },
+        {
+          "file": "config/notenoughanimations.json",
+          "id": "quad-mstv-mtv:acacia_torch"
+        }
+      ]
+    },
+    "randomthings": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "randomthings:blockbreaker"
+        }
+      ]
+    },
+    "remnantcurios": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/souls_combat_hud-client.toml",
+          "id": "remnantcurios:flask"
+        }
+      ]
+    },
+    "someassemblyrequired": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/alexsmobsdelight-common.toml",
+          "id": "someassemblyrequired:sandwich"
+        }
+      ]
+    },
+    "terralith": {
+      "count": 518,
+      "examples": [
+        {
+          "file": "config/alexsmobs/alligator_snapping_turtle_spawns.json",
+          "id": "terralith:ice_marsh"
+        },
+        {
+          "file": "config/alexsmobs/alligator_snapping_turtle_spawns.json",
+          "id": "terralith:orchid_swamp"
+        },
+        {
+          "file": "config/alexsmobs/anaconda_spawns.json",
+          "id": "terralith:ice_marsh"
+        },
+        {
+          "file": "config/alexsmobs/anaconda_spawns.json",
+          "id": "terralith:orchid_swamp"
+        },
+        {
+          "file": "config/alexsmobs/anaconda_spawns.json",
+          "id": "terralith:amethyst_rainforest"
+        },
+        {
+          "file": "config/alexsmobs/anaconda_spawns.json",
+          "id": "terralith:tropical_jungle"
+        },
+        {
+          "file": "config/alexsmobs/anaconda_spawns.json",
+          "id": "terralith:skylands_summer"
+        },
+        {
+          "file": "config/alexsmobs/anteater_spawns.json",
+          "id": "terralith:amethyst_canyon"
+        },
+        {
+          "file": "config/alexsmobs/anteater_spawns.json",
+          "id": "terralith:amethyst_rainforest"
+        },
+        {
+          "file": "config/alexsmobs/anteater_spawns.json",
+          "id": "terralith:jungle_mountains"
+        },
+        {
+          "file": "config/alexsmobs/anteater_spawns.json",
+          "id": "terralith:rocky_jungle"
+        },
+        {
+          "file": "config/alexsmobs/anteater_spawns.json",
+          "id": "terralith:tropical_jungle"
+        }
+      ]
+    },
+    "the_bumblezone": {
+      "count": 4,
+      "examples": [
+        {
+          "file": "config/quark-common.toml",
+          "id": "the_bumblezone:stinger_spear"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "the_bumblezone:crystal_cannon"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "the_bumblezone:honey_crystal_shield"
+        },
+        {
+          "file": "config/quark-common.toml",
+          "id": "the_bumblezone:honey_bee_leggings_2"
+        }
+      ]
+    },
+    "treechop": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/treechop-common.toml",
+          "id": "#treechop:choppables"
+        },
+        {
+          "file": "config/treechop-common.toml",
+          "id": "#treechop:leaves_like"
+        }
+      ]
+    },
+    "voidscape": {
+      "count": 1,
+      "examples": [
+        {
+          "file": "config/entityculling.json",
+          "id": "voidscape:corrupted_pawn"
+        }
+      ]
+    },
+    "wom": {
+      "count": 2,
+      "examples": [
+        {
+          "file": "config/souls_combat_hud-client.toml",
+          "id": "wom:solar_passive"
+        },
+        {
+          "file": "config/souls_combat_hud-client.toml",
+          "id": "wom:napoleon_passive"
+        }
+      ]
+    },
+    "xycraft_world": {
+      "count": 6,
+      "examples": [
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:glowing_shiny_aurey_block"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:shiny_aurey_block"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:rgb_lamp"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:glowing_rgb_viewer"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:glowing_matte_rgb_block"
+        },
+        {
+          "file": "config/supplementaries-common.toml",
+          "id": "xycraft_world:rgb_lamp_pole"
+        }
+      ]
+    },
+    "yourmod": {
+      "count": 83,
+      "examples": [
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/burn_mappings/overrides.json",
+          "id": "yourmod:some_block"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/burn_mappings/overrides.json",
+          "id": "yourmod:some_other_block"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/bamboo_blocks.json",
+          "id": "yourmod:some_bamboo_block"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_burnt_dirt.json",
+          "id": "yourmod:rich_dirt"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_burnt_dirt.json",
+          "id": "yourmod:loam"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_burnt_farmland.json",
+          "id": "yourmod:fertile_farmland"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_burnt_farmland.json",
+          "id": "yourmod:rich_farmland"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_fine_leaves.json",
+          "id": "yourmod:willow_leaves"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_fine_leaves.json",
+          "id": "yourmod:fern_canopy"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_hollow_log.json",
+          "id": "yourmod:hollow_cedar_log"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_hollow_log.json",
+          "id": "yourmod:hollow_redwood_log"
+        },
+        {
+          "file": "config/burnt/mappings/Burnt Block Mappings 1.20.1/data/burnt/tags/blocks/burns_to_large_leaves.json",
+          "id": "yourmod:palm_leaves"
+        }
+      ]
+    }
+  },
+  "limitations": "No content registry validation, JSON5/SNBT/schema validation, script execution or world simulation. Custom namespaces and optional tags can be valid without a matching mod ID."
+}

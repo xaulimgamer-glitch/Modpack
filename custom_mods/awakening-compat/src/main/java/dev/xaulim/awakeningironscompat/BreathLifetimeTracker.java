@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.server.ServerStoppedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -36,6 +37,11 @@ public final class BreathLifetimeTracker {
         EXPIRY_BY_LEVEL
                 .computeIfAbsent(serverLevel.dimension(), ignored -> new HashMap<>())
                 .put(cone.getUUID(), expiryTick);
+    }
+
+    @SubscribeEvent
+    public static void onServerStopped(ServerStoppedEvent event) {
+        EXPIRY_BY_LEVEL.clear();
     }
 
     @SubscribeEvent

@@ -12,10 +12,6 @@
 	enableAnvilToSmithing = true
 	#Requires blueprint to obtain higher quality items
 	enableBlueprintForging = true
-	#Enable Tier A Smithing Anvil to appears
-	enableTierA = false
-	#Enable Tier B Smithing Anvil to appears
-	enableTierB = false
 	#Requires specific hammers to forge on specific anvils
 	enableTieredHammerForging = false
 
@@ -234,6 +230,11 @@
 	#Uses required to reach the next quality after Poor
 	#Range: 0 ~ 1000
 	poorMaxUse = 5
+	#Whether a Perfect blueprint can keep levelling up into a Master blueprint. If false, Perfect is the highest quality a blueprint can reach through use.
+	perfectBlueprintUpgradeToMaster = false
+	#Uses required to reach Master after Perfect (only used if perfectBlueprintUpgradeToMaster is true)
+	#Range: 1 ~ 1000
+	perfectMaxUse = 40
 
 ["Durability Bonuses"]
 	#Range: -5.0 ~ 5.0
@@ -308,9 +309,11 @@
 	#Weight for Master quality for loot-tools/weapons. Set to 0 to disable.
 	#Range: > 0
 	weightMasterQuality = 1
+	#Whether items dropped by mobs (weapons, tools, armor - anything quality applies to) can roll a quality. Covers both mob loot tables and equipment the mob was holding/wearing. Only applies when enableLootQuality is true; chest, block, fishing etc. loot is unaffected.
+	enableMobDropQuality = true
 
 [Casting]
-	#Is casting enabled or not. Would affects normal progression due to your first smithing hammers require casting.
+	#Is casting enabled or not.
 	castingToggle = true
 	#Durability of the Fired Tool Cast.
 	#Range: > 0

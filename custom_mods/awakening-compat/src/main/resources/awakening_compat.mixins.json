@@ -13,7 +13,8 @@
   ],
 
   "client": [
-    "FixedWingEntityModelMixin"
+    "FixedWingEntityModelMixin",
+    "JupiterLiteralConfigKeyMixin"
   ],
 
   "injectors": {

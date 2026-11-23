@@ -76,7 +76,7 @@ dependencies {
     )
 
     runtimeOnly fg.deobf(
-            'curse.maven:icarus-428151:8247925'
+            'curse.maven:icarus-428151:8753894'
     )
 
     runtimeOnly fg.deobf(
@@ -91,6 +91,8 @@ dependencies {
             'curse.maven:spartan-weaponry-278141:6842571'
     )
 
+    // Origins 1.20.1-1.10.0.9 bundles Calio/Apoli and requires both at runtime.
+    // Compile against their APIs without packaging another copy in this addon.
     compileOnly fg.deobf(
             'io.github.edwinmindcraft:calio-forge:1.20.1-1.11.0.5'
     )
@@ -128,6 +130,8 @@ mixin {
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version.toString(),
                 'MixinConfigs':
                         'awakening_compat.mixins.json'
         ])

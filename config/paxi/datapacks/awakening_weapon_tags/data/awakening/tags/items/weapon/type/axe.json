@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
-    "alexsmobsdelight:mantis_shrimp_axe",
+    {
+      "id": "alexsmobsdelight:mantis_shrimp_axe",
+      "required": false
+    },
     "aquaculture:neptunium_axe",
     "betterend:aeternium_axe",
     "betterend:terminite_axe",

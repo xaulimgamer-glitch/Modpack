@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
-    "alexsmobsdelight:mantis_shrimp_scythe",
+    {
+      "id": "alexsmobsdelight:mantis_shrimp_scythe",
+      "required": false
+    },
     "irons_spellbooks:decrepit_scythe",
     "mca:scythe",
     "spartancataclysm:ancient_metal_scythe",

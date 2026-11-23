@@ -33,8 +33,7 @@
   },
 
   "waterline": {
-    "above": 10,
-    "below": 25,
+    "reach": 20,
     "block": ["minecraft:mossy_cobblestone", "minecraft:cobblestone"],
     "pattern": "speckle",
     "edge_noise": 0.35,

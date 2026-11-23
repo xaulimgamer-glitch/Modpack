@@ -1,0 +1,211 @@
+{
+  "configVersion": 1,
+  "general": {
+    "vegetationDensity": 1.0,
+    "vegetationBoost": 1.5,
+    "rockDensity": 1.0,
+    "snowReplaceChance": 0.85,
+    "enableRocks": true,
+    "enableMushrooms": true,
+    "enableGrassTint": true,
+    "debugLogging": false
+  },
+  "rocks": {
+    "slabBlocks": [
+      "minecraft:stone_slab",
+      "minecraft:cobblestone_slab",
+      "minecraft:andesite_slab"
+    ],
+    "doubleSlabChance": 0.15,
+    "companionPebbleChance": 0.4
+  },
+  "mushrooms": {
+    "countPerPatch": 12,
+    "redMushroomChance": 0.4
+  },
+  "vegetation": {
+    "plains": {
+      "density": 0.7,
+      "bald": 0.06,
+      "shortGrass": 0.84,
+      "tallGrass": 0.14,
+      "fern": 0.0,
+      "largeFern": 0.02
+    },
+    "meadow": {
+      "density": 0.8,
+      "bald": 0.04,
+      "shortGrass": 0.7,
+      "tallGrass": 0.15,
+      "fern": 0.1,
+      "largeFern": 0.05
+    },
+    "forest": {
+      "density": 0.75,
+      "bald": 0.04,
+      "shortGrass": 0.8,
+      "tallGrass": 0.04,
+      "fern": 0.14,
+      "largeFern": 0.02
+    },
+    "birch_forest": {
+      "density": 0.72,
+      "bald": 0.04,
+      "shortGrass": 0.86,
+      "tallGrass": 0.05,
+      "fern": 0.07,
+      "largeFern": 0.02
+    },
+    "flower_forest": {
+      "density": 0.85,
+      "bald": 0.03,
+      "shortGrass": 0.66,
+      "tallGrass": 0.12,
+      "fern": 0.14,
+      "largeFern": 0.08
+    },
+    "dark_forest": {
+      "density": 0.7,
+      "bald": 0.04,
+      "shortGrass": 0.55,
+      "tallGrass": 0.05,
+      "fern": 0.28,
+      "largeFern": 0.12
+    },
+    "taiga": {
+      "density": 0.7,
+      "bald": 0.05,
+      "shortGrass": 0.45,
+      "tallGrass": 0.05,
+      "fern": 0.4,
+      "largeFern": 0.1
+    },
+    "old_growth_pine": {
+      "density": 0.68,
+      "bald": 0.05,
+      "shortGrass": 0.35,
+      "tallGrass": 0.05,
+      "fern": 0.4,
+      "largeFern": 0.2
+    },
+    "old_growth_spruce": {
+      "density": 0.68,
+      "bald": 0.05,
+      "shortGrass": 0.38,
+      "tallGrass": 0.05,
+      "fern": 0.4,
+      "largeFern": 0.17
+    },
+    "jungle": {
+      "density": 0.9,
+      "bald": 0.02,
+      "shortGrass": 0.55,
+      "tallGrass": 0.2,
+      "fern": 0.2,
+      "largeFern": 0.05
+    },
+    "sparse_jungle": {
+      "density": 0.7,
+      "bald": 0.04,
+      "shortGrass": 0.6,
+      "tallGrass": 0.15,
+      "fern": 0.2,
+      "largeFern": 0.05
+    },
+    "windswept": {
+      "density": 0.42,
+      "bald": 0.1,
+      "shortGrass": 0.92,
+      "tallGrass": 0.04,
+      "fern": 0.04,
+      "largeFern": 0.0
+    },
+    "savanna": {
+      "density": 0.38,
+      "bald": 0.12,
+      "shortGrass": 0.92,
+      "tallGrass": 0.08,
+      "fern": 0.0,
+      "largeFern": 0.0
+    },
+    "cherry_grove": {
+      "density": 0.8,
+      "bald": 0.03,
+      "shortGrass": 0.66,
+      "tallGrass": 0.1,
+      "fern": 0.16,
+      "largeFern": 0.08
+    },
+    "swamp": {
+      "density": 0.75,
+      "bald": 0.06,
+      "shortGrass": 0.6,
+      "tallGrass": 0.1,
+      "fern": 0.25,
+      "largeFern": 0.05
+    },
+    "snowy": {
+      "density": 0.3,
+      "bald": 0.07,
+      "shortGrass": 0.6,
+      "tallGrass": 0.05,
+      "fern": 0.3,
+      "largeFern": 0.05
+    },
+    "mushroom": {
+      "density": 0.55,
+      "bald": 0.05,
+      "shortGrass": 0.65,
+      "tallGrass": 0.1,
+      "fern": 0.2,
+      "largeFern": 0.05
+    }
+  },
+  "biomeRocks": {
+    "plains": {
+      "chance": 0.08,
+      "min": 1,
+      "max": 2
+    },
+    "forest": {
+      "chance": 0.06,
+      "min": 1,
+      "max": 1
+    },
+    "taiga": {
+      "chance": 0.05,
+      "min": 1,
+      "max": 1
+    },
+    "mountains": {
+      "chance": 0.22,
+      "min": 1,
+      "max": 3
+    },
+    "windswept_forest": {
+      "chance": 0.16,
+      "min": 1,
+      "max": 3
+    },
+    "badlands": {
+      "chance": 0.12,
+      "min": 1,
+      "max": 3
+    },
+    "desert": {
+      "chance": 0.1,
+      "min": 1,
+      "max": 2
+    },
+    "savanna": {
+      "chance": 0.09,
+      "min": 1,
+      "max": 2
+    },
+    "jungle": {
+      "chance": 0.06,
+      "min": 1,
+      "max": 2
+    }
+  }
+}

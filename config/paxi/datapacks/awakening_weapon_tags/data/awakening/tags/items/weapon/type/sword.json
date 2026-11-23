@@ -2,7 +2,10 @@
   "replace": false,
   "values": [
     "alexsmobs:skelewag_sword",
-    "alexsmobsdelight:crocodile_scute_sword",
+    {
+      "id": "alexsmobsdelight:crocodile_scute_sword",
+      "required": false
+    },
     "aquaculture:neptunium_sword",
     "aquamirae:fin_cutter",
     "aquamirae:poisoned_blade",

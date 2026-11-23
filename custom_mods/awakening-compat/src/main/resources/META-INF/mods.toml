@@ -41,7 +41,7 @@ side="BOTH"
 [[dependencies.awakening_compat]]
 modId="origins"
 mandatory=true
-versionRange="*"
+versionRange="[1.20.1-1.10.0.9]"
 ordering="NONE"
 side="BOTH"
 
@@ -63,7 +63,7 @@ side="BOTH"
 [[dependencies.awakening_compat]]
 modId="icarus"
 mandatory=true
-versionRange="*"
+versionRange="[2.14.1]"
 ordering="AFTER"
 side="BOTH"
 

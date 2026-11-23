@@ -1,0 +1,3617 @@
+{
+  "top_level_jars": 288,
+  "archives_scanned": 479,
+  "module_candidates": 391,
+  "malformed_old_csv_rows": [
+    {
+      "mod_id": "magistuarmory",
+      "mod_name": "Epic-Knights: Shields",
+      "mod_version": " Armor and Weapons",
+      "mod_file": "10.11",
+      "mod_url": "epic-knights-1.20.1-forge-10.11.jar",
+      "display_url": "",
+      "issue_tracker_url": "",
+      "null": [
+        "https://github.com/Magistu/Epic-Knights/issues"
+      ]
+    }
+  ],
+  "failures": [],
+  "exporter_candidates": [
+    {
+      "source": "irons_spellbooks-1.20.1-3.16.3.jar",
+      "class_name": "io/redspace/ironsspellbooks/command/GenerateModList.class"
+    }
+  ],
+  "old_inventory_rows": 260,
+  "old_file_not_found": [
+    {
+      "mod_id": "modernfix",
+      "mod_name": "ModernFix",
+      "mod_version": "5.27.83+mc1.20.1",
+      "mod_file": "modernfix-forge-5.27.83+mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/modernfix",
+      "issue_tracker_url": "https://github.com/embeddedt/ModernFix/issues"
+    },
+    {
+      "mod_id": "balm",
+      "mod_name": "Balm",
+      "mod_version": "7.3.42",
+      "mod_file": "balm-forge-1.20.1-7.3.42.jar",
+      "mod_url": "",
+      "display_url": "https://mods.twelveiterations.com/",
+      "issue_tracker_url": "https://github.com/TwelveIterations/Balm/issues"
+    },
+    {
+      "mod_id": "handcrafted",
+      "mod_name": "Handcrafted",
+      "mod_version": "3.0.6",
+      "mod_file": "handcrafted-forge-1.20.1-3.0.6.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/handcrafted",
+      "issue_tracker_url": "https://github.com/terrarium-earth/handcrafted/issues"
+    },
+    {
+      "mod_id": "icarus",
+      "mod_name": "Icarus",
+      "mod_version": "2.14.0",
+      "mod_file": "Icarus-Forge-2.14.0.jar",
+      "mod_url": "",
+      "display_url": "https://curseforge.com/projects/428151",
+      "issue_tracker_url": "https://github.com/Up-Mods/Icarus/issues"
+    },
+    {
+      "mod_id": "transition",
+      "mod_name": "TRansition",
+      "mod_version": "1.0.21",
+      "mod_file": "TRansition-1.0.21-1.20.1-forge-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/tr7zw/TRansition",
+      "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+    },
+    {
+      "mod_id": "lootintegrations_moog",
+      "mod_name": "lootintegrations_moog mod",
+      "mod_version": "1",
+      "mod_file": "lootintegrations_moog-2.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "puffish_skills",
+      "mod_name": "Pufferfish's Skills",
+      "mod_version": "0.18.3",
+      "mod_file": "puffish_skills-0.18.3-1.20-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "jei",
+      "mod_name": "Just Enough Items",
+      "mod_version": "15.56.0.205",
+      "mod_file": "jei-1.20.1-forge-15.56.0.205.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+      "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "lithostitched",
+      "mod_name": "Lithostitched",
+      "mod_version": "1.4.11",
+      "mod_file": "lithostitched-forge-1.20.1-1.4.11.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Apollounknowndev/lithostitched/issues"
+    },
+    {
+      "mod_id": "irons_lib",
+      "mod_name": "Iron's Lib",
+      "mod_version": "1.20.1-2.1.0",
+      "mod_file": "irons_lib-1.20.1-2.1.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "archbows",
+      "mod_name": "Arch Bows",
+      "mod_version": "1.1.9-1.20.1",
+      "mod_file": "archbows-1.1.9-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "integrated_dungeons_arise",
+      "mod_name": "Integrated Dungeons Arise",
+      "mod_version": "2.1.1",
+      "mod_file": "IDA v2.1.1-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/integrated-dungeons-arise",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "shield_overhaul",
+      "mod_name": "Shield Overhaul",
+      "mod_version": "2.0.1-FORGE",
+      "mod_file": "shield_overhaul-2.0.1-FORGE_mapped_srg_1.20.1.jar",
+      "mod_url": "https://fabricmc.net/",
+      "display_url": "https://fabricmc.net/",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "integrated_api",
+      "mod_name": "Integrated API",
+      "mod_version": "1.8.0",
+      "mod_file": "integrated_api-forge-1.20.1-1.8.0.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/integrated_api",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "darkermagic",
+      "mod_name": "Deeper and Darker: Spellbooks",
+      "mod_version": "1.3.1-1.20.1",
+      "mod_file": "darkermagic-1.3.1-1.20.1-ver.b.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "corpsecurioscompat",
+      "mod_name": "corpsecurioscompat",
+      "mod_version": "3.1.3",
+      "mod_file": "corpsecurioscompat-1.20.1-Forge-3.1.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "forge",
+      "mod_name": "Forge",
+      "mod_version": "47.4.22",
+      "mod_file": "forge-1.20.1-47.4.22-universal.jar",
+      "mod_url": "",
+      "display_url": "https://minecraftforge.net/",
+      "issue_tracker_url": "https://minecraftforge.net/"
+    },
+    {
+      "mod_id": "minecraft",
+      "mod_name": "Minecraft",
+      "mod_version": "1.20.1",
+      "mod_file": "client-1.20.1-20230612.114412-srg.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "punchy",
+      "mod_name": "Punchy",
+      "mod_version": "2.7e",
+      "mod_file": "punchy-2.7e-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "shouldersurfing",
+      "mod_name": "Shoulder Surfing Reloaded",
+      "mod_version": "1.20.1-5.0.11",
+      "mod_file": "ShoulderSurfing-Forge-1.20.1-5.0.11.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Exopandora/ShoulderSurfing",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "bettermountsteering",
+      "mod_name": "Seramicx's Better Mount Steering",
+      "mod_version": "1.0.9",
+      "mod_file": "bettermountsteering-forge-1.20.1-1.0.9.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "eclipticseasons",
+      "mod_name": "Ecliptic Seasons",
+      "mod_version": "0.13.10-hotfix-6.1",
+      "mod_file": "EclipticSeasons-1.20.1-forge-0.13.10-hotfix-6.1-all.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "sereneseasons",
+      "mod_name": "Serene Seasons API Stub (Ecliptic Seasons Bridge)",
+      "mod_version": "9.1.0.2-patch11",
+      "mod_file": "ecliptic-seasons-serene-api-bridge-1.20.1-forge-9.1.0.2-patch11-all.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "kotlinforforge",
+      "mod_name": "Kotlin For Forge",
+      "mod_version": "4.12.0",
+      "mod_file": "kffmod-4.12.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "notenoughanimations",
+      "mod_name": "NotEnoughAnimations",
+      "mod_version": "1.12.4",
+      "mod_file": "notenoughanimations-forge-1.12.4-mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/not-enough-animations",
+      "issue_tracker_url": "https://github.com/tr7zw/NotEnoughAnimations/issues"
+    },
+    {
+      "mod_id": "entityculling",
+      "mod_name": "EntityCulling",
+      "mod_version": "1.10.5",
+      "mod_file": "entityculling-forge-1.10.5-mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/entityculling",
+      "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+    },
+    {
+      "mod_id": "hardcorerevival",
+      "mod_name": "Hardcore Revival",
+      "mod_version": "20.1.18",
+      "mod_file": "hardcorerevival-forge-1.20.1-20.1.18.jar",
+      "mod_url": "",
+      "display_url": "https://mods.twelveiterations.com/minecraft/hardcorerevival",
+      "issue_tracker_url": "https://github.com/TwelveIterations/HardcoreRevival/issues"
+    },
+    {
+      "mod_id": "vampirism",
+      "mod_name": "Vampirism",
+      "mod_version": "1.10.16",
+      "mod_file": "Vampirism-1.20.1-1.10.16.jar",
+      "mod_url": "",
+      "display_url": "https://vampirism.dev",
+      "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+    },
+    {
+      "mod_id": "teamlapenlib",
+      "mod_name": "Teamlapen Library",
+      "mod_version": "1.10.16",
+      "mod_file": "Vampirism-1.20.1-1.10.16.jar",
+      "mod_url": "",
+      "display_url": "https://vampirism.maxanier.de",
+      "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+    },
+    {
+      "mod_id": "cold_sweat",
+      "mod_name": "Cold Sweat",
+      "mod_version": "2.4.2",
+      "mod_file": "ColdSweat-2.4.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mns",
+      "mod_name": "MoogsNetherStructures",
+      "mod_version": "3.0.0",
+      "mod_file": "MoogsNetherStructures-1.20-3.0.0.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/mns-moogs-nether-structures",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "betterend",
+      "mod_name": "Better End",
+      "mod_version": "20.0.11",
+      "mod_file": "BetterEnd-20.0.11.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/betterend",
+      "issue_tracker_url": "https://github.com/quiqueck/BetterEnd/issues"
+    },
+    {
+      "mod_id": "treechop",
+      "mod_name": "HT's TreeChop",
+      "mod_version": "0.19.0",
+      "mod_file": "TreeChop-1.20.1-forge-0.19.0-fixed.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/hammertater/treechop",
+      "issue_tracker_url": "https://github.com/hammertater/treechop/issues"
+    },
+    {
+      "mod_id": "swem",
+      "mod_name": "Star Worm Equestrian Mod",
+      "mod_version": "1.6.6",
+      "mod_file": "swem-1.20.1-1.6.6.jar",
+      "mod_url": "",
+      "display_url": "https://swequestrian.com",
+      "issue_tracker_url": "https://github.com/AlaharranHonor/SWEquestrianM/issues"
+    },
+    {
+      "mod_id": "firstperson",
+      "mod_name": "FirstPerson",
+      "mod_version": "2.7.2",
+      "mod_file": "firstperson-forge-2.7.2-mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/first-person-model",
+      "issue_tracker_url": "https://github.com/tr7zw/FirstPersonModel/issues"
+    },
+    {
+      "mod_id": "structureessentials",
+      "mod_name": "Structure Essentials mod",
+      "mod_version": "1.20.1-5.0",
+      "mod_file": "structureessentials-1.20.1-5.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "burnt",
+      "mod_name": "Burnt Basic",
+      "mod_version": "1.10.4.3",
+      "mod_file": "burnt_basic-1.10.4.3-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+    },
+    {
+      "mod_id": "lootintegrations",
+      "mod_name": "Lootintegrations mod",
+      "mod_version": "1.20.1-4.7",
+      "mod_file": "lootintegrations-1.20.1-4.7.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "stardew_fishing",
+      "mod_name": "Stardew Fishing",
+      "mod_version": "3.7",
+      "mod_file": "stardew_fishing-3.7-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "baguettelib",
+      "mod_name": "BaguetteLib",
+      "mod_version": "2.0.5",
+      "mod_file": "baguettelib-1.20.1-Forge-2.0.5.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "fzzy_config",
+      "mod_name": "Fzzy Config",
+      "mod_version": "0.7.6+1.20.1+forge",
+      "mod_file": "fzzy_config-0.7.6+1.20.1+forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/fzzyhmstrs/fconfig/issues"
+    },
+    {
+      "mod_id": "bclib",
+      "mod_name": "BCLib",
+      "mod_version": "20.0.13",
+      "mod_file": "BCLib-20.0.13.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/bclib",
+      "issue_tracker_url": "https://github.com/quiqueck/bclib/issues"
+    },
+    {
+      "mod_id": "ambientsounds",
+      "mod_name": "AmbientSounds",
+      "mod_version": "6.3.8",
+      "mod_file": "AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/ambientsounds",
+      "issue_tracker_url": "https://github.com/CreativeMD/AmbientSounds/issues"
+    },
+    {
+      "mod_id": "collective",
+      "mod_name": "Collective",
+      "mod_version": "8.39",
+      "mod_file": "collective-1.20.1-8.39.jar",
+      "mod_url": "",
+      "display_url": "https://serilum.com/mod/collective",
+      "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+    },
+    {
+      "mod_id": "cupboard",
+      "mod_name": "Cupboard utilities",
+      "mod_version": "1.20.1-4.1",
+      "mod_file": "cupboard-1.20.1-4.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "moogs_structures",
+      "mod_name": "Moog's Structure Lib",
+      "mod_version": "3.1.2",
+      "mod_file": "MoogsStructureLib-forge-1.20-3.1.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "smallships",
+      "mod_name": "Small Ships",
+      "mod_version": "2.0.0-b1.4",
+      "mod_file": "smallships-forge-1.20.1-2.0.0-b1.4.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "solclassic",
+      "mod_name": "Spice of Life: Classic Edition",
+      "mod_version": "2.11",
+      "mod_file": "spiceoflife_classic-forge-2.11.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "octolib",
+      "mod_name": "OctoLib",
+      "mod_version": "0.5.0.1",
+      "mod_file": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/SSKirillSS/octo-lib/issues"
+    },
+    {
+      "mod_id": "mss",
+      "mod_name": "MoogsSoaringStructures",
+      "mod_version": "2.1.0",
+      "mod_file": "MoogsSoaringStructures-1.20-2.1.0.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/mss-moogs-soaring-structures",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "copycats",
+      "mod_name": "Create: Copycats+",
+      "mod_version": "3.0.8+mc.1.20.1-forge",
+      "mod_file": "copycats-3.0.8+mc.1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/copycats-plus/copycats",
+      "issue_tracker_url": "https://github.com/copycats-plus/copycats/issues"
+    },
+    {
+      "mod_id": "trender",
+      "mod_name": "TRender",
+      "mod_version": "1.0.15",
+      "mod_file": "TRender-1.0.15-1.20.1-forge-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/tr7zw/TRender",
+      "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+    },
+    {
+      "mod_id": "magistuarmory",
+      "mod_name": "Epic-Knights: Shields",
+      "mod_version": " Armor and Weapons",
+      "mod_file": "10.11",
+      "mod_url": "epic-knights-1.20.1-forge-10.11.jar",
+      "display_url": "",
+      "issue_tracker_url": "",
+      "null": [
+        "https://github.com/Magistu/Epic-Knights/issues"
+      ]
+    },
+    {
+      "mod_id": "magistuarmoryaddon",
+      "mod_name": "Epic Knights: Addon",
+      "mod_version": "2.6",
+      "mod_file": "epic-knights-addon-1.20.x-forge-2.6.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Magistu/Epic-Knights-Addon/issues"
+    },
+    {
+      "mod_id": "mobawareness",
+      "mod_name": "Mob Awareness",
+      "mod_version": "1.0.0",
+      "mod_file": "mobawareness-1.20.1-forge-1.0.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://domkss.fider.io/"
+    },
+    {
+      "mod_id": "moonlight",
+      "mod_name": "Moonlight Library",
+      "mod_version": "1.20-2.16.34",
+      "mod_file": "moonlight-1.20-2.16.34-forge.jar",
+      "mod_url": "https://www.curseforge.com/minecraft/mc-mods/selene",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/MehVahdJukaar/Moonlight/issues"
+    },
+    {
+      "mod_id": "creativecore",
+      "mod_name": "CreativeCore",
+      "mod_version": "2.12.39",
+      "mod_file": "CreativeCore_FORGE_v2.12.39_mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/creativecore",
+      "issue_tracker_url": "https://github.com/CreativeMD/CreativeCore/issues"
+    },
+    {
+      "mod_id": "epic_knights_x_better_combat",
+      "mod_name": "Epic-Knights-x-Better-Combat",
+      "mod_version": "1.0.1-1.20.1+1.21.1",
+      "mod_file": "Epic-Knights-x-Better-Combat.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/epic-knights-bettercombat-compatibility",
+      "issue_tracker_url": "https://github.com/Salty-Codes/Epic-Knights-x-Better-Combat/issues"
+    },
+    {
+      "mod_id": "supplementaries",
+      "mod_name": "Supplementaries",
+      "mod_version": "1.20-3.1.43",
+      "mod_file": "supplementaries-1.20-3.1.43-forge.jar",
+      "mod_url": "https://www.curseforge.com/minecraft/mc-mods/supplementaries",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/MehVahdJukaar/supplementaries/issues"
+    },
+    {
+      "mod_id": "overgeared",
+      "mod_name": "Overgeared: A Blacksmith Mod",
+      "mod_version": "1.20.1-1.6.33",
+      "mod_file": "overgeared-1.20.1-1.6.33.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/phuccom000/Overgeared-1.20.1",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "overgeared_epic_knights",
+      "mod_name": "Overgeared x Epic Knights",
+      "mod_version": "1.20.1-1.0.4",
+      "mod_file": "overgeared_epic_knights-1.20.1-1.0.4.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Salty-Codes/Overgeared-Epic-Knights/issues"
+    },
+    {
+      "mod_id": "vampire_spells_addon",
+      "mod_name": "Vampire Spells Addon",
+      "mod_version": "1.20.1-0.0.9",
+      "mod_file": "vampire_spells_addon-forge-1.20.1-0.0.9.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/xsharov/VampireSpellsAddon",
+      "issue_tracker_url": "https://github.com/xsharov/VampireSpellsAddon/issues"
+    },
+    {
+      "mod_id": "paladin_spells",
+      "mod_name": "Paladin Spells - Iron's Spells 'n Spellbooks Addon",
+      "mod_version": "1.20.1-1.1.1",
+      "mod_file": "paladin_spells-1.20.1-1.1.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Kaufko/Paladin-Spells",
+      "issue_tracker_url": "https://github.com/Kaufko/Paladin-Spells/Issues"
+    },
+    {
+      "mod_id": "mvs",
+      "mod_name": "MoogsVoyagerStructures",
+      "mod_version": "5.1.1",
+      "mod_file": "MoogsVoyagerStructures-universal-1.20-5.1.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "chisel",
+      "mod_name": "Chisel Modern",
+      "mod_version": "1.3.3",
+      "mod_file": "chisel-1.20.1-Forge-1.3.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "eclipticseasons_bundles",
+      "mod_name": "Ecliptic Seasons : Bundles",
+      "mod_version": "0.18.0.2",
+      "mod_file": "EclipticSeasons-Bundles-0.18.0.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "healingcampfire",
+      "mod_name": "Healing Campfire",
+      "mod_version": "6.3",
+      "mod_file": "healingcampfire-1.20.1-6.3.jar",
+      "mod_url": "",
+      "display_url": "https://serilum.com/mod/healing-campfire",
+      "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Healing%20Campfire"
+    }
+  ],
+  "version_changes": [
+    {
+      "previous": {
+        "mod_id": "modernfix",
+        "mod_name": "ModernFix",
+        "mod_version": "5.27.83+mc1.20.1",
+        "mod_file": "modernfix-forge-5.27.83+mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/modernfix",
+        "issue_tracker_url": "https://github.com/embeddedt/ModernFix/issues"
+      },
+      "current": [
+        {
+          "mod_id": "modernfix",
+          "mod_name": "ModernFix",
+          "mod_version": "5.28.0+mc1.20.1",
+          "mod_file": "modernfix-forge-5.28.0-mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/modernfix",
+          "issue_tracker_url": "https://github.com/embeddedt/ModernFix/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "balm",
+        "mod_name": "Balm",
+        "mod_version": "7.3.42",
+        "mod_file": "balm-forge-1.20.1-7.3.42.jar",
+        "mod_url": "",
+        "display_url": "https://mods.twelveiterations.com/",
+        "issue_tracker_url": "https://github.com/TwelveIterations/Balm/issues"
+      },
+      "current": [
+        {
+          "mod_id": "balm",
+          "mod_name": "Balm",
+          "mod_version": "7.3.44",
+          "mod_file": "balm-forge-1.20.1-7.3.44.jar",
+          "mod_url": "",
+          "display_url": "https://mods.twelveiterations.com/",
+          "issue_tracker_url": "https://github.com/TwelveIterations/Balm/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "icarus",
+        "mod_name": "Icarus",
+        "mod_version": "2.14.0",
+        "mod_file": "Icarus-Forge-2.14.0.jar",
+        "mod_url": "",
+        "display_url": "https://curseforge.com/projects/428151",
+        "issue_tracker_url": "https://github.com/Up-Mods/Icarus/issues"
+      },
+      "current": [
+        {
+          "mod_id": "icarus",
+          "mod_name": "Icarus",
+          "mod_version": "2.14.1",
+          "mod_file": "Icarus-Forge-2.14.1.jar",
+          "mod_url": "",
+          "display_url": "https://curseforge.com/projects/428151",
+          "issue_tracker_url": "https://github.com/Up-Mods/Icarus/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "transition",
+        "mod_name": "TRansition",
+        "mod_version": "1.0.21",
+        "mod_file": "TRansition-1.0.21-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRansition",
+        "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+      },
+      "current": [
+        {
+          "mod_id": "transition",
+          "mod_name": "TRansition",
+          "mod_version": "1.0.28",
+          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/tr7zw/TRansition",
+          "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+        },
+        {
+          "mod_id": "transition",
+          "mod_name": "TRansition",
+          "mod_version": "1.0.28",
+          "mod_file": "notenoughanimations-forge-1.12.7-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/tr7zw/TRansition",
+          "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "puffish_skills",
+        "mod_name": "Pufferfish's Skills",
+        "mod_version": "0.18.3",
+        "mod_file": "puffish_skills-0.18.3-1.20-forge.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "puffish_skills",
+          "mod_name": "Pufferfish's Skills",
+          "mod_version": "0.19.2",
+          "mod_file": "puffish_skills-0.19.2-1.20-forge.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "jei",
+        "mod_name": "Just Enough Items",
+        "mod_version": "15.56.0.205",
+        "mod_file": "jei-1.20.1-forge-15.56.0.205.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+        "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+      },
+      "current": [
+        {
+          "mod_id": "jei",
+          "mod_name": "Just Enough Items",
+          "mod_version": "15.74.0.234",
+          "mod_file": "jei-1.20.1-forge-15.74.0.234.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+          "issue_tracker_url": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "lithostitched",
+        "mod_name": "Lithostitched",
+        "mod_version": "1.4.11",
+        "mod_file": "lithostitched-forge-1.20.1-1.4.11.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/Apollounknowndev/lithostitched/issues"
+      },
+      "current": [
+        {
+          "mod_id": "lithostitched",
+          "mod_name": "Lithostitched",
+          "mod_version": "1.4.12",
+          "mod_file": "lithostitched-forge-1.20.1-1.4.12.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/Apollounknowndev/lithostitched/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "irons_lib",
+        "mod_name": "Iron's Lib",
+        "mod_version": "1.20.1-2.1.0",
+        "mod_file": "irons_lib-1.20.1-2.1.0.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "irons_lib",
+          "mod_name": "Iron's Lib",
+          "mod_version": "1.20.1-2.4.0",
+          "mod_file": "irons_lib-1.20.1-2.4.0.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "integrated_dungeons_arise",
+        "mod_name": "Integrated Dungeons Arise",
+        "mod_version": "2.1.1",
+        "mod_file": "IDA v2.1.1-1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/datapack/integrated-dungeons-arise",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "integrated_dungeons_arise",
+          "mod_name": "Integrated Dungeons Arise",
+          "mod_version": "2.1.3",
+          "mod_file": "IDA_v2.1.3-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/datapack/integrated-dungeons-arise",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "integrated_api",
+        "mod_name": "Integrated API",
+        "mod_version": "1.8.0",
+        "mod_file": "integrated_api-forge-1.20.1-1.8.0.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/integrated_api",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "integrated_api",
+          "mod_name": "Integrated API",
+          "mod_version": "1.9.2",
+          "mod_file": "integrated_api-forge-1.20.1-1.9.2.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/integrated_api",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "darkermagic",
+        "mod_name": "Deeper and Darker: Spellbooks",
+        "mod_version": "1.3.1-1.20.1",
+        "mod_file": "darkermagic-1.3.1-1.20.1-ver.b.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "darkermagic",
+          "mod_name": "Deeper and Darker: Spellbooks",
+          "mod_version": "1.4.0-1.20.1",
+          "mod_file": "darkermagic-1.4.0-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "corpsecurioscompat",
+        "mod_name": "corpsecurioscompat",
+        "mod_version": "3.1.3",
+        "mod_file": "corpsecurioscompat-1.20.1-Forge-3.1.3.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "corpsecurioscompat",
+          "mod_name": "Corpse Curios Compatibility",
+          "mod_version": "4.2.1",
+          "mod_file": "corpsecurioscompat-1.20.1-Forge-4.2.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "shouldersurfing",
+        "mod_name": "Shoulder Surfing Reloaded",
+        "mod_version": "1.20.1-5.0.11",
+        "mod_file": "ShoulderSurfing-Forge-1.20.1-5.0.11.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/Exopandora/ShoulderSurfing",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "shouldersurfing",
+          "mod_name": "Shoulder Surfing Reloaded",
+          "mod_version": "1.20.1-5.3.1",
+          "mod_file": "ShoulderSurfing-Forge-1.20.1-5.3.1.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/Exopandora/ShoulderSurfing",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "eclipticseasons",
+        "mod_name": "Ecliptic Seasons",
+        "mod_version": "0.13.10-hotfix-6.1",
+        "mod_file": "EclipticSeasons-1.20.1-forge-0.13.10-hotfix-6.1-all.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "eclipticseasons",
+          "mod_name": "Ecliptic Seasons",
+          "mod_version": "0.15.5",
+          "mod_file": "Ecliptic-Seasons-1.20.1-forge-0.15.5-all.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "sereneseasons",
+        "mod_name": "Serene Seasons API Stub (Ecliptic Seasons Bridge)",
+        "mod_version": "9.1.0.2-patch11",
+        "mod_file": "ecliptic-seasons-serene-api-bridge-1.20.1-forge-9.1.0.2-patch11-all.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "sereneseasons",
+          "mod_name": "Serene Seasons API Stub (Ecliptic Seasons Bridge)",
+          "mod_version": "9.1.0.2-patch11-1",
+          "mod_file": "ecliptic-seasons-serene-api-bridge-1.20.1-forge-9.1.0.2-patch11-1-all.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "kotlinforforge",
+        "mod_name": "Kotlin For Forge",
+        "mod_version": "4.12.0",
+        "mod_file": "kffmod-4.12.0.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "kotlinforforge",
+          "mod_name": "Kotlin For Forge",
+          "mod_version": "4.13.0",
+          "mod_file": "kotlinforforge-4.13.0-all.jar!/META-INF/jarjar/kffmod-4.13.0.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "notenoughanimations",
+        "mod_name": "NotEnoughAnimations",
+        "mod_version": "1.12.4",
+        "mod_file": "notenoughanimations-forge-1.12.4-mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/not-enough-animations",
+        "issue_tracker_url": "https://github.com/tr7zw/NotEnoughAnimations/issues"
+      },
+      "current": [
+        {
+          "mod_id": "notenoughanimations",
+          "mod_name": "NotEnoughAnimations",
+          "mod_version": "1.12.7",
+          "mod_file": "notenoughanimations-forge-1.12.7-mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/not-enough-animations",
+          "issue_tracker_url": "https://github.com/tr7zw/NotEnoughAnimations/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "entityculling",
+        "mod_name": "EntityCulling",
+        "mod_version": "1.10.5",
+        "mod_file": "entityculling-forge-1.10.5-mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/entityculling",
+        "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+      },
+      "current": [
+        {
+          "mod_id": "entityculling",
+          "mod_name": "EntityCulling",
+          "mod_version": "1.12.1",
+          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/entityculling",
+          "issue_tracker_url": "https://github.com/tr7zw/EntityCulling/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "hardcorerevival",
+        "mod_name": "Hardcore Revival",
+        "mod_version": "20.1.18",
+        "mod_file": "hardcorerevival-forge-1.20.1-20.1.18.jar",
+        "mod_url": "",
+        "display_url": "https://mods.twelveiterations.com/minecraft/hardcorerevival",
+        "issue_tracker_url": "https://github.com/TwelveIterations/HardcoreRevival/issues"
+      },
+      "current": [
+        {
+          "mod_id": "hardcorerevival",
+          "mod_name": "Hardcore Revival",
+          "mod_version": "20.1.19",
+          "mod_file": "hardcorerevival-forge-1.20.1-20.1.19.jar",
+          "mod_url": "",
+          "display_url": "https://mods.twelveiterations.com/minecraft/hardcorerevival",
+          "issue_tracker_url": "https://github.com/TwelveIterations/HardcoreRevival/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "vampirism",
+        "mod_name": "Vampirism",
+        "mod_version": "1.10.16",
+        "mod_file": "Vampirism-1.20.1-1.10.16.jar",
+        "mod_url": "",
+        "display_url": "https://vampirism.dev",
+        "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+      },
+      "current": [
+        {
+          "mod_id": "vampirism",
+          "mod_name": "Vampirism",
+          "mod_version": "1.10.17",
+          "mod_file": "Vampirism-1.20.1-1.10.17.jar",
+          "mod_url": "",
+          "display_url": "https://vampirism.dev",
+          "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "teamlapenlib",
+        "mod_name": "Teamlapen Library",
+        "mod_version": "1.10.16",
+        "mod_file": "Vampirism-1.20.1-1.10.16.jar",
+        "mod_url": "",
+        "display_url": "https://vampirism.maxanier.de",
+        "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+      },
+      "current": [
+        {
+          "mod_id": "teamlapenlib",
+          "mod_name": "Teamlapen Library",
+          "mod_version": "1.10.17",
+          "mod_file": "Vampirism-1.20.1-1.10.17.jar",
+          "mod_url": "",
+          "display_url": "https://vampirism.maxanier.de",
+          "issue_tracker_url": "https://github.com/TeamLapen/Vampirism/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "cold_sweat",
+        "mod_name": "Cold Sweat",
+        "mod_version": "2.4.2",
+        "mod_file": "ColdSweat-2.4.2.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "cold_sweat",
+          "mod_name": "Cold Sweat",
+          "mod_version": "2.4.5",
+          "mod_file": "ColdSweat-2.4.5.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "mns",
+        "mod_name": "MoogsNetherStructures",
+        "mod_version": "3.0.0",
+        "mod_file": "MoogsNetherStructures-1.20-3.0.0.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/mns-moogs-nether-structures",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "mns",
+          "mod_name": "MoogsNetherStructures",
+          "mod_version": "3.1.0",
+          "mod_file": "MoogsNetherStructures-universal-1.20-3.1.0.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/mns-moogs-nether-structures",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "betterend",
+        "mod_name": "Better End",
+        "mod_version": "20.0.11",
+        "mod_file": "BetterEnd-20.0.11.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/betterend",
+        "issue_tracker_url": "https://github.com/quiqueck/BetterEnd/issues"
+      },
+      "current": [
+        {
+          "mod_id": "betterend",
+          "mod_name": "Better End",
+          "mod_version": "20.0.13",
+          "mod_file": "BetterEnd-20.0.13-forge.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/betterend",
+          "issue_tracker_url": "https://github.com/quiqueck/BetterEnd/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "swem",
+        "mod_name": "Star Worm Equestrian Mod",
+        "mod_version": "1.6.6",
+        "mod_file": "swem-1.20.1-1.6.6.jar",
+        "mod_url": "",
+        "display_url": "https://swequestrian.com",
+        "issue_tracker_url": "https://github.com/AlaharranHonor/SWEquestrianM/issues"
+      },
+      "current": [
+        {
+          "mod_id": "swem",
+          "mod_name": "SWEM Lite",
+          "mod_version": "1.1.4",
+          "mod_file": "swemlite-1.20.1-1.1.4.jar",
+          "mod_url": "",
+          "display_url": "https://swequestrian.com",
+          "issue_tracker_url": "https://github.com/AlaharranHonor/SWEquestrianM/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "burnt",
+        "mod_name": "Burnt Basic",
+        "mod_version": "1.10.4.3",
+        "mod_file": "burnt_basic-1.10.4.3-forge-1.20.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+      },
+      "current": [
+        {
+          "mod_id": "burnt",
+          "mod_name": "Burnt Basic",
+          "mod_version": "1.10.5.3",
+          "mod_file": "burnt_basic-1.10.5.3-forge-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://discord.com/invite/NUqTwsfTzn"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "lootintegrations",
+        "mod_name": "Lootintegrations mod",
+        "mod_version": "1.20.1-4.7",
+        "mod_file": "lootintegrations-1.20.1-4.7.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "lootintegrations",
+          "mod_name": "Lootintegrations mod",
+          "mod_version": "1.20.1-4.9",
+          "mod_file": "lootintegrations-1.20.1-4.9.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "stardew_fishing",
+        "mod_name": "Stardew Fishing",
+        "mod_version": "3.7",
+        "mod_file": "stardew_fishing-3.7-1.20.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "stardew_fishing",
+          "mod_name": "Stardew Fishing",
+          "mod_version": "3.9",
+          "mod_file": "stardew_fishing-3.9-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "baguettelib",
+        "mod_name": "BaguetteLib",
+        "mod_version": "2.0.5",
+        "mod_file": "baguettelib-1.20.1-Forge-2.0.5.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "baguettelib",
+          "mod_name": "BaguetteLib",
+          "mod_version": "2.0.7",
+          "mod_file": "baguettelib-1.20.1-Forge-2.0.7.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "fzzy_config",
+        "mod_name": "Fzzy Config",
+        "mod_version": "0.7.6+1.20.1+forge",
+        "mod_file": "fzzy_config-0.7.6+1.20.1+forge.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/fzzyhmstrs/fconfig/issues"
+      },
+      "current": [
+        {
+          "mod_id": "fzzy_config",
+          "mod_name": "Fzzy Config",
+          "mod_version": "0.7.7+1.20.1+forge",
+          "mod_file": "fzzy_config-0.7.7+1.20.1+forge.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/fzzyhmstrs/fconfig/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "bclib",
+        "mod_name": "BCLib",
+        "mod_version": "20.0.13",
+        "mod_file": "BCLib-20.0.13.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/bclib",
+        "issue_tracker_url": "https://github.com/quiqueck/bclib/issues"
+      },
+      "current": [
+        {
+          "mod_id": "bclib",
+          "mod_name": "BCLib",
+          "mod_version": "20.0.16",
+          "mod_file": "BCLib-20.0.16-forge.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/bclib",
+          "issue_tracker_url": "https://github.com/quiqueck/bclib/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "ambientsounds",
+        "mod_name": "AmbientSounds",
+        "mod_version": "6.3.8",
+        "mod_file": "AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/ambientsounds",
+        "issue_tracker_url": "https://github.com/CreativeMD/AmbientSounds/issues"
+      },
+      "current": [
+        {
+          "mod_id": "ambientsounds",
+          "mod_name": "AmbientSounds",
+          "mod_version": "6.3.11",
+          "mod_file": "AmbientSounds_FORGE_v6.3.11_mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/ambientsounds",
+          "issue_tracker_url": "https://github.com/CreativeMD/AmbientSounds/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "collective",
+        "mod_name": "Collective",
+        "mod_version": "8.39",
+        "mod_file": "collective-1.20.1-8.39.jar",
+        "mod_url": "",
+        "display_url": "https://serilum.com/mod/collective",
+        "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+      },
+      "current": [
+        {
+          "mod_id": "collective",
+          "mod_name": "Collective",
+          "mod_version": "8.87",
+          "mod_file": "collective-1.20.1-8.87.jar",
+          "mod_url": "",
+          "display_url": "https://serilum.com/mod/collective",
+          "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Library:%20Collective"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "cupboard",
+        "mod_name": "Cupboard utilities",
+        "mod_version": "1.20.1-4.1",
+        "mod_file": "cupboard-1.20.1-4.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "cupboard",
+          "mod_name": "Cupboard utilities",
+          "mod_version": "1.20.1-4.2",
+          "mod_file": "cupboard-1.20.1-4.2.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "moogs_structures",
+        "mod_name": "Moog's Structure Lib",
+        "mod_version": "3.1.2",
+        "mod_file": "MoogsStructureLib-forge-1.20-3.1.2.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "moogs_structures",
+          "mod_name": "Moog's Structure Lib",
+          "mod_version": "3.4.2",
+          "mod_file": "MoogsStructureLib-forge-1.20-3.4.2.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/moogs-structure-lib",
+          "issue_tracker_url": "https://github.com/FinnSetchell/MoogsStructureLib/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "solclassic",
+        "mod_name": "Spice of Life: Classic Edition",
+        "mod_version": "2.11",
+        "mod_file": "spiceoflife_classic-forge-2.11.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "solclassic",
+          "mod_name": "Spice of Life: Classic Edition",
+          "mod_version": "2.16",
+          "mod_file": "spiceoflife_classic-forge-2.16.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "octolib",
+        "mod_name": "OctoLib",
+        "mod_version": "0.5.0.1",
+        "mod_file": "OctoLib-FORGE-0.5.0.1+1.20.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/SSKirillSS/octo-lib/issues"
+      },
+      "current": [
+        {
+          "mod_id": "octolib",
+          "mod_name": "OctoLib",
+          "mod_version": "0.5.0.2",
+          "mod_file": "OctoLib-FORGE-0.5.0.2-1.20.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/SSKirillSS/octo-lib/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "mss",
+        "mod_name": "MoogsSoaringStructures",
+        "mod_version": "2.1.0",
+        "mod_file": "MoogsSoaringStructures-1.20-2.1.0.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/mss-moogs-soaring-structures",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "mss",
+          "mod_name": "MoogsSoaringStructures",
+          "mod_version": "2.2.0",
+          "mod_file": "MoogsSoaringStructures-universal-1.20-2.2.0.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/mss-moogs-soaring-structures",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "copycats",
+        "mod_name": "Create: Copycats+",
+        "mod_version": "3.0.8+mc.1.20.1-forge",
+        "mod_file": "copycats-3.0.8+mc.1.20.1-forge.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/copycats-plus/copycats",
+        "issue_tracker_url": "https://github.com/copycats-plus/copycats/issues"
+      },
+      "current": [
+        {
+          "mod_id": "copycats",
+          "mod_name": "Create: Copycats+",
+          "mod_version": "3.0.10+mc.1.20.1-forge",
+          "mod_file": "copycats-3.0.10+mc.1.20.1-forge.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/copycats-plus/copycats",
+          "issue_tracker_url": "https://github.com/copycats-plus/copycats/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "trender",
+        "mod_name": "TRender",
+        "mod_version": "1.0.15",
+        "mod_file": "TRender-1.0.15-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRender",
+        "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+      },
+      "current": [
+        {
+          "mod_id": "trender",
+          "mod_name": "TRender",
+          "mod_version": "1.0.17",
+          "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/tr7zw/TRender",
+          "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+        },
+        {
+          "mod_id": "trender",
+          "mod_name": "TRender",
+          "mod_version": "1.0.17",
+          "mod_file": "notenoughanimations-forge-1.12.7-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/tr7zw/TRender",
+          "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "moonlight",
+        "mod_name": "Moonlight Library",
+        "mod_version": "1.20-2.16.34",
+        "mod_file": "moonlight-1.20-2.16.34-forge.jar",
+        "mod_url": "https://www.curseforge.com/minecraft/mc-mods/selene",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/MehVahdJukaar/Moonlight/issues"
+      },
+      "current": [
+        {
+          "mod_id": "moonlight",
+          "mod_name": "Moonlight Library",
+          "mod_version": "1.20-2.16.39",
+          "mod_file": "moonlight-1.20-2.16.39-forge.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/MehVahdJukaar/Moonlight/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "creativecore",
+        "mod_name": "CreativeCore",
+        "mod_version": "2.12.39",
+        "mod_file": "CreativeCore_FORGE_v2.12.39_mc1.20.1.jar",
+        "mod_url": "",
+        "display_url": "https://modrinth.com/mod/creativecore",
+        "issue_tracker_url": "https://github.com/CreativeMD/CreativeCore/issues"
+      },
+      "current": [
+        {
+          "mod_id": "creativecore",
+          "mod_name": "CreativeCore",
+          "mod_version": "2.12.42",
+          "mod_file": "CreativeCore_FORGE_v2.12.42_mc1.20.1.jar",
+          "mod_url": "",
+          "display_url": "https://modrinth.com/mod/creativecore",
+          "issue_tracker_url": "https://github.com/CreativeMD/CreativeCore/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "supplementaries",
+        "mod_name": "Supplementaries",
+        "mod_version": "1.20-3.1.43",
+        "mod_file": "supplementaries-1.20-3.1.43-forge.jar",
+        "mod_url": "https://www.curseforge.com/minecraft/mc-mods/supplementaries",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/MehVahdJukaar/supplementaries/issues"
+      },
+      "current": [
+        {
+          "mod_id": "supplementaries",
+          "mod_name": "Supplementaries",
+          "mod_version": "1.20-3.1.45",
+          "mod_file": "supplementaries-1.20-3.1.45-forge.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": "https://github.com/MehVahdJukaar/supplementaries/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "overgeared",
+        "mod_name": "Overgeared: A Blacksmith Mod",
+        "mod_version": "1.20.1-1.6.33",
+        "mod_file": "overgeared-1.20.1-1.6.33.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/phuccom000/Overgeared-1.20.1",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "overgeared",
+          "mod_name": "Overgeared: A Blacksmith Mod",
+          "mod_version": "1.7.1",
+          "mod_file": "overgeared-forge-1.20.1-1.7.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "vampire_spells_addon",
+        "mod_name": "Vampire Spells Addon",
+        "mod_version": "1.20.1-0.0.9",
+        "mod_file": "vampire_spells_addon-forge-1.20.1-0.0.9.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/xsharov/VampireSpellsAddon",
+        "issue_tracker_url": "https://github.com/xsharov/VampireSpellsAddon/issues"
+      },
+      "current": [
+        {
+          "mod_id": "vampire_spells_addon",
+          "mod_name": "Vampire Spells Addon",
+          "mod_version": "1.20.1-0.0.10",
+          "mod_file": "vampire_spells_addon-forge-1.20.1-0.0.10.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/xsharov/VampireSpellsAddon",
+          "issue_tracker_url": "https://github.com/xsharov/VampireSpellsAddon/issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "awakening_compat",
+        "mod_name": "Awakening Compat",
+        "mod_version": "0.0NONE",
+        "mod_file": "awakening-compat-0.1.0.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "awakening_compat",
+          "mod_name": "Awakening Compat",
+          "mod_version": "${file.jarVersion}",
+          "mod_file": "awakening-compat-0.1.0.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "paladin_spells",
+        "mod_name": "Paladin Spells - Iron's Spells 'n Spellbooks Addon",
+        "mod_version": "1.20.1-1.1.1",
+        "mod_file": "paladin_spells-1.20.1-1.1.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/Kaufko/Paladin-Spells",
+        "issue_tracker_url": "https://github.com/Kaufko/Paladin-Spells/Issues"
+      },
+      "current": [
+        {
+          "mod_id": "paladin_spells",
+          "mod_name": "Paladin Spells - Iron's Spells 'n Spellbooks Addon",
+          "mod_version": "1.20.1-1.1.4",
+          "mod_file": "paladin_spells-1.20.1-1.1.4.jar",
+          "mod_url": "",
+          "display_url": "https://github.com/Kaufko/Paladin-Spells",
+          "issue_tracker_url": "https://github.com/Kaufko/Paladin-Spells/Issues"
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "mvs",
+        "mod_name": "MoogsVoyagerStructures",
+        "mod_version": "5.1.1",
+        "mod_file": "MoogsVoyagerStructures-universal-1.20-5.1.1.jar",
+        "mod_url": "",
+        "display_url": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "mvs",
+          "mod_name": "MoogsVoyagerStructures",
+          "mod_version": "5.1.3",
+          "mod_file": "MoogsVoyagerStructures-universal-1.20-5.1.3.jar",
+          "mod_url": "",
+          "display_url": "https://www.curseforge.com/minecraft/mc-mods/moogs-voyager-structures",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "eclipticseasons_bundles",
+        "mod_name": "Ecliptic Seasons : Bundles",
+        "mod_version": "0.18.0.2",
+        "mod_file": "EclipticSeasons-Bundles-0.18.0.2.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      "current": [
+        {
+          "mod_id": "eclipticseasons_bundles",
+          "mod_name": "Ecliptic Seasons : Bundles",
+          "mod_version": "0.18.1",
+          "mod_file": "EclipticSeasons-Bundles-0.18.1.jar",
+          "mod_url": "",
+          "display_url": "",
+          "issue_tracker_url": ""
+        }
+      ]
+    },
+    {
+      "previous": {
+        "mod_id": "healingcampfire",
+        "mod_name": "Healing Campfire",
+        "mod_version": "6.3",
+        "mod_file": "healingcampfire-1.20.1-6.3.jar",
+        "mod_url": "",
+        "display_url": "https://serilum.com/mod/healing-campfire",
+        "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Healing%20Campfire"
+      },
+      "current": [
+        {
+          "mod_id": "healingcampfire",
+          "mod_name": "Healing Campfire",
+          "mod_version": "7.1",
+          "mod_file": "healingcampfire-1.20.1-7.1.jar",
+          "mod_url": "",
+          "display_url": "https://serilum.com/mod/healing-campfire",
+          "issue_tracker_url": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Healing%20Campfire"
+        }
+      ]
+    }
+  ],
+  "new_mod_ids": [
+    {
+      "mod_id": "alexscavesbettercombat",
+      "mod_name": "Alexs Caves Better Combat",
+      "mod_version": "1.0",
+      "mod_file": "alexscavesbettercombat.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "alexsmobsinteraction",
+      "mod_name": "Alex's Mobs Interaction",
+      "mod_version": "6.0",
+      "mod_file": "alexsmobsinteraction-6.0-all.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "alexsmobsnaturalistcompat",
+      "mod_name": "Alex's Mobs - Naturalist Compat",
+      "mod_version": "1.3.0",
+      "mod_file": "Compat_AlexsMobs-Naturalist.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/alexs-mobs-naturalist-compat",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "aquacombat",
+      "mod_name": "Aqua combat",
+      "mod_version": "1.2",
+      "mod_file": "aquacombat 1.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "astikorcartsredux",
+      "mod_name": "AstikorCarts Redux",
+      "mod_version": "1.2.5",
+      "mod_file": "astikorcartsredux-1.2.5.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "attributeslib",
+      "mod_name": "Apothic Attributes",
+      "mod_version": "1.3.7",
+      "mod_file": "ApothicAttributes-1.20.1-1.3.7.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "ba_bt",
+      "mod_name": "Brass-Amber BattleTowers",
+      "mod_version": "1.20.1-3.0.0-beta3.2.1",
+      "mod_file": "ba_bt-1.20.1-3.0.0-beta3.2.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/brassamberbattletowers",
+      "issue_tracker_url": "https://github.com/BrassAmber-Mods/Brass_Amber_BattleTowers/issues"
+    },
+    {
+      "mod_id": "betterlightning",
+      "mod_name": "Delayed Thunder",
+      "mod_version": "1.1.0-1.20.1",
+      "mod_file": "betterlightning-1.1.0-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "bettermobcombat",
+      "mod_name": "Better Mob Combat",
+      "mod_version": "1.3.0",
+      "mod_file": "bettermobcombat-forge-1.20.1-1.3.0-all.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "block_parry_dodge",
+      "mod_name": "Block, Parry, Dodge",
+      "mod_version": "1.0.0",
+      "mod_file": "block_parry_dodge_1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://mcreator.net",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "blueprint",
+      "mod_name": "Blueprint",
+      "mod_version": "7.1.5",
+      "mod_file": "blueprint-1.20.1-7.1.5.jar",
+      "mod_url": "",
+      "display_url": "https://www.teamabnormals.com/mods/blueprint",
+      "issue_tracker_url": "https://github.com/team-abnormals/blueprint/issues"
+    },
+    {
+      "mod_id": "bmcfix",
+      "mod_name": "Better Mob Combat Fix",
+      "mod_version": "1.0.2",
+      "mod_file": "bmcfix-forge-1.0.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "cataclysm",
+      "mod_name": "cataclysm",
+      "mod_version": "3.31",
+      "mod_file": "L_Enders_Cataclysm-3.31.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "cataclysmiccombat",
+      "mod_name": "Cataclysmic Combat",
+      "mod_version": "1.4",
+      "mod_file": "cataclysmiccombat-1.4.1-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "caveore",
+      "mod_name": "CaveOre Mod",
+      "mod_version": "1.20.1-4.0",
+      "mod_file": "caveore-1.20.1-4.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "http://my.issue.tracker/"
+    },
+    {
+      "mod_id": "com_teamresourceful_bytecodecs",
+      "mod_name": "bytecodecs",
+      "mod_version": "1.0.2",
+      "mod_file": "resourcefullib-forge-1.20.1-2.1.29.jar!/META-INF/jars/bytecodecs-1.0.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "com_teamresourceful_yabn",
+      "mod_name": "yabn",
+      "mod_version": "1.0.3",
+      "mod_file": "resourcefullib-forge-1.20.1-2.1.29.jar!/META-INF/jars/yabn-1.0.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "continuity",
+      "mod_name": "Continuity",
+      "mod_version": "3.0.0+1.20.1.forge",
+      "mod_file": "continuity-3.0.0+1.20.1.forge.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/continuity",
+      "issue_tracker_url": "https://github.com/PepperCode1/Continuity/issues"
+    },
+    {
+      "mod_id": "coolrain",
+      "mod_name": "Cool Rain",
+      "mod_version": "1.0.3",
+      "mod_file": "coolrain-1.20.1-Forge-1.0.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "crampedness",
+      "mod_name": "Crampedness",
+      "mod_version": "1.3.0",
+      "mod_file": "crampedness-1.20.1-forge-1.3.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "deeper_and_darker_to_cataclysm",
+      "mod_name": "Deeper and Darker to Cataclysm",
+      "mod_version": "1.0.0",
+      "mod_file": "deeper_and_darker_to_cataclysm-withtools-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://mcreator.net",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "emf_compat_core",
+      "mod_name": "EMF Compat: Core",
+      "mod_version": "2.4.0",
+      "mod_file": "emf_compat_core_forge_1.20.1_2.4.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "entity_model_features",
+      "mod_name": "Entity Model Features",
+      "mod_version": "3.3.12",
+      "mod_file": "entity_model_features-3.3.12-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Traben-0/Entity_Texture_Features/issues"
+    },
+    {
+      "mod_id": "entity_texture_features",
+      "mod_name": "Entity Texture Features",
+      "mod_version": "7.2.7",
+      "mod_file": "entity_texture_features-7.2.7-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Traben-0/EmissiveMod/issues"
+    },
+    {
+      "mod_id": "fallingtrees",
+      "mod_name": "Panda's Falling Tree's",
+      "mod_version": "0.13.2",
+      "mod_file": "fallingtrees-forge-mc1.20-0.13.2-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/PandaMods-Dev/Pandas-Falling-Trees/issues"
+    },
+    {
+      "mod_id": "farmerd_naturalist_compat",
+      "mod_name": "Naturalist_Delight",
+      "mod_version": "0.3-1.20.1",
+      "mod_file": "farmerd_naturalist_compat-0.3-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "fcquark",
+      "mod_name": "Farmer's Cutting: Quark",
+      "mod_version": "1.0.0",
+      "mod_file": "farmers-cutting-quark-1.0.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Joshcraft2002/farmers-cutting/issues"
+    },
+    {
+      "mod_id": "fdlib",
+      "mod_name": "FDLib",
+      "mod_version": "1.0.9",
+      "mod_file": "fdlib-1.0.9-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "fwa",
+      "mod_name": "Fancy World Animations",
+      "mod_version": "1.3.7-patch.3",
+      "mod_file": "fwa-1.20.1-forge-1.3.7-patch.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/maDU59/FancyWorldAnimations"
+    },
+    {
+      "mod_id": "hardernaturalhealing",
+      "mod_name": "Harder Natural Healing Mod",
+      "mod_version": "46.1.14",
+      "mod_file": "hardernaturalhealing-1.20-46.1.14.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/harder-natural-healing",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "holdmyitems",
+      "mod_name": "HoldMyItems - Reforged",
+      "mod_version": "2.0",
+      "mod_file": "holdmyitems-1.20.1-4v2.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "ice_and_fire_spellbooks",
+      "mod_name": "Ice and Fire: Spellbooks",
+      "mod_version": "2.3.2-1.20.1",
+      "mod_file": "ice_and_fire_spellbooks-2.3.2-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "iceandfire",
+      "mod_name": "Ice and Fire",
+      "mod_version": "2.1.13-1.20.1",
+      "mod_file": "iceandfire-2.1.13-1.20.1-beta-5.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/ice-and-fire-dragons",
+      "issue_tracker_url": "https://github.com/Alex-the-666/ice-and-fire/issues"
+    },
+    {
+      "mod_id": "iceandfirebettercombat",
+      "mod_name": "Ice and Fire x Better Combat",
+      "mod_version": "1.0.1",
+      "mod_file": "iceandfirebettercombat1.20.1-1.0.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "immersive_gateways",
+      "mod_name": "Immersive Gateways",
+      "mod_version": "0.0.7+1.20.1",
+      "mod_file": "immersive_gateways-forge-0.0.7+1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://conczin.net/",
+      "issue_tracker_url": "https://github.com/Luke100000/ImmersiveGateways/issues"
+    },
+    {
+      "mod_id": "immersive_melodies",
+      "mod_name": "Immersive Melodies",
+      "mod_version": "0.8.4+1.20.1",
+      "mod_file": "immersive_melodies-0.8.4-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/ImmersiveMelodies",
+      "issue_tracker_url": "https://github.com/Luke100000/ImmersiveMelodies/issues"
+    },
+    {
+      "mod_id": "integrated_cataclysm",
+      "mod_name": "Integrated Cataclysm",
+      "mod_version": "1.0.5+1.20.1",
+      "mod_file": "integrated_cataclysm_forge-1.0.5+1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://curseforge.com/minecraft/mc-mods/integrated-cataclysm",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "integratedpatches",
+      "mod_name": "Integrated Patches",
+      "mod_version": "1.2.0",
+      "mod_file": "integrated_patches v1.2.0-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/integrated-patches",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "jupiter",
+      "mod_name": "Jupiter",
+      "mod_version": "2.3.7",
+      "mod_file": "jupiter-2.3.7-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/IAFEnvoy/Jupiter/issues"
+    },
+    {
+      "mod_id": "lionfishapi",
+      "mod_name": "LionfishAPI",
+      "mod_version": "3.0",
+      "mod_file": "lionfishapi-3.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "lootjs",
+      "mod_name": "LootJS",
+      "mod_version": "1.20.1-2.13.1",
+      "mod_file": "lootjs-forge-1.20.1-2.13.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/AlmostReliable/lootjs/issues"
+    },
+    {
+      "mod_id": "lush",
+      "mod_name": "Lushness",
+      "mod_version": "2.2",
+      "mod_file": "lush-forge-2.2+mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "map_atlases",
+      "mod_name": "Map Atlases",
+      "mod_version": "1.20-6.0.20",
+      "mod_file": "map_atlases-1.20-6.0.20.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "medievalmusic",
+      "mod_name": "medievalmusic mod",
+      "mod_version": "1.20.1-2.2",
+      "mod_file": "zmedievalmusic-1.20.1-2.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mezz_config",
+      "mod_name": "MezzConfig",
+      "mod_version": "0.6.10",
+      "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/mezz/MezzConfig",
+      "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "mezz_config",
+      "mod_name": "MezzConfig",
+      "mod_version": "0.7.1",
+      "mod_file": "mezz_config-1.20.1-forge-0.7.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/mezz/MezzConfig",
+      "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "midnightlib",
+      "mod_name": "MidnightLib",
+      "mod_version": "1.4.2",
+      "mod_file": "naturalist-5.0pre2+forge-1.20.1.jar!/META-INF/jars/midnightlib-1.4.2-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "minecraft_cursor",
+      "mod_name": "Minecraft Cursor",
+      "mod_version": "3.11.3+1.20.1",
+      "mod_file": "minecraft-cursor-forge-3.11.3+1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/fishstiz/minecraft-cursor",
+      "issue_tracker_url": "https://github.com/fishstiz/minecraft-cursor/issues"
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "BrewinAndChewin-1.20.1-3.2.1.jar!/META-INF/jarjar/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.2",
+      "mod_file": "Connector-1.0.0-beta.49+1.20.1.jar!/META-INF/jarjar/Connector-1.0.0-beta.49+1.20.1-mod.jar!/META-INF/jarjar/mixinextras-forge-0.3.2.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "Ecliptic-Seasons-1.20.1-forge-0.15.5-all.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "FarmersDelight-1.20.1-1.3.4.jar!/META-INF/jarjar/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "Icarus-Forge-2.14.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "ImmediatelyFast-Forge-1.5.5+1.20.4.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "Pehkui-3.8.2+1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.5",
+      "mod_file": "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar!/META-INF/jarjar/mixinextras-forge-0.3.5.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "StreamsReflowing-1.20.1-forge-2.17.5.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.2",
+      "mod_file": "Zeta-1.0-31.jar!/META-INF/jarjar/mixinextras-forge-0.3.2.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "amendments-1.20-2.2.6.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.5",
+      "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0",
+      "mod_file": "bettercombat-forge-1.9.0+1.20.1.jar!/META-INF/jars/mixinextras-forge-0.2.0.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0",
+      "mod_file": "bettermobcombat-forge-1.20.1-1.3.0-all.jar!/META-INF/jarjar/mixinextras-forge-0.2.0.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "copycats-3.0.10+mc.1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "create-1.20.1-6.0.8.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.5",
+      "mod_file": "embeddium-0.3.31+mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.3.5.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "entity_model_features-3.3.12-1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "entity_texture_features-7.2.7-1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "fabric-api-0.92.6+1.11.15+1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "hauntedharvest-1.20-3.2.0.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0-beta.7",
+      "mod_file": "integrated_api-forge-1.20.1-1.9.2.jar!/META-INF/jars/mixinextras-forge-0.2.0-beta.7.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0-beta.7",
+      "mod_file": "integrated_stronghold-1.1.2+1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.2.0-beta.7.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0-rc.2",
+      "mod_file": "kubejs-forge-2001.6.5-build.26.jar!/META-INF/jars/mixinextras-forge-0.2.0-rc.2.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "map_atlases-1.20-6.0.20.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0",
+      "mod_file": "mobplayeranimator-forge-1.20.1-1.3.3-all.jar!/META-INF/jarjar/mixinextras-forge-0.2.0.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "modernfix-forge-5.28.0-mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "moonlight-1.20-2.16.39-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.2.0-beta.8",
+      "mod_file": "origins-forge-1.20.1-1.10.0.9-all.jar!/META-INF/jarjar/additionalentityattributes-forge-1.4.0.5+1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.2.0-beta.8.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.0",
+      "mod_file": "polytone-1.20-3.5.26.jar!/META-INF/jars/mixinextras-forge-0.4.0.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "puffish_attributes-0.8.2-1.20-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.3.6",
+      "mod_file": "supplementaries-1.20-3.1.45-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "unified_combat-1.20.1-1.0.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "villagesandpillages-forge-2.0.0+mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mixinextras",
+      "mod_name": "MixinExtras",
+      "mod_version": "0.4.1",
+      "mod_file": "witherreincarnated-1.20.1-1.0.5.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/LlamaLad7/MixinExtras",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mobcontrol",
+      "mod_name": "Mob Control",
+      "mod_version": "2.0.0-release",
+      "mod_file": "mobcontrol-1.20.1-2.0.0-release.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mowzies_cataclysm",
+      "mod_name": "Mowzie's Cataclysm",
+      "mod_version": "1.2.1",
+      "mod_file": "mowzies_cataclysm-1.2.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "mr_farmers_cuttingbetterend",
+      "mod_name": "Farmer's Cutting: BetterEnd",
+      "mod_version": "1.20.1-1.0-forge",
+      "mod_file": "farmers-cutting-betterend-1.20.1-1.0-forge.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/farmers-cutting-betterend",
+      "issue_tracker_url": "https://github.com/Joshcraft2002/farmers-cutting/issues"
+    },
+    {
+      "mod_id": "mr_farmers_cuttingregionsunexplored",
+      "mod_name": "Farmer's Cutting: Regions Unexplored",
+      "mod_version": "1.20.1-1.1b-forge",
+      "mod_file": "farmers-cutting-regions-unexplored-1.20.1-1.1b-forge.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/farmers-cutting-regions-unexplored",
+      "issue_tracker_url": "https://github.com/Joshcraft2002/farmers-cutting/issues"
+    },
+    {
+      "mod_id": "mr_farmers_cuttingtwilightforest",
+      "mod_name": "Farmer's Cutting: Twilight Forest",
+      "mod_version": "1.20.1-1.0",
+      "mod_file": "farmers-cutting-twilight-forest-1.20.1-1.0.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/farmers-cutting-twilight-forest",
+      "issue_tracker_url": "https://github.com/Joshcraft2002/farmers-cutting/issues"
+    },
+    {
+      "mod_id": "multimine",
+      "mod_name": "Multi Mine",
+      "mod_version": "1.20.1.4",
+      "mod_file": "multimine-1.20.1.4.jar",
+      "mod_url": "",
+      "display_url": "http://atomicstryker.org/",
+      "issue_tracker_url": "https://github.com/AtomicStryker/atomicstrykers-minecraft-mods/issues"
+    },
+    {
+      "mod_id": "mythsandlegends",
+      "mod_name": "Myths & Legends",
+      "mod_version": "1.0.6",
+      "mod_file": "mythsandlegends-1.0.6.jar",
+      "mod_url": "",
+      "display_url": "https://moddedmc.wiki/en/project/myths-n-legends/latest/docs",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "naturalist",
+      "mod_name": "Naturalist",
+      "mod_version": "5.0pre2",
+      "mod_file": "naturalist-5.0pre2+forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/naturalist",
+      "issue_tracker_url": "https://github.com/starfish-studios/Naturalist/issues"
+    },
+    {
+      "mod_id": "nebulus_trees",
+      "mod_name": "nebulus trees",
+      "mod_version": "1.0.0",
+      "mod_file": "nebulus_trees-1.0.0-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/members/nebulus/projects",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "nerb",
+      "mod_name": "Not Enough Recipe Book",
+      "mod_version": "0.4.1",
+      "mod_file": "Not Enough Recipe Book-FORGE-0.4.1+1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Octo-Studios/nerb/issues"
+    },
+    {
+      "mod_id": "numismaticoverhaul",
+      "mod_name": "Numismatic Overhaul Reforged Again",
+      "mod_version": "2.0.2",
+      "mod_file": "numismaticoverhaul-1.20.1-2.0.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/seymourimadeit/numismatic-overhaul-reforged-again"
+    },
+    {
+      "mod_id": "oculus",
+      "mod_name": "Oculus",
+      "mod_version": "1.8.0",
+      "mod_file": "oculus-mc1.20.1-1.8.0.jar",
+      "mod_url": "",
+      "display_url": "https://curseforge.com/minecraft/mc-mods/oculus",
+      "issue_tracker_url": "https://github.com/Asek3/Oculus/issues"
+    },
+    {
+      "mod_id": "overflowingbars",
+      "mod_name": "Overflowing Bars",
+      "mod_version": "8.0.1",
+      "mod_file": "OverflowingBars-v8.0.1-1.20.1-Forge.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Fuzss/overflowingbars",
+      "issue_tracker_url": "https://github.com/Fuzss/overflowingbars/issues"
+    },
+    {
+      "mod_id": "overgeared_iaf",
+      "mod_name": "Overgeared Ice and Fire",
+      "mod_version": "0.63",
+      "mod_file": "overgeared_iaf-0.63.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "pandalib",
+      "mod_name": "PandaLib",
+      "mod_version": "0.5.2",
+      "mod_file": "pandalib-forge-mc1.20-0.5.2-SNAPSHOT.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/PandaMods-Dev/PandaLib/issues"
+    },
+    {
+      "mod_id": "parcoolstealthbridge",
+      "mod_name": "Stealth & ParCool Compatibility Bridge by Karl Karlmann",
+      "mod_version": "1.0.3",
+      "mod_file": "parcoolstealthbridge_1.20.1_forge_1.0.3.jar",
+      "mod_url": "",
+      "display_url": "https://www.n3g.de",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "particlerain",
+      "mod_name": "Particle Rain",
+      "mod_version": "4.0.3",
+      "mod_file": "particlerain-4.0.3-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/PigCart/particle-rain/issues?q=is%3Aissue"
+    },
+    {
+      "mod_id": "placebo",
+      "mod_name": "Placebo",
+      "mod_version": "8.6.3",
+      "mod_file": "Placebo-1.20.1-8.6.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "platform",
+      "mod_name": "Platform",
+      "mod_version": "1.4.2",
+      "mod_file": "Platform-forge-1.20.1-1.4.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/ItsBlackGear/Platform/issues"
+    },
+    {
+      "mod_id": "polytone",
+      "mod_name": "Polytone",
+      "mod_version": "1.20-3.5.26",
+      "mod_file": "polytone-1.20-3.5.26.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/MehVahdJukaar/polytone/issues"
+    },
+    {
+      "mod_id": "presencefootsteps",
+      "mod_name": "Presence Footsteps (Forge)",
+      "mod_version": "1.20.1-1.9.1-beta.1",
+      "mod_file": "PresenceFootsteps-1.20.1-1.9.1-beta.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps-forge",
+      "issue_tracker_url": "https://github.com/PaintNinja/Presence-Footsteps-Forge"
+    },
+    {
+      "mod_id": "puzzlesaccessapi",
+      "mod_name": "Puzzles Access Api",
+      "mod_version": "20.1.1",
+      "mod_file": "PuzzlesLib-v8.1.36-1.20.1-Forge.jar!/META-INF/jarjar/puzzlesaccessapi-forge-20.1.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Fuzss/puzzlesaccessapi",
+      "issue_tracker_url": "https://github.com/Fuzss/puzzlesaccessapi/issues"
+    },
+    {
+      "mod_id": "puzzleslib",
+      "mod_name": "Puzzles Lib",
+      "mod_version": "8.1.36",
+      "mod_file": "PuzzlesLib-v8.1.36-1.20.1-Forge.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Fuzss/puzzles-lib",
+      "issue_tracker_url": "https://github.com/Fuzss/puzzles-lib/issues"
+    },
+    {
+      "mod_id": "raidsenhanced",
+      "mod_name": "Raids: Enhanced",
+      "mod_version": "1.0.2",
+      "mod_file": "raidsenhanced-1.0.2-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "realcamera",
+      "mod_name": "Real Camera",
+      "mod_version": "0.7.8-beta",
+      "mod_file": "realcamera-1.20.1-forge-0.7.8-beta.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/real-camera",
+      "issue_tracker_url": "https://github.com/xTracr/RealCamera/issues"
+    },
+    {
+      "mod_id": "rottencreatures",
+      "mod_name": "Rotten Creatures",
+      "mod_version": "1.1.0",
+      "mod_file": "rottencreatures-forge-1.20.1-1.1.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "sittingplus",
+      "mod_name": "sittingplus",
+      "mod_version": "2.0.5",
+      "mod_file": "sittingplus-2.0.5-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "souls_combat_hud",
+      "mod_name": "Souls Combat Hud",
+      "mod_version": "1.3.6",
+      "mod_file": "souls_combat_hud-forge-1.3.6.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "spark",
+      "mod_name": "spark",
+      "mod_version": "1.10.53",
+      "mod_file": "spark-1.10.53-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "spartancataclysm",
+      "mod_name": "Spartan Weaponry: Cataclysm",
+      "mod_version": "1.1.2+1.20.1+forge",
+      "mod_file": "spartancataclysm-1.1.2+1.20.1+forge.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/spartancataclysm",
+      "issue_tracker_url": "https://github.com/Cephelo/SpartanCataclysm/issues"
+    },
+    {
+      "mod_id": "spartanfire",
+      "mod_name": "Spartan Weaponry: Ice and Fire",
+      "mod_version": "2.1.0",
+      "mod_file": "spartanfire-1.20.1-2.1.0.jar",
+      "mod_url": "",
+      "display_url": "https://legacy.curseforge.com/minecraft/mc-mods/spartan-weaponry-ice-and-fire",
+      "issue_tracker_url": "https://github.com/KreloX/SpartanFire/issues"
+    },
+    {
+      "mod_id": "spartantwilight",
+      "mod_name": "Spartan Weaponry: Twilight Forest",
+      "mod_version": "1.20.1-3.1.1",
+      "mod_file": "spartantwilight-1.20.1-3.1.1.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/spartan-weaponry-twilight-forest",
+      "issue_tracker_url": "https://github.com/KreloX/SpartanTwilight/issues"
+    },
+    {
+      "mod_id": "spelunkery",
+      "mod_name": "Spelunkery",
+      "mod_version": "1.20.1-0.3.16",
+      "mod_file": "spelunkery-1.20.1-0.3.16-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "stealth",
+      "mod_name": "Stealth!",
+      "mod_version": "1.1.100",
+      "mod_file": "stealth_1.20.1_forge_1.1.100.jar",
+      "mod_url": "",
+      "display_url": "https://www.n3g.de",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "streamsreflowing",
+      "mod_name": "StreamsReflowing",
+      "mod_version": "2.17.5",
+      "mod_file": "StreamsReflowing-1.20.1-forge-2.17.5.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "takesapillage",
+      "mod_name": "It Takes A Pillage",
+      "mod_version": "1.0.3",
+      "mod_file": "takesapillage-1.0.3-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "touch_n_motion",
+      "mod_name": "Touch'n Motion",
+      "mod_version": "1.0.5",
+      "mod_file": "touch_n_motion_forge_1.20.1_1.0.5.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "traversable_leaves",
+      "mod_name": "Traversable Leaves",
+      "mod_version": "2.1.2",
+      "mod_file": "traversable_leaves-2.1.2-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "trials",
+      "mod_name": "Trials Chambers",
+      "mod_version": "2.3.4",
+      "mod_file": "Trials-Final.jar",
+      "mod_url": "",
+      "display_url": "https://discord.gg/qGTuwEMgpT",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "ts_ui_lib",
+      "mod_name": "TS UI Lib",
+      "mod_version": "1.0.0",
+      "mod_file": "souls_combat_hud-forge-1.3.6.jar!/META-INF/jarjar/ts_ui_lib-1.0.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "twigs",
+      "mod_name": "Twigs",
+      "mod_version": "1.20.1-3.1.1",
+      "mod_file": "Twigs-1.20.1-3.1.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "twilight_treehouses",
+      "mod_name": "Twilight Treehouses",
+      "mod_version": "1.0.2.1",
+      "mod_file": "TwilightTreehouses-1.20.1-1.0.2.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "twm",
+      "mod_name": "Tonics and wild medicine",
+      "mod_version": "1.3.1",
+      "mod_file": "twm-1.3.1-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://mcreator.net",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "unlitcampfire",
+      "mod_name": "Unlit Campfire",
+      "mod_version": "1.20.1-1.9.2.1",
+      "mod_file": "unlitcampfire-forge-1.20.1-1.9.2.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/cech12/UnlitCampfire",
+      "issue_tracker_url": "https://github.com/cech12/UnlitCampfire/issues"
+    },
+    {
+      "mod_id": "upgrade_aquatic",
+      "mod_name": "Upgrade Aquatic",
+      "mod_version": "6.0.3",
+      "mod_file": "upgrade_aquatic-1.20.1-6.0.3.jar",
+      "mod_url": "",
+      "display_url": "https://www.teamabnormals.com/mods/upgrade-aquatic",
+      "issue_tracker_url": "https://github.com/team-abnormals/upgrade-aquatic/issues"
+    },
+    {
+      "mod_id": "uranus",
+      "mod_name": "Uranus",
+      "mod_version": "2.2.6-bugfix.2",
+      "mod_file": "uranus-2.2.6-bugfix.2-1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/CodeOfArdonia/Uranus/issues"
+    },
+    {
+      "mod_id": "usefulspyglass",
+      "mod_name": "Useful Spyglass",
+      "mod_version": "1.0.2",
+      "mod_file": "usefulspyglass-forge-1.20.1-1.0.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "valhelsia_core",
+      "mod_name": "Valhelsia Core",
+      "mod_version": "1.1.2",
+      "mod_file": "valhelsia_core-forge-1.20.1-1.1.2.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "valhelsia_furniture",
+      "mod_name": "Valhelsia Furniture",
+      "mod_version": "1.1.3",
+      "mod_file": "valhelsia_furniture-forge-1.20.1-1.1.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "valhelsia_structures",
+      "mod_name": "Valhelsia Structures",
+      "mod_version": "1.20.1-1.1.2",
+      "mod_file": "valhelsia_structures-forge-1.20.1-1.1.2.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/valhelsia-structures",
+      "issue_tracker_url": "https://github.com/ValhelsiaTeam/Valhelsia-Structures/issues"
+    },
+    {
+      "mod_id": "veggiesdelight",
+      "mod_name": "Veggies Delight",
+      "mod_version": "1.9.3",
+      "mod_file": "VeggiesDelight-1.20.1-1.9.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "vibratingsteps",
+      "mod_name": "Vibrating Steps by Karl Karlmann",
+      "mod_version": "1.0.0",
+      "mod_file": "vibratingsteps_1.20.1_forge_1.0.0.jar",
+      "mod_url": "",
+      "display_url": "https://www.n3g.de",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "villagesandpillages",
+      "mod_name": "Villages&Pillages",
+      "mod_version": "2.0.0",
+      "mod_file": "villagesandpillages-forge-2.0.0+mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/Faboslav/villages-and-pillages",
+      "issue_tracker_url": "https://github.com/Faboslav/villages-and-pillages/issues"
+    },
+    {
+      "mod_id": "windswept",
+      "mod_name": "Windswept",
+      "mod_version": "3.0.4",
+      "mod_file": "windswept-1.20.1-3.0.4.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/windsweptmod",
+      "issue_tracker_url": "https://github.com/rosevcook/windswept/issues"
+    },
+    {
+      "mod_id": "windswept_delights",
+      "mod_name": "Windswept Delights",
+      "mod_version": "1.0.0",
+      "mod_file": "windswept_delights-1.20.1-1.0.0.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/windsweptmod",
+      "issue_tracker_url": "https://github.com/rosevcook/windswepts_delights/issues"
+    },
+    {
+      "mod_id": "witherreincarnated",
+      "mod_name": "Wither Reincarnated",
+      "mod_version": "1.0.5",
+      "mod_file": "witherreincarnated-1.20.1-1.0.5.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "wits",
+      "mod_name": "WITS",
+      "mod_version": "1.1.1+1.20.1-forge",
+      "mod_file": "wits-1.1.1+1.20.1-forge.jar",
+      "mod_url": "",
+      "display_url": "https://www.curseforge.com/minecraft/mc-mods/wits",
+      "issue_tracker_url": "https://github.com/TelepathicGrunt/WITS/issues"
+    }
+  ],
+  "no_longer_declared": [
+    {
+      "mod_id": "handcrafted",
+      "mod_name": "Handcrafted",
+      "mod_version": "3.0.6",
+      "mod_file": "handcrafted-forge-1.20.1-3.0.6.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/handcrafted",
+      "issue_tracker_url": "https://github.com/terrarium-earth/handcrafted/issues"
+    },
+    {
+      "mod_id": "archbows",
+      "mod_name": "Arch Bows",
+      "mod_version": "1.1.9-1.20.1",
+      "mod_file": "archbows-1.1.9-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "forge",
+      "mod_name": "Forge",
+      "mod_version": "47.4.22",
+      "mod_file": "forge-1.20.1-47.4.22-universal.jar",
+      "mod_url": "",
+      "display_url": "https://minecraftforge.net/",
+      "issue_tracker_url": "https://minecraftforge.net/"
+    },
+    {
+      "mod_id": "minecraft",
+      "mod_name": "Minecraft",
+      "mod_version": "1.20.1",
+      "mod_file": "client-1.20.1-20230612.114412-srg.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "punchy",
+      "mod_name": "Punchy",
+      "mod_version": "2.7e",
+      "mod_file": "punchy-2.7e-forge-1.20.1.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "bettermountsteering",
+      "mod_name": "Seramicx's Better Mount Steering",
+      "mod_version": "1.0.9",
+      "mod_file": "bettermountsteering-forge-1.20.1-1.0.9.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "treechop",
+      "mod_name": "HT's TreeChop",
+      "mod_version": "0.19.0",
+      "mod_file": "TreeChop-1.20.1-forge-0.19.0-fixed.jar",
+      "mod_url": "",
+      "display_url": "https://github.com/hammertater/treechop",
+      "issue_tracker_url": "https://github.com/hammertater/treechop/issues"
+    },
+    {
+      "mod_id": "firstperson",
+      "mod_name": "FirstPerson",
+      "mod_version": "2.7.2",
+      "mod_file": "firstperson-forge-2.7.2-mc1.20.1.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/mod/first-person-model",
+      "issue_tracker_url": "https://github.com/tr7zw/FirstPersonModel/issues"
+    },
+    {
+      "mod_id": "smallships",
+      "mod_name": "Small Ships",
+      "mod_version": "2.0.0-b1.4",
+      "mod_file": "smallships-forge-1.20.1-2.0.0-b1.4.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    },
+    {
+      "mod_id": "magistuarmory",
+      "mod_name": "Epic-Knights: Shields",
+      "mod_version": " Armor and Weapons",
+      "mod_file": "10.11",
+      "mod_url": "epic-knights-1.20.1-forge-10.11.jar",
+      "display_url": "",
+      "issue_tracker_url": "",
+      "null": [
+        "https://github.com/Magistu/Epic-Knights/issues"
+      ]
+    },
+    {
+      "mod_id": "magistuarmoryaddon",
+      "mod_name": "Epic Knights: Addon",
+      "mod_version": "2.6",
+      "mod_file": "epic-knights-addon-1.20.x-forge-2.6.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Magistu/Epic-Knights-Addon/issues"
+    },
+    {
+      "mod_id": "mobawareness",
+      "mod_name": "Mob Awareness",
+      "mod_version": "1.0.0",
+      "mod_file": "mobawareness-1.20.1-forge-1.0.0.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://domkss.fider.io/"
+    },
+    {
+      "mod_id": "epic_knights_x_better_combat",
+      "mod_name": "Epic-Knights-x-Better-Combat",
+      "mod_version": "1.0.1-1.20.1+1.21.1",
+      "mod_file": "Epic-Knights-x-Better-Combat.jar",
+      "mod_url": "",
+      "display_url": "https://modrinth.com/datapack/epic-knights-bettercombat-compatibility",
+      "issue_tracker_url": "https://github.com/Salty-Codes/Epic-Knights-x-Better-Combat/issues"
+    },
+    {
+      "mod_id": "overgeared_epic_knights",
+      "mod_name": "Overgeared x Epic Knights",
+      "mod_version": "1.20.1-1.0.4",
+      "mod_file": "overgeared_epic_knights-1.20.1-1.0.4.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": "https://github.com/Salty-Codes/Overgeared-Epic-Knights/issues"
+    },
+    {
+      "mod_id": "chisel",
+      "mod_name": "Chisel Modern",
+      "mod_version": "1.3.3",
+      "mod_file": "chisel-1.20.1-Forge-1.3.3.jar",
+      "mod_url": "",
+      "display_url": "",
+      "issue_tracker_url": ""
+    }
+  ],
+  "duplicate_top_level_ids": {},
+  "bundled_candidate_duplicates": {
+    "architectury": [
+      {
+        "mod_id": "architectury",
+        "mod_name": "Architectury",
+        "mod_version": "9.2.14",
+        "mod_file": "architectury-9.2.14-forge.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/shedaniel/architectury/issues"
+      },
+      {
+        "mod_id": "architectury",
+        "mod_name": "Architectury",
+        "mod_version": "9.2.14",
+        "mod_file": "uranus-2.2.6-bugfix.2-1.20.1-forge.jar!/META-INF/jars/architectury-forge-9.2.14.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/shedaniel/architectury/issues"
+      }
+    ],
+    "mezz_config": [
+      {
+        "mod_id": "mezz_config",
+        "mod_name": "MezzConfig",
+        "mod_version": "0.6.10",
+        "mod_file": "jei-1.20.1-forge-15.74.0.234.jar!/META-INF/jarjar/mezz_config-1.20.1-forge-0.6.10.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/mezz/MezzConfig",
+        "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+      },
+      {
+        "mod_id": "mezz_config",
+        "mod_name": "MezzConfig",
+        "mod_version": "0.7.1",
+        "mod_file": "mezz_config-1.20.1-forge-0.7.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/mezz/MezzConfig",
+        "issue_tracker_url": "https://github.com/mezz/MezzConfig/issues?q=is%3Aissue"
+      }
+    ],
+    "mixinextras": [
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "BrewinAndChewin-1.20.1-3.2.1.jar!/META-INF/jarjar/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.2",
+        "mod_file": "Connector-1.0.0-beta.49+1.20.1.jar!/META-INF/jarjar/Connector-1.0.0-beta.49+1.20.1-mod.jar!/META-INF/jarjar/mixinextras-forge-0.3.2.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "Ecliptic-Seasons-1.20.1-forge-0.15.5-all.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "FarmersDelight-1.20.1-1.3.4.jar!/META-INF/jarjar/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "Icarus-Forge-2.14.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "ImmediatelyFast-Forge-1.5.5+1.20.4.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "Pehkui-3.8.2+1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.5",
+        "mod_file": "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar!/META-INF/jarjar/mixinextras-forge-0.3.5.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "StreamsReflowing-1.20.1-forge-2.17.5.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.2",
+        "mod_file": "Zeta-1.0-31.jar!/META-INF/jarjar/mixinextras-forge-0.3.2.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "amendments-1.20-2.2.6.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.5",
+        "mod_file": "artifacts-forge-9.5.19.jar!/META-INF/jars/mixinextras-forge-0.3.5.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0",
+        "mod_file": "bettercombat-forge-1.9.0+1.20.1.jar!/META-INF/jars/mixinextras-forge-0.2.0.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0",
+        "mod_file": "bettermobcombat-forge-1.20.1-1.3.0-all.jar!/META-INF/jarjar/mixinextras-forge-0.2.0.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "copycats-3.0.10+mc.1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "create-1.20.1-6.0.8.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.5",
+        "mod_file": "embeddium-0.3.31+mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.3.5.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "entity_model_features-3.3.12-1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "entity_texture_features-7.2.7-1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "fabric-api-0.92.6+1.11.15+1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "hauntedharvest-1.20-3.2.0.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0-beta.7",
+        "mod_file": "integrated_api-forge-1.20.1-1.9.2.jar!/META-INF/jars/mixinextras-forge-0.2.0-beta.7.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0-beta.7",
+        "mod_file": "integrated_stronghold-1.1.2+1.20.1-forge.jar!/META-INF/jars/mixinextras-forge-0.2.0-beta.7.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0-rc.2",
+        "mod_file": "kubejs-forge-2001.6.5-build.26.jar!/META-INF/jars/mixinextras-forge-0.2.0-rc.2.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "map_atlases-1.20-6.0.20.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0",
+        "mod_file": "mobplayeranimator-forge-1.20.1-1.3.3-all.jar!/META-INF/jarjar/mixinextras-forge-0.2.0.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "modernfix-forge-5.28.0-mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "moonlight-1.20-2.16.39-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.2.0-beta.8",
+        "mod_file": "origins-forge-1.20.1-1.10.0.9-all.jar!/META-INF/jarjar/additionalentityattributes-forge-1.4.0.5+1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.2.0-beta.8.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.0",
+        "mod_file": "polytone-1.20-3.5.26.jar!/META-INF/jars/mixinextras-forge-0.4.0.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "puffish_attributes-0.8.2-1.20-forge.jar!/META-INF/jars/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.3.6",
+        "mod_file": "supplementaries-1.20-3.1.45-forge.jar!/META-INF/jars/mixinextras-forge-0.3.6.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "unified_combat-1.20.1-1.0.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "villagesandpillages-forge-2.0.0+mc1.20.1.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinextras",
+        "mod_name": "MixinExtras",
+        "mod_version": "0.4.1",
+        "mod_file": "witherreincarnated-1.20.1-1.0.5.jar!/META-INF/jarjar/mixinextras-forge-0.4.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/LlamaLad7/MixinExtras",
+        "issue_tracker_url": ""
+      }
+    ],
+    "mixinsquared": [
+      {
+        "mod_id": "mixinsquared",
+        "mod_name": "MixinSquared",
+        "mod_version": "0.1.1",
+        "mod_file": "moonlight-1.20-2.16.39-forge.jar!/META-INF/jars/mixinsquared-forge-0.1.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/Bawnorton/MixinSquared",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "mixinsquared",
+        "mod_name": "MixinSquared",
+        "mod_version": "0.1.1",
+        "mod_file": "supplementaries-1.20-3.1.45-forge.jar!/META-INF/jars/mixinsquared-forge-0.1.1.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/Bawnorton/MixinSquared",
+        "issue_tracker_url": ""
+      }
+    ],
+    "playeranimatorapi": [
+      {
+        "mod_id": "playeranimatorapi",
+        "mod_name": "Zigy's Player Animator API",
+        "mod_version": "2.1.7",
+        "mod_file": "playeranimatorapi-forge-1.20.1-2.1.7.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": "https://github.com/ZigyTheBird/ZigysPlayerAnimatorAPI/issues"
+      },
+      {
+        "mod_id": "playeranimatorapi",
+        "mod_name": "Zigy's Player Animator API",
+        "mod_version": "2.1.0",
+        "mod_file": "shield_overhaul-2.0.1-FORGE.jar!/META-INF/jars/playeranimatorapi-fabric-1.20.1-2.1.0.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      }
+    ],
+    "transition": [
+      {
+        "mod_id": "transition",
+        "mod_name": "TRansition",
+        "mod_version": "1.0.28",
+        "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRansition",
+        "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+      },
+      {
+        "mod_id": "transition",
+        "mod_name": "TRansition",
+        "mod_version": "1.0.28",
+        "mod_file": "notenoughanimations-forge-1.12.7-mc1.20.1.jar!/META-INF/jars/TRansition-1.0.28-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRansition",
+        "issue_tracker_url": "https://github.com/tr7zw/TRansition/issues"
+      }
+    ],
+    "trender": [
+      {
+        "mod_id": "trender",
+        "mod_name": "TRender",
+        "mod_version": "1.0.17",
+        "mod_file": "entityculling-forge-1.12.1-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRender",
+        "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+      },
+      {
+        "mod_id": "trender",
+        "mod_name": "TRender",
+        "mod_version": "1.0.17",
+        "mod_file": "notenoughanimations-forge-1.12.7-mc1.20.1.jar!/META-INF/jars/TRender-1.0.17-1.20.1-forge-SNAPSHOT.jar",
+        "mod_url": "",
+        "display_url": "https://github.com/tr7zw/TRender",
+        "issue_tracker_url": "https://github.com/tr7zw/TRender/issues"
+      }
+    ],
+    "zigysmultiloaderutils": [
+      {
+        "mod_id": "zigysmultiloaderutils",
+        "mod_name": "Zigy's Multiloader Utils",
+        "mod_version": "1.3.1",
+        "mod_file": "playeranimatorapi-forge-1.20.1-2.1.7.jar!/META-INF/jars/zigysmultiloaderutils-forge-1.20.1-1.3.1.jar",
+        "mod_url": "",
+        "display_url": "",
+        "issue_tracker_url": ""
+      },
+      {
+        "mod_id": "zigysmultiloaderutils",
+        "mod_name": "Zigy's Multiloader Utils",
+        "mod_version": "1.2.4",
+        "mod_file": "shield_overhaul-2.0.1-FORGE.jar!/META-INF/jars/playeranimatorapi-fabric-1.20.1-2.1.0.jar!/META-INF/jars/zigysmultiloaderutils-fabric-1.20.1-1.2.4.jar",
+        "mod_url": "",
+        "display_url": "https://fabricmc.net/",
+        "issue_tracker_url": ""
+      }
+    ]
+  }
+}

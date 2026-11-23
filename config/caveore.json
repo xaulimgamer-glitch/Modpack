@@ -1,0 +1,44 @@
+{
+  "spawnchance": {
+    // Global chance of an ore block being placed(except veins), in percent. 50 = half as many ores as normal.
+    // More than 100 has no effect. 
+    // Default: 100
+    "spawnchance": 100
+  },
+
+  "caveblocks": {
+    //  List of block IDs where non-hidden ore blocks can be placed next to.  e.g. format :  ["minecraft:air",
+    // "minecraft:cave_air"]
+    "caveblocks": [
+      "minecraft:air",
+      "minecraft:cave_air",
+      "minecraft:water",
+      "minecraft:lava"
+    ]
+  },
+
+  "hiddenOreChance": {
+    // Chance for ore block placement to ignore the caveblock list restriction. This controls the amount of ores outside of caves/accessable surfaces.
+    // Default: 10%, vanilla = 100%
+    "hiddenOreChance": 10
+  },
+
+  "oreVeinDensityModifier": {
+    // Modifier for the ore density in ore veins(iron/copper veins). 0 = disable veins, 0.
+    // 25 = 75% less ore, 1.5 = 50% more ore. 
+    // Default: 1.0 (no change)
+    "oreVeinDensityModifier": 1.0
+  },
+
+  "excludedOres": {
+    // List of excluded ores which are ignored for cave restriction checks, these are mod-specific.
+    // : e.g. format :  ["mod:orename", "minecraft:iron_ore"]
+    "excludedOres": []
+  },
+
+  "inverted": {
+    // Inverts the exluded list to an included only list, of which ores are affected. 
+    // Default : false
+    "inverted": false
+  }
+}

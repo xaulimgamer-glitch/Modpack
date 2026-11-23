@@ -38,13 +38,6 @@ function awakeningAddOvergearedAssembly(event, recipeId, output, component, hand
   }).id(`awakening:${recipeId}`)
 }
 
-function awakeningIngredientFromRecipeJson(jsonIngredient) {
-  if (!jsonIngredient) return null
-  if (jsonIngredient.item) return jsonIngredient.item
-  if (jsonIngredient.tag) return `#${jsonIngredient.tag}`
-  return null
-}
-
 ServerEvents.tags('item', event => {
   // A reinforced handle is intentionally backwards-compatible with Stone/Copper.
   // The simple handle is NOT accepted by Iron/Steel recipes below.
@@ -132,21 +125,18 @@ ServerEvents.recipes(event => {
     // are left untouched for a later processing-route audit.
     if (!json.ingredients || json.ingredients.length !== 1 || !json.result) return
 
-    const input = awakeningIngredientFromRecipeJson(json.ingredients[0])
-    const outputId = json.result.item
-    const outputCount = json.result.count || 1
-
-    if (!input || !outputId) {
+    if (!json.result.item) {
       console.warn(`[Awakening/Wood] Could not rewrite plank recipe ${recipe.getId()}`)
       return
     }
 
     const recipeId = recipe.getId()
+    // Keep the original ingredient JSON intact: BetterEnd uses an array of
+    // alternatives (log, bark and their stripped variants) for a single slot.
+    // Flattening that array would either lose alternatives or require all of them.
+    json.ingredients.push({ tag: 'minecraft:axes' })
     event.remove({ id: recipeId })
-    event.shapeless(Item.of(outputId, outputCount), [
-      input,
-      '#minecraft:axes'
-    ])
+    event.custom(json)
       .damageIngredient('#minecraft:axes')
       .id(recipeId)
   })

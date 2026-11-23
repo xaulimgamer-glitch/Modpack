@@ -2,7 +2,10 @@
   "replace": false,
   "values": [
     "alexscaves:dreadbow",
-    "alexsmobsdelight:banana_bow",
+    {
+      "id": "alexsmobsdelight:banana_bow",
+      "required": false
+    },
     "aquaculture:neptunium_bow",
     "cataclysm:cursed_bow",
     "iceandfire:dragonbone_bow",

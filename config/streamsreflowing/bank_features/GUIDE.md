@@ -64,8 +64,8 @@ Two rules:
 - A ring whose size is not zero is never thinner than **one block**. A brook keeps its waterline.
 - A pattern is never finer than **two blocks**. Blobs on a brook are small specks.
 
-A lake or sea shore counts as a stream **32 blocks wide**. It is painted under the water only
-(the bed and the waterline).
+A lake or sea shore counts as a stream **12 blocks wide**, so a percent size there is a share of 12 blocks.
+Above the water, how far a shore's bank reaches is set by `shore_reach` (below).
 
 ### 3.2 Where the file goes
 
@@ -94,26 +94,46 @@ from the water outward. A later ring does not paint over an earlier one.
 This is one bank, cut through. The water is on the left.
 
 ```
-                       water surface
-                            |   above (up the bank)
-    ~~~~~~~~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                            |   below (under the water)
-         bed                |  bank      | top_bank | rings...
-    (the floor under water) |<-------- the cut -------->|
+                      water's edge
+                           |
+    up  ^   bank  top_bank |       distance = out + up
+        |  waterline       |
+   ~~~~~+~~~~~~~~~~~~~~~~~~+~~~~~~~~~~~~~~~~~~~~
+        |  waterline       |   (out is 0 under the water, so
+  down  v   bed            |    there the distance is the depth)
 ```
 
-**Sizes are measured in two different ways.** Both are a percent of the stream's width.
+**One distance, one size per ring.** The distance is blocks OUT from the water's edge PLUS blocks UP
+(or down) from the water surface: a block two out and one up is 3 from the water. Each ring has one
+size, its `reach`, in percent of the stream's width, measured along that distance.
 
-| Ring | What it covers | How its size is measured | Default |
-|---|---|---|---|
-| `bed` | the floor under the water | no size: everything below the waterline strip | — |
-| `waterline` | a band hugging the water surface | UP and DOWN from the surface: `below` under it, `above` onto the bank | `below` 10, `above` 0 |
-| `bank` | the cut slope beside the water | OUTWARD from the water's edge | `reach` 100, or 50 with a `top_bank` |
-| `top_bank` | a second band, further out | OUTWARD from where `bank` stopped | `reach` the rest of the cut |
-| `rings: [ ... ]` | any number of further bands | OUTWARD from where the last one stopped | `reach` required |
+| Ring | What it covers | Default `reach` |
+|---|---|---|
+| `bed` | under the water, past the waterline | none: the rest of the water |
+| `waterline` | everything within its reach of the water's edge, above or below the surface | 10 |
+| `bank` | above the water, the next band out | 100, or 50 with a `top_bank` |
+| `top_bank` | the band after `bank` | the rest of the cut |
+| `rings: [ ... ]` | any number of further bands | required |
 
 **The reaches add up.** A `reach` is the width of that band, not its distance from the water.
-A `bank` of 50 with a `top_bank` of 30 means: bank from 0 to 50, top_bank from 50 to 80.
+A waterline of 10, a `bank` of 20 and a `top_bank` of 30 means: waterline 0-10, bank 10-30, top_bank 30-60.
+
+**Edges that wander.** Every ring edge of a style steps in and out along the bank in whole blocks, set once for the
+whole style:
+
+| Field | Meaning | Default |
+|---|---|---|
+| `wander_across` | how far each edge steps in and out across the bank, in blocks either way; 0 = edges stay put | `0` |
+| `wander_along` | how many blocks along the bank one step takes: smaller is choppier, larger gives long slow bays | `3` |
+| `shore_reach` | how far the bank reaches on this mod's lakes: this share of the square root of the lake's size counted in 16x16 cells (0.5 gives about 1 block on a 40-block pond, 3 on a 100-block lake, 9 on a 300-block lake); 0 = no limit, the rings reach as far as they say | `0` |
+
+The shipped styles say `wander_across` 1.5 and `wander_along` 3 (edges going 1, 2, 3, 2, 1... blocks out) and
+`shore_reach` 0.5. Beside water the world generated (vanilla and modded rivers, lakes, ponds and seas, which have no
+size the mod knows) the shore bank reaches 2 blocks, stepping by the same wander.
+
+**Two fixed rules.** A shore counts as a stream 12 blocks wide (above). And `streamsreflowing:chameleon` puts the
+ground's own surface block (grass and the like) on top of ground 45 degrees or gentler, and the bare subsoil on
+anything steeper, as natural ground is layered.
 
 **The cut is the budget.** A stream cuts the ground on each side as wide as the stream itself,
 never less than 5 blocks. `bank`, `top_bank` and `rings` share that cut.
@@ -145,6 +165,10 @@ plant on dry land, exactly as before.
 | `exclude_biomes` | list of ids | none | Never use this style in these exact biomes. |
 | `exclude_tags` | list of tags | none | Never use this style in a biome that has ANY of these tags. |
 | `star` | true or false | false | This style beats every unstarred style at its level (see 3.8). |
+| `wander_across` | blocks | 0 | How far every ring edge steps in and out across the bank. See "Edges that wander". |
+| `wander_along` | blocks | 3 | How many blocks along the bank one step takes. |
+| `shore_reach` | number | 0 | How far the bank reaches on this mod's lakes, by the lake's size. 0 = no limit. |
+| `claims_banks` | true or false | false | For a river or ocean style: the land beside a river or ocean the world generated wears this style instead of its own. Never this mod's streams and lakes. |
 | `enabled` | true or false | true | Set `false` to leave the carved land raw here. |
 | `cohesion` | 0.0 to 1.0 | inferred | How firmly the banks hold. 0 = loose sand or gravel: streams there spread wide and shallow and can form bars. 1 = clay or roots: narrow, deep, no bars. Leave it out and the mod infers it from the biome tags. |
 | `bed`, `waterline`, `bank`, `top_bank` | block, list, or ring object | see 3.3 | The rings. |
@@ -173,10 +197,11 @@ A bare block or list is the short form. The object form adds more:
 | Field | Default | Function |
 |---|---|---|
 | `block` | required | One block, or a list of blocks mixed by `pattern`. |
-| `reach`, `above`, `below` | see 3.3 | The ring's size, in percent of the stream's width. |
-| `pattern` | `blobs` | How a list is mixed: `blobs` (patches), `bands` (stripes along the stream), `speckle` (a random pick per column). |
+| `reach` | see 3.3 | The ring's size, in percent of the stream's width, along the out + up distance. |
+| `pattern` | `blobs` | How a list is mixed: `clumps` (rough little clumps about two blocks across that break up; what the mod's own styles use), `blobs` (smooth patches), `bands` (stripes along the stream), `speckle` (a random pick per column). |
 | `scale` | `30` | The patch size or the stripe width, in percent of the stream's width. |
-| `edge_noise` | `0.3` | How softly the ring's outer edge blends into the next ring. 0 = a sharp line. 1 = very soft. |
+| `blob_size` | none | The patch size or the stripe width in blocks, the same on a brook and a river. Wins over `scale`. |
+| `edge_noise` | `0` | Speckles the ring's outer edge into the next ring. 0 = a clean edge. 1 = a wide speckled blend. |
 | `overrides` | none | Swap the ring's blocks where the stream is a certain way (3.6). |
 | `features` | none | Scenery placed in this ring (3.7). |
 
@@ -203,7 +228,7 @@ first one whose roll succeeds paints the column. If none does, the ring's own bl
 | `when` | required | Properties and comparisons. All must hold. Comparisons: `"> 0.3"`, `">= 0.3"`, `"< 0.3"`, `"<= 0.3"`. |
 | `fade` | `0.1` | At the threshold the override claims half the columns. `fade` past it, all of them. |
 | `block` | required | The sticker's block or list. |
-| `pattern`, `scale` | the ring's | As for a ring. |
+| `pattern`, `scale`, `blob_size` | the ring's | As for a ring. |
 
 Every property runs from 0 to 1:
 
@@ -217,6 +242,12 @@ Every property runs from 0 to 1:
 | `to_mouth` | at the outlet | 16 stream widths upstream or further | 0.2 = the last few widths before the sea or lake |
 | `to_junction` | at a confluence | 16 widths from any | |
 | `flat_run` | just steepened | a long flat, settled reach | what braids and bars follow |
+
+`steepness` is the one property in **degrees** (0 to 90): how steep the ground itself is at the column, by the
+same measure that decides where a chameleon bank wears turf (its gentlest way out to the four blocks beside it).
+Ground steps a block at a time, so it reads 0, 45, 63 and so on: `"> 45"` means ground that drops two blocks or more
+on every side, exactly where chameleon shows a bare face instead of turf. Ground the carve barely touched reads 0,
+as it does for the turf rule. `slope` is the stream's own fall along its course, not the ground's.
 
 ### 3.7 Features on a ring
 
@@ -299,7 +330,7 @@ natural:**
   "star": true,
   "cohesion": 0.8,
   "bed": ["minecraft:gravel", "minecraft:stone"],
-  "waterline": { "above": 5, "below": 15, "block": "minecraft:mossy_cobblestone", "edge_noise": 0.35 },
+  "waterline": { "reach": 15, "block": "minecraft:mossy_cobblestone", "edge_noise": 0.35 },
   "bank": {
     "reach": 50,
     "block": ["minecraft:cobblestone", "streamsreflowing:chameleon"],
@@ -324,7 +355,8 @@ A style written for version 2.13 or earlier works unchanged. Its fields mean the
 | Old field | Now means |
 |---|---|
 | `bed` / `waterline` / `bank` as a block or list | the same ring, `speckle` pattern, with every old default |
-| `waterline_below` / `waterline_above` (blocks) | the waterline's `below` / `above`, still counted in blocks |
+| `waterline_below` / `waterline_above` (blocks) | the waterline's `reach`, in blocks: the larger of the two |
+| a waterline's `above` / `below` (2.14-2.17) | its `reach`: the larger of the two, unless it states a `reach` |
 | `underwater_noise` / `above_water_noise` | `edge_noise` of the bed ring and of the waterline ring |
 | `bed_enabled` / `waterline_enabled` / `bank_enabled: false` | that ring painted as `minecraft:air` |
 | `point_bar` | an override on the bed for the inside of bends |
@@ -496,7 +528,7 @@ Do these steps to make a datapack for your bank files.
 |---|---|
 | Change the bank blocks in one biome | Make a bank style with `biomes` or `tags` and `bed`/`waterline`/`bank`. |
 | Two bank zones | Add `top_bank`. `bank` takes the inner half of the cut, `top_bank` the rest. |
-| Patches instead of a random mix | A list of blocks is patches already. Set `scale` for the patch size. |
+| Patches instead of a random mix | A list of blocks is patches already. Set `scale` (percent of the width) or `blob_size` (blocks) for the patch size. |
 | Stripes along the stream | `"pattern": "bands"` on the ring. |
 | Rock on steep reaches, sand near the mouth | An `overrides` entry with `"when": { "slope": "> 0.5" }` or `{ "to_mouth": "< 0.2" }`. |
 | Gravel on the inside of bends | `"when": { "bend": "> 0.2", "side": "inner" }`. |

@@ -9,6 +9,8 @@
 	y = 120
 	#Range: 0.25 ~ 4.0
 	scale = 1.0
+	#Range: 0.25 ~ 2.0
+	label_scale = 0.75
 
 	[skill_overlay.skill_setting]
 		#Show weapon passive skills. Note that it may break epic fight addons that utilizes special skill overlays.
@@ -247,7 +249,7 @@
 		#Allowed Values: AUTO, EPIC_FIGHT, PARCOOL, PARAGLIDER, MINE_AND_SLASH
 		client_stamina_source = "AUTO"
 		#Ensure ignore mana source is disabled
-		#Allowed Values: AUTO, IRONS_SPELLBOOKS, MINE_AND_SLASH
+		#Allowed Values: AUTO, IRONS_SPELLBOOKS, MINE_AND_SLASH, MANA_AND_ARTIFICE, ARS_NOUVEAU
 		client_mana_source = "AUTO"
 		#Allowed Values: AUTO, THIRST_WAS_RECLAIMED, LEGENDARY_SURVIVAL_OVERHAUL
 		client_thirst_source = "AUTO"
@@ -260,7 +262,7 @@
 		#Toggle player gauge overlay
 		enabled = false
 		status_bars = true
-		#Allowed Values: FACE, MODEL
+		#Allowed Values: FACE, MODEL, NONE
 		crest_display_mode = "MODEL"
 		crest_team_outline = true
 		crest_attributes = true
@@ -270,6 +272,7 @@
 		y = 24
 		#Range: 0.25 ~ 4.0
 		scale = 1.0
+		crest = true
 
 	#Party Gauge Overlay
 	#Shows status gauges for your teammates
@@ -278,7 +281,7 @@
 		#Toggle party gauge overlay
 		enabled = true
 		status_bars = true
-		#Allowed Values: FACE, MODEL
+		#Allowed Values: FACE, MODEL, NONE
 		crest_display_mode = "MODEL"
 		crest_team_outline = true
 		#Maximum amount of party members to display
@@ -299,6 +302,7 @@
 		y = 76
 		#Range: 0.25 ~ 4.0
 		scale = 0.8125
+		crest = true
 
 	#Baseline and projected-max values used to scale HUD bar widths.
 	[status_gauge.status_bars]
@@ -373,6 +377,22 @@
 					projected_max = 1040
 					#Range: 0.1 ~ 3.0
 					bar_width_curve = 0.4
+
+				[status_gauge.status_bars.mana.presets.mana_and_artifice]
+					#Range: > 1
+					baseline = 100
+					#Range: > 1
+					projected_max = 1600
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 0.6
+
+				[status_gauge.status_bars.mana.presets.ars_nouveau]
+					#Range: > 1
+					baseline = 100
+					#Range: > 1
+					projected_max = 1500
+					#Range: 0.1 ~ 3.0
+					bar_width_curve = 0.7
 
 	#Status Effects
 	[status_gauge.status_effects]
@@ -450,6 +470,9 @@
 	[visibility.autohud]
 		#Should the hotbar remain hidden if you switched items with the equipment binds.
 		hotbar_remain_hidden = true
+
+	[visibility.ars_nouveau]
+		hide_mana_bar = true
 
 [debug_client]
 	#Allow the mod to send output to log. Useful for obtaining skill overlay ids.

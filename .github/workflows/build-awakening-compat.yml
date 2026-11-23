@@ -7,6 +7,7 @@ on:
     paths:
       - 'custom_mods/awakening-compat/**'
       - '.github/workflows/build-awakening-compat.yml'
+      - 'tools/verify_compat_contract.py'
   workflow_dispatch:
 
 permissions:
@@ -49,10 +50,14 @@ jobs:
           test -f "$JAR"
           jar tf "$JAR" | grep -q '^dev/xaulim/awakeningcompat/client/DrowSunGlareOverlay.class$'
 
+      - name: Verify packaged dependency contracts and mixins
+        run: python3 ../../tools/verify_compat_contract.py --jar build/libs/awakening-compat-0.1.0.jar
+
       - name: Install built JAR into modpack
         run: cp build/libs/awakening-compat-0.1.0.jar ../../mods/awakening-compat-0.1.0.jar
 
       - name: Commit rebuilt JAR
+        if: github.ref == 'refs/heads/development'
         working-directory: .
         shell: bash
         run: |

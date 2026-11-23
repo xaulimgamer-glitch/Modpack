@@ -18,6 +18,6 @@
   "star": true,
   "cohesion": 0.9,
   "bed": ["minecraft:mud", "minecraft:mud", "minecraft:clay"],
-  "waterline": { "above": 15, "block": "minecraft:moss_block" },
+  "waterline": { "reach": 15, "block": "minecraft:moss_block" },
   "bank": ["minecraft:rooted_dirt", "minecraft:moss_block", "streamsreflowing:chameleon"]
 }
